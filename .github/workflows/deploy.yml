@@ -26,12 +26,20 @@ jobs:
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USERNAME }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
-        port: ${{ secrets.SSH_PORT || 22 }}
+        port: 22
         script: |
           set -e
           echo "Deploying Klacks.Marketplace..."
 
           cd /root/apps
+
+          echo "Updating main Klacks.Api repo (docker-compose + nginx)..."
+          if [ -d "Klacks.Api" ]; then
+            cd Klacks.Api
+            git fetch origin
+            git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)
+            cd ..
+          fi
 
           if [ -d "Klacks.Marketplace" ]; then
             echo "Updating Klacks.Marketplace..."
@@ -52,6 +60,8 @@ jobs:
             COMPOSE_CMD="docker compose"
           fi
           echo "Using: $COMPOSE_CMD"
+
+          cd Klacks.Api
 
           echo "Building Klacks.Marketplace..."
           timeout 900 $COMPOSE_CMD build klacks-marketplace --no-cache
