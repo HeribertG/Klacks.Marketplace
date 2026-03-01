@@ -54,6 +54,9 @@ jobs:
             git clone https://github.com/HeribertG/Klacks.Marketplace.git
           fi
 
+          # Create symlink so docker-compose can find the Marketplace directory
+          ln -sfn /root/apps/Klacks.Marketplace /root/apps/Klacks.Api/Klacks.Marketplace
+
           if command -v docker-compose &> /dev/null; then
             COMPOSE_CMD="docker-compose"
           else
