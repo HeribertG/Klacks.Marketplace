@@ -1,0 +1,85 @@
+name: Deploy Klacks.Marketplace to Hetzner
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '**'
+      - '!README.md'
+      - '!docs/**'
+
+concurrency:
+  group: deploy-klacks-marketplace-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Deploy to server
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USERNAME }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        port: ${{ secrets.SSH_PORT || 22 }}
+        script: |
+          set -e
+          echo "Deploying Klacks.Marketplace..."
+
+          cd /root/apps
+
+          if [ -d "Klacks.Marketplace" ]; then
+            echo "Updating Klacks.Marketplace..."
+            cd Klacks.Marketplace
+            CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+            echo "Current branch: $CURRENT_BRANCH"
+            git fetch origin
+            git reset --hard origin/$CURRENT_BRANCH
+            cd ..
+          else
+            echo "Cloning Klacks.Marketplace..."
+            git clone https://github.com/HeribertG/Klacks.Marketplace.git
+          fi
+
+          if command -v docker-compose &> /dev/null; then
+            COMPOSE_CMD="docker-compose"
+          else
+            COMPOSE_CMD="docker compose"
+          fi
+          echo "Using: $COMPOSE_CMD"
+
+          echo "Building Klacks.Marketplace..."
+          timeout 900 $COMPOSE_CMD build klacks-marketplace --no-cache
+
+          echo "Restarting Klacks.Marketplace..."
+          $COMPOSE_CMD up -d klacks-marketplace
+
+          echo "Klacks.Marketplace deployment completed!"
+
+          echo "Service status:"
+          $COMPOSE_CMD ps klacks-marketplace
+
+          sleep 15
+          echo "Health Check for Klacks.Marketplace..."
+
+          if $COMPOSE_CMD ps klacks-marketplace | grep -q "Up"; then
+            echo "Container is running"
+          else
+            echo "Container is not running"
+            $COMPOSE_CMD logs klacks-marketplace --tail=20
+            exit 1
+          fi
+
+          if curl -f -s -o /dev/null -w "%{http_code}" http://localhost:7003 | grep -q "200\|301\|302"; then
+            echo "Klacks.Marketplace is accessible on port 7003"
+          else
+            echo "Klacks.Marketplace health check failed"
+            echo "Container logs:"
+            $COMPOSE_CMD logs klacks-marketplace --tail=20
+            exit 1
+          fi

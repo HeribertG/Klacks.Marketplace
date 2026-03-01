@@ -1,0 +1,134 @@
+@page "/package/{Code}"
+@inject IPackageService PackageService
+@inject IHttpContextAccessor HttpContextAccessor
+@inject NavigationManager Navigation
+
+<PageTitle>@(_package?.DisplayName ?? "Package") - Klacks Marketplace</PageTitle>
+
+@if (_isLoading)
+{
+    <div class="text-center py-5">
+        <div class="spinner-border text-primary" role="status"></div>
+    </div>
+}
+else if (_package is null)
+{
+    <div class="empty-state">
+        <i class="fas fa-exclamation-triangle d-block"></i>
+        <h3>Package not found</h3>
+        <p>The package you are looking for does not exist.</p>
+        <a href="/" class="btn btn-primary mt-3">Back to Browse</a>
+    </div>
+}
+else
+{
+    <div class="detail-container">
+        <a href="/" class="btn btn-secondary btn-sm mb-3">
+            <i class="fas fa-arrow-left"></i> Back
+        </a>
+
+        <div class="detail-header">
+            <div class="d-flex justify-content-between align-items-start">
+                <div>
+                    <h1>@_package.DisplayName</h1>
+                    <span class="package-card-code">@_package.Code</span>
+                </div>
+                <StatusBadge Status="@_package.Status" />
+            </div>
+
+            <div class="detail-meta">
+                <span><i class="fas fa-user"></i> @_package.Author.DisplayName</span>
+                <span><i class="fas fa-tag"></i> v@_package.Version</span>
+                <span><i class="fas fa-download"></i> @_package.Downloads downloads</span>
+                <span><i class="fas fa-language"></i> @_package.TranslationCount keys</span>
+                <span><i class="fas fa-globe"></i> @_package.SpeechLocale</span>
+            </div>
+
+            <CoverageBar Coverage="@_package.Coverage" />
+        </div>
+
+        @if (!string.IsNullOrWhiteSpace(_package.Description))
+        {
+            <div class="mb-4">
+                <h4>Description</h4>
+                <p>@_package.Description</p>
+            </div>
+        }
+
+        @if (_package.Status == PackageStatus.Published)
+        {
+            <button class="btn btn-primary mb-4" @onclick="DownloadPackage" disabled="@_isDownloading">
+                @if (_isDownloading)
+                {
+                    <span class="spinner-border spinner-border-sm"></span>
+                }
+                else
+                {
+                    <i class="fas fa-download"></i>
+                }
+                Download Package
+            </button>
+        }
+
+        @if (_package.Versions.Count > 0)
+        {
+            <h4>Version History</h4>
+            <ul class="version-list">
+                @foreach (var version in _package.Versions)
+                {
+                    <li class="version-item">
+                        <div>
+                            <strong>v@version.Version</strong>
+                            <span class="text-muted ms-2">@version.CreatedAt.ToString("yyyy-MM-dd")</span>
+                            @if (!string.IsNullOrWhiteSpace(version.ChangeLog))
+                            {
+                                <p class="text-muted mb-0 mt-1">@version.ChangeLog</p>
+                            }
+                        </div>
+                        <StatusBadge Status="@version.Status" />
+                    </li>
+                }
+            </ul>
+        }
+    </div>
+}
+
+@if (!string.IsNullOrWhiteSpace(_errorMessage))
+{
+    <div class="alert alert-danger mt-3">@_errorMessage</div>
+}
+
+@code {
+    [Parameter]
+    public string Code { get; set; } = string.Empty;
+
+    private LanguagePackage? _package;
+    private bool _isLoading = true;
+    private bool _isDownloading;
+    private string _errorMessage = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _package = await PackageService.GetPackageByCodeAsync(Code);
+        _isLoading = false;
+    }
+
+    private async Task DownloadPackage()
+    {
+        try
+        {
+            _isDownloading = true;
+            var ipAddress = HttpContextAccessor.HttpContext?.Connection.RemoteIpAddress?.ToString() ?? "unknown";
+            var data = await PackageService.DownloadPackageAsync(Code, ipAddress);
+            _package = await PackageService.GetPackageByCodeAsync(Code);
+        }
+        catch (Exception ex)
+        {
+            _errorMessage = ex.Message;
+        }
+        finally
+        {
+            _isDownloading = false;
+        }
+    }
+}

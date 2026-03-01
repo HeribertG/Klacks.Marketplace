@@ -1,0 +1,18 @@
+<div>
+    <div class="coverage-bar">
+        <div class="coverage-bar-fill @GetCoverageClass()" style="width: @Coverage%"></div>
+    </div>
+    <span class="coverage-text">@Coverage.ToString("F0")% coverage</span>
+</div>
+
+@code {
+    [Parameter]
+    public double Coverage { get; set; }
+
+    private string GetCoverageClass()
+    {
+        if (Coverage >= 80) return "coverage-high";
+        if (Coverage >= 50) return "coverage-medium";
+        return "coverage-low";
+    }
+}

@@ -1,0 +1,218 @@
+@page "/upload"
+@inject IPackageService PackageService
+@inject IFileValidationService FileValidation
+@inject IHttpContextAccessor HttpContextAccessor
+@inject NavigationManager Navigation
+
+<PageTitle>Upload Package - Klacks Marketplace</PageTitle>
+
+<div class="detail-container">
+    <h1><i class="fas fa-upload"></i> Upload Language Pack</h1>
+    <p class="text-muted">Share your language pack with the community</p>
+
+    @if (!_isAuthenticated)
+    {
+        <div class="alert alert-warning">
+            Please <a href="/login">login</a> to upload packages.
+        </div>
+        return;
+    }
+
+    @if (!string.IsNullOrWhiteSpace(_errorMessage))
+    {
+        <div class="alert alert-danger">@_errorMessage</div>
+    }
+
+    @if (!string.IsNullOrWhiteSpace(_successMessage))
+    {
+        <div class="alert alert-success">@_successMessage</div>
+    }
+
+    <EditForm Model="@_model" OnValidSubmit="HandleUpload">
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label class="form-label">Code (e.g. fr-FR)</label>
+                <InputText class="form-control" @bind-Value="_model.Code" placeholder="xx-XX" />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Display Name</label>
+                <InputText class="form-control" @bind-Value="_model.DisplayName" placeholder="e.g. French (France)" />
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label class="form-label">Speech Locale</label>
+                <InputText class="form-control" @bind-Value="_model.SpeechLocale" placeholder="e.g. fr-FR" />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Version</label>
+                <InputText class="form-control" @bind-Value="_model.Version" placeholder="1.0.0" />
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Description</label>
+            <InputTextArea class="form-control" @bind-Value="_model.Description" rows="3"
+                           placeholder="Describe your language pack..." />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Coverage (%)</label>
+            <InputNumber class="form-control" @bind-Value="_model.Coverage" min="0" max="100" />
+        </div>
+
+        <div class="upload-zone mb-3">
+            <i class="fas fa-file-code d-block"></i>
+            <p><strong>manifest.json</strong></p>
+            <InputFile OnChange="OnManifestSelected" accept=".json" />
+            @if (_manifestLoaded)
+            {
+                <span class="text-success mt-2 d-block"><i class="fas fa-check"></i> Loaded</span>
+            }
+        </div>
+
+        <div class="upload-zone mb-3">
+            <i class="fas fa-language d-block"></i>
+            <p><strong>translations.json</strong></p>
+            <InputFile OnChange="OnTranslationsSelected" accept=".json" />
+            @if (_translationsLoaded)
+            {
+                <span class="text-success mt-2 d-block"><i class="fas fa-check"></i> Loaded</span>
+            }
+        </div>
+
+        <button type="submit" class="btn btn-primary" disabled="@(_isSubmitting || !_manifestLoaded || !_translationsLoaded)">
+            @if (_isSubmitting)
+            {
+                <span class="spinner-border spinner-border-sm"></span>
+            }
+            <i class="fas fa-paper-plane"></i> Submit for Review
+        </button>
+    </EditForm>
+</div>
+
+@code {
+    private UploadModel _model = new();
+    private string _manifestJson = string.Empty;
+    private string _translationsJson = string.Empty;
+    private bool _manifestLoaded;
+    private bool _translationsLoaded;
+    private bool _isSubmitting;
+    private bool _isAuthenticated;
+    private int _userId;
+    private string _errorMessage = string.Empty;
+    private string _successMessage = string.Empty;
+
+    protected override void OnInitialized()
+    {
+        var user = HttpContextAccessor.HttpContext?.User;
+        _isAuthenticated = user?.Identity?.IsAuthenticated ?? false;
+        if (_isAuthenticated)
+        {
+            var idClaim = user?.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+            if (int.TryParse(idClaim, out var id))
+            {
+                _userId = id;
+            }
+        }
+    }
+
+    private async Task OnManifestSelected(InputFileChangeEventArgs e)
+    {
+        _errorMessage = string.Empty;
+        try
+        {
+            using var reader = new StreamReader(e.File.OpenReadStream(AppConstants.MaxUploadSizeBytes));
+            _manifestJson = await reader.ReadToEndAsync();
+            var (isValid, error) = FileValidation.ValidateManifest(_manifestJson);
+            if (!isValid)
+            {
+                _errorMessage = $"Manifest: {error}";
+                _manifestLoaded = false;
+                return;
+            }
+            _manifestLoaded = true;
+        }
+        catch (Exception ex)
+        {
+            _errorMessage = $"Error reading manifest: {ex.Message}";
+            _manifestLoaded = false;
+        }
+    }
+
+    private async Task OnTranslationsSelected(InputFileChangeEventArgs e)
+    {
+        _errorMessage = string.Empty;
+        try
+        {
+            using var reader = new StreamReader(e.File.OpenReadStream(AppConstants.MaxUploadSizeBytes));
+            _translationsJson = await reader.ReadToEndAsync();
+            var (isValid, error) = FileValidation.ValidateTranslations(_translationsJson);
+            if (!isValid)
+            {
+                _errorMessage = $"Translations: {error}";
+                _translationsLoaded = false;
+                return;
+            }
+            _translationsLoaded = true;
+        }
+        catch (Exception ex)
+        {
+            _errorMessage = $"Error reading translations: {ex.Message}";
+            _translationsLoaded = false;
+        }
+    }
+
+    private async Task HandleUpload()
+    {
+        _errorMessage = string.Empty;
+        _successMessage = string.Empty;
+        _isSubmitting = true;
+
+        try
+        {
+            if (string.IsNullOrWhiteSpace(_model.Code) || string.IsNullOrWhiteSpace(_model.DisplayName))
+            {
+                _errorMessage = "Code and Display Name are required";
+                return;
+            }
+
+            var package = new LanguagePackage
+            {
+                Code = _model.Code.Trim(),
+                Name = _model.Code.Trim(),
+                DisplayName = _model.DisplayName.Trim(),
+                SpeechLocale = _model.SpeechLocale.Trim(),
+                Version = _model.Version.Trim(),
+                Description = _model.Description?.Trim() ?? string.Empty,
+                Coverage = _model.Coverage,
+                AuthorId = _userId
+            };
+
+            await PackageService.CreatePackageAsync(package, _manifestJson, _translationsJson);
+            _successMessage = "Package submitted for review!";
+            _model = new();
+            _manifestLoaded = false;
+            _translationsLoaded = false;
+        }
+        catch (Exception ex)
+        {
+            _errorMessage = ex.Message;
+        }
+        finally
+        {
+            _isSubmitting = false;
+        }
+    }
+
+    private class UploadModel
+    {
+        public string Code { get; set; } = string.Empty;
+        public string DisplayName { get; set; } = string.Empty;
+        public string SpeechLocale { get; set; } = string.Empty;
+        public string Version { get; set; } = "1.0.0";
+        public string Description { get; set; } = string.Empty;
+        public double Coverage { get; set; }
+    }
+}

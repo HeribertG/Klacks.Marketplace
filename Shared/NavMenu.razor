@@ -1,0 +1,59 @@
+@inject IHttpContextAccessor HttpContextAccessor
+@inject NavigationManager Navigation
+
+<nav class="marketplace-nav">
+    <div class="container-fluid px-4">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-3">
+                <a class="navbar-brand" href="/">
+                    <i class="fas fa-globe"></i> Klacks Marketplace
+                </a>
+                <a class="nav-link" href="/">Browse</a>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+                @if (_isAuthenticated)
+                {
+                    <a class="nav-link" href="/upload">
+                        <i class="fas fa-upload"></i> Upload
+                    </a>
+                    <a class="nav-link" href="/my-packages">
+                        <i class="fas fa-box"></i> My Packages
+                    </a>
+                    @if (_isAdmin)
+                    {
+                        <a class="nav-link" href="/admin">
+                            <i class="fas fa-shield-alt"></i> Admin
+                        </a>
+                    }
+                    <span class="nav-link text-muted">@_displayName</span>
+                    <a class="nav-link" href="/auth/logout">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </a>
+                }
+                else
+                {
+                    <a class="nav-link" href="/login">
+                        <i class="fas fa-sign-in-alt"></i> Login
+                    </a>
+                    <a class="nav-link" href="/register">
+                        <i class="fas fa-user-plus"></i> Register
+                    </a>
+                }
+            </div>
+        </div>
+    </div>
+</nav>
+
+@code {
+    private bool _isAuthenticated;
+    private bool _isAdmin;
+    private string _displayName = string.Empty;
+
+    protected override void OnInitialized()
+    {
+        var user = HttpContextAccessor.HttpContext?.User;
+        _isAuthenticated = user?.Identity?.IsAuthenticated ?? false;
+        _isAdmin = user?.IsInRole("Admin") ?? false;
+        _displayName = user?.Identity?.Name ?? string.Empty;
+    }
+}

@@ -1,0 +1,24 @@
+<span class="status-badge @GetStatusClass()">@GetStatusText()</span>
+
+@code {
+    [Parameter]
+    public PackageStatus Status { get; set; }
+
+    private string GetStatusClass() => Status switch
+    {
+        PackageStatus.Published => "status-published",
+        PackageStatus.PendingReview => "status-pending",
+        PackageStatus.Rejected => "status-rejected",
+        PackageStatus.Draft => "status-draft",
+        _ => "status-draft"
+    };
+
+    private string GetStatusText() => Status switch
+    {
+        PackageStatus.Published => "Published",
+        PackageStatus.PendingReview => "Pending",
+        PackageStatus.Rejected => "Rejected",
+        PackageStatus.Draft => "Draft",
+        _ => "Unknown"
+    };
+}

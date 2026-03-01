@@ -1,0 +1,106 @@
+@page "/register"
+@inject IAuthService AuthService
+@inject NavigationManager Navigation
+
+<PageTitle>Register - Klacks Marketplace</PageTitle>
+
+<div class="auth-container">
+    <div class="auth-card">
+        <h2><i class="fas fa-user-plus"></i> Register</h2>
+
+        @if (!string.IsNullOrWhiteSpace(_errorMessage))
+        {
+            <div class="alert alert-danger">@_errorMessage</div>
+        }
+
+        @if (!string.IsNullOrWhiteSpace(_successMessage))
+        {
+            <div class="alert alert-success">@_successMessage</div>
+        }
+
+        <EditForm Model="@_model" OnValidSubmit="HandleRegister">
+            <div class="mb-3">
+                <label class="form-label">Display Name</label>
+                <InputText class="form-control" @bind-Value="_model.DisplayName" placeholder="Your name" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <InputText class="form-control" @bind-Value="_model.Email" placeholder="your@email.com" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Password (min. @AppConstants.MinPasswordLength characters)</label>
+                <InputText type="password" class="form-control" @bind-Value="_model.Password" placeholder="Password" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Confirm Password</label>
+                <InputText type="password" class="form-control" @bind-Value="_model.ConfirmPassword" placeholder="Confirm password" />
+            </div>
+            <button type="submit" class="btn btn-primary w-100" disabled="@_isLoading">
+                @if (_isLoading)
+                {
+                    <span class="spinner-border spinner-border-sm"></span>
+                }
+                Register
+            </button>
+        </EditForm>
+
+        <p class="text-center mt-3">
+            Already have an account? <a href="/login">Login</a>
+        </p>
+    </div>
+</div>
+
+@code {
+    private RegisterModel _model = new();
+    private string _errorMessage = string.Empty;
+    private string _successMessage = string.Empty;
+    private bool _isLoading;
+
+    private async Task HandleRegister()
+    {
+        _errorMessage = string.Empty;
+        _successMessage = string.Empty;
+        _isLoading = true;
+
+        try
+        {
+            if (string.IsNullOrWhiteSpace(_model.DisplayName))
+            {
+                _errorMessage = "Display name is required";
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(_model.Email))
+            {
+                _errorMessage = "Email is required";
+                return;
+            }
+
+            if (_model.Password != _model.ConfirmPassword)
+            {
+                _errorMessage = "Passwords do not match";
+                return;
+            }
+
+            await AuthService.RegisterAsync(_model.Email, _model.Password, _model.DisplayName);
+            _successMessage = "Registration successful! You can now login.";
+            _model = new();
+        }
+        catch (Exception ex)
+        {
+            _errorMessage = ex.Message;
+        }
+        finally
+        {
+            _isLoading = false;
+        }
+    }
+
+    private class RegisterModel
+    {
+        public string DisplayName { get; set; } = string.Empty;
+        public string Email { get; set; } = string.Empty;
+        public string Password { get; set; } = string.Empty;
+        public string ConfirmPassword { get; set; } = string.Empty;
+    }
+}

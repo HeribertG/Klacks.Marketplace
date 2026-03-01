@@ -1,0 +1,77 @@
+@page "/login"
+@inject IAuthService AuthService
+@inject NavigationManager Navigation
+
+<PageTitle>Login - Klacks Marketplace</PageTitle>
+
+<div class="auth-container">
+    <div class="auth-card">
+        <h2><i class="fas fa-sign-in-alt"></i> Login</h2>
+
+        @if (!string.IsNullOrWhiteSpace(_errorMessage))
+        {
+            <div class="alert alert-danger">@_errorMessage</div>
+        }
+
+        <EditForm Model="@_model" OnValidSubmit="HandleLogin">
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <InputText class="form-control" @bind-Value="_model.Email" placeholder="your@email.com" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Password</label>
+                <InputText type="password" class="form-control" @bind-Value="_model.Password" placeholder="Password" />
+            </div>
+            <button type="submit" class="btn btn-primary w-100" disabled="@_isLoading">
+                @if (_isLoading)
+                {
+                    <span class="spinner-border spinner-border-sm"></span>
+                }
+                Login
+            </button>
+        </EditForm>
+
+        <p class="text-center mt-3">
+            Don't have an account? <a href="/register">Register</a>
+        </p>
+    </div>
+</div>
+
+@code {
+    private LoginModel _model = new();
+    private string _errorMessage = string.Empty;
+    private bool _isLoading;
+
+    private async Task HandleLogin()
+    {
+        _errorMessage = string.Empty;
+        _isLoading = true;
+
+        try
+        {
+            var user = await AuthService.LoginAsync(_model.Email, _model.Password);
+            if (user is null)
+            {
+                _errorMessage = "Invalid email or password";
+                return;
+            }
+
+            var returnUrl = Uri.EscapeDataString("/");
+            Navigation.NavigateTo($"/auth/login?userId={user.Id}&email={Uri.EscapeDataString(user.Email)}&displayName={Uri.EscapeDataString(user.DisplayName)}&isAdmin={user.IsAdmin.ToString().ToLower()}&returnUrl={returnUrl}", forceLoad: true);
+        }
+        catch (Exception ex)
+        {
+            _errorMessage = ex.Message;
+        }
+        finally
+        {
+            _isLoading = false;
+        }
+    }
+
+    private class LoginModel
+    {
+        public string Email { get; set; } = string.Empty;
+        public string Password { get; set; } = string.Empty;
+    }
+}
