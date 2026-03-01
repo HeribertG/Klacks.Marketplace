@@ -11,64 +11,101 @@
     @if (!_isAdmin)
     {
         <div class="alert alert-danger">Access denied. Admin privileges required.</div>
-        return;
-    }
-
-    @if (!string.IsNullOrWhiteSpace(_message))
-    {
-        <div class="alert alert-success">@_message</div>
-    }
-
-    @if (!string.IsNullOrWhiteSpace(_errorMessage))
-    {
-        <div class="alert alert-danger">@_errorMessage</div>
-    }
-
-    <div class="admin-stats">
-        <div class="stat-card">
-            <div class="stat-number">@_pendingPackages.Count</div>
-            <div class="stat-label">Pending Review</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number">@_users.Count</div>
-            <div class="stat-label">Users</div>
-        </div>
-    </div>
-
-    <h3 class="mb-3">Pending Packages</h3>
-    @if (_pendingPackages.Count == 0)
-    {
-        <div class="alert alert-info">No packages pending review.</div>
     }
     else
     {
-        <div class="table-responsive mb-4">
+        @if (!string.IsNullOrWhiteSpace(_message))
+        {
+            <div class="alert alert-success">@_message</div>
+        }
+
+        @if (!string.IsNullOrWhiteSpace(_errorMessage))
+        {
+            <div class="alert alert-danger">@_errorMessage</div>
+        }
+
+        <div class="admin-stats">
+            <div class="stat-card">
+                <div class="stat-number">@_pendingPackages.Count</div>
+                <div class="stat-label">Pending Review</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">@_users.Count</div>
+                <div class="stat-label">Users</div>
+            </div>
+        </div>
+
+        <h3 class="mb-3">Pending Packages</h3>
+        @if (_pendingPackages.Count == 0)
+        {
+            <div class="alert alert-info">No packages pending review.</div>
+        }
+        else
+        {
+            <div class="table-responsive mb-4">
+                <table class="table table-dark-custom">
+                    <thead>
+                        <tr>
+                            <th>Package</th>
+                            <th>Author</th>
+                            <th>Code</th>
+                            <th>Coverage</th>
+                            <th>Submitted</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var pkg in _pendingPackages)
+                        {
+                            <tr>
+                                <td><a href="/package/@pkg.Code">@pkg.DisplayName</a></td>
+                                <td>@pkg.Author.DisplayName</td>
+                                <td><code>@pkg.Code</code></td>
+                                <td>@pkg.Coverage.ToString("F0")%</td>
+                                <td>@pkg.CreatedAt.ToString("yyyy-MM-dd")</td>
+                                <td>
+                                    <button class="btn btn-outline-success btn-sm" @onclick="() => ApprovePackage(pkg.Id)">
+                                        <i class="fas fa-check"></i>
+                                    </button>
+                                    <button class="btn btn-outline-danger btn-sm ms-1" @onclick="() => RejectPackage(pkg.Id)">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+
+        <h3 class="mb-3">Users</h3>
+        <div class="table-responsive">
             <table class="table table-dark-custom">
                 <thead>
                     <tr>
-                        <th>Package</th>
-                        <th>Author</th>
-                        <th>Code</th>
-                        <th>Coverage</th>
-                        <th>Submitted</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Joined</th>
+                        <th>Admin</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var pkg in _pendingPackages)
+                    @foreach (var user in _users)
                     {
                         <tr>
-                            <td><a href="/package/@pkg.Code">@pkg.DisplayName</a></td>
-                            <td>@pkg.Author.DisplayName</td>
-                            <td><code>@pkg.Code</code></td>
-                            <td>@pkg.Coverage.ToString("F0")%</td>
-                            <td>@pkg.CreatedAt.ToString("yyyy-MM-dd")</td>
+                            <td>@user.DisplayName</td>
+                            <td>@user.Email</td>
+                            <td>@user.CreatedAt.ToString("yyyy-MM-dd")</td>
                             <td>
-                                <button class="btn btn-outline-success btn-sm" @onclick="() => ApprovePackage(pkg.Id)">
-                                    <i class="fas fa-check"></i>
-                                </button>
-                                <button class="btn btn-outline-danger btn-sm ms-1" @onclick="() => RejectPackage(pkg.Id)">
-                                    <i class="fas fa-times"></i>
+                                @if (user.IsAdmin)
+                                {
+                                    <span class="status-badge status-published">Admin</span>
+                                }
+                            </td>
+                            <td>
+                                <button class="btn btn-outline-primary btn-sm" @onclick="() => ToggleAdmin(user.Id)">
+                                    @(user.IsAdmin ? "Remove Admin" : "Make Admin")
                                 </button>
                             </td>
                         </tr>
@@ -76,49 +113,13 @@
                 </tbody>
             </table>
         </div>
+
+        <ConfirmDialog IsVisible="@_showConfirmReject"
+                       Title="Reject Package"
+                       Message="Are you sure you want to reject this package?"
+                       OnConfirm="ConfirmReject"
+                       OnCancel="CancelReject" />
     }
-
-    <h3 class="mb-3">Users</h3>
-    <div class="table-responsive">
-        <table class="table table-dark-custom">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Joined</th>
-                    <th>Admin</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var user in _users)
-                {
-                    <tr>
-                        <td>@user.DisplayName</td>
-                        <td>@user.Email</td>
-                        <td>@user.CreatedAt.ToString("yyyy-MM-dd")</td>
-                        <td>
-                            @if (user.IsAdmin)
-                            {
-                                <span class="status-badge status-published">Admin</span>
-                            }
-                        </td>
-                        <td>
-                            <button class="btn btn-outline-primary btn-sm" @onclick="() => ToggleAdmin(user.Id)">
-                                @(user.IsAdmin ? "Remove Admin" : "Make Admin")
-                            </button>
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </div>
-
-    <ConfirmDialog IsVisible="@_showConfirmReject"
-                   Title="Reject Package"
-                   Message="Are you sure you want to reject this package?"
-                   OnConfirm="ConfirmReject"
-                   OnCancel="CancelReject" />
 </div>
 
 @code {

@@ -15,81 +15,82 @@
         <div class="alert alert-warning">
             Please <a href="/login">login</a> to upload packages.
         </div>
-        return;
     }
-
-    @if (!string.IsNullOrWhiteSpace(_errorMessage))
+    else
     {
-        <div class="alert alert-danger">@_errorMessage</div>
+        @if (!string.IsNullOrWhiteSpace(_errorMessage))
+        {
+            <div class="alert alert-danger">@_errorMessage</div>
+        }
+
+        @if (!string.IsNullOrWhiteSpace(_successMessage))
+        {
+            <div class="alert alert-success">@_successMessage</div>
+        }
+
+        <EditForm Model="@_model" OnValidSubmit="HandleUpload">
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label class="form-label">Code (e.g. fr-FR)</label>
+                    <InputText class="form-control" @bind-Value="_model.Code" placeholder="xx-XX" />
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Display Name</label>
+                    <InputText class="form-control" @bind-Value="_model.DisplayName" placeholder="e.g. French (France)" />
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label class="form-label">Speech Locale</label>
+                    <InputText class="form-control" @bind-Value="_model.SpeechLocale" placeholder="e.g. fr-FR" />
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Version</label>
+                    <InputText class="form-control" @bind-Value="_model.Version" placeholder="1.0.0" />
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Description</label>
+                <InputTextArea class="form-control" @bind-Value="_model.Description" rows="3"
+                               placeholder="Describe your language pack..." />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Coverage (%)</label>
+                <InputNumber class="form-control" @bind-Value="_model.Coverage" min="0" max="100" />
+            </div>
+
+            <div class="upload-zone mb-3">
+                <i class="fas fa-file-code d-block"></i>
+                <p><strong>manifest.json</strong></p>
+                <InputFile OnChange="OnManifestSelected" accept=".json" />
+                @if (_manifestLoaded)
+                {
+                    <span class="text-success mt-2 d-block"><i class="fas fa-check"></i> Loaded</span>
+                }
+            </div>
+
+            <div class="upload-zone mb-3">
+                <i class="fas fa-language d-block"></i>
+                <p><strong>translations.json</strong></p>
+                <InputFile OnChange="OnTranslationsSelected" accept=".json" />
+                @if (_translationsLoaded)
+                {
+                    <span class="text-success mt-2 d-block"><i class="fas fa-check"></i> Loaded</span>
+                }
+            </div>
+
+            <button type="submit" class="btn btn-primary" disabled="@(_isSubmitting || !_manifestLoaded || !_translationsLoaded)">
+                @if (_isSubmitting)
+                {
+                    <span class="spinner-border spinner-border-sm"></span>
+                }
+                <i class="fas fa-paper-plane"></i> Submit for Review
+            </button>
+        </EditForm>
     }
-
-    @if (!string.IsNullOrWhiteSpace(_successMessage))
-    {
-        <div class="alert alert-success">@_successMessage</div>
-    }
-
-    <EditForm Model="@_model" OnValidSubmit="HandleUpload">
-        <div class="row mb-3">
-            <div class="col-md-6">
-                <label class="form-label">Code (e.g. fr-FR)</label>
-                <InputText class="form-control" @bind-Value="_model.Code" placeholder="xx-XX" />
-            </div>
-            <div class="col-md-6">
-                <label class="form-label">Display Name</label>
-                <InputText class="form-control" @bind-Value="_model.DisplayName" placeholder="e.g. French (France)" />
-            </div>
-        </div>
-
-        <div class="row mb-3">
-            <div class="col-md-6">
-                <label class="form-label">Speech Locale</label>
-                <InputText class="form-control" @bind-Value="_model.SpeechLocale" placeholder="e.g. fr-FR" />
-            </div>
-            <div class="col-md-6">
-                <label class="form-label">Version</label>
-                <InputText class="form-control" @bind-Value="_model.Version" placeholder="1.0.0" />
-            </div>
-        </div>
-
-        <div class="mb-3">
-            <label class="form-label">Description</label>
-            <InputTextArea class="form-control" @bind-Value="_model.Description" rows="3"
-                           placeholder="Describe your language pack..." />
-        </div>
-
-        <div class="mb-3">
-            <label class="form-label">Coverage (%)</label>
-            <InputNumber class="form-control" @bind-Value="_model.Coverage" min="0" max="100" />
-        </div>
-
-        <div class="upload-zone mb-3">
-            <i class="fas fa-file-code d-block"></i>
-            <p><strong>manifest.json</strong></p>
-            <InputFile OnChange="OnManifestSelected" accept=".json" />
-            @if (_manifestLoaded)
-            {
-                <span class="text-success mt-2 d-block"><i class="fas fa-check"></i> Loaded</span>
-            }
-        </div>
-
-        <div class="upload-zone mb-3">
-            <i class="fas fa-language d-block"></i>
-            <p><strong>translations.json</strong></p>
-            <InputFile OnChange="OnTranslationsSelected" accept=".json" />
-            @if (_translationsLoaded)
-            {
-                <span class="text-success mt-2 d-block"><i class="fas fa-check"></i> Loaded</span>
-            }
-        </div>
-
-        <button type="submit" class="btn btn-primary" disabled="@(_isSubmitting || !_manifestLoaded || !_translationsLoaded)">
-            @if (_isSubmitting)
-            {
-                <span class="spinner-border spinner-border-sm"></span>
-            }
-            <i class="fas fa-paper-plane"></i> Submit for Review
-        </button>
-    </EditForm>
 </div>
 
 @code {

@@ -12,10 +12,8 @@
         <div class="alert alert-warning">
             Please <a href="/login">login</a> to view your packages.
         </div>
-        return;
     }
-
-    @if (_isLoading)
+    else if (_isLoading)
     {
         <div class="text-center py-5">
             <div class="spinner-border text-primary" role="status"></div>
