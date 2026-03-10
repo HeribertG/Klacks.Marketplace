@@ -11,6 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
+builder.Services.AddControllers();
 builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddDbContext<MarketplaceDbContext>(options =>
@@ -45,14 +46,17 @@ await using (var scope = app.Services.CreateAsyncScope())
 
     if (!await db.Users.AnyAsync(u => u.IsAdmin))
     {
-        var authService = scope.ServiceProvider.GetRequiredService<IAuthService>();
-        var adminEmail = app.Configuration["AdminSettings:SeedAdminEmail"] ?? "admin@klacks.app";
-        var adminPassword = app.Configuration["AdminSettings:SeedAdminPassword"] ?? "Admin123!";
+        var adminEmail = app.Configuration["AdminSettings:SeedAdminEmail"];
+        var adminPassword = app.Configuration["AdminSettings:SeedAdminPassword"];
         var adminDisplayName = app.Configuration["AdminSettings:SeedAdminDisplayName"] ?? "Admin";
 
-        var admin = await authService.RegisterAsync(adminEmail, adminPassword, adminDisplayName);
-        admin.IsAdmin = true;
-        await db.SaveChangesAsync();
+        if (!string.IsNullOrWhiteSpace(adminEmail) && !string.IsNullOrWhiteSpace(adminPassword))
+        {
+            var authService = scope.ServiceProvider.GetRequiredService<IAuthService>();
+            var admin = await authService.RegisterAsync(adminEmail, adminPassword, adminDisplayName);
+            admin.IsAdmin = true;
+            await db.SaveChangesAsync();
+        }
     }
 }
 
@@ -66,6 +70,7 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
+app.MapControllers();
 app.MapRazorPages();
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");

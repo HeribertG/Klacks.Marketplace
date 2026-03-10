@@ -50,6 +50,7 @@
                             <th>Author</th>
                             <th>Code</th>
                             <th>Coverage</th>
+                            <th>Docs</th>
                             <th>Submitted</th>
                             <th>Actions</th>
                         </tr>
@@ -62,6 +63,7 @@
                                 <td>@pkg.Author.DisplayName</td>
                                 <td><code>@pkg.Code</code></td>
                                 <td>@pkg.Coverage.ToString("F0")%</td>
+                                <td>@GetDocsCount(pkg)</td>
                                 <td>@pkg.CreatedAt.ToString("yyyy-MM-dd")</td>
                                 <td>
                                     <button class="btn btn-outline-success btn-sm" @onclick="() => ApprovePackage(pkg.Id)">
@@ -187,6 +189,25 @@
     private void CancelReject()
     {
         _showConfirmReject = false;
+    }
+
+    private static string GetDocsCount(LanguagePackage pkg)
+    {
+        var latestVersion = pkg.Versions.FirstOrDefault();
+        if (latestVersion is null || string.IsNullOrWhiteSpace(latestVersion.DocsJson))
+        {
+            return "0";
+        }
+
+        try
+        {
+            using var doc = System.Text.Json.JsonDocument.Parse(latestVersion.DocsJson);
+            return doc.RootElement.EnumerateObject().Count().ToString();
+        }
+        catch
+        {
+            return "0";
+        }
     }
 
     private async Task ToggleAdmin(int userId)

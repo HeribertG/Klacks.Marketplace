@@ -18,6 +18,7 @@ public class LanguagePackage
     public int TranslationCount { get; set; }
     public string Description { get; set; } = string.Empty;
     public PackageStatus Status { get; set; } = PackageStatus.Draft;
+    public string MinKlacksVersion { get; set; } = "1.0.0";
     public int Downloads { get; set; }
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;

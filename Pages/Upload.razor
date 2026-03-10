@@ -57,9 +57,15 @@
                                placeholder="Describe your language pack..." />
             </div>
 
-            <div class="mb-3">
-                <label class="form-label">Coverage (%)</label>
-                <InputNumber class="form-control" @bind-Value="_model.Coverage" min="0" max="100" />
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label class="form-label">Coverage (%)</label>
+                    <InputNumber class="form-control" @bind-Value="_model.Coverage" min="0" max="100" />
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Min Klacks Version</label>
+                    <InputText class="form-control" @bind-Value="_model.MinKlacksVersion" placeholder="1.0.0" />
+                </div>
             </div>
 
             <div class="upload-zone mb-3">
@@ -82,6 +88,46 @@
                 }
             </div>
 
+            <div class="upload-zone mb-3">
+                <i class="fas fa-book d-block"></i>
+                <p><strong>docs.json</strong> <span class="text-muted">(optional)</span></p>
+                <InputFile OnChange="OnDocsSelected" accept=".json" />
+                @if (_docsLoaded)
+                {
+                    <span class="text-success mt-2 d-block"><i class="fas fa-check"></i> Loaded</span>
+                }
+            </div>
+
+            <div class="upload-zone mb-3">
+                <i class="fas fa-globe d-block"></i>
+                <p><strong>countries.json</strong> <span class="text-muted">(optional)</span></p>
+                <InputFile OnChange="OnCountriesSelected" accept=".json" />
+                @if (_countriesLoaded)
+                {
+                    <span class="text-success mt-2 d-block"><i class="fas fa-check"></i> Loaded</span>
+                }
+            </div>
+
+            <div class="upload-zone mb-3">
+                <i class="fas fa-map-marker-alt d-block"></i>
+                <p><strong>states.json</strong> <span class="text-muted">(optional)</span></p>
+                <InputFile OnChange="OnStatesSelected" accept=".json" />
+                @if (_statesLoaded)
+                {
+                    <span class="text-success mt-2 d-block"><i class="fas fa-check"></i> Loaded</span>
+                }
+            </div>
+
+            <div class="upload-zone mb-3">
+                <i class="fas fa-calendar-alt d-block"></i>
+                <p><strong>calendar-rules.json</strong> <span class="text-muted">(optional)</span></p>
+                <InputFile OnChange="OnCalendarRulesSelected" accept=".json" />
+                @if (_calendarRulesLoaded)
+                {
+                    <span class="text-success mt-2 d-block"><i class="fas fa-check"></i> Loaded</span>
+                }
+            </div>
+
             <button type="submit" class="btn btn-primary" disabled="@(_isSubmitting || !_manifestLoaded || !_translationsLoaded)">
                 @if (_isSubmitting)
                 {
@@ -97,8 +143,16 @@
     private UploadModel _model = new();
     private string _manifestJson = string.Empty;
     private string _translationsJson = string.Empty;
+    private string _docsJson = string.Empty;
+    private string _countriesJson = string.Empty;
+    private string _statesJson = string.Empty;
+    private string _calendarRulesJson = string.Empty;
     private bool _manifestLoaded;
     private bool _translationsLoaded;
+    private bool _docsLoaded;
+    private bool _countriesLoaded;
+    private bool _statesLoaded;
+    private bool _calendarRulesLoaded;
     private bool _isSubmitting;
     private bool _isAuthenticated;
     private int _userId;
@@ -165,6 +219,98 @@
         }
     }
 
+    private async Task OnDocsSelected(InputFileChangeEventArgs e)
+    {
+        _errorMessage = string.Empty;
+        try
+        {
+            using var reader = new StreamReader(e.File.OpenReadStream(AppConstants.MaxUploadSizeBytes));
+            _docsJson = await reader.ReadToEndAsync();
+            var (isValid, error) = FileValidation.ValidateDocs(_docsJson);
+            if (!isValid)
+            {
+                _errorMessage = $"Docs: {error}";
+                _docsLoaded = false;
+                return;
+            }
+            _docsLoaded = true;
+        }
+        catch (Exception ex)
+        {
+            _errorMessage = $"Error reading docs: {ex.Message}";
+            _docsLoaded = false;
+        }
+    }
+
+    private async Task OnCountriesSelected(InputFileChangeEventArgs e)
+    {
+        _errorMessage = string.Empty;
+        try
+        {
+            using var reader = new StreamReader(e.File.OpenReadStream(AppConstants.MaxUploadSizeBytes));
+            _countriesJson = await reader.ReadToEndAsync();
+            var (isValid, error) = FileValidation.ValidateCountriesJson(_countriesJson);
+            if (!isValid)
+            {
+                _errorMessage = $"Countries: {error}";
+                _countriesLoaded = false;
+                return;
+            }
+            _countriesLoaded = true;
+        }
+        catch (Exception ex)
+        {
+            _errorMessage = $"Error reading countries: {ex.Message}";
+            _countriesLoaded = false;
+        }
+    }
+
+    private async Task OnStatesSelected(InputFileChangeEventArgs e)
+    {
+        _errorMessage = string.Empty;
+        try
+        {
+            using var reader = new StreamReader(e.File.OpenReadStream(AppConstants.MaxUploadSizeBytes));
+            _statesJson = await reader.ReadToEndAsync();
+            var (isValid, error) = FileValidation.ValidateStatesJson(_statesJson);
+            if (!isValid)
+            {
+                _errorMessage = $"States: {error}";
+                _statesLoaded = false;
+                return;
+            }
+            _statesLoaded = true;
+        }
+        catch (Exception ex)
+        {
+            _errorMessage = $"Error reading states: {ex.Message}";
+            _statesLoaded = false;
+        }
+    }
+
+    private async Task OnCalendarRulesSelected(InputFileChangeEventArgs e)
+    {
+        _errorMessage = string.Empty;
+        try
+        {
+            using var reader = new StreamReader(e.File.OpenReadStream(AppConstants.MaxUploadSizeBytes));
+            _calendarRulesJson = await reader.ReadToEndAsync();
+            var (isValid, error) = FileValidation.ValidateCalendarRulesJson(_calendarRulesJson);
+            if (!isValid)
+            {
+                _errorMessage = $"Calendar rules: {error}";
+                _calendarRulesLoaded = false;
+                return;
+            }
+            _calendarRulesLoaded = true;
+        }
+        catch (Exception ex)
+        {
+            _errorMessage = $"Error reading calendar rules: {ex.Message}";
+            _calendarRulesLoaded = false;
+        }
+    }
+
     private async Task HandleUpload()
     {
         _errorMessage = string.Empty;
@@ -188,14 +334,26 @@
                 Version = _model.Version.Trim(),
                 Description = _model.Description?.Trim() ?? string.Empty,
                 Coverage = _model.Coverage,
+                MinKlacksVersion = _model.MinKlacksVersion.Trim(),
                 AuthorId = _userId
             };
 
-            await PackageService.CreatePackageAsync(package, _manifestJson, _translationsJson);
+            await PackageService.CreatePackageAsync(
+                package,
+                _manifestJson,
+                _translationsJson,
+                _docsLoaded ? _docsJson : null,
+                _countriesLoaded ? _countriesJson : null,
+                _statesLoaded ? _statesJson : null,
+                _calendarRulesLoaded ? _calendarRulesJson : null);
             _successMessage = "Package submitted for review!";
             _model = new();
             _manifestLoaded = false;
             _translationsLoaded = false;
+            _docsLoaded = false;
+            _countriesLoaded = false;
+            _statesLoaded = false;
+            _calendarRulesLoaded = false;
         }
         catch (Exception ex)
         {
@@ -215,5 +373,6 @@
         public string Version { get; set; } = "1.0.0";
         public string Description { get; set; } = string.Empty;
         public double Coverage { get; set; }
+        public string MinKlacksVersion { get; set; } = "1.0.0";
     }
 }

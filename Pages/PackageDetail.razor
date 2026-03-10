@@ -42,6 +42,23 @@ else
                 <span><i class="fas fa-download"></i> @_package.Downloads downloads</span>
                 <span><i class="fas fa-language"></i> @_package.TranslationCount keys</span>
                 <span><i class="fas fa-globe"></i> @_package.SpeechLocale</span>
+                <span><i class="fas fa-code-branch"></i> min Klacks v@_package.MinKlacksVersion</span>
+                @if (_docsCount > 0)
+                {
+                    <span><i class="fas fa-book"></i> @_docsCount manuals</span>
+                }
+                @if (_countriesCount > 0)
+                {
+                    <span><i class="fas fa-globe"></i> @_countriesCount countries</span>
+                }
+                @if (_statesCount > 0)
+                {
+                    <span><i class="fas fa-map-marker-alt"></i> @_statesCount states</span>
+                }
+                @if (_calendarRulesCount > 0)
+                {
+                    <span><i class="fas fa-calendar-alt"></i> @_calendarRulesCount calendar rules</span>
+                }
             </div>
 
             <CoverageBar Coverage="@_package.Coverage" />
@@ -105,12 +122,45 @@ else
     private LanguagePackage? _package;
     private bool _isLoading = true;
     private bool _isDownloading;
+    private int _docsCount;
+    private int _countriesCount;
+    private int _statesCount;
+    private int _calendarRulesCount;
     private string _errorMessage = string.Empty;
 
     protected override async Task OnInitializedAsync()
     {
         _package = await PackageService.GetPackageByCodeAsync(Code);
+        ComputeGeoDataCounts();
         _isLoading = false;
+    }
+
+    private void ComputeGeoDataCounts()
+    {
+        var latestVersion = _package?.Versions.FirstOrDefault();
+        if (latestVersion is null) return;
+
+        _docsCount = CountJsonEntries(latestVersion.DocsJson, isObject: true);
+        _countriesCount = CountJsonEntries(latestVersion.CountriesJson, isObject: false);
+        _statesCount = CountJsonEntries(latestVersion.StatesJson, isObject: false);
+        _calendarRulesCount = CountJsonEntries(latestVersion.CalendarRulesJson, isObject: false);
+    }
+
+    private static int CountJsonEntries(string json, bool isObject)
+    {
+        if (string.IsNullOrWhiteSpace(json)) return 0;
+
+        try
+        {
+            using var doc = System.Text.Json.JsonDocument.Parse(json);
+            return isObject
+                ? doc.RootElement.EnumerateObject().Count()
+                : doc.RootElement.GetArrayLength();
+        }
+        catch
+        {
+            return 0;
+        }
     }
 
     private async Task DownloadPackage()

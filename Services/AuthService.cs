@@ -62,6 +62,29 @@ public class AuthService : IAuthService
         return await _db.Users.FindAsync(userId);
     }
 
+    public async Task<User> GetOrCreateSystemUserAsync()
+    {
+        const string systemEmail = "system@klacks.app";
+        var user = await _db.Users.FirstOrDefaultAsync(u => u.Email == systemEmail);
+        if (user is not null)
+        {
+            return user;
+        }
+
+        user = new User
+        {
+            Email = systemEmail,
+            PasswordHash = HashPassword(Guid.NewGuid().ToString()),
+            DisplayName = "System",
+            IsAdmin = true,
+            CreatedAt = DateTime.UtcNow
+        };
+
+        _db.Users.Add(user);
+        await _db.SaveChangesAsync();
+        return user;
+    }
+
     private static string HashPassword(string password)
     {
         var salt = RandomNumberGenerator.GetBytes(SaltSize);

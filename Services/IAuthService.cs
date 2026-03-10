@@ -9,4 +9,5 @@ public interface IAuthService
     Task<User> RegisterAsync(string email, string password, string displayName);
     Task<User?> LoginAsync(string email, string password);
     Task<User?> GetUserByIdAsync(int userId);
+    Task<User> GetOrCreateSystemUserAsync();
 }

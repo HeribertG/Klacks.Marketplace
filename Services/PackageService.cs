@@ -59,7 +59,7 @@ public class PackageService : IPackageService
             .FirstOrDefaultAsync(p => p.Code == code);
     }
 
-    public async Task<LanguagePackage> CreatePackageAsync(LanguagePackage package, string manifestJson, string translationsJson)
+    public async Task<LanguagePackage> CreatePackageAsync(LanguagePackage package, string manifestJson, string translationsJson, string? docsJson = null, string? countriesJson = null, string? statesJson = null, string? calendarRulesJson = null)
     {
         var existing = await _db.Packages.FirstOrDefaultAsync(p => p.Code == package.Code && p.AuthorId == package.AuthorId);
         if (existing is not null)
@@ -69,7 +69,10 @@ public class PackageService : IPackageService
 
         using var translationsDoc = JsonDocument.Parse(translationsJson);
         package.TranslationCount = translationsDoc.RootElement.EnumerateObject().Count();
-        package.Status = PackageStatus.PendingReview;
+        if (package.Status == PackageStatus.Draft)
+        {
+            package.Status = PackageStatus.PendingReview;
+        }
         package.CreatedAt = DateTime.UtcNow;
         package.UpdatedAt = DateTime.UtcNow;
 
@@ -78,6 +81,10 @@ public class PackageService : IPackageService
             Version = package.Version,
             ManifestJson = manifestJson,
             TranslationsJson = translationsJson,
+            DocsJson = docsJson ?? string.Empty,
+            CountriesJson = countriesJson ?? string.Empty,
+            StatesJson = statesJson ?? string.Empty,
+            CalendarRulesJson = calendarRulesJson ?? string.Empty,
             Status = PackageStatus.PendingReview,
             CreatedAt = DateTime.UtcNow
         };
@@ -114,13 +121,74 @@ public class PackageService : IPackageService
         });
         await _db.SaveChangesAsync();
 
-        var bundle = new
+        var bundleDict = new Dictionary<string, JsonElement>
         {
-            manifest = JsonSerializer.Deserialize<JsonElement>(latestVersion.ManifestJson),
-            translations = JsonSerializer.Deserialize<JsonElement>(latestVersion.TranslationsJson)
+            ["manifest"] = JsonSerializer.Deserialize<JsonElement>(latestVersion.ManifestJson),
+            ["translations"] = JsonSerializer.Deserialize<JsonElement>(latestVersion.TranslationsJson)
         };
 
-        return Encoding.UTF8.GetBytes(JsonSerializer.Serialize(bundle, new JsonSerializerOptions { WriteIndented = true }));
+        if (!string.IsNullOrWhiteSpace(latestVersion.DocsJson))
+        {
+            bundleDict["docs"] = JsonSerializer.Deserialize<JsonElement>(latestVersion.DocsJson);
+        }
+
+        if (!string.IsNullOrWhiteSpace(latestVersion.CountriesJson))
+        {
+            bundleDict["countries"] = JsonSerializer.Deserialize<JsonElement>(latestVersion.CountriesJson);
+        }
+
+        if (!string.IsNullOrWhiteSpace(latestVersion.StatesJson))
+        {
+            bundleDict["states"] = JsonSerializer.Deserialize<JsonElement>(latestVersion.StatesJson);
+        }
+
+        if (!string.IsNullOrWhiteSpace(latestVersion.CalendarRulesJson))
+        {
+            bundleDict["calendarRules"] = JsonSerializer.Deserialize<JsonElement>(latestVersion.CalendarRulesJson);
+        }
+
+        return Encoding.UTF8.GetBytes(JsonSerializer.Serialize(bundleDict, new JsonSerializerOptions { WriteIndented = true }));
+    }
+
+    public async Task<LanguagePackage> UpdatePackageAsync(string code, LanguagePackage updated, string manifestJson, string translationsJson, string? docsJson, string? countriesJson, string? statesJson, string? calendarRulesJson)
+    {
+        var existing = await _db.Packages
+            .Include(p => p.Versions)
+            .FirstOrDefaultAsync(p => p.Code == code);
+
+        if (existing is null)
+        {
+            throw new InvalidOperationException($"Package with code '{code}' not found");
+        }
+
+        existing.Name = updated.Name;
+        existing.DisplayName = updated.DisplayName;
+        existing.SpeechLocale = updated.SpeechLocale;
+        existing.Version = updated.Version;
+        existing.Coverage = updated.Coverage;
+        existing.Description = updated.Description;
+        existing.MinKlacksVersion = updated.MinKlacksVersion;
+        existing.UpdatedAt = DateTime.UtcNow;
+
+        using var translationsDoc = JsonDocument.Parse(translationsJson);
+        existing.TranslationCount = translationsDoc.RootElement.EnumerateObject().Count();
+
+        var version = new PackageVersion
+        {
+            Version = updated.Version,
+            ManifestJson = manifestJson,
+            TranslationsJson = translationsJson,
+            DocsJson = docsJson ?? string.Empty,
+            CountriesJson = countriesJson ?? string.Empty,
+            StatesJson = statesJson ?? string.Empty,
+            CalendarRulesJson = calendarRulesJson ?? string.Empty,
+            Status = existing.Status,
+            CreatedAt = DateTime.UtcNow
+        };
+        existing.Versions.Add(version);
+
+        await _db.SaveChangesAsync();
+        return existing;
     }
 
     public async Task<List<LanguagePackage>> GetUserPackagesAsync(int userId)

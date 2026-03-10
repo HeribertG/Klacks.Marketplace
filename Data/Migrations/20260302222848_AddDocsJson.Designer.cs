@@ -3,6 +3,7 @@ using System;
 using Klacks.Marketplace.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Klacks.Marketplace.Data.Migrations
 {
     [DbContext(typeof(MarketplaceDbContext))]
-    partial class MarketplaceDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260302222848_AddDocsJson")]
+    partial class AddDocsJson
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "10.0.3");
@@ -74,10 +77,6 @@ namespace Klacks.Marketplace.Data.Migrations
                     b.Property<int>("Downloads")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("MinKlacksVersion")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -115,15 +114,7 @@ namespace Klacks.Marketplace.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("CalendarRulesJson")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("ChangeLog")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("CountriesJson")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
@@ -140,10 +131,6 @@ namespace Klacks.Marketplace.Data.Migrations
 
                     b.Property<int>("PackageId")
                         .HasColumnType("INTEGER");
-
-                    b.Property<string>("StatesJson")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
 
                     b.Property<int>("Status")
                         .HasColumnType("INTEGER");

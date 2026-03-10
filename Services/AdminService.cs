@@ -20,6 +20,7 @@ public class AdminService : IAdminService
     {
         return await _db.Packages
             .Include(p => p.Author)
+            .Include(p => p.Versions.OrderByDescending(v => v.CreatedAt).Take(1))
             .Where(p => p.Status == PackageStatus.PendingReview)
             .OrderBy(p => p.CreatedAt)
             .ToListAsync();
