@@ -74,7 +74,7 @@ jobs:
           timeout 900 $COMPOSE_CMD build klacks-marketplace --no-cache
 
           echo "Starting Klacks.Marketplace..."
-          $COMPOSE_CMD up -d klacks-marketplace
+          $COMPOSE_CMD up -d --force-recreate klacks-marketplace
 
           echo "Klacks.Marketplace deployment completed!"
 
