@@ -66,10 +66,14 @@ jobs:
 
           cd Klacks.Api
 
+          echo "Stopping old Klacks.Marketplace container..."
+          $COMPOSE_CMD stop klacks-marketplace || true
+          $COMPOSE_CMD rm -f klacks-marketplace || true
+
           echo "Building Klacks.Marketplace..."
           timeout 900 $COMPOSE_CMD build klacks-marketplace --no-cache
 
-          echo "Restarting Klacks.Marketplace..."
+          echo "Starting Klacks.Marketplace..."
           $COMPOSE_CMD up -d klacks-marketplace
 
           echo "Klacks.Marketplace deployment completed!"
