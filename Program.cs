@@ -34,6 +34,8 @@ builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IPackageService, PackageService>();
 builder.Services.AddScoped<IAdminService, AdminService>();
 builder.Services.AddScoped<IFileValidationService, FileValidationService>();
+builder.Services.AddScoped<IFeaturePluginMarketplaceService, FeaturePluginMarketplaceService>();
+builder.Services.AddScoped<IPluginValidationService, PluginValidationService>();
 
 var app = builder.Build();
 

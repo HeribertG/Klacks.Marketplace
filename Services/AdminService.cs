@@ -66,6 +66,51 @@ public class AdminService : IAdminService
         return await _db.Users.OrderBy(u => u.DisplayName).ToListAsync();
     }
 
+    public async Task<List<FeaturePlugin>> GetPendingPluginsAsync()
+    {
+        return await _db.FeaturePlugins
+            .Include(p => p.Author)
+            .Include(p => p.Versions.OrderByDescending(v => v.CreatedAt).Take(1))
+            .Where(p => p.Status == PackageStatus.PendingReview)
+            .OrderBy(p => p.CreatedAt)
+            .ToListAsync();
+    }
+
+    public async Task ApprovePluginAsync(int pluginId)
+    {
+        var plugin = await _db.FeaturePlugins
+            .Include(p => p.Versions)
+            .FirstOrDefaultAsync(p => p.Id == pluginId);
+
+        if (plugin is null)
+        {
+            throw new InvalidOperationException("Plugin not found");
+        }
+
+        plugin.Status = PackageStatus.Published;
+        plugin.UpdatedAt = DateTime.UtcNow;
+
+        foreach (var version in plugin.Versions.Where(v => v.Status == PackageStatus.PendingReview))
+        {
+            version.Status = PackageStatus.Published;
+        }
+
+        await _db.SaveChangesAsync();
+    }
+
+    public async Task RejectPluginAsync(int pluginId, string reason)
+    {
+        var plugin = await _db.FeaturePlugins.FindAsync(pluginId);
+        if (plugin is null)
+        {
+            throw new InvalidOperationException("Plugin not found");
+        }
+
+        plugin.Status = PackageStatus.Rejected;
+        plugin.UpdatedAt = DateTime.UtcNow;
+        await _db.SaveChangesAsync();
+    }
+
     public async Task ToggleAdminAsync(int userId)
     {
         var user = await _db.Users.FindAsync(userId);

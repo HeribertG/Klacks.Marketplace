@@ -21,4 +21,20 @@ public static class AppConstants
         "macro-manual",
         "identity-provider-manual"
     ];
+
+    public const int PluginMaxUploadSizeBytes = 10 * 1024 * 1024;
+    public const string PluginManifestFileName = "manifest.json";
+    public const string PluginI18nDirectory = "i18n";
+
+    public static readonly string[] AllowedScreenshotExtensions = [".png", ".jpg", ".jpeg", ".webp"];
+
+    public static readonly string[] RequiredManifestFields =
+    [
+        "name",
+        "displayName",
+        "category",
+        "version",
+        "description",
+        "minKlacksVersion"
+    ];
 }

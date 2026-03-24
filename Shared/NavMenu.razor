@@ -6,7 +6,7 @@
         <div class="d-flex justify-content-between align-items-center">
             <div class="d-flex align-items-center gap-3">
                 <a class="navbar-brand" href="/">
-                    <i class="fas fa-globe"></i> Klacks Marketplace
+                    <i class="fas fa-store"></i> Klacks Marketplace
                 </a>
                 <a class="nav-link" href="/">Browse</a>
             </div>
@@ -14,7 +14,10 @@
                 @if (_isAuthenticated)
                 {
                     <a class="nav-link" href="/upload">
-                        <i class="fas fa-upload"></i> Upload
+                        <i class="fas fa-globe"></i> Upload Pack
+                    </a>
+                    <a class="nav-link" href="/upload-plugin">
+                        <i class="fas fa-puzzle-piece"></i> Upload Plugin
                     </a>
                     <a class="nav-link" href="/my-packages">
                         <i class="fas fa-box"></i> My Packages

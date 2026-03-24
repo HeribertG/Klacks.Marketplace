@@ -1,0 +1,64 @@
+@inject NavigationManager Navigation
+
+<div class="package-card" @onclick="NavigateToPlugin">
+    <div class="package-card-header">
+        <h3 class="package-card-title">@Plugin.DisplayName</h3>
+        <span class="package-card-code">@Plugin.Category</span>
+    </div>
+    <div class="package-card-author">
+        <i class="fas fa-user"></i> @Plugin.Author.DisplayName
+    </div>
+    <p class="package-card-description">@Plugin.Description</p>
+
+    <div class="d-flex gap-2 mb-2">
+        @foreach (var skill in GetSkills().Take(3))
+        {
+            <span class="status-badge status-published" style="font-size: 0.7rem;">@skill</span>
+        }
+        @if (GetSkills().Length > 3)
+        {
+            <span class="text-muted" style="font-size: 0.7rem;">+@(GetSkills().Length - 3) more</span>
+        }
+    </div>
+
+    <div class="package-card-footer">
+        <div class="package-card-stats">
+            <span><i class="fas fa-download"></i> @Plugin.Downloads</span>
+            <span><i class="fas fa-cogs"></i> @GetSkills().Length skills</span>
+        </div>
+        <span>v@(Plugin.Version)</span>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public FeaturePlugin Plugin { get; set; } = null!;
+
+    private string[] _skills = [];
+
+    protected override void OnParametersSet()
+    {
+        _skills = GetSkills();
+    }
+
+    private string[] GetSkills()
+    {
+        if (_skills.Length > 0) return _skills;
+
+        try
+        {
+            if (!string.IsNullOrWhiteSpace(Plugin.ProvidedSkillsJson))
+            {
+                return System.Text.Json.JsonSerializer.Deserialize<string[]>(Plugin.ProvidedSkillsJson) ?? [];
+            }
+        }
+        catch { }
+
+        return [];
+    }
+
+    private void NavigateToPlugin()
+    {
+        Navigation.NavigateTo($"/plugin/{Plugin.Name}");
+    }
+}

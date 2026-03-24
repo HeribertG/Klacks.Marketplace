@@ -13,6 +13,9 @@ public class MarketplaceDbContext : DbContext
     public DbSet<LanguagePackage> Packages => Set<LanguagePackage>();
     public DbSet<PackageVersion> PackageVersions => Set<PackageVersion>();
     public DbSet<DownloadLog> DownloadLogs => Set<DownloadLog>();
+    public DbSet<FeaturePlugin> FeaturePlugins => Set<FeaturePlugin>();
+    public DbSet<FeaturePluginVersion> FeaturePluginVersions => Set<FeaturePluginVersion>();
+    public DbSet<PluginDownloadLog> PluginDownloadLogs => Set<PluginDownloadLog>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -50,6 +53,36 @@ public class MarketplaceDbContext : DbContext
             entity.HasOne(e => e.Package)
                   .WithMany(p => p.DownloadLogs)
                   .HasForeignKey(e => e.PackageId)
+                  .OnDelete(DeleteBehavior.Cascade);
+            entity.Property(e => e.IpAddress).HasMaxLength(45);
+        });
+
+        modelBuilder.Entity<FeaturePlugin>(entity =>
+        {
+            entity.HasIndex(e => e.Name).IsUnique();
+            entity.Property(e => e.Name).IsRequired().HasMaxLength(100);
+            entity.Property(e => e.DisplayName).IsRequired().HasMaxLength(200);
+            entity.Property(e => e.Category).IsRequired().HasMaxLength(50);
+            entity.Property(e => e.Description).HasMaxLength(4000);
+            entity.HasOne(e => e.Author)
+                  .WithMany()
+                  .HasForeignKey(e => e.AuthorId)
+                  .OnDelete(DeleteBehavior.Restrict);
+        });
+
+        modelBuilder.Entity<FeaturePluginVersion>(entity =>
+        {
+            entity.HasOne(e => e.Plugin)
+                  .WithMany(p => p.Versions)
+                  .HasForeignKey(e => e.PluginId)
+                  .OnDelete(DeleteBehavior.Cascade);
+        });
+
+        modelBuilder.Entity<PluginDownloadLog>(entity =>
+        {
+            entity.HasOne(e => e.Plugin)
+                  .WithMany(p => p.DownloadLogs)
+                  .HasForeignKey(e => e.PluginId)
                   .OnDelete(DeleteBehavior.Cascade);
             entity.Property(e => e.IpAddress).HasMaxLength(45);
         });

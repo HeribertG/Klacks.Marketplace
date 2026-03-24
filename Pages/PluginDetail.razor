@@ -1,0 +1,194 @@
+@page "/plugin/{Name}"
+@inject IFeaturePluginMarketplaceService PluginService
+@inject IHttpContextAccessor HttpContextAccessor
+@inject NavigationManager Navigation
+
+<PageTitle>@(_plugin?.DisplayName ?? "Plugin") - Klacks Marketplace</PageTitle>
+
+@if (_isLoading)
+{
+    <div class="text-center py-5">
+        <div class="spinner-border text-primary" role="status"></div>
+    </div>
+}
+else if (_plugin is null)
+{
+    <div class="empty-state">
+        <i class="fas fa-exclamation-triangle d-block"></i>
+        <h3>Plugin not found</h3>
+        <p>The plugin you are looking for does not exist.</p>
+        <a href="/" class="btn btn-primary mt-3">Back to Browse</a>
+    </div>
+}
+else
+{
+    <div class="detail-container">
+        <a href="/" class="btn btn-secondary btn-sm mb-3">
+            <i class="fas fa-arrow-left"></i> Back
+        </a>
+
+        <div class="detail-header">
+            <div class="d-flex justify-content-between align-items-start">
+                <div>
+                    <h1>@_plugin.DisplayName</h1>
+                    <CategoryBadge Category="@_plugin.Category" />
+                </div>
+                <StatusBadge Status="@_plugin.Status" />
+            </div>
+
+            <div class="detail-meta">
+                <span><i class="fas fa-user"></i> @_plugin.Author.DisplayName</span>
+                <span><i class="fas fa-tag"></i> v@_plugin.Version</span>
+                <span><i class="fas fa-download"></i> @_plugin.Downloads downloads</span>
+                <span><i class="fas fa-cogs"></i> @_skills.Length skills</span>
+                <span><i class="fas fa-code-branch"></i> min Klacks v@_plugin.MinKlacksVersion</span>
+            </div>
+        </div>
+
+        @if (!string.IsNullOrWhiteSpace(_plugin.Description))
+        {
+            <div class="mb-4">
+                <h4>Description</h4>
+                <p>@_plugin.Description</p>
+            </div>
+        }
+
+        @if (_skills.Length > 0)
+        {
+            <div class="mb-4">
+                <h4>Provided Skills</h4>
+                <div class="d-flex flex-wrap gap-2">
+                    @foreach (var skill in _skills)
+                    {
+                        <span class="status-badge status-published">@skill</span>
+                    }
+                </div>
+            </div>
+        }
+
+        @if (_permissions.Length > 0)
+        {
+            <div class="mb-4">
+                <h4>Required Permissions</h4>
+                <div class="d-flex flex-wrap gap-2">
+                    @foreach (var perm in _permissions)
+                    {
+                        <span class="status-badge status-pending">@perm</span>
+                    }
+                </div>
+            </div>
+        }
+
+        @if (!string.IsNullOrWhiteSpace(_plugin.ReadmeMarkdown))
+        {
+            <div class="mb-4">
+                <h4>README</h4>
+                <div class="p-3" style="background: rgba(255,255,255,0.05); border-radius: 8px;">
+                    <pre style="white-space: pre-wrap; margin: 0;">@_plugin.ReadmeMarkdown</pre>
+                </div>
+            </div>
+        }
+
+        @if (_plugin.Status == PackageStatus.Published)
+        {
+            <button class="btn btn-primary mb-4" @onclick="DownloadPlugin" disabled="@_isDownloading">
+                @if (_isDownloading)
+                {
+                    <span class="spinner-border spinner-border-sm"></span>
+                }
+                else
+                {
+                    <i class="fas fa-download"></i>
+                }
+                Download Plugin
+            </button>
+        }
+
+        @if (_plugin.Versions.Count > 0)
+        {
+            <h4>Version History</h4>
+            <ul class="version-list">
+                @foreach (var version in _plugin.Versions)
+                {
+                    <li class="version-item">
+                        <div>
+                            <strong>v@version.Version</strong>
+                            <span class="text-muted ms-2">@version.CreatedAt.ToString("yyyy-MM-dd")</span>
+                            @if (!string.IsNullOrWhiteSpace(version.ChangeLog))
+                            {
+                                <p class="text-muted mb-0 mt-1">@version.ChangeLog</p>
+                            }
+                        </div>
+                        <StatusBadge Status="@version.Status" />
+                    </li>
+                }
+            </ul>
+        }
+    </div>
+}
+
+@if (!string.IsNullOrWhiteSpace(_errorMessage))
+{
+    <div class="alert alert-danger mt-3">@_errorMessage</div>
+}
+
+@code {
+    [Parameter]
+    public string Name { get; set; } = string.Empty;
+
+    private FeaturePlugin? _plugin;
+    private bool _isLoading = true;
+    private bool _isDownloading;
+    private string[] _skills = [];
+    private string[] _permissions = [];
+    private string _errorMessage = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _plugin = await PluginService.GetPluginByNameAsync(Name);
+        ParseJsonArrays();
+        _isLoading = false;
+    }
+
+    private void ParseJsonArrays()
+    {
+        if (_plugin is null) return;
+
+        try
+        {
+            if (!string.IsNullOrWhiteSpace(_plugin.ProvidedSkillsJson))
+            {
+                _skills = System.Text.Json.JsonSerializer.Deserialize<string[]>(_plugin.ProvidedSkillsJson) ?? [];
+            }
+        }
+        catch { }
+
+        try
+        {
+            if (!string.IsNullOrWhiteSpace(_plugin.RequiredPermissionsJson))
+            {
+                _permissions = System.Text.Json.JsonSerializer.Deserialize<string[]>(_plugin.RequiredPermissionsJson) ?? [];
+            }
+        }
+        catch { }
+    }
+
+    private async Task DownloadPlugin()
+    {
+        try
+        {
+            _isDownloading = true;
+            var ipAddress = HttpContextAccessor.HttpContext?.Connection.RemoteIpAddress?.ToString() ?? "unknown";
+            await PluginService.DownloadPluginAsync(Name, ipAddress);
+            _plugin = await PluginService.GetPluginByNameAsync(Name);
+        }
+        catch (Exception ex)
+        {
+            _errorMessage = ex.Message;
+        }
+        finally
+        {
+            _isDownloading = false;
+        }
+    }
+}

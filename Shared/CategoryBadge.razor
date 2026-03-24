@@ -1,0 +1,16 @@
+<span class="status-badge @GetCategoryClass()">@Category</span>
+
+@code {
+    [Parameter]
+    public string Category { get; set; } = string.Empty;
+
+    private string GetCategoryClass() => Category switch
+    {
+        "communication" => "status-published",
+        "erp" => "status-pending",
+        "accounting" => "status-draft",
+        "reporting" => "status-published",
+        "integration" => "status-pending",
+        _ => "status-draft"
+    };
+}

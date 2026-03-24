@@ -15,7 +15,7 @@ namespace Klacks.Marketplace.Data.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "10.0.3");
+            modelBuilder.HasAnnotation("ProductVersion", "10.0.5");
 
             modelBuilder.Entity("Klacks.Marketplace.Models.DownloadLog", b =>
                 {
@@ -39,6 +39,119 @@ namespace Klacks.Marketplace.Data.Migrations
                     b.HasIndex("PackageId");
 
                     b.ToTable("DownloadLogs");
+                });
+
+            modelBuilder.Entity("Klacks.Marketplace.Models.FeaturePlugin", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("AuthorId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Category")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(4000)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("DisplayName")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Downloads")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("MinKlacksVersion")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ProvidedSkillsJson")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ReadmeMarkdown")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("RequiredPermissionsJson")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Version")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AuthorId");
+
+                    b.HasIndex("Name")
+                        .IsUnique();
+
+                    b.ToTable("FeaturePlugins");
+                });
+
+            modelBuilder.Entity("Klacks.Marketplace.Models.FeaturePluginVersion", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<byte[]>("BundleData")
+                        .IsRequired()
+                        .HasColumnType("BLOB");
+
+                    b.Property<string>("ChangeLog")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("I18nJson")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ManifestJson")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("PluginId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Version")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PluginId");
+
+                    b.ToTable("FeaturePluginVersions");
                 });
 
             modelBuilder.Entity("Klacks.Marketplace.Models.LanguagePackage", b =>
@@ -163,6 +276,30 @@ namespace Klacks.Marketplace.Data.Migrations
                     b.ToTable("PackageVersions");
                 });
 
+            modelBuilder.Entity("Klacks.Marketplace.Models.PluginDownloadLog", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("DownloadedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("IpAddress")
+                        .IsRequired()
+                        .HasMaxLength(45)
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("PluginId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PluginId");
+
+                    b.ToTable("PluginDownloadLogs");
+                });
+
             modelBuilder.Entity("Klacks.Marketplace.Models.User", b =>
                 {
                     b.Property<int>("Id")
@@ -208,6 +345,28 @@ namespace Klacks.Marketplace.Data.Migrations
                     b.Navigation("Package");
                 });
 
+            modelBuilder.Entity("Klacks.Marketplace.Models.FeaturePlugin", b =>
+                {
+                    b.HasOne("Klacks.Marketplace.Models.User", "Author")
+                        .WithMany()
+                        .HasForeignKey("AuthorId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Author");
+                });
+
+            modelBuilder.Entity("Klacks.Marketplace.Models.FeaturePluginVersion", b =>
+                {
+                    b.HasOne("Klacks.Marketplace.Models.FeaturePlugin", "Plugin")
+                        .WithMany("Versions")
+                        .HasForeignKey("PluginId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Plugin");
+                });
+
             modelBuilder.Entity("Klacks.Marketplace.Models.LanguagePackage", b =>
                 {
                     b.HasOne("Klacks.Marketplace.Models.User", "Author")
@@ -228,6 +387,24 @@ namespace Klacks.Marketplace.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("Package");
+                });
+
+            modelBuilder.Entity("Klacks.Marketplace.Models.PluginDownloadLog", b =>
+                {
+                    b.HasOne("Klacks.Marketplace.Models.FeaturePlugin", "Plugin")
+                        .WithMany("DownloadLogs")
+                        .HasForeignKey("PluginId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Plugin");
+                });
+
+            modelBuilder.Entity("Klacks.Marketplace.Models.FeaturePlugin", b =>
+                {
+                    b.Navigation("DownloadLogs");
+
+                    b.Navigation("Versions");
                 });
 
             modelBuilder.Entity("Klacks.Marketplace.Models.LanguagePackage", b =>

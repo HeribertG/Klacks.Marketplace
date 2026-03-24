@@ -1,0 +1,335 @@
+@page "/upload-plugin"
+@inject IFeaturePluginMarketplaceService PluginService
+@inject IPluginValidationService PluginValidation
+@inject IHttpContextAccessor HttpContextAccessor
+@inject NavigationManager Navigation
+
+<PageTitle>Upload Plugin - Klacks Marketplace</PageTitle>
+
+<div class="detail-container">
+    <h1><i class="fas fa-puzzle-piece"></i> Upload Feature Plugin</h1>
+    <p class="text-muted">Share your feature plugin with the community</p>
+
+    @if (!_isAuthenticated)
+    {
+        <div class="alert alert-warning">
+            Please <a href="/login">login</a> to upload plugins.
+        </div>
+    }
+    else
+    {
+        @if (!string.IsNullOrWhiteSpace(_errorMessage))
+        {
+            <div class="alert alert-danger">@_errorMessage</div>
+        }
+
+        @if (!string.IsNullOrWhiteSpace(_successMessage))
+        {
+            <div class="alert alert-success">@_successMessage</div>
+        }
+
+        <EditForm Model="@_model" OnValidSubmit="HandleUpload">
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label class="form-label">Plugin Name (unique identifier)</label>
+                    <InputText class="form-control" @bind-Value="_model.Name" placeholder="e.g. messaging" />
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Display Name</label>
+                    <InputText class="form-control" @bind-Value="_model.DisplayName" placeholder="e.g. Messaging" />
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label class="form-label">Category</label>
+                    <InputSelect class="form-control" @bind-Value="_model.Category">
+                        <option value="">Select category...</option>
+                        @foreach (var cat in PluginCategory.AllCategories)
+                        {
+                            <option value="@cat">@cat</option>
+                        }
+                    </InputSelect>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Version</label>
+                    <InputText class="form-control" @bind-Value="_model.Version" placeholder="1.0.0" />
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Description</label>
+                <InputTextArea class="form-control" @bind-Value="_model.Description" rows="3"
+                               placeholder="Describe your feature plugin..." />
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label class="form-label">Min Klacks Version</label>
+                    <InputText class="form-control" @bind-Value="_model.MinKlacksVersion" placeholder="1.0.0" />
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Changelog</label>
+                    <InputText class="form-control" @bind-Value="_model.ChangeLog" placeholder="What changed in this version?" />
+                </div>
+            </div>
+
+            <div class="upload-zone mb-3">
+                <i class="fas fa-file-code d-block"></i>
+                <p><strong>manifest.json</strong> (required)</p>
+                <InputFile OnChange="OnManifestSelected" accept=".json" />
+                @if (_manifestLoaded)
+                {
+                    <span class="text-success mt-2 d-block"><i class="fas fa-check"></i> Loaded</span>
+                }
+            </div>
+
+            <div class="upload-zone mb-3">
+                <i class="fas fa-language d-block"></i>
+                <p><strong>en.json</strong> (required i18n)</p>
+                <InputFile OnChange="OnEnI18nSelected" accept=".json" />
+                @if (_enI18nLoaded)
+                {
+                    <span class="text-success mt-2 d-block"><i class="fas fa-check"></i> Loaded</span>
+                }
+            </div>
+
+            <div class="upload-zone mb-3">
+                <i class="fas fa-language d-block"></i>
+                <p><strong>de.json</strong> <span class="text-muted">(optional i18n)</span></p>
+                <InputFile OnChange="OnDeI18nSelected" accept=".json" />
+                @if (_deI18nLoaded)
+                {
+                    <span class="text-success mt-2 d-block"><i class="fas fa-check"></i> Loaded</span>
+                }
+            </div>
+
+            <div class="upload-zone mb-3">
+                <i class="fas fa-language d-block"></i>
+                <p><strong>fr.json</strong> <span class="text-muted">(optional i18n)</span></p>
+                <InputFile OnChange="OnFrI18nSelected" accept=".json" />
+                @if (_frI18nLoaded)
+                {
+                    <span class="text-success mt-2 d-block"><i class="fas fa-check"></i> Loaded</span>
+                }
+            </div>
+
+            <div class="upload-zone mb-3">
+                <i class="fas fa-book d-block"></i>
+                <p><strong>README.md</strong> <span class="text-muted">(optional)</span></p>
+                <InputFile OnChange="OnReadmeSelected" accept=".md" />
+                @if (_readmeLoaded)
+                {
+                    <span class="text-success mt-2 d-block"><i class="fas fa-check"></i> Loaded</span>
+                }
+            </div>
+
+            <button type="submit" class="btn btn-primary" disabled="@(_isSubmitting || !_manifestLoaded || !_enI18nLoaded)">
+                @if (_isSubmitting)
+                {
+                    <span class="spinner-border spinner-border-sm"></span>
+                }
+                <i class="fas fa-paper-plane"></i> Submit for Review
+            </button>
+        </EditForm>
+    }
+</div>
+
+@code {
+    private PluginUploadModel _model = new();
+    private string _manifestJson = string.Empty;
+    private Dictionary<string, string> _i18nFiles = new();
+    private string _readmeContent = string.Empty;
+    private bool _manifestLoaded;
+    private bool _enI18nLoaded;
+    private bool _deI18nLoaded;
+    private bool _frI18nLoaded;
+    private bool _readmeLoaded;
+    private bool _isSubmitting;
+    private bool _isAuthenticated;
+    private int _userId;
+    private string _errorMessage = string.Empty;
+    private string _successMessage = string.Empty;
+
+    protected override void OnInitialized()
+    {
+        var user = HttpContextAccessor.HttpContext?.User;
+        _isAuthenticated = user?.Identity?.IsAuthenticated ?? false;
+        if (_isAuthenticated)
+        {
+            var idClaim = user?.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+            if (int.TryParse(idClaim, out var id))
+            {
+                _userId = id;
+            }
+        }
+    }
+
+    private async Task OnManifestSelected(InputFileChangeEventArgs e)
+    {
+        _errorMessage = string.Empty;
+        try
+        {
+            using var reader = new StreamReader(e.File.OpenReadStream(AppConstants.PluginMaxUploadSizeBytes));
+            _manifestJson = await reader.ReadToEndAsync();
+            var (isValid, error) = PluginValidation.ValidatePluginManifest(_manifestJson);
+            if (!isValid)
+            {
+                _errorMessage = $"Manifest: {error}";
+                _manifestLoaded = false;
+                return;
+            }
+            _manifestLoaded = true;
+        }
+        catch (Exception ex)
+        {
+            _errorMessage = $"Error reading manifest: {ex.Message}";
+            _manifestLoaded = false;
+        }
+    }
+
+    private async Task OnEnI18nSelected(InputFileChangeEventArgs e) => await LoadI18nFile(e, "en", v => _enI18nLoaded = v);
+    private async Task OnDeI18nSelected(InputFileChangeEventArgs e) => await LoadI18nFile(e, "de", v => _deI18nLoaded = v);
+    private async Task OnFrI18nSelected(InputFileChangeEventArgs e) => await LoadI18nFile(e, "fr", v => _frI18nLoaded = v);
+
+    private async Task LoadI18nFile(InputFileChangeEventArgs e, string lang, Action<bool> setLoaded)
+    {
+        _errorMessage = string.Empty;
+        try
+        {
+            using var reader = new StreamReader(e.File.OpenReadStream(AppConstants.PluginMaxUploadSizeBytes));
+            var json = await reader.ReadToEndAsync();
+            var (isValid, error) = PluginValidation.ValidateI18nFile(json);
+            if (!isValid)
+            {
+                _errorMessage = $"i18n ({lang}): {error}";
+                setLoaded(false);
+                return;
+            }
+            _i18nFiles[lang] = json;
+            setLoaded(true);
+        }
+        catch (Exception ex)
+        {
+            _errorMessage = $"Error reading i18n ({lang}): {ex.Message}";
+            setLoaded(false);
+        }
+    }
+
+    private async Task OnReadmeSelected(InputFileChangeEventArgs e)
+    {
+        _errorMessage = string.Empty;
+        try
+        {
+            using var reader = new StreamReader(e.File.OpenReadStream(AppConstants.PluginMaxUploadSizeBytes));
+            _readmeContent = await reader.ReadToEndAsync();
+            _readmeLoaded = true;
+        }
+        catch (Exception ex)
+        {
+            _errorMessage = $"Error reading README: {ex.Message}";
+            _readmeLoaded = false;
+        }
+    }
+
+    private async Task HandleUpload()
+    {
+        _errorMessage = string.Empty;
+        _successMessage = string.Empty;
+        _isSubmitting = true;
+
+        try
+        {
+            if (string.IsNullOrWhiteSpace(_model.Name) || string.IsNullOrWhiteSpace(_model.DisplayName))
+            {
+                _errorMessage = "Name and Display Name are required";
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(_model.Category))
+            {
+                _errorMessage = "Category is required";
+                return;
+            }
+
+            var i18nCombined = System.Text.Json.JsonSerializer.Serialize(_i18nFiles);
+
+            var bundleData = BuildZipBundle();
+
+            var plugin = new FeaturePlugin
+            {
+                Name = _model.Name.Trim().ToLowerInvariant(),
+                DisplayName = _model.DisplayName.Trim(),
+                Category = _model.Category,
+                Version = _model.Version.Trim(),
+                Description = _model.Description?.Trim() ?? string.Empty,
+                MinKlacksVersion = _model.MinKlacksVersion.Trim(),
+                ReadmeMarkdown = _readmeContent,
+                AuthorId = _userId
+            };
+
+            await PluginService.CreatePluginAsync(plugin, _manifestJson, i18nCombined, bundleData, _model.ChangeLog?.Trim());
+            _successMessage = "Plugin submitted for review!";
+            ResetForm();
+        }
+        catch (Exception ex)
+        {
+            _errorMessage = ex.Message;
+        }
+        finally
+        {
+            _isSubmitting = false;
+        }
+    }
+
+    private byte[] BuildZipBundle()
+    {
+        using var memoryStream = new MemoryStream();
+        using (var archive = new System.IO.Compression.ZipArchive(memoryStream, System.IO.Compression.ZipArchiveMode.Create, true))
+        {
+            AddEntry(archive, "manifest.json", _manifestJson);
+
+            foreach (var (lang, json) in _i18nFiles)
+            {
+                AddEntry(archive, $"i18n/{lang}.json", json);
+            }
+
+            if (_readmeLoaded && !string.IsNullOrWhiteSpace(_readmeContent))
+            {
+                AddEntry(archive, "README.md", _readmeContent);
+            }
+        }
+        return memoryStream.ToArray();
+    }
+
+    private static void AddEntry(System.IO.Compression.ZipArchive archive, string path, string content)
+    {
+        var entry = archive.CreateEntry(path);
+        using var writer = new StreamWriter(entry.Open());
+        writer.Write(content);
+    }
+
+    private void ResetForm()
+    {
+        _model = new();
+        _manifestJson = string.Empty;
+        _i18nFiles.Clear();
+        _readmeContent = string.Empty;
+        _manifestLoaded = false;
+        _enI18nLoaded = false;
+        _deI18nLoaded = false;
+        _frI18nLoaded = false;
+        _readmeLoaded = false;
+    }
+
+    private class PluginUploadModel
+    {
+        public string Name { get; set; } = string.Empty;
+        public string DisplayName { get; set; } = string.Empty;
+        public string Category { get; set; } = string.Empty;
+        public string Version { get; set; } = "1.0.0";
+        public string Description { get; set; } = string.Empty;
+        public string MinKlacksVersion { get; set; } = "1.0.0";
+        public string? ChangeLog { get; set; }
+    }
+}
