@@ -76,8 +76,8 @@ jobs:
           echo "Starting Klacks.Marketplace..."
           $COMPOSE_CMD up -d --force-recreate klacks-marketplace
 
-          echo "Recreating nginx-proxy to pick up new container IP..."
-          $COMPOSE_CMD up -d --force-recreate nginx-proxy
+          echo "Restarting nginx-proxy to pick up new container IP..."
+          docker restart klacks-proxy
           sleep 5
 
           echo "Klacks.Marketplace deployment completed!"
