@@ -76,6 +76,10 @@ jobs:
           echo "Starting Klacks.Marketplace..."
           $COMPOSE_CMD up -d --force-recreate klacks-marketplace
 
+          echo "Connecting marketplace to nginx-proxy network..."
+          docker network connect apps_klacks_network klacks-marketplace 2>/dev/null || true
+          docker exec klacks-proxy nginx -s reload 2>/dev/null || true
+
           echo "Klacks.Marketplace deployment completed!"
 
           echo "Service status:"
