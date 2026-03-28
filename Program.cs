@@ -14,7 +14,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddControllers();
 builder.Services.AddHttpContextAccessor();
-builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
+builder.Services.AddLocalization();
 
 builder.Services.AddDbContext<MarketplaceDbContext>(options =>
 {
