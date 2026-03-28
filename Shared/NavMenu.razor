@@ -1,5 +1,6 @@
 @inject IHttpContextAccessor HttpContextAccessor
 @inject NavigationManager Navigation
+@inject IStringLocalizer<SharedResource> L
 
 <nav class="sticky top-0 w-full z-50 bg-white/70 backdrop-blur-md shadow-sm font-sans antialiased tracking-tight text-sm font-medium">
     <div class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
@@ -11,33 +12,34 @@
             <a href="/" class="text-xl font-bold tracking-tighter text-slate-950 no-underline">Klacks Store</a>
         </div>
         <div class="hidden md:flex items-center gap-8">
-            <a class="text-secondary font-semibold border-b-2 border-secondary py-1 transition-all no-underline" href="/">Browse</a>
+            <a class="text-secondary font-semibold border-b-2 border-secondary py-1 transition-all no-underline" href="/">@L["Nav_Browse"]</a>
         </div>
         <div class="flex items-center gap-4">
+            <CultureSelector />
             @if (_isAuthenticated)
             {
                 <a class="text-slate-600 hover:text-slate-900 transition-colors font-medium no-underline flex items-center gap-1" href="/upload">
-                    <span class="material-symbols-outlined text-[18px]">language</span> Upload Pack
+                    <span class="material-symbols-outlined text-[18px]">language</span> @L["Nav_UploadPack"]
                 </a>
                 <a class="text-slate-600 hover:text-slate-900 transition-colors font-medium no-underline flex items-center gap-1" href="/upload-plugin">
-                    <span class="material-symbols-outlined text-[18px]">extension</span> Upload Plugin
+                    <span class="material-symbols-outlined text-[18px]">extension</span> @L["Nav_UploadPlugin"]
                 </a>
                 <a class="text-slate-600 hover:text-slate-900 transition-colors font-medium no-underline flex items-center gap-1" href="/my-packages">
-                    <span class="material-symbols-outlined text-[18px]">inventory_2</span> My Packages
+                    <span class="material-symbols-outlined text-[18px]">inventory_2</span> @L["Nav_MyPackages"]
                 </a>
                 @if (_isAdmin)
                 {
                     <a class="text-slate-600 hover:text-slate-900 transition-colors font-medium no-underline flex items-center gap-1" href="/admin">
-                        <span class="material-symbols-outlined text-[18px]">shield</span> Admin
+                        <span class="material-symbols-outlined text-[18px]">shield</span> @L["Nav_Admin"]
                     </a>
                 }
                 <span class="text-on-surface-variant font-medium">@_displayName</span>
-                <a class="px-4 py-2 text-slate-600 hover:text-slate-900 transition-colors font-medium no-underline" href="/auth/logout">Sign Out</a>
+                <a class="px-4 py-2 text-slate-600 hover:text-slate-900 transition-colors font-medium no-underline" href="/auth/logout">@L["Nav_SignOut"]</a>
             }
             else
             {
-                <a class="px-4 py-2 text-slate-600 hover:text-slate-900 transition-colors font-medium no-underline" href="/login">Sign In</a>
-                <a class="px-5 py-2 bg-secondary text-on-secondary rounded-lg font-semibold hover:opacity-90 active:scale-[0.98] transition-all no-underline" href="/register">Register</a>
+                <a class="px-4 py-2 text-slate-600 hover:text-slate-900 transition-colors font-medium no-underline" href="/login">@L["Nav_SignIn"]</a>
+                <a class="px-5 py-2 bg-secondary text-on-secondary rounded-lg font-semibold hover:opacity-90 active:scale-[0.98] transition-all no-underline" href="/register">@L["Nav_Register"]</a>
             }
         </div>
     </div>

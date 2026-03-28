@@ -1,31 +1,32 @@
 @page "/"
 @inject IPackageService PackageService
 @inject IFeaturePluginMarketplaceService PluginService
+@inject IStringLocalizer<SharedResource> L
 
 <PageTitle>Klacks Store</PageTitle>
 
 <header class="w-full bg-primary-container text-white py-24 px-6 overflow-hidden relative">
     <div class="max-w-4xl mx-auto text-center relative z-10">
-        <h1 class="text-5xl md:text-7xl font-black tracking-tighter mb-6 leading-[1.1]">Extend Your Klacks Experience</h1>
+        <h1 class="text-5xl md:text-7xl font-black tracking-tighter mb-6 leading-[1.1]">@L["Index_HeroTitle"]</h1>
         <p class="text-lg md:text-xl text-on-primary-container mb-12 max-w-2xl mx-auto leading-relaxed">
-            Discover language packs and feature plugins crafted for professional workforce management and enterprise scalability.
+            @L["Index_HeroSubtitle"]
         </p>
         <div class="relative max-w-2xl mx-auto mb-10">
             <div class="absolute inset-y-0 left-5 flex items-center pointer-events-none">
                 <span class="material-symbols-outlined text-on-primary-container">search</span>
             </div>
             <input class="w-full pl-14 pr-6 py-5 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl focus:ring-2 focus:ring-secondary focus:bg-white focus:text-primary transition-all text-lg outline-none placeholder:text-on-primary-container/60"
-                   placeholder="@(_activeTab == Tab.LanguagePacks ? "Search language packs..." : "Search feature plugins...")"
+                   placeholder="@(_activeTab == Tab.LanguagePacks ? L["Index_SearchPacks"].Value : L["Index_SearchPlugins"].Value)"
                    @bind="_searchText" @bind:event="oninput" @onkeyup="OnSearchKeyUp" type="text" />
         </div>
         <div class="flex items-center justify-center gap-4">
             <button class="px-8 py-3 rounded-full font-bold transition-all @(_activeTab == Tab.LanguagePacks ? "bg-secondary text-on-secondary hover:scale-105" : "bg-white/5 border border-white/20 text-white hover:bg-white/10")"
                     @onclick="() => SwitchTab(Tab.LanguagePacks)">
-                Language Packs
+                @L["Common_LanguagePacks"]
             </button>
             <button class="px-8 py-3 rounded-full font-bold transition-all @(_activeTab == Tab.FeaturePlugins ? "bg-secondary text-on-secondary hover:scale-105" : "bg-white/5 border border-white/20 text-white hover:bg-white/10")"
                     @onclick="() => SwitchTab(Tab.FeaturePlugins)">
-                Feature Plugins
+                @L["Common_FeaturePlugins"]
             </button>
         </div>
     </div>
@@ -36,7 +37,7 @@
     <div class="flex justify-center py-6 bg-surface">
         <select class="px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all"
                 @onchange="OnCategoryChanged">
-            <option value="">All categories</option>
+            <option value="">@L["Index_AllCategories"]</option>
             @foreach (var cat in PluginCategory.AllCategories)
             {
                 <option value="@cat">@cat</option>
@@ -55,16 +56,16 @@ else if (_activeTab == Tab.LanguagePacks && _packages.Count == 0)
 {
     <section class="py-24 px-6 bg-surface text-center">
         <span class="material-symbols-outlined text-6xl text-on-surface-variant mb-4 block">inventory_2</span>
-        <h3 class="text-2xl font-bold mb-2">No packages found</h3>
-        <p class="text-on-surface-variant">Be the first to upload a language pack!</p>
+        <h3 class="text-2xl font-bold mb-2">@L["Index_NoPackagesFound"]</h3>
+        <p class="text-on-surface-variant">@L["Index_BeFirstPack"]</p>
     </section>
 }
 else if (_activeTab == Tab.FeaturePlugins && _plugins.Count == 0)
 {
     <section class="py-24 px-6 bg-surface text-center">
         <span class="material-symbols-outlined text-6xl text-on-surface-variant mb-4 block">extension</span>
-        <h3 class="text-2xl font-bold mb-2">No plugins found</h3>
-        <p class="text-on-surface-variant">Be the first to upload a feature plugin!</p>
+        <h3 class="text-2xl font-bold mb-2">@L["Index_NoPluginsFound"]</h3>
+        <p class="text-on-surface-variant">@L["Index_BeFirstPlugin"]</p>
     </section>
 }
 else if (_activeTab == Tab.LanguagePacks)
@@ -73,10 +74,10 @@ else if (_activeTab == Tab.LanguagePacks)
         <div class="max-w-7xl mx-auto">
             <div class="flex items-end justify-between mb-12">
                 <div>
-                    <h2 class="text-3xl font-black tracking-tight text-on-surface mb-2">Language Packs</h2>
-                    <p class="text-on-surface-variant">Localization assets for international teams.</p>
+                    <h2 class="text-3xl font-black tracking-tight text-on-surface mb-2">@L["Common_LanguagePacks"]</h2>
+                    <p class="text-on-surface-variant">@L["Index_PacksSubtitle"]</p>
                 </div>
-                <span class="text-on-surface-variant text-sm font-medium">@_totalCount results</span>
+                <span class="text-on-surface-variant text-sm font-medium">@L["Common_ResultsCount", _totalCount]</span>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 @foreach (var package in _packages)
@@ -92,8 +93,8 @@ else
     <section class="py-24 px-6 bg-surface-container-low">
         <div class="max-w-7xl mx-auto">
             <div class="flex items-end justify-between mb-12">
-                <h2 class="text-3xl font-black tracking-tight text-on-surface">Feature Plugins</h2>
-                <span class="text-on-surface-variant text-sm font-medium">@_totalCount results</span>
+                <h2 class="text-3xl font-black tracking-tight text-on-surface">@L["Common_FeaturePlugins"]</h2>
+                <span class="text-on-surface-variant text-sm font-medium">@L["Common_ResultsCount", _totalCount]</span>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 @foreach (var plugin in _plugins)
@@ -132,22 +133,22 @@ else
         <div class="lg:col-span-2">
             <div class="text-lg font-black text-white mb-4">Klacks Store</div>
             <p class="text-xs font-normal uppercase tracking-widest leading-relaxed max-w-sm mb-6">
-                Professional ecosystem for extending workforce management capabilities.
+                @L["Index_FooterDescription"]
             </p>
-            <div class="text-xs mt-auto">&copy; 2026 Klacks Store. All rights reserved.</div>
+            <div class="text-xs mt-auto">@L["Index_FooterRights"]</div>
         </div>
         <div>
-            <h4 class="text-white text-xs font-black uppercase tracking-widest mb-6">Resources</h4>
+            <h4 class="text-white text-xs font-black uppercase tracking-widest mb-6">@L["Index_Resources"]</h4>
             <ul class="space-y-4 list-none p-0">
-                <li><a class="text-xs uppercase tracking-widest text-slate-400 hover:text-emerald-400 transition-colors no-underline" href="#">Documentation</a></li>
-                <li><a class="text-xs uppercase tracking-widest text-slate-400 hover:text-emerald-400 transition-colors no-underline" href="#">API</a></li>
+                <li><a class="text-xs uppercase tracking-widest text-slate-400 hover:text-emerald-400 transition-colors no-underline" href="#">@L["Index_Documentation"]</a></li>
+                <li><a class="text-xs uppercase tracking-widest text-slate-400 hover:text-emerald-400 transition-colors no-underline" href="#">@L["Index_API"]</a></li>
             </ul>
         </div>
         <div>
-            <h4 class="text-white text-xs font-black uppercase tracking-widest mb-6">Legal</h4>
+            <h4 class="text-white text-xs font-black uppercase tracking-widest mb-6">@L["Index_Legal"]</h4>
             <ul class="space-y-4 list-none p-0">
-                <li><a class="text-xs uppercase tracking-widest text-slate-400 hover:text-emerald-400 transition-colors no-underline" href="#">Privacy Policy</a></li>
-                <li><a class="text-xs uppercase tracking-widest text-slate-400 hover:text-emerald-400 transition-colors no-underline" href="#">Terms of Service</a></li>
+                <li><a class="text-xs uppercase tracking-widest text-slate-400 hover:text-emerald-400 transition-colors no-underline" href="#">@L["Index_PrivacyPolicy"]</a></li>
+                <li><a class="text-xs uppercase tracking-widest text-slate-400 hover:text-emerald-400 transition-colors no-underline" href="#">@L["Index_TermsOfService"]</a></li>
                 <li class="text-white font-bold text-[10px] tracking-[0.2em] mt-8">POWERED BY KLACKS</li>
             </ul>
         </div>

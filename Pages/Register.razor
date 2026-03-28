@@ -1,14 +1,15 @@
 @page "/register"
 @inject IAuthService AuthService
 @inject NavigationManager Navigation
+@inject IStringLocalizer<SharedResource> L
 
-<PageTitle>Register - Klacks Store</PageTitle>
+<PageTitle>@L["Register_PageTitle"]</PageTitle>
 
 <div class="min-h-[80vh] flex items-center justify-center bg-surface px-6 py-16">
     <div class="w-full max-w-md">
         <div class="bg-surface-container-lowest rounded-2xl p-8 shadow-[0_20px_50px_rgba(27,27,29,0.06)]">
-            <h2 class="text-2xl font-black tracking-tight mb-2">Create an account</h2>
-            <p class="text-on-surface-variant mb-8">Join the Klacks Store community</p>
+            <h2 class="text-2xl font-black tracking-tight mb-2">@L["Register_Title"]</h2>
+            <p class="text-on-surface-variant mb-8">@L["Register_Subtitle"]</p>
 
             @if (!string.IsNullOrWhiteSpace(_errorMessage))
             {
@@ -22,11 +23,11 @@
 
             <EditForm Model="@_model" OnValidSubmit="HandleRegister">
                 <div class="mb-5">
-                    <label class="block text-sm font-semibold text-on-surface mb-2">Display Name</label>
+                    <label class="block text-sm font-semibold text-on-surface mb-2">@L["Common_DisplayNameLabel"]</label>
                     <div class="relative">
                         <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">person</span>
                         <InputText class="w-full pl-11 pr-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all"
-                                   @bind-Value="_model.DisplayName" placeholder="Your name" />
+                                   @bind-Value="_model.DisplayName" placeholder="@L["Register_NamePlaceholder"].Value" />
                     </div>
                 </div>
                 <div class="mb-5">

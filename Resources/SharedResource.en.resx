@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msOccurs="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+              <xsd:attribute name="xml:space" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <data name="Common_LanguagePacks" xml:space="preserve"><value>Language Packs</value></data>
+  <data name="Common_FeaturePlugins" xml:space="preserve"><value>Feature Plugins</value></data>
+  <data name="Common_Download" xml:space="preserve"><value>Download</value></data>
+  <data name="Common_Downloads" xml:space="preserve"><value>Downloads</value></data>
+  <data name="Common_Version" xml:space="preserve"><value>Version</value></data>
+  <data name="Common_Coverage" xml:space="preserve"><value>Coverage</value></data>
+  <data name="Common_CoveragePercent" xml:space="preserve"><value>{0}% coverage</value></data>
+  <data name="Common_MinVersion" xml:space="preserve"><value>Min Version</value></data>
+  <data name="Common_VersionHistory" xml:space="preserve"><value>Version History</value></data>
+  <data name="Common_Home" xml:space="preserve"><value>Home</value></data>
+  <data name="Common_ResultsCount" xml:space="preserve"><value>{0} results</value></data>
+  <data name="Common_EmailLabel" xml:space="preserve"><value>Email address</value></data>
+  <data name="Common_EmailPlaceholder" xml:space="preserve"><value>your@email.com</value></data>
+  <data name="Common_PasswordLabel" xml:space="preserve"><value>Password</value></data>
+  <data name="Common_DisplayNameLabel" xml:space="preserve"><value>Display Name</value></data>
+  <data name="Common_DataSecure" xml:space="preserve"><value>Your data is encrypted and secure</value></data>
+  <data name="Common_PleaseLogin" xml:space="preserve"><value>Please login to continue.</value></data>
+  <data name="Common_LoginLink" xml:space="preserve"><value>Login</value></data>
+  <data name="Common_SubmitForReview" xml:space="preserve"><value>Submit for Review</value></data>
+  <data name="Common_SaveAsDraft" xml:space="preserve"><value>Save as Draft</value></data>
+  <data name="Common_Loaded" xml:space="preserve"><value>Loaded</value></data>
+  <data name="Common_Cancel" xml:space="preserve"><value>Cancel</value></data>
+  <data name="Common_Confirm" xml:space="preserve"><value>Confirm</value></data>
+  <data name="Common_NotFound" xml:space="preserve"><value>Not found</value></data>
+  <data name="Common_NothingHere" xml:space="preserve"><value>Sorry, there's nothing at this address.</value></data>
+  <data name="Common_BackToBrowse" xml:space="preserve"><value>Back to Browse</value></data>
+  <data name="Common_ByAuthor" xml:space="preserve"><value>by {0}</value></data>
+  <data name="Common_SkillsCount" xml:space="preserve"><value>{0} Skills</value></data>
+  <data name="Common_InstallsCount" xml:space="preserve"><value>{0} installs</value></data>
+  <data name="Common_Package" xml:space="preserve"><value>Package</value></data>
+  <data name="Common_Plugin" xml:space="preserve"><value>Plugin</value></data>
+  <data name="Common_Category" xml:space="preserve"><value>Category</value></data>
+  <data name="Common_Status" xml:space="preserve"><value>Status</value></data>
+  <data name="Common_Actions" xml:space="preserve"><value>Actions</value></data>
+  <data name="Common_Author" xml:space="preserve"><value>Author</value></data>
+  <data name="Common_Code" xml:space="preserve"><value>Code</value></data>
+  <data name="Common_Submitted" xml:space="preserve"><value>Submitted</value></data>
+  <data name="Common_Docs" xml:space="preserve"><value>Docs</value></data>
+  <data name="Common_Translations" xml:space="preserve"><value>translations</value></data>
+  <data name="Nav_Browse" xml:space="preserve"><value>Browse</value></data>
+  <data name="Nav_UploadPack" xml:space="preserve"><value>Upload Pack</value></data>
+  <data name="Nav_UploadPlugin" xml:space="preserve"><value>Upload Plugin</value></data>
+  <data name="Nav_MyPackages" xml:space="preserve"><value>My Packages</value></data>
+  <data name="Nav_Admin" xml:space="preserve"><value>Admin</value></data>
+  <data name="Nav_SignOut" xml:space="preserve"><value>Sign Out</value></data>
+  <data name="Nav_SignIn" xml:space="preserve"><value>Sign In</value></data>
+  <data name="Nav_Register" xml:space="preserve"><value>Register</value></data>
+  <data name="Index_HeroTitle" xml:space="preserve"><value>Extend Your Klacks Experience</value></data>
+  <data name="Index_HeroSubtitle" xml:space="preserve"><value>Discover language packs and feature plugins crafted for professional workforce management and enterprise scalability.</value></data>
+  <data name="Index_SearchPacks" xml:space="preserve"><value>Search language packs...</value></data>
+  <data name="Index_SearchPlugins" xml:space="preserve"><value>Search feature plugins...</value></data>
+  <data name="Index_AllCategories" xml:space="preserve"><value>All categories</value></data>
+  <data name="Index_NoPackagesFound" xml:space="preserve"><value>No packages found</value></data>
+  <data name="Index_BeFirstPack" xml:space="preserve"><value>Be the first to upload a language pack!</value></data>
+  <data name="Index_NoPluginsFound" xml:space="preserve"><value>No plugins found</value></data>
+  <data name="Index_BeFirstPlugin" xml:space="preserve"><value>Be the first to upload a feature plugin!</value></data>
+  <data name="Index_PacksSubtitle" xml:space="preserve"><value>Localization assets for international teams.</value></data>
+  <data name="Index_FooterDescription" xml:space="preserve"><value>Professional ecosystem for extending workforce management capabilities.</value></data>
+  <data name="Index_FooterRights" xml:space="preserve"><value>© 2026 Klacks Store. All rights reserved.</value></data>
+  <data name="Index_Resources" xml:space="preserve"><value>Resources</value></data>
+  <data name="Index_Documentation" xml:space="preserve"><value>Documentation</value></data>
+  <data name="Index_API" xml:space="preserve"><value>API</value></data>
+  <data name="Index_Legal" xml:space="preserve"><value>Legal</value></data>
+  <data name="Index_PrivacyPolicy" xml:space="preserve"><value>Privacy Policy</value></data>
+  <data name="Index_TermsOfService" xml:space="preserve"><value>Terms of Service</value></data>
+  <data name="Login_PageTitle" xml:space="preserve"><value>Sign In - Klacks Store</value></data>
+  <data name="Login_WelcomeBack" xml:space="preserve"><value>Welcome back</value></data>
+  <data name="Login_Subtitle" xml:space="preserve"><value>Sign in to manage your packages and plugins</value></data>
+  <data name="Login_PasswordPlaceholder" xml:space="preserve"><value>Enter your password</value></data>
+  <data name="Login_NoAccount" xml:space="preserve"><value>Don't have an account?</value></data>
+  <data name="Login_CreateOne" xml:space="preserve"><value>Create one</value></data>
+  <data name="Login_InvalidCredentials" xml:space="preserve"><value>Invalid email or password</value></data>
+  <data name="Register_PageTitle" xml:space="preserve"><value>Register - Klacks Store</value></data>
+  <data name="Register_Title" xml:space="preserve"><value>Create an account</value></data>
+  <data name="Register_Subtitle" xml:space="preserve"><value>Join the Klacks Store community</value></data>
+  <data name="Register_NamePlaceholder" xml:space="preserve"><value>Your name</value></data>
+  <data name="Register_PasswordLabel" xml:space="preserve"><value>Password (min. {0} characters)</value></data>
+  <data name="Register_CreatePassword" xml:space="preserve"><value>Create a password</value></data>
+  <data name="Register_ConfirmPasswordLabel" xml:space="preserve"><value>Confirm Password</value></data>
+  <data name="Register_ConfirmPasswordPlaceholder" xml:space="preserve"><value>Confirm your password</value></data>
+  <data name="Register_CreateAccount" xml:space="preserve"><value>Create Account</value></data>
+  <data name="Register_HasAccount" xml:space="preserve"><value>Already have an account?</value></data>
+  <data name="Register_NameRequired" xml:space="preserve"><value>Display name is required</value></data>
+  <data name="Register_EmailRequired" xml:space="preserve"><value>Email is required</value></data>
+  <data name="Register_PasswordMismatch" xml:space="preserve"><value>Passwords do not match</value></data>
+  <data name="Register_Success" xml:space="preserve"><value>Registration successful! You can now sign in.</value></data>
+  <data name="PackageDetail_NotFound" xml:space="preserve"><value>Package not found</value></data>
+  <data name="PackageDetail_NotFoundDesc" xml:space="preserve"><value>The package you are looking for does not exist.</value></data>
+  <data name="PackageDetail_SpeechLocale" xml:space="preserve"><value>Speech Locale</value></data>
+  <data name="PackageDetail_TranslationCoverage" xml:space="preserve"><value>Translation Coverage</value></data>
+  <data name="PackageDetail_TranslationCount" xml:space="preserve"><value>{0} translations</value></data>
+  <data name="PackageDetail_Manuals" xml:space="preserve"><value>Manuals</value></data>
+  <data name="PackageDetail_Countries" xml:space="preserve"><value>Countries</value></data>
+  <data name="PackageDetail_States" xml:space="preserve"><value>States</value></data>
+  <data name="PackageDetail_CalendarRules" xml:space="preserve"><value>Calendar Rules</value></data>
+  <data name="PluginDetail_NotFound" xml:space="preserve"><value>Plugin not found</value></data>
+  <data name="PluginDetail_NotFoundDesc" xml:space="preserve"><value>The plugin you are looking for does not exist.</value></data>
+  <data name="PluginDetail_ProvidedSkills" xml:space="preserve"><value>Provided Skills</value></data>
+  <data name="PluginDetail_RequiredPermissions" xml:space="preserve"><value>Required Permissions</value></data>
+  <data name="PluginDetail_README" xml:space="preserve"><value>README</value></data>
+  <data name="Upload_Title" xml:space="preserve"><value>Upload Language Pack</value></data>
+  <data name="Upload_Subtitle" xml:space="preserve"><value>Share your language pack with the community</value></data>
+  <data name="Upload_CodeLabel" xml:space="preserve"><value>Code (e.g. fr-FR)</value></data>
+  <data name="Upload_CodePlaceholder" xml:space="preserve"><value>xx-XX</value></data>
+  <data name="Upload_DisplayNamePlaceholder" xml:space="preserve"><value>e.g. French (France)</value></data>
+  <data name="Upload_SpeechLocale" xml:space="preserve"><value>Speech Locale</value></data>
+  <data name="Upload_SpeechLocalePlaceholder" xml:space="preserve"><value>e.g. fr-FR</value></data>
+  <data name="Upload_VersionPlaceholder" xml:space="preserve"><value>1.0.0</value></data>
+  <data name="Upload_Description" xml:space="preserve"><value>Description</value></data>
+  <data name="Upload_DescriptionPlaceholder" xml:space="preserve"><value>Describe your language pack...</value></data>
+  <data name="Upload_CoverageLabel" xml:space="preserve"><value>Coverage (%)</value></data>
+  <data name="Upload_MinKlacksVersion" xml:space="preserve"><value>Min Klacks Version</value></data>
+  <data name="Upload_ManifestRequired" xml:space="preserve"><value>manifest.json</value></data>
+  <data name="Upload_TranslationsRequired" xml:space="preserve"><value>translations.json</value></data>
+  <data name="Upload_DocsOptional" xml:space="preserve"><value>docs.json (optional)</value></data>
+  <data name="Upload_CountriesOptional" xml:space="preserve"><value>countries.json (optional)</value></data>
+  <data name="Upload_StatesOptional" xml:space="preserve"><value>states.json (optional)</value></data>
+  <data name="Upload_CalendarOptional" xml:space="preserve"><value>calendar-rules.json (optional)</value></data>
+  <data name="Upload_CodeRequired" xml:space="preserve"><value>Code and Display Name are required</value></data>
+  <data name="Upload_Success" xml:space="preserve"><value>Package submitted for review!</value></data>
+  <data name="UploadPlugin_Title" xml:space="preserve"><value>Upload Feature Plugin</value></data>
+  <data name="UploadPlugin_Subtitle" xml:space="preserve"><value>Share your feature plugin with the community</value></data>
+  <data name="UploadPlugin_NameLabel" xml:space="preserve"><value>Plugin Name (unique identifier)</value></data>
+  <data name="UploadPlugin_NamePlaceholder" xml:space="preserve"><value>e.g. messaging</value></data>
+  <data name="UploadPlugin_DisplayNamePlaceholder" xml:space="preserve"><value>e.g. Messaging</value></data>
+  <data name="UploadPlugin_SelectCategory" xml:space="preserve"><value>Select category...</value></data>
+  <data name="UploadPlugin_DescriptionPlaceholder" xml:space="preserve"><value>Describe your feature plugin...</value></data>
+  <data name="UploadPlugin_ChangelogLabel" xml:space="preserve"><value>Changelog</value></data>
+  <data name="UploadPlugin_ChangelogPlaceholder" xml:space="preserve"><value>What changed in this version?</value></data>
+  <data name="UploadPlugin_ManifestRequired" xml:space="preserve"><value>manifest.json (required)</value></data>
+  <data name="UploadPlugin_EnRequired" xml:space="preserve"><value>en.json (required i18n)</value></data>
+  <data name="UploadPlugin_DeOptional" xml:space="preserve"><value>de.json (optional i18n)</value></data>
+  <data name="UploadPlugin_FrOptional" xml:space="preserve"><value>fr.json (optional i18n)</value></data>
+  <data name="UploadPlugin_ReadmeOptional" xml:space="preserve"><value>README.md (optional)</value></data>
+  <data name="UploadPlugin_NameRequired" xml:space="preserve"><value>Name and Display Name are required</value></data>
+  <data name="UploadPlugin_CategoryRequired" xml:space="preserve"><value>Category is required</value></data>
+  <data name="UploadPlugin_Success" xml:space="preserve"><value>Plugin submitted for review!</value></data>
+  <data name="MyPackages_Title" xml:space="preserve"><value>My Packages</value></data>
+  <data name="MyPackages_LoginRequired" xml:space="preserve"><value>Please login to view your packages.</value></data>
+  <data name="MyPackages_NoPacks" xml:space="preserve"><value>No language packs yet</value></data>
+  <data name="MyPackages_NoPacksDesc" xml:space="preserve"><value>You haven't uploaded any language packs yet.</value></data>
+  <data name="MyPackages_UploadFirst" xml:space="preserve"><value>Upload your first package</value></data>
+  <data name="MyPackages_NoPlugins" xml:space="preserve"><value>No feature plugins yet</value></data>
+  <data name="MyPackages_NoPluginsDesc" xml:space="preserve"><value>You haven't uploaded any feature plugins yet.</value></data>
+  <data name="MyPackages_UploadFirstPlugin" xml:space="preserve"><value>Upload your first plugin</value></data>
+  <data name="Admin_Title" xml:space="preserve"><value>Admin Dashboard</value></data>
+  <data name="Admin_AccessDenied" xml:space="preserve"><value>Access denied. Admin privileges required.</value></data>
+  <data name="Admin_PendingPackages" xml:space="preserve"><value>Pending Packages</value></data>
+  <data name="Admin_PendingPlugins" xml:space="preserve"><value>Pending Plugins</value></data>
+  <data name="Admin_Users" xml:space="preserve"><value>Users</value></data>
+  <data name="Admin_PendingLanguagePackages" xml:space="preserve"><value>Pending Language Packages</value></data>
+  <data name="Admin_NoPendingPackages" xml:space="preserve"><value>No packages pending review.</value></data>
+  <data name="Admin_PendingFeaturePlugins" xml:space="preserve"><value>Pending Feature Plugins</value></data>
+  <data name="Admin_NoPendingPlugins" xml:space="preserve"><value>No plugins pending review.</value></data>
+  <data name="Admin_Name" xml:space="preserve"><value>Name</value></data>
+  <data name="Admin_Email" xml:space="preserve"><value>Email</value></data>
+  <data name="Admin_Joined" xml:space="preserve"><value>Joined</value></data>
+  <data name="Admin_MakeAdmin" xml:space="preserve"><value>Make Admin</value></data>
+  <data name="Admin_RemoveAdmin" xml:space="preserve"><value>Remove Admin</value></data>
+  <data name="Admin_PackageApproved" xml:space="preserve"><value>Package approved successfully</value></data>
+  <data name="Admin_PackageRejected" xml:space="preserve"><value>Package rejected</value></data>
+  <data name="Admin_PluginApproved" xml:space="preserve"><value>Plugin approved successfully</value></data>
+  <data name="Admin_PluginRejected" xml:space="preserve"><value>Plugin rejected</value></data>
+  <data name="Admin_RejectPackageTitle" xml:space="preserve"><value>Reject Package</value></data>
+  <data name="Admin_RejectPackageMessage" xml:space="preserve"><value>Are you sure you want to reject this package?</value></data>
+  <data name="Admin_RejectPluginTitle" xml:space="preserve"><value>Reject Plugin</value></data>
+  <data name="Admin_RejectPluginMessage" xml:space="preserve"><value>Are you sure you want to reject this plugin?</value></data>
+  <data name="Admin_RejectedByAdmin" xml:space="preserve"><value>Rejected by admin</value></data>
+  <data name="Status_Published" xml:space="preserve"><value>Published</value></data>
+  <data name="Status_Pending" xml:space="preserve"><value>Pending</value></data>
+  <data name="Status_Rejected" xml:space="preserve"><value>Rejected</value></data>
+  <data name="Status_Draft" xml:space="preserve"><value>Draft</value></data>
+  <data name="Status_Unknown" xml:space="preserve"><value>Unknown</value></data>
+</root>

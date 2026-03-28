@@ -1,3 +1,5 @@
+@inject IStringLocalizer<SharedResource> L
+
 <span class="px-3 py-1 text-xs font-bold rounded-full @GetStatusClasses()">@GetStatusText()</span>
 
 @code {
@@ -15,10 +17,10 @@
 
     private string GetStatusText() => Status switch
     {
-        PackageStatus.Published => "Published",
-        PackageStatus.PendingReview => "Pending",
-        PackageStatus.Rejected => "Rejected",
-        PackageStatus.Draft => "Draft",
-        _ => "Unknown"
+        PackageStatus.Published => L["Status_Published"].Value,
+        PackageStatus.PendingReview => L["Status_Pending"].Value,
+        PackageStatus.Rejected => L["Status_Rejected"].Value,
+        PackageStatus.Draft => L["Status_Draft"].Value,
+        _ => L["Status_Unknown"].Value
     };
 }

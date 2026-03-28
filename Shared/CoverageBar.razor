@@ -1,8 +1,10 @@
+@inject IStringLocalizer<SharedResource> L
+
 <div>
     <div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
         <div class="h-full transition-all rounded-full @GetCoverageClasses()" style="width: @Coverage%"></div>
     </div>
-    <span class="text-xs font-bold text-on-surface-variant mt-1 block">@Coverage.ToString("F0")% coverage</span>
+    <span class="text-xs font-bold text-on-surface-variant mt-1 block">@L["Common_CoveragePercent", Coverage.ToString("F0")]</span>
 </div>
 
 @code {

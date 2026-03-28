@@ -1,14 +1,15 @@
 @page "/login"
 @inject IAuthService AuthService
 @inject NavigationManager Navigation
+@inject IStringLocalizer<SharedResource> L
 
-<PageTitle>Sign In - Klacks Store</PageTitle>
+<PageTitle>@L["Login_PageTitle"]</PageTitle>
 
 <div class="min-h-[80vh] flex items-center justify-center bg-surface px-6 py-16">
     <div class="w-full max-w-md">
         <div class="bg-surface-container-lowest rounded-2xl p-8 shadow-[0_20px_50px_rgba(27,27,29,0.06)]">
-            <h2 class="text-2xl font-black tracking-tight mb-2">Welcome back</h2>
-            <p class="text-on-surface-variant mb-8">Sign in to manage your packages and plugins</p>
+            <h2 class="text-2xl font-black tracking-tight mb-2">@L["Login_WelcomeBack"]</h2>
+            <p class="text-on-surface-variant mb-8">@L["Login_Subtitle"]</p>
 
             @if (!string.IsNullOrWhiteSpace(_errorMessage))
             {
@@ -17,19 +18,19 @@
 
             <EditForm Model="@_model" OnValidSubmit="HandleLogin">
                 <div class="mb-5">
-                    <label class="block text-sm font-semibold text-on-surface mb-2">Email address</label>
+                    <label class="block text-sm font-semibold text-on-surface mb-2">@L["Common_EmailLabel"]</label>
                     <div class="relative">
                         <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">mail</span>
                         <InputText class="w-full pl-11 pr-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all"
-                                   @bind-Value="_model.Email" placeholder="your@email.com" />
+                                   @bind-Value="_model.Email" placeholder="@L["Common_EmailPlaceholder"].Value" />
                     </div>
                 </div>
                 <div class="mb-6">
-                    <label class="block text-sm font-semibold text-on-surface mb-2">Password</label>
+                    <label class="block text-sm font-semibold text-on-surface mb-2">@L["Common_PasswordLabel"]</label>
                     <div class="relative">
                         <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">lock</span>
                         <InputText type="password" class="w-full pl-11 pr-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all"
-                                   @bind-Value="_model.Password" placeholder="Enter your password" />
+                                   @bind-Value="_model.Password" placeholder="@L["Login_PasswordPlaceholder"].Value" />
                     </div>
                 </div>
                 <button type="submit"
@@ -39,20 +40,20 @@
                     {
                         <div class="animate-spin w-5 h-5 border-2 border-white border-t-transparent rounded-full"></div>
                     }
-                    Sign In
+                    @L["Nav_SignIn"]
                 </button>
             </EditForm>
 
             <p class="text-center mt-6 text-sm text-on-surface-variant">
-                Don't have an account?
-                <a href="/register" class="text-secondary font-semibold hover:underline no-underline">Create one</a>
+                @L["Login_NoAccount"]
+                <a href="/register" class="text-secondary font-semibold hover:underline no-underline">@L["Login_CreateOne"]</a>
             </p>
         </div>
 
         <div class="text-center mt-6">
             <p class="text-xs text-on-surface-variant flex items-center justify-center gap-1">
                 <span class="material-symbols-outlined text-[16px]">lock</span>
-                Your data is encrypted and secure
+                @L["Common_DataSecure"]
             </p>
         </div>
     </div>
@@ -73,7 +74,7 @@
             var user = await AuthService.LoginAsync(_model.Email, _model.Password);
             if (user is null)
             {
-                _errorMessage = "Invalid email or password";
+                _errorMessage = L["Login_InvalidCredentials"];
                 return;
             }
 

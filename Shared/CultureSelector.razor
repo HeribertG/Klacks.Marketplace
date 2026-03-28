@@ -1,0 +1,39 @@
+@inject NavigationManager Navigation
+@inject IHttpContextAccessor HttpContextAccessor
+
+<select class="px-3 py-1.5 bg-surface-container-low border border-outline-variant/30 rounded-lg text-sm text-on-surface focus:ring-2 focus:ring-secondary outline-none transition-all cursor-pointer"
+        @onchange="OnCultureChanged">
+    @foreach (var culture in _cultures)
+    {
+        <option value="@culture.Code" selected="@(culture.Code == _currentCulture)">@culture.DisplayName</option>
+    }
+</select>
+
+@code {
+    private string _currentCulture = "en";
+
+    private static readonly CultureOption[] _cultures =
+    [
+        new("en", "English"),
+        new("de", "Deutsch"),
+        new("fr", "Fran\u00e7ais"),
+        new("it", "Italiano")
+    ];
+
+    protected override void OnInitialized()
+    {
+        _currentCulture = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
+        if (!_cultures.Any(c => c.Code == _currentCulture))
+            _currentCulture = "en";
+    }
+
+    private void OnCultureChanged(ChangeEventArgs e)
+    {
+        var culture = e.Value?.ToString() ?? "en";
+        Navigation.NavigateTo(
+            $"/Culture/Set?culture={culture}&redirectUri={Uri.EscapeDataString(Navigation.Uri)}",
+            forceLoad: true);
+    }
+
+    private record CultureOption(string Code, string DisplayName);
+}

@@ -2,8 +2,9 @@
 @inject IFeaturePluginMarketplaceService PluginService
 @inject IHttpContextAccessor HttpContextAccessor
 @inject NavigationManager Navigation
+@inject IStringLocalizer<SharedResource> L
 
-<PageTitle>@(_plugin?.DisplayName ?? "Plugin") - Klacks Store</PageTitle>
+<PageTitle>@(_plugin?.DisplayName ?? L["Common_Plugin"]) - Klacks Store</PageTitle>
 
 @if (_isLoading)
 {
@@ -15,18 +16,18 @@ else if (_plugin is null)
 {
     <section class="py-24 px-6 bg-surface text-center">
         <span class="material-symbols-outlined text-6xl text-on-surface-variant mb-4 block">warning</span>
-        <h3 class="text-2xl font-bold mb-2">Plugin not found</h3>
-        <p class="text-on-surface-variant mb-6">The plugin you are looking for does not exist.</p>
-        <a href="/" class="px-6 py-3 bg-secondary text-on-secondary rounded-lg font-semibold no-underline hover:opacity-90 transition-all">Back to Browse</a>
+        <h3 class="text-2xl font-bold mb-2">@L["PluginDetail_NotFound"]</h3>
+        <p class="text-on-surface-variant mb-6">@L["PluginDetail_NotFoundDesc"]</p>
+        <a href="/" class="px-6 py-3 bg-secondary text-on-secondary rounded-lg font-semibold no-underline hover:opacity-90 transition-all">@L["Common_BackToBrowse"]</a>
     </section>
 }
 else
 {
     <div class="max-w-5xl mx-auto px-6 py-8">
         <nav class="flex items-center gap-2 text-sm text-on-surface-variant mb-8">
-            <a href="/" class="hover:text-secondary transition-colors no-underline text-on-surface-variant">Home</a>
+            <a href="/" class="hover:text-secondary transition-colors no-underline text-on-surface-variant">@L["Common_Home"]</a>
             <span class="material-symbols-outlined text-[16px]">chevron_right</span>
-            <span>Feature Plugins</span>
+            <span>@L["Common_FeaturePlugins"]</span>
             <span class="material-symbols-outlined text-[16px]">chevron_right</span>
             <span class="text-on-surface font-medium">@_plugin.DisplayName</span>
         </nav>
@@ -69,20 +70,20 @@ else
                             {
                                 <span class="material-symbols-outlined">download</span>
                             }
-                            Download
+                            @L["Common_Download"]
                         </button>
                     }
                     <div class="space-y-3 text-sm text-on-surface-variant">
                         <div class="flex items-center justify-between">
-                            <span>Downloads</span>
+                            <span>@L["Common_Downloads"]</span>
                             <span class="font-bold text-on-surface">@_plugin.Downloads</span>
                         </div>
                         <div class="flex items-center justify-between">
-                            <span>Skills</span>
+                            <span>@L["Common_SkillsCount", _skills.Length]</span>
                             <span class="font-bold text-on-surface">@_skills.Length</span>
                         </div>
                         <div class="flex items-center justify-between">
-                            <span>Min Version</span>
+                            <span>@L["Common_MinVersion"]</span>
                             <span class="font-bold text-on-surface">v@(_plugin.MinKlacksVersion)</span>
                         </div>
                     </div>
@@ -93,7 +94,7 @@ else
         @if (_skills.Length > 0)
         {
             <div class="bg-surface-container-lowest rounded-2xl p-8 mb-8 shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
-                <h3 class="text-lg font-bold mb-4">Provided Skills</h3>
+                <h3 class="text-lg font-bold mb-4">@L["PluginDetail_ProvidedSkills"]</h3>
                 <div class="flex flex-wrap gap-2">
                     @foreach (var skill in _skills)
                     {
@@ -106,7 +107,7 @@ else
         @if (_permissions.Length > 0)
         {
             <div class="bg-surface-container-lowest rounded-2xl p-8 mb-8 shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
-                <h3 class="text-lg font-bold mb-4">Required Permissions</h3>
+                <h3 class="text-lg font-bold mb-4">@L["PluginDetail_RequiredPermissions"]</h3>
                 <div class="flex flex-wrap gap-2">
                     @foreach (var perm in _permissions)
                     {
@@ -119,7 +120,7 @@ else
         @if (!string.IsNullOrWhiteSpace(_plugin.ReadmeMarkdown))
         {
             <div class="bg-surface-container-lowest rounded-2xl p-8 mb-8 shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
-                <h3 class="text-lg font-bold mb-4">README</h3>
+                <h3 class="text-lg font-bold mb-4">@L["PluginDetail_README"]</h3>
                 <pre class="whitespace-pre-wrap text-sm text-on-surface-variant leading-relaxed m-0">@_plugin.ReadmeMarkdown</pre>
             </div>
         }
@@ -127,14 +128,14 @@ else
         @if (_plugin.Versions.Count > 0)
         {
             <div class="mb-8">
-                <h3 class="text-lg font-bold mb-4">Version History</h3>
+                <h3 class="text-lg font-bold mb-4">@L["Common_VersionHistory"]</h3>
                 <div class="space-y-3">
                     @foreach (var version in _plugin.Versions)
                     {
                         <div class="bg-surface-container-lowest rounded-xl p-5 flex items-start justify-between shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
                             <div>
                                 <span class="font-bold">v@(version.Version)</span>
-                                <span class="text-on-surface-variant text-sm ml-3">@version.CreatedAt.ToString("MMMM d, yyyy")</span>
+                                <span class="text-on-surface-variant text-sm ml-3">@version.CreatedAt.ToString("D")</span>
                                 @if (!string.IsNullOrWhiteSpace(version.ChangeLog))
                                 {
                                     <p class="text-on-surface-variant text-sm mt-1 mb-0">@version.ChangeLog</p>

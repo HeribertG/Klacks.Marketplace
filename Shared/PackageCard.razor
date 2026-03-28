@@ -1,4 +1,5 @@
 @inject NavigationManager Navigation
+@inject IStringLocalizer<SharedResource> L
 
 <div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/30 transition-all cursor-pointer hover:shadow-[0_20px_50px_rgba(27,27,29,0.06)] hover:-translate-y-0.5"
      @onclick="NavigateToPackage">
@@ -7,10 +8,10 @@
         <span class="px-2 py-1 bg-surface-container text-xs font-bold rounded uppercase tracking-wider text-on-surface-variant">v@(Package.Version)</span>
     </div>
     <h3 class="text-xl font-bold mb-1">@Package.DisplayName</h3>
-    <p class="text-sm text-on-surface-variant mb-6">by @Package.Author.DisplayName</p>
+    <p class="text-sm text-on-surface-variant mb-6">@L["Common_ByAuthor", Package.Author.DisplayName]</p>
     <div class="space-y-2 mb-6">
         <div class="flex justify-between text-xs font-bold">
-            <span>Coverage</span>
+            <span>@L["Common_Coverage"]</span>
             <span class="text-on-tertiary-container">@(Package.Coverage)%</span>
         </div>
         <div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">

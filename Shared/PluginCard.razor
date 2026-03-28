@@ -1,4 +1,5 @@
 @inject NavigationManager Navigation
+@inject IStringLocalizer<SharedResource> L
 
 <div class="bg-surface-container-lowest p-8 rounded-xl transition-all cursor-pointer flex flex-col h-full hover:shadow-[0_20px_50px_rgba(27,27,29,0.06)] hover:-translate-y-0.5"
      @onclick="NavigateToPlugin">
@@ -13,10 +14,10 @@
     <div class="flex items-center justify-between mt-auto pt-6 border-t border-outline-variant/20">
         <div class="flex items-center gap-2 text-sm font-semibold">
             <span class="material-symbols-outlined text-secondary">terminal</span>
-            @_skills.Length Skills
+            @L["Common_SkillsCount", _skills.Length]
         </div>
         <div class="text-sm text-on-surface-variant font-medium">
-            @FormatNumber(Plugin.Downloads) installs
+            @L["Common_InstallsCount", FormatNumber(Plugin.Downloads)]
         </div>
     </div>
 </div>
