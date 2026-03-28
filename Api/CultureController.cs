@@ -1,18 +1,19 @@
 // Copyright (c) Heribert Gasparoli Private. All rights reserved.
 
 /// <summary>
-/// Razor Page endpoint to set the culture cookie and redirect back.
-/// Blazor Server cannot set HTTP cookies directly from SignalR.
+/// Sets the culture cookie and redirects back. Required because Blazor Server
+/// cannot set HTTP cookies directly from SignalR circuit.
 /// </summary>
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Klacks.Marketplace.Pages.Culture;
+namespace Klacks.Marketplace.Api;
 
-public class SetCultureModel : PageModel
+[Route("[controller]")]
+public class CultureController : Controller
 {
-    public IActionResult OnGet(string culture, string redirectUri)
+    [HttpGet("Set")]
+    public IActionResult Set(string culture, string redirectUri)
     {
         if (!string.IsNullOrWhiteSpace(culture))
         {
@@ -27,6 +28,9 @@ public class SetCultureModel : PageModel
                 });
         }
 
-        return LocalRedirect(redirectUri ?? "/");
+        if (string.IsNullOrWhiteSpace(redirectUri) || !Url.IsLocalUrl(redirectUri))
+            redirectUri = "/";
+
+        return LocalRedirect(redirectUri);
     }
 }
