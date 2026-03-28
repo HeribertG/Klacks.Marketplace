@@ -3,19 +3,20 @@
 @inject IPluginValidationService PluginValidation
 @inject IHttpContextAccessor HttpContextAccessor
 @inject NavigationManager Navigation
+@inject IStringLocalizer<SharedResource> L
 
 <PageTitle>Upload Plugin - Klacks Store</PageTitle>
 
 <div class="max-w-4xl mx-auto px-6 py-8">
     <h1 class="text-3xl font-black tracking-tight mb-2">
-        <span class="material-symbols-outlined text-[32px] align-middle mr-1">extension</span> Upload Feature Plugin
+        <span class="material-symbols-outlined text-[32px] align-middle mr-1">extension</span> @L["UploadPlugin_Title"]
     </h1>
-    <p class="text-on-surface-variant mb-8">Share your feature plugin with the community</p>
+    <p class="text-on-surface-variant mb-8">@L["UploadPlugin_Subtitle"]</p>
 
     @if (!_isAuthenticated)
     {
         <div class="bg-secondary-fixed text-on-secondary-fixed-variant rounded-lg p-4 mb-6 text-sm">
-            Please <a href="/login" class="underline font-semibold">login</a> to upload plugins.
+            @L["Common_PleaseLogin"] <a href="/login" class="underline font-semibold">@L["Common_LoginLink"]</a>
         </div>
     }
     else
@@ -33,20 +34,20 @@
         <EditForm Model="@_model" OnValidSubmit="HandleUpload">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
-                    <label class="block text-sm font-semibold text-on-surface mb-2">Plugin Name (unique identifier)</label>
-                    <InputText class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all" @bind-Value="_model.Name" placeholder="e.g. messaging" />
+                    <label class="block text-sm font-semibold text-on-surface mb-2">@L["UploadPlugin_NameLabel"]</label>
+                    <InputText class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all" @bind-Value="_model.Name" placeholder="@L["UploadPlugin_NamePlaceholder"].Value" />
                 </div>
                 <div>
-                    <label class="block text-sm font-semibold text-on-surface mb-2">Display Name</label>
-                    <InputText class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all" @bind-Value="_model.DisplayName" placeholder="e.g. Messaging" />
+                    <label class="block text-sm font-semibold text-on-surface mb-2">@L["Common_DisplayNameLabel"]</label>
+                    <InputText class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all" @bind-Value="_model.DisplayName" placeholder="@L["UploadPlugin_DisplayNamePlaceholder"].Value" />
                 </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
-                    <label class="block text-sm font-semibold text-on-surface mb-2">Category</label>
+                    <label class="block text-sm font-semibold text-on-surface mb-2">@L["Common_Category"]</label>
                     <InputSelect class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all" @bind-Value="_model.Category">
-                        <option value="">Select category...</option>
+                        <option value="">@L["UploadPlugin_SelectCategory"]</option>
                         @foreach (var cat in PluginCategory.AllCategories)
                         {
                             <option value="@cat">@cat</option>
@@ -54,75 +55,75 @@
                     </InputSelect>
                 </div>
                 <div>
-                    <label class="block text-sm font-semibold text-on-surface mb-2">Version</label>
+                    <label class="block text-sm font-semibold text-on-surface mb-2">@L["Common_Version"]</label>
                     <InputText class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all" @bind-Value="_model.Version" placeholder="1.0.0" />
                 </div>
             </div>
 
             <div class="mb-6">
-                <label class="block text-sm font-semibold text-on-surface mb-2">Description</label>
+                <label class="block text-sm font-semibold text-on-surface mb-2">@L["Upload_Description"]</label>
                 <InputTextArea class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all" @bind-Value="_model.Description" rows="3"
-                               placeholder="Describe your feature plugin..." />
+                               placeholder="@L["UploadPlugin_DescriptionPlaceholder"].Value" />
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
-                    <label class="block text-sm font-semibold text-on-surface mb-2">Min Klacks Version</label>
+                    <label class="block text-sm font-semibold text-on-surface mb-2">@L["Upload_MinKlacksVersion"]</label>
                     <InputText class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all" @bind-Value="_model.MinKlacksVersion" placeholder="1.0.0" />
                 </div>
                 <div>
-                    <label class="block text-sm font-semibold text-on-surface mb-2">Changelog</label>
-                    <InputText class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all" @bind-Value="_model.ChangeLog" placeholder="What changed in this version?" />
+                    <label class="block text-sm font-semibold text-on-surface mb-2">@L["UploadPlugin_ChangelogLabel"]</label>
+                    <InputText class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all" @bind-Value="_model.ChangeLog" placeholder="@L["UploadPlugin_ChangelogPlaceholder"].Value" />
                 </div>
             </div>
 
             <div class="border-2 border-dashed border-outline-variant/50 rounded-xl p-8 text-center hover:border-secondary hover:bg-surface-container-low transition-all cursor-pointer mb-6">
                 <span class="material-symbols-outlined text-4xl text-on-surface-variant mb-2 block">description</span>
-                <p class="font-bold">manifest.json <span class="text-on-surface-variant text-sm">(required)</span></p>
+                <p class="font-bold">@L["UploadPlugin_ManifestRequired"]</p>
                 <InputFile OnChange="OnManifestSelected" accept=".json" />
                 @if (_manifestLoaded)
                 {
-                    <span class="text-on-tertiary-container flex items-center justify-center gap-1 mt-2"><span class="material-symbols-outlined text-[18px]">check_circle</span> Loaded</span>
+                    <span class="text-on-tertiary-container flex items-center justify-center gap-1 mt-2"><span class="material-symbols-outlined text-[18px]">check_circle</span> @L["Common_Loaded"]</span>
                 }
             </div>
 
             <div class="border-2 border-dashed border-outline-variant/50 rounded-xl p-8 text-center hover:border-secondary hover:bg-surface-container-low transition-all cursor-pointer mb-6">
                 <span class="material-symbols-outlined text-4xl text-on-surface-variant mb-2 block">translate</span>
-                <p class="font-bold">en.json <span class="text-on-surface-variant text-sm">(required i18n)</span></p>
+                <p class="font-bold">@L["UploadPlugin_EnRequired"]</p>
                 <InputFile OnChange="OnEnI18nSelected" accept=".json" />
                 @if (_enI18nLoaded)
                 {
-                    <span class="text-on-tertiary-container flex items-center justify-center gap-1 mt-2"><span class="material-symbols-outlined text-[18px]">check_circle</span> Loaded</span>
+                    <span class="text-on-tertiary-container flex items-center justify-center gap-1 mt-2"><span class="material-symbols-outlined text-[18px]">check_circle</span> @L["Common_Loaded"]</span>
                 }
             </div>
 
             <div class="border-2 border-dashed border-outline-variant/50 rounded-xl p-8 text-center hover:border-secondary hover:bg-surface-container-low transition-all cursor-pointer mb-6">
                 <span class="material-symbols-outlined text-4xl text-on-surface-variant mb-2 block">translate</span>
-                <p class="font-bold">de.json <span class="text-on-surface-variant text-sm">(optional i18n)</span></p>
+                <p class="font-bold">@L["UploadPlugin_DeOptional"]</p>
                 <InputFile OnChange="OnDeI18nSelected" accept=".json" />
                 @if (_deI18nLoaded)
                 {
-                    <span class="text-on-tertiary-container flex items-center justify-center gap-1 mt-2"><span class="material-symbols-outlined text-[18px]">check_circle</span> Loaded</span>
+                    <span class="text-on-tertiary-container flex items-center justify-center gap-1 mt-2"><span class="material-symbols-outlined text-[18px]">check_circle</span> @L["Common_Loaded"]</span>
                 }
             </div>
 
             <div class="border-2 border-dashed border-outline-variant/50 rounded-xl p-8 text-center hover:border-secondary hover:bg-surface-container-low transition-all cursor-pointer mb-6">
                 <span class="material-symbols-outlined text-4xl text-on-surface-variant mb-2 block">translate</span>
-                <p class="font-bold">fr.json <span class="text-on-surface-variant text-sm">(optional i18n)</span></p>
+                <p class="font-bold">@L["UploadPlugin_FrOptional"]</p>
                 <InputFile OnChange="OnFrI18nSelected" accept=".json" />
                 @if (_frI18nLoaded)
                 {
-                    <span class="text-on-tertiary-container flex items-center justify-center gap-1 mt-2"><span class="material-symbols-outlined text-[18px]">check_circle</span> Loaded</span>
+                    <span class="text-on-tertiary-container flex items-center justify-center gap-1 mt-2"><span class="material-symbols-outlined text-[18px]">check_circle</span> @L["Common_Loaded"]</span>
                 }
             </div>
 
             <div class="border-2 border-dashed border-outline-variant/50 rounded-xl p-8 text-center hover:border-secondary hover:bg-surface-container-low transition-all cursor-pointer mb-6">
                 <span class="material-symbols-outlined text-4xl text-on-surface-variant mb-2 block">menu_book</span>
-                <p class="font-bold">README.md <span class="text-on-surface-variant text-sm">(optional)</span></p>
+                <p class="font-bold">@L["UploadPlugin_ReadmeOptional"]</p>
                 <InputFile OnChange="OnReadmeSelected" accept=".md" />
                 @if (_readmeLoaded)
                 {
-                    <span class="text-on-tertiary-container flex items-center justify-center gap-1 mt-2"><span class="material-symbols-outlined text-[18px]">check_circle</span> Loaded</span>
+                    <span class="text-on-tertiary-container flex items-center justify-center gap-1 mt-2"><span class="material-symbols-outlined text-[18px]">check_circle</span> @L["Common_Loaded"]</span>
                 }
             </div>
 
@@ -131,7 +132,7 @@
                 {
                     <div class="animate-spin w-5 h-5 border-2 border-white border-t-transparent rounded-full"></div>
                 }
-                <span class="material-symbols-outlined text-[20px]">send</span> Submit for Review
+                <span class="material-symbols-outlined text-[20px]">send</span> @L["Common_SubmitForReview"]
             </button>
         </EditForm>
     }
@@ -244,13 +245,13 @@
         {
             if (string.IsNullOrWhiteSpace(_model.Name) || string.IsNullOrWhiteSpace(_model.DisplayName))
             {
-                _errorMessage = "Name and Display Name are required";
+                _errorMessage = L["UploadPlugin_NameRequired"];
                 return;
             }
 
             if (string.IsNullOrWhiteSpace(_model.Category))
             {
-                _errorMessage = "Category is required";
+                _errorMessage = L["UploadPlugin_CategoryRequired"];
                 return;
             }
 
@@ -271,7 +272,7 @@
             };
 
             await PluginService.CreatePluginAsync(plugin, _manifestJson, i18nCombined, bundleData, _model.ChangeLog?.Trim());
-            _successMessage = "Plugin submitted for review!";
+            _successMessage = L["UploadPlugin_Success"];
             ResetForm();
         }
         catch (Exception ex)

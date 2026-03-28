@@ -2,17 +2,18 @@
 @inject IAdminService AdminService
 @inject IPackageService PackageService
 @inject IHttpContextAccessor HttpContextAccessor
+@inject IStringLocalizer<SharedResource> L
 
 <PageTitle>Admin Dashboard - Klacks Store</PageTitle>
 
 <div class="max-w-5xl mx-auto px-6 py-8">
     <h1 class="text-3xl font-black tracking-tight mb-8">
-        <span class="material-symbols-outlined text-3xl mr-2 align-middle">admin_panel_settings</span> Admin Dashboard
+        <span class="material-symbols-outlined text-3xl mr-2 align-middle">admin_panel_settings</span> @L["Admin_Title"]
     </h1>
 
     @if (!_isAdmin)
     {
-        <div class="bg-error-container text-on-error-container rounded-xl px-6 py-4">Access denied. Admin privileges required.</div>
+        <div class="bg-error-container text-on-error-container rounded-xl px-6 py-4">@L["Admin_AccessDenied"]</div>
     }
     else
     {
@@ -29,22 +30,22 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div class="bg-surface-container-lowest rounded-xl p-6 text-center shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
                 <div class="text-3xl font-black text-secondary">@_pendingPackages.Count</div>
-                <div class="text-xs text-on-surface-variant uppercase tracking-wider mt-1">Pending Packages</div>
+                <div class="text-xs text-on-surface-variant uppercase tracking-wider mt-1">@L["Admin_PendingPackages"]</div>
             </div>
             <div class="bg-surface-container-lowest rounded-xl p-6 text-center shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
                 <div class="text-3xl font-black text-secondary">@_pendingPlugins.Count</div>
-                <div class="text-xs text-on-surface-variant uppercase tracking-wider mt-1">Pending Plugins</div>
+                <div class="text-xs text-on-surface-variant uppercase tracking-wider mt-1">@L["Admin_PendingPlugins"]</div>
             </div>
             <div class="bg-surface-container-lowest rounded-xl p-6 text-center shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
                 <div class="text-3xl font-black text-secondary">@_users.Count</div>
-                <div class="text-xs text-on-surface-variant uppercase tracking-wider mt-1">Users</div>
+                <div class="text-xs text-on-surface-variant uppercase tracking-wider mt-1">@L["Admin_Users"]</div>
             </div>
         </div>
 
-        <h3 class="text-xl font-bold mb-4">Pending Language Packages</h3>
+        <h3 class="text-xl font-bold mb-4">@L["Admin_PendingLanguagePackages"]</h3>
         @if (_pendingPackages.Count == 0)
         {
-            <div class="bg-secondary-fixed text-on-secondary-fixed-variant rounded-xl px-6 py-4 mb-8">No packages pending review.</div>
+            <div class="bg-secondary-fixed text-on-secondary-fixed-variant rounded-xl px-6 py-4 mb-8">@L["Admin_NoPendingPackages"]</div>
         }
         else
         {
@@ -52,13 +53,13 @@
                 <table class="w-full text-sm">
                     <thead>
                         <tr class="bg-surface-container-low text-on-surface-variant text-xs uppercase tracking-wider">
-                            <th class="px-6 py-4 text-left font-bold">Package</th>
-                            <th class="px-6 py-4 text-left font-bold">Author</th>
-                            <th class="px-6 py-4 text-left font-bold">Code</th>
-                            <th class="px-6 py-4 text-left font-bold">Coverage</th>
-                            <th class="px-6 py-4 text-left font-bold">Docs</th>
-                            <th class="px-6 py-4 text-left font-bold">Submitted</th>
-                            <th class="px-6 py-4 text-left font-bold">Actions</th>
+                            <th class="px-6 py-4 text-left font-bold">@L["Common_Package"]</th>
+                            <th class="px-6 py-4 text-left font-bold">@L["Common_Author"]</th>
+                            <th class="px-6 py-4 text-left font-bold">@L["Common_Code"]</th>
+                            <th class="px-6 py-4 text-left font-bold">@L["Common_Coverage"]</th>
+                            <th class="px-6 py-4 text-left font-bold">@L["Common_Docs"]</th>
+                            <th class="px-6 py-4 text-left font-bold">@L["Common_Submitted"]</th>
+                            <th class="px-6 py-4 text-left font-bold">@L["Common_Actions"]</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-outline-variant/20">
@@ -86,10 +87,10 @@
             </div>
         }
 
-        <h3 class="text-xl font-bold mb-4">Pending Feature Plugins</h3>
+        <h3 class="text-xl font-bold mb-4">@L["Admin_PendingFeaturePlugins"]</h3>
         @if (_pendingPlugins.Count == 0)
         {
-            <div class="bg-secondary-fixed text-on-secondary-fixed-variant rounded-xl px-6 py-4 mb-8">No plugins pending review.</div>
+            <div class="bg-secondary-fixed text-on-secondary-fixed-variant rounded-xl px-6 py-4 mb-8">@L["Admin_NoPendingPlugins"]</div>
         }
         else
         {
@@ -97,12 +98,12 @@
                 <table class="w-full text-sm">
                     <thead>
                         <tr class="bg-surface-container-low text-on-surface-variant text-xs uppercase tracking-wider">
-                            <th class="px-6 py-4 text-left font-bold">Plugin</th>
-                            <th class="px-6 py-4 text-left font-bold">Author</th>
-                            <th class="px-6 py-4 text-left font-bold">Category</th>
-                            <th class="px-6 py-4 text-left font-bold">Version</th>
-                            <th class="px-6 py-4 text-left font-bold">Submitted</th>
-                            <th class="px-6 py-4 text-left font-bold">Actions</th>
+                            <th class="px-6 py-4 text-left font-bold">@L["Common_Plugin"]</th>
+                            <th class="px-6 py-4 text-left font-bold">@L["Common_Author"]</th>
+                            <th class="px-6 py-4 text-left font-bold">@L["Common_Category"]</th>
+                            <th class="px-6 py-4 text-left font-bold">@L["Common_Version"]</th>
+                            <th class="px-6 py-4 text-left font-bold">@L["Common_Submitted"]</th>
+                            <th class="px-6 py-4 text-left font-bold">@L["Common_Actions"]</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-outline-variant/20">
@@ -129,16 +130,16 @@
             </div>
         }
 
-        <h3 class="text-xl font-bold mb-4">Users</h3>
+        <h3 class="text-xl font-bold mb-4">@L["Admin_Users"]</h3>
         <div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
             <table class="w-full text-sm">
                 <thead>
                     <tr class="bg-surface-container-low text-on-surface-variant text-xs uppercase tracking-wider">
-                        <th class="px-6 py-4 text-left font-bold">Name</th>
-                        <th class="px-6 py-4 text-left font-bold">Email</th>
-                        <th class="px-6 py-4 text-left font-bold">Joined</th>
-                        <th class="px-6 py-4 text-left font-bold">Admin</th>
-                        <th class="px-6 py-4 text-left font-bold">Actions</th>
+                        <th class="px-6 py-4 text-left font-bold">@L["Admin_Name"]</th>
+                        <th class="px-6 py-4 text-left font-bold">@L["Admin_Email"]</th>
+                        <th class="px-6 py-4 text-left font-bold">@L["Admin_Joined"]</th>
+                        <th class="px-6 py-4 text-left font-bold">@L["Nav_Admin"]</th>
+                        <th class="px-6 py-4 text-left font-bold">@L["Common_Actions"]</th>
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-outline-variant/20">
@@ -151,12 +152,12 @@
                             <td class="px-6 py-4">
                                 @if (user.IsAdmin)
                                 {
-                                    <span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant rounded-full text-xs font-bold">Admin</span>
+                                    <span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant rounded-full text-xs font-bold">@L["Nav_Admin"]</span>
                                 }
                             </td>
                             <td class="px-6 py-4">
                                 <button class="px-3 py-1.5 bg-secondary text-on-secondary rounded-lg text-xs font-bold hover:opacity-80 transition-all" @onclick="() => ToggleAdmin(user.Id)">
-                                    @(user.IsAdmin ? "Remove Admin" : "Make Admin")
+                                    @(user.IsAdmin ? L["Admin_RemoveAdmin"] : L["Admin_MakeAdmin"])
                                 </button>
                             </td>
                         </tr>
@@ -209,7 +210,7 @@
         try
         {
             await AdminService.ApprovePackageAsync(packageId);
-            _message = "Package approved successfully";
+            _message = L["Admin_PackageApproved"];
             await LoadData();
         }
         catch (Exception ex)
@@ -222,8 +223,8 @@
     {
         _rejectItemId = packageId;
         _rejectType = "package";
-        _rejectTitle = "Reject Package";
-        _rejectMessage = "Are you sure you want to reject this package?";
+        _rejectTitle = L["Admin_RejectPackageTitle"];
+        _rejectMessage = L["Admin_RejectPackageMessage"];
         _showConfirmReject = true;
     }
 
@@ -232,7 +233,7 @@
         try
         {
             await AdminService.ApprovePluginAsync(pluginId);
-            _message = "Plugin approved successfully";
+            _message = L["Admin_PluginApproved"];
             await LoadData();
         }
         catch (Exception ex)
@@ -245,8 +246,8 @@
     {
         _rejectItemId = pluginId;
         _rejectType = "plugin";
-        _rejectTitle = "Reject Plugin";
-        _rejectMessage = "Are you sure you want to reject this plugin?";
+        _rejectTitle = L["Admin_RejectPluginTitle"];
+        _rejectMessage = L["Admin_RejectPluginMessage"];
         _showConfirmReject = true;
     }
 
@@ -256,13 +257,13 @@
         {
             if (_rejectType == "package")
             {
-                await AdminService.RejectPackageAsync(_rejectItemId, "Rejected by admin");
-                _message = "Package rejected";
+                await AdminService.RejectPackageAsync(_rejectItemId, L["Admin_RejectedByAdmin"]);
+                _message = L["Admin_PackageRejected"];
             }
             else
             {
-                await AdminService.RejectPluginAsync(_rejectItemId, "Rejected by admin");
-                _message = "Plugin rejected";
+                await AdminService.RejectPluginAsync(_rejectItemId, L["Admin_RejectedByAdmin"]);
+                _message = L["Admin_PluginRejected"];
             }
             _showConfirmReject = false;
             await LoadData();

@@ -31,27 +31,27 @@
                     </div>
                 </div>
                 <div class="mb-5">
-                    <label class="block text-sm font-semibold text-on-surface mb-2">Email address</label>
+                    <label class="block text-sm font-semibold text-on-surface mb-2">@L["Common_EmailLabel"]</label>
                     <div class="relative">
                         <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">mail</span>
                         <InputText class="w-full pl-11 pr-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all"
-                                   @bind-Value="_model.Email" placeholder="your@email.com" />
+                                   @bind-Value="_model.Email" placeholder="@L["Common_EmailPlaceholder"].Value" />
                     </div>
                 </div>
                 <div class="mb-5">
-                    <label class="block text-sm font-semibold text-on-surface mb-2">Password (min. @AppConstants.MinPasswordLength characters)</label>
+                    <label class="block text-sm font-semibold text-on-surface mb-2">@L["Register_PasswordLabel", AppConstants.MinPasswordLength]</label>
                     <div class="relative">
                         <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">lock</span>
                         <InputText type="password" class="w-full pl-11 pr-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all"
-                                   @bind-Value="_model.Password" placeholder="Create a password" />
+                                   @bind-Value="_model.Password" placeholder="@L["Register_CreatePassword"].Value" />
                     </div>
                 </div>
                 <div class="mb-6">
-                    <label class="block text-sm font-semibold text-on-surface mb-2">Confirm Password</label>
+                    <label class="block text-sm font-semibold text-on-surface mb-2">@L["Register_ConfirmPasswordLabel"]</label>
                     <div class="relative">
                         <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">lock</span>
                         <InputText type="password" class="w-full pl-11 pr-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all"
-                                   @bind-Value="_model.ConfirmPassword" placeholder="Confirm your password" />
+                                   @bind-Value="_model.ConfirmPassword" placeholder="@L["Register_ConfirmPasswordPlaceholder"].Value" />
                     </div>
                 </div>
                 <button type="submit"
@@ -61,20 +61,20 @@
                     {
                         <div class="animate-spin w-5 h-5 border-2 border-white border-t-transparent rounded-full"></div>
                     }
-                    Create Account
+                    @L["Register_CreateAccount"]
                 </button>
             </EditForm>
 
             <p class="text-center mt-6 text-sm text-on-surface-variant">
-                Already have an account?
-                <a href="/login" class="text-secondary font-semibold hover:underline no-underline">Sign in</a>
+                @L["Register_HasAccount"]
+                <a href="/login" class="text-secondary font-semibold hover:underline no-underline">@L["Nav_SignIn"]</a>
             </p>
         </div>
 
         <div class="text-center mt-6">
             <p class="text-xs text-on-surface-variant flex items-center justify-center gap-1">
                 <span class="material-symbols-outlined text-[16px]">lock</span>
-                Your data is encrypted and secure
+                @L["Common_DataSecure"]
             </p>
         </div>
     </div>
@@ -96,24 +96,24 @@
         {
             if (string.IsNullOrWhiteSpace(_model.DisplayName))
             {
-                _errorMessage = "Display name is required";
+                _errorMessage = L["Register_NameRequired"];
                 return;
             }
 
             if (string.IsNullOrWhiteSpace(_model.Email))
             {
-                _errorMessage = "Email is required";
+                _errorMessage = L["Register_EmailRequired"];
                 return;
             }
 
             if (_model.Password != _model.ConfirmPassword)
             {
-                _errorMessage = "Passwords do not match";
+                _errorMessage = L["Register_PasswordMismatch"];
                 return;
             }
 
             await AuthService.RegisterAsync(_model.Email, _model.Password, _model.DisplayName);
-            _successMessage = "Registration successful! You can now sign in.";
+            _successMessage = L["Register_Success"];
             _model = new();
         }
         catch (Exception ex)

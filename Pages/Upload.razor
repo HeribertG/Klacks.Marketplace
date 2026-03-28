@@ -34,100 +34,100 @@
         <EditForm Model="@_model" OnValidSubmit="HandleUpload">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
-                    <label class="block text-sm font-semibold text-on-surface mb-2">Code (e.g. fr-FR)</label>
+                    <label class="block text-sm font-semibold text-on-surface mb-2">@L["Upload_CodeLabel"]</label>
                     <InputText class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all" @bind-Value="_model.Code" placeholder="xx-XX" />
                 </div>
                 <div>
-                    <label class="block text-sm font-semibold text-on-surface mb-2">Display Name</label>
-                    <InputText class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all" @bind-Value="_model.DisplayName" placeholder="e.g. French (France)" />
+                    <label class="block text-sm font-semibold text-on-surface mb-2">@L["Common_DisplayNameLabel"]</label>
+                    <InputText class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all" @bind-Value="_model.DisplayName" placeholder="@L["Upload_DisplayNamePlaceholder"].Value" />
                 </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
-                    <label class="block text-sm font-semibold text-on-surface mb-2">Speech Locale</label>
-                    <InputText class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all" @bind-Value="_model.SpeechLocale" placeholder="e.g. fr-FR" />
+                    <label class="block text-sm font-semibold text-on-surface mb-2">@L["Upload_SpeechLocale"]</label>
+                    <InputText class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all" @bind-Value="_model.SpeechLocale" placeholder="@L["Upload_SpeechLocalePlaceholder"].Value" />
                 </div>
                 <div>
-                    <label class="block text-sm font-semibold text-on-surface mb-2">Version</label>
+                    <label class="block text-sm font-semibold text-on-surface mb-2">@L["Common_Version"]</label>
                     <InputText class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all" @bind-Value="_model.Version" placeholder="1.0.0" />
                 </div>
             </div>
 
             <div class="mb-6">
-                <label class="block text-sm font-semibold text-on-surface mb-2">Description</label>
+                <label class="block text-sm font-semibold text-on-surface mb-2">@L["Upload_Description"]</label>
                 <InputTextArea class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all" @bind-Value="_model.Description" rows="3"
-                               placeholder="Describe your language pack..." />
+                               placeholder="@L["Upload_DescriptionPlaceholder"].Value" />
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
-                    <label class="block text-sm font-semibold text-on-surface mb-2">Coverage (%)</label>
+                    <label class="block text-sm font-semibold text-on-surface mb-2">@L["Upload_CoverageLabel"]</label>
                     <InputNumber class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all" @bind-Value="_model.Coverage" min="0" max="100" />
                 </div>
                 <div>
-                    <label class="block text-sm font-semibold text-on-surface mb-2">Min Klacks Version</label>
+                    <label class="block text-sm font-semibold text-on-surface mb-2">@L["Upload_MinKlacksVersion"]</label>
                     <InputText class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all" @bind-Value="_model.MinKlacksVersion" placeholder="1.0.0" />
                 </div>
             </div>
 
             <div class="border-2 border-dashed border-outline-variant/50 rounded-xl p-8 text-center hover:border-secondary hover:bg-surface-container-low transition-all cursor-pointer mb-6">
                 <span class="material-symbols-outlined text-4xl text-on-surface-variant mb-2 block">description</span>
-                <p class="font-bold">manifest.json</p>
+                <p class="font-bold">@L["Upload_ManifestRequired"]</p>
                 <InputFile OnChange="OnManifestSelected" accept=".json" />
                 @if (_manifestLoaded)
                 {
-                    <span class="text-on-tertiary-container flex items-center justify-center gap-1 mt-2"><span class="material-symbols-outlined text-[18px]">check_circle</span> Loaded</span>
+                    <span class="text-on-tertiary-container flex items-center justify-center gap-1 mt-2"><span class="material-symbols-outlined text-[18px]">check_circle</span> @L["Common_Loaded"]</span>
                 }
             </div>
 
             <div class="border-2 border-dashed border-outline-variant/50 rounded-xl p-8 text-center hover:border-secondary hover:bg-surface-container-low transition-all cursor-pointer mb-6">
                 <span class="material-symbols-outlined text-4xl text-on-surface-variant mb-2 block">translate</span>
-                <p class="font-bold">translations.json</p>
+                <p class="font-bold">@L["Upload_TranslationsRequired"]</p>
                 <InputFile OnChange="OnTranslationsSelected" accept=".json" />
                 @if (_translationsLoaded)
                 {
-                    <span class="text-on-tertiary-container flex items-center justify-center gap-1 mt-2"><span class="material-symbols-outlined text-[18px]">check_circle</span> Loaded</span>
+                    <span class="text-on-tertiary-container flex items-center justify-center gap-1 mt-2"><span class="material-symbols-outlined text-[18px]">check_circle</span> @L["Common_Loaded"]</span>
                 }
             </div>
 
             <div class="border-2 border-dashed border-outline-variant/50 rounded-xl p-8 text-center hover:border-secondary hover:bg-surface-container-low transition-all cursor-pointer mb-6">
                 <span class="material-symbols-outlined text-4xl text-on-surface-variant mb-2 block">menu_book</span>
-                <p class="font-bold">docs.json <span class="text-on-surface-variant text-sm">(optional)</span></p>
+                <p class="font-bold">@L["Upload_DocsOptional"]</p>
                 <InputFile OnChange="OnDocsSelected" accept=".json" />
                 @if (_docsLoaded)
                 {
-                    <span class="text-on-tertiary-container flex items-center justify-center gap-1 mt-2"><span class="material-symbols-outlined text-[18px]">check_circle</span> Loaded</span>
+                    <span class="text-on-tertiary-container flex items-center justify-center gap-1 mt-2"><span class="material-symbols-outlined text-[18px]">check_circle</span> @L["Common_Loaded"]</span>
                 }
             </div>
 
             <div class="border-2 border-dashed border-outline-variant/50 rounded-xl p-8 text-center hover:border-secondary hover:bg-surface-container-low transition-all cursor-pointer mb-6">
                 <span class="material-symbols-outlined text-4xl text-on-surface-variant mb-2 block">public</span>
-                <p class="font-bold">countries.json <span class="text-on-surface-variant text-sm">(optional)</span></p>
+                <p class="font-bold">@L["Upload_CountriesOptional"]</p>
                 <InputFile OnChange="OnCountriesSelected" accept=".json" />
                 @if (_countriesLoaded)
                 {
-                    <span class="text-on-tertiary-container flex items-center justify-center gap-1 mt-2"><span class="material-symbols-outlined text-[18px]">check_circle</span> Loaded</span>
+                    <span class="text-on-tertiary-container flex items-center justify-center gap-1 mt-2"><span class="material-symbols-outlined text-[18px]">check_circle</span> @L["Common_Loaded"]</span>
                 }
             </div>
 
             <div class="border-2 border-dashed border-outline-variant/50 rounded-xl p-8 text-center hover:border-secondary hover:bg-surface-container-low transition-all cursor-pointer mb-6">
                 <span class="material-symbols-outlined text-4xl text-on-surface-variant mb-2 block">location_on</span>
-                <p class="font-bold">states.json <span class="text-on-surface-variant text-sm">(optional)</span></p>
+                <p class="font-bold">@L["Upload_StatesOptional"]</p>
                 <InputFile OnChange="OnStatesSelected" accept=".json" />
                 @if (_statesLoaded)
                 {
-                    <span class="text-on-tertiary-container flex items-center justify-center gap-1 mt-2"><span class="material-symbols-outlined text-[18px]">check_circle</span> Loaded</span>
+                    <span class="text-on-tertiary-container flex items-center justify-center gap-1 mt-2"><span class="material-symbols-outlined text-[18px]">check_circle</span> @L["Common_Loaded"]</span>
                 }
             </div>
 
             <div class="border-2 border-dashed border-outline-variant/50 rounded-xl p-8 text-center hover:border-secondary hover:bg-surface-container-low transition-all cursor-pointer mb-6">
                 <span class="material-symbols-outlined text-4xl text-on-surface-variant mb-2 block">calendar_month</span>
-                <p class="font-bold">calendar-rules.json <span class="text-on-surface-variant text-sm">(optional)</span></p>
+                <p class="font-bold">@L["Upload_CalendarOptional"]</p>
                 <InputFile OnChange="OnCalendarRulesSelected" accept=".json" />
                 @if (_calendarRulesLoaded)
                 {
-                    <span class="text-on-tertiary-container flex items-center justify-center gap-1 mt-2"><span class="material-symbols-outlined text-[18px]">check_circle</span> Loaded</span>
+                    <span class="text-on-tertiary-container flex items-center justify-center gap-1 mt-2"><span class="material-symbols-outlined text-[18px]">check_circle</span> @L["Common_Loaded"]</span>
                 }
             </div>
 
@@ -136,7 +136,7 @@
                 {
                     <div class="animate-spin w-5 h-5 border-2 border-white border-t-transparent rounded-full"></div>
                 }
-                <span class="material-symbols-outlined text-[20px]">send</span> Submit for Review
+                <span class="material-symbols-outlined text-[20px]">send</span> @L["Common_SubmitForReview"]
             </button>
         </EditForm>
     }
@@ -324,7 +324,7 @@
         {
             if (string.IsNullOrWhiteSpace(_model.Code) || string.IsNullOrWhiteSpace(_model.DisplayName))
             {
-                _errorMessage = "Code and Display Name are required";
+                _errorMessage = L["Upload_CodeRequired"];
                 return;
             }
 
@@ -349,7 +349,7 @@
                 _countriesLoaded ? _countriesJson : null,
                 _statesLoaded ? _statesJson : null,
                 _calendarRulesLoaded ? _calendarRulesJson : null);
-            _successMessage = "Package submitted for review!";
+            _successMessage = L["Upload_Success"];
             _model = new();
             _manifestLoaded = false;
             _translationsLoaded = false;

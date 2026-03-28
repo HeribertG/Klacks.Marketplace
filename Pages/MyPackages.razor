@@ -2,18 +2,19 @@
 @inject IPackageService PackageService
 @inject IFeaturePluginMarketplaceService PluginService
 @inject IHttpContextAccessor HttpContextAccessor
+@inject IStringLocalizer<SharedResource> L
 
 <PageTitle>My Packages - Klacks Store</PageTitle>
 
 <div class="max-w-5xl mx-auto px-6 py-8">
     <h1 class="text-3xl font-black tracking-tight mb-8">
-        <span class="material-symbols-outlined text-3xl mr-2 align-middle">inventory_2</span> My Packages
+        <span class="material-symbols-outlined text-3xl mr-2 align-middle">inventory_2</span> @L["MyPackages_Title"]
     </h1>
 
     @if (!_isAuthenticated)
     {
         <div class="bg-secondary-fixed text-on-secondary-fixed-variant rounded-xl px-6 py-4">
-            Please <a href="/login" class="text-secondary hover:underline no-underline font-medium">login</a> to view your packages.
+            @L["MyPackages_LoginRequired"] <a href="/login" class="text-secondary hover:underline no-underline font-medium">@L["Common_LoginLink"]</a>
         </div>
     }
     else if (_isLoading)
@@ -27,11 +28,11 @@
         <div class="flex gap-3 mb-8">
             <button class="px-6 py-2.5 rounded-full font-bold transition-all @(_activeTab == "packages" ? "bg-secondary text-on-secondary" : "bg-surface-container text-on-surface-variant hover:bg-surface-container-high")"
                     @onclick='() => _activeTab = "packages"'>
-                <span class="material-symbols-outlined text-[18px] mr-1">language</span> Language Packs (@_packages.Count)
+                <span class="material-symbols-outlined text-[18px] mr-1">language</span> @L["Common_LanguagePacks"] (@_packages.Count)
             </button>
             <button class="px-6 py-2.5 rounded-full font-bold transition-all @(_activeTab == "plugins" ? "bg-secondary text-on-secondary" : "bg-surface-container text-on-surface-variant hover:bg-surface-container-high")"
                     @onclick='() => _activeTab = "plugins"'>
-                <span class="material-symbols-outlined text-[18px] mr-1">extension</span> Feature Plugins (@_plugins.Count)
+                <span class="material-symbols-outlined text-[18px] mr-1">extension</span> @L["Common_FeaturePlugins"] (@_plugins.Count)
             </button>
         </div>
 
@@ -41,10 +42,10 @@
             {
                 <div class="py-16 text-center">
                     <span class="material-symbols-outlined text-6xl text-on-surface-variant mb-4 block">package_2</span>
-                    <h3 class="text-xl font-bold mb-2">No language packs yet</h3>
-                    <p class="text-on-surface-variant mb-6">You haven't uploaded any language packs yet.</p>
+                    <h3 class="text-xl font-bold mb-2">@L["MyPackages_NoPacks"]</h3>
+                    <p class="text-on-surface-variant mb-6">@L["MyPackages_NoPacksDesc"]</p>
                     <a href="/upload" class="px-6 py-3 bg-secondary text-on-secondary rounded-lg font-semibold no-underline hover:opacity-90 transition-all">
-                        <span class="material-symbols-outlined text-[18px] mr-1 align-middle">upload</span> Upload your first package
+                        <span class="material-symbols-outlined text-[18px] mr-1 align-middle">upload</span> @L["MyPackages_UploadFirst"]
                     </a>
                 </div>
             }
@@ -54,12 +55,12 @@
                     <table class="w-full text-sm">
                         <thead>
                             <tr class="bg-surface-container-low text-on-surface-variant text-xs uppercase tracking-wider">
-                                <th class="px-6 py-4 text-left font-bold">Package</th>
-                                <th class="px-6 py-4 text-left font-bold">Code</th>
-                                <th class="px-6 py-4 text-left font-bold">Version</th>
-                                <th class="px-6 py-4 text-left font-bold">Coverage</th>
-                                <th class="px-6 py-4 text-left font-bold">Downloads</th>
-                                <th class="px-6 py-4 text-left font-bold">Status</th>
+                                <th class="px-6 py-4 text-left font-bold">@L["Common_Package"]</th>
+                                <th class="px-6 py-4 text-left font-bold">@L["Common_Code"]</th>
+                                <th class="px-6 py-4 text-left font-bold">@L["Common_Version"]</th>
+                                <th class="px-6 py-4 text-left font-bold">@L["Common_Coverage"]</th>
+                                <th class="px-6 py-4 text-left font-bold">@L["Common_Downloads"]</th>
+                                <th class="px-6 py-4 text-left font-bold">@L["Common_Status"]</th>
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-outline-variant/20">
@@ -85,10 +86,10 @@
             {
                 <div class="py-16 text-center">
                     <span class="material-symbols-outlined text-6xl text-on-surface-variant mb-4 block">extension</span>
-                    <h3 class="text-xl font-bold mb-2">No feature plugins yet</h3>
-                    <p class="text-on-surface-variant mb-6">You haven't uploaded any feature plugins yet.</p>
+                    <h3 class="text-xl font-bold mb-2">@L["MyPackages_NoPlugins"]</h3>
+                    <p class="text-on-surface-variant mb-6">@L["MyPackages_NoPluginsDesc"]</p>
                     <a href="/upload-plugin" class="px-6 py-3 bg-secondary text-on-secondary rounded-lg font-semibold no-underline hover:opacity-90 transition-all">
-                        <span class="material-symbols-outlined text-[18px] mr-1 align-middle">upload</span> Upload your first plugin
+                        <span class="material-symbols-outlined text-[18px] mr-1 align-middle">upload</span> @L["MyPackages_UploadFirstPlugin"]
                     </a>
                 </div>
             }
@@ -98,11 +99,11 @@
                     <table class="w-full text-sm">
                         <thead>
                             <tr class="bg-surface-container-low text-on-surface-variant text-xs uppercase tracking-wider">
-                                <th class="px-6 py-4 text-left font-bold">Plugin</th>
-                                <th class="px-6 py-4 text-left font-bold">Category</th>
-                                <th class="px-6 py-4 text-left font-bold">Version</th>
-                                <th class="px-6 py-4 text-left font-bold">Downloads</th>
-                                <th class="px-6 py-4 text-left font-bold">Status</th>
+                                <th class="px-6 py-4 text-left font-bold">@L["Common_Plugin"]</th>
+                                <th class="px-6 py-4 text-left font-bold">@L["Common_Category"]</th>
+                                <th class="px-6 py-4 text-left font-bold">@L["Common_Version"]</th>
+                                <th class="px-6 py-4 text-left font-bold">@L["Common_Downloads"]</th>
+                                <th class="px-6 py-4 text-left font-bold">@L["Common_Status"]</th>
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-outline-variant/20">
