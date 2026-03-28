@@ -234,15 +234,28 @@ else
 
     private static string GetFlagEmoji(string code)
     {
-        var region = code.Length >= 5 ? code[3..5].ToUpperInvariant() : code[..2].ToUpperInvariant();
-        var flagMap = new Dictionary<string, string>
+        var key = code.Length >= 5 ? code[3..5].ToUpperInvariant() : code[..2].ToUpperInvariant();
+        var langToCountry = new Dictionary<string, string>
         {
-            ["DE"] = "\U0001F1E9\U0001F1EA", ["FR"] = "\U0001F1EB\U0001F1F7", ["ES"] = "\U0001F1EA\U0001F1F8",
-            ["IT"] = "\U0001F1EE\U0001F1F9", ["JP"] = "\U0001F1EF\U0001F1F5", ["BR"] = "\U0001F1E7\U0001F1F7",
-            ["PT"] = "\U0001F1F5\U0001F1F9", ["GB"] = "\U0001F1EC\U0001F1E7", ["US"] = "\U0001F1FA\U0001F1F8",
-            ["CN"] = "\U0001F1E8\U0001F1F3", ["KR"] = "\U0001F1F0\U0001F1F7", ["NL"] = "\U0001F1F3\U0001F1F1",
-            ["PL"] = "\U0001F1F5\U0001F1F1", ["AT"] = "\U0001F1E6\U0001F1F9", ["CH"] = "\U0001F1E8\U0001F1ED"
+            ["SV"] = "SE", ["JA"] = "JP", ["KO"] = "KR", ["EN"] = "GB",
+            ["DA"] = "DK", ["ZH"] = "CN", ["HI"] = "IN", ["UK"] = "UA",
+            ["VI"] = "VN", ["EL"] = "GR", ["CS"] = "CZ", ["HE"] = "IL",
+            ["CA"] = "ES", ["EU"] = "ES", ["GL"] = "ES", ["NB"] = "NO",
+            ["NN"] = "NO", ["SR"] = "RS", ["HR"] = "HR", ["BS"] = "BA",
+            ["SL"] = "SI", ["SK"] = "SK", ["ET"] = "EE", ["LV"] = "LV",
+            ["LT"] = "LT", ["MS"] = "MY", ["TH"] = "TH", ["ID"] = "ID",
+            ["FA"] = "IR", ["BG"] = "BG", ["RO"] = "RO", ["HU"] = "HU",
+            ["FI"] = "FI", ["AR"] = "SA"
         };
-        return flagMap.GetValueOrDefault(region, "\U0001F310");
+        var country = langToCountry.GetValueOrDefault(key, key);
+        return CountryToFlag(country);
+    }
+
+    private static string CountryToFlag(string countryCode)
+    {
+        if (countryCode.Length != 2) return "\U0001F310";
+        var first = char.ConvertFromUtf32(0x1F1E6 + (countryCode[0] - 'A'));
+        var second = char.ConvertFromUtf32(0x1F1E6 + (countryCode[1] - 'A'));
+        return first + second;
     }
 }
