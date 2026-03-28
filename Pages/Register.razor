@@ -4,49 +4,78 @@
 
 <PageTitle>Register - Klacks Marketplace</PageTitle>
 
-<div class="auth-container">
-    <div class="auth-card">
-        <h2><i class="fas fa-user-plus"></i> Register</h2>
+<div class="min-h-[80vh] flex items-center justify-center bg-surface px-6 py-16">
+    <div class="w-full max-w-md">
+        <div class="bg-surface-container-lowest rounded-2xl p-8 shadow-[0_20px_50px_rgba(27,27,29,0.06)]">
+            <h2 class="text-2xl font-black tracking-tight mb-2">Create an account</h2>
+            <p class="text-on-surface-variant mb-8">Join the Klacks Marketplace community</p>
 
-        @if (!string.IsNullOrWhiteSpace(_errorMessage))
-        {
-            <div class="alert alert-danger">@_errorMessage</div>
-        }
+            @if (!string.IsNullOrWhiteSpace(_errorMessage))
+            {
+                <div class="bg-error-container text-on-error-container rounded-lg p-4 mb-6 text-sm">@_errorMessage</div>
+            }
 
-        @if (!string.IsNullOrWhiteSpace(_successMessage))
-        {
-            <div class="alert alert-success">@_successMessage</div>
-        }
+            @if (!string.IsNullOrWhiteSpace(_successMessage))
+            {
+                <div class="bg-tertiary-fixed text-on-tertiary-fixed-variant rounded-lg p-4 mb-6 text-sm">@_successMessage</div>
+            }
 
-        <EditForm Model="@_model" OnValidSubmit="HandleRegister">
-            <div class="mb-3">
-                <label class="form-label">Display Name</label>
-                <InputText class="form-control" @bind-Value="_model.DisplayName" placeholder="Your name" />
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Email</label>
-                <InputText class="form-control" @bind-Value="_model.Email" placeholder="your@email.com" />
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Password (min. @AppConstants.MinPasswordLength characters)</label>
-                <InputText type="password" class="form-control" @bind-Value="_model.Password" placeholder="Password" />
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Confirm Password</label>
-                <InputText type="password" class="form-control" @bind-Value="_model.ConfirmPassword" placeholder="Confirm password" />
-            </div>
-            <button type="submit" class="btn btn-primary w-100" disabled="@_isLoading">
-                @if (_isLoading)
-                {
-                    <span class="spinner-border spinner-border-sm"></span>
-                }
-                Register
-            </button>
-        </EditForm>
+            <EditForm Model="@_model" OnValidSubmit="HandleRegister">
+                <div class="mb-5">
+                    <label class="block text-sm font-semibold text-on-surface mb-2">Display Name</label>
+                    <div class="relative">
+                        <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">person</span>
+                        <InputText class="w-full pl-11 pr-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all"
+                                   @bind-Value="_model.DisplayName" placeholder="Your name" />
+                    </div>
+                </div>
+                <div class="mb-5">
+                    <label class="block text-sm font-semibold text-on-surface mb-2">Email address</label>
+                    <div class="relative">
+                        <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">mail</span>
+                        <InputText class="w-full pl-11 pr-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all"
+                                   @bind-Value="_model.Email" placeholder="your@email.com" />
+                    </div>
+                </div>
+                <div class="mb-5">
+                    <label class="block text-sm font-semibold text-on-surface mb-2">Password (min. @AppConstants.MinPasswordLength characters)</label>
+                    <div class="relative">
+                        <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">lock</span>
+                        <InputText type="password" class="w-full pl-11 pr-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all"
+                                   @bind-Value="_model.Password" placeholder="Create a password" />
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-sm font-semibold text-on-surface mb-2">Confirm Password</label>
+                    <div class="relative">
+                        <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">lock</span>
+                        <InputText type="password" class="w-full pl-11 pr-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all"
+                                   @bind-Value="_model.ConfirmPassword" placeholder="Confirm your password" />
+                    </div>
+                </div>
+                <button type="submit"
+                        class="w-full py-3 bg-secondary text-on-secondary rounded-lg font-bold text-lg hover:opacity-90 active:scale-[0.98] transition-all disabled:opacity-50 flex items-center justify-center gap-2"
+                        disabled="@_isLoading">
+                    @if (_isLoading)
+                    {
+                        <div class="animate-spin w-5 h-5 border-2 border-white border-t-transparent rounded-full"></div>
+                    }
+                    Create Account
+                </button>
+            </EditForm>
 
-        <p class="text-center mt-3">
-            Already have an account? <a href="/login">Login</a>
-        </p>
+            <p class="text-center mt-6 text-sm text-on-surface-variant">
+                Already have an account?
+                <a href="/login" class="text-secondary font-semibold hover:underline no-underline">Sign in</a>
+            </p>
+        </div>
+
+        <div class="text-center mt-6">
+            <p class="text-xs text-on-surface-variant flex items-center justify-center gap-1">
+                <span class="material-symbols-outlined text-[16px]">lock</span>
+                Your data is encrypted and secure
+            </p>
+        </div>
     </div>
 </div>
 
@@ -83,7 +112,7 @@
             }
 
             await AuthService.RegisterAsync(_model.Email, _model.Password, _model.DisplayName);
-            _successMessage = "Registration successful! You can now login.";
+            _successMessage = "Registration successful! You can now sign in.";
             _model = new();
         }
         catch (Exception ex)

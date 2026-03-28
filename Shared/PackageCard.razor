@@ -1,23 +1,29 @@
 @inject NavigationManager Navigation
 
-<div class="package-card" @onclick="NavigateToPackage">
-    <div class="package-card-header">
-        <h3 class="package-card-title">@Package.DisplayName</h3>
-        <span class="package-card-code">@Package.Code</span>
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/30 transition-all cursor-pointer hover:shadow-[0_20px_50px_rgba(27,27,29,0.06)] hover:-translate-y-0.5"
+     @onclick="NavigateToPackage">
+    <div class="flex justify-between items-start mb-6">
+        <span class="text-4xl">@GetFlagEmoji(Package.Code)</span>
+        <span class="px-2 py-1 bg-surface-container text-xs font-bold rounded uppercase tracking-wider text-on-surface-variant">v@(Package.Version)</span>
     </div>
-    <div class="package-card-author">
-        <i class="fas fa-user"></i> @Package.Author.DisplayName
-    </div>
-    <p class="package-card-description">@Package.Description</p>
-
-    <CoverageBar Coverage="@Package.Coverage" />
-
-    <div class="package-card-footer">
-        <div class="package-card-stats">
-            <span><i class="fas fa-download"></i> @Package.Downloads</span>
-            <span><i class="fas fa-language"></i> @Package.TranslationCount keys</span>
+    <h3 class="text-xl font-bold mb-1">@Package.DisplayName</h3>
+    <p class="text-sm text-on-surface-variant mb-6">by @Package.Author.DisplayName</p>
+    <div class="space-y-2 mb-6">
+        <div class="flex justify-between text-xs font-bold">
+            <span>Coverage</span>
+            <span class="text-on-tertiary-container">@(Package.Coverage)%</span>
         </div>
-        <span>v@(Package.Version)</span>
+        <div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+            <div class="bg-gradient-to-r from-tertiary-fixed-dim to-on-tertiary-container h-full" style="width: @(Package.Coverage)%"></div>
+        </div>
+    </div>
+    <div class="flex items-center gap-4 text-sm text-on-surface-variant">
+        <span class="flex items-center gap-1">
+            <span class="material-symbols-outlined text-[18px]">download</span> @FormatNumber(Package.Downloads)
+        </span>
+        <span class="flex items-center gap-1">
+            <span class="material-symbols-outlined text-[18px]">translate</span> @FormatNumber(Package.TranslationCount)
+        </span>
     </div>
 </div>
 
@@ -28,5 +34,25 @@
     private void NavigateToPackage()
     {
         Navigation.NavigateTo($"/package/{Package.Code}");
+    }
+
+    private static string FormatNumber(int number) =>
+        number >= 1000 ? $"{number / 1000.0:F1}k" : number.ToString();
+
+    private static string GetFlagEmoji(string code)
+    {
+        var region = code.Length >= 5 ? code[3..5].ToUpperInvariant() : code[..2].ToUpperInvariant();
+        var flagMap = new Dictionary<string, string>
+        {
+            ["DE"] = "\U0001F1E9\U0001F1EA", ["FR"] = "\U0001F1EB\U0001F1F7", ["ES"] = "\U0001F1EA\U0001F1F8",
+            ["IT"] = "\U0001F1EE\U0001F1F9", ["JP"] = "\U0001F1EF\U0001F1F5", ["BR"] = "\U0001F1E7\U0001F1F7",
+            ["PT"] = "\U0001F1F5\U0001F1F9", ["GB"] = "\U0001F1EC\U0001F1E7", ["US"] = "\U0001F1FA\U0001F1F8",
+            ["CN"] = "\U0001F1E8\U0001F1F3", ["KR"] = "\U0001F1F0\U0001F1F7", ["NL"] = "\U0001F1F3\U0001F1F1",
+            ["PL"] = "\U0001F1F5\U0001F1F1", ["RU"] = "\U0001F1F7\U0001F1FA", ["TR"] = "\U0001F1F9\U0001F1F7",
+            ["AR"] = "\U0001F1E6\U0001F1F7", ["SE"] = "\U0001F1F8\U0001F1EA", ["NO"] = "\U0001F1F3\U0001F1F4",
+            ["DK"] = "\U0001F1E9\U0001F1F0", ["FI"] = "\U0001F1EB\U0001F1EE", ["CZ"] = "\U0001F1E8\U0001F1FF",
+            ["AT"] = "\U0001F1E6\U0001F1F9", ["CH"] = "\U0001F1E8\U0001F1ED"
+        };
+        return flagMap.GetValueOrDefault(region, "\U0001F310");
     }
 }

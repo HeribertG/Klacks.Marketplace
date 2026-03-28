@@ -5,31 +5,33 @@
 
 <PageTitle>My Packages - Klacks Marketplace</PageTitle>
 
-<div class="detail-container">
-    <h1><i class="fas fa-box"></i> My Packages</h1>
+<div class="max-w-5xl mx-auto px-6 py-8">
+    <h1 class="text-3xl font-black tracking-tight mb-8">
+        <span class="material-symbols-outlined text-3xl mr-2 align-middle">inventory_2</span> My Packages
+    </h1>
 
     @if (!_isAuthenticated)
     {
-        <div class="alert alert-warning">
-            Please <a href="/login">login</a> to view your packages.
+        <div class="bg-secondary-fixed text-on-secondary-fixed-variant rounded-xl px-6 py-4">
+            Please <a href="/login" class="text-secondary hover:underline no-underline font-medium">login</a> to view your packages.
         </div>
     }
     else if (_isLoading)
     {
-        <div class="text-center py-5">
-            <div class="spinner-border text-primary" role="status"></div>
+        <div class="py-16 text-center">
+            <div class="animate-spin inline-block w-8 h-8 border-4 border-secondary border-t-transparent rounded-full"></div>
         </div>
     }
     else
     {
-        <div class="d-flex gap-2 mb-4">
-            <button class="btn @(_activeTab == "packages" ? "btn-primary" : "btn-outline-primary")"
+        <div class="flex gap-3 mb-8">
+            <button class="px-6 py-2.5 rounded-full font-bold transition-all @(_activeTab == "packages" ? "bg-secondary text-on-secondary" : "bg-surface-container text-on-surface-variant hover:bg-surface-container-high")"
                     @onclick='() => _activeTab = "packages"'>
-                <i class="fas fa-globe"></i> Language Packs (@_packages.Count)
+                <span class="material-symbols-outlined text-[18px] mr-1">language</span> Language Packs (@_packages.Count)
             </button>
-            <button class="btn @(_activeTab == "plugins" ? "btn-primary" : "btn-outline-primary")"
+            <button class="px-6 py-2.5 rounded-full font-bold transition-all @(_activeTab == "plugins" ? "bg-secondary text-on-secondary" : "bg-surface-container text-on-surface-variant hover:bg-surface-container-high")"
                     @onclick='() => _activeTab = "plugins"'>
-                <i class="fas fa-puzzle-piece"></i> Feature Plugins (@_plugins.Count)
+                <span class="material-symbols-outlined text-[18px] mr-1">extension</span> Feature Plugins (@_plugins.Count)
             </button>
         </div>
 
@@ -37,39 +39,39 @@
         {
             @if (_packages.Count == 0)
             {
-                <div class="empty-state">
-                    <i class="fas fa-box-open d-block"></i>
-                    <h3>No language packs yet</h3>
-                    <p>You haven't uploaded any language packs yet.</p>
-                    <a href="/upload" class="btn btn-primary mt-3">
-                        <i class="fas fa-upload"></i> Upload your first package
+                <div class="py-16 text-center">
+                    <span class="material-symbols-outlined text-6xl text-on-surface-variant mb-4 block">package_2</span>
+                    <h3 class="text-xl font-bold mb-2">No language packs yet</h3>
+                    <p class="text-on-surface-variant mb-6">You haven't uploaded any language packs yet.</p>
+                    <a href="/upload" class="px-6 py-3 bg-secondary text-on-secondary rounded-lg font-semibold no-underline hover:opacity-90 transition-all">
+                        <span class="material-symbols-outlined text-[18px] mr-1 align-middle">upload</span> Upload your first package
                     </a>
                 </div>
             }
             else
             {
-                <div class="table-responsive">
-                    <table class="table table-dark-custom">
+                <div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
+                    <table class="w-full text-sm">
                         <thead>
-                            <tr>
-                                <th>Package</th>
-                                <th>Code</th>
-                                <th>Version</th>
-                                <th>Coverage</th>
-                                <th>Downloads</th>
-                                <th>Status</th>
+                            <tr class="bg-surface-container-low text-on-surface-variant text-xs uppercase tracking-wider">
+                                <th class="px-6 py-4 text-left font-bold">Package</th>
+                                <th class="px-6 py-4 text-left font-bold">Code</th>
+                                <th class="px-6 py-4 text-left font-bold">Version</th>
+                                <th class="px-6 py-4 text-left font-bold">Coverage</th>
+                                <th class="px-6 py-4 text-left font-bold">Downloads</th>
+                                <th class="px-6 py-4 text-left font-bold">Status</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="divide-y divide-outline-variant/20">
                             @foreach (var pkg in _packages)
                             {
-                                <tr>
-                                    <td><a href="/package/@pkg.Code">@pkg.DisplayName</a></td>
-                                    <td><code>@pkg.Code</code></td>
-                                    <td>@pkg.Version</td>
-                                    <td>@pkg.Coverage.ToString("F0")%</td>
-                                    <td>@pkg.Downloads</td>
-                                    <td><StatusBadge Status="@pkg.Status" /></td>
+                                <tr class="hover:bg-surface-container-low/50 transition-colors">
+                                    <td class="px-6 py-4"><a href="/package/@pkg.Code" class="text-secondary hover:underline no-underline font-medium">@pkg.DisplayName</a></td>
+                                    <td class="px-6 py-4"><code class="text-xs bg-surface-container-low px-2 py-1 rounded">@pkg.Code</code></td>
+                                    <td class="px-6 py-4">@pkg.Version</td>
+                                    <td class="px-6 py-4">@pkg.Coverage.ToString("F0")%</td>
+                                    <td class="px-6 py-4">@pkg.Downloads</td>
+                                    <td class="px-6 py-4"><StatusBadge Status="@pkg.Status" /></td>
                                 </tr>
                             }
                         </tbody>
@@ -81,37 +83,37 @@
         {
             @if (_plugins.Count == 0)
             {
-                <div class="empty-state">
-                    <i class="fas fa-puzzle-piece d-block"></i>
-                    <h3>No feature plugins yet</h3>
-                    <p>You haven't uploaded any feature plugins yet.</p>
-                    <a href="/upload-plugin" class="btn btn-primary mt-3">
-                        <i class="fas fa-upload"></i> Upload your first plugin
+                <div class="py-16 text-center">
+                    <span class="material-symbols-outlined text-6xl text-on-surface-variant mb-4 block">extension</span>
+                    <h3 class="text-xl font-bold mb-2">No feature plugins yet</h3>
+                    <p class="text-on-surface-variant mb-6">You haven't uploaded any feature plugins yet.</p>
+                    <a href="/upload-plugin" class="px-6 py-3 bg-secondary text-on-secondary rounded-lg font-semibold no-underline hover:opacity-90 transition-all">
+                        <span class="material-symbols-outlined text-[18px] mr-1 align-middle">upload</span> Upload your first plugin
                     </a>
                 </div>
             }
             else
             {
-                <div class="table-responsive">
-                    <table class="table table-dark-custom">
+                <div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
+                    <table class="w-full text-sm">
                         <thead>
-                            <tr>
-                                <th>Plugin</th>
-                                <th>Category</th>
-                                <th>Version</th>
-                                <th>Downloads</th>
-                                <th>Status</th>
+                            <tr class="bg-surface-container-low text-on-surface-variant text-xs uppercase tracking-wider">
+                                <th class="px-6 py-4 text-left font-bold">Plugin</th>
+                                <th class="px-6 py-4 text-left font-bold">Category</th>
+                                <th class="px-6 py-4 text-left font-bold">Version</th>
+                                <th class="px-6 py-4 text-left font-bold">Downloads</th>
+                                <th class="px-6 py-4 text-left font-bold">Status</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="divide-y divide-outline-variant/20">
                             @foreach (var plugin in _plugins)
                             {
-                                <tr>
-                                    <td><a href="/plugin/@plugin.Name">@plugin.DisplayName</a></td>
-                                    <td><CategoryBadge Category="@plugin.Category" /></td>
-                                    <td>@plugin.Version</td>
-                                    <td>@plugin.Downloads</td>
-                                    <td><StatusBadge Status="@plugin.Status" /></td>
+                                <tr class="hover:bg-surface-container-low/50 transition-colors">
+                                    <td class="px-6 py-4"><a href="/plugin/@plugin.Name" class="text-secondary hover:underline no-underline font-medium">@plugin.DisplayName</a></td>
+                                    <td class="px-6 py-4"><CategoryBadge Category="@plugin.Category" /></td>
+                                    <td class="px-6 py-4">@plugin.Version</td>
+                                    <td class="px-6 py-4">@plugin.Downloads</td>
+                                    <td class="px-6 py-4"><StatusBadge Status="@plugin.Status" /></td>
                                 </tr>
                             }
                         </tbody>

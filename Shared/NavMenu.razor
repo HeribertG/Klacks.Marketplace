@@ -1,48 +1,41 @@
 @inject IHttpContextAccessor HttpContextAccessor
 @inject NavigationManager Navigation
 
-<nav class="marketplace-nav">
-    <div class="container-fluid px-4">
-        <div class="d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center gap-3">
-                <a class="navbar-brand" href="/">
-                    <i class="fas fa-store"></i> Klacks Marketplace
+<nav class="sticky top-0 w-full z-50 bg-white/70 backdrop-blur-md shadow-sm font-sans antialiased tracking-tight text-sm font-medium">
+    <div class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
+        <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">deployed_code</span>
+            <a href="/" class="text-xl font-bold tracking-tighter text-slate-950 no-underline">Klacks Marketplace</a>
+        </div>
+        <div class="hidden md:flex items-center gap-8">
+            <a class="text-secondary font-semibold border-b-2 border-secondary py-1 transition-all no-underline" href="/">Browse</a>
+        </div>
+        <div class="flex items-center gap-4">
+            @if (_isAuthenticated)
+            {
+                <a class="text-slate-600 hover:text-slate-900 transition-colors font-medium no-underline flex items-center gap-1" href="/upload">
+                    <span class="material-symbols-outlined text-[18px]">language</span> Upload Pack
                 </a>
-                <a class="nav-link" href="/">Browse</a>
-            </div>
-            <div class="d-flex align-items-center gap-2">
-                @if (_isAuthenticated)
+                <a class="text-slate-600 hover:text-slate-900 transition-colors font-medium no-underline flex items-center gap-1" href="/upload-plugin">
+                    <span class="material-symbols-outlined text-[18px]">extension</span> Upload Plugin
+                </a>
+                <a class="text-slate-600 hover:text-slate-900 transition-colors font-medium no-underline flex items-center gap-1" href="/my-packages">
+                    <span class="material-symbols-outlined text-[18px]">inventory_2</span> My Packages
+                </a>
+                @if (_isAdmin)
                 {
-                    <a class="nav-link" href="/upload">
-                        <i class="fas fa-globe"></i> Upload Pack
-                    </a>
-                    <a class="nav-link" href="/upload-plugin">
-                        <i class="fas fa-puzzle-piece"></i> Upload Plugin
-                    </a>
-                    <a class="nav-link" href="/my-packages">
-                        <i class="fas fa-box"></i> My Packages
-                    </a>
-                    @if (_isAdmin)
-                    {
-                        <a class="nav-link" href="/admin">
-                            <i class="fas fa-shield-alt"></i> Admin
-                        </a>
-                    }
-                    <span class="nav-link text-muted">@_displayName</span>
-                    <a class="nav-link" href="/auth/logout">
-                        <i class="fas fa-sign-out-alt"></i> Logout
+                    <a class="text-slate-600 hover:text-slate-900 transition-colors font-medium no-underline flex items-center gap-1" href="/admin">
+                        <span class="material-symbols-outlined text-[18px]">shield</span> Admin
                     </a>
                 }
-                else
-                {
-                    <a class="nav-link" href="/login">
-                        <i class="fas fa-sign-in-alt"></i> Login
-                    </a>
-                    <a class="nav-link" href="/register">
-                        <i class="fas fa-user-plus"></i> Register
-                    </a>
-                }
-            </div>
+                <span class="text-on-surface-variant font-medium">@_displayName</span>
+                <a class="px-4 py-2 text-slate-600 hover:text-slate-900 transition-colors font-medium no-underline" href="/auth/logout">Sign Out</a>
+            }
+            else
+            {
+                <a class="px-4 py-2 text-slate-600 hover:text-slate-900 transition-colors font-medium no-underline" href="/login">Sign In</a>
+                <a class="px-5 py-2 bg-secondary text-on-secondary rounded-lg font-semibold hover:opacity-90 active:scale-[0.98] transition-all no-underline" href="/register">Register</a>
+            }
         </div>
     </div>
 </nav>

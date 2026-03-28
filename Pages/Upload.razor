@@ -6,134 +6,136 @@
 
 <PageTitle>Upload Package - Klacks Marketplace</PageTitle>
 
-<div class="detail-container">
-    <h1><i class="fas fa-upload"></i> Upload Language Pack</h1>
-    <p class="text-muted">Share your language pack with the community</p>
+<div class="max-w-4xl mx-auto px-6 py-8">
+    <h1 class="text-3xl font-black tracking-tight mb-2">
+        <span class="material-symbols-outlined text-[32px] align-middle mr-1">upload</span> Upload Language Pack
+    </h1>
+    <p class="text-on-surface-variant mb-8">Share your language pack with the community</p>
 
     @if (!_isAuthenticated)
     {
-        <div class="alert alert-warning">
-            Please <a href="/login">login</a> to upload packages.
+        <div class="bg-secondary-fixed text-on-secondary-fixed-variant rounded-lg p-4 mb-6 text-sm">
+            Please <a href="/login" class="underline font-semibold">login</a> to upload packages.
         </div>
     }
     else
     {
         @if (!string.IsNullOrWhiteSpace(_errorMessage))
         {
-            <div class="alert alert-danger">@_errorMessage</div>
+            <div class="bg-error-container text-on-error-container rounded-lg p-4 mb-6 text-sm">@_errorMessage</div>
         }
 
         @if (!string.IsNullOrWhiteSpace(_successMessage))
         {
-            <div class="alert alert-success">@_successMessage</div>
+            <div class="bg-tertiary-fixed text-on-tertiary-fixed-variant rounded-lg p-4 mb-6 text-sm">@_successMessage</div>
         }
 
         <EditForm Model="@_model" OnValidSubmit="HandleUpload">
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <label class="form-label">Code (e.g. fr-FR)</label>
-                    <InputText class="form-control" @bind-Value="_model.Code" placeholder="xx-XX" />
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                    <label class="block text-sm font-semibold text-on-surface mb-2">Code (e.g. fr-FR)</label>
+                    <InputText class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all" @bind-Value="_model.Code" placeholder="xx-XX" />
                 </div>
-                <div class="col-md-6">
-                    <label class="form-label">Display Name</label>
-                    <InputText class="form-control" @bind-Value="_model.DisplayName" placeholder="e.g. French (France)" />
-                </div>
-            </div>
-
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <label class="form-label">Speech Locale</label>
-                    <InputText class="form-control" @bind-Value="_model.SpeechLocale" placeholder="e.g. fr-FR" />
-                </div>
-                <div class="col-md-6">
-                    <label class="form-label">Version</label>
-                    <InputText class="form-control" @bind-Value="_model.Version" placeholder="1.0.0" />
+                <div>
+                    <label class="block text-sm font-semibold text-on-surface mb-2">Display Name</label>
+                    <InputText class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all" @bind-Value="_model.DisplayName" placeholder="e.g. French (France)" />
                 </div>
             </div>
 
-            <div class="mb-3">
-                <label class="form-label">Description</label>
-                <InputTextArea class="form-control" @bind-Value="_model.Description" rows="3"
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                    <label class="block text-sm font-semibold text-on-surface mb-2">Speech Locale</label>
+                    <InputText class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all" @bind-Value="_model.SpeechLocale" placeholder="e.g. fr-FR" />
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold text-on-surface mb-2">Version</label>
+                    <InputText class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all" @bind-Value="_model.Version" placeholder="1.0.0" />
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <label class="block text-sm font-semibold text-on-surface mb-2">Description</label>
+                <InputTextArea class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all" @bind-Value="_model.Description" rows="3"
                                placeholder="Describe your language pack..." />
             </div>
 
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <label class="form-label">Coverage (%)</label>
-                    <InputNumber class="form-control" @bind-Value="_model.Coverage" min="0" max="100" />
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                    <label class="block text-sm font-semibold text-on-surface mb-2">Coverage (%)</label>
+                    <InputNumber class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all" @bind-Value="_model.Coverage" min="0" max="100" />
                 </div>
-                <div class="col-md-6">
-                    <label class="form-label">Min Klacks Version</label>
-                    <InputText class="form-control" @bind-Value="_model.MinKlacksVersion" placeholder="1.0.0" />
+                <div>
+                    <label class="block text-sm font-semibold text-on-surface mb-2">Min Klacks Version</label>
+                    <InputText class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all" @bind-Value="_model.MinKlacksVersion" placeholder="1.0.0" />
                 </div>
             </div>
 
-            <div class="upload-zone mb-3">
-                <i class="fas fa-file-code d-block"></i>
-                <p><strong>manifest.json</strong></p>
+            <div class="border-2 border-dashed border-outline-variant/50 rounded-xl p-8 text-center hover:border-secondary hover:bg-surface-container-low transition-all cursor-pointer mb-6">
+                <span class="material-symbols-outlined text-4xl text-on-surface-variant mb-2 block">description</span>
+                <p class="font-bold">manifest.json</p>
                 <InputFile OnChange="OnManifestSelected" accept=".json" />
                 @if (_manifestLoaded)
                 {
-                    <span class="text-success mt-2 d-block"><i class="fas fa-check"></i> Loaded</span>
+                    <span class="text-on-tertiary-container flex items-center justify-center gap-1 mt-2"><span class="material-symbols-outlined text-[18px]">check_circle</span> Loaded</span>
                 }
             </div>
 
-            <div class="upload-zone mb-3">
-                <i class="fas fa-language d-block"></i>
-                <p><strong>translations.json</strong></p>
+            <div class="border-2 border-dashed border-outline-variant/50 rounded-xl p-8 text-center hover:border-secondary hover:bg-surface-container-low transition-all cursor-pointer mb-6">
+                <span class="material-symbols-outlined text-4xl text-on-surface-variant mb-2 block">translate</span>
+                <p class="font-bold">translations.json</p>
                 <InputFile OnChange="OnTranslationsSelected" accept=".json" />
                 @if (_translationsLoaded)
                 {
-                    <span class="text-success mt-2 d-block"><i class="fas fa-check"></i> Loaded</span>
+                    <span class="text-on-tertiary-container flex items-center justify-center gap-1 mt-2"><span class="material-symbols-outlined text-[18px]">check_circle</span> Loaded</span>
                 }
             </div>
 
-            <div class="upload-zone mb-3">
-                <i class="fas fa-book d-block"></i>
-                <p><strong>docs.json</strong> <span class="text-muted">(optional)</span></p>
+            <div class="border-2 border-dashed border-outline-variant/50 rounded-xl p-8 text-center hover:border-secondary hover:bg-surface-container-low transition-all cursor-pointer mb-6">
+                <span class="material-symbols-outlined text-4xl text-on-surface-variant mb-2 block">menu_book</span>
+                <p class="font-bold">docs.json <span class="text-on-surface-variant text-sm">(optional)</span></p>
                 <InputFile OnChange="OnDocsSelected" accept=".json" />
                 @if (_docsLoaded)
                 {
-                    <span class="text-success mt-2 d-block"><i class="fas fa-check"></i> Loaded</span>
+                    <span class="text-on-tertiary-container flex items-center justify-center gap-1 mt-2"><span class="material-symbols-outlined text-[18px]">check_circle</span> Loaded</span>
                 }
             </div>
 
-            <div class="upload-zone mb-3">
-                <i class="fas fa-globe d-block"></i>
-                <p><strong>countries.json</strong> <span class="text-muted">(optional)</span></p>
+            <div class="border-2 border-dashed border-outline-variant/50 rounded-xl p-8 text-center hover:border-secondary hover:bg-surface-container-low transition-all cursor-pointer mb-6">
+                <span class="material-symbols-outlined text-4xl text-on-surface-variant mb-2 block">public</span>
+                <p class="font-bold">countries.json <span class="text-on-surface-variant text-sm">(optional)</span></p>
                 <InputFile OnChange="OnCountriesSelected" accept=".json" />
                 @if (_countriesLoaded)
                 {
-                    <span class="text-success mt-2 d-block"><i class="fas fa-check"></i> Loaded</span>
+                    <span class="text-on-tertiary-container flex items-center justify-center gap-1 mt-2"><span class="material-symbols-outlined text-[18px]">check_circle</span> Loaded</span>
                 }
             </div>
 
-            <div class="upload-zone mb-3">
-                <i class="fas fa-map-marker-alt d-block"></i>
-                <p><strong>states.json</strong> <span class="text-muted">(optional)</span></p>
+            <div class="border-2 border-dashed border-outline-variant/50 rounded-xl p-8 text-center hover:border-secondary hover:bg-surface-container-low transition-all cursor-pointer mb-6">
+                <span class="material-symbols-outlined text-4xl text-on-surface-variant mb-2 block">location_on</span>
+                <p class="font-bold">states.json <span class="text-on-surface-variant text-sm">(optional)</span></p>
                 <InputFile OnChange="OnStatesSelected" accept=".json" />
                 @if (_statesLoaded)
                 {
-                    <span class="text-success mt-2 d-block"><i class="fas fa-check"></i> Loaded</span>
+                    <span class="text-on-tertiary-container flex items-center justify-center gap-1 mt-2"><span class="material-symbols-outlined text-[18px]">check_circle</span> Loaded</span>
                 }
             </div>
 
-            <div class="upload-zone mb-3">
-                <i class="fas fa-calendar-alt d-block"></i>
-                <p><strong>calendar-rules.json</strong> <span class="text-muted">(optional)</span></p>
+            <div class="border-2 border-dashed border-outline-variant/50 rounded-xl p-8 text-center hover:border-secondary hover:bg-surface-container-low transition-all cursor-pointer mb-6">
+                <span class="material-symbols-outlined text-4xl text-on-surface-variant mb-2 block">calendar_month</span>
+                <p class="font-bold">calendar-rules.json <span class="text-on-surface-variant text-sm">(optional)</span></p>
                 <InputFile OnChange="OnCalendarRulesSelected" accept=".json" />
                 @if (_calendarRulesLoaded)
                 {
-                    <span class="text-success mt-2 d-block"><i class="fas fa-check"></i> Loaded</span>
+                    <span class="text-on-tertiary-container flex items-center justify-center gap-1 mt-2"><span class="material-symbols-outlined text-[18px]">check_circle</span> Loaded</span>
                 }
             </div>
 
-            <button type="submit" class="btn btn-primary" disabled="@(_isSubmitting || !_manifestLoaded || !_translationsLoaded)">
+            <button type="submit" class="px-8 py-3 bg-secondary text-on-secondary rounded-lg font-bold hover:opacity-90 active:scale-[0.98] transition-all disabled:opacity-50 flex items-center gap-2" disabled="@(_isSubmitting || !_manifestLoaded || !_translationsLoaded)">
                 @if (_isSubmitting)
                 {
-                    <span class="spinner-border spinner-border-sm"></span>
+                    <div class="animate-spin w-5 h-5 border-2 border-white border-t-transparent rounded-full"></div>
                 }
-                <i class="fas fa-paper-plane"></i> Submit for Review
+                <span class="material-symbols-outlined text-[20px]">send</span> Submit for Review
             </button>
         </EditForm>
     }

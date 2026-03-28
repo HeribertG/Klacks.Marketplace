@@ -4,35 +4,38 @@
 
 <PageTitle>Klacks Marketplace</PageTitle>
 
-<div class="hero-section">
-    <h1><i class="fas fa-store"></i> Klacks Marketplace</h1>
-    <p>Discover and share language packs and feature plugins for your Klacks application</p>
-</div>
-
-<div class="d-flex justify-content-center mb-4">
-    <div class="btn-group" role="group">
-        <button class="btn @(_activeTab == Tab.LanguagePacks ? "btn-primary" : "btn-outline-primary")"
-                @onclick="() => SwitchTab(Tab.LanguagePacks)">
-            <i class="fas fa-globe"></i> Language Packs
-        </button>
-        <button class="btn @(_activeTab == Tab.FeaturePlugins ? "btn-primary" : "btn-outline-primary")"
-                @onclick="() => SwitchTab(Tab.FeaturePlugins)">
-            <i class="fas fa-puzzle-piece"></i> Feature Plugins
-        </button>
+<header class="w-full bg-primary-container text-white py-24 px-6 overflow-hidden relative">
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+        <h1 class="text-5xl md:text-7xl font-black tracking-tighter mb-6 leading-[1.1]">Extend Your Klacks Experience</h1>
+        <p class="text-lg md:text-xl text-on-primary-container mb-12 max-w-2xl mx-auto leading-relaxed">
+            Discover language packs and feature plugins crafted for professional workforce management and enterprise scalability.
+        </p>
+        <div class="relative max-w-2xl mx-auto mb-10">
+            <div class="absolute inset-y-0 left-5 flex items-center pointer-events-none">
+                <span class="material-symbols-outlined text-on-primary-container">search</span>
+            </div>
+            <input class="w-full pl-14 pr-6 py-5 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl focus:ring-2 focus:ring-secondary focus:bg-white focus:text-primary transition-all text-lg outline-none placeholder:text-on-primary-container/60"
+                   placeholder="@(_activeTab == Tab.LanguagePacks ? "Search language packs..." : "Search feature plugins...")"
+                   @bind="_searchText" @bind:event="oninput" @onkeyup="OnSearchKeyUp" type="text" />
+        </div>
+        <div class="flex items-center justify-center gap-4">
+            <button class="px-8 py-3 rounded-full font-bold transition-all @(_activeTab == Tab.LanguagePacks ? "bg-secondary text-on-secondary hover:scale-105" : "bg-white/5 border border-white/20 text-white hover:bg-white/10")"
+                    @onclick="() => SwitchTab(Tab.LanguagePacks)">
+                Language Packs
+            </button>
+            <button class="px-8 py-3 rounded-full font-bold transition-all @(_activeTab == Tab.FeaturePlugins ? "bg-secondary text-on-secondary hover:scale-105" : "bg-white/5 border border-white/20 text-white hover:bg-white/10")"
+                    @onclick="() => SwitchTab(Tab.FeaturePlugins)">
+                Feature Plugins
+            </button>
+        </div>
     </div>
-</div>
-
-<div class="search-container position-relative">
-    <i class="fas fa-search search-icon"></i>
-    <input type="text" class="form-control"
-           placeholder="@(_activeTab == Tab.LanguagePacks ? "Search language packs..." : "Search feature plugins...")"
-           @bind="_searchText" @bind:event="oninput" @onkeyup="OnSearchKeyUp" />
-</div>
+</header>
 
 @if (_activeTab == Tab.FeaturePlugins)
 {
-    <div class="d-flex justify-content-center mb-3">
-        <select class="form-control" style="max-width: 250px;" @onchange="OnCategoryChanged">
+    <div class="flex justify-center py-6 bg-surface">
+        <select class="px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all"
+                @onchange="OnCategoryChanged">
             <option value="">All categories</option>
             @foreach (var cat in PluginCategory.AllCategories)
             {
@@ -44,64 +47,112 @@
 
 @if (_isLoading)
 {
-    <div class="text-center py-5">
-        <div class="spinner-border text-primary" role="status"></div>
+    <div class="flex justify-center py-24 bg-surface">
+        <div class="animate-spin w-8 h-8 border-4 border-secondary border-t-transparent rounded-full"></div>
     </div>
 }
 else if (_activeTab == Tab.LanguagePacks && _packages.Count == 0)
 {
-    <div class="empty-state">
-        <i class="fas fa-box-open d-block"></i>
-        <h3>No packages found</h3>
-        <p>Be the first to upload a language pack!</p>
-    </div>
+    <section class="py-24 px-6 bg-surface text-center">
+        <span class="material-symbols-outlined text-6xl text-on-surface-variant mb-4 block">inventory_2</span>
+        <h3 class="text-2xl font-bold mb-2">No packages found</h3>
+        <p class="text-on-surface-variant">Be the first to upload a language pack!</p>
+    </section>
 }
 else if (_activeTab == Tab.FeaturePlugins && _plugins.Count == 0)
 {
-    <div class="empty-state">
-        <i class="fas fa-puzzle-piece d-block"></i>
-        <h3>No plugins found</h3>
-        <p>Be the first to upload a feature plugin!</p>
-    </div>
+    <section class="py-24 px-6 bg-surface text-center">
+        <span class="material-symbols-outlined text-6xl text-on-surface-variant mb-4 block">extension</span>
+        <h3 class="text-2xl font-bold mb-2">No plugins found</h3>
+        <p class="text-on-surface-variant">Be the first to upload a feature plugin!</p>
+    </section>
+}
+else if (_activeTab == Tab.LanguagePacks)
+{
+    <section class="py-24 px-6 bg-surface">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-end justify-between mb-12">
+                <div>
+                    <h2 class="text-3xl font-black tracking-tight text-on-surface mb-2">Language Packs</h2>
+                    <p class="text-on-surface-variant">Localization assets for international teams.</p>
+                </div>
+                <span class="text-on-surface-variant text-sm font-medium">@_totalCount results</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                @foreach (var package in _packages)
+                {
+                    <PackageCard Package="@package" />
+                }
+            </div>
+        </div>
+    </section>
 }
 else
 {
-    <div class="package-grid">
-        @if (_activeTab == Tab.LanguagePacks)
-        {
-            @foreach (var package in _packages)
-            {
-                <PackageCard Package="@package" />
-            }
-        }
-        else
-        {
-            @foreach (var plugin in _plugins)
-            {
-                <PluginCard Plugin="@plugin" />
-            }
-        }
-    </div>
-
-    @if (_totalPages > 1)
-    {
-        <div class="pagination-container">
-            <button class="page-btn" disabled="@(_currentPage <= 1)" @onclick="PreviousPage">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            @for (var i = 1; i <= _totalPages; i++)
-            {
-                var pageNum = i;
-                <button class="page-btn @(pageNum == _currentPage ? "active" : "")" @onclick="() => GoToPage(pageNum)">
-                    @pageNum
-                </button>
-            }
-            <button class="page-btn" disabled="@(_currentPage >= _totalPages)" @onclick="NextPage">
-                <i class="fas fa-chevron-right"></i>
-            </button>
+    <section class="py-24 px-6 bg-surface-container-low">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-end justify-between mb-12">
+                <h2 class="text-3xl font-black tracking-tight text-on-surface">Feature Plugins</h2>
+                <span class="text-on-surface-variant text-sm font-medium">@_totalCount results</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                @foreach (var plugin in _plugins)
+                {
+                    <PluginCard Plugin="@plugin" />
+                }
+            </div>
         </div>
-    }
+    </section>
 }
+
+@if (_totalPages > 1)
+{
+    <div class="py-16 flex items-center justify-center gap-4 bg-surface">
+        <button class="w-10 h-10 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors disabled:opacity-30"
+                disabled="@(_currentPage <= 1)" @onclick="PreviousPage">
+            <span class="material-symbols-outlined">chevron_left</span>
+        </button>
+        @for (var i = 1; i <= _totalPages; i++)
+        {
+            var pageNum = i;
+            <button class="w-10 h-10 rounded-lg flex items-center justify-center transition-colors @(pageNum == _currentPage ? "bg-secondary text-on-secondary font-bold" : "text-on-surface-variant hover:bg-surface-container")"
+                    @onclick="() => GoToPage(pageNum)">
+                @pageNum
+            </button>
+        }
+        <button class="w-10 h-10 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors disabled:opacity-30"
+                disabled="@(_currentPage >= _totalPages)" @onclick="NextPage">
+            <span class="material-symbols-outlined">chevron_right</span>
+        </button>
+    </div>
+}
+
+<footer class="bg-slate-950 text-slate-400 py-12 px-8">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="lg:col-span-2">
+            <div class="text-lg font-black text-white mb-4">Klacks Marketplace</div>
+            <p class="text-xs font-normal uppercase tracking-widest leading-relaxed max-w-sm mb-6">
+                Professional ecosystem for extending workforce management capabilities.
+            </p>
+            <div class="text-xs mt-auto">&copy; 2026 Klacks Marketplace. All rights reserved.</div>
+        </div>
+        <div>
+            <h4 class="text-white text-xs font-black uppercase tracking-widest mb-6">Resources</h4>
+            <ul class="space-y-4 list-none p-0">
+                <li><a class="text-xs uppercase tracking-widest text-slate-400 hover:text-emerald-400 transition-colors no-underline" href="#">Documentation</a></li>
+                <li><a class="text-xs uppercase tracking-widest text-slate-400 hover:text-emerald-400 transition-colors no-underline" href="#">API</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="text-white text-xs font-black uppercase tracking-widest mb-6">Legal</h4>
+            <ul class="space-y-4 list-none p-0">
+                <li><a class="text-xs uppercase tracking-widest text-slate-400 hover:text-emerald-400 transition-colors no-underline" href="#">Privacy Policy</a></li>
+                <li><a class="text-xs uppercase tracking-widest text-slate-400 hover:text-emerald-400 transition-colors no-underline" href="#">Terms of Service</a></li>
+                <li class="text-white font-bold text-[10px] tracking-[0.2em] mt-8">POWERED BY KLACKS</li>
+            </ul>
+        </div>
+    </div>
+</footer>
 
 @code {
     private enum Tab { LanguagePacks, FeaturePlugins }

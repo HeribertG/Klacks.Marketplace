@@ -7,60 +7,97 @@
 
 @if (_isLoading)
 {
-    <div class="text-center py-5">
-        <div class="spinner-border text-primary" role="status"></div>
+    <div class="flex justify-center py-24 bg-surface">
+        <div class="animate-spin w-8 h-8 border-4 border-secondary border-t-transparent rounded-full"></div>
     </div>
 }
 else if (_plugin is null)
 {
-    <div class="empty-state">
-        <i class="fas fa-exclamation-triangle d-block"></i>
-        <h3>Plugin not found</h3>
-        <p>The plugin you are looking for does not exist.</p>
-        <a href="/" class="btn btn-primary mt-3">Back to Browse</a>
-    </div>
+    <section class="py-24 px-6 bg-surface text-center">
+        <span class="material-symbols-outlined text-6xl text-on-surface-variant mb-4 block">warning</span>
+        <h3 class="text-2xl font-bold mb-2">Plugin not found</h3>
+        <p class="text-on-surface-variant mb-6">The plugin you are looking for does not exist.</p>
+        <a href="/" class="px-6 py-3 bg-secondary text-on-secondary rounded-lg font-semibold no-underline hover:opacity-90 transition-all">Back to Browse</a>
+    </section>
 }
 else
 {
-    <div class="detail-container">
-        <a href="/" class="btn btn-secondary btn-sm mb-3">
-            <i class="fas fa-arrow-left"></i> Back
-        </a>
+    <div class="max-w-5xl mx-auto px-6 py-8">
+        <nav class="flex items-center gap-2 text-sm text-on-surface-variant mb-8">
+            <a href="/" class="hover:text-secondary transition-colors no-underline text-on-surface-variant">Home</a>
+            <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+            <span>Feature Plugins</span>
+            <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+            <span class="text-on-surface font-medium">@_plugin.DisplayName</span>
+        </nav>
 
-        <div class="detail-header">
-            <div class="d-flex justify-content-between align-items-start">
-                <div>
-                    <h1>@_plugin.DisplayName</h1>
-                    <CategoryBadge Category="@_plugin.Category" />
+        <div class="bg-surface-container-low rounded-2xl p-8 mb-8">
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="flex-1">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 rounded-full flex items-center justify-center @GetIconBgClass()">
+                            <span class="material-symbols-outlined text-3xl @GetIconTextClass()">@GetCategoryIcon()</span>
+                        </div>
+                        <div>
+                            <h1 class="text-3xl font-black tracking-tight">@_plugin.DisplayName</h1>
+                            <CategoryBadge Category="@_plugin.Category" />
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3 mb-4 flex-wrap">
+                        <span class="text-on-surface-variant flex items-center gap-1">
+                            <span class="material-symbols-outlined text-[18px]">person</span> @_plugin.Author.DisplayName
+                        </span>
+                        <span class="px-2 py-1 bg-surface-container text-xs font-bold rounded uppercase tracking-wider text-on-surface-variant">v@(_plugin.Version)</span>
+                        <StatusBadge Status="@_plugin.Status" />
+                    </div>
+                    @if (!string.IsNullOrWhiteSpace(_plugin.Description))
+                    {
+                        <p class="text-on-surface leading-relaxed">@_plugin.Description</p>
+                    }
                 </div>
-                <StatusBadge Status="@_plugin.Status" />
-            </div>
 
-            <div class="detail-meta">
-                <span><i class="fas fa-user"></i> @_plugin.Author.DisplayName</span>
-                <span><i class="fas fa-tag"></i> v@_plugin.Version</span>
-                <span><i class="fas fa-download"></i> @_plugin.Downloads downloads</span>
-                <span><i class="fas fa-cogs"></i> @_skills.Length skills</span>
-                <span><i class="fas fa-code-branch"></i> min Klacks v@_plugin.MinKlacksVersion</span>
+                <div class="w-full md:w-72 flex flex-col gap-4">
+                    @if (_plugin.Status == PackageStatus.Published)
+                    {
+                        <button class="w-full px-6 py-4 bg-secondary text-on-secondary rounded-xl font-bold text-lg hover:opacity-90 active:scale-[0.98] transition-all flex items-center justify-center gap-2 disabled:opacity-50"
+                                @onclick="DownloadPlugin" disabled="@_isDownloading">
+                            @if (_isDownloading)
+                            {
+                                <div class="animate-spin w-5 h-5 border-2 border-white border-t-transparent rounded-full"></div>
+                            }
+                            else
+                            {
+                                <span class="material-symbols-outlined">download</span>
+                            }
+                            Download
+                        </button>
+                    }
+                    <div class="space-y-3 text-sm text-on-surface-variant">
+                        <div class="flex items-center justify-between">
+                            <span>Downloads</span>
+                            <span class="font-bold text-on-surface">@_plugin.Downloads</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>Skills</span>
+                            <span class="font-bold text-on-surface">@_skills.Length</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>Min Version</span>
+                            <span class="font-bold text-on-surface">v@(_plugin.MinKlacksVersion)</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        @if (!string.IsNullOrWhiteSpace(_plugin.Description))
-        {
-            <div class="mb-4">
-                <h4>Description</h4>
-                <p>@_plugin.Description</p>
-            </div>
-        }
-
         @if (_skills.Length > 0)
         {
-            <div class="mb-4">
-                <h4>Provided Skills</h4>
-                <div class="d-flex flex-wrap gap-2">
+            <div class="bg-surface-container-lowest rounded-2xl p-8 mb-8 shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
+                <h3 class="text-lg font-bold mb-4">Provided Skills</h3>
+                <div class="flex flex-wrap gap-2">
                     @foreach (var skill in _skills)
                     {
-                        <span class="status-badge status-published">@skill</span>
+                        <span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant text-xs font-bold rounded-full">@skill</span>
                     }
                 </div>
             </div>
@@ -68,12 +105,12 @@ else
 
         @if (_permissions.Length > 0)
         {
-            <div class="mb-4">
-                <h4>Required Permissions</h4>
-                <div class="d-flex flex-wrap gap-2">
+            <div class="bg-surface-container-lowest rounded-2xl p-8 mb-8 shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
+                <h3 class="text-lg font-bold mb-4">Required Permissions</h3>
+                <div class="flex flex-wrap gap-2">
                     @foreach (var perm in _permissions)
                     {
-                        <span class="status-badge status-pending">@perm</span>
+                        <span class="px-3 py-1 bg-secondary-fixed text-on-secondary-fixed-variant text-xs font-bold rounded-full">@perm</span>
                     }
                 </div>
             </div>
@@ -81,55 +118,42 @@ else
 
         @if (!string.IsNullOrWhiteSpace(_plugin.ReadmeMarkdown))
         {
-            <div class="mb-4">
-                <h4>README</h4>
-                <div class="p-3" style="background: rgba(255,255,255,0.05); border-radius: 8px;">
-                    <pre style="white-space: pre-wrap; margin: 0;">@_plugin.ReadmeMarkdown</pre>
-                </div>
+            <div class="bg-surface-container-lowest rounded-2xl p-8 mb-8 shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
+                <h3 class="text-lg font-bold mb-4">README</h3>
+                <pre class="whitespace-pre-wrap text-sm text-on-surface-variant leading-relaxed m-0">@_plugin.ReadmeMarkdown</pre>
             </div>
-        }
-
-        @if (_plugin.Status == PackageStatus.Published)
-        {
-            <button class="btn btn-primary mb-4" @onclick="DownloadPlugin" disabled="@_isDownloading">
-                @if (_isDownloading)
-                {
-                    <span class="spinner-border spinner-border-sm"></span>
-                }
-                else
-                {
-                    <i class="fas fa-download"></i>
-                }
-                Download Plugin
-            </button>
         }
 
         @if (_plugin.Versions.Count > 0)
         {
-            <h4>Version History</h4>
-            <ul class="version-list">
-                @foreach (var version in _plugin.Versions)
-                {
-                    <li class="version-item">
-                        <div>
-                            <strong>v@version.Version</strong>
-                            <span class="text-muted ms-2">@version.CreatedAt.ToString("yyyy-MM-dd")</span>
-                            @if (!string.IsNullOrWhiteSpace(version.ChangeLog))
-                            {
-                                <p class="text-muted mb-0 mt-1">@version.ChangeLog</p>
-                            }
+            <div class="mb-8">
+                <h3 class="text-lg font-bold mb-4">Version History</h3>
+                <div class="space-y-3">
+                    @foreach (var version in _plugin.Versions)
+                    {
+                        <div class="bg-surface-container-lowest rounded-xl p-5 flex items-start justify-between shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
+                            <div>
+                                <span class="font-bold">v@(version.Version)</span>
+                                <span class="text-on-surface-variant text-sm ml-3">@version.CreatedAt.ToString("MMMM d, yyyy")</span>
+                                @if (!string.IsNullOrWhiteSpace(version.ChangeLog))
+                                {
+                                    <p class="text-on-surface-variant text-sm mt-1 mb-0">@version.ChangeLog</p>
+                                }
+                            </div>
+                            <StatusBadge Status="@version.Status" />
                         </div>
-                        <StatusBadge Status="@version.Status" />
-                    </li>
-                }
-            </ul>
+                    }
+                </div>
+            </div>
         }
     </div>
-}
 
-@if (!string.IsNullOrWhiteSpace(_errorMessage))
-{
-    <div class="alert alert-danger mt-3">@_errorMessage</div>
+    @if (!string.IsNullOrWhiteSpace(_errorMessage))
+    {
+        <div class="max-w-5xl mx-auto px-6 mb-8">
+            <div class="bg-error-container text-on-error-container rounded-xl p-4">@_errorMessage</div>
+        </div>
+    }
 }
 
 @code {
@@ -157,18 +181,14 @@ else
         try
         {
             if (!string.IsNullOrWhiteSpace(_plugin.ProvidedSkillsJson))
-            {
                 _skills = System.Text.Json.JsonSerializer.Deserialize<string[]>(_plugin.ProvidedSkillsJson) ?? [];
-            }
         }
         catch { }
 
         try
         {
             if (!string.IsNullOrWhiteSpace(_plugin.RequiredPermissionsJson))
-            {
                 _permissions = System.Text.Json.JsonSerializer.Deserialize<string[]>(_plugin.RequiredPermissionsJson) ?? [];
-            }
         }
         catch { }
     }
@@ -191,4 +211,34 @@ else
             _isDownloading = false;
         }
     }
+
+    private string GetCategoryIcon() => _plugin?.Category?.ToLowerInvariant() switch
+    {
+        "communication" => "chat",
+        "erp" => "hub",
+        "accounting" => "account_balance",
+        "reporting" => "query_stats",
+        "integration" => "sync_alt",
+        _ => "extension"
+    };
+
+    private string GetIconBgClass() => _plugin?.Category?.ToLowerInvariant() switch
+    {
+        "communication" => "bg-blue-100",
+        "erp" => "bg-emerald-100",
+        "accounting" => "bg-amber-100",
+        "reporting" => "bg-purple-100",
+        "integration" => "bg-cyan-100",
+        _ => "bg-slate-100"
+    };
+
+    private string GetIconTextClass() => _plugin?.Category?.ToLowerInvariant() switch
+    {
+        "communication" => "text-secondary",
+        "erp" => "text-on-tertiary-container",
+        "accounting" => "text-amber-600",
+        "reporting" => "text-purple-600",
+        "integration" => "text-cyan-600",
+        _ => "text-slate-600"
+    };
 }

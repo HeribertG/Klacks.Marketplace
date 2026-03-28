@@ -1,32 +1,23 @@
 @inject NavigationManager Navigation
 
-<div class="package-card" @onclick="NavigateToPlugin">
-    <div class="package-card-header">
-        <h3 class="package-card-title">@Plugin.DisplayName</h3>
-        <span class="package-card-code">@Plugin.Category</span>
+<div class="bg-surface-container-lowest p-8 rounded-xl transition-all cursor-pointer flex flex-col h-full hover:shadow-[0_20px_50px_rgba(27,27,29,0.06)] hover:-translate-y-0.5"
+     @onclick="NavigateToPlugin">
+    <div class="w-16 h-16 rounded-full flex items-center justify-center mb-8 @GetIconBgClass()">
+        <span class="material-symbols-outlined text-3xl @GetIconTextClass()">@GetCategoryIcon()</span>
     </div>
-    <div class="package-card-author">
-        <i class="fas fa-user"></i> @Plugin.Author.DisplayName
+    <div class="flex items-center gap-3 mb-4 flex-wrap">
+        <h3 class="text-2xl font-bold">@Plugin.DisplayName</h3>
+        <span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant text-xs font-bold rounded-full uppercase">@Plugin.Category</span>
     </div>
-    <p class="package-card-description">@Plugin.Description</p>
-
-    <div class="d-flex gap-2 mb-2">
-        @foreach (var skill in GetSkills().Take(3))
-        {
-            <span class="status-badge status-published" style="font-size: 0.7rem;">@skill</span>
-        }
-        @if (GetSkills().Length > 3)
-        {
-            <span class="text-muted" style="font-size: 0.7rem;">+@(GetSkills().Length - 3) more</span>
-        }
-    </div>
-
-    <div class="package-card-footer">
-        <div class="package-card-stats">
-            <span><i class="fas fa-download"></i> @Plugin.Downloads</span>
-            <span><i class="fas fa-cogs"></i> @GetSkills().Length skills</span>
+    <p class="text-on-surface-variant mb-8 flex-grow line-clamp-2">@Plugin.Description</p>
+    <div class="flex items-center justify-between mt-auto pt-6 border-t border-outline-variant/20">
+        <div class="flex items-center gap-2 text-sm font-semibold">
+            <span class="material-symbols-outlined text-secondary">terminal</span>
+            @_skills.Length Skills
         </div>
-        <span>v@(Plugin.Version)</span>
+        <div class="text-sm text-on-surface-variant font-medium">
+            @FormatNumber(Plugin.Downloads) installs
+        </div>
     </div>
 </div>
 
@@ -44,7 +35,6 @@
     private string[] GetSkills()
     {
         if (_skills.Length > 0) return _skills;
-
         try
         {
             if (!string.IsNullOrWhiteSpace(Plugin.ProvidedSkillsJson))
@@ -53,7 +43,6 @@
             }
         }
         catch { }
-
         return [];
     }
 
@@ -61,4 +50,37 @@
     {
         Navigation.NavigateTo($"/plugin/{Plugin.Name}");
     }
+
+    private static string FormatNumber(int number) =>
+        number >= 1000 ? $"{number / 1000.0:F1}k" : number.ToString();
+
+    private string GetCategoryIcon() => Plugin.Category?.ToLowerInvariant() switch
+    {
+        "communication" => "chat",
+        "erp" => "hub",
+        "accounting" => "account_balance",
+        "reporting" => "query_stats",
+        "integration" => "sync_alt",
+        _ => "extension"
+    };
+
+    private string GetIconBgClass() => Plugin.Category?.ToLowerInvariant() switch
+    {
+        "communication" => "bg-blue-100",
+        "erp" => "bg-emerald-100",
+        "accounting" => "bg-amber-100",
+        "reporting" => "bg-purple-100",
+        "integration" => "bg-cyan-100",
+        _ => "bg-slate-100"
+    };
+
+    private string GetIconTextClass() => Plugin.Category?.ToLowerInvariant() switch
+    {
+        "communication" => "text-secondary",
+        "erp" => "text-on-tertiary-container",
+        "accounting" => "text-amber-600",
+        "reporting" => "text-purple-600",
+        "integration" => "text-cyan-600",
+        _ => "text-slate-600"
+    };
 }

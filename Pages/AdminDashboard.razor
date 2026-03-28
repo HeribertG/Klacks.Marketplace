@@ -5,76 +5,78 @@
 
 <PageTitle>Admin Dashboard - Klacks Marketplace</PageTitle>
 
-<div class="detail-container" style="max-width: 1000px;">
-    <h1><i class="fas fa-shield-alt"></i> Admin Dashboard</h1>
+<div class="max-w-5xl mx-auto px-6 py-8">
+    <h1 class="text-3xl font-black tracking-tight mb-8">
+        <span class="material-symbols-outlined text-3xl mr-2 align-middle">admin_panel_settings</span> Admin Dashboard
+    </h1>
 
     @if (!_isAdmin)
     {
-        <div class="alert alert-danger">Access denied. Admin privileges required.</div>
+        <div class="bg-error-container text-on-error-container rounded-xl px-6 py-4">Access denied. Admin privileges required.</div>
     }
     else
     {
         @if (!string.IsNullOrWhiteSpace(_message))
         {
-            <div class="alert alert-success">@_message</div>
+            <div class="bg-tertiary-fixed text-on-tertiary-fixed-variant rounded-xl px-6 py-4 mb-6">@_message</div>
         }
 
         @if (!string.IsNullOrWhiteSpace(_errorMessage))
         {
-            <div class="alert alert-danger">@_errorMessage</div>
+            <div class="bg-error-container text-on-error-container rounded-xl px-6 py-4 mb-6">@_errorMessage</div>
         }
 
-        <div class="admin-stats">
-            <div class="stat-card">
-                <div class="stat-number">@_pendingPackages.Count</div>
-                <div class="stat-label">Pending Packages</div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div class="bg-surface-container-lowest rounded-xl p-6 text-center shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
+                <div class="text-3xl font-black text-secondary">@_pendingPackages.Count</div>
+                <div class="text-xs text-on-surface-variant uppercase tracking-wider mt-1">Pending Packages</div>
             </div>
-            <div class="stat-card">
-                <div class="stat-number">@_pendingPlugins.Count</div>
-                <div class="stat-label">Pending Plugins</div>
+            <div class="bg-surface-container-lowest rounded-xl p-6 text-center shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
+                <div class="text-3xl font-black text-secondary">@_pendingPlugins.Count</div>
+                <div class="text-xs text-on-surface-variant uppercase tracking-wider mt-1">Pending Plugins</div>
             </div>
-            <div class="stat-card">
-                <div class="stat-number">@_users.Count</div>
-                <div class="stat-label">Users</div>
+            <div class="bg-surface-container-lowest rounded-xl p-6 text-center shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
+                <div class="text-3xl font-black text-secondary">@_users.Count</div>
+                <div class="text-xs text-on-surface-variant uppercase tracking-wider mt-1">Users</div>
             </div>
         </div>
 
-        <h3 class="mb-3">Pending Language Packages</h3>
+        <h3 class="text-xl font-bold mb-4">Pending Language Packages</h3>
         @if (_pendingPackages.Count == 0)
         {
-            <div class="alert alert-info">No packages pending review.</div>
+            <div class="bg-secondary-fixed text-on-secondary-fixed-variant rounded-xl px-6 py-4 mb-8">No packages pending review.</div>
         }
         else
         {
-            <div class="table-responsive mb-4">
-                <table class="table table-dark-custom">
+            <div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(27,27,29,0.04)] mb-8">
+                <table class="w-full text-sm">
                     <thead>
-                        <tr>
-                            <th>Package</th>
-                            <th>Author</th>
-                            <th>Code</th>
-                            <th>Coverage</th>
-                            <th>Docs</th>
-                            <th>Submitted</th>
-                            <th>Actions</th>
+                        <tr class="bg-surface-container-low text-on-surface-variant text-xs uppercase tracking-wider">
+                            <th class="px-6 py-4 text-left font-bold">Package</th>
+                            <th class="px-6 py-4 text-left font-bold">Author</th>
+                            <th class="px-6 py-4 text-left font-bold">Code</th>
+                            <th class="px-6 py-4 text-left font-bold">Coverage</th>
+                            <th class="px-6 py-4 text-left font-bold">Docs</th>
+                            <th class="px-6 py-4 text-left font-bold">Submitted</th>
+                            <th class="px-6 py-4 text-left font-bold">Actions</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="divide-y divide-outline-variant/20">
                         @foreach (var pkg in _pendingPackages)
                         {
-                            <tr>
-                                <td><a href="/package/@pkg.Code">@pkg.DisplayName</a></td>
-                                <td>@pkg.Author.DisplayName</td>
-                                <td><code>@pkg.Code</code></td>
-                                <td>@pkg.Coverage.ToString("F0")%</td>
-                                <td>@GetDocsCount(pkg)</td>
-                                <td>@pkg.CreatedAt.ToString("yyyy-MM-dd")</td>
-                                <td>
-                                    <button class="btn btn-outline-success btn-sm" @onclick="() => ApprovePackage(pkg.Id)">
-                                        <i class="fas fa-check"></i>
+                            <tr class="hover:bg-surface-container-low/50 transition-colors">
+                                <td class="px-6 py-4"><a href="/package/@pkg.Code" class="text-secondary hover:underline no-underline font-medium">@pkg.DisplayName</a></td>
+                                <td class="px-6 py-4">@pkg.Author.DisplayName</td>
+                                <td class="px-6 py-4"><code class="text-xs bg-surface-container-low px-2 py-1 rounded">@pkg.Code</code></td>
+                                <td class="px-6 py-4">@pkg.Coverage.ToString("F0")%</td>
+                                <td class="px-6 py-4">@GetDocsCount(pkg)</td>
+                                <td class="px-6 py-4">@pkg.CreatedAt.ToString("yyyy-MM-dd")</td>
+                                <td class="px-6 py-4">
+                                    <button class="px-3 py-1.5 bg-tertiary-fixed text-on-tertiary-fixed-variant rounded-lg text-xs font-bold hover:opacity-80 transition-all" @onclick="() => ApprovePackage(pkg.Id)">
+                                        <span class="material-symbols-outlined text-[16px]">check</span>
                                     </button>
-                                    <button class="btn btn-outline-danger btn-sm ms-1" @onclick="() => RejectPackage(pkg.Id)">
-                                        <i class="fas fa-times"></i>
+                                    <button class="px-3 py-1.5 bg-error-container text-on-error-container rounded-lg text-xs font-bold hover:opacity-80 transition-all ml-2" @onclick="() => RejectPackage(pkg.Id)">
+                                        <span class="material-symbols-outlined text-[16px]">close</span>
                                     </button>
                                 </td>
                             </tr>
@@ -84,40 +86,40 @@
             </div>
         }
 
-        <h3 class="mb-3">Pending Feature Plugins</h3>
+        <h3 class="text-xl font-bold mb-4">Pending Feature Plugins</h3>
         @if (_pendingPlugins.Count == 0)
         {
-            <div class="alert alert-info">No plugins pending review.</div>
+            <div class="bg-secondary-fixed text-on-secondary-fixed-variant rounded-xl px-6 py-4 mb-8">No plugins pending review.</div>
         }
         else
         {
-            <div class="table-responsive mb-4">
-                <table class="table table-dark-custom">
+            <div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(27,27,29,0.04)] mb-8">
+                <table class="w-full text-sm">
                     <thead>
-                        <tr>
-                            <th>Plugin</th>
-                            <th>Author</th>
-                            <th>Category</th>
-                            <th>Version</th>
-                            <th>Submitted</th>
-                            <th>Actions</th>
+                        <tr class="bg-surface-container-low text-on-surface-variant text-xs uppercase tracking-wider">
+                            <th class="px-6 py-4 text-left font-bold">Plugin</th>
+                            <th class="px-6 py-4 text-left font-bold">Author</th>
+                            <th class="px-6 py-4 text-left font-bold">Category</th>
+                            <th class="px-6 py-4 text-left font-bold">Version</th>
+                            <th class="px-6 py-4 text-left font-bold">Submitted</th>
+                            <th class="px-6 py-4 text-left font-bold">Actions</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="divide-y divide-outline-variant/20">
                         @foreach (var plugin in _pendingPlugins)
                         {
-                            <tr>
-                                <td><a href="/plugin/@plugin.Name">@plugin.DisplayName</a></td>
-                                <td>@plugin.Author.DisplayName</td>
-                                <td><CategoryBadge Category="@plugin.Category" /></td>
-                                <td>@plugin.Version</td>
-                                <td>@plugin.CreatedAt.ToString("yyyy-MM-dd")</td>
-                                <td>
-                                    <button class="btn btn-outline-success btn-sm" @onclick="() => ApprovePlugin(plugin.Id)">
-                                        <i class="fas fa-check"></i>
+                            <tr class="hover:bg-surface-container-low/50 transition-colors">
+                                <td class="px-6 py-4"><a href="/plugin/@plugin.Name" class="text-secondary hover:underline no-underline font-medium">@plugin.DisplayName</a></td>
+                                <td class="px-6 py-4">@plugin.Author.DisplayName</td>
+                                <td class="px-6 py-4"><CategoryBadge Category="@plugin.Category" /></td>
+                                <td class="px-6 py-4">@plugin.Version</td>
+                                <td class="px-6 py-4">@plugin.CreatedAt.ToString("yyyy-MM-dd")</td>
+                                <td class="px-6 py-4">
+                                    <button class="px-3 py-1.5 bg-tertiary-fixed text-on-tertiary-fixed-variant rounded-lg text-xs font-bold hover:opacity-80 transition-all" @onclick="() => ApprovePlugin(plugin.Id)">
+                                        <span class="material-symbols-outlined text-[16px]">check</span>
                                     </button>
-                                    <button class="btn btn-outline-danger btn-sm ms-1" @onclick="() => RejectPlugin(plugin.Id)">
-                                        <i class="fas fa-times"></i>
+                                    <button class="px-3 py-1.5 bg-error-container text-on-error-container rounded-lg text-xs font-bold hover:opacity-80 transition-all ml-2" @onclick="() => RejectPlugin(plugin.Id)">
+                                        <span class="material-symbols-outlined text-[16px]">close</span>
                                     </button>
                                 </td>
                             </tr>
@@ -127,33 +129,33 @@
             </div>
         }
 
-        <h3 class="mb-3">Users</h3>
-        <div class="table-responsive">
-            <table class="table table-dark-custom">
+        <h3 class="text-xl font-bold mb-4">Users</h3>
+        <div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
+            <table class="w-full text-sm">
                 <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Joined</th>
-                        <th>Admin</th>
-                        <th>Actions</th>
+                    <tr class="bg-surface-container-low text-on-surface-variant text-xs uppercase tracking-wider">
+                        <th class="px-6 py-4 text-left font-bold">Name</th>
+                        <th class="px-6 py-4 text-left font-bold">Email</th>
+                        <th class="px-6 py-4 text-left font-bold">Joined</th>
+                        <th class="px-6 py-4 text-left font-bold">Admin</th>
+                        <th class="px-6 py-4 text-left font-bold">Actions</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="divide-y divide-outline-variant/20">
                     @foreach (var user in _users)
                     {
-                        <tr>
-                            <td>@user.DisplayName</td>
-                            <td>@user.Email</td>
-                            <td>@user.CreatedAt.ToString("yyyy-MM-dd")</td>
-                            <td>
+                        <tr class="hover:bg-surface-container-low/50 transition-colors">
+                            <td class="px-6 py-4">@user.DisplayName</td>
+                            <td class="px-6 py-4">@user.Email</td>
+                            <td class="px-6 py-4">@user.CreatedAt.ToString("yyyy-MM-dd")</td>
+                            <td class="px-6 py-4">
                                 @if (user.IsAdmin)
                                 {
-                                    <span class="status-badge status-published">Admin</span>
+                                    <span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant rounded-full text-xs font-bold">Admin</span>
                                 }
                             </td>
-                            <td>
-                                <button class="btn btn-outline-primary btn-sm" @onclick="() => ToggleAdmin(user.Id)">
+                            <td class="px-6 py-4">
+                                <button class="px-3 py-1.5 bg-secondary text-on-secondary rounded-lg text-xs font-bold hover:opacity-80 transition-all" @onclick="() => ToggleAdmin(user.Id)">
                                     @(user.IsAdmin ? "Remove Admin" : "Make Admin")
                                 </button>
                             </td>

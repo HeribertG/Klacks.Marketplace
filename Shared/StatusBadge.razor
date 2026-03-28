@@ -1,16 +1,16 @@
-<span class="status-badge @GetStatusClass()">@GetStatusText()</span>
+<span class="px-3 py-1 text-xs font-bold rounded-full @GetStatusClasses()">@GetStatusText()</span>
 
 @code {
     [Parameter]
     public PackageStatus Status { get; set; }
 
-    private string GetStatusClass() => Status switch
+    private string GetStatusClasses() => Status switch
     {
-        PackageStatus.Published => "status-published",
-        PackageStatus.PendingReview => "status-pending",
-        PackageStatus.Rejected => "status-rejected",
-        PackageStatus.Draft => "status-draft",
-        _ => "status-draft"
+        PackageStatus.Published => "bg-tertiary-fixed text-on-tertiary-fixed-variant",
+        PackageStatus.PendingReview => "bg-secondary-fixed text-on-secondary-fixed-variant",
+        PackageStatus.Rejected => "bg-error-container text-on-error-container",
+        PackageStatus.Draft => "bg-surface-container-highest text-on-surface-variant",
+        _ => "bg-surface-container-highest text-on-surface-variant"
     };
 
     private string GetStatusText() => Status switch

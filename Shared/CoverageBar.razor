@@ -1,18 +1,18 @@
 <div>
-    <div class="coverage-bar">
-        <div class="coverage-bar-fill @GetCoverageClass()" style="width: @Coverage%"></div>
+    <div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+        <div class="h-full transition-all rounded-full @GetCoverageClasses()" style="width: @Coverage%"></div>
     </div>
-    <span class="coverage-text">@Coverage.ToString("F0")% coverage</span>
+    <span class="text-xs font-bold text-on-surface-variant mt-1 block">@Coverage.ToString("F0")% coverage</span>
 </div>
 
 @code {
     [Parameter]
     public double Coverage { get; set; }
 
-    private string GetCoverageClass()
+    private string GetCoverageClasses()
     {
-        if (Coverage >= 80) return "coverage-high";
-        if (Coverage >= 50) return "coverage-medium";
-        return "coverage-low";
+        if (Coverage >= 80) return "bg-gradient-to-r from-tertiary-fixed-dim to-on-tertiary-container";
+        if (Coverage >= 50) return "bg-gradient-to-r from-amber-400 to-amber-500";
+        return "bg-gradient-to-r from-red-400 to-red-500";
     }
 }

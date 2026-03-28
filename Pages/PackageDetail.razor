@@ -7,112 +7,166 @@
 
 @if (_isLoading)
 {
-    <div class="text-center py-5">
-        <div class="spinner-border text-primary" role="status"></div>
+    <div class="flex justify-center py-24 bg-surface">
+        <div class="animate-spin w-8 h-8 border-4 border-secondary border-t-transparent rounded-full"></div>
     </div>
 }
 else if (_package is null)
 {
-    <div class="empty-state">
-        <i class="fas fa-exclamation-triangle d-block"></i>
-        <h3>Package not found</h3>
-        <p>The package you are looking for does not exist.</p>
-        <a href="/" class="btn btn-primary mt-3">Back to Browse</a>
-    </div>
+    <section class="py-24 px-6 bg-surface text-center">
+        <span class="material-symbols-outlined text-6xl text-on-surface-variant mb-4 block">warning</span>
+        <h3 class="text-2xl font-bold mb-2">Package not found</h3>
+        <p class="text-on-surface-variant mb-6">The package you are looking for does not exist.</p>
+        <a href="/" class="px-6 py-3 bg-secondary text-on-secondary rounded-lg font-semibold no-underline hover:opacity-90 transition-all">Back to Browse</a>
+    </section>
 }
 else
 {
-    <div class="detail-container">
-        <a href="/" class="btn btn-secondary btn-sm mb-3">
-            <i class="fas fa-arrow-left"></i> Back
-        </a>
+    <div class="max-w-5xl mx-auto px-6 py-8">
+        <nav class="flex items-center gap-2 text-sm text-on-surface-variant mb-8">
+            <a href="/" class="hover:text-secondary transition-colors no-underline text-on-surface-variant">Home</a>
+            <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+            <span>Language Packs</span>
+            <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+            <span class="text-on-surface font-medium">@_package.DisplayName</span>
+        </nav>
 
-        <div class="detail-header">
-            <div class="d-flex justify-content-between align-items-start">
-                <div>
-                    <h1>@_package.DisplayName</h1>
-                    <span class="package-card-code">@_package.Code</span>
+        <div class="bg-surface-container-low rounded-2xl p-8 mb-8">
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="flex-1">
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="text-5xl">@GetFlagEmoji(_package.Code)</span>
+                        <div>
+                            <h1 class="text-3xl font-black tracking-tight">@_package.DisplayName</h1>
+                            <span class="text-on-surface-variant font-mono">@_package.Code</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3 mb-4 flex-wrap">
+                        <span class="text-on-surface-variant flex items-center gap-1">
+                            <span class="material-symbols-outlined text-[18px]">person</span> @_package.Author.DisplayName
+                        </span>
+                        <span class="px-2 py-1 bg-surface-container text-xs font-bold rounded uppercase tracking-wider text-on-surface-variant">v@(_package.Version)</span>
+                        <StatusBadge Status="@_package.Status" />
+                    </div>
+                    @if (!string.IsNullOrWhiteSpace(_package.Description))
+                    {
+                        <p class="text-on-surface leading-relaxed">@_package.Description</p>
+                    }
                 </div>
-                <StatusBadge Status="@_package.Status" />
-            </div>
 
-            <div class="detail-meta">
-                <span><i class="fas fa-user"></i> @_package.Author.DisplayName</span>
-                <span><i class="fas fa-tag"></i> v@_package.Version</span>
-                <span><i class="fas fa-download"></i> @_package.Downloads downloads</span>
-                <span><i class="fas fa-language"></i> @_package.TranslationCount keys</span>
-                <span><i class="fas fa-globe"></i> @_package.SpeechLocale</span>
-                <span><i class="fas fa-code-branch"></i> min Klacks v@_package.MinKlacksVersion</span>
+                <div class="w-full md:w-72 flex flex-col gap-4">
+                    @if (_package.Status == PackageStatus.Published)
+                    {
+                        <button class="w-full px-6 py-4 bg-secondary text-on-secondary rounded-xl font-bold text-lg hover:opacity-90 active:scale-[0.98] transition-all flex items-center justify-center gap-2 disabled:opacity-50"
+                                @onclick="DownloadPackage" disabled="@_isDownloading">
+                            @if (_isDownloading)
+                            {
+                                <div class="animate-spin w-5 h-5 border-2 border-white border-t-transparent rounded-full"></div>
+                            }
+                            else
+                            {
+                                <span class="material-symbols-outlined">download</span>
+                            }
+                            Download
+                        </button>
+                    }
+                    <div class="space-y-3 text-sm text-on-surface-variant">
+                        <div class="flex items-center justify-between">
+                            <span>Downloads</span>
+                            <span class="font-bold text-on-surface">@_package.Downloads</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>Min Version</span>
+                            <span class="font-bold text-on-surface">v@(_package.MinKlacksVersion)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>Speech Locale</span>
+                            <span class="font-bold text-on-surface">@_package.SpeechLocale</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-surface-container-lowest rounded-2xl p-8 mb-8 shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
+            <h3 class="text-lg font-bold mb-4">Translation Coverage</h3>
+            <div class="flex justify-between text-sm font-bold mb-2">
+                <span>@_package.TranslationCount translations</span>
+                <span class="text-on-tertiary-container">@(_package.Coverage)%</span>
+            </div>
+            <div class="w-full bg-surface-container h-3 rounded-full overflow-hidden">
+                <div class="bg-gradient-to-r from-tertiary-fixed-dim to-on-tertiary-container h-full transition-all" style="width: @(_package.Coverage)%"></div>
+            </div>
+        </div>
+
+        @if (_docsCount > 0 || _countriesCount > 0 || _statesCount > 0 || _calendarRulesCount > 0)
+        {
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                 @if (_docsCount > 0)
                 {
-                    <span><i class="fas fa-book"></i> @_docsCount manuals</span>
+                    <div class="bg-surface-container-lowest rounded-xl p-6 text-center shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
+                        <span class="material-symbols-outlined text-3xl text-secondary mb-2 block">menu_book</span>
+                        <div class="text-2xl font-black">@_docsCount</div>
+                        <div class="text-xs text-on-surface-variant uppercase tracking-wider">Manuals</div>
+                    </div>
                 }
                 @if (_countriesCount > 0)
                 {
-                    <span><i class="fas fa-globe"></i> @_countriesCount countries</span>
+                    <div class="bg-surface-container-lowest rounded-xl p-6 text-center shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
+                        <span class="material-symbols-outlined text-3xl text-secondary mb-2 block">public</span>
+                        <div class="text-2xl font-black">@_countriesCount</div>
+                        <div class="text-xs text-on-surface-variant uppercase tracking-wider">Countries</div>
+                    </div>
                 }
                 @if (_statesCount > 0)
                 {
-                    <span><i class="fas fa-map-marker-alt"></i> @_statesCount states</span>
+                    <div class="bg-surface-container-lowest rounded-xl p-6 text-center shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
+                        <span class="material-symbols-outlined text-3xl text-secondary mb-2 block">location_on</span>
+                        <div class="text-2xl font-black">@_statesCount</div>
+                        <div class="text-xs text-on-surface-variant uppercase tracking-wider">States</div>
+                    </div>
                 }
                 @if (_calendarRulesCount > 0)
                 {
-                    <span><i class="fas fa-calendar-alt"></i> @_calendarRulesCount calendar rules</span>
+                    <div class="bg-surface-container-lowest rounded-xl p-6 text-center shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
+                        <span class="material-symbols-outlined text-3xl text-secondary mb-2 block">calendar_month</span>
+                        <div class="text-2xl font-black">@_calendarRulesCount</div>
+                        <div class="text-xs text-on-surface-variant uppercase tracking-wider">Calendar Rules</div>
+                    </div>
                 }
             </div>
-
-            <CoverageBar Coverage="@_package.Coverage" />
-        </div>
-
-        @if (!string.IsNullOrWhiteSpace(_package.Description))
-        {
-            <div class="mb-4">
-                <h4>Description</h4>
-                <p>@_package.Description</p>
-            </div>
-        }
-
-        @if (_package.Status == PackageStatus.Published)
-        {
-            <button class="btn btn-primary mb-4" @onclick="DownloadPackage" disabled="@_isDownloading">
-                @if (_isDownloading)
-                {
-                    <span class="spinner-border spinner-border-sm"></span>
-                }
-                else
-                {
-                    <i class="fas fa-download"></i>
-                }
-                Download Package
-            </button>
         }
 
         @if (_package.Versions.Count > 0)
         {
-            <h4>Version History</h4>
-            <ul class="version-list">
-                @foreach (var version in _package.Versions)
-                {
-                    <li class="version-item">
-                        <div>
-                            <strong>v@version.Version</strong>
-                            <span class="text-muted ms-2">@version.CreatedAt.ToString("yyyy-MM-dd")</span>
-                            @if (!string.IsNullOrWhiteSpace(version.ChangeLog))
-                            {
-                                <p class="text-muted mb-0 mt-1">@version.ChangeLog</p>
-                            }
+            <div class="mb-8">
+                <h3 class="text-lg font-bold mb-4">Version History</h3>
+                <div class="space-y-3">
+                    @foreach (var version in _package.Versions)
+                    {
+                        <div class="bg-surface-container-lowest rounded-xl p-5 flex items-start justify-between shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
+                            <div>
+                                <span class="font-bold">v@(version.Version)</span>
+                                <span class="text-on-surface-variant text-sm ml-3">@version.CreatedAt.ToString("MMMM d, yyyy")</span>
+                                @if (!string.IsNullOrWhiteSpace(version.ChangeLog))
+                                {
+                                    <p class="text-on-surface-variant text-sm mt-1 mb-0">@version.ChangeLog</p>
+                                }
+                            </div>
+                            <StatusBadge Status="@version.Status" />
                         </div>
-                        <StatusBadge Status="@version.Status" />
-                    </li>
-                }
-            </ul>
+                    }
+                </div>
+            </div>
         }
     </div>
-}
 
-@if (!string.IsNullOrWhiteSpace(_errorMessage))
-{
-    <div class="alert alert-danger mt-3">@_errorMessage</div>
+    @if (!string.IsNullOrWhiteSpace(_errorMessage))
+    {
+        <div class="max-w-5xl mx-auto px-6 mb-8">
+            <div class="bg-error-container text-on-error-container rounded-xl p-4">@_errorMessage</div>
+        </div>
+    }
 }
 
 @code {
@@ -149,7 +203,6 @@ else
     private static int CountJsonEntries(string json, bool isObject)
     {
         if (string.IsNullOrWhiteSpace(json)) return 0;
-
         try
         {
             using var doc = System.Text.Json.JsonDocument.Parse(json);
@@ -157,10 +210,7 @@ else
                 ? doc.RootElement.EnumerateObject().Count()
                 : doc.RootElement.GetArrayLength();
         }
-        catch
-        {
-            return 0;
-        }
+        catch { return 0; }
     }
 
     private async Task DownloadPackage()
@@ -180,5 +230,19 @@ else
         {
             _isDownloading = false;
         }
+    }
+
+    private static string GetFlagEmoji(string code)
+    {
+        var region = code.Length >= 5 ? code[3..5].ToUpperInvariant() : code[..2].ToUpperInvariant();
+        var flagMap = new Dictionary<string, string>
+        {
+            ["DE"] = "\U0001F1E9\U0001F1EA", ["FR"] = "\U0001F1EB\U0001F1F7", ["ES"] = "\U0001F1EA\U0001F1F8",
+            ["IT"] = "\U0001F1EE\U0001F1F9", ["JP"] = "\U0001F1EF\U0001F1F5", ["BR"] = "\U0001F1E7\U0001F1F7",
+            ["PT"] = "\U0001F1F5\U0001F1F9", ["GB"] = "\U0001F1EC\U0001F1E7", ["US"] = "\U0001F1FA\U0001F1F8",
+            ["CN"] = "\U0001F1E8\U0001F1F3", ["KR"] = "\U0001F1F0\U0001F1F7", ["NL"] = "\U0001F1F3\U0001F1F1",
+            ["PL"] = "\U0001F1F5\U0001F1F1", ["AT"] = "\U0001F1E6\U0001F1F9", ["CH"] = "\U0001F1E8\U0001F1ED"
+        };
+        return flagMap.GetValueOrDefault(region, "\U0001F310");
     }
 }
