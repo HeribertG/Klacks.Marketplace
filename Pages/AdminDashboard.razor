@@ -27,7 +27,7 @@
             <div class="bg-error-container text-on-error-container rounded-xl px-6 py-4 mb-6">@_errorMessage</div>
         }
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
             <div class="bg-surface-container-lowest rounded-xl p-6 text-center shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
                 <div class="text-3xl font-black text-secondary">@_pendingPackages.Count</div>
                 <div class="text-xs text-on-surface-variant uppercase tracking-wider mt-1">@L["Admin_PendingPackages"]</div>
@@ -35,6 +35,10 @@
             <div class="bg-surface-container-lowest rounded-xl p-6 text-center shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
                 <div class="text-3xl font-black text-secondary">@_pendingPlugins.Count</div>
                 <div class="text-xs text-on-surface-variant uppercase tracking-wider mt-1">@L["Admin_PendingPlugins"]</div>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-6 text-center shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
+                <div class="text-3xl font-black text-secondary">@_pendingRegionPackages.Count</div>
+                <div class="text-xs text-on-surface-variant uppercase tracking-wider mt-1">@L["Admin_PendingRegions"]</div>
             </div>
             <div class="bg-surface-container-lowest rounded-xl p-6 text-center shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
                 <div class="text-3xl font-black text-secondary">@_users.Count</div>
@@ -130,6 +134,49 @@
             </div>
         }
 
+        <h3 class="text-xl font-bold mb-4">@L["Admin_PendingRegionPackages"]</h3>
+        @if (_pendingRegionPackages.Count == 0)
+        {
+            <div class="bg-secondary-fixed text-on-secondary-fixed-variant rounded-xl px-6 py-4 mb-8">@L["Admin_NoPendingRegions"]</div>
+        }
+        else
+        {
+            <div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(27,27,29,0.04)] mb-8">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="bg-surface-container-low text-on-surface-variant text-xs uppercase tracking-wider">
+                            <th class="px-6 py-4 text-left font-bold">@L["Common_Country"]</th>
+                            <th class="px-6 py-4 text-left font-bold">@L["Common_Author"]</th>
+                            <th class="px-6 py-4 text-left font-bold">@L["Common_Code"]</th>
+                            <th class="px-6 py-4 text-left font-bold">@L["Common_Version"]</th>
+                            <th class="px-6 py-4 text-left font-bold">@L["Common_Submitted"]</th>
+                            <th class="px-6 py-4 text-left font-bold">@L["Common_Actions"]</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-outline-variant/20">
+                        @foreach (var regionPackage in _pendingRegionPackages)
+                        {
+                            <tr class="hover:bg-surface-container-low/50 transition-colors">
+                                <td class="px-6 py-4"><a href="/region/@regionPackage.CountryCode" class="text-secondary hover:underline no-underline font-medium">@regionPackage.CountryName</a></td>
+                                <td class="px-6 py-4">@regionPackage.Author.DisplayName</td>
+                                <td class="px-6 py-4"><code class="text-xs bg-surface-container-low px-2 py-1 rounded uppercase">@regionPackage.CountryCode</code></td>
+                                <td class="px-6 py-4">@regionPackage.Version</td>
+                                <td class="px-6 py-4">@regionPackage.CreatedAt.ToString("yyyy-MM-dd")</td>
+                                <td class="px-6 py-4">
+                                    <button class="px-3 py-1.5 bg-tertiary-fixed text-on-tertiary-fixed-variant rounded-lg text-xs font-bold hover:opacity-80 transition-all" @onclick="() => ApproveRegionPackage(regionPackage.Id)">
+                                        <span class="material-symbols-outlined text-[16px]">check</span>
+                                    </button>
+                                    <button class="px-3 py-1.5 bg-error-container text-on-error-container rounded-lg text-xs font-bold hover:opacity-80 transition-all ml-2" @onclick="() => RejectRegionPackage(regionPackage.Id)">
+                                        <span class="material-symbols-outlined text-[16px]">close</span>
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+
         <h3 class="text-xl font-bold mb-4">@L["Admin_Users"]</h3>
         <div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
             <table class="w-full text-sm">
@@ -178,6 +225,7 @@
     private bool _isAdmin;
     private List<LanguagePackage> _pendingPackages = [];
     private List<FeaturePlugin> _pendingPlugins = [];
+    private List<RegionPackage> _pendingRegionPackages = [];
     private List<User> _users = [];
     private string _message = string.Empty;
     private string _errorMessage = string.Empty;
@@ -202,6 +250,7 @@
     {
         _pendingPackages = await AdminService.GetPendingPackagesAsync();
         _pendingPlugins = await AdminService.GetPendingPluginsAsync();
+        _pendingRegionPackages = await AdminService.GetPendingRegionPackagesAsync();
         _users = await AdminService.GetUsersAsync();
     }
 
@@ -251,6 +300,29 @@
         _showConfirmReject = true;
     }
 
+    private async Task ApproveRegionPackage(int regionPackageId)
+    {
+        try
+        {
+            await AdminService.ApproveRegionPackageAsync(regionPackageId);
+            _message = L["Admin_RegionApproved"];
+            await LoadData();
+        }
+        catch (Exception ex)
+        {
+            _errorMessage = ex.Message;
+        }
+    }
+
+    private void RejectRegionPackage(int regionPackageId)
+    {
+        _rejectItemId = regionPackageId;
+        _rejectType = "region";
+        _rejectTitle = L["Admin_RejectRegionTitle"];
+        _rejectMessage = L["Admin_RejectRegionMessage"];
+        _showConfirmReject = true;
+    }
+
     private async Task ConfirmReject()
     {
         try
@@ -260,10 +332,15 @@
                 await AdminService.RejectPackageAsync(_rejectItemId, L["Admin_RejectedByAdmin"]);
                 _message = L["Admin_PackageRejected"];
             }
-            else
+            else if (_rejectType == "plugin")
             {
                 await AdminService.RejectPluginAsync(_rejectItemId, L["Admin_RejectedByAdmin"]);
                 _message = L["Admin_PluginRejected"];
+            }
+            else
+            {
+                await AdminService.RejectRegionPackageAsync(_rejectItemId, L["Admin_RejectedByAdmin"]);
+                _message = L["Admin_RegionRejected"];
             }
             _showConfirmReject = false;
             await LoadData();

@@ -1,0 +1,249 @@
+{
+  "version": 1,
+  "region": "AT",
+  "languages": {
+    "default": "de"
+  },
+  "locale": {
+    "country": "AT",
+    "state": "W",
+    "timeZone": "Europe/Vienna",
+    "calendarSelection": { "country": "AT", "state": "W" }
+  },
+  "calendar": {
+    "weekendDays": "Saturday,Sunday",
+    "weekStartDay": "Monday"
+  },
+  "worktime": {
+    "defaultWorkingHours": 8,
+    "overtimeThreshold": 40,
+    "vacationDaysPerYear": 30,
+    "maxDailyHours": 12,
+    "maxWeeklyHours": 48,
+    "maxConsecutiveDays": 6,
+    "minRestDays": 1,
+    "minPauseHours": 11
+  },
+  "compliance": {
+    "enforcement": {
+      "defaultMode": "warn",
+      "rules": { "rollingAverage": "warn" },
+      "allowSupervisorOverride": true
+    },
+    "rosterPublication": { "minLeadDays": 14, "countWorkdaysOnly": false }
+  },
+  "export": {
+    "enabledFormats": ["generic-payroll-csv"],
+    "defaultPayrollTargetSystem": "generic-payroll-csv"
+  },
+  "industryProfiles": {
+    "homecare": {
+      "schedulingRulePresets": [
+        {
+          "name": "AT Mobile Pflege Standard",
+          "maxDailyHours": 12,
+          "maxWeeklyHours": 48,
+          "minPauseHours": 11,
+          "minRestDays": 1,
+          "maxConsecutiveDays": 6,
+          "nightStart": "22:00",
+          "nightEnd": "06:00",
+          "performsShiftWork": true
+        }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "Diplomierte Gesundheits- und Krankenpflegeperson (DGKP)",
+            "en": "Registered nurse (DGKP)",
+            "fr": "Infirmier/ère diplômé/e d'État (DGKP)",
+            "it": "Infermiere diplomato (DGKP)"
+          }
+        },
+        {
+          "name": {
+            "de": "Pflegeassistenz (PA)",
+            "en": "Nursing assistant (PA)",
+            "fr": "Aide-soignant/e (PA)",
+            "it": "Assistente infermieristico (PA)"
+          }
+        },
+        {
+          "name": {
+            "de": "Heimhelfer/in",
+            "en": "Home help worker",
+            "fr": "Aide à domicile",
+            "it": "Assistente domiciliare"
+          }
+        },
+        {
+          "name": {
+            "de": "Erste-Hilfe-Ausbildung",
+            "en": "First aid certificate",
+            "fr": "Formation aux premiers secours",
+            "it": "Formazione di primo soccorso"
+          },
+          "isTimeLimited": true
+        }
+      ]
+    },
+    "healthcare": {
+      "schedulingRulePresets": [
+        {
+          "name": "AT Spital/Klinik Standard",
+          "maxDailyHours": 12,
+          "maxWeeklyHours": 48,
+          "minPauseHours": 11,
+          "minRestDays": 1,
+          "maxConsecutiveDays": 6,
+          "nightStart": "22:00",
+          "nightEnd": "06:00",
+          "performsShiftWork": true
+        }
+      ],
+      "periodCaps": [
+        { "windowWeeks": 17, "maxAverageWeeklyHours": 48 }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "Diplomierte Gesundheits- und Krankenpflegeperson (DGKP)",
+            "en": "Registered nurse (DGKP)",
+            "fr": "Infirmier/ère diplômé/e d'État (DGKP)",
+            "it": "Infermiere diplomato (DGKP)"
+          }
+        },
+        {
+          "name": {
+            "de": "Pflegefachassistenz (PFA)",
+            "en": "Advanced nursing assistant (PFA)",
+            "fr": "Assistant/e en soins infirmiers avancé/e (PFA)",
+            "it": "Assistente infermieristico avanzato (PFA)"
+          }
+        },
+        {
+          "name": {
+            "de": "Erste-Hilfe-Ausbildung",
+            "en": "First aid certificate",
+            "fr": "Formation aux premiers secours",
+            "it": "Formazione di primo soccorso"
+          },
+          "isTimeLimited": true
+        }
+      ]
+    },
+    "security": {
+      "schedulingRulePresets": [
+        {
+          "name": "AT Sicherheitsdienst Standard",
+          "maxDailyHours": 12,
+          "maxWeeklyHours": 48,
+          "minPauseHours": 11,
+          "minRestDays": 1,
+          "maxConsecutiveDays": 6,
+          "nightStart": "22:00",
+          "nightEnd": "06:00",
+          "performsShiftWork": true
+        }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "Erste-Hilfe-Ausbildung",
+            "en": "First aid certificate",
+            "fr": "Formation aux premiers secours",
+            "it": "Formazione di primo soccorso"
+          },
+          "isTimeLimited": true
+        }
+      ]
+    },
+    "facility": {
+      "schedulingRulePresets": [
+        {
+          "name": "AT Gebäudereinigung Standard",
+          "maxDailyHours": 12,
+          "maxWeeklyHours": 48,
+          "minPauseHours": 11,
+          "minRestDays": 1,
+          "maxConsecutiveDays": 6,
+          "nightStart": "22:00",
+          "nightEnd": "06:00",
+          "performsShiftWork": true
+        }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "Reinigungstechniker/in (Lehrberuf)",
+            "en": "Building cleaning technician (vocational qualification)",
+            "fr": "Technicien/ne en nettoyage (formation professionnelle)",
+            "it": "Tecnico/a delle pulizie (qualifica professionale)"
+          }
+        }
+      ]
+    },
+    "logistics": {
+      "schedulingRulePresets": [
+        {
+          "name": "AT Logistik Standard",
+          "maxDailyHours": 12,
+          "maxWeeklyHours": 48,
+          "minPauseHours": 11,
+          "minRestDays": 1,
+          "maxConsecutiveDays": 6,
+          "nightStart": "22:00",
+          "nightEnd": "06:00",
+          "performsShiftWork": true
+        }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "Führerschein Klasse C/CE",
+            "en": "Driving licence class C/CE",
+            "fr": "Permis de conduire catégorie C/CE",
+            "it": "Patente di guida categoria C/CE"
+          },
+          "isTimeLimited": true
+        },
+        {
+          "name": {
+            "de": "Staplerschein (Flurförderzeug)",
+            "en": "Forklift licence",
+            "fr": "Certificat cariste (CACES)",
+            "it": "Patentino muletto (carrelli elevatori)"
+          }
+        },
+        {
+          "name": {
+            "de": "ADR-Bescheinigung (Gefahrgut)",
+            "en": "ADR certificate (dangerous goods)",
+            "fr": "Certificat de formation ADR",
+            "it": "Patentino ADR (C.F.P. ADR)"
+          },
+          "isTimeLimited": true
+        },
+        {
+          "name": {
+            "de": "Berufskraftfahrer-Qualifikation (Code 95)",
+            "en": "Professional driver qualification (Code 95)",
+            "fr": "Qualification de conducteur professionnel (Code 95)",
+            "it": "Carta di qualificazione del conducente (Codice 95)"
+          },
+          "isTimeLimited": true
+        },
+        {
+          "name": {
+            "de": "Fahrerkarte (digitaler Tachograf)",
+            "en": "Driver card (digital tachograph)",
+            "fr": "Carte de conducteur (chronotachygraphe numérique)",
+            "it": "Carta del conducente (tachigrafo digitale)"
+          },
+          "isTimeLimited": true
+        }
+      ]
+    }
+  },
+  "seedDemoData": false
+}

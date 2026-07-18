@@ -1,0 +1,202 @@
+@page "/region/{CountryCode}"
+@inject IRegionPackageService RegionPackageService
+@inject NavigationManager Navigation
+@inject IStringLocalizer<SharedResource> L
+
+<PageTitle>@(_package?.CountryName ?? L["Common_RegionPackage"]) - Klacks Store</PageTitle>
+
+@if (_isLoading)
+{
+    <div class="flex justify-center py-24 bg-surface">
+        <div class="animate-spin w-8 h-8 border-4 border-secondary border-t-transparent rounded-full"></div>
+    </div>
+}
+else if (_package is null)
+{
+    <section class="py-24 px-6 bg-surface text-center">
+        <span class="material-symbols-outlined text-6xl text-on-surface-variant mb-4 block">warning</span>
+        <h3 class="text-2xl font-bold mb-2">@L["RegionDetail_NotFound"]</h3>
+        <p class="text-on-surface-variant mb-6">@L["RegionDetail_NotFoundDesc"]</p>
+        <a href="/" class="px-6 py-3 bg-secondary text-on-secondary rounded-lg font-semibold no-underline hover:opacity-90 transition-all">@L["Common_BackToBrowse"]</a>
+    </section>
+}
+else
+{
+    <div class="max-w-5xl mx-auto px-6 py-8">
+        <nav class="flex items-center gap-2 text-sm text-on-surface-variant mb-8">
+            <a href="/" class="hover:text-secondary transition-colors no-underline text-on-surface-variant">@L["Common_Home"]</a>
+            <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+            <span>@L["Common_Deployment"]</span>
+            <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+            <span class="text-on-surface font-medium">@_package.CountryName</span>
+        </nav>
+
+        <div class="bg-surface-container-low rounded-2xl p-8 mb-8">
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="flex-1">
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="text-5xl">@GetFlagEmoji(_package.CountryCode)</span>
+                        <div>
+                            <h1 class="text-3xl font-black tracking-tight">@_package.CountryName</h1>
+                            <span class="text-on-surface-variant font-mono uppercase">@_package.CountryCode</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3 mb-4 flex-wrap">
+                        <span class="text-on-surface-variant flex items-center gap-1">
+                            <span class="material-symbols-outlined text-[18px]">person</span> @_package.Author.DisplayName
+                        </span>
+                        <span class="px-2 py-1 bg-surface-container text-xs font-bold rounded uppercase tracking-wider text-on-surface-variant">v@(_package.Version)</span>
+                        <StatusBadge Status="@_package.Status" />
+                    </div>
+                    @if (!string.IsNullOrWhiteSpace(_package.Description))
+                    {
+                        <p class="text-on-surface leading-relaxed">@_package.Description</p>
+                    }
+                </div>
+
+                <div class="w-full md:w-72 flex flex-col gap-4">
+                    @if (_package.Status == PackageStatus.Published)
+                    {
+                        <div class="bg-surface-container-lowest rounded-xl p-4">
+                            <div class="text-sm font-bold mb-3">@L["RegionDetail_IndustryLabel"]</div>
+                            <div class="space-y-2">
+                                @foreach (var slug in RegionIndustry.CanonicalSlugs)
+                                {
+                                    <label class="flex items-center gap-2 text-sm cursor-pointer">
+                                        <input type="radio" name="industry" value="@slug"
+                                               checked="@(_selectedIndustry == slug)"
+                                               @onchange="() => _selectedIndustry = slug" />
+                                        @GetIndustryLabel(slug)
+                                    </label>
+                                }
+                                <label class="flex items-center gap-2 text-sm cursor-pointer">
+                                    <input type="radio" name="industry" value="@RegionIndustry.All"
+                                           checked="@(_selectedIndustry == RegionIndustry.All)"
+                                           @onchange="() => _selectedIndustry = RegionIndustry.All" />
+                                    @L["Industry_All"]
+                                </label>
+                            </div>
+                        </div>
+                    }
+                    <div class="space-y-3 text-sm text-on-surface-variant">
+                        <div class="flex items-center justify-between">
+                            <span>@L["Common_Downloads"]</span>
+                            <span class="font-bold text-on-surface">@_package.Downloads</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>@L["Common_MinVersion"]</span>
+                            <span class="font-bold text-on-surface">v@(_package.MinKlacksVersion)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @if (_package.Status == PackageStatus.Published)
+        {
+            <div class="bg-surface-container-low rounded-2xl p-8 mb-8">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="material-symbols-outlined text-on-surface-variant">deployed_code</span>
+                    <h3 class="text-lg font-bold mb-0">@L["RegionDetail_ArtifactsTitle"]</h3>
+                </div>
+                <div class="space-y-3">
+                    <div class="bg-surface-container-lowest rounded-xl p-5 flex flex-col sm:flex-row sm:items-center gap-4">
+                        <div class="flex-1">
+                            <div class="font-bold">@L["RegionDetail_ProfileJson"]</div>
+                            <p class="text-on-surface-variant text-sm mb-0">@L["RegionDetail_ProfileJsonDesc"]</p>
+                        </div>
+                        <button class="px-5 py-2.5 bg-secondary text-on-secondary rounded-lg font-semibold hover:opacity-90 active:scale-[0.98] transition-all flex items-center gap-2 shrink-0"
+                                @onclick="() => DownloadArtifact(RegionArtifactType.ProfileJson)">
+                            <span class="material-symbols-outlined text-[20px]">download</span>
+                            @L["Common_Download"]
+                        </button>
+                    </div>
+                    <div class="bg-surface-container-lowest rounded-xl p-5 flex flex-col sm:flex-row sm:items-center gap-4">
+                        <div class="flex-1">
+                            <div class="font-bold">@L["RegionDetail_OnPremBundle"]</div>
+                            <p class="text-on-surface-variant text-sm mb-0">@L["RegionDetail_OnPremDesc"]</p>
+                        </div>
+                        <button class="px-5 py-2.5 bg-secondary text-on-secondary rounded-lg font-semibold hover:opacity-90 active:scale-[0.98] transition-all flex items-center gap-2 shrink-0"
+                                @onclick="() => DownloadArtifact(RegionArtifactType.OnPremZip)">
+                            <span class="material-symbols-outlined text-[20px]">download</span>
+                            @L["Common_Download"]
+                        </button>
+                    </div>
+                    <div class="bg-surface-container-lowest rounded-xl p-5 flex flex-col sm:flex-row sm:items-center gap-4">
+                        <div class="flex-1">
+                            <div class="font-bold">@L["RegionDetail_ComposeBundle"]</div>
+                            <p class="text-on-surface-variant text-sm mb-0">@L["RegionDetail_ComposeDesc"]</p>
+                        </div>
+                        <button class="px-5 py-2.5 bg-secondary text-on-secondary rounded-lg font-semibold hover:opacity-90 active:scale-[0.98] transition-all flex items-center gap-2 shrink-0"
+                                @onclick="() => DownloadArtifact(RegionArtifactType.ComposeZip)">
+                            <span class="material-symbols-outlined text-[20px]">download</span>
+                            @L["Common_Download"]
+                        </button>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (_package.Versions.Count > 0)
+        {
+            <div class="mb-8">
+                <h3 class="text-lg font-bold mb-4">@L["Common_VersionHistory"]</h3>
+                <div class="space-y-3">
+                    @foreach (var version in _package.Versions)
+                    {
+                        <div class="bg-surface-container-lowest rounded-xl p-5 flex items-start justify-between shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
+                            <div>
+                                <span class="font-bold">v@(version.Version)</span>
+                                <span class="text-on-surface-variant text-sm ml-3">@version.CreatedAt.ToString("D")</span>
+                                @if (!string.IsNullOrWhiteSpace(version.ChangeLog))
+                                {
+                                    <p class="text-on-surface-variant text-sm mt-1 mb-0">@version.ChangeLog</p>
+                                }
+                            </div>
+                            <StatusBadge Status="@version.Status" />
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    [Parameter]
+    public string CountryCode { get; set; } = string.Empty;
+
+    private RegionPackage? _package;
+    private bool _isLoading = true;
+    private string _selectedIndustry = RegionIndustry.All;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _package = await RegionPackageService.GetRegionPackageByCountryAsync(CountryCode);
+        _isLoading = false;
+    }
+
+    private void DownloadArtifact(string artifactType)
+    {
+        Navigation.NavigateTo($"/api/regions/{_package!.CountryCode}/download?industry={_selectedIndustry}&artifact={artifactType}", forceLoad: true);
+    }
+
+    private string GetIndustryLabel(string slug) => slug switch
+    {
+        RegionIndustry.Homecare => L["Industry_Homecare"].Value,
+        RegionIndustry.Healthcare => L["Industry_Healthcare"].Value,
+        RegionIndustry.Security => L["Industry_Security"].Value,
+        RegionIndustry.Facility => L["Industry_Facility"].Value,
+        RegionIndustry.Logistics => L["Industry_Logistics"].Value,
+        _ => slug
+    };
+
+    private static string GetFlagEmoji(string countryCode)
+    {
+        if (countryCode.Length < 2) return "\U0001F310";
+        var code = countryCode[..2].ToUpperInvariant();
+        var first = char.ConvertFromUtf32(0x1F1E6 + (code[0] - 'A'));
+        var second = char.ConvertFromUtf32(0x1F1E6 + (code[1] - 'A'));
+        return first + second;
+    }
+}

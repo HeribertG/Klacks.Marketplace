@@ -16,6 +16,9 @@ public class MarketplaceDbContext : DbContext
     public DbSet<FeaturePlugin> FeaturePlugins => Set<FeaturePlugin>();
     public DbSet<FeaturePluginVersion> FeaturePluginVersions => Set<FeaturePluginVersion>();
     public DbSet<PluginDownloadLog> PluginDownloadLogs => Set<PluginDownloadLog>();
+    public DbSet<RegionPackage> RegionPackages => Set<RegionPackage>();
+    public DbSet<RegionPackageVersion> RegionPackageVersions => Set<RegionPackageVersion>();
+    public DbSet<RegionDownloadLog> RegionDownloadLogs => Set<RegionDownloadLog>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -85,6 +88,38 @@ public class MarketplaceDbContext : DbContext
                   .HasForeignKey(e => e.PluginId)
                   .OnDelete(DeleteBehavior.Cascade);
             entity.Property(e => e.IpAddress).HasMaxLength(45);
+        });
+
+        modelBuilder.Entity<RegionPackage>(entity =>
+        {
+            entity.HasIndex(e => e.CountryCode).IsUnique();
+            entity.Property(e => e.CountryCode).IsRequired().HasMaxLength(10);
+            entity.Property(e => e.CountryName).IsRequired().HasMaxLength(100);
+            entity.Property(e => e.Description).HasMaxLength(4000);
+            entity.HasOne(e => e.Author)
+                  .WithMany()
+                  .HasForeignKey(e => e.AuthorId)
+                  .OnDelete(DeleteBehavior.Restrict);
+        });
+
+        modelBuilder.Entity<RegionPackageVersion>(entity =>
+        {
+            entity.Property(e => e.ContentHash).HasMaxLength(64);
+            entity.HasOne(e => e.RegionPackage)
+                  .WithMany(p => p.Versions)
+                  .HasForeignKey(e => e.RegionPackageId)
+                  .OnDelete(DeleteBehavior.Cascade);
+        });
+
+        modelBuilder.Entity<RegionDownloadLog>(entity =>
+        {
+            entity.Property(e => e.ArtifactType).HasMaxLength(20);
+            entity.Property(e => e.Industry).HasMaxLength(20);
+            entity.Property(e => e.IpAddress).HasMaxLength(45);
+            entity.HasOne(e => e.RegionPackage)
+                  .WithMany(p => p.DownloadLogs)
+                  .HasForeignKey(e => e.RegionPackageId)
+                  .OnDelete(DeleteBehavior.Cascade);
         });
     }
 }

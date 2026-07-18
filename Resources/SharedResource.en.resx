@@ -190,4 +190,50 @@
   <data name="Status_Rejected" xml:space="preserve"><value>Rejected</value></data>
   <data name="Status_Draft" xml:space="preserve"><value>Draft</value></data>
   <data name="Status_Unknown" xml:space="preserve"><value>Unknown</value></data>
+  <data name="Common_Deployment" xml:space="preserve"><value>Deployment</value></data>
+  <data name="Common_RegionPackage" xml:space="preserve"><value>Region Package</value></data>
+  <data name="Common_Country" xml:space="preserve"><value>Country</value></data>
+  <data name="Nav_UploadRegion" xml:space="preserve"><value>Upload Region</value></data>
+  <data name="Index_SearchRegions" xml:space="preserve"><value>Search region packages...</value></data>
+  <data name="Index_NoRegionsFound" xml:space="preserve"><value>No region packages found</value></data>
+  <data name="Index_BeFirstRegion" xml:space="preserve"><value>Be the first to upload a region package!</value></data>
+  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>Country deployment profiles for new installations.</value></data>
+  <data name="RegionDetail_NotFound" xml:space="preserve"><value>Region package not found</value></data>
+  <data name="RegionDetail_NotFoundDesc" xml:space="preserve"><value>The requested region package does not exist or is not published.</value></data>
+  <data name="RegionDetail_IndustryLabel" xml:space="preserve"><value>Industry</value></data>
+  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>Deployment downloads</value></data>
+  <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>Profile JSON</value></data>
+  <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>Region profile for an existing Klacks installation — mount it as the region setup file.</value></data>
+  <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>On-Prem bundle</value></data>
+  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Complete installation bundle with installer scripts, Docker Compose and the region profile.</value></data>
+  <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Docker Compose bundle</value></data>
+  <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Minimal Docker Compose setup without installers, for Docker professionals.</value></data>
+  <data name="Industry_Homecare" xml:space="preserve"><value>Home care</value></data>
+  <data name="Industry_Healthcare" xml:space="preserve"><value>Healthcare</value></data>
+  <data name="Industry_Security" xml:space="preserve"><value>Security</value></data>
+  <data name="Industry_Facility" xml:space="preserve"><value>Facility services</value></data>
+  <data name="Industry_Logistics" xml:space="preserve"><value>Logistics</value></data>
+  <data name="Industry_All" xml:space="preserve"><value>All industries</value></data>
+  <data name="UploadRegion_Title" xml:space="preserve"><value>Upload Region Package</value></data>
+  <data name="UploadRegion_Subtitle" xml:space="preserve"><value>Share a country region setup profile with the community</value></data>
+  <data name="UploadRegion_CountryLabel" xml:space="preserve"><value>Country</value></data>
+  <data name="UploadRegion_SelectCountry" xml:space="preserve"><value>Select a country...</value></data>
+  <data name="UploadRegion_ChangeLog" xml:space="preserve"><value>Change Log</value></data>
+  <data name="UploadRegion_ChangeLogPlaceholder" xml:space="preserve"><value>What changed in this version?</value></data>
+  <data name="UploadRegion_DescriptionPlaceholder" xml:space="preserve"><value>Describe the region profile...</value></data>
+  <data name="UploadRegion_ProfileRequired" xml:space="preserve"><value>Region profile JSON (required)</value></data>
+  <data name="UploadRegion_ValidationErrors" xml:space="preserve"><value>Validation errors</value></data>
+  <data name="UploadRegion_ValidationWarnings" xml:space="preserve"><value>Validation warnings</value></data>
+  <data name="UploadRegion_Success" xml:space="preserve"><value>Region package submitted for review!</value></data>
+  <data name="UploadRegion_CountryRequired" xml:space="preserve"><value>Please select a country</value></data>
+  <data name="MyPackages_NoRegions" xml:space="preserve"><value>No region packages yet</value></data>
+  <data name="MyPackages_NoRegionsDesc" xml:space="preserve"><value>You haven't uploaded any region packages yet.</value></data>
+  <data name="MyPackages_UploadFirstRegion" xml:space="preserve"><value>Upload your first region package</value></data>
+  <data name="Admin_PendingRegions" xml:space="preserve"><value>Pending Regions</value></data>
+  <data name="Admin_PendingRegionPackages" xml:space="preserve"><value>Pending Region Packages</value></data>
+  <data name="Admin_NoPendingRegions" xml:space="preserve"><value>No pending region packages</value></data>
+  <data name="Admin_RegionApproved" xml:space="preserve"><value>Region package approved</value></data>
+  <data name="Admin_RegionRejected" xml:space="preserve"><value>Region package rejected</value></data>
+  <data name="Admin_RejectRegionTitle" xml:space="preserve"><value>Reject Region Package</value></data>
+  <data name="Admin_RejectRegionMessage" xml:space="preserve"><value>Are you sure you want to reject this region package?</value></data>
 </root>

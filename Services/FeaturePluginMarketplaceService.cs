@@ -22,6 +22,9 @@ public class FeaturePluginMarketplaceService : IFeaturePluginMarketplaceService
 
     public async Task<(List<FeaturePlugin> Items, int TotalCount)> SearchPluginsAsync(string? search, string? category, PackageStatus? status, int page, int pageSize)
     {
+        page = Math.Max(page, AppConstants.MinSearchPage);
+        pageSize = Math.Clamp(pageSize, AppConstants.MinSearchPageSize, AppConstants.MaxSearchPageSize);
+
         var query = _db.FeaturePlugins.Include(p => p.Author).AsQueryable();
 
         if (status.HasValue)

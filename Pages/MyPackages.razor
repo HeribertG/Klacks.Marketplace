@@ -1,6 +1,7 @@
 @page "/my-packages"
 @inject IPackageService PackageService
 @inject IFeaturePluginMarketplaceService PluginService
+@inject IRegionPackageService RegionPackageService
 @inject IHttpContextAccessor HttpContextAccessor
 @inject IStringLocalizer<SharedResource> L
 
@@ -33,6 +34,10 @@
             <button class="px-6 py-2.5 rounded-full font-bold transition-all @(_activeTab == "plugins" ? "bg-secondary text-on-secondary" : "bg-surface-container text-on-surface-variant hover:bg-surface-container-high")"
                     @onclick='() => _activeTab = "plugins"'>
                 <span class="material-symbols-outlined text-[18px] mr-1">extension</span> @L["Common_FeaturePlugins"] (@_plugins.Count)
+            </button>
+            <button class="px-6 py-2.5 rounded-full font-bold transition-all @(_activeTab == "regions" ? "bg-secondary text-on-secondary" : "bg-surface-container text-on-surface-variant hover:bg-surface-container-high")"
+                    @onclick='() => _activeTab = "regions"'>
+                <span class="material-symbols-outlined text-[18px] mr-1">public</span> @L["Common_Deployment"] (@_regionPackages.Count)
             </button>
         </div>
 
@@ -80,7 +85,7 @@
                 </div>
             }
         }
-        else
+        else if (_activeTab == "plugins")
         {
             @if (_plugins.Count == 0)
             {
@@ -122,12 +127,55 @@
                 </div>
             }
         }
+        else
+        {
+            @if (_regionPackages.Count == 0)
+            {
+                <div class="py-16 text-center">
+                    <span class="material-symbols-outlined text-6xl text-on-surface-variant mb-4 block">public</span>
+                    <h3 class="text-xl font-bold mb-2">@L["MyPackages_NoRegions"]</h3>
+                    <p class="text-on-surface-variant mb-6">@L["MyPackages_NoRegionsDesc"]</p>
+                    <a href="/upload-region" class="px-6 py-3 bg-secondary text-on-secondary rounded-lg font-semibold no-underline hover:opacity-90 transition-all">
+                        <span class="material-symbols-outlined text-[18px] mr-1 align-middle">upload</span> @L["MyPackages_UploadFirstRegion"]
+                    </a>
+                </div>
+            }
+            else
+            {
+                <div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr class="bg-surface-container-low text-on-surface-variant text-xs uppercase tracking-wider">
+                                <th class="px-6 py-4 text-left font-bold">@L["Common_Country"]</th>
+                                <th class="px-6 py-4 text-left font-bold">@L["Common_Code"]</th>
+                                <th class="px-6 py-4 text-left font-bold">@L["Common_Version"]</th>
+                                <th class="px-6 py-4 text-left font-bold">@L["Common_Downloads"]</th>
+                                <th class="px-6 py-4 text-left font-bold">@L["Common_Status"]</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-outline-variant/20">
+                            @foreach (var regionPackage in _regionPackages)
+                            {
+                                <tr class="hover:bg-surface-container-low/50 transition-colors">
+                                    <td class="px-6 py-4"><a href="/region/@regionPackage.CountryCode" class="text-secondary hover:underline no-underline font-medium">@regionPackage.CountryName</a></td>
+                                    <td class="px-6 py-4"><code class="text-xs bg-surface-container-low px-2 py-1 rounded uppercase">@regionPackage.CountryCode</code></td>
+                                    <td class="px-6 py-4">@regionPackage.Version</td>
+                                    <td class="px-6 py-4">@regionPackage.Downloads</td>
+                                    <td class="px-6 py-4"><StatusBadge Status="@regionPackage.Status" /></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+        }
     }
 </div>
 
 @code {
     private List<LanguagePackage> _packages = [];
     private List<FeaturePlugin> _plugins = [];
+    private List<RegionPackage> _regionPackages = [];
     private bool _isLoading = true;
     private bool _isAuthenticated;
     private int _userId;
@@ -146,6 +194,7 @@
                 _userId = id;
                 _packages = await PackageService.GetUserPackagesAsync(_userId);
                 _plugins = await PluginService.GetUserPluginsAsync(_userId);
+                _regionPackages = await RegionPackageService.GetUserRegionPackagesAsync(_userId);
             }
         }
 

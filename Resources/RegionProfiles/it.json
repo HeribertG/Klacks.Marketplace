@@ -1,0 +1,229 @@
+{
+  "version": 1,
+  "region": "IT",
+  "languages": {
+    "default": "it"
+  },
+  "locale": {
+    "country": "IT",
+    "state": "LOM",
+    "timeZone": "Europe/Rome",
+    "calendarSelection": { "country": "IT", "state": "LOM" }
+  },
+  "calendar": {
+    "weekendDays": "Saturday,Sunday",
+    "weekStartDay": "Monday"
+  },
+  "worktime": {
+    "defaultWorkingHours": 8,
+    "overtimeThreshold": 40,
+    "vacationDaysPerYear": 20,
+    "maxWeeklyHours": 48,
+    "maxConsecutiveDays": 6,
+    "minRestDays": 1,
+    "minPauseHours": 11
+  },
+  "compliance": {
+    "enforcement": {
+      "defaultMode": "warn",
+      "rules": { "rollingAverage": "warn", "counterRule": "warn", "compensatoryRest": "warn" },
+      "allowSupervisorOverride": true
+    },
+    "compensatoryRest": { "enabled": true, "deadlineDays": 3, "autoPlan": false },
+    "periodCaps": [
+      { "windowWeeks": 17, "maxAverageWeeklyHours": 48 }
+    ]
+  },
+  "industryProfiles": {
+    "homecare": {
+      "schedulingRulePresets": [
+        {
+          "name": "IT Assistenza Domiciliare Standard",
+          "maxWeeklyHours": 38,
+          "minPauseHours": 11,
+          "minRestDays": 1,
+          "maxConsecutiveDays": 6,
+          "performsShiftWork": true
+        }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "Sozial-Gesundheitsbetreuer/in (OSS)",
+            "en": "Social-health care operator (OSS)",
+            "fr": "Opérateur socio-sanitaire (OSS)",
+            "it": "Operatore Socio-Sanitario (OSS)"
+          }
+        },
+        {
+          "name": {
+            "de": "Sozial-Gesundheitsbetreuer/in mit Zusatzqualifikation (OSSS)",
+            "en": "Specialised social-health care operator (OSSS)",
+            "fr": "Opérateur socio-sanitaire spécialisé (OSSS)",
+            "it": "Operatore Socio-Sanitario Specializzato (OSSS)"
+          }
+        },
+        {
+          "name": {
+            "de": "Krankenpfleger/in (Infermiere)",
+            "en": "Registered nurse (Infermiere)",
+            "fr": "Infirmier/ère (Infermiere)",
+            "it": "Infermiere"
+          }
+        },
+        {
+          "name": {
+            "de": "Erste-Hilfe-Ausbildung",
+            "en": "First aid certificate",
+            "fr": "Formation aux premiers secours",
+            "it": "Formazione di primo soccorso"
+          },
+          "isTimeLimited": true
+        }
+      ]
+    },
+    "healthcare": {
+      "schedulingRulePresets": [
+        {
+          "name": "IT Ospedale Standard",
+          "maxDailyHours": 12,
+          "minPauseHours": 11,
+          "minRestDays": 1,
+          "maxConsecutiveDays": 6,
+          "performsShiftWork": true
+        }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "Krankenpfleger/in (Infermiere)",
+            "en": "Registered nurse (Infermiere)",
+            "fr": "Infirmier/ère (Infermiere)",
+            "it": "Infermiere"
+          }
+        },
+        {
+          "name": {
+            "de": "Sozial-Gesundheitsbetreuer/in (OSS)",
+            "en": "Social-health care operator (OSS)",
+            "fr": "Opérateur socio-sanitaire (OSS)",
+            "it": "Operatore Socio-Sanitario (OSS)"
+          }
+        },
+        {
+          "name": {
+            "de": "Sozial-Gesundheitsbetreuer/in mit Zusatzqualifikation (OSSS)",
+            "en": "Specialised social-health care operator (OSSS)",
+            "fr": "Opérateur socio-sanitaire spécialisé (OSSS)",
+            "it": "Operatore Socio-Sanitario Specializzato (OSSS)"
+          }
+        },
+        {
+          "name": {
+            "de": "Erste-Hilfe-Ausbildung",
+            "en": "First aid certificate",
+            "fr": "Formation aux premiers secours",
+            "it": "Formazione di primo soccorso"
+          },
+          "isTimeLimited": true
+        }
+      ]
+    },
+    "security": {
+      "schedulingRulePresets": [
+        {
+          "name": "IT Vigilanza Privata Standard",
+          "minPauseHours": 11,
+          "minRestDays": 1,
+          "maxConsecutiveDays": 6,
+          "performsShiftWork": true
+        }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "Geprüfte Sicherheitswache (Guardia Particolare Giurata, GPG)",
+            "en": "Licensed private security guard (Guardia Particolare Giurata, GPG)",
+            "fr": "Garde privé assermenté (Guardia Particolare Giurata, GPG)",
+            "it": "Guardia Particolare Giurata (GPG)"
+          },
+          "isTimeLimited": true
+        },
+        {
+          "name": {
+            "de": "Erste-Hilfe-Ausbildung",
+            "en": "First aid certificate",
+            "fr": "Formation aux premiers secours",
+            "it": "Formazione di primo soccorso"
+          },
+          "isTimeLimited": true
+        }
+      ]
+    },
+    "facility": {
+      "schedulingRulePresets": [
+        {
+          "name": "IT Pulizie Standard",
+          "minPauseHours": 11,
+          "minRestDays": 1,
+          "maxConsecutiveDays": 6,
+          "performsShiftWork": true
+        }
+      ],
+      "counterRules": [
+        { "event": "workedDayInWeek", "period": "week", "threshold": 6 }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "Gebäudereiniger/in (Ausbildungsberuf)",
+            "en": "Building cleaner (vocational qualification)",
+            "fr": "Nettoyeur de bâtiments (formation professionnelle)",
+            "it": "Pulitore di edifici (qualifica professionale)"
+          }
+        }
+      ]
+    },
+    "logistics": {
+      "schedulingRulePresets": [
+        {
+          "name": "IT Logistica Standard",
+          "minPauseHours": 11,
+          "minRestDays": 1,
+          "maxConsecutiveDays": 6,
+          "performsShiftWork": true
+        }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "Führerschein Klasse C/CE",
+            "en": "Driving licence class C/CE",
+            "fr": "Permis de conduire catégorie C/CE",
+            "it": "Patente di guida categoria C/CE"
+          },
+          "isTimeLimited": true
+        },
+        {
+          "name": {
+            "de": "Berufskraftfahrerqualifikation (CQC)",
+            "en": "Professional driver qualification (CQC)",
+            "fr": "Qualification de conducteur professionnel (CQC)",
+            "it": "Carta di Qualificazione del Conducente (CQC)"
+          },
+          "isTimeLimited": true
+        },
+        {
+          "name": {
+            "de": "ADR-Bescheinigung (Gefahrgut)",
+            "en": "ADR certificate (dangerous goods)",
+            "fr": "Certificat de formation ADR",
+            "it": "Patentino ADR (C.F.P. ADR)"
+          },
+          "isTimeLimited": true
+        }
+      ]
+    }
+  },
+  "seedDemoData": false
+}

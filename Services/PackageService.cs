@@ -20,6 +20,9 @@ public class PackageService : IPackageService
 
     public async Task<(List<LanguagePackage> Items, int TotalCount)> SearchPackagesAsync(string? search, PackageStatus? status, int page, int pageSize)
     {
+        page = Math.Max(page, AppConstants.MinSearchPage);
+        pageSize = Math.Clamp(pageSize, AppConstants.MinSearchPageSize, AppConstants.MaxSearchPageSize);
+
         var query = _db.Packages.Include(p => p.Author).AsQueryable();
 
         if (status.HasValue)

@@ -16,4 +16,10 @@
     <PackageReference Include="SQLitePCLRaw.lib.e_sqlite3" Version="3.53.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="Resources\RegionProfiles\*.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <None Remove="Resources\OnPremTemplate\**" />
+    <Content Include="Resources\OnPremTemplate\**" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+
 </Project>

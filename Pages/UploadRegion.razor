@@ -1,0 +1,229 @@
+@page "/upload-region"
+@inject IRegionPackageService RegionPackageService
+@inject IRegionProfileValidationService ProfileValidation
+@inject IHttpContextAccessor HttpContextAccessor
+@inject IStringLocalizer<SharedResource> L
+
+<PageTitle>Upload Region Package - Klacks Store</PageTitle>
+
+<div class="max-w-4xl mx-auto px-6 py-8">
+    <h1 class="text-3xl font-black tracking-tight mb-2">
+        <span class="material-symbols-outlined text-[32px] align-middle mr-1">public</span> @L["UploadRegion_Title"]
+    </h1>
+    <p class="text-on-surface-variant mb-8">@L["UploadRegion_Subtitle"]</p>
+
+    @if (!_isAuthenticated)
+    {
+        <div class="bg-secondary-fixed text-on-secondary-fixed-variant rounded-lg p-4 mb-6 text-sm">
+            @L["Common_PleaseLogin"] <a href="/login" class="underline font-semibold">@L["Common_LoginLink"]</a>
+        </div>
+    }
+    else
+    {
+        @if (!string.IsNullOrWhiteSpace(_errorMessage))
+        {
+            <div class="bg-error-container text-on-error-container rounded-lg p-4 mb-6 text-sm">@_errorMessage</div>
+        }
+
+        @if (_validationErrors.Count > 0)
+        {
+            <div class="bg-error-container text-on-error-container rounded-lg p-4 mb-6 text-sm">
+                <div class="font-bold mb-1">@L["UploadRegion_ValidationErrors"]</div>
+                <ul class="mb-0 ps-5">
+                    @foreach (var error in _validationErrors)
+                    {
+                        <li>@error</li>
+                    }
+                </ul>
+            </div>
+        }
+
+        @if (_validationWarnings.Count > 0)
+        {
+            <div class="bg-secondary-fixed text-on-secondary-fixed-variant rounded-lg p-4 mb-6 text-sm">
+                <div class="font-bold mb-1">@L["UploadRegion_ValidationWarnings"]</div>
+                <ul class="mb-0 ps-5">
+                    @foreach (var warning in _validationWarnings)
+                    {
+                        <li>@warning</li>
+                    }
+                </ul>
+            </div>
+        }
+
+        @if (!string.IsNullOrWhiteSpace(_successMessage))
+        {
+            <div class="bg-tertiary-fixed text-on-tertiary-fixed-variant rounded-lg p-4 mb-6 text-sm">@_successMessage</div>
+        }
+
+        <EditForm Model="@_model" OnValidSubmit="HandleUpload">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                    <label class="block text-sm font-semibold text-on-surface mb-2">@L["UploadRegion_CountryLabel"]</label>
+                    <InputSelect class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all" @bind-Value="_model.CountryCode">
+                        <option value="">@L["UploadRegion_SelectCountry"]</option>
+                        @foreach (var country in RegionCountry.CountryNames.OrderBy(c => c.Value))
+                        {
+                            <option value="@country.Key">@country.Value (@country.Key.ToUpperInvariant())</option>
+                        }
+                    </InputSelect>
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold text-on-surface mb-2">@L["Common_Version"]</label>
+                    <InputText class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all" @bind-Value="_model.Version" placeholder="1.0.0" />
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                    <label class="block text-sm font-semibold text-on-surface mb-2">@L["Upload_MinKlacksVersion"]</label>
+                    <InputText class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all" @bind-Value="_model.MinKlacksVersion" placeholder="1.0.0" />
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold text-on-surface mb-2">@L["UploadRegion_ChangeLog"]</label>
+                    <InputText class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all" @bind-Value="_model.ChangeLog" placeholder="@L["UploadRegion_ChangeLogPlaceholder"].Value" />
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <label class="block text-sm font-semibold text-on-surface mb-2">@L["Upload_Description"]</label>
+                <InputTextArea class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all" @bind-Value="_model.Description" rows="3"
+                               placeholder="@L["UploadRegion_DescriptionPlaceholder"].Value" />
+            </div>
+
+            <div class="border-2 border-dashed border-outline-variant/50 rounded-xl p-8 text-center hover:border-secondary hover:bg-surface-container-low transition-all cursor-pointer mb-6">
+                <span class="material-symbols-outlined text-4xl text-on-surface-variant mb-2 block">travel_explore</span>
+                <p class="font-bold">@L["UploadRegion_ProfileRequired"]</p>
+                <InputFile OnChange="OnProfileSelected" accept=".json" />
+                @if (_profileLoaded)
+                {
+                    <span class="text-on-tertiary-container flex items-center justify-center gap-1 mt-2"><span class="material-symbols-outlined text-[18px]">check_circle</span> @L["Common_Loaded"]</span>
+                }
+            </div>
+
+            <button type="submit" class="px-8 py-3 bg-secondary text-on-secondary rounded-lg font-bold hover:opacity-90 active:scale-[0.98] transition-all disabled:opacity-50 flex items-center gap-2" disabled="@(_isSubmitting || !_profileLoaded)">
+                @if (_isSubmitting)
+                {
+                    <div class="animate-spin w-5 h-5 border-2 border-white border-t-transparent rounded-full"></div>
+                }
+                <span class="material-symbols-outlined text-[20px]">send</span> @L["Common_SubmitForReview"]
+            </button>
+        </EditForm>
+    }
+</div>
+
+@code {
+    private UploadRegionModel _model = new();
+    private string _profileJson = string.Empty;
+    private bool _profileLoaded;
+    private bool _isSubmitting;
+    private bool _isAuthenticated;
+    private int _userId;
+    private string _errorMessage = string.Empty;
+    private string _successMessage = string.Empty;
+    private List<string> _validationErrors = [];
+    private List<string> _validationWarnings = [];
+
+    protected override void OnInitialized()
+    {
+        var user = HttpContextAccessor.HttpContext?.User;
+        _isAuthenticated = user?.Identity?.IsAuthenticated ?? false;
+        if (_isAuthenticated)
+        {
+            var idClaim = user?.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+            if (int.TryParse(idClaim, out var id))
+            {
+                _userId = id;
+            }
+        }
+    }
+
+    private async Task OnProfileSelected(InputFileChangeEventArgs e)
+    {
+        _errorMessage = string.Empty;
+        _validationErrors = [];
+        _validationWarnings = [];
+        try
+        {
+            using var reader = new StreamReader(e.File.OpenReadStream(AppConstants.RegionProfileMaxUploadSizeBytes));
+            _profileJson = await reader.ReadToEndAsync();
+            var result = ProfileValidation.ValidateProfileJson(_profileJson);
+            _validationErrors = result.Errors;
+            _validationWarnings = result.Warnings;
+            _profileLoaded = result.IsValid;
+        }
+        catch (Exception ex)
+        {
+            _errorMessage = $"Error reading profile: {ex.Message}";
+            _profileLoaded = false;
+        }
+    }
+
+    private async Task HandleUpload()
+    {
+        _errorMessage = string.Empty;
+        _successMessage = string.Empty;
+        _isSubmitting = true;
+
+        try
+        {
+            if (string.IsNullOrWhiteSpace(_model.CountryCode))
+            {
+                _errorMessage = L["UploadRegion_CountryRequired"];
+                return;
+            }
+
+            var countryCode = _model.CountryCode.Trim().ToLowerInvariant();
+            var existing = await RegionPackageService.GetRegionPackageByCountryAsync(countryCode);
+
+            if (existing is not null)
+            {
+                var updated = new RegionPackage
+                {
+                    Version = _model.Version.Trim(),
+                    Description = string.IsNullOrWhiteSpace(_model.Description) ? existing.Description : _model.Description.Trim(),
+                    MinKlacksVersion = _model.MinKlacksVersion.Trim()
+                };
+
+                await RegionPackageService.UpdateRegionPackageAsync(
+                    countryCode, updated, _profileJson, _model.ChangeLog?.Trim(), PackageStatus.PendingReview);
+            }
+            else
+            {
+                var package = new RegionPackage
+                {
+                    CountryCode = countryCode,
+                    CountryName = RegionCountry.CountryNames.GetValueOrDefault(countryCode, countryCode.ToUpperInvariant()),
+                    Version = _model.Version.Trim(),
+                    Description = _model.Description?.Trim() ?? string.Empty,
+                    MinKlacksVersion = _model.MinKlacksVersion.Trim(),
+                    AuthorId = _userId
+                };
+
+                await RegionPackageService.CreateRegionPackageAsync(package, _profileJson, _model.ChangeLog?.Trim());
+            }
+
+            _successMessage = L["UploadRegion_Success"];
+            _model = new();
+            _profileJson = string.Empty;
+            _profileLoaded = false;
+        }
+        catch (Exception ex)
+        {
+            _errorMessage = ex.Message;
+        }
+        finally
+        {
+            _isSubmitting = false;
+        }
+    }
+
+    private class UploadRegionModel
+    {
+        public string CountryCode { get; set; } = string.Empty;
+        public string Version { get; set; } = "1.0.0";
+        public string MinKlacksVersion { get; set; } = "1.0.0";
+        public string Description { get; set; } = string.Empty;
+        public string? ChangeLog { get; set; }
+    }
+}

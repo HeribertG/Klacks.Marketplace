@@ -15,7 +15,7 @@ namespace Klacks.Marketplace.Data.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "10.0.5");
+            modelBuilder.HasAnnotation("ProductVersion", "10.0.10");
 
             modelBuilder.Entity("Klacks.Marketplace.Models.DownloadLog", b =>
                 {
@@ -300,6 +300,140 @@ namespace Klacks.Marketplace.Data.Migrations
                     b.ToTable("PluginDownloadLogs");
                 });
 
+            modelBuilder.Entity("Klacks.Marketplace.Models.RegionDownloadLog", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("ArtifactType")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("DownloadedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Industry")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("IpAddress")
+                        .IsRequired()
+                        .HasMaxLength(45)
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("RegionPackageId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Version")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RegionPackageId");
+
+                    b.ToTable("RegionDownloadLogs");
+                });
+
+            modelBuilder.Entity("Klacks.Marketplace.Models.RegionPackage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("AuthorId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("CountryCode")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("CountryName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(4000)
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Downloads")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("MinKlacksVersion")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Version")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AuthorId");
+
+                    b.HasIndex("CountryCode")
+                        .IsUnique();
+
+                    b.ToTable("RegionPackages");
+                });
+
+            modelBuilder.Entity("Klacks.Marketplace.Models.RegionPackageVersion", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("ChangeLog")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ContentHash")
+                        .IsRequired()
+                        .HasMaxLength(64)
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("IsSeeded")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("ProfileJson")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("RegionPackageId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Version")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RegionPackageId");
+
+                    b.ToTable("RegionPackageVersions");
+                });
+
             modelBuilder.Entity("Klacks.Marketplace.Models.User", b =>
                 {
                     b.Property<int>("Id")
@@ -400,6 +534,39 @@ namespace Klacks.Marketplace.Data.Migrations
                     b.Navigation("Plugin");
                 });
 
+            modelBuilder.Entity("Klacks.Marketplace.Models.RegionDownloadLog", b =>
+                {
+                    b.HasOne("Klacks.Marketplace.Models.RegionPackage", "RegionPackage")
+                        .WithMany("DownloadLogs")
+                        .HasForeignKey("RegionPackageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("RegionPackage");
+                });
+
+            modelBuilder.Entity("Klacks.Marketplace.Models.RegionPackage", b =>
+                {
+                    b.HasOne("Klacks.Marketplace.Models.User", "Author")
+                        .WithMany()
+                        .HasForeignKey("AuthorId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Author");
+                });
+
+            modelBuilder.Entity("Klacks.Marketplace.Models.RegionPackageVersion", b =>
+                {
+                    b.HasOne("Klacks.Marketplace.Models.RegionPackage", "RegionPackage")
+                        .WithMany("Versions")
+                        .HasForeignKey("RegionPackageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("RegionPackage");
+                });
+
             modelBuilder.Entity("Klacks.Marketplace.Models.FeaturePlugin", b =>
                 {
                     b.Navigation("DownloadLogs");
@@ -408,6 +575,13 @@ namespace Klacks.Marketplace.Data.Migrations
                 });
 
             modelBuilder.Entity("Klacks.Marketplace.Models.LanguagePackage", b =>
+                {
+                    b.Navigation("DownloadLogs");
+
+                    b.Navigation("Versions");
+                });
+
+            modelBuilder.Entity("Klacks.Marketplace.Models.RegionPackage", b =>
                 {
                     b.Navigation("DownloadLogs");
 

@@ -190,4 +190,50 @@
   <data name="Status_Rejected" xml:space="preserve"><value>Rifiutato</value></data>
   <data name="Status_Draft" xml:space="preserve"><value>Bozza</value></data>
   <data name="Status_Unknown" xml:space="preserve"><value>Sconosciuto</value></data>
+  <data name="Common_Deployment" xml:space="preserve"><value>Deployment</value></data>
+  <data name="Common_RegionPackage" xml:space="preserve"><value>Pacchetto regione</value></data>
+  <data name="Common_Country" xml:space="preserve"><value>Paese</value></data>
+  <data name="Nav_UploadRegion" xml:space="preserve"><value>Carica regione</value></data>
+  <data name="Index_SearchRegions" xml:space="preserve"><value>Cerca pacchetti regione...</value></data>
+  <data name="Index_NoRegionsFound" xml:space="preserve"><value>Nessun pacchetto regione trovato</value></data>
+  <data name="Index_BeFirstRegion" xml:space="preserve"><value>Carica il primo pacchetto regione!</value></data>
+  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>Profili di deployment per paese per nuove installazioni.</value></data>
+  <data name="RegionDetail_NotFound" xml:space="preserve"><value>Pacchetto regione non trovato</value></data>
+  <data name="RegionDetail_NotFoundDesc" xml:space="preserve"><value>Il pacchetto regione richiesto non esiste o non è pubblicato.</value></data>
+  <data name="RegionDetail_IndustryLabel" xml:space="preserve"><value>Settore</value></data>
+  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>Download di deployment</value></data>
+  <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>JSON del profilo</value></data>
+  <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>Profilo regionale per un'installazione Klacks esistente — da montare come file di configurazione della regione.</value></data>
+  <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>Bundle On-Prem</value></data>
+  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Bundle di installazione completo con script di installazione, Docker Compose e il profilo regionale.</value></data>
+  <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Bundle Docker Compose</value></data>
+  <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Setup Docker Compose minimale senza installer, per professionisti Docker.</value></data>
+  <data name="Industry_Homecare" xml:space="preserve"><value>Assistenza domiciliare</value></data>
+  <data name="Industry_Healthcare" xml:space="preserve"><value>Sanità</value></data>
+  <data name="Industry_Security" xml:space="preserve"><value>Sicurezza</value></data>
+  <data name="Industry_Facility" xml:space="preserve"><value>Servizi agli edifici</value></data>
+  <data name="Industry_Logistics" xml:space="preserve"><value>Logistica</value></data>
+  <data name="Industry_All" xml:space="preserve"><value>Tutti i settori</value></data>
+  <data name="UploadRegion_Title" xml:space="preserve"><value>Carica pacchetto regione</value></data>
+  <data name="UploadRegion_Subtitle" xml:space="preserve"><value>Condividi un profilo di configurazione paese con la community</value></data>
+  <data name="UploadRegion_CountryLabel" xml:space="preserve"><value>Paese</value></data>
+  <data name="UploadRegion_SelectCountry" xml:space="preserve"><value>Seleziona un paese...</value></data>
+  <data name="UploadRegion_ChangeLog" xml:space="preserve"><value>Registro modifiche</value></data>
+  <data name="UploadRegion_ChangeLogPlaceholder" xml:space="preserve"><value>Cosa è cambiato in questa versione?</value></data>
+  <data name="UploadRegion_DescriptionPlaceholder" xml:space="preserve"><value>Descrivi il profilo regione...</value></data>
+  <data name="UploadRegion_ProfileRequired" xml:space="preserve"><value>JSON del profilo regione (obbligatorio)</value></data>
+  <data name="UploadRegion_ValidationErrors" xml:space="preserve"><value>Errori di validazione</value></data>
+  <data name="UploadRegion_ValidationWarnings" xml:space="preserve"><value>Avvisi di validazione</value></data>
+  <data name="UploadRegion_Success" xml:space="preserve"><value>Pacchetto regione inviato per la revisione!</value></data>
+  <data name="UploadRegion_CountryRequired" xml:space="preserve"><value>Seleziona un paese</value></data>
+  <data name="MyPackages_NoRegions" xml:space="preserve"><value>Nessun pacchetto regione ancora</value></data>
+  <data name="MyPackages_NoRegionsDesc" xml:space="preserve"><value>Non hai ancora caricato pacchetti regione.</value></data>
+  <data name="MyPackages_UploadFirstRegion" xml:space="preserve"><value>Carica il tuo primo pacchetto regione</value></data>
+  <data name="Admin_PendingRegions" xml:space="preserve"><value>Regioni in attesa</value></data>
+  <data name="Admin_PendingRegionPackages" xml:space="preserve"><value>Pacchetti regione in attesa</value></data>
+  <data name="Admin_NoPendingRegions" xml:space="preserve"><value>Nessun pacchetto regione in attesa</value></data>
+  <data name="Admin_RegionApproved" xml:space="preserve"><value>Pacchetto regione approvato con successo</value></data>
+  <data name="Admin_RegionRejected" xml:space="preserve"><value>Pacchetto regione rifiutato</value></data>
+  <data name="Admin_RejectRegionTitle" xml:space="preserve"><value>Rifiuta pacchetto regione</value></data>
+  <data name="Admin_RejectRegionMessage" xml:space="preserve"><value>Vuoi davvero rifiutare questo pacchetto regione?</value></data>
 </root>

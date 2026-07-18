@@ -34,6 +34,9 @@ public class PluginsApiController(
         [FromQuery] int page = 1,
         [FromQuery] int pageSize = 12)
     {
+        page = Math.Max(page, AppConstants.MinSearchPage);
+        pageSize = Math.Clamp(pageSize, AppConstants.MinSearchPageSize, AppConstants.MaxSearchPageSize);
+
         var (items, totalCount) = await pluginService.SearchPluginsAsync(search, category, PackageStatus.Published, page, pageSize);
 
         var result = new PluginSearchResultDto
@@ -84,9 +87,9 @@ public class PluginsApiController(
     [HttpPost]
     public async Task<ActionResult> Upload([FromBody] PluginUploadDto dto)
     {
-        var configuredKey = configuration.GetValue<string>(ApiKeyConfigPath) ?? string.Empty;
+        var configuredKey = configuration.GetValue<string>(ApiKeyConfigPath);
         if (!Request.Headers.TryGetValue(ApiKeyHeaderName, out var providedKey) ||
-            providedKey.ToString() != configuredKey)
+            !ApiKeyValidator.IsValid(providedKey.ToString(), configuredKey))
         {
             return Unauthorized("Invalid or missing API key");
         }

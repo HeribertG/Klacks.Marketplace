@@ -13,6 +13,9 @@ public interface IAdminService
     Task<List<FeaturePlugin>> GetPendingPluginsAsync();
     Task ApprovePluginAsync(int pluginId);
     Task RejectPluginAsync(int pluginId, string reason);
+    Task<List<RegionPackage>> GetPendingRegionPackagesAsync();
+    Task ApproveRegionPackageAsync(int regionPackageId);
+    Task RejectRegionPackageAsync(int regionPackageId, string reason);
     Task<List<User>> GetUsersAsync();
     Task ToggleAdminAsync(int userId);
 }

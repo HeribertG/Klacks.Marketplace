@@ -1,11 +1,13 @@
 // Copyright (c) Heribert Gasparoli Private. All rights reserved.
 
 using System.Security.Claims;
+using System.Threading.RateLimiting;
 using Klacks.Marketplace.Constants;
 using Klacks.Marketplace.Data;
 using Klacks.Marketplace.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,6 +22,19 @@ builder.Services.AddDbContext<MarketplaceDbContext>(options =>
 {
     var dbPath = Path.Combine(builder.Environment.ContentRootPath, "data", AppConstants.DatabaseFileName);
     options.UseSqlite($"Data Source={dbPath}");
+});
+
+builder.Services.AddRateLimiter(options =>
+{
+    options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
+    options.AddPolicy(AppConstants.DownloadRateLimitPolicyName, httpContext =>
+        RateLimitPartition.GetFixedWindowLimiter(
+            httpContext.Connection.RemoteIpAddress?.ToString() ?? AppConstants.UnknownClientIp,
+            _ => new FixedWindowRateLimiterOptions
+            {
+                PermitLimit = AppConstants.DownloadRateLimitPermitLimit,
+                Window = TimeSpan.FromSeconds(AppConstants.DownloadRateLimitWindowSeconds)
+            }));
 });
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
@@ -38,6 +53,11 @@ builder.Services.AddScoped<IAdminService, AdminService>();
 builder.Services.AddScoped<IFileValidationService, FileValidationService>();
 builder.Services.AddScoped<IFeaturePluginMarketplaceService, FeaturePluginMarketplaceService>();
 builder.Services.AddScoped<IPluginValidationService, PluginValidationService>();
+builder.Services.AddScoped<IRegionPackageService, RegionPackageService>();
+builder.Services.AddScoped<IRegionProfileValidationService, RegionProfileValidationService>();
+builder.Services.AddScoped<IRegionPackageSeedService, RegionPackageSeedService>();
+builder.Services.AddScoped<IRegionProfilePatchService, RegionProfilePatchService>();
+builder.Services.AddSingleton<IRegionArtifactService, RegionArtifactService>();
 
 var app = builder.Build();
 
@@ -62,6 +82,9 @@ await using (var scope = app.Services.CreateAsyncScope())
             await db.SaveChangesAsync();
         }
     }
+
+    var regionSeedService = scope.ServiceProvider.GetRequiredService<IRegionPackageSeedService>();
+    await regionSeedService.SeedAsync();
 }
 
 if (!app.Environment.IsDevelopment())
@@ -85,6 +108,7 @@ localizationOptions.RequestCultureProviders = new List<IRequestCultureProvider>
 
 app.UseRequestLocalization(localizationOptions);
 app.UseRouting();
+app.UseRateLimiter();
 app.UseAuthentication();
 app.UseAuthorization();
 

@@ -1,6 +1,7 @@
 @page "/"
 @inject IPackageService PackageService
 @inject IFeaturePluginMarketplaceService PluginService
+@inject IRegionPackageService RegionPackageService
 @inject IStringLocalizer<SharedResource> L
 
 <PageTitle>Klacks Store</PageTitle>
@@ -16,7 +17,7 @@
                 <span class="material-symbols-outlined text-on-primary-container">search</span>
             </div>
             <input class="w-full pl-14 pr-6 py-5 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl focus:ring-2 focus:ring-secondary focus:bg-white focus:text-primary transition-all text-lg outline-none placeholder:text-on-primary-container/60"
-                   placeholder="@(_activeTab == Tab.LanguagePacks ? L["Index_SearchPacks"].Value : L["Index_SearchPlugins"].Value)"
+                   placeholder="@GetSearchPlaceholder()"
                    @bind="_searchText" @bind:event="oninput" @onkeyup="OnSearchKeyUp" type="text" />
         </div>
         <div class="flex items-center justify-center gap-4">
@@ -27,6 +28,10 @@
             <button class="px-8 py-3 rounded-full font-bold transition-all @(_activeTab == Tab.FeaturePlugins ? "bg-secondary text-on-secondary hover:scale-105" : "bg-white/5 border border-white/20 text-white hover:bg-white/10")"
                     @onclick="() => SwitchTab(Tab.FeaturePlugins)">
                 @L["Common_FeaturePlugins"]
+            </button>
+            <button class="px-8 py-3 rounded-full font-bold transition-all @(_activeTab == Tab.RegionPackages ? "bg-secondary text-on-secondary hover:scale-105" : "bg-white/5 border border-white/20 text-white hover:bg-white/10")"
+                    @onclick="() => SwitchTab(Tab.RegionPackages)">
+                @L["Common_Deployment"]
             </button>
         </div>
     </div>
@@ -68,6 +73,14 @@ else if (_activeTab == Tab.FeaturePlugins && _plugins.Count == 0)
         <p class="text-on-surface-variant">@L["Index_BeFirstPlugin"]</p>
     </section>
 }
+else if (_activeTab == Tab.RegionPackages && _regionPackages.Count == 0)
+{
+    <section class="py-24 px-6 bg-surface text-center">
+        <span class="material-symbols-outlined text-6xl text-on-surface-variant mb-4 block">public</span>
+        <h3 class="text-2xl font-bold mb-2">@L["Index_NoRegionsFound"]</h3>
+        <p class="text-on-surface-variant">@L["Index_BeFirstRegion"]</p>
+    </section>
+}
 else if (_activeTab == Tab.LanguagePacks)
 {
     <section class="py-24 px-6 bg-surface">
@@ -88,7 +101,7 @@ else if (_activeTab == Tab.LanguagePacks)
         </div>
     </section>
 }
-else
+else if (_activeTab == Tab.FeaturePlugins)
 {
     <section class="py-24 px-6 bg-surface-container-low">
         <div class="max-w-7xl mx-auto">
@@ -100,6 +113,26 @@ else
                 @foreach (var plugin in _plugins)
                 {
                     <PluginCard Plugin="@plugin" />
+                }
+            </div>
+        </div>
+    </section>
+}
+else
+{
+    <section class="py-24 px-6 bg-surface">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-end justify-between mb-12">
+                <div>
+                    <h2 class="text-3xl font-black tracking-tight text-on-surface mb-2">@L["Common_Deployment"]</h2>
+                    <p class="text-on-surface-variant">@L["Index_RegionsSubtitle"]</p>
+                </div>
+                <span class="text-on-surface-variant text-sm font-medium">@L["Common_ResultsCount", _totalCount]</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                @foreach (var regionPackage in _regionPackages)
+                {
+                    <RegionPackageCard RegionPackage="@regionPackage" />
                 }
             </div>
         </div>
@@ -156,11 +189,12 @@ else
 </footer>
 
 @code {
-    private enum Tab { LanguagePacks, FeaturePlugins }
+    private enum Tab { LanguagePacks, FeaturePlugins, RegionPackages }
 
     private Tab _activeTab = Tab.LanguagePacks;
     private List<LanguagePackage> _packages = [];
     private List<FeaturePlugin> _plugins = [];
+    private List<RegionPackage> _regionPackages = [];
     private string _searchText = string.Empty;
     private string _selectedCategory = string.Empty;
     private int _currentPage = 1;
@@ -183,11 +217,17 @@ else
             _packages = items;
             _totalCount = totalCount;
         }
-        else
+        else if (_activeTab == Tab.FeaturePlugins)
         {
             var category = string.IsNullOrWhiteSpace(_selectedCategory) ? null : _selectedCategory;
             var (items, totalCount) = await PluginService.SearchPluginsAsync(_searchText, category, null, _currentPage, AppConstants.PageSize);
             _plugins = items;
+            _totalCount = totalCount;
+        }
+        else
+        {
+            var (items, totalCount) = await RegionPackageService.SearchRegionPackagesAsync(_searchText, null, null, _currentPage, AppConstants.PageSize);
+            _regionPackages = items;
             _totalCount = totalCount;
         }
 
@@ -240,4 +280,11 @@ else
             await LoadData();
         }
     }
+
+    private string GetSearchPlaceholder() => _activeTab switch
+    {
+        Tab.LanguagePacks => L["Index_SearchPacks"].Value,
+        Tab.FeaturePlugins => L["Index_SearchPlugins"].Value,
+        _ => L["Index_SearchRegions"].Value
+    };
 }

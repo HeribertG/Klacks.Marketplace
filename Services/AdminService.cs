@@ -111,6 +111,83 @@ public class AdminService : IAdminService
         await _db.SaveChangesAsync();
     }
 
+    public async Task<List<RegionPackage>> GetPendingRegionPackagesAsync()
+    {
+        return await _db.RegionPackages
+            .Include(p => p.Author)
+            .Include(p => p.Versions.OrderByDescending(v => v.CreatedAt).Take(1))
+            .Where(p => p.Status == PackageStatus.PendingReview)
+            .OrderBy(p => p.CreatedAt)
+            .ToListAsync();
+    }
+
+    public async Task ApproveRegionPackageAsync(int regionPackageId)
+    {
+        var package = await _db.RegionPackages
+            .Include(p => p.Versions)
+            .FirstOrDefaultAsync(p => p.Id == regionPackageId);
+
+        if (package is null)
+        {
+            throw new InvalidOperationException("Region package not found");
+        }
+
+        package.Status = PackageStatus.Published;
+        package.UpdatedAt = DateTime.UtcNow;
+
+        foreach (var version in package.Versions.Where(v => v.Status == PackageStatus.PendingReview))
+        {
+            version.Status = PackageStatus.Published;
+        }
+
+        var latestPublished = package.Versions
+            .Where(v => v.Status == PackageStatus.Published)
+            .OrderByDescending(v => v.CreatedAt)
+            .FirstOrDefault();
+
+        if (latestPublished is not null)
+        {
+            package.Version = latestPublished.Version;
+        }
+
+        await _db.SaveChangesAsync();
+    }
+
+    public async Task RejectRegionPackageAsync(int regionPackageId, string reason)
+    {
+        var package = await _db.RegionPackages
+            .Include(p => p.Versions)
+            .FirstOrDefaultAsync(p => p.Id == regionPackageId);
+
+        if (package is null)
+        {
+            throw new InvalidOperationException("Region package not found");
+        }
+
+        foreach (var version in package.Versions.Where(v => v.Status == PackageStatus.PendingReview))
+        {
+            version.Status = PackageStatus.Rejected;
+        }
+
+        var latestPublished = package.Versions
+            .Where(v => v.Status == PackageStatus.Published)
+            .OrderByDescending(v => v.CreatedAt)
+            .FirstOrDefault();
+
+        if (latestPublished is not null)
+        {
+            package.Status = PackageStatus.Published;
+            package.Version = latestPublished.Version;
+        }
+        else
+        {
+            package.Status = PackageStatus.Rejected;
+        }
+
+        package.UpdatedAt = DateTime.UtcNow;
+        await _db.SaveChangesAsync();
+    }
+
     public async Task ToggleAdminAsync(int userId)
     {
         var user = await _db.Users.FindAsync(userId);

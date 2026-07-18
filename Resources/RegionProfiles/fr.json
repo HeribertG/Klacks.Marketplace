@@ -1,0 +1,266 @@
+{
+  "version": 1,
+  "region": "FR",
+  "languages": {
+    "default": "fr"
+  },
+  "locale": {
+    "country": "FR",
+    "state": "FR",
+    "timeZone": "Europe/Paris",
+    "calendarSelection": { "country": "FR", "state": "FR" }
+  },
+  "calendar": {
+    "weekendDays": "Saturday,Sunday",
+    "weekStartDay": "Monday"
+  },
+  "worktime": {
+    "defaultWorkingHours": 7,
+    "overtimeThreshold": 35,
+    "vacationDaysPerYear": 30,
+    "maxDailyHours": 10,
+    "maxWeeklyHours": 48,
+    "maxConsecutiveDays": 6,
+    "minRestDays": 1,
+    "minPauseHours": 11
+  },
+  "surcharges": {
+    "nightWindow": { "start": "21:00", "end": "06:00" },
+    "overtime": {
+      "basis": "week",
+      "tiers": [
+        { "afterHours": 35, "rate": 0.25 },
+        { "afterHours": 43, "rate": 0.5 }
+      ]
+    }
+  },
+  "compliance": {
+    "enforcement": {
+      "defaultMode": "warn",
+      "rules": { "rollingAverage": "warn" },
+      "allowSupervisorOverride": true
+    },
+    "periodCaps": [
+      { "windowWeeks": 12, "maxAverageWeeklyHours": 44 }
+    ]
+  },
+  "export": {
+    "enabledFormats": ["generic-payroll-csv"],
+    "defaultPayrollTargetSystem": "generic-payroll-csv"
+  },
+  "industryProfiles": {
+    "homecare": {
+      "schedulingRulePresets": [
+        {
+          "name": "FR Aide à domicile Standard",
+          "maxDailyHours": 10,
+          "maxWeeklyHours": 48,
+          "minPauseHours": 11,
+          "minRestDays": 1,
+          "maxConsecutiveDays": 6,
+          "nightStart": "21:00",
+          "nightEnd": "06:00",
+          "performsShiftWork": true
+        }
+      ],
+      "restDayRotations": [
+        { "dayOfWeek": "sunday", "minFree": 2, "windowWeeks": 4 }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "Pflegefachkraft",
+            "en": "Registered nurse",
+            "fr": "Infirmier/ère diplômé/e d'État",
+            "it": "Infermiere"
+          }
+        },
+        {
+          "name": {
+            "de": "Betreuungskraft (DEAES)",
+            "en": "Social and educational care assistant (DEAES)",
+            "fr": "Diplôme d'État d'accompagnant éducatif et social (DEAES)",
+            "it": "Operatore socio-assistenziale (DEAES)"
+          }
+        },
+        {
+          "name": {
+            "de": "Erste-Hilfe-Ausbildung",
+            "en": "First aid certificate",
+            "fr": "Formation aux premiers secours",
+            "it": "Formazione di primo soccorso"
+          },
+          "isTimeLimited": true
+        }
+      ]
+    },
+    "healthcare": {
+      "schedulingRulePresets": [
+        {
+          "name": "FR Hôpital Standard",
+          "maxDailyHours": 10,
+          "maxWeeklyHours": 48,
+          "minPauseHours": 11,
+          "minRestDays": 1,
+          "maxConsecutiveDays": 6,
+          "nightStart": "21:00",
+          "nightEnd": "06:00",
+          "performsShiftWork": true
+        }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "Pflegefachkraft",
+            "en": "Registered nurse",
+            "fr": "Infirmier/ère diplômé/e d'État",
+            "it": "Infermiere"
+          }
+        },
+        {
+          "name": {
+            "de": "AFGSU 1 oder 2 (Notfallversorgung im Gesundheitswesen)",
+            "en": "AFGSU 1 or 2 (healthcare emergency response certificate)",
+            "fr": "AFGSU 1 ou 2 (Attestation de Formation aux Gestes et Soins d'Urgence)",
+            "it": "AFGSU 1 o 2 (attestato di formazione per le urgenze sanitarie in Francia)"
+          },
+          "isTimeLimited": true
+        },
+        {
+          "name": {
+            "de": "Erste-Hilfe-Ausbildung",
+            "en": "First aid certificate",
+            "fr": "Formation aux premiers secours",
+            "it": "Formazione di primo soccorso"
+          },
+          "isTimeLimited": true
+        }
+      ]
+    },
+    "security": {
+      "schedulingRulePresets": [
+        {
+          "name": "FR Sécurité privée Standard",
+          "maxDailyHours": 10,
+          "maxWeeklyHours": 48,
+          "minPauseHours": 10,
+          "minRestDays": 1,
+          "maxConsecutiveDays": 6,
+          "nightRate": 0.1,
+          "nightStart": "21:00",
+          "nightEnd": "06:00",
+          "performsShiftWork": true
+        }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "Berufsausweis (CNAPS)",
+            "en": "Professional card (CNAPS)",
+            "fr": "Carte professionnelle (CNAPS)",
+            "it": "Tessera professionale (CNAPS)"
+          },
+          "isTimeLimited": true
+        },
+        {
+          "name": {
+            "de": "SSIAP 1 (Brandschutz- und Personensicherheitsdienst)",
+            "en": "SSIAP 1 (fire safety and life safety officer certificate)",
+            "fr": "SSIAP 1 (Service de Sécurité Incendie et d'Assistance à Personnes)",
+            "it": "SSIAP 1 (servizio di sicurezza antincendio e assistenza alle persone)"
+          },
+          "isTimeLimited": true
+        },
+        {
+          "name": {
+            "de": "Erste-Hilfe-Ausbildung",
+            "en": "First aid certificate",
+            "fr": "Formation aux premiers secours",
+            "it": "Formazione di primo soccorso"
+          },
+          "isTimeLimited": true
+        }
+      ]
+    },
+    "facility": {
+      "schedulingRulePresets": [
+        {
+          "name": "FR Propreté Standard",
+          "maxDailyHours": 10,
+          "maxWeeklyHours": 48,
+          "minPauseHours": 11,
+          "minRestDays": 1,
+          "maxConsecutiveDays": 6,
+          "nightStart": "21:00",
+          "nightEnd": "06:00",
+          "performsShiftWork": true
+        }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "Erste-Hilfe-Ausbildung",
+            "en": "First aid certificate",
+            "fr": "Formation aux premiers secours",
+            "it": "Formazione di primo soccorso"
+          },
+          "isTimeLimited": true
+        }
+      ]
+    },
+    "logistics": {
+      "schedulingRulePresets": [
+        {
+          "name": "FR Transport routier Standard",
+          "maxDailyHours": 10,
+          "maxWeeklyHours": 48,
+          "minPauseHours": 11,
+          "minRestDays": 1,
+          "maxConsecutiveDays": 6,
+          "nightStart": "21:00",
+          "nightEnd": "06:00",
+          "performsShiftWork": true
+        }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "Führerschein Klasse C/CE",
+            "en": "Driving licence class C/CE",
+            "fr": "Permis de conduire catégorie C/CE",
+            "it": "Patente di guida categoria C/CE"
+          },
+          "isTimeLimited": true
+        },
+        {
+          "name": {
+            "de": "Gabelstaplerschein (Flurförderzeug)",
+            "en": "Forklift licence",
+            "fr": "Certificat cariste (CACES)",
+            "it": "Patentino muletto (carrelli elevatori)"
+          },
+          "isTimeLimited": true
+        },
+        {
+          "name": {
+            "de": "ADR-Bescheinigung (Gefahrgut)",
+            "en": "ADR certificate (dangerous goods)",
+            "fr": "Certificat de formation ADR",
+            "it": "Patentino ADR (C.F.P. ADR)"
+          },
+          "isTimeLimited": true
+        },
+        {
+          "name": {
+            "de": "Berufskraftfahrer-Qualifikation (Schlüsselzahl 95)",
+            "en": "Professional driver qualification (Code 95)",
+            "fr": "Qualification de conducteur professionnel (Code 95)",
+            "it": "Carta di qualificazione del conducente (Codice 95)"
+          },
+          "isTimeLimited": true
+        }
+      ]
+    }
+  },
+  "seedDemoData": false
+}
