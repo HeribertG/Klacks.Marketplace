@@ -17,12 +17,33 @@
         new("en", "English"),
         new("de", "Deutsch"),
         new("fr", "Fran\u00e7ais"),
-        new("it", "Italiano")
+        new("it", "Italiano"),
+        new("ar", "\u0627\u0644\u0639\u0631\u0628\u064a\u0629"),
+        new("cs", "\u010ce\u0161tina"),
+        new("da", "Dansk"),
+        new("el", "\u0395\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ac"),
+        new("es", "Espa\u00f1ol"),
+        new("fi", "Suomi"),
+        new("he", "\u05e2\u05d1\u05e8\u05d9\u05ea"),
+        new("id", "Bahasa Indonesia"),
+        new("ja", "\u65e5\u672c\u8a9e"),
+        new("ko", "\ud55c\uad6d\uc5b4"),
+        new("ms", "Bahasa Melayu"),
+        new("nb", "Norsk Bokm\u00e5l"),
+        new("nl", "Nederlands"),
+        new("pl", "Polski"),
+        new("pt", "Portugu\u00eas"),
+        new("ro", "Rom\u00e2n\u0103"),
+        new("sv", "Svenska"),
+        new("th", "\u0e44\u0e17\u0e22"),
+        new("vi", "Ti\u1ebfng Vi\u1ec7t"),
+        new("zh-CN", "\u7b80\u4f53\u4e2d\u6587"),
+        new("zh-TW", "\u7e41\u9ad4\u4e2d\u6587")
     ];
 
     protected override void OnInitialized()
     {
-        _currentCulture = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
+        _currentCulture = System.Globalization.CultureInfo.CurrentCulture.Name;
         if (!_cultures.Any(c => c.Code == _currentCulture))
             _currentCulture = "en";
     }
@@ -31,7 +52,7 @@
     {
         var culture = e.Value?.ToString() ?? "en";
         Navigation.NavigateTo(
-            $"/Culture/Set?culture={culture}&redirectUri={Uri.EscapeDataString(Navigation.Uri)}",
+            $"Culture/Set?culture={culture}&redirectUri={Uri.EscapeDataString(Navigation.Uri)}",
             forceLoad: true);
     }
 

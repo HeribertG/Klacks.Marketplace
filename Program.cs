@@ -93,6 +93,12 @@ await using (var scope = app.Services.CreateAsyncScope())
 
 app.UseForwardedHeaders();
 
+var pathBase = app.Configuration["PathBase"];
+if (!string.IsNullOrEmpty(pathBase))
+{
+    app.UsePathBase(pathBase);
+}
+
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
@@ -100,7 +106,12 @@ if (!app.Environment.IsDevelopment())
 
 app.UseStaticFiles();
 
-var supportedCultures = new[] { "en", "de", "fr", "it" };
+var supportedCultures = new[]
+{
+    "en", "de", "fr", "it",
+    "ar", "cs", "da", "el", "es", "fi", "he", "id", "ja", "ko", "ms", "nb", "nl",
+    "pl", "pt", "ro", "sv", "th", "vi", "zh-CN", "zh-TW"
+};
 var localizationOptions = new RequestLocalizationOptions()
     .SetDefaultCulture("en")
     .AddSupportedCultures(supportedCultures)

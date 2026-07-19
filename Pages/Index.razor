@@ -13,10 +13,10 @@
             @L["Index_HeroSubtitle"]
         </p>
         <div class="relative max-w-2xl mx-auto mb-10">
-            <div class="absolute inset-y-0 left-5 flex items-center pointer-events-none">
+            <div class="input-icon input-icon-lg absolute inset-y-0 left-5 flex items-center pointer-events-none">
                 <span class="material-symbols-outlined text-on-primary-container">search</span>
             </div>
-            <input class="w-full pl-14 pr-6 py-5 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl focus:ring-2 focus:ring-secondary focus:bg-white focus:text-primary transition-all text-lg outline-none placeholder:text-on-primary-container/60"
+            <input class="w-full input-icon-field-lg pl-14 pr-6 py-5 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl focus:ring-2 focus:ring-secondary focus:bg-white focus:text-primary transition-all text-lg outline-none placeholder:text-on-primary-container/60"
                    placeholder="@GetSearchPlaceholder()"
                    @bind="_searchText" @bind:event="oninput" @onkeyup="OnSearchKeyUp" type="text" />
         </div>
@@ -144,7 +144,7 @@ else
     <div class="py-16 flex items-center justify-center gap-4 bg-surface">
         <button class="w-10 h-10 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors disabled:opacity-30"
                 disabled="@(_currentPage <= 1)" @onclick="PreviousPage">
-            <span class="material-symbols-outlined">chevron_left</span>
+            <span class="material-symbols-outlined icon-directional">chevron_left</span>
         </button>
         @for (var i = 1; i <= _totalPages; i++)
         {
@@ -156,7 +156,7 @@ else
         }
         <button class="w-10 h-10 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors disabled:opacity-30"
                 disabled="@(_currentPage >= _totalPages)" @onclick="NextPage">
-            <span class="material-symbols-outlined">chevron_right</span>
+            <span class="material-symbols-outlined icon-directional">chevron_right</span>
         </button>
     </div>
 }

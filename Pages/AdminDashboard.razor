@@ -70,7 +70,7 @@
                         @foreach (var pkg in _pendingPackages)
                         {
                             <tr class="hover:bg-surface-container-low/50 transition-colors">
-                                <td class="px-6 py-4"><a href="/package/@pkg.Code" class="text-secondary hover:underline no-underline font-medium">@pkg.DisplayName</a></td>
+                                <td class="px-6 py-4"><a href="package/@pkg.Code" class="text-secondary hover:underline no-underline font-medium">@pkg.DisplayName</a></td>
                                 <td class="px-6 py-4">@pkg.Author.DisplayName</td>
                                 <td class="px-6 py-4"><code class="text-xs bg-surface-container-low px-2 py-1 rounded">@pkg.Code</code></td>
                                 <td class="px-6 py-4">@pkg.Coverage.ToString("F0")%</td>
@@ -114,7 +114,7 @@
                         @foreach (var plugin in _pendingPlugins)
                         {
                             <tr class="hover:bg-surface-container-low/50 transition-colors">
-                                <td class="px-6 py-4"><a href="/plugin/@plugin.Name" class="text-secondary hover:underline no-underline font-medium">@plugin.DisplayName</a></td>
+                                <td class="px-6 py-4"><a href="plugin/@plugin.Name" class="text-secondary hover:underline no-underline font-medium">@plugin.DisplayName</a></td>
                                 <td class="px-6 py-4">@plugin.Author.DisplayName</td>
                                 <td class="px-6 py-4"><CategoryBadge Category="@plugin.Category" /></td>
                                 <td class="px-6 py-4">@plugin.Version</td>
@@ -157,7 +157,7 @@
                         @foreach (var regionPackage in _pendingRegionPackages)
                         {
                             <tr class="hover:bg-surface-container-low/50 transition-colors">
-                                <td class="px-6 py-4"><a href="/region/@regionPackage.CountryCode" class="text-secondary hover:underline no-underline font-medium">@regionPackage.CountryName</a></td>
+                                <td class="px-6 py-4"><a href="region/@regionPackage.CountryCode" class="text-secondary hover:underline no-underline font-medium">@regionPackage.CountryName</a></td>
                                 <td class="px-6 py-4">@regionPackage.Author.DisplayName</td>
                                 <td class="px-6 py-4"><code class="text-xs bg-surface-container-low px-2 py-1 rounded uppercase">@regionPackage.CountryCode</code></td>
                                 <td class="px-6 py-4">@regionPackage.Version</td>

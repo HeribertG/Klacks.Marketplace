@@ -1,0 +1,26 @@
+/* RTL overrides for ar/he. No-op under dir="ltr" (default), so no LTR regression risk. */
+
+[dir="rtl"] .icon-directional {
+    display: inline-block;
+    transform: scaleX(-1);
+}
+
+[dir="rtl"] .input-icon {
+    left: auto;
+    right: 0.75rem;
+}
+
+[dir="rtl"] .input-icon-lg {
+    left: auto;
+    right: 1.25rem;
+}
+
+[dir="rtl"] .input-icon-field {
+    padding-left: 1rem;
+    padding-right: 2.75rem;
+}
+
+[dir="rtl"] .input-icon-field-lg {
+    padding-left: 1.5rem;
+    padding-right: 3.5rem;
+}
