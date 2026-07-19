@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msOccurs="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+              <xsd:attribute name="xml:space" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <data name="Common_LanguagePacks" xml:space="preserve"><value>语言包</value></data>
+  <data name="Common_FeaturePlugins" xml:space="preserve"><value>功能插件</value></data>
+  <data name="Common_Download" xml:space="preserve"><value>下载</value></data>
+  <data name="Common_Downloads" xml:space="preserve"><value>下载次数</value></data>
+  <data name="Common_Version" xml:space="preserve"><value>版本</value></data>
+  <data name="Common_Coverage" xml:space="preserve"><value>覆盖率</value></data>
+  <data name="Common_CoveragePercent" xml:space="preserve"><value>{0}% 覆盖率</value></data>
+  <data name="Common_MinVersion" xml:space="preserve"><value>最低版本</value></data>
+  <data name="Common_VersionHistory" xml:space="preserve"><value>版本历史</value></data>
+  <data name="Common_Home" xml:space="preserve"><value>首页</value></data>
+  <data name="Common_ResultsCount" xml:space="preserve"><value>{0} 个结果</value></data>
+  <data name="Common_EmailLabel" xml:space="preserve"><value>电子邮件地址</value></data>
+  <data name="Common_EmailPlaceholder" xml:space="preserve"><value>your@email.com</value></data>
+  <data name="Common_PasswordLabel" xml:space="preserve"><value>密码</value></data>
+  <data name="Common_DisplayNameLabel" xml:space="preserve"><value>显示名称</value></data>
+  <data name="Common_DataSecure" xml:space="preserve"><value>您的数据已加密，安全可靠</value></data>
+  <data name="Common_PleaseLogin" xml:space="preserve"><value>请登录以继续。</value></data>
+  <data name="Common_LoginLink" xml:space="preserve"><value>登录</value></data>
+  <data name="Common_SubmitForReview" xml:space="preserve"><value>提交审核</value></data>
+  <data name="Common_SaveAsDraft" xml:space="preserve"><value>保存为草稿</value></data>
+  <data name="Common_Loaded" xml:space="preserve"><value>已加载</value></data>
+  <data name="Common_Cancel" xml:space="preserve"><value>取消</value></data>
+  <data name="Common_Confirm" xml:space="preserve"><value>确认</value></data>
+  <data name="Common_NotFound" xml:space="preserve"><value>未找到</value></data>
+  <data name="Common_NothingHere" xml:space="preserve"><value>抱歉，此地址没有任何内容。</value></data>
+  <data name="Common_BackToBrowse" xml:space="preserve"><value>返回浏览</value></data>
+  <data name="Common_ByAuthor" xml:space="preserve"><value>作者：{0}</value></data>
+  <data name="Common_SkillsCount" xml:space="preserve"><value>{0} 项技能</value></data>
+  <data name="Common_InstallsCount" xml:space="preserve"><value>{0} 次安装</value></data>
+  <data name="Common_Package" xml:space="preserve"><value>包</value></data>
+  <data name="Common_Plugin" xml:space="preserve"><value>插件</value></data>
+  <data name="Common_Category" xml:space="preserve"><value>分类</value></data>
+  <data name="Common_Status" xml:space="preserve"><value>状态</value></data>
+  <data name="Common_Actions" xml:space="preserve"><value>操作</value></data>
+  <data name="Common_Author" xml:space="preserve"><value>作者</value></data>
+  <data name="Common_Code" xml:space="preserve"><value>代码</value></data>
+  <data name="Common_Submitted" xml:space="preserve"><value>已提交</value></data>
+  <data name="Common_Docs" xml:space="preserve"><value>文档</value></data>
+  <data name="Common_Translations" xml:space="preserve"><value>翻译</value></data>
+  <data name="Nav_Browse" xml:space="preserve"><value>浏览</value></data>
+  <data name="Nav_UploadPack" xml:space="preserve"><value>上传语言包</value></data>
+  <data name="Nav_UploadPlugin" xml:space="preserve"><value>上传插件</value></data>
+  <data name="Nav_MyPackages" xml:space="preserve"><value>我的包</value></data>
+  <data name="Nav_Admin" xml:space="preserve"><value>管理员</value></data>
+  <data name="Nav_SignOut" xml:space="preserve"><value>退出登录</value></data>
+  <data name="Nav_SignIn" xml:space="preserve"><value>登录</value></data>
+  <data name="Nav_Register" xml:space="preserve"><value>注册</value></data>
+  <data name="Index_HeroTitle" xml:space="preserve"><value>扩展您的 Klacks 体验</value></data>
+  <data name="Index_HeroSubtitle" xml:space="preserve"><value>探索专为专业人力资源管理和企业级可扩展性打造的语言包与功能插件。</value></data>
+  <data name="Index_SearchPacks" xml:space="preserve"><value>搜索语言包...</value></data>
+  <data name="Index_SearchPlugins" xml:space="preserve"><value>搜索功能插件...</value></data>
+  <data name="Index_AllCategories" xml:space="preserve"><value>所有分类</value></data>
+  <data name="Index_NoPackagesFound" xml:space="preserve"><value>未找到任何包</value></data>
+  <data name="Index_BeFirstPack" xml:space="preserve"><value>抢先上传第一个语言包！</value></data>
+  <data name="Index_NoPluginsFound" xml:space="preserve"><value>未找到任何插件</value></data>
+  <data name="Index_BeFirstPlugin" xml:space="preserve"><value>抢先上传第一个功能插件！</value></data>
+  <data name="Index_PacksSubtitle" xml:space="preserve"><value>面向国际化团队的本地化资源。</value></data>
+  <data name="Index_FooterDescription" xml:space="preserve"><value>用于扩展人力资源管理能力的专业生态系统。</value></data>
+  <data name="Index_FooterRights" xml:space="preserve"><value>© 2026 Klacks Store。保留所有权利。</value></data>
+  <data name="Index_Resources" xml:space="preserve"><value>资源</value></data>
+  <data name="Index_Documentation" xml:space="preserve"><value>文档</value></data>
+  <data name="Index_API" xml:space="preserve"><value>API</value></data>
+  <data name="Index_Legal" xml:space="preserve"><value>法律信息</value></data>
+  <data name="Index_PrivacyPolicy" xml:space="preserve"><value>隐私政策</value></data>
+  <data name="Index_TermsOfService" xml:space="preserve"><value>服务条款</value></data>
+  <data name="Login_PageTitle" xml:space="preserve"><value>登录 - Klacks Store</value></data>
+  <data name="Login_WelcomeBack" xml:space="preserve"><value>欢迎回来</value></data>
+  <data name="Login_Subtitle" xml:space="preserve"><value>登录以管理您的包和插件</value></data>
+  <data name="Login_PasswordPlaceholder" xml:space="preserve"><value>请输入密码</value></data>
+  <data name="Login_NoAccount" xml:space="preserve"><value>还没有账号？</value></data>
+  <data name="Login_CreateOne" xml:space="preserve"><value>立即注册</value></data>
+  <data name="Login_InvalidCredentials" xml:space="preserve"><value>电子邮件或密码无效</value></data>
+  <data name="Register_PageTitle" xml:space="preserve"><value>注册 - Klacks Store</value></data>
+  <data name="Register_Title" xml:space="preserve"><value>创建账号</value></data>
+  <data name="Register_Subtitle" xml:space="preserve"><value>加入 Klacks Store 社区</value></data>
+  <data name="Register_NamePlaceholder" xml:space="preserve"><value>您的姓名</value></data>
+  <data name="Register_PasswordLabel" xml:space="preserve"><value>密码（最少 {0} 个字符）</value></data>
+  <data name="Register_CreatePassword" xml:space="preserve"><value>设置密码</value></data>
+  <data name="Register_ConfirmPasswordLabel" xml:space="preserve"><value>确认密码</value></data>
+  <data name="Register_ConfirmPasswordPlaceholder" xml:space="preserve"><value>请再次输入密码</value></data>
+  <data name="Register_CreateAccount" xml:space="preserve"><value>创建账号</value></data>
+  <data name="Register_HasAccount" xml:space="preserve"><value>已有账号？</value></data>
+  <data name="Register_NameRequired" xml:space="preserve"><value>显示名称为必填项</value></data>
+  <data name="Register_EmailRequired" xml:space="preserve"><value>电子邮件为必填项</value></data>
+  <data name="Register_PasswordMismatch" xml:space="preserve"><value>两次输入的密码不一致</value></data>
+  <data name="Register_Success" xml:space="preserve"><value>注册成功！您现在可以登录了。</value></data>
+  <data name="PackageDetail_NotFound" xml:space="preserve"><value>未找到该包</value></data>
+  <data name="PackageDetail_NotFoundDesc" xml:space="preserve"><value>您查找的包不存在。</value></data>
+  <data name="PackageDetail_SpeechLocale" xml:space="preserve"><value>语音区域设置</value></data>
+  <data name="PackageDetail_TranslationCoverage" xml:space="preserve"><value>翻译覆盖率</value></data>
+  <data name="PackageDetail_TranslationCount" xml:space="preserve"><value>{0} 条翻译</value></data>
+  <data name="PackageDetail_Manuals" xml:space="preserve"><value>手册</value></data>
+  <data name="PackageDetail_Countries" xml:space="preserve"><value>国家/地区</value></data>
+  <data name="PackageDetail_States" xml:space="preserve"><value>州/省</value></data>
+  <data name="PackageDetail_CalendarRules" xml:space="preserve"><value>日历规则</value></data>
+  <data name="PluginDetail_NotFound" xml:space="preserve"><value>未找到该插件</value></data>
+  <data name="PluginDetail_NotFoundDesc" xml:space="preserve"><value>您查找的插件不存在。</value></data>
+  <data name="PluginDetail_ProvidedSkills" xml:space="preserve"><value>提供的技能</value></data>
+  <data name="PluginDetail_RequiredPermissions" xml:space="preserve"><value>所需权限</value></data>
+  <data name="PluginDetail_README" xml:space="preserve"><value>README</value></data>
+  <data name="Upload_Title" xml:space="preserve"><value>上传语言包</value></data>
+  <data name="Upload_Subtitle" xml:space="preserve"><value>与社区分享您的语言包</value></data>
+  <data name="Upload_CodeLabel" xml:space="preserve"><value>代码（例如 fr-FR）</value></data>
+  <data name="Upload_CodePlaceholder" xml:space="preserve"><value>xx-XX</value></data>
+  <data name="Upload_DisplayNamePlaceholder" xml:space="preserve"><value>例如：法语（法国）</value></data>
+  <data name="Upload_SpeechLocale" xml:space="preserve"><value>语音区域设置</value></data>
+  <data name="Upload_SpeechLocalePlaceholder" xml:space="preserve"><value>例如：fr-FR</value></data>
+  <data name="Upload_VersionPlaceholder" xml:space="preserve"><value>1.0.0</value></data>
+  <data name="Upload_Description" xml:space="preserve"><value>描述</value></data>
+  <data name="Upload_DescriptionPlaceholder" xml:space="preserve"><value>描述您的语言包...</value></data>
+  <data name="Upload_CoverageLabel" xml:space="preserve"><value>覆盖率（%）</value></data>
+  <data name="Upload_MinKlacksVersion" xml:space="preserve"><value>最低 Klacks 版本</value></data>
+  <data name="Upload_ManifestRequired" xml:space="preserve"><value>manifest.json</value></data>
+  <data name="Upload_TranslationsRequired" xml:space="preserve"><value>translations.json</value></data>
+  <data name="Upload_DocsOptional" xml:space="preserve"><value>docs.json（可选）</value></data>
+  <data name="Upload_CountriesOptional" xml:space="preserve"><value>countries.json（可选）</value></data>
+  <data name="Upload_StatesOptional" xml:space="preserve"><value>states.json（可选）</value></data>
+  <data name="Upload_CalendarOptional" xml:space="preserve"><value>calendar-rules.json（可选）</value></data>
+  <data name="Upload_CodeRequired" xml:space="preserve"><value>代码和显示名称为必填项</value></data>
+  <data name="Upload_Success" xml:space="preserve"><value>包已提交审核！</value></data>
+  <data name="UploadPlugin_Title" xml:space="preserve"><value>上传功能插件</value></data>
+  <data name="UploadPlugin_Subtitle" xml:space="preserve"><value>与社区分享您的功能插件</value></data>
+  <data name="UploadPlugin_NameLabel" xml:space="preserve"><value>插件名称（唯一标识符）</value></data>
+  <data name="UploadPlugin_NamePlaceholder" xml:space="preserve"><value>例如：messaging</value></data>
+  <data name="UploadPlugin_DisplayNamePlaceholder" xml:space="preserve"><value>例如：Messaging</value></data>
+  <data name="UploadPlugin_SelectCategory" xml:space="preserve"><value>选择分类...</value></data>
+  <data name="UploadPlugin_DescriptionPlaceholder" xml:space="preserve"><value>描述您的功能插件...</value></data>
+  <data name="UploadPlugin_ChangelogLabel" xml:space="preserve"><value>更新日志</value></data>
+  <data name="UploadPlugin_ChangelogPlaceholder" xml:space="preserve"><value>此版本有哪些更改？</value></data>
+  <data name="UploadPlugin_ManifestRequired" xml:space="preserve"><value>manifest.json（必需）</value></data>
+  <data name="UploadPlugin_EnRequired" xml:space="preserve"><value>en.json（必需的国际化文件）</value></data>
+  <data name="UploadPlugin_DeOptional" xml:space="preserve"><value>de.json（可选的国际化文件）</value></data>
+  <data name="UploadPlugin_FrOptional" xml:space="preserve"><value>fr.json（可选的国际化文件）</value></data>
+  <data name="UploadPlugin_ReadmeOptional" xml:space="preserve"><value>README.md（可选）</value></data>
+  <data name="UploadPlugin_NameRequired" xml:space="preserve"><value>名称和显示名称为必填项</value></data>
+  <data name="UploadPlugin_CategoryRequired" xml:space="preserve"><value>分类为必填项</value></data>
+  <data name="UploadPlugin_Success" xml:space="preserve"><value>插件已提交审核！</value></data>
+  <data name="MyPackages_Title" xml:space="preserve"><value>我的包</value></data>
+  <data name="MyPackages_LoginRequired" xml:space="preserve"><value>请登录以查看您的包。</value></data>
+  <data name="MyPackages_NoPacks" xml:space="preserve"><value>暂无语言包</value></data>
+  <data name="MyPackages_NoPacksDesc" xml:space="preserve"><value>您尚未上传任何语言包。</value></data>
+  <data name="MyPackages_UploadFirst" xml:space="preserve"><value>上传您的第一个包</value></data>
+  <data name="MyPackages_NoPlugins" xml:space="preserve"><value>暂无功能插件</value></data>
+  <data name="MyPackages_NoPluginsDesc" xml:space="preserve"><value>您尚未上传任何功能插件。</value></data>
+  <data name="MyPackages_UploadFirstPlugin" xml:space="preserve"><value>上传您的第一个插件</value></data>
+  <data name="Admin_Title" xml:space="preserve"><value>管理员控制台</value></data>
+  <data name="Admin_AccessDenied" xml:space="preserve"><value>访问被拒绝。需要管理员权限。</value></data>
+  <data name="Admin_PendingPackages" xml:space="preserve"><value>待审核的包</value></data>
+  <data name="Admin_PendingPlugins" xml:space="preserve"><value>待审核的插件</value></data>
+  <data name="Admin_Users" xml:space="preserve"><value>用户</value></data>
+  <data name="Admin_PendingLanguagePackages" xml:space="preserve"><value>待审核的语言包</value></data>
+  <data name="Admin_NoPendingPackages" xml:space="preserve"><value>没有待审核的包。</value></data>
+  <data name="Admin_PendingFeaturePlugins" xml:space="preserve"><value>待审核的功能插件</value></data>
+  <data name="Admin_NoPendingPlugins" xml:space="preserve"><value>没有待审核的插件。</value></data>
+  <data name="Admin_Name" xml:space="preserve"><value>姓名</value></data>
+  <data name="Admin_Email" xml:space="preserve"><value>电子邮件</value></data>
+  <data name="Admin_Joined" xml:space="preserve"><value>加入时间</value></data>
+  <data name="Admin_MakeAdmin" xml:space="preserve"><value>设为管理员</value></data>
+  <data name="Admin_RemoveAdmin" xml:space="preserve"><value>取消管理员</value></data>
+  <data name="Admin_PackageApproved" xml:space="preserve"><value>包已成功批准</value></data>
+  <data name="Admin_PackageRejected" xml:space="preserve"><value>包已拒绝</value></data>
+  <data name="Admin_PluginApproved" xml:space="preserve"><value>插件已成功批准</value></data>
+  <data name="Admin_PluginRejected" xml:space="preserve"><value>插件已拒绝</value></data>
+  <data name="Admin_RejectPackageTitle" xml:space="preserve"><value>拒绝该包</value></data>
+  <data name="Admin_RejectPackageMessage" xml:space="preserve"><value>确定要拒绝此包吗？</value></data>
+  <data name="Admin_RejectPluginTitle" xml:space="preserve"><value>拒绝该插件</value></data>
+  <data name="Admin_RejectPluginMessage" xml:space="preserve"><value>确定要拒绝此插件吗？</value></data>
+  <data name="Admin_RejectedByAdmin" xml:space="preserve"><value>已被管理员拒绝</value></data>
+  <data name="Status_Published" xml:space="preserve"><value>已发布</value></data>
+  <data name="Status_Pending" xml:space="preserve"><value>待审核</value></data>
+  <data name="Status_Rejected" xml:space="preserve"><value>已拒绝</value></data>
+  <data name="Status_Draft" xml:space="preserve"><value>草稿</value></data>
+  <data name="Status_Unknown" xml:space="preserve"><value>未知</value></data>
+  <data name="Common_Deployment" xml:space="preserve"><value>部署</value></data>
+  <data name="Common_RegionPackage" xml:space="preserve"><value>区域包</value></data>
+  <data name="Common_Country" xml:space="preserve"><value>国家/地区</value></data>
+  <data name="Nav_UploadRegion" xml:space="preserve"><value>上传区域包</value></data>
+  <data name="Index_SearchRegions" xml:space="preserve"><value>搜索区域包...</value></data>
+  <data name="Index_NoRegionsFound" xml:space="preserve"><value>未找到任何区域包</value></data>
+  <data name="Index_BeFirstRegion" xml:space="preserve"><value>抢先上传第一个区域包！</value></data>
+  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>用于新安装的国家/地区部署配置文件。</value></data>
+  <data name="RegionDetail_NotFound" xml:space="preserve"><value>未找到该区域包</value></data>
+  <data name="RegionDetail_NotFoundDesc" xml:space="preserve"><value>请求的区域包不存在或尚未发布。</value></data>
+  <data name="RegionDetail_IndustryLabel" xml:space="preserve"><value>行业</value></data>
+  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>部署下载</value></data>
+  <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>配置文件 JSON</value></data>
+  <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>适用于现有 Klacks 安装的区域配置文件——将其挂载为区域设置文件。</value></data>
+  <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>本地部署包</value></data>
+  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>包含安装脚本、Docker Compose 和区域配置文件的完整安装包。</value></data>
+  <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Docker Compose 包</value></data>
+  <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>面向 Docker 专业人员的精简 Docker Compose 配置，不含安装脚本。</value></data>
+  <data name="Industry_Homecare" xml:space="preserve"><value>居家护理</value></data>
+  <data name="Industry_Healthcare" xml:space="preserve"><value>医疗保健</value></data>
+  <data name="Industry_Security" xml:space="preserve"><value>安保</value></data>
+  <data name="Industry_Facility" xml:space="preserve"><value>设施服务</value></data>
+  <data name="Industry_Logistics" xml:space="preserve"><value>物流</value></data>
+  <data name="Industry_All" xml:space="preserve"><value>所有行业</value></data>
+  <data name="UploadRegion_Title" xml:space="preserve"><value>上传区域包</value></data>
+  <data name="UploadRegion_Subtitle" xml:space="preserve"><value>与社区分享国家/地区设置配置文件</value></data>
+  <data name="UploadRegion_CountryLabel" xml:space="preserve"><value>国家/地区</value></data>
+  <data name="UploadRegion_SelectCountry" xml:space="preserve"><value>选择国家/地区...</value></data>
+  <data name="UploadRegion_ChangeLog" xml:space="preserve"><value>更新日志</value></data>
+  <data name="UploadRegion_ChangeLogPlaceholder" xml:space="preserve"><value>此版本有哪些更改？</value></data>
+  <data name="UploadRegion_DescriptionPlaceholder" xml:space="preserve"><value>描述该区域配置文件...</value></data>
+  <data name="UploadRegion_ProfileRequired" xml:space="preserve"><value>区域配置文件 JSON（必需）</value></data>
+  <data name="UploadRegion_ValidationErrors" xml:space="preserve"><value>验证错误</value></data>
+  <data name="UploadRegion_ValidationWarnings" xml:space="preserve"><value>验证警告</value></data>
+  <data name="UploadRegion_Success" xml:space="preserve"><value>区域包已提交审核！</value></data>
+  <data name="UploadRegion_CountryRequired" xml:space="preserve"><value>请选择国家/地区</value></data>
+  <data name="MyPackages_NoRegions" xml:space="preserve"><value>暂无区域包</value></data>
+  <data name="MyPackages_NoRegionsDesc" xml:space="preserve"><value>您尚未上传任何区域包。</value></data>
+  <data name="MyPackages_UploadFirstRegion" xml:space="preserve"><value>上传您的第一个区域包</value></data>
+  <data name="Admin_PendingRegions" xml:space="preserve"><value>待审核的区域包</value></data>
+  <data name="Admin_PendingRegionPackages" xml:space="preserve"><value>待审核的区域包</value></data>
+  <data name="Admin_NoPendingRegions" xml:space="preserve"><value>没有待审核的区域包</value></data>
+  <data name="Admin_RegionApproved" xml:space="preserve"><value>区域包已批准</value></data>
+  <data name="Admin_RegionRejected" xml:space="preserve"><value>区域包已拒绝</value></data>
+  <data name="Admin_RejectRegionTitle" xml:space="preserve"><value>拒绝该区域包</value></data>
+  <data name="Admin_RejectRegionMessage" xml:space="preserve"><value>确定要拒绝此区域包吗？</value></data>
+</root>

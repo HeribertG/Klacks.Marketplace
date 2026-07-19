@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msOccurs="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+              <xsd:attribute name="xml:space" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <data name="Common_LanguagePacks" xml:space="preserve"><value>חבילות שפה</value></data>
+  <data name="Common_FeaturePlugins" xml:space="preserve"><value>תוספי תכונה</value></data>
+  <data name="Common_Download" xml:space="preserve"><value>הורדה</value></data>
+  <data name="Common_Downloads" xml:space="preserve"><value>הורדות</value></data>
+  <data name="Common_Version" xml:space="preserve"><value>גרסה</value></data>
+  <data name="Common_Coverage" xml:space="preserve"><value>כיסוי</value></data>
+  <data name="Common_CoveragePercent" xml:space="preserve"><value>כיסוי של {0}%</value></data>
+  <data name="Common_MinVersion" xml:space="preserve"><value>גרסה מינימלית</value></data>
+  <data name="Common_VersionHistory" xml:space="preserve"><value>היסטוריית גרסאות</value></data>
+  <data name="Common_Home" xml:space="preserve"><value>בית</value></data>
+  <data name="Common_ResultsCount" xml:space="preserve"><value>{0} תוצאות</value></data>
+  <data name="Common_EmailLabel" xml:space="preserve"><value>כתובת אימייל</value></data>
+  <data name="Common_EmailPlaceholder" xml:space="preserve"><value>your@email.com</value></data>
+  <data name="Common_PasswordLabel" xml:space="preserve"><value>סיסמה</value></data>
+  <data name="Common_DisplayNameLabel" xml:space="preserve"><value>שם תצוגה</value></data>
+  <data name="Common_DataSecure" xml:space="preserve"><value>הנתונים שלך מוצפנים ומאובטחים</value></data>
+  <data name="Common_PleaseLogin" xml:space="preserve"><value>יש להתחבר כדי להמשיך.</value></data>
+  <data name="Common_LoginLink" xml:space="preserve"><value>התחברות</value></data>
+  <data name="Common_SubmitForReview" xml:space="preserve"><value>שליחה לבדיקה</value></data>
+  <data name="Common_SaveAsDraft" xml:space="preserve"><value>שמירה כטיוטה</value></data>
+  <data name="Common_Loaded" xml:space="preserve"><value>נטען</value></data>
+  <data name="Common_Cancel" xml:space="preserve"><value>ביטול</value></data>
+  <data name="Common_Confirm" xml:space="preserve"><value>אישור</value></data>
+  <data name="Common_NotFound" xml:space="preserve"><value>לא נמצא</value></data>
+  <data name="Common_NothingHere" xml:space="preserve"><value>מצטערים, אין דבר בכתובת הזו.</value></data>
+  <data name="Common_BackToBrowse" xml:space="preserve"><value>חזרה לעיון</value></data>
+  <data name="Common_ByAuthor" xml:space="preserve"><value>מאת {0}</value></data>
+  <data name="Common_SkillsCount" xml:space="preserve"><value>{0} מיומנויות</value></data>
+  <data name="Common_InstallsCount" xml:space="preserve"><value>{0} התקנות</value></data>
+  <data name="Common_Package" xml:space="preserve"><value>חבילה</value></data>
+  <data name="Common_Plugin" xml:space="preserve"><value>תוסף</value></data>
+  <data name="Common_Category" xml:space="preserve"><value>קטגוריה</value></data>
+  <data name="Common_Status" xml:space="preserve"><value>סטטוס</value></data>
+  <data name="Common_Actions" xml:space="preserve"><value>פעולות</value></data>
+  <data name="Common_Author" xml:space="preserve"><value>מחבר</value></data>
+  <data name="Common_Code" xml:space="preserve"><value>קוד</value></data>
+  <data name="Common_Submitted" xml:space="preserve"><value>הגשה</value></data>
+  <data name="Common_Docs" xml:space="preserve"><value>תיעוד</value></data>
+  <data name="Common_Translations" xml:space="preserve"><value>תרגומים</value></data>
+  <data name="Nav_Browse" xml:space="preserve"><value>עיון</value></data>
+  <data name="Nav_UploadPack" xml:space="preserve"><value>העלאת חבילה</value></data>
+  <data name="Nav_UploadPlugin" xml:space="preserve"><value>העלאת תוסף</value></data>
+  <data name="Nav_MyPackages" xml:space="preserve"><value>החבילות שלי</value></data>
+  <data name="Nav_Admin" xml:space="preserve"><value>ניהול</value></data>
+  <data name="Nav_SignOut" xml:space="preserve"><value>התנתקות</value></data>
+  <data name="Nav_SignIn" xml:space="preserve"><value>התחברות</value></data>
+  <data name="Nav_Register" xml:space="preserve"><value>הרשמה</value></data>
+  <data name="Index_HeroTitle" xml:space="preserve"><value>הרחיבו את חוויית Klacks שלכם</value></data>
+  <data name="Index_HeroSubtitle" xml:space="preserve"><value>גלו חבילות שפה ותוספי תכונה שנועדו לניהול כוח אדם מקצועי ולהתאמה לצרכי ארגונים גדולים.</value></data>
+  <data name="Index_SearchPacks" xml:space="preserve"><value>חיפוש חבילות שפה...</value></data>
+  <data name="Index_SearchPlugins" xml:space="preserve"><value>חיפוש תוספי תכונה...</value></data>
+  <data name="Index_AllCategories" xml:space="preserve"><value>כל הקטגוריות</value></data>
+  <data name="Index_NoPackagesFound" xml:space="preserve"><value>לא נמצאו חבילות</value></data>
+  <data name="Index_BeFirstPack" xml:space="preserve"><value>היו הראשונים להעלות חבילת שפה!</value></data>
+  <data name="Index_NoPluginsFound" xml:space="preserve"><value>לא נמצאו תוספים</value></data>
+  <data name="Index_BeFirstPlugin" xml:space="preserve"><value>היו הראשונים להעלות תוסף תכונה!</value></data>
+  <data name="Index_PacksSubtitle" xml:space="preserve"><value>נכסי לוקליזציה לצוותים בינלאומיים.</value></data>
+  <data name="Index_FooterDescription" xml:space="preserve"><value>מערכת מקצועית להרחבת יכולות ניהול כוח אדם.</value></data>
+  <data name="Index_FooterRights" xml:space="preserve"><value>© 2026 Klacks Store. כל הזכויות שמורות.</value></data>
+  <data name="Index_Resources" xml:space="preserve"><value>משאבים</value></data>
+  <data name="Index_Documentation" xml:space="preserve"><value>תיעוד</value></data>
+  <data name="Index_API" xml:space="preserve"><value>API</value></data>
+  <data name="Index_Legal" xml:space="preserve"><value>משפטי</value></data>
+  <data name="Index_PrivacyPolicy" xml:space="preserve"><value>מדיניות פרטיות</value></data>
+  <data name="Index_TermsOfService" xml:space="preserve"><value>תנאי שימוש</value></data>
+  <data name="Login_PageTitle" xml:space="preserve"><value>התחברות - Klacks Store</value></data>
+  <data name="Login_WelcomeBack" xml:space="preserve"><value>ברוכים השבים</value></data>
+  <data name="Login_Subtitle" xml:space="preserve"><value>התחברו כדי לנהל את החבילות והתוספים שלכם</value></data>
+  <data name="Login_PasswordPlaceholder" xml:space="preserve"><value>הזינו את הסיסמה שלכם</value></data>
+  <data name="Login_NoAccount" xml:space="preserve"><value>אין לכם חשבון?</value></data>
+  <data name="Login_CreateOne" xml:space="preserve"><value>צרו חשבון</value></data>
+  <data name="Login_InvalidCredentials" xml:space="preserve"><value>כתובת אימייל או סיסמה שגויים</value></data>
+  <data name="Register_PageTitle" xml:space="preserve"><value>הרשמה - Klacks Store</value></data>
+  <data name="Register_Title" xml:space="preserve"><value>יצירת חשבון</value></data>
+  <data name="Register_Subtitle" xml:space="preserve"><value>הצטרפו לקהילת Klacks Store</value></data>
+  <data name="Register_NamePlaceholder" xml:space="preserve"><value>השם שלכם</value></data>
+  <data name="Register_PasswordLabel" xml:space="preserve"><value>סיסמה (לפחות {0} תווים)</value></data>
+  <data name="Register_CreatePassword" xml:space="preserve"><value>יצירת סיסמה</value></data>
+  <data name="Register_ConfirmPasswordLabel" xml:space="preserve"><value>אימות סיסמה</value></data>
+  <data name="Register_ConfirmPasswordPlaceholder" xml:space="preserve"><value>אמתו את הסיסמה שלכם</value></data>
+  <data name="Register_CreateAccount" xml:space="preserve"><value>יצירת חשבון</value></data>
+  <data name="Register_HasAccount" xml:space="preserve"><value>כבר יש לכם חשבון?</value></data>
+  <data name="Register_NameRequired" xml:space="preserve"><value>שם תצוגה הוא שדה חובה</value></data>
+  <data name="Register_EmailRequired" xml:space="preserve"><value>כתובת אימייל היא שדה חובה</value></data>
+  <data name="Register_PasswordMismatch" xml:space="preserve"><value>הסיסמאות אינן תואמות</value></data>
+  <data name="Register_Success" xml:space="preserve"><value>ההרשמה הושלמה בהצלחה! כעת תוכלו להתחבר.</value></data>
+  <data name="PackageDetail_NotFound" xml:space="preserve"><value>החבילה לא נמצאה</value></data>
+  <data name="PackageDetail_NotFoundDesc" xml:space="preserve"><value>החבילה שאתם מחפשים אינה קיימת.</value></data>
+  <data name="PackageDetail_SpeechLocale" xml:space="preserve"><value>לוקאל דיבור</value></data>
+  <data name="PackageDetail_TranslationCoverage" xml:space="preserve"><value>כיסוי תרגום</value></data>
+  <data name="PackageDetail_TranslationCount" xml:space="preserve"><value>{0} תרגומים</value></data>
+  <data name="PackageDetail_Manuals" xml:space="preserve"><value>מדריכים</value></data>
+  <data name="PackageDetail_Countries" xml:space="preserve"><value>מדינות</value></data>
+  <data name="PackageDetail_States" xml:space="preserve"><value>מחוזות</value></data>
+  <data name="PackageDetail_CalendarRules" xml:space="preserve"><value>כללי לוח שנה</value></data>
+  <data name="PluginDetail_NotFound" xml:space="preserve"><value>התוסף לא נמצא</value></data>
+  <data name="PluginDetail_NotFoundDesc" xml:space="preserve"><value>התוסף שאתם מחפשים אינו קיים.</value></data>
+  <data name="PluginDetail_ProvidedSkills" xml:space="preserve"><value>מיומנויות מסופקות</value></data>
+  <data name="PluginDetail_RequiredPermissions" xml:space="preserve"><value>הרשאות נדרשות</value></data>
+  <data name="PluginDetail_README" xml:space="preserve"><value>README</value></data>
+  <data name="Upload_Title" xml:space="preserve"><value>העלאת חבילת שפה</value></data>
+  <data name="Upload_Subtitle" xml:space="preserve"><value>שתפו את חבילת השפה שלכם עם הקהילה</value></data>
+  <data name="Upload_CodeLabel" xml:space="preserve"><value>קוד (לדוגמה: fr-FR)</value></data>
+  <data name="Upload_CodePlaceholder" xml:space="preserve"><value>xx-XX</value></data>
+  <data name="Upload_DisplayNamePlaceholder" xml:space="preserve"><value>לדוגמה: צרפתית (צרפת)</value></data>
+  <data name="Upload_SpeechLocale" xml:space="preserve"><value>לוקאל דיבור</value></data>
+  <data name="Upload_SpeechLocalePlaceholder" xml:space="preserve"><value>לדוגמה: fr-FR</value></data>
+  <data name="Upload_VersionPlaceholder" xml:space="preserve"><value>1.0.0</value></data>
+  <data name="Upload_Description" xml:space="preserve"><value>תיאור</value></data>
+  <data name="Upload_DescriptionPlaceholder" xml:space="preserve"><value>תארו את חבילת השפה שלכם...</value></data>
+  <data name="Upload_CoverageLabel" xml:space="preserve"><value>כיסוי (%)</value></data>
+  <data name="Upload_MinKlacksVersion" xml:space="preserve"><value>גרסת Klacks מינימלית</value></data>
+  <data name="Upload_ManifestRequired" xml:space="preserve"><value>manifest.json</value></data>
+  <data name="Upload_TranslationsRequired" xml:space="preserve"><value>translations.json</value></data>
+  <data name="Upload_DocsOptional" xml:space="preserve"><value>docs.json (אופציונלי)</value></data>
+  <data name="Upload_CountriesOptional" xml:space="preserve"><value>countries.json (אופציונלי)</value></data>
+  <data name="Upload_StatesOptional" xml:space="preserve"><value>states.json (אופציונלי)</value></data>
+  <data name="Upload_CalendarOptional" xml:space="preserve"><value>calendar-rules.json (אופציונלי)</value></data>
+  <data name="Upload_CodeRequired" xml:space="preserve"><value>קוד ושם תצוגה הם שדות חובה</value></data>
+  <data name="Upload_Success" xml:space="preserve"><value>החבילה נשלחה לבדיקה!</value></data>
+  <data name="UploadPlugin_Title" xml:space="preserve"><value>העלאת תוסף תכונה</value></data>
+  <data name="UploadPlugin_Subtitle" xml:space="preserve"><value>שתפו את תוסף התכונה שלכם עם הקהילה</value></data>
+  <data name="UploadPlugin_NameLabel" xml:space="preserve"><value>שם התוסף (מזהה ייחודי)</value></data>
+  <data name="UploadPlugin_NamePlaceholder" xml:space="preserve"><value>לדוגמה: messaging</value></data>
+  <data name="UploadPlugin_DisplayNamePlaceholder" xml:space="preserve"><value>לדוגמה: Messaging</value></data>
+  <data name="UploadPlugin_SelectCategory" xml:space="preserve"><value>בחרו קטגוריה...</value></data>
+  <data name="UploadPlugin_DescriptionPlaceholder" xml:space="preserve"><value>תארו את תוסף התכונה שלכם...</value></data>
+  <data name="UploadPlugin_ChangelogLabel" xml:space="preserve"><value>יומן שינויים</value></data>
+  <data name="UploadPlugin_ChangelogPlaceholder" xml:space="preserve"><value>מה השתנה בגרסה הזו?</value></data>
+  <data name="UploadPlugin_ManifestRequired" xml:space="preserve"><value>manifest.json (חובה)</value></data>
+  <data name="UploadPlugin_EnRequired" xml:space="preserve"><value>en.json (i18n חובה)</value></data>
+  <data name="UploadPlugin_DeOptional" xml:space="preserve"><value>de.json (i18n אופציונלי)</value></data>
+  <data name="UploadPlugin_FrOptional" xml:space="preserve"><value>fr.json (i18n אופציונלי)</value></data>
+  <data name="UploadPlugin_ReadmeOptional" xml:space="preserve"><value>README.md (אופציונלי)</value></data>
+  <data name="UploadPlugin_NameRequired" xml:space="preserve"><value>שם ושם תצוגה הם שדות חובה</value></data>
+  <data name="UploadPlugin_CategoryRequired" xml:space="preserve"><value>קטגוריה היא שדה חובה</value></data>
+  <data name="UploadPlugin_Success" xml:space="preserve"><value>התוסף נשלח לבדיקה!</value></data>
+  <data name="MyPackages_Title" xml:space="preserve"><value>החבילות שלי</value></data>
+  <data name="MyPackages_LoginRequired" xml:space="preserve"><value>יש להתחבר כדי לצפות בחבילות שלכם.</value></data>
+  <data name="MyPackages_NoPacks" xml:space="preserve"><value>עדיין אין חבילות שפה</value></data>
+  <data name="MyPackages_NoPacksDesc" xml:space="preserve"><value>טרם העליתם חבילות שפה.</value></data>
+  <data name="MyPackages_UploadFirst" xml:space="preserve"><value>העלו את החבילה הראשונה שלכם</value></data>
+  <data name="MyPackages_NoPlugins" xml:space="preserve"><value>עדיין אין תוספי תכונה</value></data>
+  <data name="MyPackages_NoPluginsDesc" xml:space="preserve"><value>טרם העליתם תוספי תכונה.</value></data>
+  <data name="MyPackages_UploadFirstPlugin" xml:space="preserve"><value>העלו את התוסף הראשון שלכם</value></data>
+  <data name="Admin_Title" xml:space="preserve"><value>לוח ניהול</value></data>
+  <data name="Admin_AccessDenied" xml:space="preserve"><value>הגישה נדחתה. נדרשות הרשאות מנהל.</value></data>
+  <data name="Admin_PendingPackages" xml:space="preserve"><value>חבילות ממתינות</value></data>
+  <data name="Admin_PendingPlugins" xml:space="preserve"><value>תוספים ממתינים</value></data>
+  <data name="Admin_Users" xml:space="preserve"><value>משתמשים</value></data>
+  <data name="Admin_PendingLanguagePackages" xml:space="preserve"><value>חבילות שפה ממתינות</value></data>
+  <data name="Admin_NoPendingPackages" xml:space="preserve"><value>אין חבילות הממתינות לבדיקה.</value></data>
+  <data name="Admin_PendingFeaturePlugins" xml:space="preserve"><value>תוספי תכונה ממתינים</value></data>
+  <data name="Admin_NoPendingPlugins" xml:space="preserve"><value>אין תוספים הממתינים לבדיקה.</value></data>
+  <data name="Admin_Name" xml:space="preserve"><value>שם</value></data>
+  <data name="Admin_Email" xml:space="preserve"><value>אימייל</value></data>
+  <data name="Admin_Joined" xml:space="preserve"><value>הצטרפות</value></data>
+  <data name="Admin_MakeAdmin" xml:space="preserve"><value>הגדרה כמנהל</value></data>
+  <data name="Admin_RemoveAdmin" xml:space="preserve"><value>הסרת הרשאות מנהל</value></data>
+  <data name="Admin_PackageApproved" xml:space="preserve"><value>החבילה אושרה בהצלחה</value></data>
+  <data name="Admin_PackageRejected" xml:space="preserve"><value>החבילה נדחתה</value></data>
+  <data name="Admin_PluginApproved" xml:space="preserve"><value>התוסף אושר בהצלחה</value></data>
+  <data name="Admin_PluginRejected" xml:space="preserve"><value>התוסף נדחה</value></data>
+  <data name="Admin_RejectPackageTitle" xml:space="preserve"><value>דחיית חבילה</value></data>
+  <data name="Admin_RejectPackageMessage" xml:space="preserve"><value>האם אתם בטוחים שברצונכם לדחות את החבילה הזו?</value></data>
+  <data name="Admin_RejectPluginTitle" xml:space="preserve"><value>דחיית תוסף</value></data>
+  <data name="Admin_RejectPluginMessage" xml:space="preserve"><value>האם אתם בטוחים שברצונכם לדחות את התוסף הזה?</value></data>
+  <data name="Admin_RejectedByAdmin" xml:space="preserve"><value>נדחה על ידי מנהל</value></data>
+  <data name="Status_Published" xml:space="preserve"><value>פורסם</value></data>
+  <data name="Status_Pending" xml:space="preserve"><value>ממתין</value></data>
+  <data name="Status_Rejected" xml:space="preserve"><value>נדחה</value></data>
+  <data name="Status_Draft" xml:space="preserve"><value>טיוטה</value></data>
+  <data name="Status_Unknown" xml:space="preserve"><value>לא ידוע</value></data>
+  <data name="Common_Deployment" xml:space="preserve"><value>פריסה</value></data>
+  <data name="Common_RegionPackage" xml:space="preserve"><value>חבילת אזור</value></data>
+  <data name="Common_Country" xml:space="preserve"><value>מדינה</value></data>
+  <data name="Nav_UploadRegion" xml:space="preserve"><value>העלאת אזור</value></data>
+  <data name="Index_SearchRegions" xml:space="preserve"><value>חיפוש חבילות אזור...</value></data>
+  <data name="Index_NoRegionsFound" xml:space="preserve"><value>לא נמצאו חבילות אזור</value></data>
+  <data name="Index_BeFirstRegion" xml:space="preserve"><value>היו הראשונים להעלות חבילת אזור!</value></data>
+  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>פרופילי פריסה למדינות עבור התקנות חדשות.</value></data>
+  <data name="RegionDetail_NotFound" xml:space="preserve"><value>חבילת האזור לא נמצאה</value></data>
+  <data name="RegionDetail_NotFoundDesc" xml:space="preserve"><value>חבילת האזור המבוקשת אינה קיימת או שאינה מפורסמת.</value></data>
+  <data name="RegionDetail_IndustryLabel" xml:space="preserve"><value>ענף</value></data>
+  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>הורדות פריסה</value></data>
+  <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>JSON של הפרופיל</value></data>
+  <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>פרופיל אזור עבור התקנת Klacks קיימת — יש לחבר אותו כקובץ הגדרת האזור.</value></data>
+  <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>חבילת On-Prem</value></data>
+  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>חבילת התקנה מלאה הכוללת סקריפטים להתקנה, Docker Compose ופרופיל האזור.</value></data>
+  <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>חבילת Docker Compose</value></data>
+  <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>הגדרת Docker Compose מינימלית ללא סקריפטים להתקנה, למשתמשי Docker מנוסים.</value></data>
+  <data name="Industry_Homecare" xml:space="preserve"><value>טיפול ביתי</value></data>
+  <data name="Industry_Healthcare" xml:space="preserve"><value>בריאות</value></data>
+  <data name="Industry_Security" xml:space="preserve"><value>אבטחה</value></data>
+  <data name="Industry_Facility" xml:space="preserve"><value>שירותי מתקנים</value></data>
+  <data name="Industry_Logistics" xml:space="preserve"><value>לוגיסטיקה</value></data>
+  <data name="Industry_All" xml:space="preserve"><value>כל הענפים</value></data>
+  <data name="UploadRegion_Title" xml:space="preserve"><value>העלאת חבילת אזור</value></data>
+  <data name="UploadRegion_Subtitle" xml:space="preserve"><value>שתפו פרופיל הגדרת אזור למדינה עם הקהילה</value></data>
+  <data name="UploadRegion_CountryLabel" xml:space="preserve"><value>מדינה</value></data>
+  <data name="UploadRegion_SelectCountry" xml:space="preserve"><value>בחרו מדינה...</value></data>
+  <data name="UploadRegion_ChangeLog" xml:space="preserve"><value>יומן שינויים</value></data>
+  <data name="UploadRegion_ChangeLogPlaceholder" xml:space="preserve"><value>מה השתנה בגרסה הזו?</value></data>
+  <data name="UploadRegion_DescriptionPlaceholder" xml:space="preserve"><value>תארו את פרופיל האזור...</value></data>
+  <data name="UploadRegion_ProfileRequired" xml:space="preserve"><value>JSON של פרופיל האזור (חובה)</value></data>
+  <data name="UploadRegion_ValidationErrors" xml:space="preserve"><value>שגיאות אימות</value></data>
+  <data name="UploadRegion_ValidationWarnings" xml:space="preserve"><value>אזהרות אימות</value></data>
+  <data name="UploadRegion_Success" xml:space="preserve"><value>חבילת האזור נשלחה לבדיקה!</value></data>
+  <data name="UploadRegion_CountryRequired" xml:space="preserve"><value>יש לבחור מדינה</value></data>
+  <data name="MyPackages_NoRegions" xml:space="preserve"><value>עדיין אין חבילות אזור</value></data>
+  <data name="MyPackages_NoRegionsDesc" xml:space="preserve"><value>טרם העליתם חבילות אזור.</value></data>
+  <data name="MyPackages_UploadFirstRegion" xml:space="preserve"><value>העלו את חבילת האזור הראשונה שלכם</value></data>
+  <data name="Admin_PendingRegions" xml:space="preserve"><value>אזורים ממתינים</value></data>
+  <data name="Admin_PendingRegionPackages" xml:space="preserve"><value>חבילות אזור ממתינות</value></data>
+  <data name="Admin_NoPendingRegions" xml:space="preserve"><value>אין חבילות אזור הממתינות לבדיקה</value></data>
+  <data name="Admin_RegionApproved" xml:space="preserve"><value>חבילת האזור אושרה</value></data>
+  <data name="Admin_RegionRejected" xml:space="preserve"><value>חבילת האזור נדחתה</value></data>
+  <data name="Admin_RejectRegionTitle" xml:space="preserve"><value>דחיית חבילת אזור</value></data>
+  <data name="Admin_RejectRegionMessage" xml:space="preserve"><value>האם אתם בטוחים שברצונכם לדחות את חבילת האזור הזו?</value></data>
+</root>

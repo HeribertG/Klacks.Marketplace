@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msOccurs="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+              <xsd:attribute name="xml:space" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <data name="Common_LanguagePacks" xml:space="preserve"><value>Γλωσσικά πακέτα</value></data>
+  <data name="Common_FeaturePlugins" xml:space="preserve"><value>Πρόσθετα λειτουργιών</value></data>
+  <data name="Common_Download" xml:space="preserve"><value>Λήψη</value></data>
+  <data name="Common_Downloads" xml:space="preserve"><value>Λήψεις</value></data>
+  <data name="Common_Version" xml:space="preserve"><value>Έκδοση</value></data>
+  <data name="Common_Coverage" xml:space="preserve"><value>Κάλυψη</value></data>
+  <data name="Common_CoveragePercent" xml:space="preserve"><value>{0}% κάλυψη</value></data>
+  <data name="Common_MinVersion" xml:space="preserve"><value>Ελάχ. έκδοση</value></data>
+  <data name="Common_VersionHistory" xml:space="preserve"><value>Ιστορικό εκδόσεων</value></data>
+  <data name="Common_Home" xml:space="preserve"><value>Αρχική</value></data>
+  <data name="Common_ResultsCount" xml:space="preserve"><value>{0} αποτελέσματα</value></data>
+  <data name="Common_EmailLabel" xml:space="preserve"><value>Διεύθυνση email</value></data>
+  <data name="Common_EmailPlaceholder" xml:space="preserve"><value>your@email.com</value></data>
+  <data name="Common_PasswordLabel" xml:space="preserve"><value>Κωδικός πρόσβασης</value></data>
+  <data name="Common_DisplayNameLabel" xml:space="preserve"><value>Όνομα εμφάνισης</value></data>
+  <data name="Common_DataSecure" xml:space="preserve"><value>Τα δεδομένα σας είναι κρυπτογραφημένα και ασφαλή</value></data>
+  <data name="Common_PleaseLogin" xml:space="preserve"><value>Παρακαλούμε συνδεθείτε για να συνεχίσετε.</value></data>
+  <data name="Common_LoginLink" xml:space="preserve"><value>Σύνδεση</value></data>
+  <data name="Common_SubmitForReview" xml:space="preserve"><value>Υποβολή για έλεγχο</value></data>
+  <data name="Common_SaveAsDraft" xml:space="preserve"><value>Αποθήκευση ως πρόχειρο</value></data>
+  <data name="Common_Loaded" xml:space="preserve"><value>Φορτώθηκε</value></data>
+  <data name="Common_Cancel" xml:space="preserve"><value>Ακύρωση</value></data>
+  <data name="Common_Confirm" xml:space="preserve"><value>Επιβεβαίωση</value></data>
+  <data name="Common_NotFound" xml:space="preserve"><value>Δεν βρέθηκε</value></data>
+  <data name="Common_NothingHere" xml:space="preserve"><value>Λυπούμαστε, δεν υπάρχει τίποτα σε αυτή τη διεύθυνση.</value></data>
+  <data name="Common_BackToBrowse" xml:space="preserve"><value>Επιστροφή στην περιήγηση</value></data>
+  <data name="Common_ByAuthor" xml:space="preserve"><value>από {0}</value></data>
+  <data name="Common_SkillsCount" xml:space="preserve"><value>{0} δεξιότητες</value></data>
+  <data name="Common_InstallsCount" xml:space="preserve"><value>{0} εγκαταστάσεις</value></data>
+  <data name="Common_Package" xml:space="preserve"><value>Πακέτο</value></data>
+  <data name="Common_Plugin" xml:space="preserve"><value>Πρόσθετο</value></data>
+  <data name="Common_Category" xml:space="preserve"><value>Κατηγορία</value></data>
+  <data name="Common_Status" xml:space="preserve"><value>Κατάσταση</value></data>
+  <data name="Common_Actions" xml:space="preserve"><value>Ενέργειες</value></data>
+  <data name="Common_Author" xml:space="preserve"><value>Συγγραφέας</value></data>
+  <data name="Common_Code" xml:space="preserve"><value>Κωδικός</value></data>
+  <data name="Common_Submitted" xml:space="preserve"><value>Υποβλήθηκε</value></data>
+  <data name="Common_Docs" xml:space="preserve"><value>Τεκμηρίωση</value></data>
+  <data name="Common_Translations" xml:space="preserve"><value>μεταφράσεις</value></data>
+  <data name="Nav_Browse" xml:space="preserve"><value>Περιήγηση</value></data>
+  <data name="Nav_UploadPack" xml:space="preserve"><value>Μεταφόρτωση πακέτου</value></data>
+  <data name="Nav_UploadPlugin" xml:space="preserve"><value>Μεταφόρτωση πρόσθετου</value></data>
+  <data name="Nav_MyPackages" xml:space="preserve"><value>Τα πακέτα μου</value></data>
+  <data name="Nav_Admin" xml:space="preserve"><value>Διαχείριση</value></data>
+  <data name="Nav_SignOut" xml:space="preserve"><value>Αποσύνδεση</value></data>
+  <data name="Nav_SignIn" xml:space="preserve"><value>Σύνδεση</value></data>
+  <data name="Nav_Register" xml:space="preserve"><value>Εγγραφή</value></data>
+  <data name="Index_HeroTitle" xml:space="preserve"><value>Επεκτείνετε την εμπειρία σας με το Klacks</value></data>
+  <data name="Index_HeroSubtitle" xml:space="preserve"><value>Ανακαλύψτε γλωσσικά πακέτα και πρόσθετα λειτουργιών σχεδιασμένα για επαγγελματική διαχείριση εργατικού δυναμικού και κλιμακωσιμότητα επιχειρήσεων.</value></data>
+  <data name="Index_SearchPacks" xml:space="preserve"><value>Αναζήτηση γλωσσικών πακέτων...</value></data>
+  <data name="Index_SearchPlugins" xml:space="preserve"><value>Αναζήτηση πρόσθετων λειτουργιών...</value></data>
+  <data name="Index_AllCategories" xml:space="preserve"><value>Όλες οι κατηγορίες</value></data>
+  <data name="Index_NoPackagesFound" xml:space="preserve"><value>Δεν βρέθηκαν πακέτα</value></data>
+  <data name="Index_BeFirstPack" xml:space="preserve"><value>Γίνετε ο πρώτος που θα μεταφορτώσει ένα γλωσσικό πακέτο!</value></data>
+  <data name="Index_NoPluginsFound" xml:space="preserve"><value>Δεν βρέθηκαν πρόσθετα</value></data>
+  <data name="Index_BeFirstPlugin" xml:space="preserve"><value>Γίνετε ο πρώτος που θα μεταφορτώσει ένα πρόσθετο λειτουργίας!</value></data>
+  <data name="Index_PacksSubtitle" xml:space="preserve"><value>Στοιχεία τοπικής προσαρμογής για διεθνείς ομάδες.</value></data>
+  <data name="Index_FooterDescription" xml:space="preserve"><value>Επαγγελματικό οικοσύστημα για την επέκταση δυνατοτήτων διαχείρισης εργατικού δυναμικού.</value></data>
+  <data name="Index_FooterRights" xml:space="preserve"><value>© 2026 Klacks Store. Με την επιφύλαξη παντός δικαιώματος.</value></data>
+  <data name="Index_Resources" xml:space="preserve"><value>Πόροι</value></data>
+  <data name="Index_Documentation" xml:space="preserve"><value>Τεκμηρίωση</value></data>
+  <data name="Index_API" xml:space="preserve"><value>API</value></data>
+  <data name="Index_Legal" xml:space="preserve"><value>Νομικά</value></data>
+  <data name="Index_PrivacyPolicy" xml:space="preserve"><value>Πολιτική απορρήτου</value></data>
+  <data name="Index_TermsOfService" xml:space="preserve"><value>Όροι χρήσης</value></data>
+  <data name="Login_PageTitle" xml:space="preserve"><value>Σύνδεση - Klacks Store</value></data>
+  <data name="Login_WelcomeBack" xml:space="preserve"><value>Καλώς ήρθατε ξανά</value></data>
+  <data name="Login_Subtitle" xml:space="preserve"><value>Συνδεθείτε για να διαχειριστείτε τα πακέτα και τα πρόσθετά σας</value></data>
+  <data name="Login_PasswordPlaceholder" xml:space="preserve"><value>Εισαγάγετε τον κωδικό πρόσβασής σας</value></data>
+  <data name="Login_NoAccount" xml:space="preserve"><value>Δεν έχετε λογαριασμό;</value></data>
+  <data name="Login_CreateOne" xml:space="preserve"><value>Δημιουργήστε έναν</value></data>
+  <data name="Login_InvalidCredentials" xml:space="preserve"><value>Μη έγκυρο email ή κωδικός πρόσβασης</value></data>
+  <data name="Register_PageTitle" xml:space="preserve"><value>Εγγραφή - Klacks Store</value></data>
+  <data name="Register_Title" xml:space="preserve"><value>Δημιουργία λογαριασμού</value></data>
+  <data name="Register_Subtitle" xml:space="preserve"><value>Γίνετε μέλος της κοινότητας Klacks Store</value></data>
+  <data name="Register_NamePlaceholder" xml:space="preserve"><value>Το όνομά σας</value></data>
+  <data name="Register_PasswordLabel" xml:space="preserve"><value>Κωδικός πρόσβασης (ελάχ. {0} χαρακτήρες)</value></data>
+  <data name="Register_CreatePassword" xml:space="preserve"><value>Δημιουργήστε κωδικό πρόσβασης</value></data>
+  <data name="Register_ConfirmPasswordLabel" xml:space="preserve"><value>Επιβεβαίωση κωδικού πρόσβασης</value></data>
+  <data name="Register_ConfirmPasswordPlaceholder" xml:space="preserve"><value>Επιβεβαιώστε τον κωδικό πρόσβασής σας</value></data>
+  <data name="Register_CreateAccount" xml:space="preserve"><value>Δημιουργία λογαριασμού</value></data>
+  <data name="Register_HasAccount" xml:space="preserve"><value>Έχετε ήδη λογαριασμό;</value></data>
+  <data name="Register_NameRequired" xml:space="preserve"><value>Το όνομα εμφάνισης είναι υποχρεωτικό</value></data>
+  <data name="Register_EmailRequired" xml:space="preserve"><value>Το email είναι υποχρεωτικό</value></data>
+  <data name="Register_PasswordMismatch" xml:space="preserve"><value>Οι κωδικοί πρόσβασης δεν ταιριάζουν</value></data>
+  <data name="Register_Success" xml:space="preserve"><value>Η εγγραφή ολοκληρώθηκε με επιτυχία! Μπορείτε τώρα να συνδεθείτε.</value></data>
+  <data name="PackageDetail_NotFound" xml:space="preserve"><value>Το πακέτο δεν βρέθηκε</value></data>
+  <data name="PackageDetail_NotFoundDesc" xml:space="preserve"><value>Το πακέτο που αναζητάτε δεν υπάρχει.</value></data>
+  <data name="PackageDetail_SpeechLocale" xml:space="preserve"><value>Τοπικές ρυθμίσεις ομιλίας</value></data>
+  <data name="PackageDetail_TranslationCoverage" xml:space="preserve"><value>Κάλυψη μετάφρασης</value></data>
+  <data name="PackageDetail_TranslationCount" xml:space="preserve"><value>{0} μεταφράσεις</value></data>
+  <data name="PackageDetail_Manuals" xml:space="preserve"><value>Εγχειρίδια</value></data>
+  <data name="PackageDetail_Countries" xml:space="preserve"><value>Χώρες</value></data>
+  <data name="PackageDetail_States" xml:space="preserve"><value>Πολιτείες</value></data>
+  <data name="PackageDetail_CalendarRules" xml:space="preserve"><value>Κανόνες ημερολογίου</value></data>
+  <data name="PluginDetail_NotFound" xml:space="preserve"><value>Το πρόσθετο δεν βρέθηκε</value></data>
+  <data name="PluginDetail_NotFoundDesc" xml:space="preserve"><value>Το πρόσθετο που αναζητάτε δεν υπάρχει.</value></data>
+  <data name="PluginDetail_ProvidedSkills" xml:space="preserve"><value>Παρεχόμενες δεξιότητες</value></data>
+  <data name="PluginDetail_RequiredPermissions" xml:space="preserve"><value>Απαιτούμενα δικαιώματα</value></data>
+  <data name="PluginDetail_README" xml:space="preserve"><value>README</value></data>
+  <data name="Upload_Title" xml:space="preserve"><value>Μεταφόρτωση γλωσσικού πακέτου</value></data>
+  <data name="Upload_Subtitle" xml:space="preserve"><value>Μοιραστείτε το γλωσσικό σας πακέτο με την κοινότητα</value></data>
+  <data name="Upload_CodeLabel" xml:space="preserve"><value>Κωδικός (π.χ. fr-FR)</value></data>
+  <data name="Upload_CodePlaceholder" xml:space="preserve"><value>xx-XX</value></data>
+  <data name="Upload_DisplayNamePlaceholder" xml:space="preserve"><value>π.χ. Γαλλικά (Γαλλία)</value></data>
+  <data name="Upload_SpeechLocale" xml:space="preserve"><value>Τοπικές ρυθμίσεις ομιλίας</value></data>
+  <data name="Upload_SpeechLocalePlaceholder" xml:space="preserve"><value>π.χ. fr-FR</value></data>
+  <data name="Upload_VersionPlaceholder" xml:space="preserve"><value>1.0.0</value></data>
+  <data name="Upload_Description" xml:space="preserve"><value>Περιγραφή</value></data>
+  <data name="Upload_DescriptionPlaceholder" xml:space="preserve"><value>Περιγράψτε το γλωσσικό σας πακέτο...</value></data>
+  <data name="Upload_CoverageLabel" xml:space="preserve"><value>Κάλυψη (%)</value></data>
+  <data name="Upload_MinKlacksVersion" xml:space="preserve"><value>Ελάχ. έκδοση Klacks</value></data>
+  <data name="Upload_ManifestRequired" xml:space="preserve"><value>manifest.json</value></data>
+  <data name="Upload_TranslationsRequired" xml:space="preserve"><value>translations.json</value></data>
+  <data name="Upload_DocsOptional" xml:space="preserve"><value>docs.json (προαιρετικό)</value></data>
+  <data name="Upload_CountriesOptional" xml:space="preserve"><value>countries.json (προαιρετικό)</value></data>
+  <data name="Upload_StatesOptional" xml:space="preserve"><value>states.json (προαιρετικό)</value></data>
+  <data name="Upload_CalendarOptional" xml:space="preserve"><value>calendar-rules.json (προαιρετικό)</value></data>
+  <data name="Upload_CodeRequired" xml:space="preserve"><value>Ο κωδικός και το όνομα εμφάνισης είναι υποχρεωτικά</value></data>
+  <data name="Upload_Success" xml:space="preserve"><value>Το πακέτο υποβλήθηκε για έλεγχο!</value></data>
+  <data name="UploadPlugin_Title" xml:space="preserve"><value>Μεταφόρτωση πρόσθετου λειτουργίας</value></data>
+  <data name="UploadPlugin_Subtitle" xml:space="preserve"><value>Μοιραστείτε το πρόσθετο λειτουργίας σας με την κοινότητα</value></data>
+  <data name="UploadPlugin_NameLabel" xml:space="preserve"><value>Όνομα πρόσθετου (μοναδικό αναγνωριστικό)</value></data>
+  <data name="UploadPlugin_NamePlaceholder" xml:space="preserve"><value>π.χ. messaging</value></data>
+  <data name="UploadPlugin_DisplayNamePlaceholder" xml:space="preserve"><value>π.χ. Messaging</value></data>
+  <data name="UploadPlugin_SelectCategory" xml:space="preserve"><value>Επιλέξτε κατηγορία...</value></data>
+  <data name="UploadPlugin_DescriptionPlaceholder" xml:space="preserve"><value>Περιγράψτε το πρόσθετο λειτουργίας σας...</value></data>
+  <data name="UploadPlugin_ChangelogLabel" xml:space="preserve"><value>Ιστορικό αλλαγών</value></data>
+  <data name="UploadPlugin_ChangelogPlaceholder" xml:space="preserve"><value>Τι άλλαξε σε αυτή την έκδοση;</value></data>
+  <data name="UploadPlugin_ManifestRequired" xml:space="preserve"><value>manifest.json (υποχρεωτικό)</value></data>
+  <data name="UploadPlugin_EnRequired" xml:space="preserve"><value>en.json (υποχρεωτικό i18n)</value></data>
+  <data name="UploadPlugin_DeOptional" xml:space="preserve"><value>de.json (προαιρετικό i18n)</value></data>
+  <data name="UploadPlugin_FrOptional" xml:space="preserve"><value>fr.json (προαιρετικό i18n)</value></data>
+  <data name="UploadPlugin_ReadmeOptional" xml:space="preserve"><value>README.md (προαιρετικό)</value></data>
+  <data name="UploadPlugin_NameRequired" xml:space="preserve"><value>Το όνομα και το όνομα εμφάνισης είναι υποχρεωτικά</value></data>
+  <data name="UploadPlugin_CategoryRequired" xml:space="preserve"><value>Η κατηγορία είναι υποχρεωτική</value></data>
+  <data name="UploadPlugin_Success" xml:space="preserve"><value>Το πρόσθετο υποβλήθηκε για έλεγχο!</value></data>
+  <data name="MyPackages_Title" xml:space="preserve"><value>Τα πακέτα μου</value></data>
+  <data name="MyPackages_LoginRequired" xml:space="preserve"><value>Παρακαλούμε συνδεθείτε για να δείτε τα πακέτα σας.</value></data>
+  <data name="MyPackages_NoPacks" xml:space="preserve"><value>Δεν υπάρχουν ακόμη γλωσσικά πακέτα</value></data>
+  <data name="MyPackages_NoPacksDesc" xml:space="preserve"><value>Δεν έχετε μεταφορτώσει ακόμη κανένα γλωσσικό πακέτο.</value></data>
+  <data name="MyPackages_UploadFirst" xml:space="preserve"><value>Μεταφορτώστε το πρώτο σας πακέτο</value></data>
+  <data name="MyPackages_NoPlugins" xml:space="preserve"><value>Δεν υπάρχουν ακόμη πρόσθετα λειτουργιών</value></data>
+  <data name="MyPackages_NoPluginsDesc" xml:space="preserve"><value>Δεν έχετε μεταφορτώσει ακόμη κανένα πρόσθετο λειτουργίας.</value></data>
+  <data name="MyPackages_UploadFirstPlugin" xml:space="preserve"><value>Μεταφορτώστε το πρώτο σας πρόσθετο</value></data>
+  <data name="Admin_Title" xml:space="preserve"><value>Πίνακας διαχείρισης</value></data>
+  <data name="Admin_AccessDenied" xml:space="preserve"><value>Δεν επιτρέπεται η πρόσβαση. Απαιτούνται δικαιώματα διαχειριστή.</value></data>
+  <data name="Admin_PendingPackages" xml:space="preserve"><value>Πακέτα σε αναμονή</value></data>
+  <data name="Admin_PendingPlugins" xml:space="preserve"><value>Πρόσθετα σε αναμονή</value></data>
+  <data name="Admin_Users" xml:space="preserve"><value>Χρήστες</value></data>
+  <data name="Admin_PendingLanguagePackages" xml:space="preserve"><value>Γλωσσικά πακέτα σε αναμονή</value></data>
+  <data name="Admin_NoPendingPackages" xml:space="preserve"><value>Δεν υπάρχουν πακέτα σε αναμονή ελέγχου.</value></data>
+  <data name="Admin_PendingFeaturePlugins" xml:space="preserve"><value>Πρόσθετα λειτουργιών σε αναμονή</value></data>
+  <data name="Admin_NoPendingPlugins" xml:space="preserve"><value>Δεν υπάρχουν πρόσθετα σε αναμονή ελέγχου.</value></data>
+  <data name="Admin_Name" xml:space="preserve"><value>Όνομα</value></data>
+  <data name="Admin_Email" xml:space="preserve"><value>Email</value></data>
+  <data name="Admin_Joined" xml:space="preserve"><value>Εγγράφηκε</value></data>
+  <data name="Admin_MakeAdmin" xml:space="preserve"><value>Ορισμός ως διαχειριστή</value></data>
+  <data name="Admin_RemoveAdmin" xml:space="preserve"><value>Αφαίρεση διαχειριστή</value></data>
+  <data name="Admin_PackageApproved" xml:space="preserve"><value>Το πακέτο εγκρίθηκε με επιτυχία</value></data>
+  <data name="Admin_PackageRejected" xml:space="preserve"><value>Το πακέτο απορρίφθηκε</value></data>
+  <data name="Admin_PluginApproved" xml:space="preserve"><value>Το πρόσθετο εγκρίθηκε με επιτυχία</value></data>
+  <data name="Admin_PluginRejected" xml:space="preserve"><value>Το πρόσθετο απορρίφθηκε</value></data>
+  <data name="Admin_RejectPackageTitle" xml:space="preserve"><value>Απόρριψη πακέτου</value></data>
+  <data name="Admin_RejectPackageMessage" xml:space="preserve"><value>Είστε βέβαιοι ότι θέλετε να απορρίψετε αυτό το πακέτο;</value></data>
+  <data name="Admin_RejectPluginTitle" xml:space="preserve"><value>Απόρριψη πρόσθετου</value></data>
+  <data name="Admin_RejectPluginMessage" xml:space="preserve"><value>Είστε βέβαιοι ότι θέλετε να απορρίψετε αυτό το πρόσθετο;</value></data>
+  <data name="Admin_RejectedByAdmin" xml:space="preserve"><value>Απορρίφθηκε από διαχειριστή</value></data>
+  <data name="Status_Published" xml:space="preserve"><value>Δημοσιευμένο</value></data>
+  <data name="Status_Pending" xml:space="preserve"><value>Σε αναμονή</value></data>
+  <data name="Status_Rejected" xml:space="preserve"><value>Απορρίφθηκε</value></data>
+  <data name="Status_Draft" xml:space="preserve"><value>Πρόχειρο</value></data>
+  <data name="Status_Unknown" xml:space="preserve"><value>Άγνωστο</value></data>
+  <data name="Common_Deployment" xml:space="preserve"><value>Ανάπτυξη</value></data>
+  <data name="Common_RegionPackage" xml:space="preserve"><value>Πακέτο περιοχής</value></data>
+  <data name="Common_Country" xml:space="preserve"><value>Χώρα</value></data>
+  <data name="Nav_UploadRegion" xml:space="preserve"><value>Μεταφόρτωση περιοχής</value></data>
+  <data name="Index_SearchRegions" xml:space="preserve"><value>Αναζήτηση πακέτων περιοχής...</value></data>
+  <data name="Index_NoRegionsFound" xml:space="preserve"><value>Δεν βρέθηκαν πακέτα περιοχής</value></data>
+  <data name="Index_BeFirstRegion" xml:space="preserve"><value>Γίνετε ο πρώτος που θα μεταφορτώσει ένα πακέτο περιοχής!</value></data>
+  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>Προφίλ ανάπτυξης χωρών για νέες εγκαταστάσεις.</value></data>
+  <data name="RegionDetail_NotFound" xml:space="preserve"><value>Το πακέτο περιοχής δεν βρέθηκε</value></data>
+  <data name="RegionDetail_NotFoundDesc" xml:space="preserve"><value>Το ζητούμενο πακέτο περιοχής δεν υπάρχει ή δεν έχει δημοσιευτεί.</value></data>
+  <data name="RegionDetail_IndustryLabel" xml:space="preserve"><value>Κλάδος</value></data>
+  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>Λήψεις ανάπτυξης</value></data>
+  <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>Προφίλ JSON</value></data>
+  <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>Προφίλ περιοχής για μια υπάρχουσα εγκατάσταση Klacks — προσαρτήστε το ως αρχείο ρύθμισης περιοχής.</value></data>
+  <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>Πακέτο On-Prem</value></data>
+  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Πλήρες πακέτο εγκατάστασης με σενάρια εγκαταστάτη, Docker Compose και το προφίλ περιοχής.</value></data>
+  <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Πακέτο Docker Compose</value></data>
+  <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Ελάχιστη ρύθμιση Docker Compose χωρίς εγκαταστάτες, για επαγγελματίες του Docker.</value></data>
+  <data name="Industry_Homecare" xml:space="preserve"><value>Κατ' οίκον φροντίδα</value></data>
+  <data name="Industry_Healthcare" xml:space="preserve"><value>Υγειονομική περίθαλψη</value></data>
+  <data name="Industry_Security" xml:space="preserve"><value>Ασφάλεια</value></data>
+  <data name="Industry_Facility" xml:space="preserve"><value>Υπηρεσίες εγκαταστάσεων</value></data>
+  <data name="Industry_Logistics" xml:space="preserve"><value>Εφοδιαστική</value></data>
+  <data name="Industry_All" xml:space="preserve"><value>Όλοι οι κλάδοι</value></data>
+  <data name="UploadRegion_Title" xml:space="preserve"><value>Μεταφόρτωση πακέτου περιοχής</value></data>
+  <data name="UploadRegion_Subtitle" xml:space="preserve"><value>Μοιραστείτε ένα προφίλ ρύθμισης χώρας με την κοινότητα</value></data>
+  <data name="UploadRegion_CountryLabel" xml:space="preserve"><value>Χώρα</value></data>
+  <data name="UploadRegion_SelectCountry" xml:space="preserve"><value>Επιλέξτε χώρα...</value></data>
+  <data name="UploadRegion_ChangeLog" xml:space="preserve"><value>Ιστορικό αλλαγών</value></data>
+  <data name="UploadRegion_ChangeLogPlaceholder" xml:space="preserve"><value>Τι άλλαξε σε αυτή την έκδοση;</value></data>
+  <data name="UploadRegion_DescriptionPlaceholder" xml:space="preserve"><value>Περιγράψτε το προφίλ περιοχής...</value></data>
+  <data name="UploadRegion_ProfileRequired" xml:space="preserve"><value>JSON προφίλ περιοχής (υποχρεωτικό)</value></data>
+  <data name="UploadRegion_ValidationErrors" xml:space="preserve"><value>Σφάλματα επικύρωσης</value></data>
+  <data name="UploadRegion_ValidationWarnings" xml:space="preserve"><value>Προειδοποιήσεις επικύρωσης</value></data>
+  <data name="UploadRegion_Success" xml:space="preserve"><value>Το πακέτο περιοχής υποβλήθηκε για έλεγχο!</value></data>
+  <data name="UploadRegion_CountryRequired" xml:space="preserve"><value>Παρακαλούμε επιλέξτε χώρα</value></data>
+  <data name="MyPackages_NoRegions" xml:space="preserve"><value>Δεν υπάρχουν ακόμη πακέτα περιοχής</value></data>
+  <data name="MyPackages_NoRegionsDesc" xml:space="preserve"><value>Δεν έχετε μεταφορτώσει ακόμη κανένα πακέτο περιοχής.</value></data>
+  <data name="MyPackages_UploadFirstRegion" xml:space="preserve"><value>Μεταφορτώστε το πρώτο σας πακέτο περιοχής</value></data>
+  <data name="Admin_PendingRegions" xml:space="preserve"><value>Περιοχές σε αναμονή</value></data>
+  <data name="Admin_PendingRegionPackages" xml:space="preserve"><value>Πακέτα περιοχής σε αναμονή</value></data>
+  <data name="Admin_NoPendingRegions" xml:space="preserve"><value>Δεν υπάρχουν πακέτα περιοχής σε αναμονή</value></data>
+  <data name="Admin_RegionApproved" xml:space="preserve"><value>Το πακέτο περιοχής εγκρίθηκε</value></data>
+  <data name="Admin_RegionRejected" xml:space="preserve"><value>Το πακέτο περιοχής απορρίφθηκε</value></data>
+  <data name="Admin_RejectRegionTitle" xml:space="preserve"><value>Απόρριψη πακέτου περιοχής</value></data>
+  <data name="Admin_RejectRegionMessage" xml:space="preserve"><value>Είστε βέβαιοι ότι θέλετε να απορρίψετε αυτό το πακέτο περιοχής;</value></data>
+</root>

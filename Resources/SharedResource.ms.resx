@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msOccurs="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+              <xsd:attribute name="xml:space" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <data name="Common_LanguagePacks" xml:space="preserve"><value>Pakej Bahasa</value></data>
+  <data name="Common_FeaturePlugins" xml:space="preserve"><value>Plugin Ciri</value></data>
+  <data name="Common_Download" xml:space="preserve"><value>Muat Turun</value></data>
+  <data name="Common_Downloads" xml:space="preserve"><value>Muat Turun</value></data>
+  <data name="Common_Version" xml:space="preserve"><value>Versi</value></data>
+  <data name="Common_Coverage" xml:space="preserve"><value>Liputan</value></data>
+  <data name="Common_CoveragePercent" xml:space="preserve"><value>Liputan {0}%</value></data>
+  <data name="Common_MinVersion" xml:space="preserve"><value>Versi Minimum</value></data>
+  <data name="Common_VersionHistory" xml:space="preserve"><value>Sejarah Versi</value></data>
+  <data name="Common_Home" xml:space="preserve"><value>Laman Utama</value></data>
+  <data name="Common_ResultsCount" xml:space="preserve"><value>{0} keputusan</value></data>
+  <data name="Common_EmailLabel" xml:space="preserve"><value>Alamat e-mel</value></data>
+  <data name="Common_EmailPlaceholder" xml:space="preserve"><value>your@email.com</value></data>
+  <data name="Common_PasswordLabel" xml:space="preserve"><value>Kata Laluan</value></data>
+  <data name="Common_DisplayNameLabel" xml:space="preserve"><value>Nama Paparan</value></data>
+  <data name="Common_DataSecure" xml:space="preserve"><value>Data anda disulitkan dan selamat</value></data>
+  <data name="Common_PleaseLogin" xml:space="preserve"><value>Sila log masuk untuk teruskan.</value></data>
+  <data name="Common_LoginLink" xml:space="preserve"><value>Log Masuk</value></data>
+  <data name="Common_SubmitForReview" xml:space="preserve"><value>Hantar untuk Semakan</value></data>
+  <data name="Common_SaveAsDraft" xml:space="preserve"><value>Simpan sebagai Draf</value></data>
+  <data name="Common_Loaded" xml:space="preserve"><value>Dimuatkan</value></data>
+  <data name="Common_Cancel" xml:space="preserve"><value>Batal</value></data>
+  <data name="Common_Confirm" xml:space="preserve"><value>Sahkan</value></data>
+  <data name="Common_NotFound" xml:space="preserve"><value>Tidak dijumpai</value></data>
+  <data name="Common_NothingHere" xml:space="preserve"><value>Maaf, tiada apa-apa di alamat ini.</value></data>
+  <data name="Common_BackToBrowse" xml:space="preserve"><value>Kembali ke Layari</value></data>
+  <data name="Common_ByAuthor" xml:space="preserve"><value>oleh {0}</value></data>
+  <data name="Common_SkillsCount" xml:space="preserve"><value>{0} Kemahiran</value></data>
+  <data name="Common_InstallsCount" xml:space="preserve"><value>{0} pemasangan</value></data>
+  <data name="Common_Package" xml:space="preserve"><value>Pakej</value></data>
+  <data name="Common_Plugin" xml:space="preserve"><value>Plugin</value></data>
+  <data name="Common_Category" xml:space="preserve"><value>Kategori</value></data>
+  <data name="Common_Status" xml:space="preserve"><value>Status</value></data>
+  <data name="Common_Actions" xml:space="preserve"><value>Tindakan</value></data>
+  <data name="Common_Author" xml:space="preserve"><value>Pengarang</value></data>
+  <data name="Common_Code" xml:space="preserve"><value>Kod</value></data>
+  <data name="Common_Submitted" xml:space="preserve"><value>Dihantar</value></data>
+  <data name="Common_Docs" xml:space="preserve"><value>Dokumen</value></data>
+  <data name="Common_Translations" xml:space="preserve"><value>terjemahan</value></data>
+  <data name="Nav_Browse" xml:space="preserve"><value>Layari</value></data>
+  <data name="Nav_UploadPack" xml:space="preserve"><value>Muat Naik Pakej</value></data>
+  <data name="Nav_UploadPlugin" xml:space="preserve"><value>Muat Naik Plugin</value></data>
+  <data name="Nav_MyPackages" xml:space="preserve"><value>Pakej Saya</value></data>
+  <data name="Nav_Admin" xml:space="preserve"><value>Admin</value></data>
+  <data name="Nav_SignOut" xml:space="preserve"><value>Log Keluar</value></data>
+  <data name="Nav_SignIn" xml:space="preserve"><value>Log Masuk</value></data>
+  <data name="Nav_Register" xml:space="preserve"><value>Daftar</value></data>
+  <data name="Index_HeroTitle" xml:space="preserve"><value>Perluaskan Pengalaman Klacks Anda</value></data>
+  <data name="Index_HeroSubtitle" xml:space="preserve"><value>Terokai pakej bahasa dan plugin ciri yang direka untuk pengurusan tenaga kerja profesional dan kebolehskalaan perusahaan.</value></data>
+  <data name="Index_SearchPacks" xml:space="preserve"><value>Cari pakej bahasa...</value></data>
+  <data name="Index_SearchPlugins" xml:space="preserve"><value>Cari plugin ciri...</value></data>
+  <data name="Index_AllCategories" xml:space="preserve"><value>Semua kategori</value></data>
+  <data name="Index_NoPackagesFound" xml:space="preserve"><value>Tiada pakej dijumpai</value></data>
+  <data name="Index_BeFirstPack" xml:space="preserve"><value>Jadilah orang pertama memuat naik pakej bahasa!</value></data>
+  <data name="Index_NoPluginsFound" xml:space="preserve"><value>Tiada plugin dijumpai</value></data>
+  <data name="Index_BeFirstPlugin" xml:space="preserve"><value>Jadilah orang pertama memuat naik plugin ciri!</value></data>
+  <data name="Index_PacksSubtitle" xml:space="preserve"><value>Aset penyetempatan untuk pasukan antarabangsa.</value></data>
+  <data name="Index_FooterDescription" xml:space="preserve"><value>Ekosistem profesional untuk memperluaskan keupayaan pengurusan tenaga kerja.</value></data>
+  <data name="Index_FooterRights" xml:space="preserve"><value>© 2026 Klacks Store. Hak cipta terpelihara.</value></data>
+  <data name="Index_Resources" xml:space="preserve"><value>Sumber</value></data>
+  <data name="Index_Documentation" xml:space="preserve"><value>Dokumentasi</value></data>
+  <data name="Index_API" xml:space="preserve"><value>API</value></data>
+  <data name="Index_Legal" xml:space="preserve"><value>Perundangan</value></data>
+  <data name="Index_PrivacyPolicy" xml:space="preserve"><value>Dasar Privasi</value></data>
+  <data name="Index_TermsOfService" xml:space="preserve"><value>Terma Perkhidmatan</value></data>
+  <data name="Login_PageTitle" xml:space="preserve"><value>Log Masuk - Klacks Store</value></data>
+  <data name="Login_WelcomeBack" xml:space="preserve"><value>Selamat kembali</value></data>
+  <data name="Login_Subtitle" xml:space="preserve"><value>Log masuk untuk mengurus pakej dan plugin anda</value></data>
+  <data name="Login_PasswordPlaceholder" xml:space="preserve"><value>Masukkan kata laluan anda</value></data>
+  <data name="Login_NoAccount" xml:space="preserve"><value>Tiada akaun?</value></data>
+  <data name="Login_CreateOne" xml:space="preserve"><value>Daftar sekarang</value></data>
+  <data name="Login_InvalidCredentials" xml:space="preserve"><value>E-mel atau kata laluan tidak sah</value></data>
+  <data name="Register_PageTitle" xml:space="preserve"><value>Daftar - Klacks Store</value></data>
+  <data name="Register_Title" xml:space="preserve"><value>Cipta akaun</value></data>
+  <data name="Register_Subtitle" xml:space="preserve"><value>Sertai komuniti Klacks Store</value></data>
+  <data name="Register_NamePlaceholder" xml:space="preserve"><value>Nama anda</value></data>
+  <data name="Register_PasswordLabel" xml:space="preserve"><value>Kata Laluan (min. {0} aksara)</value></data>
+  <data name="Register_CreatePassword" xml:space="preserve"><value>Cipta kata laluan</value></data>
+  <data name="Register_ConfirmPasswordLabel" xml:space="preserve"><value>Sahkan Kata Laluan</value></data>
+  <data name="Register_ConfirmPasswordPlaceholder" xml:space="preserve"><value>Sahkan kata laluan anda</value></data>
+  <data name="Register_CreateAccount" xml:space="preserve"><value>Cipta Akaun</value></data>
+  <data name="Register_HasAccount" xml:space="preserve"><value>Sudah mempunyai akaun?</value></data>
+  <data name="Register_NameRequired" xml:space="preserve"><value>Nama paparan diperlukan</value></data>
+  <data name="Register_EmailRequired" xml:space="preserve"><value>E-mel diperlukan</value></data>
+  <data name="Register_PasswordMismatch" xml:space="preserve"><value>Kata laluan tidak sepadan</value></data>
+  <data name="Register_Success" xml:space="preserve"><value>Pendaftaran berjaya! Anda kini boleh log masuk.</value></data>
+  <data name="PackageDetail_NotFound" xml:space="preserve"><value>Pakej tidak dijumpai</value></data>
+  <data name="PackageDetail_NotFoundDesc" xml:space="preserve"><value>Pakej yang anda cari tidak wujud.</value></data>
+  <data name="PackageDetail_SpeechLocale" xml:space="preserve"><value>Lokal Pertuturan</value></data>
+  <data name="PackageDetail_TranslationCoverage" xml:space="preserve"><value>Liputan Terjemahan</value></data>
+  <data name="PackageDetail_TranslationCount" xml:space="preserve"><value>{0} terjemahan</value></data>
+  <data name="PackageDetail_Manuals" xml:space="preserve"><value>Manual</value></data>
+  <data name="PackageDetail_Countries" xml:space="preserve"><value>Negara</value></data>
+  <data name="PackageDetail_States" xml:space="preserve"><value>Negeri</value></data>
+  <data name="PackageDetail_CalendarRules" xml:space="preserve"><value>Peraturan Kalendar</value></data>
+  <data name="PluginDetail_NotFound" xml:space="preserve"><value>Plugin tidak dijumpai</value></data>
+  <data name="PluginDetail_NotFoundDesc" xml:space="preserve"><value>Plugin yang anda cari tidak wujud.</value></data>
+  <data name="PluginDetail_ProvidedSkills" xml:space="preserve"><value>Kemahiran Disediakan</value></data>
+  <data name="PluginDetail_RequiredPermissions" xml:space="preserve"><value>Kebenaran Diperlukan</value></data>
+  <data name="PluginDetail_README" xml:space="preserve"><value>README</value></data>
+  <data name="Upload_Title" xml:space="preserve"><value>Muat Naik Pakej Bahasa</value></data>
+  <data name="Upload_Subtitle" xml:space="preserve"><value>Kongsi pakej bahasa anda dengan komuniti</value></data>
+  <data name="Upload_CodeLabel" xml:space="preserve"><value>Kod (cth. fr-FR)</value></data>
+  <data name="Upload_CodePlaceholder" xml:space="preserve"><value>xx-XX</value></data>
+  <data name="Upload_DisplayNamePlaceholder" xml:space="preserve"><value>cth. Perancis (Perancis)</value></data>
+  <data name="Upload_SpeechLocale" xml:space="preserve"><value>Lokal Pertuturan</value></data>
+  <data name="Upload_SpeechLocalePlaceholder" xml:space="preserve"><value>cth. fr-FR</value></data>
+  <data name="Upload_VersionPlaceholder" xml:space="preserve"><value>1.0.0</value></data>
+  <data name="Upload_Description" xml:space="preserve"><value>Penerangan</value></data>
+  <data name="Upload_DescriptionPlaceholder" xml:space="preserve"><value>Terangkan pakej bahasa anda...</value></data>
+  <data name="Upload_CoverageLabel" xml:space="preserve"><value>Liputan (%)</value></data>
+  <data name="Upload_MinKlacksVersion" xml:space="preserve"><value>Versi Klacks Minimum</value></data>
+  <data name="Upload_ManifestRequired" xml:space="preserve"><value>manifest.json</value></data>
+  <data name="Upload_TranslationsRequired" xml:space="preserve"><value>translations.json</value></data>
+  <data name="Upload_DocsOptional" xml:space="preserve"><value>docs.json (pilihan)</value></data>
+  <data name="Upload_CountriesOptional" xml:space="preserve"><value>countries.json (pilihan)</value></data>
+  <data name="Upload_StatesOptional" xml:space="preserve"><value>states.json (pilihan)</value></data>
+  <data name="Upload_CalendarOptional" xml:space="preserve"><value>calendar-rules.json (pilihan)</value></data>
+  <data name="Upload_CodeRequired" xml:space="preserve"><value>Kod dan Nama Paparan diperlukan</value></data>
+  <data name="Upload_Success" xml:space="preserve"><value>Pakej dihantar untuk semakan!</value></data>
+  <data name="UploadPlugin_Title" xml:space="preserve"><value>Muat Naik Plugin Ciri</value></data>
+  <data name="UploadPlugin_Subtitle" xml:space="preserve"><value>Kongsi plugin ciri anda dengan komuniti</value></data>
+  <data name="UploadPlugin_NameLabel" xml:space="preserve"><value>Nama Plugin (pengecam unik)</value></data>
+  <data name="UploadPlugin_NamePlaceholder" xml:space="preserve"><value>cth. messaging</value></data>
+  <data name="UploadPlugin_DisplayNamePlaceholder" xml:space="preserve"><value>cth. Messaging</value></data>
+  <data name="UploadPlugin_SelectCategory" xml:space="preserve"><value>Pilih kategori...</value></data>
+  <data name="UploadPlugin_DescriptionPlaceholder" xml:space="preserve"><value>Terangkan plugin ciri anda...</value></data>
+  <data name="UploadPlugin_ChangelogLabel" xml:space="preserve"><value>Log Perubahan</value></data>
+  <data name="UploadPlugin_ChangelogPlaceholder" xml:space="preserve"><value>Apakah yang berubah dalam versi ini?</value></data>
+  <data name="UploadPlugin_ManifestRequired" xml:space="preserve"><value>manifest.json (diperlukan)</value></data>
+  <data name="UploadPlugin_EnRequired" xml:space="preserve"><value>en.json (i18n diperlukan)</value></data>
+  <data name="UploadPlugin_DeOptional" xml:space="preserve"><value>de.json (i18n pilihan)</value></data>
+  <data name="UploadPlugin_FrOptional" xml:space="preserve"><value>fr.json (i18n pilihan)</value></data>
+  <data name="UploadPlugin_ReadmeOptional" xml:space="preserve"><value>README.md (pilihan)</value></data>
+  <data name="UploadPlugin_NameRequired" xml:space="preserve"><value>Nama dan Nama Paparan diperlukan</value></data>
+  <data name="UploadPlugin_CategoryRequired" xml:space="preserve"><value>Kategori diperlukan</value></data>
+  <data name="UploadPlugin_Success" xml:space="preserve"><value>Plugin dihantar untuk semakan!</value></data>
+  <data name="MyPackages_Title" xml:space="preserve"><value>Pakej Saya</value></data>
+  <data name="MyPackages_LoginRequired" xml:space="preserve"><value>Sila log masuk untuk melihat pakej anda.</value></data>
+  <data name="MyPackages_NoPacks" xml:space="preserve"><value>Belum ada pakej bahasa</value></data>
+  <data name="MyPackages_NoPacksDesc" xml:space="preserve"><value>Anda belum memuat naik sebarang pakej bahasa.</value></data>
+  <data name="MyPackages_UploadFirst" xml:space="preserve"><value>Muat naik pakej pertama anda</value></data>
+  <data name="MyPackages_NoPlugins" xml:space="preserve"><value>Belum ada plugin ciri</value></data>
+  <data name="MyPackages_NoPluginsDesc" xml:space="preserve"><value>Anda belum memuat naik sebarang plugin ciri.</value></data>
+  <data name="MyPackages_UploadFirstPlugin" xml:space="preserve"><value>Muat naik plugin pertama anda</value></data>
+  <data name="Admin_Title" xml:space="preserve"><value>Papan Pemuka Admin</value></data>
+  <data name="Admin_AccessDenied" xml:space="preserve"><value>Akses ditolak. Keistimewaan admin diperlukan.</value></data>
+  <data name="Admin_PendingPackages" xml:space="preserve"><value>Pakej Menunggu Semakan</value></data>
+  <data name="Admin_PendingPlugins" xml:space="preserve"><value>Plugin Menunggu Semakan</value></data>
+  <data name="Admin_Users" xml:space="preserve"><value>Pengguna</value></data>
+  <data name="Admin_PendingLanguagePackages" xml:space="preserve"><value>Pakej Bahasa Menunggu Semakan</value></data>
+  <data name="Admin_NoPendingPackages" xml:space="preserve"><value>Tiada pakej menunggu semakan.</value></data>
+  <data name="Admin_PendingFeaturePlugins" xml:space="preserve"><value>Plugin Ciri Menunggu Semakan</value></data>
+  <data name="Admin_NoPendingPlugins" xml:space="preserve"><value>Tiada plugin menunggu semakan.</value></data>
+  <data name="Admin_Name" xml:space="preserve"><value>Nama</value></data>
+  <data name="Admin_Email" xml:space="preserve"><value>E-mel</value></data>
+  <data name="Admin_Joined" xml:space="preserve"><value>Menyertai</value></data>
+  <data name="Admin_MakeAdmin" xml:space="preserve"><value>Jadikan Admin</value></data>
+  <data name="Admin_RemoveAdmin" xml:space="preserve"><value>Buang Admin</value></data>
+  <data name="Admin_PackageApproved" xml:space="preserve"><value>Pakej berjaya diluluskan</value></data>
+  <data name="Admin_PackageRejected" xml:space="preserve"><value>Pakej ditolak</value></data>
+  <data name="Admin_PluginApproved" xml:space="preserve"><value>Plugin berjaya diluluskan</value></data>
+  <data name="Admin_PluginRejected" xml:space="preserve"><value>Plugin ditolak</value></data>
+  <data name="Admin_RejectPackageTitle" xml:space="preserve"><value>Tolak Pakej</value></data>
+  <data name="Admin_RejectPackageMessage" xml:space="preserve"><value>Adakah anda pasti mahu menolak pakej ini?</value></data>
+  <data name="Admin_RejectPluginTitle" xml:space="preserve"><value>Tolak Plugin</value></data>
+  <data name="Admin_RejectPluginMessage" xml:space="preserve"><value>Adakah anda pasti mahu menolak plugin ini?</value></data>
+  <data name="Admin_RejectedByAdmin" xml:space="preserve"><value>Ditolak oleh admin</value></data>
+  <data name="Status_Published" xml:space="preserve"><value>Diterbitkan</value></data>
+  <data name="Status_Pending" xml:space="preserve"><value>Menunggu</value></data>
+  <data name="Status_Rejected" xml:space="preserve"><value>Ditolak</value></data>
+  <data name="Status_Draft" xml:space="preserve"><value>Draf</value></data>
+  <data name="Status_Unknown" xml:space="preserve"><value>Tidak Diketahui</value></data>
+  <data name="Common_Deployment" xml:space="preserve"><value>Pelaksanaan</value></data>
+  <data name="Common_RegionPackage" xml:space="preserve"><value>Pakej Wilayah</value></data>
+  <data name="Common_Country" xml:space="preserve"><value>Negara</value></data>
+  <data name="Nav_UploadRegion" xml:space="preserve"><value>Muat Naik Wilayah</value></data>
+  <data name="Index_SearchRegions" xml:space="preserve"><value>Cari pakej wilayah...</value></data>
+  <data name="Index_NoRegionsFound" xml:space="preserve"><value>Tiada pakej wilayah dijumpai</value></data>
+  <data name="Index_BeFirstRegion" xml:space="preserve"><value>Jadilah orang pertama memuat naik pakej wilayah!</value></data>
+  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>Profil pelaksanaan negara untuk pemasangan baharu.</value></data>
+  <data name="RegionDetail_NotFound" xml:space="preserve"><value>Pakej wilayah tidak dijumpai</value></data>
+  <data name="RegionDetail_NotFoundDesc" xml:space="preserve"><value>Pakej wilayah yang diminta tidak wujud atau belum diterbitkan.</value></data>
+  <data name="RegionDetail_IndustryLabel" xml:space="preserve"><value>Industri</value></data>
+  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>Muat turun pelaksanaan</value></data>
+  <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>JSON Profil</value></data>
+  <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>Profil wilayah untuk pemasangan Klacks sedia ada — lekapkan sebagai fail persediaan wilayah.</value></data>
+  <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>Bundel On-Prem</value></data>
+  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Bundel pemasangan lengkap dengan skrip pemasang, Docker Compose dan profil wilayah.</value></data>
+  <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Bundel Docker Compose</value></data>
+  <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Persediaan Docker Compose minimum tanpa pemasang, untuk profesional Docker.</value></data>
+  <data name="Industry_Homecare" xml:space="preserve"><value>Penjagaan Rumah</value></data>
+  <data name="Industry_Healthcare" xml:space="preserve"><value>Penjagaan Kesihatan</value></data>
+  <data name="Industry_Security" xml:space="preserve"><value>Keselamatan</value></data>
+  <data name="Industry_Facility" xml:space="preserve"><value>Perkhidmatan Fasiliti</value></data>
+  <data name="Industry_Logistics" xml:space="preserve"><value>Logistik</value></data>
+  <data name="Industry_All" xml:space="preserve"><value>Semua industri</value></data>
+  <data name="UploadRegion_Title" xml:space="preserve"><value>Muat Naik Pakej Wilayah</value></data>
+  <data name="UploadRegion_Subtitle" xml:space="preserve"><value>Kongsi profil persediaan wilayah negara dengan komuniti</value></data>
+  <data name="UploadRegion_CountryLabel" xml:space="preserve"><value>Negara</value></data>
+  <data name="UploadRegion_SelectCountry" xml:space="preserve"><value>Pilih negara...</value></data>
+  <data name="UploadRegion_ChangeLog" xml:space="preserve"><value>Log Perubahan</value></data>
+  <data name="UploadRegion_ChangeLogPlaceholder" xml:space="preserve"><value>Apakah yang berubah dalam versi ini?</value></data>
+  <data name="UploadRegion_DescriptionPlaceholder" xml:space="preserve"><value>Terangkan profil wilayah...</value></data>
+  <data name="UploadRegion_ProfileRequired" xml:space="preserve"><value>JSON profil wilayah (diperlukan)</value></data>
+  <data name="UploadRegion_ValidationErrors" xml:space="preserve"><value>Ralat pengesahan</value></data>
+  <data name="UploadRegion_ValidationWarnings" xml:space="preserve"><value>Amaran pengesahan</value></data>
+  <data name="UploadRegion_Success" xml:space="preserve"><value>Pakej wilayah dihantar untuk semakan!</value></data>
+  <data name="UploadRegion_CountryRequired" xml:space="preserve"><value>Sila pilih negara</value></data>
+  <data name="MyPackages_NoRegions" xml:space="preserve"><value>Belum ada pakej wilayah</value></data>
+  <data name="MyPackages_NoRegionsDesc" xml:space="preserve"><value>Anda belum memuat naik sebarang pakej wilayah.</value></data>
+  <data name="MyPackages_UploadFirstRegion" xml:space="preserve"><value>Muat naik pakej wilayah pertama anda</value></data>
+  <data name="Admin_PendingRegions" xml:space="preserve"><value>Wilayah Menunggu Semakan</value></data>
+  <data name="Admin_PendingRegionPackages" xml:space="preserve"><value>Pakej Wilayah Menunggu Semakan</value></data>
+  <data name="Admin_NoPendingRegions" xml:space="preserve"><value>Tiada pakej wilayah menunggu semakan</value></data>
+  <data name="Admin_RegionApproved" xml:space="preserve"><value>Pakej wilayah diluluskan</value></data>
+  <data name="Admin_RegionRejected" xml:space="preserve"><value>Pakej wilayah ditolak</value></data>
+  <data name="Admin_RejectRegionTitle" xml:space="preserve"><value>Tolak Pakej Wilayah</value></data>
+  <data name="Admin_RejectRegionMessage" xml:space="preserve"><value>Adakah anda pasti mahu menolak pakej wilayah ini?</value></data>
+</root>

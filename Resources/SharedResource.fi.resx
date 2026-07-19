@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msOccurs="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+              <xsd:attribute name="xml:space" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <data name="Common_LanguagePacks" xml:space="preserve"><value>Kielipaketit</value></data>
+  <data name="Common_FeaturePlugins" xml:space="preserve"><value>Ominaisuuslaajennukset</value></data>
+  <data name="Common_Download" xml:space="preserve"><value>Lataa</value></data>
+  <data name="Common_Downloads" xml:space="preserve"><value>Lataukset</value></data>
+  <data name="Common_Version" xml:space="preserve"><value>Versio</value></data>
+  <data name="Common_Coverage" xml:space="preserve"><value>Kattavuus</value></data>
+  <data name="Common_CoveragePercent" xml:space="preserve"><value>{0} % kattavuus</value></data>
+  <data name="Common_MinVersion" xml:space="preserve"><value>Vähimmäisversio</value></data>
+  <data name="Common_VersionHistory" xml:space="preserve"><value>Versiohistoria</value></data>
+  <data name="Common_Home" xml:space="preserve"><value>Etusivu</value></data>
+  <data name="Common_ResultsCount" xml:space="preserve"><value>{0} tulosta</value></data>
+  <data name="Common_EmailLabel" xml:space="preserve"><value>Sähköpostiosoite</value></data>
+  <data name="Common_EmailPlaceholder" xml:space="preserve"><value>oma@email.com</value></data>
+  <data name="Common_PasswordLabel" xml:space="preserve"><value>Salasana</value></data>
+  <data name="Common_DisplayNameLabel" xml:space="preserve"><value>Näyttönimi</value></data>
+  <data name="Common_DataSecure" xml:space="preserve"><value>Tietosi on salattu ja turvassa</value></data>
+  <data name="Common_PleaseLogin" xml:space="preserve"><value>Kirjaudu sisään jatkaaksesi.</value></data>
+  <data name="Common_LoginLink" xml:space="preserve"><value>Kirjaudu sisään</value></data>
+  <data name="Common_SubmitForReview" xml:space="preserve"><value>Lähetä tarkistettavaksi</value></data>
+  <data name="Common_SaveAsDraft" xml:space="preserve"><value>Tallenna luonnoksena</value></data>
+  <data name="Common_Loaded" xml:space="preserve"><value>Ladattu</value></data>
+  <data name="Common_Cancel" xml:space="preserve"><value>Peruuta</value></data>
+  <data name="Common_Confirm" xml:space="preserve"><value>Vahvista</value></data>
+  <data name="Common_NotFound" xml:space="preserve"><value>Ei löytynyt</value></data>
+  <data name="Common_NothingHere" xml:space="preserve"><value>Valitettavasti tässä osoitteessa ei ole mitään.</value></data>
+  <data name="Common_BackToBrowse" xml:space="preserve"><value>Takaisin selaamiseen</value></data>
+  <data name="Common_ByAuthor" xml:space="preserve"><value>tekijä: {0}</value></data>
+  <data name="Common_SkillsCount" xml:space="preserve"><value>{0} taitoa</value></data>
+  <data name="Common_InstallsCount" xml:space="preserve"><value>{0} asennusta</value></data>
+  <data name="Common_Package" xml:space="preserve"><value>Paketti</value></data>
+  <data name="Common_Plugin" xml:space="preserve"><value>Laajennus</value></data>
+  <data name="Common_Category" xml:space="preserve"><value>Kategoria</value></data>
+  <data name="Common_Status" xml:space="preserve"><value>Tila</value></data>
+  <data name="Common_Actions" xml:space="preserve"><value>Toiminnot</value></data>
+  <data name="Common_Author" xml:space="preserve"><value>Tekijä</value></data>
+  <data name="Common_Code" xml:space="preserve"><value>Koodi</value></data>
+  <data name="Common_Submitted" xml:space="preserve"><value>Lähetetty</value></data>
+  <data name="Common_Docs" xml:space="preserve"><value>Dokumentaatio</value></data>
+  <data name="Common_Translations" xml:space="preserve"><value>käännöstä</value></data>
+  <data name="Nav_Browse" xml:space="preserve"><value>Selaa</value></data>
+  <data name="Nav_UploadPack" xml:space="preserve"><value>Lähetä paketti</value></data>
+  <data name="Nav_UploadPlugin" xml:space="preserve"><value>Lähetä laajennus</value></data>
+  <data name="Nav_MyPackages" xml:space="preserve"><value>Omat paketit</value></data>
+  <data name="Nav_Admin" xml:space="preserve"><value>Ylläpito</value></data>
+  <data name="Nav_SignOut" xml:space="preserve"><value>Kirjaudu ulos</value></data>
+  <data name="Nav_SignIn" xml:space="preserve"><value>Kirjaudu sisään</value></data>
+  <data name="Nav_Register" xml:space="preserve"><value>Rekisteröidy</value></data>
+  <data name="Index_HeroTitle" xml:space="preserve"><value>Laajenna Klacks-kokemustasi</value></data>
+  <data name="Index_HeroSubtitle" xml:space="preserve"><value>Löydä kielipaketteja ja ominaisuuslaajennuksia, jotka on suunniteltu ammattimaiseen työvoimanhallintaan ja yritystason skaalautuvuuteen.</value></data>
+  <data name="Index_SearchPacks" xml:space="preserve"><value>Hae kielipaketteja...</value></data>
+  <data name="Index_SearchPlugins" xml:space="preserve"><value>Hae ominaisuuslaajennuksia...</value></data>
+  <data name="Index_AllCategories" xml:space="preserve"><value>Kaikki kategoriat</value></data>
+  <data name="Index_NoPackagesFound" xml:space="preserve"><value>Paketteja ei löytynyt</value></data>
+  <data name="Index_BeFirstPack" xml:space="preserve"><value>Ole ensimmäinen, joka lähettää kielipaketin!</value></data>
+  <data name="Index_NoPluginsFound" xml:space="preserve"><value>Laajennuksia ei löytynyt</value></data>
+  <data name="Index_BeFirstPlugin" xml:space="preserve"><value>Ole ensimmäinen, joka lähettää ominaisuuslaajennuksen!</value></data>
+  <data name="Index_PacksSubtitle" xml:space="preserve"><value>Lokalisointiresursseja kansainvälisille tiimeille.</value></data>
+  <data name="Index_FooterDescription" xml:space="preserve"><value>Ammattimainen ekosysteemi työvoimanhallinnan ominaisuuksien laajentamiseen.</value></data>
+  <data name="Index_FooterRights" xml:space="preserve"><value>© 2026 Klacks Store. Kaikki oikeudet pidätetään.</value></data>
+  <data name="Index_Resources" xml:space="preserve"><value>Resurssit</value></data>
+  <data name="Index_Documentation" xml:space="preserve"><value>Dokumentaatio</value></data>
+  <data name="Index_API" xml:space="preserve"><value>API</value></data>
+  <data name="Index_Legal" xml:space="preserve"><value>Oikeudelliset tiedot</value></data>
+  <data name="Index_PrivacyPolicy" xml:space="preserve"><value>Tietosuojakäytäntö</value></data>
+  <data name="Index_TermsOfService" xml:space="preserve"><value>Käyttöehdot</value></data>
+  <data name="Login_PageTitle" xml:space="preserve"><value>Kirjaudu sisään - Klacks Store</value></data>
+  <data name="Login_WelcomeBack" xml:space="preserve"><value>Tervetuloa takaisin</value></data>
+  <data name="Login_Subtitle" xml:space="preserve"><value>Kirjaudu sisään hallinnoidaksesi paketteja ja laajennuksia</value></data>
+  <data name="Login_PasswordPlaceholder" xml:space="preserve"><value>Anna salasanasi</value></data>
+  <data name="Login_NoAccount" xml:space="preserve"><value>Eikö sinulla ole tiliä?</value></data>
+  <data name="Login_CreateOne" xml:space="preserve"><value>Luo tili</value></data>
+  <data name="Login_InvalidCredentials" xml:space="preserve"><value>Virheellinen sähköposti tai salasana</value></data>
+  <data name="Register_PageTitle" xml:space="preserve"><value>Rekisteröidy - Klacks Store</value></data>
+  <data name="Register_Title" xml:space="preserve"><value>Luo tili</value></data>
+  <data name="Register_Subtitle" xml:space="preserve"><value>Liity Klacks Storen yhteisöön</value></data>
+  <data name="Register_NamePlaceholder" xml:space="preserve"><value>Nimesi</value></data>
+  <data name="Register_PasswordLabel" xml:space="preserve"><value>Salasana (vähintään {0} merkkiä)</value></data>
+  <data name="Register_CreatePassword" xml:space="preserve"><value>Luo salasana</value></data>
+  <data name="Register_ConfirmPasswordLabel" xml:space="preserve"><value>Vahvista salasana</value></data>
+  <data name="Register_ConfirmPasswordPlaceholder" xml:space="preserve"><value>Vahvista salasanasi</value></data>
+  <data name="Register_CreateAccount" xml:space="preserve"><value>Luo tili</value></data>
+  <data name="Register_HasAccount" xml:space="preserve"><value>Onko sinulla jo tili?</value></data>
+  <data name="Register_NameRequired" xml:space="preserve"><value>Näyttönimi on pakollinen</value></data>
+  <data name="Register_EmailRequired" xml:space="preserve"><value>Sähköpostiosoite on pakollinen</value></data>
+  <data name="Register_PasswordMismatch" xml:space="preserve"><value>Salasanat eivät täsmää</value></data>
+  <data name="Register_Success" xml:space="preserve"><value>Rekisteröityminen onnistui! Voit nyt kirjautua sisään.</value></data>
+  <data name="PackageDetail_NotFound" xml:space="preserve"><value>Pakettia ei löytynyt</value></data>
+  <data name="PackageDetail_NotFoundDesc" xml:space="preserve"><value>Etsimääsi pakettia ei ole olemassa.</value></data>
+  <data name="PackageDetail_SpeechLocale" xml:space="preserve"><value>Puheen kielialue</value></data>
+  <data name="PackageDetail_TranslationCoverage" xml:space="preserve"><value>Käännöskattavuus</value></data>
+  <data name="PackageDetail_TranslationCount" xml:space="preserve"><value>{0} käännöstä</value></data>
+  <data name="PackageDetail_Manuals" xml:space="preserve"><value>Käyttöoppaat</value></data>
+  <data name="PackageDetail_Countries" xml:space="preserve"><value>Maat</value></data>
+  <data name="PackageDetail_States" xml:space="preserve"><value>Osavaltiot</value></data>
+  <data name="PackageDetail_CalendarRules" xml:space="preserve"><value>Kalenterisäännöt</value></data>
+  <data name="PluginDetail_NotFound" xml:space="preserve"><value>Laajennusta ei löytynyt</value></data>
+  <data name="PluginDetail_NotFoundDesc" xml:space="preserve"><value>Etsimääsi laajennusta ei ole olemassa.</value></data>
+  <data name="PluginDetail_ProvidedSkills" xml:space="preserve"><value>Tarjotut taidot</value></data>
+  <data name="PluginDetail_RequiredPermissions" xml:space="preserve"><value>Vaaditut käyttöoikeudet</value></data>
+  <data name="PluginDetail_README" xml:space="preserve"><value>README</value></data>
+  <data name="Upload_Title" xml:space="preserve"><value>Lähetä kielipaketti</value></data>
+  <data name="Upload_Subtitle" xml:space="preserve"><value>Jaa kielipakettisi yhteisölle</value></data>
+  <data name="Upload_CodeLabel" xml:space="preserve"><value>Koodi (esim. fr-FR)</value></data>
+  <data name="Upload_CodePlaceholder" xml:space="preserve"><value>xx-XX</value></data>
+  <data name="Upload_DisplayNamePlaceholder" xml:space="preserve"><value>esim. ranska (Ranska)</value></data>
+  <data name="Upload_SpeechLocale" xml:space="preserve"><value>Puheen kielialue</value></data>
+  <data name="Upload_SpeechLocalePlaceholder" xml:space="preserve"><value>esim. fr-FR</value></data>
+  <data name="Upload_VersionPlaceholder" xml:space="preserve"><value>1.0.0</value></data>
+  <data name="Upload_Description" xml:space="preserve"><value>Kuvaus</value></data>
+  <data name="Upload_DescriptionPlaceholder" xml:space="preserve"><value>Kuvaile kielipakettiasi...</value></data>
+  <data name="Upload_CoverageLabel" xml:space="preserve"><value>Kattavuus (%)</value></data>
+  <data name="Upload_MinKlacksVersion" xml:space="preserve"><value>Klacksin vähimmäisversio</value></data>
+  <data name="Upload_ManifestRequired" xml:space="preserve"><value>manifest.json</value></data>
+  <data name="Upload_TranslationsRequired" xml:space="preserve"><value>translations.json</value></data>
+  <data name="Upload_DocsOptional" xml:space="preserve"><value>docs.json (valinnainen)</value></data>
+  <data name="Upload_CountriesOptional" xml:space="preserve"><value>countries.json (valinnainen)</value></data>
+  <data name="Upload_StatesOptional" xml:space="preserve"><value>states.json (valinnainen)</value></data>
+  <data name="Upload_CalendarOptional" xml:space="preserve"><value>calendar-rules.json (valinnainen)</value></data>
+  <data name="Upload_CodeRequired" xml:space="preserve"><value>Koodi ja näyttönimi ovat pakollisia</value></data>
+  <data name="Upload_Success" xml:space="preserve"><value>Paketti lähetetty tarkistettavaksi!</value></data>
+  <data name="UploadPlugin_Title" xml:space="preserve"><value>Lähetä ominaisuuslaajennus</value></data>
+  <data name="UploadPlugin_Subtitle" xml:space="preserve"><value>Jaa ominaisuuslaajennuksesi yhteisölle</value></data>
+  <data name="UploadPlugin_NameLabel" xml:space="preserve"><value>Laajennuksen nimi (yksilöllinen tunniste)</value></data>
+  <data name="UploadPlugin_NamePlaceholder" xml:space="preserve"><value>esim. messaging</value></data>
+  <data name="UploadPlugin_DisplayNamePlaceholder" xml:space="preserve"><value>esim. Viestintä</value></data>
+  <data name="UploadPlugin_SelectCategory" xml:space="preserve"><value>Valitse kategoria...</value></data>
+  <data name="UploadPlugin_DescriptionPlaceholder" xml:space="preserve"><value>Kuvaile ominaisuuslaajennustasi...</value></data>
+  <data name="UploadPlugin_ChangelogLabel" xml:space="preserve"><value>Muutosloki</value></data>
+  <data name="UploadPlugin_ChangelogPlaceholder" xml:space="preserve"><value>Mikä muuttui tässä versiossa?</value></data>
+  <data name="UploadPlugin_ManifestRequired" xml:space="preserve"><value>manifest.json (pakollinen)</value></data>
+  <data name="UploadPlugin_EnRequired" xml:space="preserve"><value>en.json (pakollinen i18n)</value></data>
+  <data name="UploadPlugin_DeOptional" xml:space="preserve"><value>de.json (valinnainen i18n)</value></data>
+  <data name="UploadPlugin_FrOptional" xml:space="preserve"><value>fr.json (valinnainen i18n)</value></data>
+  <data name="UploadPlugin_ReadmeOptional" xml:space="preserve"><value>README.md (valinnainen)</value></data>
+  <data name="UploadPlugin_NameRequired" xml:space="preserve"><value>Nimi ja näyttönimi ovat pakollisia</value></data>
+  <data name="UploadPlugin_CategoryRequired" xml:space="preserve"><value>Kategoria on pakollinen</value></data>
+  <data name="UploadPlugin_Success" xml:space="preserve"><value>Laajennus lähetetty tarkistettavaksi!</value></data>
+  <data name="MyPackages_Title" xml:space="preserve"><value>Omat paketit</value></data>
+  <data name="MyPackages_LoginRequired" xml:space="preserve"><value>Kirjaudu sisään nähdäksesi pakettisi.</value></data>
+  <data name="MyPackages_NoPacks" xml:space="preserve"><value>Ei vielä kielipaketteja</value></data>
+  <data name="MyPackages_NoPacksDesc" xml:space="preserve"><value>Et ole vielä lähettänyt yhtään kielipakettia.</value></data>
+  <data name="MyPackages_UploadFirst" xml:space="preserve"><value>Lähetä ensimmäinen pakettisi</value></data>
+  <data name="MyPackages_NoPlugins" xml:space="preserve"><value>Ei vielä ominaisuuslaajennuksia</value></data>
+  <data name="MyPackages_NoPluginsDesc" xml:space="preserve"><value>Et ole vielä lähettänyt yhtään ominaisuuslaajennusta.</value></data>
+  <data name="MyPackages_UploadFirstPlugin" xml:space="preserve"><value>Lähetä ensimmäinen laajennuksesi</value></data>
+  <data name="Admin_Title" xml:space="preserve"><value>Ylläpidon hallintapaneeli</value></data>
+  <data name="Admin_AccessDenied" xml:space="preserve"><value>Pääsy evätty. Vaaditaan ylläpitäjän oikeudet.</value></data>
+  <data name="Admin_PendingPackages" xml:space="preserve"><value>Odottavat paketit</value></data>
+  <data name="Admin_PendingPlugins" xml:space="preserve"><value>Odottavat laajennukset</value></data>
+  <data name="Admin_Users" xml:space="preserve"><value>Käyttäjät</value></data>
+  <data name="Admin_PendingLanguagePackages" xml:space="preserve"><value>Odottavat kielipaketit</value></data>
+  <data name="Admin_NoPendingPackages" xml:space="preserve"><value>Ei tarkistusta odottavia paketteja.</value></data>
+  <data name="Admin_PendingFeaturePlugins" xml:space="preserve"><value>Odottavat ominaisuuslaajennukset</value></data>
+  <data name="Admin_NoPendingPlugins" xml:space="preserve"><value>Ei tarkistusta odottavia laajennuksia.</value></data>
+  <data name="Admin_Name" xml:space="preserve"><value>Nimi</value></data>
+  <data name="Admin_Email" xml:space="preserve"><value>Sähköposti</value></data>
+  <data name="Admin_Joined" xml:space="preserve"><value>Liittynyt</value></data>
+  <data name="Admin_MakeAdmin" xml:space="preserve"><value>Tee ylläpitäjäksi</value></data>
+  <data name="Admin_RemoveAdmin" xml:space="preserve"><value>Poista ylläpitäjän oikeudet</value></data>
+  <data name="Admin_PackageApproved" xml:space="preserve"><value>Paketti hyväksytty onnistuneesti</value></data>
+  <data name="Admin_PackageRejected" xml:space="preserve"><value>Paketti hylätty</value></data>
+  <data name="Admin_PluginApproved" xml:space="preserve"><value>Laajennus hyväksytty onnistuneesti</value></data>
+  <data name="Admin_PluginRejected" xml:space="preserve"><value>Laajennus hylätty</value></data>
+  <data name="Admin_RejectPackageTitle" xml:space="preserve"><value>Hylkää paketti</value></data>
+  <data name="Admin_RejectPackageMessage" xml:space="preserve"><value>Haluatko varmasti hylätä tämän paketin?</value></data>
+  <data name="Admin_RejectPluginTitle" xml:space="preserve"><value>Hylkää laajennus</value></data>
+  <data name="Admin_RejectPluginMessage" xml:space="preserve"><value>Haluatko varmasti hylätä tämän laajennuksen?</value></data>
+  <data name="Admin_RejectedByAdmin" xml:space="preserve"><value>Ylläpitäjän hylkäämä</value></data>
+  <data name="Status_Published" xml:space="preserve"><value>Julkaistu</value></data>
+  <data name="Status_Pending" xml:space="preserve"><value>Odottaa</value></data>
+  <data name="Status_Rejected" xml:space="preserve"><value>Hylätty</value></data>
+  <data name="Status_Draft" xml:space="preserve"><value>Luonnos</value></data>
+  <data name="Status_Unknown" xml:space="preserve"><value>Tuntematon</value></data>
+  <data name="Common_Deployment" xml:space="preserve"><value>Käyttöönotto</value></data>
+  <data name="Common_RegionPackage" xml:space="preserve"><value>Aluepaketti</value></data>
+  <data name="Common_Country" xml:space="preserve"><value>Maa</value></data>
+  <data name="Nav_UploadRegion" xml:space="preserve"><value>Lähetä alue</value></data>
+  <data name="Index_SearchRegions" xml:space="preserve"><value>Hae aluepaketteja...</value></data>
+  <data name="Index_NoRegionsFound" xml:space="preserve"><value>Aluepaketteja ei löytynyt</value></data>
+  <data name="Index_BeFirstRegion" xml:space="preserve"><value>Ole ensimmäinen, joka lähettää aluepaketin!</value></data>
+  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>Maakohtaisia käyttöönottoprofiileja uusille asennuksille.</value></data>
+  <data name="RegionDetail_NotFound" xml:space="preserve"><value>Aluepakettia ei löytynyt</value></data>
+  <data name="RegionDetail_NotFoundDesc" xml:space="preserve"><value>Pyydettyä aluepakettia ei ole olemassa tai sitä ei ole julkaistu.</value></data>
+  <data name="RegionDetail_IndustryLabel" xml:space="preserve"><value>Toimiala</value></data>
+  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>Käyttöönottolataukset</value></data>
+  <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>Profiili-JSON</value></data>
+  <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>Alueprofiili olemassa olevalle Klacks-asennukselle — liitä se aluemäärityksen tiedostoksi.</value></data>
+  <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>On-Prem-paketti</value></data>
+  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Täydellinen asennuspaketti, joka sisältää asennusskriptit, Docker Composen ja alueprofiilin.</value></data>
+  <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Docker Compose -paketti</value></data>
+  <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Minimaalinen Docker Compose -määritys ilman asentimia, Docker-ammattilaisille.</value></data>
+  <data name="Industry_Homecare" xml:space="preserve"><value>Kotihoito</value></data>
+  <data name="Industry_Healthcare" xml:space="preserve"><value>Terveydenhuolto</value></data>
+  <data name="Industry_Security" xml:space="preserve"><value>Turvallisuus</value></data>
+  <data name="Industry_Facility" xml:space="preserve"><value>Kiinteistöpalvelut</value></data>
+  <data name="Industry_Logistics" xml:space="preserve"><value>Logistiikka</value></data>
+  <data name="Industry_All" xml:space="preserve"><value>Kaikki toimialat</value></data>
+  <data name="UploadRegion_Title" xml:space="preserve"><value>Lähetä aluepaketti</value></data>
+  <data name="UploadRegion_Subtitle" xml:space="preserve"><value>Jaa maakohtainen aluemääritysprofiili yhteisölle</value></data>
+  <data name="UploadRegion_CountryLabel" xml:space="preserve"><value>Maa</value></data>
+  <data name="UploadRegion_SelectCountry" xml:space="preserve"><value>Valitse maa...</value></data>
+  <data name="UploadRegion_ChangeLog" xml:space="preserve"><value>Muutosloki</value></data>
+  <data name="UploadRegion_ChangeLogPlaceholder" xml:space="preserve"><value>Mikä muuttui tässä versiossa?</value></data>
+  <data name="UploadRegion_DescriptionPlaceholder" xml:space="preserve"><value>Kuvaile alueprofiilia...</value></data>
+  <data name="UploadRegion_ProfileRequired" xml:space="preserve"><value>Alueprofiilin JSON (pakollinen)</value></data>
+  <data name="UploadRegion_ValidationErrors" xml:space="preserve"><value>Validointivirheet</value></data>
+  <data name="UploadRegion_ValidationWarnings" xml:space="preserve"><value>Validointivaroitukset</value></data>
+  <data name="UploadRegion_Success" xml:space="preserve"><value>Aluepaketti lähetetty tarkistettavaksi!</value></data>
+  <data name="UploadRegion_CountryRequired" xml:space="preserve"><value>Valitse maa</value></data>
+  <data name="MyPackages_NoRegions" xml:space="preserve"><value>Ei vielä aluepaketteja</value></data>
+  <data name="MyPackages_NoRegionsDesc" xml:space="preserve"><value>Et ole vielä lähettänyt yhtään aluepakettia.</value></data>
+  <data name="MyPackages_UploadFirstRegion" xml:space="preserve"><value>Lähetä ensimmäinen aluepakettisi</value></data>
+  <data name="Admin_PendingRegions" xml:space="preserve"><value>Odottavat alueet</value></data>
+  <data name="Admin_PendingRegionPackages" xml:space="preserve"><value>Odottavat aluepaketit</value></data>
+  <data name="Admin_NoPendingRegions" xml:space="preserve"><value>Ei odottavia aluepaketteja</value></data>
+  <data name="Admin_RegionApproved" xml:space="preserve"><value>Aluepaketti hyväksytty</value></data>
+  <data name="Admin_RegionRejected" xml:space="preserve"><value>Aluepaketti hylätty</value></data>
+  <data name="Admin_RejectRegionTitle" xml:space="preserve"><value>Hylkää aluepaketti</value></data>
+  <data name="Admin_RejectRegionMessage" xml:space="preserve"><value>Haluatko varmasti hylätä tämän aluepaketin?</value></data>
+</root>

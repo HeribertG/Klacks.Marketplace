@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msOccurs="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+              <xsd:attribute name="xml:space" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <data name="Common_LanguagePacks" xml:space="preserve"><value>Sprogpakker</value></data>
+  <data name="Common_FeaturePlugins" xml:space="preserve"><value>Feature-plugins</value></data>
+  <data name="Common_Download" xml:space="preserve"><value>Download</value></data>
+  <data name="Common_Downloads" xml:space="preserve"><value>Downloads</value></data>
+  <data name="Common_Version" xml:space="preserve"><value>Version</value></data>
+  <data name="Common_Coverage" xml:space="preserve"><value>Dækning</value></data>
+  <data name="Common_CoveragePercent" xml:space="preserve"><value>{0}% dækning</value></data>
+  <data name="Common_MinVersion" xml:space="preserve"><value>Min. version</value></data>
+  <data name="Common_VersionHistory" xml:space="preserve"><value>Versionshistorik</value></data>
+  <data name="Common_Home" xml:space="preserve"><value>Hjem</value></data>
+  <data name="Common_ResultsCount" xml:space="preserve"><value>{0} resultater</value></data>
+  <data name="Common_EmailLabel" xml:space="preserve"><value>E-mailadresse</value></data>
+  <data name="Common_EmailPlaceholder" xml:space="preserve"><value>din@email.com</value></data>
+  <data name="Common_PasswordLabel" xml:space="preserve"><value>Adgangskode</value></data>
+  <data name="Common_DisplayNameLabel" xml:space="preserve"><value>Visningsnavn</value></data>
+  <data name="Common_DataSecure" xml:space="preserve"><value>Dine data er krypteret og sikre</value></data>
+  <data name="Common_PleaseLogin" xml:space="preserve"><value>Log ind for at fortsætte.</value></data>
+  <data name="Common_LoginLink" xml:space="preserve"><value>Log ind</value></data>
+  <data name="Common_SubmitForReview" xml:space="preserve"><value>Send til gennemgang</value></data>
+  <data name="Common_SaveAsDraft" xml:space="preserve"><value>Gem som kladde</value></data>
+  <data name="Common_Loaded" xml:space="preserve"><value>Indlæst</value></data>
+  <data name="Common_Cancel" xml:space="preserve"><value>Annuller</value></data>
+  <data name="Common_Confirm" xml:space="preserve"><value>Bekræft</value></data>
+  <data name="Common_NotFound" xml:space="preserve"><value>Ikke fundet</value></data>
+  <data name="Common_NothingHere" xml:space="preserve"><value>Beklager, der er intet på denne adresse.</value></data>
+  <data name="Common_BackToBrowse" xml:space="preserve"><value>Tilbage til oversigt</value></data>
+  <data name="Common_ByAuthor" xml:space="preserve"><value>af {0}</value></data>
+  <data name="Common_SkillsCount" xml:space="preserve"><value>{0} skills</value></data>
+  <data name="Common_InstallsCount" xml:space="preserve"><value>{0} installationer</value></data>
+  <data name="Common_Package" xml:space="preserve"><value>Pakke</value></data>
+  <data name="Common_Plugin" xml:space="preserve"><value>Plugin</value></data>
+  <data name="Common_Category" xml:space="preserve"><value>Kategori</value></data>
+  <data name="Common_Status" xml:space="preserve"><value>Status</value></data>
+  <data name="Common_Actions" xml:space="preserve"><value>Handlinger</value></data>
+  <data name="Common_Author" xml:space="preserve"><value>Forfatter</value></data>
+  <data name="Common_Code" xml:space="preserve"><value>Kode</value></data>
+  <data name="Common_Submitted" xml:space="preserve"><value>Indsendt</value></data>
+  <data name="Common_Docs" xml:space="preserve"><value>Dokumentation</value></data>
+  <data name="Common_Translations" xml:space="preserve"><value>oversættelser</value></data>
+  <data name="Nav_Browse" xml:space="preserve"><value>Gennemse</value></data>
+  <data name="Nav_UploadPack" xml:space="preserve"><value>Upload pakke</value></data>
+  <data name="Nav_UploadPlugin" xml:space="preserve"><value>Upload plugin</value></data>
+  <data name="Nav_MyPackages" xml:space="preserve"><value>Mine pakker</value></data>
+  <data name="Nav_Admin" xml:space="preserve"><value>Admin</value></data>
+  <data name="Nav_SignOut" xml:space="preserve"><value>Log ud</value></data>
+  <data name="Nav_SignIn" xml:space="preserve"><value>Log ind</value></data>
+  <data name="Nav_Register" xml:space="preserve"><value>Registrer</value></data>
+  <data name="Index_HeroTitle" xml:space="preserve"><value>Udvid din Klacks-oplevelse</value></data>
+  <data name="Index_HeroSubtitle" xml:space="preserve"><value>Opdag sprogpakker og feature-plugins skabt til professionel arbejdsstyrkestyring og virksomhedsskalerbarhed.</value></data>
+  <data name="Index_SearchPacks" xml:space="preserve"><value>Søg i sprogpakker...</value></data>
+  <data name="Index_SearchPlugins" xml:space="preserve"><value>Søg i feature-plugins...</value></data>
+  <data name="Index_AllCategories" xml:space="preserve"><value>Alle kategorier</value></data>
+  <data name="Index_NoPackagesFound" xml:space="preserve"><value>Ingen pakker fundet</value></data>
+  <data name="Index_BeFirstPack" xml:space="preserve"><value>Vær den første til at uploade en sprogpakke!</value></data>
+  <data name="Index_NoPluginsFound" xml:space="preserve"><value>Ingen plugins fundet</value></data>
+  <data name="Index_BeFirstPlugin" xml:space="preserve"><value>Vær den første til at uploade et feature-plugin!</value></data>
+  <data name="Index_PacksSubtitle" xml:space="preserve"><value>Lokaliseringsressourcer til internationale teams.</value></data>
+  <data name="Index_FooterDescription" xml:space="preserve"><value>Professionelt økosystem til udvidelse af funktioner til arbejdsstyrkestyring.</value></data>
+  <data name="Index_FooterRights" xml:space="preserve"><value>© 2026 Klacks Store. Alle rettigheder forbeholdes.</value></data>
+  <data name="Index_Resources" xml:space="preserve"><value>Ressourcer</value></data>
+  <data name="Index_Documentation" xml:space="preserve"><value>Dokumentation</value></data>
+  <data name="Index_API" xml:space="preserve"><value>API</value></data>
+  <data name="Index_Legal" xml:space="preserve"><value>Juridisk</value></data>
+  <data name="Index_PrivacyPolicy" xml:space="preserve"><value>Privatlivspolitik</value></data>
+  <data name="Index_TermsOfService" xml:space="preserve"><value>Servicevilkår</value></data>
+  <data name="Login_PageTitle" xml:space="preserve"><value>Log ind - Klacks Store</value></data>
+  <data name="Login_WelcomeBack" xml:space="preserve"><value>Velkommen tilbage</value></data>
+  <data name="Login_Subtitle" xml:space="preserve"><value>Log ind for at administrere dine pakker og plugins</value></data>
+  <data name="Login_PasswordPlaceholder" xml:space="preserve"><value>Indtast din adgangskode</value></data>
+  <data name="Login_NoAccount" xml:space="preserve"><value>Har du ikke en konto?</value></data>
+  <data name="Login_CreateOne" xml:space="preserve"><value>Opret en</value></data>
+  <data name="Login_InvalidCredentials" xml:space="preserve"><value>Forkert e-mail eller adgangskode</value></data>
+  <data name="Register_PageTitle" xml:space="preserve"><value>Registrer - Klacks Store</value></data>
+  <data name="Register_Title" xml:space="preserve"><value>Opret en konto</value></data>
+  <data name="Register_Subtitle" xml:space="preserve"><value>Bliv en del af Klacks Store-fællesskabet</value></data>
+  <data name="Register_NamePlaceholder" xml:space="preserve"><value>Dit navn</value></data>
+  <data name="Register_PasswordLabel" xml:space="preserve"><value>Adgangskode (min. {0} tegn)</value></data>
+  <data name="Register_CreatePassword" xml:space="preserve"><value>Opret en adgangskode</value></data>
+  <data name="Register_ConfirmPasswordLabel" xml:space="preserve"><value>Bekræft adgangskode</value></data>
+  <data name="Register_ConfirmPasswordPlaceholder" xml:space="preserve"><value>Bekræft din adgangskode</value></data>
+  <data name="Register_CreateAccount" xml:space="preserve"><value>Opret konto</value></data>
+  <data name="Register_HasAccount" xml:space="preserve"><value>Har du allerede en konto?</value></data>
+  <data name="Register_NameRequired" xml:space="preserve"><value>Visningsnavn er påkrævet</value></data>
+  <data name="Register_EmailRequired" xml:space="preserve"><value>E-mail er påkrævet</value></data>
+  <data name="Register_PasswordMismatch" xml:space="preserve"><value>Adgangskoderne stemmer ikke overens</value></data>
+  <data name="Register_Success" xml:space="preserve"><value>Registrering gennemført! Du kan nu logge ind.</value></data>
+  <data name="PackageDetail_NotFound" xml:space="preserve"><value>Pakke ikke fundet</value></data>
+  <data name="PackageDetail_NotFoundDesc" xml:space="preserve"><value>Den pakke, du leder efter, findes ikke.</value></data>
+  <data name="PackageDetail_SpeechLocale" xml:space="preserve"><value>Talelokalitet</value></data>
+  <data name="PackageDetail_TranslationCoverage" xml:space="preserve"><value>Oversættelsesdækning</value></data>
+  <data name="PackageDetail_TranslationCount" xml:space="preserve"><value>{0} oversættelser</value></data>
+  <data name="PackageDetail_Manuals" xml:space="preserve"><value>Manualer</value></data>
+  <data name="PackageDetail_Countries" xml:space="preserve"><value>Lande</value></data>
+  <data name="PackageDetail_States" xml:space="preserve"><value>Delstater</value></data>
+  <data name="PackageDetail_CalendarRules" xml:space="preserve"><value>Kalenderregler</value></data>
+  <data name="PluginDetail_NotFound" xml:space="preserve"><value>Plugin ikke fundet</value></data>
+  <data name="PluginDetail_NotFoundDesc" xml:space="preserve"><value>Det plugin, du leder efter, findes ikke.</value></data>
+  <data name="PluginDetail_ProvidedSkills" xml:space="preserve"><value>Leverede skills</value></data>
+  <data name="PluginDetail_RequiredPermissions" xml:space="preserve"><value>Påkrævede tilladelser</value></data>
+  <data name="PluginDetail_README" xml:space="preserve"><value>README</value></data>
+  <data name="Upload_Title" xml:space="preserve"><value>Upload sprogpakke</value></data>
+  <data name="Upload_Subtitle" xml:space="preserve"><value>Del din sprogpakke med fællesskabet</value></data>
+  <data name="Upload_CodeLabel" xml:space="preserve"><value>Kode (f.eks. fr-FR)</value></data>
+  <data name="Upload_CodePlaceholder" xml:space="preserve"><value>xx-XX</value></data>
+  <data name="Upload_DisplayNamePlaceholder" xml:space="preserve"><value>f.eks. Fransk (Frankrig)</value></data>
+  <data name="Upload_SpeechLocale" xml:space="preserve"><value>Talelokalitet</value></data>
+  <data name="Upload_SpeechLocalePlaceholder" xml:space="preserve"><value>f.eks. fr-FR</value></data>
+  <data name="Upload_VersionPlaceholder" xml:space="preserve"><value>1.0.0</value></data>
+  <data name="Upload_Description" xml:space="preserve"><value>Beskrivelse</value></data>
+  <data name="Upload_DescriptionPlaceholder" xml:space="preserve"><value>Beskriv din sprogpakke...</value></data>
+  <data name="Upload_CoverageLabel" xml:space="preserve"><value>Dækning (%)</value></data>
+  <data name="Upload_MinKlacksVersion" xml:space="preserve"><value>Min. Klacks-version</value></data>
+  <data name="Upload_ManifestRequired" xml:space="preserve"><value>manifest.json</value></data>
+  <data name="Upload_TranslationsRequired" xml:space="preserve"><value>translations.json</value></data>
+  <data name="Upload_DocsOptional" xml:space="preserve"><value>docs.json (valgfri)</value></data>
+  <data name="Upload_CountriesOptional" xml:space="preserve"><value>countries.json (valgfri)</value></data>
+  <data name="Upload_StatesOptional" xml:space="preserve"><value>states.json (valgfri)</value></data>
+  <data name="Upload_CalendarOptional" xml:space="preserve"><value>calendar-rules.json (valgfri)</value></data>
+  <data name="Upload_CodeRequired" xml:space="preserve"><value>Kode og visningsnavn er påkrævet</value></data>
+  <data name="Upload_Success" xml:space="preserve"><value>Pakke sendt til gennemgang!</value></data>
+  <data name="UploadPlugin_Title" xml:space="preserve"><value>Upload feature-plugin</value></data>
+  <data name="UploadPlugin_Subtitle" xml:space="preserve"><value>Del dit feature-plugin med fællesskabet</value></data>
+  <data name="UploadPlugin_NameLabel" xml:space="preserve"><value>Pluginnavn (unik identifikator)</value></data>
+  <data name="UploadPlugin_NamePlaceholder" xml:space="preserve"><value>f.eks. messaging</value></data>
+  <data name="UploadPlugin_DisplayNamePlaceholder" xml:space="preserve"><value>f.eks. Messaging</value></data>
+  <data name="UploadPlugin_SelectCategory" xml:space="preserve"><value>Vælg kategori...</value></data>
+  <data name="UploadPlugin_DescriptionPlaceholder" xml:space="preserve"><value>Beskriv dit feature-plugin...</value></data>
+  <data name="UploadPlugin_ChangelogLabel" xml:space="preserve"><value>Ændringslog</value></data>
+  <data name="UploadPlugin_ChangelogPlaceholder" xml:space="preserve"><value>Hvad er ændret i denne version?</value></data>
+  <data name="UploadPlugin_ManifestRequired" xml:space="preserve"><value>manifest.json (påkrævet)</value></data>
+  <data name="UploadPlugin_EnRequired" xml:space="preserve"><value>en.json (påkrævet i18n)</value></data>
+  <data name="UploadPlugin_DeOptional" xml:space="preserve"><value>de.json (valgfri i18n)</value></data>
+  <data name="UploadPlugin_FrOptional" xml:space="preserve"><value>fr.json (valgfri i18n)</value></data>
+  <data name="UploadPlugin_ReadmeOptional" xml:space="preserve"><value>README.md (valgfri)</value></data>
+  <data name="UploadPlugin_NameRequired" xml:space="preserve"><value>Navn og visningsnavn er påkrævet</value></data>
+  <data name="UploadPlugin_CategoryRequired" xml:space="preserve"><value>Kategori er påkrævet</value></data>
+  <data name="UploadPlugin_Success" xml:space="preserve"><value>Plugin sendt til gennemgang!</value></data>
+  <data name="MyPackages_Title" xml:space="preserve"><value>Mine pakker</value></data>
+  <data name="MyPackages_LoginRequired" xml:space="preserve"><value>Log ind for at se dine pakker.</value></data>
+  <data name="MyPackages_NoPacks" xml:space="preserve"><value>Endnu ingen sprogpakker</value></data>
+  <data name="MyPackages_NoPacksDesc" xml:space="preserve"><value>Du har endnu ikke uploadet nogen sprogpakker.</value></data>
+  <data name="MyPackages_UploadFirst" xml:space="preserve"><value>Upload din første pakke</value></data>
+  <data name="MyPackages_NoPlugins" xml:space="preserve"><value>Endnu ingen feature-plugins</value></data>
+  <data name="MyPackages_NoPluginsDesc" xml:space="preserve"><value>Du har endnu ikke uploadet nogen feature-plugins.</value></data>
+  <data name="MyPackages_UploadFirstPlugin" xml:space="preserve"><value>Upload dit første plugin</value></data>
+  <data name="Admin_Title" xml:space="preserve"><value>Admin-dashboard</value></data>
+  <data name="Admin_AccessDenied" xml:space="preserve"><value>Adgang nægtet. Administratorrettigheder påkrævet.</value></data>
+  <data name="Admin_PendingPackages" xml:space="preserve"><value>Afventende pakker</value></data>
+  <data name="Admin_PendingPlugins" xml:space="preserve"><value>Afventende plugins</value></data>
+  <data name="Admin_Users" xml:space="preserve"><value>Brugere</value></data>
+  <data name="Admin_PendingLanguagePackages" xml:space="preserve"><value>Afventende sprogpakker</value></data>
+  <data name="Admin_NoPendingPackages" xml:space="preserve"><value>Ingen pakker afventer gennemgang.</value></data>
+  <data name="Admin_PendingFeaturePlugins" xml:space="preserve"><value>Afventende feature-plugins</value></data>
+  <data name="Admin_NoPendingPlugins" xml:space="preserve"><value>Ingen plugins afventer gennemgang.</value></data>
+  <data name="Admin_Name" xml:space="preserve"><value>Navn</value></data>
+  <data name="Admin_Email" xml:space="preserve"><value>E-mail</value></data>
+  <data name="Admin_Joined" xml:space="preserve"><value>Tilmeldt</value></data>
+  <data name="Admin_MakeAdmin" xml:space="preserve"><value>Gør til admin</value></data>
+  <data name="Admin_RemoveAdmin" xml:space="preserve"><value>Fjern admin</value></data>
+  <data name="Admin_PackageApproved" xml:space="preserve"><value>Pakke godkendt</value></data>
+  <data name="Admin_PackageRejected" xml:space="preserve"><value>Pakke afvist</value></data>
+  <data name="Admin_PluginApproved" xml:space="preserve"><value>Plugin godkendt</value></data>
+  <data name="Admin_PluginRejected" xml:space="preserve"><value>Plugin afvist</value></data>
+  <data name="Admin_RejectPackageTitle" xml:space="preserve"><value>Afvis pakke</value></data>
+  <data name="Admin_RejectPackageMessage" xml:space="preserve"><value>Er du sikker på, at du vil afvise denne pakke?</value></data>
+  <data name="Admin_RejectPluginTitle" xml:space="preserve"><value>Afvis plugin</value></data>
+  <data name="Admin_RejectPluginMessage" xml:space="preserve"><value>Er du sikker på, at du vil afvise dette plugin?</value></data>
+  <data name="Admin_RejectedByAdmin" xml:space="preserve"><value>Afvist af admin</value></data>
+  <data name="Status_Published" xml:space="preserve"><value>Udgivet</value></data>
+  <data name="Status_Pending" xml:space="preserve"><value>Afventer</value></data>
+  <data name="Status_Rejected" xml:space="preserve"><value>Afvist</value></data>
+  <data name="Status_Draft" xml:space="preserve"><value>Kladde</value></data>
+  <data name="Status_Unknown" xml:space="preserve"><value>Ukendt</value></data>
+  <data name="Common_Deployment" xml:space="preserve"><value>Deployment</value></data>
+  <data name="Common_RegionPackage" xml:space="preserve"><value>Regionspakke</value></data>
+  <data name="Common_Country" xml:space="preserve"><value>Land</value></data>
+  <data name="Nav_UploadRegion" xml:space="preserve"><value>Upload region</value></data>
+  <data name="Index_SearchRegions" xml:space="preserve"><value>Søg i regionspakker...</value></data>
+  <data name="Index_NoRegionsFound" xml:space="preserve"><value>Ingen regionspakker fundet</value></data>
+  <data name="Index_BeFirstRegion" xml:space="preserve"><value>Vær den første til at uploade en regionspakke!</value></data>
+  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>Deploymentprofiler for lande til nye installationer.</value></data>
+  <data name="RegionDetail_NotFound" xml:space="preserve"><value>Regionspakke ikke fundet</value></data>
+  <data name="RegionDetail_NotFoundDesc" xml:space="preserve"><value>Den ønskede regionspakke findes ikke eller er ikke udgivet.</value></data>
+  <data name="RegionDetail_IndustryLabel" xml:space="preserve"><value>Branche</value></data>
+  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>Deployment-downloads</value></data>
+  <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>Profil-JSON</value></data>
+  <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>Regionsprofil til en eksisterende Klacks-installation — monter den som regionsopsætningsfil.</value></data>
+  <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>On-prem-bundle</value></data>
+  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Komplet installationsbundle med installationsscripts, Docker Compose og regionsprofilen.</value></data>
+  <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Docker Compose-bundle</value></data>
+  <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Minimal Docker Compose-opsætning uden installationsprogrammer, til Docker-professionelle.</value></data>
+  <data name="Industry_Homecare" xml:space="preserve"><value>Hjemmepleje</value></data>
+  <data name="Industry_Healthcare" xml:space="preserve"><value>Sundhedsvæsen</value></data>
+  <data name="Industry_Security" xml:space="preserve"><value>Sikkerhed</value></data>
+  <data name="Industry_Facility" xml:space="preserve"><value>Ejendomsservice</value></data>
+  <data name="Industry_Logistics" xml:space="preserve"><value>Logistik</value></data>
+  <data name="Industry_All" xml:space="preserve"><value>Alle brancher</value></data>
+  <data name="UploadRegion_Title" xml:space="preserve"><value>Upload regionspakke</value></data>
+  <data name="UploadRegion_Subtitle" xml:space="preserve"><value>Del en regionsopsætningsprofil for et land med fællesskabet</value></data>
+  <data name="UploadRegion_CountryLabel" xml:space="preserve"><value>Land</value></data>
+  <data name="UploadRegion_SelectCountry" xml:space="preserve"><value>Vælg et land...</value></data>
+  <data name="UploadRegion_ChangeLog" xml:space="preserve"><value>Ændringslog</value></data>
+  <data name="UploadRegion_ChangeLogPlaceholder" xml:space="preserve"><value>Hvad er ændret i denne version?</value></data>
+  <data name="UploadRegion_DescriptionPlaceholder" xml:space="preserve"><value>Beskriv regionsprofilen...</value></data>
+  <data name="UploadRegion_ProfileRequired" xml:space="preserve"><value>Regionsprofil-JSON (påkrævet)</value></data>
+  <data name="UploadRegion_ValidationErrors" xml:space="preserve"><value>Valideringsfejl</value></data>
+  <data name="UploadRegion_ValidationWarnings" xml:space="preserve"><value>Valideringsadvarsler</value></data>
+  <data name="UploadRegion_Success" xml:space="preserve"><value>Regionspakke sendt til gennemgang!</value></data>
+  <data name="UploadRegion_CountryRequired" xml:space="preserve"><value>Vælg venligst et land</value></data>
+  <data name="MyPackages_NoRegions" xml:space="preserve"><value>Endnu ingen regionspakker</value></data>
+  <data name="MyPackages_NoRegionsDesc" xml:space="preserve"><value>Du har endnu ikke uploadet nogen regionspakker.</value></data>
+  <data name="MyPackages_UploadFirstRegion" xml:space="preserve"><value>Upload din første regionspakke</value></data>
+  <data name="Admin_PendingRegions" xml:space="preserve"><value>Afventende regioner</value></data>
+  <data name="Admin_PendingRegionPackages" xml:space="preserve"><value>Afventende regionspakker</value></data>
+  <data name="Admin_NoPendingRegions" xml:space="preserve"><value>Ingen afventende regionspakker</value></data>
+  <data name="Admin_RegionApproved" xml:space="preserve"><value>Regionspakke godkendt</value></data>
+  <data name="Admin_RegionRejected" xml:space="preserve"><value>Regionspakke afvist</value></data>
+  <data name="Admin_RejectRegionTitle" xml:space="preserve"><value>Afvis regionspakke</value></data>
+  <data name="Admin_RejectRegionMessage" xml:space="preserve"><value>Er du sikker på, at du vil afvise denne regionspakke?</value></data>
+</root>

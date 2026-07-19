@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msOccurs="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+              <xsd:attribute name="xml:space" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <data name="Common_LanguagePacks" xml:space="preserve"><value>Jazykové balíčky</value></data>
+  <data name="Common_FeaturePlugins" xml:space="preserve"><value>Funkční doplňky</value></data>
+  <data name="Common_Download" xml:space="preserve"><value>Stáhnout</value></data>
+  <data name="Common_Downloads" xml:space="preserve"><value>Stažení</value></data>
+  <data name="Common_Version" xml:space="preserve"><value>Verze</value></data>
+  <data name="Common_Coverage" xml:space="preserve"><value>Pokrytí</value></data>
+  <data name="Common_CoveragePercent" xml:space="preserve"><value>Pokrytí {0} %</value></data>
+  <data name="Common_MinVersion" xml:space="preserve"><value>Min. verze</value></data>
+  <data name="Common_VersionHistory" xml:space="preserve"><value>Historie verzí</value></data>
+  <data name="Common_Home" xml:space="preserve"><value>Domů</value></data>
+  <data name="Common_ResultsCount" xml:space="preserve"><value>{0} výsledků</value></data>
+  <data name="Common_EmailLabel" xml:space="preserve"><value>E-mailová adresa</value></data>
+  <data name="Common_EmailPlaceholder" xml:space="preserve"><value>vas@email.cz</value></data>
+  <data name="Common_PasswordLabel" xml:space="preserve"><value>Heslo</value></data>
+  <data name="Common_DisplayNameLabel" xml:space="preserve"><value>Zobrazované jméno</value></data>
+  <data name="Common_DataSecure" xml:space="preserve"><value>Vaše data jsou šifrována a v bezpečí</value></data>
+  <data name="Common_PleaseLogin" xml:space="preserve"><value>Pro pokračování se prosím přihlaste.</value></data>
+  <data name="Common_LoginLink" xml:space="preserve"><value>Přihlásit se</value></data>
+  <data name="Common_SubmitForReview" xml:space="preserve"><value>Odeslat ke kontrole</value></data>
+  <data name="Common_SaveAsDraft" xml:space="preserve"><value>Uložit jako koncept</value></data>
+  <data name="Common_Loaded" xml:space="preserve"><value>Načteno</value></data>
+  <data name="Common_Cancel" xml:space="preserve"><value>Zrušit</value></data>
+  <data name="Common_Confirm" xml:space="preserve"><value>Potvrdit</value></data>
+  <data name="Common_NotFound" xml:space="preserve"><value>Nenalezeno</value></data>
+  <data name="Common_NothingHere" xml:space="preserve"><value>Omlouváme se, na této adrese nic není.</value></data>
+  <data name="Common_BackToBrowse" xml:space="preserve"><value>Zpět na procházení</value></data>
+  <data name="Common_ByAuthor" xml:space="preserve"><value>od {0}</value></data>
+  <data name="Common_SkillsCount" xml:space="preserve"><value>{0} dovedností</value></data>
+  <data name="Common_InstallsCount" xml:space="preserve"><value>{0} instalací</value></data>
+  <data name="Common_Package" xml:space="preserve"><value>Balíček</value></data>
+  <data name="Common_Plugin" xml:space="preserve"><value>Doplněk</value></data>
+  <data name="Common_Category" xml:space="preserve"><value>Kategorie</value></data>
+  <data name="Common_Status" xml:space="preserve"><value>Stav</value></data>
+  <data name="Common_Actions" xml:space="preserve"><value>Akce</value></data>
+  <data name="Common_Author" xml:space="preserve"><value>Autor</value></data>
+  <data name="Common_Code" xml:space="preserve"><value>Kód</value></data>
+  <data name="Common_Submitted" xml:space="preserve"><value>Odesláno</value></data>
+  <data name="Common_Docs" xml:space="preserve"><value>Dokumentace</value></data>
+  <data name="Common_Translations" xml:space="preserve"><value>překlady</value></data>
+  <data name="Nav_Browse" xml:space="preserve"><value>Procházet</value></data>
+  <data name="Nav_UploadPack" xml:space="preserve"><value>Nahrát balíček</value></data>
+  <data name="Nav_UploadPlugin" xml:space="preserve"><value>Nahrát doplněk</value></data>
+  <data name="Nav_MyPackages" xml:space="preserve"><value>Moje balíčky</value></data>
+  <data name="Nav_Admin" xml:space="preserve"><value>Administrace</value></data>
+  <data name="Nav_SignOut" xml:space="preserve"><value>Odhlásit se</value></data>
+  <data name="Nav_SignIn" xml:space="preserve"><value>Přihlásit se</value></data>
+  <data name="Nav_Register" xml:space="preserve"><value>Registrace</value></data>
+  <data name="Index_HeroTitle" xml:space="preserve"><value>Rozšiřte své možnosti Klacks</value></data>
+  <data name="Index_HeroSubtitle" xml:space="preserve"><value>Objevte jazykové balíčky a funkční doplňky vytvořené pro profesionální řízení pracovních sil a firemní škálovatelnost.</value></data>
+  <data name="Index_SearchPacks" xml:space="preserve"><value>Hledat jazykové balíčky...</value></data>
+  <data name="Index_SearchPlugins" xml:space="preserve"><value>Hledat funkční doplňky...</value></data>
+  <data name="Index_AllCategories" xml:space="preserve"><value>Všechny kategorie</value></data>
+  <data name="Index_NoPackagesFound" xml:space="preserve"><value>Nebyly nalezeny žádné balíčky</value></data>
+  <data name="Index_BeFirstPack" xml:space="preserve"><value>Buďte první, kdo nahraje jazykový balíček!</value></data>
+  <data name="Index_NoPluginsFound" xml:space="preserve"><value>Nebyly nalezeny žádné doplňky</value></data>
+  <data name="Index_BeFirstPlugin" xml:space="preserve"><value>Buďte první, kdo nahraje funkční doplněk!</value></data>
+  <data name="Index_PacksSubtitle" xml:space="preserve"><value>Lokalizační podklady pro mezinárodní týmy.</value></data>
+  <data name="Index_FooterDescription" xml:space="preserve"><value>Profesionální ekosystém pro rozšiřování možností řízení pracovních sil.</value></data>
+  <data name="Index_FooterRights" xml:space="preserve"><value>© 2026 Klacks Store. Všechna práva vyhrazena.</value></data>
+  <data name="Index_Resources" xml:space="preserve"><value>Zdroje</value></data>
+  <data name="Index_Documentation" xml:space="preserve"><value>Dokumentace</value></data>
+  <data name="Index_API" xml:space="preserve"><value>API</value></data>
+  <data name="Index_Legal" xml:space="preserve"><value>Právní informace</value></data>
+  <data name="Index_PrivacyPolicy" xml:space="preserve"><value>Zásady ochrany osobních údajů</value></data>
+  <data name="Index_TermsOfService" xml:space="preserve"><value>Podmínky používání</value></data>
+  <data name="Login_PageTitle" xml:space="preserve"><value>Přihlášení - Klacks Store</value></data>
+  <data name="Login_WelcomeBack" xml:space="preserve"><value>Vítejte zpět</value></data>
+  <data name="Login_Subtitle" xml:space="preserve"><value>Přihlaste se ke správě svých balíčků a doplňků</value></data>
+  <data name="Login_PasswordPlaceholder" xml:space="preserve"><value>Zadejte své heslo</value></data>
+  <data name="Login_NoAccount" xml:space="preserve"><value>Nemáte účet?</value></data>
+  <data name="Login_CreateOne" xml:space="preserve"><value>Vytvořte si ho</value></data>
+  <data name="Login_InvalidCredentials" xml:space="preserve"><value>Neplatný e-mail nebo heslo</value></data>
+  <data name="Register_PageTitle" xml:space="preserve"><value>Registrace - Klacks Store</value></data>
+  <data name="Register_Title" xml:space="preserve"><value>Vytvořit účet</value></data>
+  <data name="Register_Subtitle" xml:space="preserve"><value>Připojte se ke komunitě Klacks Store</value></data>
+  <data name="Register_NamePlaceholder" xml:space="preserve"><value>Vaše jméno</value></data>
+  <data name="Register_PasswordLabel" xml:space="preserve"><value>Heslo (min. {0} znaků)</value></data>
+  <data name="Register_CreatePassword" xml:space="preserve"><value>Vytvořte heslo</value></data>
+  <data name="Register_ConfirmPasswordLabel" xml:space="preserve"><value>Potvrzení hesla</value></data>
+  <data name="Register_ConfirmPasswordPlaceholder" xml:space="preserve"><value>Potvrďte své heslo</value></data>
+  <data name="Register_CreateAccount" xml:space="preserve"><value>Vytvořit účet</value></data>
+  <data name="Register_HasAccount" xml:space="preserve"><value>Již máte účet?</value></data>
+  <data name="Register_NameRequired" xml:space="preserve"><value>Zobrazované jméno je povinné</value></data>
+  <data name="Register_EmailRequired" xml:space="preserve"><value>E-mail je povinný</value></data>
+  <data name="Register_PasswordMismatch" xml:space="preserve"><value>Hesla se neshodují</value></data>
+  <data name="Register_Success" xml:space="preserve"><value>Registrace proběhla úspěšně! Nyní se můžete přihlásit.</value></data>
+  <data name="PackageDetail_NotFound" xml:space="preserve"><value>Balíček nenalezen</value></data>
+  <data name="PackageDetail_NotFoundDesc" xml:space="preserve"><value>Balíček, který hledáte, neexistuje.</value></data>
+  <data name="PackageDetail_SpeechLocale" xml:space="preserve"><value>Jazyk řeči</value></data>
+  <data name="PackageDetail_TranslationCoverage" xml:space="preserve"><value>Pokrytí překladu</value></data>
+  <data name="PackageDetail_TranslationCount" xml:space="preserve"><value>{0} překladů</value></data>
+  <data name="PackageDetail_Manuals" xml:space="preserve"><value>Příručky</value></data>
+  <data name="PackageDetail_Countries" xml:space="preserve"><value>Země</value></data>
+  <data name="PackageDetail_States" xml:space="preserve"><value>Kraje</value></data>
+  <data name="PackageDetail_CalendarRules" xml:space="preserve"><value>Pravidla kalendáře</value></data>
+  <data name="PluginDetail_NotFound" xml:space="preserve"><value>Doplněk nenalezen</value></data>
+  <data name="PluginDetail_NotFoundDesc" xml:space="preserve"><value>Doplněk, který hledáte, neexistuje.</value></data>
+  <data name="PluginDetail_ProvidedSkills" xml:space="preserve"><value>Poskytované dovednosti</value></data>
+  <data name="PluginDetail_RequiredPermissions" xml:space="preserve"><value>Požadovaná oprávnění</value></data>
+  <data name="PluginDetail_README" xml:space="preserve"><value>README</value></data>
+  <data name="Upload_Title" xml:space="preserve"><value>Nahrát jazykový balíček</value></data>
+  <data name="Upload_Subtitle" xml:space="preserve"><value>Sdílejte svůj jazykový balíček s komunitou</value></data>
+  <data name="Upload_CodeLabel" xml:space="preserve"><value>Kód (např. fr-FR)</value></data>
+  <data name="Upload_CodePlaceholder" xml:space="preserve"><value>xx-XX</value></data>
+  <data name="Upload_DisplayNamePlaceholder" xml:space="preserve"><value>např. francouzština (Francie)</value></data>
+  <data name="Upload_SpeechLocale" xml:space="preserve"><value>Jazyk řeči</value></data>
+  <data name="Upload_SpeechLocalePlaceholder" xml:space="preserve"><value>např. fr-FR</value></data>
+  <data name="Upload_VersionPlaceholder" xml:space="preserve"><value>1.0.0</value></data>
+  <data name="Upload_Description" xml:space="preserve"><value>Popis</value></data>
+  <data name="Upload_DescriptionPlaceholder" xml:space="preserve"><value>Popište svůj jazykový balíček...</value></data>
+  <data name="Upload_CoverageLabel" xml:space="preserve"><value>Pokrytí (%)</value></data>
+  <data name="Upload_MinKlacksVersion" xml:space="preserve"><value>Min. verze Klacks</value></data>
+  <data name="Upload_ManifestRequired" xml:space="preserve"><value>manifest.json</value></data>
+  <data name="Upload_TranslationsRequired" xml:space="preserve"><value>translations.json</value></data>
+  <data name="Upload_DocsOptional" xml:space="preserve"><value>docs.json (volitelné)</value></data>
+  <data name="Upload_CountriesOptional" xml:space="preserve"><value>countries.json (volitelné)</value></data>
+  <data name="Upload_StatesOptional" xml:space="preserve"><value>states.json (volitelné)</value></data>
+  <data name="Upload_CalendarOptional" xml:space="preserve"><value>calendar-rules.json (volitelné)</value></data>
+  <data name="Upload_CodeRequired" xml:space="preserve"><value>Kód a zobrazované jméno jsou povinné</value></data>
+  <data name="Upload_Success" xml:space="preserve"><value>Balíček byl odeslán ke kontrole!</value></data>
+  <data name="UploadPlugin_Title" xml:space="preserve"><value>Nahrát funkční doplněk</value></data>
+  <data name="UploadPlugin_Subtitle" xml:space="preserve"><value>Sdílejte svůj funkční doplněk s komunitou</value></data>
+  <data name="UploadPlugin_NameLabel" xml:space="preserve"><value>Název doplňku (jedinečný identifikátor)</value></data>
+  <data name="UploadPlugin_NamePlaceholder" xml:space="preserve"><value>např. messaging</value></data>
+  <data name="UploadPlugin_DisplayNamePlaceholder" xml:space="preserve"><value>např. Messaging</value></data>
+  <data name="UploadPlugin_SelectCategory" xml:space="preserve"><value>Vyberte kategorii...</value></data>
+  <data name="UploadPlugin_DescriptionPlaceholder" xml:space="preserve"><value>Popište svůj funkční doplněk...</value></data>
+  <data name="UploadPlugin_ChangelogLabel" xml:space="preserve"><value>Seznam změn</value></data>
+  <data name="UploadPlugin_ChangelogPlaceholder" xml:space="preserve"><value>Co se změnilo v této verzi?</value></data>
+  <data name="UploadPlugin_ManifestRequired" xml:space="preserve"><value>manifest.json (povinné)</value></data>
+  <data name="UploadPlugin_EnRequired" xml:space="preserve"><value>en.json (povinný i18n)</value></data>
+  <data name="UploadPlugin_DeOptional" xml:space="preserve"><value>de.json (volitelný i18n)</value></data>
+  <data name="UploadPlugin_FrOptional" xml:space="preserve"><value>fr.json (volitelný i18n)</value></data>
+  <data name="UploadPlugin_ReadmeOptional" xml:space="preserve"><value>README.md (volitelné)</value></data>
+  <data name="UploadPlugin_NameRequired" xml:space="preserve"><value>Název a zobrazované jméno jsou povinné</value></data>
+  <data name="UploadPlugin_CategoryRequired" xml:space="preserve"><value>Kategorie je povinná</value></data>
+  <data name="UploadPlugin_Success" xml:space="preserve"><value>Doplněk byl odeslán ke kontrole!</value></data>
+  <data name="MyPackages_Title" xml:space="preserve"><value>Moje balíčky</value></data>
+  <data name="MyPackages_LoginRequired" xml:space="preserve"><value>Pro zobrazení svých balíčků se prosím přihlaste.</value></data>
+  <data name="MyPackages_NoPacks" xml:space="preserve"><value>Zatím žádné jazykové balíčky</value></data>
+  <data name="MyPackages_NoPacksDesc" xml:space="preserve"><value>Zatím jste nenahráli žádný jazykový balíček.</value></data>
+  <data name="MyPackages_UploadFirst" xml:space="preserve"><value>Nahrajte svůj první balíček</value></data>
+  <data name="MyPackages_NoPlugins" xml:space="preserve"><value>Zatím žádné funkční doplňky</value></data>
+  <data name="MyPackages_NoPluginsDesc" xml:space="preserve"><value>Zatím jste nenahráli žádný funkční doplněk.</value></data>
+  <data name="MyPackages_UploadFirstPlugin" xml:space="preserve"><value>Nahrajte svůj první doplněk</value></data>
+  <data name="Admin_Title" xml:space="preserve"><value>Administrátorský přehled</value></data>
+  <data name="Admin_AccessDenied" xml:space="preserve"><value>Přístup odepřen. Vyžadována administrátorská oprávnění.</value></data>
+  <data name="Admin_PendingPackages" xml:space="preserve"><value>Čekající balíčky</value></data>
+  <data name="Admin_PendingPlugins" xml:space="preserve"><value>Čekající doplňky</value></data>
+  <data name="Admin_Users" xml:space="preserve"><value>Uživatelé</value></data>
+  <data name="Admin_PendingLanguagePackages" xml:space="preserve"><value>Čekající jazykové balíčky</value></data>
+  <data name="Admin_NoPendingPackages" xml:space="preserve"><value>Žádné balíčky nečekají na kontrolu.</value></data>
+  <data name="Admin_PendingFeaturePlugins" xml:space="preserve"><value>Čekající funkční doplňky</value></data>
+  <data name="Admin_NoPendingPlugins" xml:space="preserve"><value>Žádné doplňky nečekají na kontrolu.</value></data>
+  <data name="Admin_Name" xml:space="preserve"><value>Jméno</value></data>
+  <data name="Admin_Email" xml:space="preserve"><value>E-mail</value></data>
+  <data name="Admin_Joined" xml:space="preserve"><value>Registrován</value></data>
+  <data name="Admin_MakeAdmin" xml:space="preserve"><value>Nastavit jako administrátora</value></data>
+  <data name="Admin_RemoveAdmin" xml:space="preserve"><value>Odebrat administrátora</value></data>
+  <data name="Admin_PackageApproved" xml:space="preserve"><value>Balíček byl úspěšně schválen</value></data>
+  <data name="Admin_PackageRejected" xml:space="preserve"><value>Balíček byl zamítnut</value></data>
+  <data name="Admin_PluginApproved" xml:space="preserve"><value>Doplněk byl úspěšně schválen</value></data>
+  <data name="Admin_PluginRejected" xml:space="preserve"><value>Doplněk byl zamítnut</value></data>
+  <data name="Admin_RejectPackageTitle" xml:space="preserve"><value>Zamítnout balíček</value></data>
+  <data name="Admin_RejectPackageMessage" xml:space="preserve"><value>Opravdu chcete tento balíček zamítnout?</value></data>
+  <data name="Admin_RejectPluginTitle" xml:space="preserve"><value>Zamítnout doplněk</value></data>
+  <data name="Admin_RejectPluginMessage" xml:space="preserve"><value>Opravdu chcete tento doplněk zamítnout?</value></data>
+  <data name="Admin_RejectedByAdmin" xml:space="preserve"><value>Zamítnuto administrátorem</value></data>
+  <data name="Status_Published" xml:space="preserve"><value>Publikováno</value></data>
+  <data name="Status_Pending" xml:space="preserve"><value>Čekající</value></data>
+  <data name="Status_Rejected" xml:space="preserve"><value>Zamítnuto</value></data>
+  <data name="Status_Draft" xml:space="preserve"><value>Koncept</value></data>
+  <data name="Status_Unknown" xml:space="preserve"><value>Neznámé</value></data>
+  <data name="Common_Deployment" xml:space="preserve"><value>Nasazení</value></data>
+  <data name="Common_RegionPackage" xml:space="preserve"><value>Regionální balíček</value></data>
+  <data name="Common_Country" xml:space="preserve"><value>Země</value></data>
+  <data name="Nav_UploadRegion" xml:space="preserve"><value>Nahrát region</value></data>
+  <data name="Index_SearchRegions" xml:space="preserve"><value>Hledat regionální balíčky...</value></data>
+  <data name="Index_NoRegionsFound" xml:space="preserve"><value>Nebyly nalezeny žádné regionální balíčky</value></data>
+  <data name="Index_BeFirstRegion" xml:space="preserve"><value>Buďte první, kdo nahraje regionální balíček!</value></data>
+  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>Profily nasazení pro jednotlivé země pro nové instalace.</value></data>
+  <data name="RegionDetail_NotFound" xml:space="preserve"><value>Regionální balíček nenalezen</value></data>
+  <data name="RegionDetail_NotFoundDesc" xml:space="preserve"><value>Požadovaný regionální balíček neexistuje nebo není publikován.</value></data>
+  <data name="RegionDetail_IndustryLabel" xml:space="preserve"><value>Odvětví</value></data>
+  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>Soubory ke stažení pro nasazení</value></data>
+  <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>Profil JSON</value></data>
+  <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>Regionální profil pro existující instalaci Klacks — připojte jej jako soubor nastavení regionu.</value></data>
+  <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>On-Prem balík</value></data>
+  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Kompletní instalační balík s instalačními skripty, Docker Compose a regionálním profilem.</value></data>
+  <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Balík Docker Compose</value></data>
+  <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Minimální konfigurace Docker Compose bez instalačních skriptů, pro odborníky na Docker.</value></data>
+  <data name="Industry_Homecare" xml:space="preserve"><value>Domácí péče</value></data>
+  <data name="Industry_Healthcare" xml:space="preserve"><value>Zdravotnictví</value></data>
+  <data name="Industry_Security" xml:space="preserve"><value>Bezpečnostní služby</value></data>
+  <data name="Industry_Facility" xml:space="preserve"><value>Facility management</value></data>
+  <data name="Industry_Logistics" xml:space="preserve"><value>Logistika</value></data>
+  <data name="Industry_All" xml:space="preserve"><value>Všechna odvětví</value></data>
+  <data name="UploadRegion_Title" xml:space="preserve"><value>Nahrát regionální balíček</value></data>
+  <data name="UploadRegion_Subtitle" xml:space="preserve"><value>Sdílejte profil nastavení regionu země s komunitou</value></data>
+  <data name="UploadRegion_CountryLabel" xml:space="preserve"><value>Země</value></data>
+  <data name="UploadRegion_SelectCountry" xml:space="preserve"><value>Vyberte zemi...</value></data>
+  <data name="UploadRegion_ChangeLog" xml:space="preserve"><value>Seznam změn</value></data>
+  <data name="UploadRegion_ChangeLogPlaceholder" xml:space="preserve"><value>Co se změnilo v této verzi?</value></data>
+  <data name="UploadRegion_DescriptionPlaceholder" xml:space="preserve"><value>Popište profil regionu...</value></data>
+  <data name="UploadRegion_ProfileRequired" xml:space="preserve"><value>Profil regionu JSON (povinné)</value></data>
+  <data name="UploadRegion_ValidationErrors" xml:space="preserve"><value>Chyby validace</value></data>
+  <data name="UploadRegion_ValidationWarnings" xml:space="preserve"><value>Upozornění validace</value></data>
+  <data name="UploadRegion_Success" xml:space="preserve"><value>Regionální balíček byl odeslán ke kontrole!</value></data>
+  <data name="UploadRegion_CountryRequired" xml:space="preserve"><value>Vyberte prosím zemi</value></data>
+  <data name="MyPackages_NoRegions" xml:space="preserve"><value>Zatím žádné regionální balíčky</value></data>
+  <data name="MyPackages_NoRegionsDesc" xml:space="preserve"><value>Zatím jste nenahráli žádný regionální balíček.</value></data>
+  <data name="MyPackages_UploadFirstRegion" xml:space="preserve"><value>Nahrajte svůj první regionální balíček</value></data>
+  <data name="Admin_PendingRegions" xml:space="preserve"><value>Čekající regiony</value></data>
+  <data name="Admin_PendingRegionPackages" xml:space="preserve"><value>Čekající regionální balíčky</value></data>
+  <data name="Admin_NoPendingRegions" xml:space="preserve"><value>Žádné čekající regionální balíčky</value></data>
+  <data name="Admin_RegionApproved" xml:space="preserve"><value>Regionální balíček byl schválen</value></data>
+  <data name="Admin_RegionRejected" xml:space="preserve"><value>Regionální balíček byl zamítnut</value></data>
+  <data name="Admin_RejectRegionTitle" xml:space="preserve"><value>Zamítnout regionální balíček</value></data>
+  <data name="Admin_RejectRegionMessage" xml:space="preserve"><value>Opravdu chcete tento regionální balíček zamítnout?</value></data>
+</root>

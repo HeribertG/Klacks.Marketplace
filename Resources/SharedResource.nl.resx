@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msOccurs="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+              <xsd:attribute name="xml:space" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <data name="Common_LanguagePacks" xml:space="preserve"><value>Taalpakketten</value></data>
+  <data name="Common_FeaturePlugins" xml:space="preserve"><value>Functieplugins</value></data>
+  <data name="Common_Download" xml:space="preserve"><value>Download</value></data>
+  <data name="Common_Downloads" xml:space="preserve"><value>Downloads</value></data>
+  <data name="Common_Version" xml:space="preserve"><value>Versie</value></data>
+  <data name="Common_Coverage" xml:space="preserve"><value>Dekking</value></data>
+  <data name="Common_CoveragePercent" xml:space="preserve"><value>{0}% dekking</value></data>
+  <data name="Common_MinVersion" xml:space="preserve"><value>Min. versie</value></data>
+  <data name="Common_VersionHistory" xml:space="preserve"><value>Versiegeschiedenis</value></data>
+  <data name="Common_Home" xml:space="preserve"><value>Home</value></data>
+  <data name="Common_ResultsCount" xml:space="preserve"><value>{0} resultaten</value></data>
+  <data name="Common_EmailLabel" xml:space="preserve"><value>E-mailadres</value></data>
+  <data name="Common_EmailPlaceholder" xml:space="preserve"><value>uw@email.com</value></data>
+  <data name="Common_PasswordLabel" xml:space="preserve"><value>Wachtwoord</value></data>
+  <data name="Common_DisplayNameLabel" xml:space="preserve"><value>Weergavenaam</value></data>
+  <data name="Common_DataSecure" xml:space="preserve"><value>Uw gegevens zijn versleuteld en veilig</value></data>
+  <data name="Common_PleaseLogin" xml:space="preserve"><value>Log in om door te gaan.</value></data>
+  <data name="Common_LoginLink" xml:space="preserve"><value>Inloggen</value></data>
+  <data name="Common_SubmitForReview" xml:space="preserve"><value>Indienen ter beoordeling</value></data>
+  <data name="Common_SaveAsDraft" xml:space="preserve"><value>Opslaan als concept</value></data>
+  <data name="Common_Loaded" xml:space="preserve"><value>Geladen</value></data>
+  <data name="Common_Cancel" xml:space="preserve"><value>Annuleren</value></data>
+  <data name="Common_Confirm" xml:space="preserve"><value>Bevestigen</value></data>
+  <data name="Common_NotFound" xml:space="preserve"><value>Niet gevonden</value></data>
+  <data name="Common_NothingHere" xml:space="preserve"><value>Sorry, er is niets op dit adres.</value></data>
+  <data name="Common_BackToBrowse" xml:space="preserve"><value>Terug naar overzicht</value></data>
+  <data name="Common_ByAuthor" xml:space="preserve"><value>door {0}</value></data>
+  <data name="Common_SkillsCount" xml:space="preserve"><value>{0} vaardigheden</value></data>
+  <data name="Common_InstallsCount" xml:space="preserve"><value>{0} installaties</value></data>
+  <data name="Common_Package" xml:space="preserve"><value>Pakket</value></data>
+  <data name="Common_Plugin" xml:space="preserve"><value>Plugin</value></data>
+  <data name="Common_Category" xml:space="preserve"><value>Categorie</value></data>
+  <data name="Common_Status" xml:space="preserve"><value>Status</value></data>
+  <data name="Common_Actions" xml:space="preserve"><value>Acties</value></data>
+  <data name="Common_Author" xml:space="preserve"><value>Auteur</value></data>
+  <data name="Common_Code" xml:space="preserve"><value>Code</value></data>
+  <data name="Common_Submitted" xml:space="preserve"><value>Ingediend</value></data>
+  <data name="Common_Docs" xml:space="preserve"><value>Documentatie</value></data>
+  <data name="Common_Translations" xml:space="preserve"><value>vertalingen</value></data>
+  <data name="Nav_Browse" xml:space="preserve"><value>Bladeren</value></data>
+  <data name="Nav_UploadPack" xml:space="preserve"><value>Pakket uploaden</value></data>
+  <data name="Nav_UploadPlugin" xml:space="preserve"><value>Plugin uploaden</value></data>
+  <data name="Nav_MyPackages" xml:space="preserve"><value>Mijn pakketten</value></data>
+  <data name="Nav_Admin" xml:space="preserve"><value>Beheer</value></data>
+  <data name="Nav_SignOut" xml:space="preserve"><value>Afmelden</value></data>
+  <data name="Nav_SignIn" xml:space="preserve"><value>Aanmelden</value></data>
+  <data name="Nav_Register" xml:space="preserve"><value>Registreren</value></data>
+  <data name="Index_HeroTitle" xml:space="preserve"><value>Breid uw Klacks-ervaring uit</value></data>
+  <data name="Index_HeroSubtitle" xml:space="preserve"><value>Ontdek taalpakketten en functieplugins, ontwikkeld voor professioneel personeelsbeheer en schaalbaarheid op ondernemingsniveau.</value></data>
+  <data name="Index_SearchPacks" xml:space="preserve"><value>Taalpakketten zoeken...</value></data>
+  <data name="Index_SearchPlugins" xml:space="preserve"><value>Functieplugins zoeken...</value></data>
+  <data name="Index_AllCategories" xml:space="preserve"><value>Alle categorieën</value></data>
+  <data name="Index_NoPackagesFound" xml:space="preserve"><value>Geen pakketten gevonden</value></data>
+  <data name="Index_BeFirstPack" xml:space="preserve"><value>Wees de eerste die een taalpakket uploadt!</value></data>
+  <data name="Index_NoPluginsFound" xml:space="preserve"><value>Geen plugins gevonden</value></data>
+  <data name="Index_BeFirstPlugin" xml:space="preserve"><value>Wees de eerste die een functieplugin uploadt!</value></data>
+  <data name="Index_PacksSubtitle" xml:space="preserve"><value>Lokalisatiebestanden voor internationale teams.</value></data>
+  <data name="Index_FooterDescription" xml:space="preserve"><value>Professioneel ecosysteem voor het uitbreiden van personeelsbeheerfunctionaliteit.</value></data>
+  <data name="Index_FooterRights" xml:space="preserve"><value>© 2026 Klacks Store. Alle rechten voorbehouden.</value></data>
+  <data name="Index_Resources" xml:space="preserve"><value>Bronnen</value></data>
+  <data name="Index_Documentation" xml:space="preserve"><value>Documentatie</value></data>
+  <data name="Index_API" xml:space="preserve"><value>API</value></data>
+  <data name="Index_Legal" xml:space="preserve"><value>Juridisch</value></data>
+  <data name="Index_PrivacyPolicy" xml:space="preserve"><value>Privacybeleid</value></data>
+  <data name="Index_TermsOfService" xml:space="preserve"><value>Gebruiksvoorwaarden</value></data>
+  <data name="Login_PageTitle" xml:space="preserve"><value>Aanmelden - Klacks Store</value></data>
+  <data name="Login_WelcomeBack" xml:space="preserve"><value>Welkom terug</value></data>
+  <data name="Login_Subtitle" xml:space="preserve"><value>Meld u aan om uw pakketten en plugins te beheren</value></data>
+  <data name="Login_PasswordPlaceholder" xml:space="preserve"><value>Voer uw wachtwoord in</value></data>
+  <data name="Login_NoAccount" xml:space="preserve"><value>Nog geen account?</value></data>
+  <data name="Login_CreateOne" xml:space="preserve"><value>Maak er een aan</value></data>
+  <data name="Login_InvalidCredentials" xml:space="preserve"><value>Ongeldig e-mailadres of wachtwoord</value></data>
+  <data name="Register_PageTitle" xml:space="preserve"><value>Registreren - Klacks Store</value></data>
+  <data name="Register_Title" xml:space="preserve"><value>Account aanmaken</value></data>
+  <data name="Register_Subtitle" xml:space="preserve"><value>Word lid van de Klacks Store-community</value></data>
+  <data name="Register_NamePlaceholder" xml:space="preserve"><value>Uw naam</value></data>
+  <data name="Register_PasswordLabel" xml:space="preserve"><value>Wachtwoord (min. {0} tekens)</value></data>
+  <data name="Register_CreatePassword" xml:space="preserve"><value>Maak een wachtwoord aan</value></data>
+  <data name="Register_ConfirmPasswordLabel" xml:space="preserve"><value>Wachtwoord bevestigen</value></data>
+  <data name="Register_ConfirmPasswordPlaceholder" xml:space="preserve"><value>Bevestig uw wachtwoord</value></data>
+  <data name="Register_CreateAccount" xml:space="preserve"><value>Account aanmaken</value></data>
+  <data name="Register_HasAccount" xml:space="preserve"><value>Heeft u al een account?</value></data>
+  <data name="Register_NameRequired" xml:space="preserve"><value>Weergavenaam is verplicht</value></data>
+  <data name="Register_EmailRequired" xml:space="preserve"><value>E-mailadres is verplicht</value></data>
+  <data name="Register_PasswordMismatch" xml:space="preserve"><value>Wachtwoorden komen niet overeen</value></data>
+  <data name="Register_Success" xml:space="preserve"><value>Registratie geslaagd! U kunt nu aanmelden.</value></data>
+  <data name="PackageDetail_NotFound" xml:space="preserve"><value>Pakket niet gevonden</value></data>
+  <data name="PackageDetail_NotFoundDesc" xml:space="preserve"><value>Het pakket dat u zoekt, bestaat niet.</value></data>
+  <data name="PackageDetail_SpeechLocale" xml:space="preserve"><value>Spraaklocale</value></data>
+  <data name="PackageDetail_TranslationCoverage" xml:space="preserve"><value>Vertaaldekking</value></data>
+  <data name="PackageDetail_TranslationCount" xml:space="preserve"><value>{0} vertalingen</value></data>
+  <data name="PackageDetail_Manuals" xml:space="preserve"><value>Handleidingen</value></data>
+  <data name="PackageDetail_Countries" xml:space="preserve"><value>Landen</value></data>
+  <data name="PackageDetail_States" xml:space="preserve"><value>Staten</value></data>
+  <data name="PackageDetail_CalendarRules" xml:space="preserve"><value>Kalenderregels</value></data>
+  <data name="PluginDetail_NotFound" xml:space="preserve"><value>Plugin niet gevonden</value></data>
+  <data name="PluginDetail_NotFoundDesc" xml:space="preserve"><value>De plugin die u zoekt, bestaat niet.</value></data>
+  <data name="PluginDetail_ProvidedSkills" xml:space="preserve"><value>Aangeboden vaardigheden</value></data>
+  <data name="PluginDetail_RequiredPermissions" xml:space="preserve"><value>Vereiste machtigingen</value></data>
+  <data name="PluginDetail_README" xml:space="preserve"><value>README</value></data>
+  <data name="Upload_Title" xml:space="preserve"><value>Taalpakket uploaden</value></data>
+  <data name="Upload_Subtitle" xml:space="preserve"><value>Deel uw taalpakket met de community</value></data>
+  <data name="Upload_CodeLabel" xml:space="preserve"><value>Code (bijv. fr-FR)</value></data>
+  <data name="Upload_CodePlaceholder" xml:space="preserve"><value>xx-XX</value></data>
+  <data name="Upload_DisplayNamePlaceholder" xml:space="preserve"><value>bijv. Frans (Frankrijk)</value></data>
+  <data name="Upload_SpeechLocale" xml:space="preserve"><value>Spraaklocale</value></data>
+  <data name="Upload_SpeechLocalePlaceholder" xml:space="preserve"><value>bijv. fr-FR</value></data>
+  <data name="Upload_VersionPlaceholder" xml:space="preserve"><value>1.0.0</value></data>
+  <data name="Upload_Description" xml:space="preserve"><value>Beschrijving</value></data>
+  <data name="Upload_DescriptionPlaceholder" xml:space="preserve"><value>Beschrijf uw taalpakket...</value></data>
+  <data name="Upload_CoverageLabel" xml:space="preserve"><value>Dekking (%)</value></data>
+  <data name="Upload_MinKlacksVersion" xml:space="preserve"><value>Min. Klacks-versie</value></data>
+  <data name="Upload_ManifestRequired" xml:space="preserve"><value>manifest.json</value></data>
+  <data name="Upload_TranslationsRequired" xml:space="preserve"><value>translations.json</value></data>
+  <data name="Upload_DocsOptional" xml:space="preserve"><value>docs.json (optioneel)</value></data>
+  <data name="Upload_CountriesOptional" xml:space="preserve"><value>countries.json (optioneel)</value></data>
+  <data name="Upload_StatesOptional" xml:space="preserve"><value>states.json (optioneel)</value></data>
+  <data name="Upload_CalendarOptional" xml:space="preserve"><value>calendar-rules.json (optioneel)</value></data>
+  <data name="Upload_CodeRequired" xml:space="preserve"><value>Code en weergavenaam zijn verplicht</value></data>
+  <data name="Upload_Success" xml:space="preserve"><value>Pakket ingediend ter beoordeling!</value></data>
+  <data name="UploadPlugin_Title" xml:space="preserve"><value>Functieplugin uploaden</value></data>
+  <data name="UploadPlugin_Subtitle" xml:space="preserve"><value>Deel uw functieplugin met de community</value></data>
+  <data name="UploadPlugin_NameLabel" xml:space="preserve"><value>Pluginnaam (unieke identificatie)</value></data>
+  <data name="UploadPlugin_NamePlaceholder" xml:space="preserve"><value>bijv. messaging</value></data>
+  <data name="UploadPlugin_DisplayNamePlaceholder" xml:space="preserve"><value>bijv. Messaging</value></data>
+  <data name="UploadPlugin_SelectCategory" xml:space="preserve"><value>Selecteer categorie...</value></data>
+  <data name="UploadPlugin_DescriptionPlaceholder" xml:space="preserve"><value>Beschrijf uw functieplugin...</value></data>
+  <data name="UploadPlugin_ChangelogLabel" xml:space="preserve"><value>Wijzigingslogboek</value></data>
+  <data name="UploadPlugin_ChangelogPlaceholder" xml:space="preserve"><value>Wat is er gewijzigd in deze versie?</value></data>
+  <data name="UploadPlugin_ManifestRequired" xml:space="preserve"><value>manifest.json (verplicht)</value></data>
+  <data name="UploadPlugin_EnRequired" xml:space="preserve"><value>en.json (verplichte i18n)</value></data>
+  <data name="UploadPlugin_DeOptional" xml:space="preserve"><value>de.json (optionele i18n)</value></data>
+  <data name="UploadPlugin_FrOptional" xml:space="preserve"><value>fr.json (optionele i18n)</value></data>
+  <data name="UploadPlugin_ReadmeOptional" xml:space="preserve"><value>README.md (optioneel)</value></data>
+  <data name="UploadPlugin_NameRequired" xml:space="preserve"><value>Naam en weergavenaam zijn verplicht</value></data>
+  <data name="UploadPlugin_CategoryRequired" xml:space="preserve"><value>Categorie is verplicht</value></data>
+  <data name="UploadPlugin_Success" xml:space="preserve"><value>Plugin ingediend ter beoordeling!</value></data>
+  <data name="MyPackages_Title" xml:space="preserve"><value>Mijn pakketten</value></data>
+  <data name="MyPackages_LoginRequired" xml:space="preserve"><value>Log in om uw pakketten te bekijken.</value></data>
+  <data name="MyPackages_NoPacks" xml:space="preserve"><value>Nog geen taalpakketten</value></data>
+  <data name="MyPackages_NoPacksDesc" xml:space="preserve"><value>U heeft nog geen taalpakketten geüpload.</value></data>
+  <data name="MyPackages_UploadFirst" xml:space="preserve"><value>Upload uw eerste pakket</value></data>
+  <data name="MyPackages_NoPlugins" xml:space="preserve"><value>Nog geen functieplugins</value></data>
+  <data name="MyPackages_NoPluginsDesc" xml:space="preserve"><value>U heeft nog geen functieplugins geüpload.</value></data>
+  <data name="MyPackages_UploadFirstPlugin" xml:space="preserve"><value>Upload uw eerste plugin</value></data>
+  <data name="Admin_Title" xml:space="preserve"><value>Beheerdersdashboard</value></data>
+  <data name="Admin_AccessDenied" xml:space="preserve"><value>Toegang geweigerd. Beheerdersrechten vereist.</value></data>
+  <data name="Admin_PendingPackages" xml:space="preserve"><value>Pakketten in behandeling</value></data>
+  <data name="Admin_PendingPlugins" xml:space="preserve"><value>Plugins in behandeling</value></data>
+  <data name="Admin_Users" xml:space="preserve"><value>Gebruikers</value></data>
+  <data name="Admin_PendingLanguagePackages" xml:space="preserve"><value>Taalpakketten in behandeling</value></data>
+  <data name="Admin_NoPendingPackages" xml:space="preserve"><value>Geen pakketten in behandeling.</value></data>
+  <data name="Admin_PendingFeaturePlugins" xml:space="preserve"><value>Functieplugins in behandeling</value></data>
+  <data name="Admin_NoPendingPlugins" xml:space="preserve"><value>Geen plugins in behandeling.</value></data>
+  <data name="Admin_Name" xml:space="preserve"><value>Naam</value></data>
+  <data name="Admin_Email" xml:space="preserve"><value>E-mail</value></data>
+  <data name="Admin_Joined" xml:space="preserve"><value>Geregistreerd</value></data>
+  <data name="Admin_MakeAdmin" xml:space="preserve"><value>Beheerder maken</value></data>
+  <data name="Admin_RemoveAdmin" xml:space="preserve"><value>Beheerder verwijderen</value></data>
+  <data name="Admin_PackageApproved" xml:space="preserve"><value>Pakket succesvol goedgekeurd</value></data>
+  <data name="Admin_PackageRejected" xml:space="preserve"><value>Pakket afgewezen</value></data>
+  <data name="Admin_PluginApproved" xml:space="preserve"><value>Plugin succesvol goedgekeurd</value></data>
+  <data name="Admin_PluginRejected" xml:space="preserve"><value>Plugin afgewezen</value></data>
+  <data name="Admin_RejectPackageTitle" xml:space="preserve"><value>Pakket afwijzen</value></data>
+  <data name="Admin_RejectPackageMessage" xml:space="preserve"><value>Weet u zeker dat u dit pakket wilt afwijzen?</value></data>
+  <data name="Admin_RejectPluginTitle" xml:space="preserve"><value>Plugin afwijzen</value></data>
+  <data name="Admin_RejectPluginMessage" xml:space="preserve"><value>Weet u zeker dat u deze plugin wilt afwijzen?</value></data>
+  <data name="Admin_RejectedByAdmin" xml:space="preserve"><value>Afgewezen door beheerder</value></data>
+  <data name="Status_Published" xml:space="preserve"><value>Gepubliceerd</value></data>
+  <data name="Status_Pending" xml:space="preserve"><value>In behandeling</value></data>
+  <data name="Status_Rejected" xml:space="preserve"><value>Afgewezen</value></data>
+  <data name="Status_Draft" xml:space="preserve"><value>Concept</value></data>
+  <data name="Status_Unknown" xml:space="preserve"><value>Onbekend</value></data>
+  <data name="Common_Deployment" xml:space="preserve"><value>Implementatie</value></data>
+  <data name="Common_RegionPackage" xml:space="preserve"><value>Regiopakket</value></data>
+  <data name="Common_Country" xml:space="preserve"><value>Land</value></data>
+  <data name="Nav_UploadRegion" xml:space="preserve"><value>Regio uploaden</value></data>
+  <data name="Index_SearchRegions" xml:space="preserve"><value>Regiopakketten zoeken...</value></data>
+  <data name="Index_NoRegionsFound" xml:space="preserve"><value>Geen regiopakketten gevonden</value></data>
+  <data name="Index_BeFirstRegion" xml:space="preserve"><value>Wees de eerste die een regiopakket uploadt!</value></data>
+  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>Landimplementatieprofielen voor nieuwe installaties.</value></data>
+  <data name="RegionDetail_NotFound" xml:space="preserve"><value>Regiopakket niet gevonden</value></data>
+  <data name="RegionDetail_NotFoundDesc" xml:space="preserve"><value>Het opgevraagde regiopakket bestaat niet of is niet gepubliceerd.</value></data>
+  <data name="RegionDetail_IndustryLabel" xml:space="preserve"><value>Branche</value></data>
+  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>Implementatiedownloads</value></data>
+  <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>Profiel-JSON</value></data>
+  <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>Regioprofiel voor een bestaande Klacks-installatie — koppel het als het regio-instellingenbestand.</value></data>
+  <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>On-premise bundel</value></data>
+  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Volledige installatiebundel met installatiescripts, Docker Compose en het regioprofiel.</value></data>
+  <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Docker Compose-bundel</value></data>
+  <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Minimale Docker Compose-configuratie zonder installatieprogramma's, voor Docker-professionals.</value></data>
+  <data name="Industry_Homecare" xml:space="preserve"><value>Thuiszorg</value></data>
+  <data name="Industry_Healthcare" xml:space="preserve"><value>Gezondheidszorg</value></data>
+  <data name="Industry_Security" xml:space="preserve"><value>Beveiliging</value></data>
+  <data name="Industry_Facility" xml:space="preserve"><value>Facilitaire diensten</value></data>
+  <data name="Industry_Logistics" xml:space="preserve"><value>Logistiek</value></data>
+  <data name="Industry_All" xml:space="preserve"><value>Alle branches</value></data>
+  <data name="UploadRegion_Title" xml:space="preserve"><value>Regiopakket uploaden</value></data>
+  <data name="UploadRegion_Subtitle" xml:space="preserve"><value>Deel een landregio-instellingenprofiel met de community</value></data>
+  <data name="UploadRegion_CountryLabel" xml:space="preserve"><value>Land</value></data>
+  <data name="UploadRegion_SelectCountry" xml:space="preserve"><value>Selecteer een land...</value></data>
+  <data name="UploadRegion_ChangeLog" xml:space="preserve"><value>Wijzigingslogboek</value></data>
+  <data name="UploadRegion_ChangeLogPlaceholder" xml:space="preserve"><value>Wat is er gewijzigd in deze versie?</value></data>
+  <data name="UploadRegion_DescriptionPlaceholder" xml:space="preserve"><value>Beschrijf het regioprofiel...</value></data>
+  <data name="UploadRegion_ProfileRequired" xml:space="preserve"><value>Regioprofiel-JSON (verplicht)</value></data>
+  <data name="UploadRegion_ValidationErrors" xml:space="preserve"><value>Validatiefouten</value></data>
+  <data name="UploadRegion_ValidationWarnings" xml:space="preserve"><value>Validatiewaarschuwingen</value></data>
+  <data name="UploadRegion_Success" xml:space="preserve"><value>Regiopakket ingediend ter beoordeling!</value></data>
+  <data name="UploadRegion_CountryRequired" xml:space="preserve"><value>Selecteer een land</value></data>
+  <data name="MyPackages_NoRegions" xml:space="preserve"><value>Nog geen regiopakketten</value></data>
+  <data name="MyPackages_NoRegionsDesc" xml:space="preserve"><value>U heeft nog geen regiopakketten geüpload.</value></data>
+  <data name="MyPackages_UploadFirstRegion" xml:space="preserve"><value>Upload uw eerste regiopakket</value></data>
+  <data name="Admin_PendingRegions" xml:space="preserve"><value>Regio's in behandeling</value></data>
+  <data name="Admin_PendingRegionPackages" xml:space="preserve"><value>Regiopakketten in behandeling</value></data>
+  <data name="Admin_NoPendingRegions" xml:space="preserve"><value>Geen regiopakketten in behandeling</value></data>
+  <data name="Admin_RegionApproved" xml:space="preserve"><value>Regiopakket goedgekeurd</value></data>
+  <data name="Admin_RegionRejected" xml:space="preserve"><value>Regiopakket afgewezen</value></data>
+  <data name="Admin_RejectRegionTitle" xml:space="preserve"><value>Regiopakket afwijzen</value></data>
+  <data name="Admin_RejectRegionMessage" xml:space="preserve"><value>Weet u zeker dat u dit regiopakket wilt afwijzen?</value></data>
+</root>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msOccurs="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+              <xsd:attribute name="xml:space" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <data name="Common_LanguagePacks" xml:space="preserve"><value>言語パック</value></data>
+  <data name="Common_FeaturePlugins" xml:space="preserve"><value>機能プラグイン</value></data>
+  <data name="Common_Download" xml:space="preserve"><value>ダウンロード</value></data>
+  <data name="Common_Downloads" xml:space="preserve"><value>ダウンロード</value></data>
+  <data name="Common_Version" xml:space="preserve"><value>バージョン</value></data>
+  <data name="Common_Coverage" xml:space="preserve"><value>カバレッジ</value></data>
+  <data name="Common_CoveragePercent" xml:space="preserve"><value>カバレッジ {0}%</value></data>
+  <data name="Common_MinVersion" xml:space="preserve"><value>最小バージョン</value></data>
+  <data name="Common_VersionHistory" xml:space="preserve"><value>バージョン履歴</value></data>
+  <data name="Common_Home" xml:space="preserve"><value>ホーム</value></data>
+  <data name="Common_ResultsCount" xml:space="preserve"><value>{0} 件の結果</value></data>
+  <data name="Common_EmailLabel" xml:space="preserve"><value>メールアドレス</value></data>
+  <data name="Common_EmailPlaceholder" xml:space="preserve"><value>your@email.com</value></data>
+  <data name="Common_PasswordLabel" xml:space="preserve"><value>パスワード</value></data>
+  <data name="Common_DisplayNameLabel" xml:space="preserve"><value>表示名</value></data>
+  <data name="Common_DataSecure" xml:space="preserve"><value>お客様のデータは暗号化されて安全に保護されています</value></data>
+  <data name="Common_PleaseLogin" xml:space="preserve"><value>続行するにはログインしてください。</value></data>
+  <data name="Common_LoginLink" xml:space="preserve"><value>ログイン</value></data>
+  <data name="Common_SubmitForReview" xml:space="preserve"><value>審査に提出</value></data>
+  <data name="Common_SaveAsDraft" xml:space="preserve"><value>下書きとして保存</value></data>
+  <data name="Common_Loaded" xml:space="preserve"><value>読み込み済み</value></data>
+  <data name="Common_Cancel" xml:space="preserve"><value>キャンセル</value></data>
+  <data name="Common_Confirm" xml:space="preserve"><value>確認</value></data>
+  <data name="Common_NotFound" xml:space="preserve"><value>見つかりません</value></data>
+  <data name="Common_NothingHere" xml:space="preserve"><value>申し訳ございません。このアドレスには何もありません。</value></data>
+  <data name="Common_BackToBrowse" xml:space="preserve"><value>一覧に戻る</value></data>
+  <data name="Common_ByAuthor" xml:space="preserve"><value>作成者: {0}</value></data>
+  <data name="Common_SkillsCount" xml:space="preserve"><value>{0} 件のスキル</value></data>
+  <data name="Common_InstallsCount" xml:space="preserve"><value>{0} 件のインストール</value></data>
+  <data name="Common_Package" xml:space="preserve"><value>パッケージ</value></data>
+  <data name="Common_Plugin" xml:space="preserve"><value>プラグイン</value></data>
+  <data name="Common_Category" xml:space="preserve"><value>カテゴリ</value></data>
+  <data name="Common_Status" xml:space="preserve"><value>ステータス</value></data>
+  <data name="Common_Actions" xml:space="preserve"><value>操作</value></data>
+  <data name="Common_Author" xml:space="preserve"><value>作成者</value></data>
+  <data name="Common_Code" xml:space="preserve"><value>コード</value></data>
+  <data name="Common_Submitted" xml:space="preserve"><value>提出日</value></data>
+  <data name="Common_Docs" xml:space="preserve"><value>ドキュメント</value></data>
+  <data name="Common_Translations" xml:space="preserve"><value>翻訳</value></data>
+  <data name="Nav_Browse" xml:space="preserve"><value>参照</value></data>
+  <data name="Nav_UploadPack" xml:space="preserve"><value>パックをアップロード</value></data>
+  <data name="Nav_UploadPlugin" xml:space="preserve"><value>プラグインをアップロード</value></data>
+  <data name="Nav_MyPackages" xml:space="preserve"><value>マイパッケージ</value></data>
+  <data name="Nav_Admin" xml:space="preserve"><value>管理者</value></data>
+  <data name="Nav_SignOut" xml:space="preserve"><value>サインアウト</value></data>
+  <data name="Nav_SignIn" xml:space="preserve"><value>ログイン</value></data>
+  <data name="Nav_Register" xml:space="preserve"><value>登録</value></data>
+  <data name="Index_HeroTitle" xml:space="preserve"><value>Klacks をさらに拡張する</value></data>
+  <data name="Index_HeroSubtitle" xml:space="preserve"><value>プロフェッショナルな勤務管理とエンタープライズ規模の拡張性のために作られた言語パックと機能プラグインをご覧ください。</value></data>
+  <data name="Index_SearchPacks" xml:space="preserve"><value>言語パックを検索...</value></data>
+  <data name="Index_SearchPlugins" xml:space="preserve"><value>機能プラグインを検索...</value></data>
+  <data name="Index_AllCategories" xml:space="preserve"><value>すべてのカテゴリ</value></data>
+  <data name="Index_NoPackagesFound" xml:space="preserve"><value>パッケージが見つかりません</value></data>
+  <data name="Index_BeFirstPack" xml:space="preserve"><value>最初の言語パックをアップロードしましょう!</value></data>
+  <data name="Index_NoPluginsFound" xml:space="preserve"><value>プラグインが見つかりません</value></data>
+  <data name="Index_BeFirstPlugin" xml:space="preserve"><value>最初の機能プラグインをアップロードしましょう!</value></data>
+  <data name="Index_PacksSubtitle" xml:space="preserve"><value>国際的なチームのためのローカライズ素材。</value></data>
+  <data name="Index_FooterDescription" xml:space="preserve"><value>勤務管理機能を拡張するためのプロフェッショナルなエコシステム。</value></data>
+  <data name="Index_FooterRights" xml:space="preserve"><value>© 2026 Klacks Store. 全著作権所有。</value></data>
+  <data name="Index_Resources" xml:space="preserve"><value>リソース</value></data>
+  <data name="Index_Documentation" xml:space="preserve"><value>ドキュメント</value></data>
+  <data name="Index_API" xml:space="preserve"><value>API</value></data>
+  <data name="Index_Legal" xml:space="preserve"><value>法的情報</value></data>
+  <data name="Index_PrivacyPolicy" xml:space="preserve"><value>プライバシーポリシー</value></data>
+  <data name="Index_TermsOfService" xml:space="preserve"><value>利用規約</value></data>
+  <data name="Login_PageTitle" xml:space="preserve"><value>ログイン - Klacks Store</value></data>
+  <data name="Login_WelcomeBack" xml:space="preserve"><value>おかえりなさい</value></data>
+  <data name="Login_Subtitle" xml:space="preserve"><value>ログインしてパッケージとプラグインを管理</value></data>
+  <data name="Login_PasswordPlaceholder" xml:space="preserve"><value>パスワードを入力</value></data>
+  <data name="Login_NoAccount" xml:space="preserve"><value>アカウントをお持ちでない方</value></data>
+  <data name="Login_CreateOne" xml:space="preserve"><value>新規作成</value></data>
+  <data name="Login_InvalidCredentials" xml:space="preserve"><value>メールアドレスまたはパスワードが正しくありません</value></data>
+  <data name="Register_PageTitle" xml:space="preserve"><value>登録 - Klacks Store</value></data>
+  <data name="Register_Title" xml:space="preserve"><value>アカウントを作成</value></data>
+  <data name="Register_Subtitle" xml:space="preserve"><value>Klacks Store コミュニティに参加</value></data>
+  <data name="Register_NamePlaceholder" xml:space="preserve"><value>お名前</value></data>
+  <data name="Register_PasswordLabel" xml:space="preserve"><value>パスワード({0} 文字以上)</value></data>
+  <data name="Register_CreatePassword" xml:space="preserve"><value>パスワードを作成</value></data>
+  <data name="Register_ConfirmPasswordLabel" xml:space="preserve"><value>パスワード(確認)</value></data>
+  <data name="Register_ConfirmPasswordPlaceholder" xml:space="preserve"><value>パスワードを再入力</value></data>
+  <data name="Register_CreateAccount" xml:space="preserve"><value>アカウントを作成</value></data>
+  <data name="Register_HasAccount" xml:space="preserve"><value>すでにアカウントをお持ちですか?</value></data>
+  <data name="Register_NameRequired" xml:space="preserve"><value>表示名は必須です</value></data>
+  <data name="Register_EmailRequired" xml:space="preserve"><value>メールアドレスは必須です</value></data>
+  <data name="Register_PasswordMismatch" xml:space="preserve"><value>パスワードが一致しません</value></data>
+  <data name="Register_Success" xml:space="preserve"><value>登録が完了しました。ログインできます。</value></data>
+  <data name="PackageDetail_NotFound" xml:space="preserve"><value>パッケージが見つかりません</value></data>
+  <data name="PackageDetail_NotFoundDesc" xml:space="preserve"><value>お探しのパッケージは存在しません。</value></data>
+  <data name="PackageDetail_SpeechLocale" xml:space="preserve"><value>音声ロケール</value></data>
+  <data name="PackageDetail_TranslationCoverage" xml:space="preserve"><value>翻訳カバレッジ</value></data>
+  <data name="PackageDetail_TranslationCount" xml:space="preserve"><value>{0} 件の翻訳</value></data>
+  <data name="PackageDetail_Manuals" xml:space="preserve"><value>マニュアル</value></data>
+  <data name="PackageDetail_Countries" xml:space="preserve"><value>対応国</value></data>
+  <data name="PackageDetail_States" xml:space="preserve"><value>州/地域</value></data>
+  <data name="PackageDetail_CalendarRules" xml:space="preserve"><value>カレンダールール</value></data>
+  <data name="PluginDetail_NotFound" xml:space="preserve"><value>プラグインが見つかりません</value></data>
+  <data name="PluginDetail_NotFoundDesc" xml:space="preserve"><value>お探しのプラグインは存在しません。</value></data>
+  <data name="PluginDetail_ProvidedSkills" xml:space="preserve"><value>提供されるスキル</value></data>
+  <data name="PluginDetail_RequiredPermissions" xml:space="preserve"><value>必要な権限</value></data>
+  <data name="PluginDetail_README" xml:space="preserve"><value>README</value></data>
+  <data name="Upload_Title" xml:space="preserve"><value>言語パックをアップロード</value></data>
+  <data name="Upload_Subtitle" xml:space="preserve"><value>言語パックをコミュニティと共有</value></data>
+  <data name="Upload_CodeLabel" xml:space="preserve"><value>コード(例: fr-FR)</value></data>
+  <data name="Upload_CodePlaceholder" xml:space="preserve"><value>xx-XX</value></data>
+  <data name="Upload_DisplayNamePlaceholder" xml:space="preserve"><value>例: フランス語(フランス)</value></data>
+  <data name="Upload_SpeechLocale" xml:space="preserve"><value>音声ロケール</value></data>
+  <data name="Upload_SpeechLocalePlaceholder" xml:space="preserve"><value>例: fr-FR</value></data>
+  <data name="Upload_VersionPlaceholder" xml:space="preserve"><value>1.0.0</value></data>
+  <data name="Upload_Description" xml:space="preserve"><value>説明</value></data>
+  <data name="Upload_DescriptionPlaceholder" xml:space="preserve"><value>言語パックの説明を入力...</value></data>
+  <data name="Upload_CoverageLabel" xml:space="preserve"><value>カバレッジ(%)</value></data>
+  <data name="Upload_MinKlacksVersion" xml:space="preserve"><value>必要な Klacks 最小バージョン</value></data>
+  <data name="Upload_ManifestRequired" xml:space="preserve"><value>manifest.json</value></data>
+  <data name="Upload_TranslationsRequired" xml:space="preserve"><value>translations.json</value></data>
+  <data name="Upload_DocsOptional" xml:space="preserve"><value>docs.json(任意)</value></data>
+  <data name="Upload_CountriesOptional" xml:space="preserve"><value>countries.json(任意)</value></data>
+  <data name="Upload_StatesOptional" xml:space="preserve"><value>states.json(任意)</value></data>
+  <data name="Upload_CalendarOptional" xml:space="preserve"><value>calendar-rules.json(任意)</value></data>
+  <data name="Upload_CodeRequired" xml:space="preserve"><value>コードと表示名は必須です</value></data>
+  <data name="Upload_Success" xml:space="preserve"><value>パッケージを審査に提出しました。</value></data>
+  <data name="UploadPlugin_Title" xml:space="preserve"><value>機能プラグインをアップロード</value></data>
+  <data name="UploadPlugin_Subtitle" xml:space="preserve"><value>機能プラグインをコミュニティと共有</value></data>
+  <data name="UploadPlugin_NameLabel" xml:space="preserve"><value>プラグイン名(一意の識別子)</value></data>
+  <data name="UploadPlugin_NamePlaceholder" xml:space="preserve"><value>例: messaging</value></data>
+  <data name="UploadPlugin_DisplayNamePlaceholder" xml:space="preserve"><value>例: Messaging</value></data>
+  <data name="UploadPlugin_SelectCategory" xml:space="preserve"><value>カテゴリを選択...</value></data>
+  <data name="UploadPlugin_DescriptionPlaceholder" xml:space="preserve"><value>機能プラグインの説明を入力...</value></data>
+  <data name="UploadPlugin_ChangelogLabel" xml:space="preserve"><value>変更履歴</value></data>
+  <data name="UploadPlugin_ChangelogPlaceholder" xml:space="preserve"><value>このバージョンでの変更内容</value></data>
+  <data name="UploadPlugin_ManifestRequired" xml:space="preserve"><value>manifest.json(必須)</value></data>
+  <data name="UploadPlugin_EnRequired" xml:space="preserve"><value>en.json(必須 i18n)</value></data>
+  <data name="UploadPlugin_DeOptional" xml:space="preserve"><value>de.json(任意 i18n)</value></data>
+  <data name="UploadPlugin_FrOptional" xml:space="preserve"><value>fr.json(任意 i18n)</value></data>
+  <data name="UploadPlugin_ReadmeOptional" xml:space="preserve"><value>README.md(任意)</value></data>
+  <data name="UploadPlugin_NameRequired" xml:space="preserve"><value>名前と表示名は必須です</value></data>
+  <data name="UploadPlugin_CategoryRequired" xml:space="preserve"><value>カテゴリは必須です</value></data>
+  <data name="UploadPlugin_Success" xml:space="preserve"><value>プラグインを審査に提出しました。</value></data>
+  <data name="MyPackages_Title" xml:space="preserve"><value>マイパッケージ</value></data>
+  <data name="MyPackages_LoginRequired" xml:space="preserve"><value>パッケージを表示するにはログインしてください。</value></data>
+  <data name="MyPackages_NoPacks" xml:space="preserve"><value>言語パックはまだありません</value></data>
+  <data name="MyPackages_NoPacksDesc" xml:space="preserve"><value>まだ言語パックをアップロードしていません。</value></data>
+  <data name="MyPackages_UploadFirst" xml:space="preserve"><value>最初のパッケージをアップロード</value></data>
+  <data name="MyPackages_NoPlugins" xml:space="preserve"><value>機能プラグインはまだありません</value></data>
+  <data name="MyPackages_NoPluginsDesc" xml:space="preserve"><value>まだ機能プラグインをアップロードしていません。</value></data>
+  <data name="MyPackages_UploadFirstPlugin" xml:space="preserve"><value>最初のプラグインをアップロード</value></data>
+  <data name="Admin_Title" xml:space="preserve"><value>管理者ダッシュボード</value></data>
+  <data name="Admin_AccessDenied" xml:space="preserve"><value>アクセスが拒否されました。管理者権限が必要です。</value></data>
+  <data name="Admin_PendingPackages" xml:space="preserve"><value>審査待ちパッケージ</value></data>
+  <data name="Admin_PendingPlugins" xml:space="preserve"><value>審査待ちプラグイン</value></data>
+  <data name="Admin_Users" xml:space="preserve"><value>ユーザー</value></data>
+  <data name="Admin_PendingLanguagePackages" xml:space="preserve"><value>審査待ち言語パッケージ</value></data>
+  <data name="Admin_NoPendingPackages" xml:space="preserve"><value>審査待ちのパッケージはありません。</value></data>
+  <data name="Admin_PendingFeaturePlugins" xml:space="preserve"><value>審査待ち機能プラグイン</value></data>
+  <data name="Admin_NoPendingPlugins" xml:space="preserve"><value>審査待ちのプラグインはありません。</value></data>
+  <data name="Admin_Name" xml:space="preserve"><value>名前</value></data>
+  <data name="Admin_Email" xml:space="preserve"><value>メールアドレス</value></data>
+  <data name="Admin_Joined" xml:space="preserve"><value>登録日</value></data>
+  <data name="Admin_MakeAdmin" xml:space="preserve"><value>管理者にする</value></data>
+  <data name="Admin_RemoveAdmin" xml:space="preserve"><value>管理者権限を削除</value></data>
+  <data name="Admin_PackageApproved" xml:space="preserve"><value>パッケージを承認しました</value></data>
+  <data name="Admin_PackageRejected" xml:space="preserve"><value>パッケージを却下しました</value></data>
+  <data name="Admin_PluginApproved" xml:space="preserve"><value>プラグインを承認しました</value></data>
+  <data name="Admin_PluginRejected" xml:space="preserve"><value>プラグインを却下しました</value></data>
+  <data name="Admin_RejectPackageTitle" xml:space="preserve"><value>パッケージを却下</value></data>
+  <data name="Admin_RejectPackageMessage" xml:space="preserve"><value>このパッケージを却下してもよろしいですか?</value></data>
+  <data name="Admin_RejectPluginTitle" xml:space="preserve"><value>プラグインを却下</value></data>
+  <data name="Admin_RejectPluginMessage" xml:space="preserve"><value>このプラグインを却下してもよろしいですか?</value></data>
+  <data name="Admin_RejectedByAdmin" xml:space="preserve"><value>管理者により却下されました</value></data>
+  <data name="Status_Published" xml:space="preserve"><value>公開済み</value></data>
+  <data name="Status_Pending" xml:space="preserve"><value>審査待ち</value></data>
+  <data name="Status_Rejected" xml:space="preserve"><value>却下</value></data>
+  <data name="Status_Draft" xml:space="preserve"><value>下書き</value></data>
+  <data name="Status_Unknown" xml:space="preserve"><value>不明</value></data>
+  <data name="Common_Deployment" xml:space="preserve"><value>デプロイ</value></data>
+  <data name="Common_RegionPackage" xml:space="preserve"><value>リージョンパッケージ</value></data>
+  <data name="Common_Country" xml:space="preserve"><value>国</value></data>
+  <data name="Nav_UploadRegion" xml:space="preserve"><value>リージョンをアップロード</value></data>
+  <data name="Index_SearchRegions" xml:space="preserve"><value>リージョンパッケージを検索...</value></data>
+  <data name="Index_NoRegionsFound" xml:space="preserve"><value>リージョンパッケージが見つかりません</value></data>
+  <data name="Index_BeFirstRegion" xml:space="preserve"><value>最初のリージョンパッケージをアップロードしましょう!</value></data>
+  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>新規インストール向けの国別デプロイプロファイル。</value></data>
+  <data name="RegionDetail_NotFound" xml:space="preserve"><value>リージョンパッケージが見つかりません</value></data>
+  <data name="RegionDetail_NotFoundDesc" xml:space="preserve"><value>要求されたリージョンパッケージは存在しないか、公開されていません。</value></data>
+  <data name="RegionDetail_IndustryLabel" xml:space="preserve"><value>業種</value></data>
+  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>デプロイ用ダウンロード</value></data>
+  <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>プロファイル JSON</value></data>
+  <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>既存の Klacks インストール用のリージョンプロファイルです。リージョンセットアップファイルとしてマウントしてください。</value></data>
+  <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>オンプレミスバンドル</value></data>
+  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>インストーラースクリプト、Docker Compose、リージョンプロファイルを含む完全なインストールバンドルです。</value></data>
+  <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Docker Compose バンドル</value></data>
+  <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>インストーラーを含まない、Docker 専門家向けの最小構成の Docker Compose セットアップです。</value></data>
+  <data name="Industry_Homecare" xml:space="preserve"><value>訪問介護</value></data>
+  <data name="Industry_Healthcare" xml:space="preserve"><value>医療</value></data>
+  <data name="Industry_Security" xml:space="preserve"><value>警備</value></data>
+  <data name="Industry_Facility" xml:space="preserve"><value>施設管理サービス</value></data>
+  <data name="Industry_Logistics" xml:space="preserve"><value>物流</value></data>
+  <data name="Industry_All" xml:space="preserve"><value>すべての業種</value></data>
+  <data name="UploadRegion_Title" xml:space="preserve"><value>リージョンパッケージをアップロード</value></data>
+  <data name="UploadRegion_Subtitle" xml:space="preserve"><value>国別リージョンセットアッププロファイルをコミュニティと共有</value></data>
+  <data name="UploadRegion_CountryLabel" xml:space="preserve"><value>国</value></data>
+  <data name="UploadRegion_SelectCountry" xml:space="preserve"><value>国を選択...</value></data>
+  <data name="UploadRegion_ChangeLog" xml:space="preserve"><value>変更履歴</value></data>
+  <data name="UploadRegion_ChangeLogPlaceholder" xml:space="preserve"><value>このバージョンでの変更内容</value></data>
+  <data name="UploadRegion_DescriptionPlaceholder" xml:space="preserve"><value>リージョンプロファイルの説明を入力...</value></data>
+  <data name="UploadRegion_ProfileRequired" xml:space="preserve"><value>リージョンプロファイル JSON(必須)</value></data>
+  <data name="UploadRegion_ValidationErrors" xml:space="preserve"><value>検証エラー</value></data>
+  <data name="UploadRegion_ValidationWarnings" xml:space="preserve"><value>検証警告</value></data>
+  <data name="UploadRegion_Success" xml:space="preserve"><value>リージョンパッケージを審査に提出しました。</value></data>
+  <data name="UploadRegion_CountryRequired" xml:space="preserve"><value>国を選択してください</value></data>
+  <data name="MyPackages_NoRegions" xml:space="preserve"><value>リージョンパッケージはまだありません</value></data>
+  <data name="MyPackages_NoRegionsDesc" xml:space="preserve"><value>まだリージョンパッケージをアップロードしていません。</value></data>
+  <data name="MyPackages_UploadFirstRegion" xml:space="preserve"><value>最初のリージョンパッケージをアップロード</value></data>
+  <data name="Admin_PendingRegions" xml:space="preserve"><value>審査待ちリージョン</value></data>
+  <data name="Admin_PendingRegionPackages" xml:space="preserve"><value>審査待ちリージョンパッケージ</value></data>
+  <data name="Admin_NoPendingRegions" xml:space="preserve"><value>審査待ちのリージョンパッケージはありません</value></data>
+  <data name="Admin_RegionApproved" xml:space="preserve"><value>リージョンパッケージを承認しました</value></data>
+  <data name="Admin_RegionRejected" xml:space="preserve"><value>リージョンパッケージを却下しました</value></data>
+  <data name="Admin_RejectRegionTitle" xml:space="preserve"><value>リージョンパッケージを却下</value></data>
+  <data name="Admin_RejectRegionMessage" xml:space="preserve"><value>このリージョンパッケージを却下してもよろしいですか?</value></data>
+</root>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msOccurs="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+              <xsd:attribute name="xml:space" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <data name="Common_LanguagePacks" xml:space="preserve"><value>แพ็กเกจภาษา</value></data>
+  <data name="Common_FeaturePlugins" xml:space="preserve"><value>ปลั๊กอินฟีเจอร์</value></data>
+  <data name="Common_Download" xml:space="preserve"><value>ดาวน์โหลด</value></data>
+  <data name="Common_Downloads" xml:space="preserve"><value>ดาวน์โหลด</value></data>
+  <data name="Common_Version" xml:space="preserve"><value>เวอร์ชัน</value></data>
+  <data name="Common_Coverage" xml:space="preserve"><value>ความครอบคลุม</value></data>
+  <data name="Common_CoveragePercent" xml:space="preserve"><value>ครอบคลุม {0}%</value></data>
+  <data name="Common_MinVersion" xml:space="preserve"><value>เวอร์ชันขั้นต่ำ</value></data>
+  <data name="Common_VersionHistory" xml:space="preserve"><value>ประวัติเวอร์ชัน</value></data>
+  <data name="Common_Home" xml:space="preserve"><value>หน้าแรก</value></data>
+  <data name="Common_ResultsCount" xml:space="preserve"><value>{0} ผลลัพธ์</value></data>
+  <data name="Common_EmailLabel" xml:space="preserve"><value>ที่อยู่อีเมล</value></data>
+  <data name="Common_EmailPlaceholder" xml:space="preserve"><value>your@email.com</value></data>
+  <data name="Common_PasswordLabel" xml:space="preserve"><value>รหัสผ่าน</value></data>
+  <data name="Common_DisplayNameLabel" xml:space="preserve"><value>ชื่อที่แสดง</value></data>
+  <data name="Common_DataSecure" xml:space="preserve"><value>ข้อมูลของคุณได้รับการเข้ารหัสและปลอดภัย</value></data>
+  <data name="Common_PleaseLogin" xml:space="preserve"><value>กรุณาเข้าสู่ระบบเพื่อดำเนินการต่อ</value></data>
+  <data name="Common_LoginLink" xml:space="preserve"><value>เข้าสู่ระบบ</value></data>
+  <data name="Common_SubmitForReview" xml:space="preserve"><value>ส่งเพื่อตรวจสอบ</value></data>
+  <data name="Common_SaveAsDraft" xml:space="preserve"><value>บันทึกเป็นฉบับร่าง</value></data>
+  <data name="Common_Loaded" xml:space="preserve"><value>โหลดแล้ว</value></data>
+  <data name="Common_Cancel" xml:space="preserve"><value>ยกเลิก</value></data>
+  <data name="Common_Confirm" xml:space="preserve"><value>ยืนยัน</value></data>
+  <data name="Common_NotFound" xml:space="preserve"><value>ไม่พบ</value></data>
+  <data name="Common_NothingHere" xml:space="preserve"><value>ขออภัย ไม่มีข้อมูลที่ที่อยู่นี้</value></data>
+  <data name="Common_BackToBrowse" xml:space="preserve"><value>กลับไปที่หน้าเรียกดู</value></data>
+  <data name="Common_ByAuthor" xml:space="preserve"><value>โดย {0}</value></data>
+  <data name="Common_SkillsCount" xml:space="preserve"><value>{0} ทักษะ</value></data>
+  <data name="Common_InstallsCount" xml:space="preserve"><value>{0} การติดตั้ง</value></data>
+  <data name="Common_Package" xml:space="preserve"><value>แพ็กเกจ</value></data>
+  <data name="Common_Plugin" xml:space="preserve"><value>ปลั๊กอิน</value></data>
+  <data name="Common_Category" xml:space="preserve"><value>หมวดหมู่</value></data>
+  <data name="Common_Status" xml:space="preserve"><value>สถานะ</value></data>
+  <data name="Common_Actions" xml:space="preserve"><value>การดำเนินการ</value></data>
+  <data name="Common_Author" xml:space="preserve"><value>ผู้เขียน</value></data>
+  <data name="Common_Code" xml:space="preserve"><value>โค้ด</value></data>
+  <data name="Common_Submitted" xml:space="preserve"><value>ส่งแล้ว</value></data>
+  <data name="Common_Docs" xml:space="preserve"><value>เอกสาร</value></data>
+  <data name="Common_Translations" xml:space="preserve"><value>การแปล</value></data>
+  <data name="Nav_Browse" xml:space="preserve"><value>เรียกดู</value></data>
+  <data name="Nav_UploadPack" xml:space="preserve"><value>อัปโหลดแพ็กเกจ</value></data>
+  <data name="Nav_UploadPlugin" xml:space="preserve"><value>อัปโหลดปลั๊กอิน</value></data>
+  <data name="Nav_MyPackages" xml:space="preserve"><value>แพ็กเกจของฉัน</value></data>
+  <data name="Nav_Admin" xml:space="preserve"><value>ผู้ดูแลระบบ</value></data>
+  <data name="Nav_SignOut" xml:space="preserve"><value>ออกจากระบบ</value></data>
+  <data name="Nav_SignIn" xml:space="preserve"><value>เข้าสู่ระบบ</value></data>
+  <data name="Nav_Register" xml:space="preserve"><value>ลงทะเบียน</value></data>
+  <data name="Index_HeroTitle" xml:space="preserve"><value>ขยายประสบการณ์ Klacks ของคุณ</value></data>
+  <data name="Index_HeroSubtitle" xml:space="preserve"><value>ค้นพบแพ็กเกจภาษาและปลั๊กอินฟีเจอร์ที่ออกแบบมาเพื่อการบริหารจัดการกำลังคนระดับมืออาชีพและความสามารถในการขยายตัวขององค์กร</value></data>
+  <data name="Index_SearchPacks" xml:space="preserve"><value>ค้นหาแพ็กเกจภาษา...</value></data>
+  <data name="Index_SearchPlugins" xml:space="preserve"><value>ค้นหาปลั๊กอินฟีเจอร์...</value></data>
+  <data name="Index_AllCategories" xml:space="preserve"><value>ทุกหมวดหมู่</value></data>
+  <data name="Index_NoPackagesFound" xml:space="preserve"><value>ไม่พบแพ็กเกจ</value></data>
+  <data name="Index_BeFirstPack" xml:space="preserve"><value>เป็นคนแรกที่อัปโหลดแพ็กเกจภาษา!</value></data>
+  <data name="Index_NoPluginsFound" xml:space="preserve"><value>ไม่พบปลั๊กอิน</value></data>
+  <data name="Index_BeFirstPlugin" xml:space="preserve"><value>เป็นคนแรกที่อัปโหลดปลั๊กอินฟีเจอร์!</value></data>
+  <data name="Index_PacksSubtitle" xml:space="preserve"><value>ทรัพยากรการแปลสำหรับทีมงานนานาชาติ</value></data>
+  <data name="Index_FooterDescription" xml:space="preserve"><value>ระบบนิเวศระดับมืออาชีพสำหรับขยายขีดความสามารถด้านการบริหารจัดการกำลังคน</value></data>
+  <data name="Index_FooterRights" xml:space="preserve"><value>© 2026 Klacks Store สงวนลิขสิทธิ์</value></data>
+  <data name="Index_Resources" xml:space="preserve"><value>แหล่งข้อมูล</value></data>
+  <data name="Index_Documentation" xml:space="preserve"><value>เอกสารประกอบ</value></data>
+  <data name="Index_API" xml:space="preserve"><value>API</value></data>
+  <data name="Index_Legal" xml:space="preserve"><value>กฎหมาย</value></data>
+  <data name="Index_PrivacyPolicy" xml:space="preserve"><value>นโยบายความเป็นส่วนตัว</value></data>
+  <data name="Index_TermsOfService" xml:space="preserve"><value>ข้อกำหนดในการให้บริการ</value></data>
+  <data name="Login_PageTitle" xml:space="preserve"><value>เข้าสู่ระบบ - Klacks Store</value></data>
+  <data name="Login_WelcomeBack" xml:space="preserve"><value>ยินดีต้อนรับกลับ</value></data>
+  <data name="Login_Subtitle" xml:space="preserve"><value>เข้าสู่ระบบเพื่อจัดการแพ็กเกจและปลั๊กอินของคุณ</value></data>
+  <data name="Login_PasswordPlaceholder" xml:space="preserve"><value>กรอกรหัสผ่านของคุณ</value></data>
+  <data name="Login_NoAccount" xml:space="preserve"><value>ยังไม่มีบัญชี?</value></data>
+  <data name="Login_CreateOne" xml:space="preserve"><value>สร้างบัญชี</value></data>
+  <data name="Login_InvalidCredentials" xml:space="preserve"><value>อีเมลหรือรหัสผ่านไม่ถูกต้อง</value></data>
+  <data name="Register_PageTitle" xml:space="preserve"><value>ลงทะเบียน - Klacks Store</value></data>
+  <data name="Register_Title" xml:space="preserve"><value>สร้างบัญชี</value></data>
+  <data name="Register_Subtitle" xml:space="preserve"><value>เข้าร่วมชุมชน Klacks Store</value></data>
+  <data name="Register_NamePlaceholder" xml:space="preserve"><value>ชื่อของคุณ</value></data>
+  <data name="Register_PasswordLabel" xml:space="preserve"><value>รหัสผ่าน (อย่างน้อย {0} ตัวอักษร)</value></data>
+  <data name="Register_CreatePassword" xml:space="preserve"><value>สร้างรหัสผ่าน</value></data>
+  <data name="Register_ConfirmPasswordLabel" xml:space="preserve"><value>ยืนยันรหัสผ่าน</value></data>
+  <data name="Register_ConfirmPasswordPlaceholder" xml:space="preserve"><value>ยืนยันรหัสผ่านของคุณ</value></data>
+  <data name="Register_CreateAccount" xml:space="preserve"><value>สร้างบัญชี</value></data>
+  <data name="Register_HasAccount" xml:space="preserve"><value>มีบัญชีอยู่แล้ว?</value></data>
+  <data name="Register_NameRequired" xml:space="preserve"><value>ต้องระบุชื่อที่แสดง</value></data>
+  <data name="Register_EmailRequired" xml:space="preserve"><value>ต้องระบุอีเมล</value></data>
+  <data name="Register_PasswordMismatch" xml:space="preserve"><value>รหัสผ่านไม่ตรงกัน</value></data>
+  <data name="Register_Success" xml:space="preserve"><value>ลงทะเบียนสำเร็จ! ตอนนี้คุณสามารถเข้าสู่ระบบได้แล้ว</value></data>
+  <data name="PackageDetail_NotFound" xml:space="preserve"><value>ไม่พบแพ็กเกจ</value></data>
+  <data name="PackageDetail_NotFoundDesc" xml:space="preserve"><value>แพ็กเกจที่คุณกำลังค้นหาไม่มีอยู่</value></data>
+  <data name="PackageDetail_SpeechLocale" xml:space="preserve"><value>โลแคลเสียง</value></data>
+  <data name="PackageDetail_TranslationCoverage" xml:space="preserve"><value>ความครอบคลุมของการแปล</value></data>
+  <data name="PackageDetail_TranslationCount" xml:space="preserve"><value>{0} การแปล</value></data>
+  <data name="PackageDetail_Manuals" xml:space="preserve"><value>คู่มือ</value></data>
+  <data name="PackageDetail_Countries" xml:space="preserve"><value>ประเทศ</value></data>
+  <data name="PackageDetail_States" xml:space="preserve"><value>รัฐ</value></data>
+  <data name="PackageDetail_CalendarRules" xml:space="preserve"><value>กฎปฏิทิน</value></data>
+  <data name="PluginDetail_NotFound" xml:space="preserve"><value>ไม่พบปลั๊กอิน</value></data>
+  <data name="PluginDetail_NotFoundDesc" xml:space="preserve"><value>ปลั๊กอินที่คุณกำลังค้นหาไม่มีอยู่</value></data>
+  <data name="PluginDetail_ProvidedSkills" xml:space="preserve"><value>ทักษะที่มีให้</value></data>
+  <data name="PluginDetail_RequiredPermissions" xml:space="preserve"><value>สิทธิ์ที่จำเป็น</value></data>
+  <data name="PluginDetail_README" xml:space="preserve"><value>README</value></data>
+  <data name="Upload_Title" xml:space="preserve"><value>อัปโหลดแพ็กเกจภาษา</value></data>
+  <data name="Upload_Subtitle" xml:space="preserve"><value>แบ่งปันแพ็กเกจภาษาของคุณกับชุมชน</value></data>
+  <data name="Upload_CodeLabel" xml:space="preserve"><value>โค้ด (เช่น fr-FR)</value></data>
+  <data name="Upload_CodePlaceholder" xml:space="preserve"><value>xx-XX</value></data>
+  <data name="Upload_DisplayNamePlaceholder" xml:space="preserve"><value>เช่น ฝรั่งเศส (ประเทศฝรั่งเศส)</value></data>
+  <data name="Upload_SpeechLocale" xml:space="preserve"><value>โลแคลเสียง</value></data>
+  <data name="Upload_SpeechLocalePlaceholder" xml:space="preserve"><value>เช่น fr-FR</value></data>
+  <data name="Upload_VersionPlaceholder" xml:space="preserve"><value>1.0.0</value></data>
+  <data name="Upload_Description" xml:space="preserve"><value>คำอธิบาย</value></data>
+  <data name="Upload_DescriptionPlaceholder" xml:space="preserve"><value>อธิบายแพ็กเกจภาษาของคุณ...</value></data>
+  <data name="Upload_CoverageLabel" xml:space="preserve"><value>ความครอบคลุม (%)</value></data>
+  <data name="Upload_MinKlacksVersion" xml:space="preserve"><value>เวอร์ชัน Klacks ขั้นต่ำ</value></data>
+  <data name="Upload_ManifestRequired" xml:space="preserve"><value>manifest.json</value></data>
+  <data name="Upload_TranslationsRequired" xml:space="preserve"><value>translations.json</value></data>
+  <data name="Upload_DocsOptional" xml:space="preserve"><value>docs.json (ไม่บังคับ)</value></data>
+  <data name="Upload_CountriesOptional" xml:space="preserve"><value>countries.json (ไม่บังคับ)</value></data>
+  <data name="Upload_StatesOptional" xml:space="preserve"><value>states.json (ไม่บังคับ)</value></data>
+  <data name="Upload_CalendarOptional" xml:space="preserve"><value>calendar-rules.json (ไม่บังคับ)</value></data>
+  <data name="Upload_CodeRequired" xml:space="preserve"><value>ต้องระบุโค้ดและชื่อที่แสดง</value></data>
+  <data name="Upload_Success" xml:space="preserve"><value>ส่งแพ็กเกจเพื่อตรวจสอบแล้ว!</value></data>
+  <data name="UploadPlugin_Title" xml:space="preserve"><value>อัปโหลดปลั๊กอินฟีเจอร์</value></data>
+  <data name="UploadPlugin_Subtitle" xml:space="preserve"><value>แบ่งปันปลั๊กอินฟีเจอร์ของคุณกับชุมชน</value></data>
+  <data name="UploadPlugin_NameLabel" xml:space="preserve"><value>ชื่อปลั๊กอิน (ตัวระบุที่ไม่ซ้ำกัน)</value></data>
+  <data name="UploadPlugin_NamePlaceholder" xml:space="preserve"><value>เช่น messaging</value></data>
+  <data name="UploadPlugin_DisplayNamePlaceholder" xml:space="preserve"><value>เช่น Messaging</value></data>
+  <data name="UploadPlugin_SelectCategory" xml:space="preserve"><value>เลือกหมวดหมู่...</value></data>
+  <data name="UploadPlugin_DescriptionPlaceholder" xml:space="preserve"><value>อธิบายปลั๊กอินฟีเจอร์ของคุณ...</value></data>
+  <data name="UploadPlugin_ChangelogLabel" xml:space="preserve"><value>บันทึกการเปลี่ยนแปลง</value></data>
+  <data name="UploadPlugin_ChangelogPlaceholder" xml:space="preserve"><value>มีการเปลี่ยนแปลงอะไรในเวอร์ชันนี้?</value></data>
+  <data name="UploadPlugin_ManifestRequired" xml:space="preserve"><value>manifest.json (จำเป็น)</value></data>
+  <data name="UploadPlugin_EnRequired" xml:space="preserve"><value>en.json (i18n ที่จำเป็น)</value></data>
+  <data name="UploadPlugin_DeOptional" xml:space="preserve"><value>de.json (i18n ไม่บังคับ)</value></data>
+  <data name="UploadPlugin_FrOptional" xml:space="preserve"><value>fr.json (i18n ไม่บังคับ)</value></data>
+  <data name="UploadPlugin_ReadmeOptional" xml:space="preserve"><value>README.md (ไม่บังคับ)</value></data>
+  <data name="UploadPlugin_NameRequired" xml:space="preserve"><value>ต้องระบุชื่อและชื่อที่แสดง</value></data>
+  <data name="UploadPlugin_CategoryRequired" xml:space="preserve"><value>ต้องระบุหมวดหมู่</value></data>
+  <data name="UploadPlugin_Success" xml:space="preserve"><value>ส่งปลั๊กอินเพื่อตรวจสอบแล้ว!</value></data>
+  <data name="MyPackages_Title" xml:space="preserve"><value>แพ็กเกจของฉัน</value></data>
+  <data name="MyPackages_LoginRequired" xml:space="preserve"><value>กรุณาเข้าสู่ระบบเพื่อดูแพ็กเกจของคุณ</value></data>
+  <data name="MyPackages_NoPacks" xml:space="preserve"><value>ยังไม่มีแพ็กเกจภาษา</value></data>
+  <data name="MyPackages_NoPacksDesc" xml:space="preserve"><value>คุณยังไม่ได้อัปโหลดแพ็กเกจภาษาใด ๆ</value></data>
+  <data name="MyPackages_UploadFirst" xml:space="preserve"><value>อัปโหลดแพ็กเกจแรกของคุณ</value></data>
+  <data name="MyPackages_NoPlugins" xml:space="preserve"><value>ยังไม่มีปลั๊กอินฟีเจอร์</value></data>
+  <data name="MyPackages_NoPluginsDesc" xml:space="preserve"><value>คุณยังไม่ได้อัปโหลดปลั๊กอินฟีเจอร์ใด ๆ</value></data>
+  <data name="MyPackages_UploadFirstPlugin" xml:space="preserve"><value>อัปโหลดปลั๊กอินแรกของคุณ</value></data>
+  <data name="Admin_Title" xml:space="preserve"><value>แดชบอร์ดผู้ดูแลระบบ</value></data>
+  <data name="Admin_AccessDenied" xml:space="preserve"><value>ปฏิเสธการเข้าถึง ต้องมีสิทธิ์ผู้ดูแลระบบ</value></data>
+  <data name="Admin_PendingPackages" xml:space="preserve"><value>แพ็กเกจที่รอดำเนินการ</value></data>
+  <data name="Admin_PendingPlugins" xml:space="preserve"><value>ปลั๊กอินที่รอดำเนินการ</value></data>
+  <data name="Admin_Users" xml:space="preserve"><value>ผู้ใช้</value></data>
+  <data name="Admin_PendingLanguagePackages" xml:space="preserve"><value>แพ็กเกจภาษาที่รอดำเนินการ</value></data>
+  <data name="Admin_NoPendingPackages" xml:space="preserve"><value>ไม่มีแพ็กเกจที่รอการตรวจสอบ</value></data>
+  <data name="Admin_PendingFeaturePlugins" xml:space="preserve"><value>ปลั๊กอินฟีเจอร์ที่รอดำเนินการ</value></data>
+  <data name="Admin_NoPendingPlugins" xml:space="preserve"><value>ไม่มีปลั๊กอินที่รอการตรวจสอบ</value></data>
+  <data name="Admin_Name" xml:space="preserve"><value>ชื่อ</value></data>
+  <data name="Admin_Email" xml:space="preserve"><value>อีเมล</value></data>
+  <data name="Admin_Joined" xml:space="preserve"><value>เข้าร่วมเมื่อ</value></data>
+  <data name="Admin_MakeAdmin" xml:space="preserve"><value>ตั้งเป็นผู้ดูแลระบบ</value></data>
+  <data name="Admin_RemoveAdmin" xml:space="preserve"><value>ถอดสิทธิ์ผู้ดูแลระบบ</value></data>
+  <data name="Admin_PackageApproved" xml:space="preserve"><value>อนุมัติแพ็กเกจสำเร็จ</value></data>
+  <data name="Admin_PackageRejected" xml:space="preserve"><value>ปฏิเสธแพ็กเกจแล้ว</value></data>
+  <data name="Admin_PluginApproved" xml:space="preserve"><value>อนุมัติปลั๊กอินสำเร็จ</value></data>
+  <data name="Admin_PluginRejected" xml:space="preserve"><value>ปฏิเสธปลั๊กอินแล้ว</value></data>
+  <data name="Admin_RejectPackageTitle" xml:space="preserve"><value>ปฏิเสธแพ็กเกจ</value></data>
+  <data name="Admin_RejectPackageMessage" xml:space="preserve"><value>คุณแน่ใจหรือไม่ว่าต้องการปฏิเสธแพ็กเกจนี้?</value></data>
+  <data name="Admin_RejectPluginTitle" xml:space="preserve"><value>ปฏิเสธปลั๊กอิน</value></data>
+  <data name="Admin_RejectPluginMessage" xml:space="preserve"><value>คุณแน่ใจหรือไม่ว่าต้องการปฏิเสธปลั๊กอินนี้?</value></data>
+  <data name="Admin_RejectedByAdmin" xml:space="preserve"><value>ถูกปฏิเสธโดยผู้ดูแลระบบ</value></data>
+  <data name="Status_Published" xml:space="preserve"><value>เผยแพร่แล้ว</value></data>
+  <data name="Status_Pending" xml:space="preserve"><value>รอดำเนินการ</value></data>
+  <data name="Status_Rejected" xml:space="preserve"><value>ถูกปฏิเสธ</value></data>
+  <data name="Status_Draft" xml:space="preserve"><value>ฉบับร่าง</value></data>
+  <data name="Status_Unknown" xml:space="preserve"><value>ไม่ทราบ</value></data>
+  <data name="Common_Deployment" xml:space="preserve"><value>การปรับใช้</value></data>
+  <data name="Common_RegionPackage" xml:space="preserve"><value>แพ็กเกจภูมิภาค</value></data>
+  <data name="Common_Country" xml:space="preserve"><value>ประเทศ</value></data>
+  <data name="Nav_UploadRegion" xml:space="preserve"><value>อัปโหลดภูมิภาค</value></data>
+  <data name="Index_SearchRegions" xml:space="preserve"><value>ค้นหาแพ็กเกจภูมิภาค...</value></data>
+  <data name="Index_NoRegionsFound" xml:space="preserve"><value>ไม่พบแพ็กเกจภูมิภาค</value></data>
+  <data name="Index_BeFirstRegion" xml:space="preserve"><value>เป็นคนแรกที่อัปโหลดแพ็กเกจภูมิภาค!</value></data>
+  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>โปรไฟล์การปรับใช้ตามประเทศสำหรับการติดตั้งใหม่</value></data>
+  <data name="RegionDetail_NotFound" xml:space="preserve"><value>ไม่พบแพ็กเกจภูมิภาค</value></data>
+  <data name="RegionDetail_NotFoundDesc" xml:space="preserve"><value>แพ็กเกจภูมิภาคที่ร้องขอไม่มีอยู่หรือยังไม่ได้เผยแพร่</value></data>
+  <data name="RegionDetail_IndustryLabel" xml:space="preserve"><value>อุตสาหกรรม</value></data>
+  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>ไฟล์ดาวน์โหลดสำหรับการปรับใช้</value></data>
+  <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>โปรไฟล์ JSON</value></data>
+  <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>โปรไฟล์ภูมิภาคสำหรับการติดตั้ง Klacks ที่มีอยู่แล้ว — เมาท์เป็นไฟล์ตั้งค่าภูมิภาค</value></data>
+  <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>ชุดติดตั้งแบบ On-Prem</value></data>
+  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>ชุดติดตั้งที่สมบูรณ์พร้อมสคริปต์ตัวติดตั้ง Docker Compose และโปรไฟล์ภูมิภาค</value></data>
+  <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>ชุดติดตั้ง Docker Compose</value></data>
+  <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>การตั้งค่า Docker Compose แบบขั้นต่ำโดยไม่มีตัวติดตั้ง สำหรับผู้เชี่ยวชาญ Docker</value></data>
+  <data name="Industry_Homecare" xml:space="preserve"><value>การดูแลที่บ้าน</value></data>
+  <data name="Industry_Healthcare" xml:space="preserve"><value>การดูแลสุขภาพ</value></data>
+  <data name="Industry_Security" xml:space="preserve"><value>การรักษาความปลอดภัย</value></data>
+  <data name="Industry_Facility" xml:space="preserve"><value>บริการอาคารสถานที่</value></data>
+  <data name="Industry_Logistics" xml:space="preserve"><value>โลจิสติกส์</value></data>
+  <data name="Industry_All" xml:space="preserve"><value>ทุกอุตสาหกรรม</value></data>
+  <data name="UploadRegion_Title" xml:space="preserve"><value>อัปโหลดแพ็กเกจภูมิภาค</value></data>
+  <data name="UploadRegion_Subtitle" xml:space="preserve"><value>แบ่งปันโปรไฟล์ตั้งค่าภูมิภาคของประเทศกับชุมชน</value></data>
+  <data name="UploadRegion_CountryLabel" xml:space="preserve"><value>ประเทศ</value></data>
+  <data name="UploadRegion_SelectCountry" xml:space="preserve"><value>เลือกประเทศ...</value></data>
+  <data name="UploadRegion_ChangeLog" xml:space="preserve"><value>บันทึกการเปลี่ยนแปลง</value></data>
+  <data name="UploadRegion_ChangeLogPlaceholder" xml:space="preserve"><value>มีการเปลี่ยนแปลงอะไรในเวอร์ชันนี้?</value></data>
+  <data name="UploadRegion_DescriptionPlaceholder" xml:space="preserve"><value>อธิบายโปรไฟล์ภูมิภาค...</value></data>
+  <data name="UploadRegion_ProfileRequired" xml:space="preserve"><value>โปรไฟล์ภูมิภาค JSON (จำเป็น)</value></data>
+  <data name="UploadRegion_ValidationErrors" xml:space="preserve"><value>ข้อผิดพลาดในการตรวจสอบ</value></data>
+  <data name="UploadRegion_ValidationWarnings" xml:space="preserve"><value>คำเตือนในการตรวจสอบ</value></data>
+  <data name="UploadRegion_Success" xml:space="preserve"><value>ส่งแพ็กเกจภูมิภาคเพื่อตรวจสอบแล้ว!</value></data>
+  <data name="UploadRegion_CountryRequired" xml:space="preserve"><value>กรุณาเลือกประเทศ</value></data>
+  <data name="MyPackages_NoRegions" xml:space="preserve"><value>ยังไม่มีแพ็กเกจภูมิภาค</value></data>
+  <data name="MyPackages_NoRegionsDesc" xml:space="preserve"><value>คุณยังไม่ได้อัปโหลดแพ็กเกจภูมิภาคใด ๆ</value></data>
+  <data name="MyPackages_UploadFirstRegion" xml:space="preserve"><value>อัปโหลดแพ็กเกจภูมิภาคแรกของคุณ</value></data>
+  <data name="Admin_PendingRegions" xml:space="preserve"><value>ภูมิภาคที่รอดำเนินการ</value></data>
+  <data name="Admin_PendingRegionPackages" xml:space="preserve"><value>แพ็กเกจภูมิภาคที่รอดำเนินการ</value></data>
+  <data name="Admin_NoPendingRegions" xml:space="preserve"><value>ไม่มีแพ็กเกจภูมิภาคที่รอดำเนินการ</value></data>
+  <data name="Admin_RegionApproved" xml:space="preserve"><value>อนุมัติแพ็กเกจภูมิภาคแล้ว</value></data>
+  <data name="Admin_RegionRejected" xml:space="preserve"><value>ปฏิเสธแพ็กเกจภูมิภาคแล้ว</value></data>
+  <data name="Admin_RejectRegionTitle" xml:space="preserve"><value>ปฏิเสธแพ็กเกจภูมิภาค</value></data>
+  <data name="Admin_RejectRegionMessage" xml:space="preserve"><value>คุณแน่ใจหรือไม่ว่าต้องการปฏิเสธแพ็กเกจภูมิภาคนี้?</value></data>
+</root>

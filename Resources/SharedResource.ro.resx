@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msOccurs="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+              <xsd:attribute name="xml:space" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <data name="Common_LanguagePacks" xml:space="preserve"><value>Pachete lingvistice</value></data>
+  <data name="Common_FeaturePlugins" xml:space="preserve"><value>Pluginuri de funcționalitate</value></data>
+  <data name="Common_Download" xml:space="preserve"><value>Descărcare</value></data>
+  <data name="Common_Downloads" xml:space="preserve"><value>Descărcări</value></data>
+  <data name="Common_Version" xml:space="preserve"><value>Versiune</value></data>
+  <data name="Common_Coverage" xml:space="preserve"><value>Acoperire</value></data>
+  <data name="Common_CoveragePercent" xml:space="preserve"><value>{0}% acoperire</value></data>
+  <data name="Common_MinVersion" xml:space="preserve"><value>Versiune minimă</value></data>
+  <data name="Common_VersionHistory" xml:space="preserve"><value>Istoric versiuni</value></data>
+  <data name="Common_Home" xml:space="preserve"><value>Acasă</value></data>
+  <data name="Common_ResultsCount" xml:space="preserve"><value>{0} rezultate</value></data>
+  <data name="Common_EmailLabel" xml:space="preserve"><value>Adresă de e-mail</value></data>
+  <data name="Common_EmailPlaceholder" xml:space="preserve"><value>adresa@email.com</value></data>
+  <data name="Common_PasswordLabel" xml:space="preserve"><value>Parolă</value></data>
+  <data name="Common_DisplayNameLabel" xml:space="preserve"><value>Nume afișat</value></data>
+  <data name="Common_DataSecure" xml:space="preserve"><value>Datele tale sunt criptate și securizate</value></data>
+  <data name="Common_PleaseLogin" xml:space="preserve"><value>Te rugăm să te autentifici pentru a continua.</value></data>
+  <data name="Common_LoginLink" xml:space="preserve"><value>Autentificare</value></data>
+  <data name="Common_SubmitForReview" xml:space="preserve"><value>Trimite spre revizuire</value></data>
+  <data name="Common_SaveAsDraft" xml:space="preserve"><value>Salvează ca ciornă</value></data>
+  <data name="Common_Loaded" xml:space="preserve"><value>Încărcat</value></data>
+  <data name="Common_Cancel" xml:space="preserve"><value>Anulează</value></data>
+  <data name="Common_Confirm" xml:space="preserve"><value>Confirmă</value></data>
+  <data name="Common_NotFound" xml:space="preserve"><value>Nu a fost găsit</value></data>
+  <data name="Common_NothingHere" xml:space="preserve"><value>Ne pare rău, nu există nimic la această adresă.</value></data>
+  <data name="Common_BackToBrowse" xml:space="preserve"><value>Înapoi la răsfoire</value></data>
+  <data name="Common_ByAuthor" xml:space="preserve"><value>de {0}</value></data>
+  <data name="Common_SkillsCount" xml:space="preserve"><value>{0} abilități</value></data>
+  <data name="Common_InstallsCount" xml:space="preserve"><value>{0} instalări</value></data>
+  <data name="Common_Package" xml:space="preserve"><value>Pachet</value></data>
+  <data name="Common_Plugin" xml:space="preserve"><value>Plugin</value></data>
+  <data name="Common_Category" xml:space="preserve"><value>Categorie</value></data>
+  <data name="Common_Status" xml:space="preserve"><value>Stare</value></data>
+  <data name="Common_Actions" xml:space="preserve"><value>Acțiuni</value></data>
+  <data name="Common_Author" xml:space="preserve"><value>Autor</value></data>
+  <data name="Common_Code" xml:space="preserve"><value>Cod</value></data>
+  <data name="Common_Submitted" xml:space="preserve"><value>Trimis</value></data>
+  <data name="Common_Docs" xml:space="preserve"><value>Documentație</value></data>
+  <data name="Common_Translations" xml:space="preserve"><value>traduceri</value></data>
+  <data name="Nav_Browse" xml:space="preserve"><value>Răsfoire</value></data>
+  <data name="Nav_UploadPack" xml:space="preserve"><value>Încarcă pachet</value></data>
+  <data name="Nav_UploadPlugin" xml:space="preserve"><value>Încarcă plugin</value></data>
+  <data name="Nav_MyPackages" xml:space="preserve"><value>Pachetele mele</value></data>
+  <data name="Nav_Admin" xml:space="preserve"><value>Admin</value></data>
+  <data name="Nav_SignOut" xml:space="preserve"><value>Deconectare</value></data>
+  <data name="Nav_SignIn" xml:space="preserve"><value>Autentificare</value></data>
+  <data name="Nav_Register" xml:space="preserve"><value>Înregistrare</value></data>
+  <data name="Index_HeroTitle" xml:space="preserve"><value>Extinde-ți experiența Klacks</value></data>
+  <data name="Index_HeroSubtitle" xml:space="preserve"><value>Descoperă pachete lingvistice și pluginuri de funcționalitate create pentru managementul profesional al forței de muncă și scalabilitate la nivel de întreprindere.</value></data>
+  <data name="Index_SearchPacks" xml:space="preserve"><value>Caută pachete lingvistice...</value></data>
+  <data name="Index_SearchPlugins" xml:space="preserve"><value>Caută pluginuri de funcționalitate...</value></data>
+  <data name="Index_AllCategories" xml:space="preserve"><value>Toate categoriile</value></data>
+  <data name="Index_NoPackagesFound" xml:space="preserve"><value>Niciun pachet găsit</value></data>
+  <data name="Index_BeFirstPack" xml:space="preserve"><value>Fii primul care încarcă un pachet lingvistic!</value></data>
+  <data name="Index_NoPluginsFound" xml:space="preserve"><value>Niciun plugin găsit</value></data>
+  <data name="Index_BeFirstPlugin" xml:space="preserve"><value>Fii primul care încarcă un plugin de funcționalitate!</value></data>
+  <data name="Index_PacksSubtitle" xml:space="preserve"><value>Resurse de localizare pentru echipe internaționale.</value></data>
+  <data name="Index_FooterDescription" xml:space="preserve"><value>Ecosistem profesional pentru extinderea capacităților de management al forței de muncă.</value></data>
+  <data name="Index_FooterRights" xml:space="preserve"><value>© 2026 Klacks Store. Toate drepturile rezervate.</value></data>
+  <data name="Index_Resources" xml:space="preserve"><value>Resurse</value></data>
+  <data name="Index_Documentation" xml:space="preserve"><value>Documentație</value></data>
+  <data name="Index_API" xml:space="preserve"><value>API</value></data>
+  <data name="Index_Legal" xml:space="preserve"><value>Legal</value></data>
+  <data name="Index_PrivacyPolicy" xml:space="preserve"><value>Politica de confidențialitate</value></data>
+  <data name="Index_TermsOfService" xml:space="preserve"><value>Termeni și condiții</value></data>
+  <data name="Login_PageTitle" xml:space="preserve"><value>Autentificare - Klacks Store</value></data>
+  <data name="Login_WelcomeBack" xml:space="preserve"><value>Bine ai revenit</value></data>
+  <data name="Login_Subtitle" xml:space="preserve"><value>Autentifică-te pentru a-ți gestiona pachetele și pluginurile</value></data>
+  <data name="Login_PasswordPlaceholder" xml:space="preserve"><value>Introdu parola</value></data>
+  <data name="Login_NoAccount" xml:space="preserve"><value>Nu ai cont?</value></data>
+  <data name="Login_CreateOne" xml:space="preserve"><value>Creează unul</value></data>
+  <data name="Login_InvalidCredentials" xml:space="preserve"><value>Adresă de e-mail sau parolă incorectă</value></data>
+  <data name="Register_PageTitle" xml:space="preserve"><value>Înregistrare - Klacks Store</value></data>
+  <data name="Register_Title" xml:space="preserve"><value>Creează un cont</value></data>
+  <data name="Register_Subtitle" xml:space="preserve"><value>Alătură-te comunității Klacks Store</value></data>
+  <data name="Register_NamePlaceholder" xml:space="preserve"><value>Numele tău</value></data>
+  <data name="Register_PasswordLabel" xml:space="preserve"><value>Parolă (min. {0} caractere)</value></data>
+  <data name="Register_CreatePassword" xml:space="preserve"><value>Creează o parolă</value></data>
+  <data name="Register_ConfirmPasswordLabel" xml:space="preserve"><value>Confirmă parola</value></data>
+  <data name="Register_ConfirmPasswordPlaceholder" xml:space="preserve"><value>Confirmă parola</value></data>
+  <data name="Register_CreateAccount" xml:space="preserve"><value>Creează cont</value></data>
+  <data name="Register_HasAccount" xml:space="preserve"><value>Ai deja un cont?</value></data>
+  <data name="Register_NameRequired" xml:space="preserve"><value>Numele afișat este obligatoriu</value></data>
+  <data name="Register_EmailRequired" xml:space="preserve"><value>Adresa de e-mail este obligatorie</value></data>
+  <data name="Register_PasswordMismatch" xml:space="preserve"><value>Parolele nu coincid</value></data>
+  <data name="Register_Success" xml:space="preserve"><value>Înregistrare reușită! Te poți autentifica acum.</value></data>
+  <data name="PackageDetail_NotFound" xml:space="preserve"><value>Pachetul nu a fost găsit</value></data>
+  <data name="PackageDetail_NotFoundDesc" xml:space="preserve"><value>Pachetul căutat nu există.</value></data>
+  <data name="PackageDetail_SpeechLocale" xml:space="preserve"><value>Localizare vocală</value></data>
+  <data name="PackageDetail_TranslationCoverage" xml:space="preserve"><value>Acoperire traduceri</value></data>
+  <data name="PackageDetail_TranslationCount" xml:space="preserve"><value>{0} traduceri</value></data>
+  <data name="PackageDetail_Manuals" xml:space="preserve"><value>Manuale</value></data>
+  <data name="PackageDetail_Countries" xml:space="preserve"><value>Țări</value></data>
+  <data name="PackageDetail_States" xml:space="preserve"><value>Provincii</value></data>
+  <data name="PackageDetail_CalendarRules" xml:space="preserve"><value>Reguli de calendar</value></data>
+  <data name="PluginDetail_NotFound" xml:space="preserve"><value>Pluginul nu a fost găsit</value></data>
+  <data name="PluginDetail_NotFoundDesc" xml:space="preserve"><value>Pluginul căutat nu există.</value></data>
+  <data name="PluginDetail_ProvidedSkills" xml:space="preserve"><value>Abilități oferite</value></data>
+  <data name="PluginDetail_RequiredPermissions" xml:space="preserve"><value>Permisiuni necesare</value></data>
+  <data name="PluginDetail_README" xml:space="preserve"><value>README</value></data>
+  <data name="Upload_Title" xml:space="preserve"><value>Încarcă pachet lingvistic</value></data>
+  <data name="Upload_Subtitle" xml:space="preserve"><value>Distribuie pachetul tău lingvistic comunității</value></data>
+  <data name="Upload_CodeLabel" xml:space="preserve"><value>Cod (ex. fr-FR)</value></data>
+  <data name="Upload_CodePlaceholder" xml:space="preserve"><value>xx-XX</value></data>
+  <data name="Upload_DisplayNamePlaceholder" xml:space="preserve"><value>ex. Franceză (Franța)</value></data>
+  <data name="Upload_SpeechLocale" xml:space="preserve"><value>Localizare vocală</value></data>
+  <data name="Upload_SpeechLocalePlaceholder" xml:space="preserve"><value>ex. fr-FR</value></data>
+  <data name="Upload_VersionPlaceholder" xml:space="preserve"><value>1.0.0</value></data>
+  <data name="Upload_Description" xml:space="preserve"><value>Descriere</value></data>
+  <data name="Upload_DescriptionPlaceholder" xml:space="preserve"><value>Descrie pachetul tău lingvistic...</value></data>
+  <data name="Upload_CoverageLabel" xml:space="preserve"><value>Acoperire (%)</value></data>
+  <data name="Upload_MinKlacksVersion" xml:space="preserve"><value>Versiune minimă Klacks</value></data>
+  <data name="Upload_ManifestRequired" xml:space="preserve"><value>manifest.json</value></data>
+  <data name="Upload_TranslationsRequired" xml:space="preserve"><value>translations.json</value></data>
+  <data name="Upload_DocsOptional" xml:space="preserve"><value>docs.json (opțional)</value></data>
+  <data name="Upload_CountriesOptional" xml:space="preserve"><value>countries.json (opțional)</value></data>
+  <data name="Upload_StatesOptional" xml:space="preserve"><value>states.json (opțional)</value></data>
+  <data name="Upload_CalendarOptional" xml:space="preserve"><value>calendar-rules.json (opțional)</value></data>
+  <data name="Upload_CodeRequired" xml:space="preserve"><value>Codul și numele afișat sunt obligatorii</value></data>
+  <data name="Upload_Success" xml:space="preserve"><value>Pachet trimis spre revizuire!</value></data>
+  <data name="UploadPlugin_Title" xml:space="preserve"><value>Încarcă plugin de funcționalitate</value></data>
+  <data name="UploadPlugin_Subtitle" xml:space="preserve"><value>Distribuie plugin-ul tău de funcționalitate comunității</value></data>
+  <data name="UploadPlugin_NameLabel" xml:space="preserve"><value>Nume plugin (identificator unic)</value></data>
+  <data name="UploadPlugin_NamePlaceholder" xml:space="preserve"><value>ex. messaging</value></data>
+  <data name="UploadPlugin_DisplayNamePlaceholder" xml:space="preserve"><value>ex. Messaging</value></data>
+  <data name="UploadPlugin_SelectCategory" xml:space="preserve"><value>Selectează categoria...</value></data>
+  <data name="UploadPlugin_DescriptionPlaceholder" xml:space="preserve"><value>Descrie plugin-ul tău de funcționalitate...</value></data>
+  <data name="UploadPlugin_ChangelogLabel" xml:space="preserve"><value>Jurnal de modificări</value></data>
+  <data name="UploadPlugin_ChangelogPlaceholder" xml:space="preserve"><value>Ce s-a schimbat în această versiune?</value></data>
+  <data name="UploadPlugin_ManifestRequired" xml:space="preserve"><value>manifest.json (obligatoriu)</value></data>
+  <data name="UploadPlugin_EnRequired" xml:space="preserve"><value>en.json (i18n obligatoriu)</value></data>
+  <data name="UploadPlugin_DeOptional" xml:space="preserve"><value>de.json (i18n opțional)</value></data>
+  <data name="UploadPlugin_FrOptional" xml:space="preserve"><value>fr.json (i18n opțional)</value></data>
+  <data name="UploadPlugin_ReadmeOptional" xml:space="preserve"><value>README.md (opțional)</value></data>
+  <data name="UploadPlugin_NameRequired" xml:space="preserve"><value>Numele și numele afișat sunt obligatorii</value></data>
+  <data name="UploadPlugin_CategoryRequired" xml:space="preserve"><value>Categoria este obligatorie</value></data>
+  <data name="UploadPlugin_Success" xml:space="preserve"><value>Plugin trimis spre revizuire!</value></data>
+  <data name="MyPackages_Title" xml:space="preserve"><value>Pachetele mele</value></data>
+  <data name="MyPackages_LoginRequired" xml:space="preserve"><value>Te rugăm să te autentifici pentru a vedea pachetele tale.</value></data>
+  <data name="MyPackages_NoPacks" xml:space="preserve"><value>Niciun pachet lingvistic încă</value></data>
+  <data name="MyPackages_NoPacksDesc" xml:space="preserve"><value>Nu ai încărcat încă niciun pachet lingvistic.</value></data>
+  <data name="MyPackages_UploadFirst" xml:space="preserve"><value>Încarcă primul tău pachet</value></data>
+  <data name="MyPackages_NoPlugins" xml:space="preserve"><value>Niciun plugin de funcționalitate încă</value></data>
+  <data name="MyPackages_NoPluginsDesc" xml:space="preserve"><value>Nu ai încărcat încă niciun plugin de funcționalitate.</value></data>
+  <data name="MyPackages_UploadFirstPlugin" xml:space="preserve"><value>Încarcă primul tău plugin</value></data>
+  <data name="Admin_Title" xml:space="preserve"><value>Panou de administrare</value></data>
+  <data name="Admin_AccessDenied" xml:space="preserve"><value>Acces refuzat. Sunt necesare privilegii de administrator.</value></data>
+  <data name="Admin_PendingPackages" xml:space="preserve"><value>Pachete în așteptare</value></data>
+  <data name="Admin_PendingPlugins" xml:space="preserve"><value>Pluginuri în așteptare</value></data>
+  <data name="Admin_Users" xml:space="preserve"><value>Utilizatori</value></data>
+  <data name="Admin_PendingLanguagePackages" xml:space="preserve"><value>Pachete lingvistice în așteptare</value></data>
+  <data name="Admin_NoPendingPackages" xml:space="preserve"><value>Niciun pachet în așteptarea revizuirii.</value></data>
+  <data name="Admin_PendingFeaturePlugins" xml:space="preserve"><value>Pluginuri de funcționalitate în așteptare</value></data>
+  <data name="Admin_NoPendingPlugins" xml:space="preserve"><value>Niciun plugin în așteptarea revizuirii.</value></data>
+  <data name="Admin_Name" xml:space="preserve"><value>Nume</value></data>
+  <data name="Admin_Email" xml:space="preserve"><value>E-mail</value></data>
+  <data name="Admin_Joined" xml:space="preserve"><value>Înregistrat</value></data>
+  <data name="Admin_MakeAdmin" xml:space="preserve"><value>Fă admin</value></data>
+  <data name="Admin_RemoveAdmin" xml:space="preserve"><value>Elimină admin</value></data>
+  <data name="Admin_PackageApproved" xml:space="preserve"><value>Pachet aprobat cu succes</value></data>
+  <data name="Admin_PackageRejected" xml:space="preserve"><value>Pachet respins</value></data>
+  <data name="Admin_PluginApproved" xml:space="preserve"><value>Plugin aprobat cu succes</value></data>
+  <data name="Admin_PluginRejected" xml:space="preserve"><value>Plugin respins</value></data>
+  <data name="Admin_RejectPackageTitle" xml:space="preserve"><value>Respinge pachetul</value></data>
+  <data name="Admin_RejectPackageMessage" xml:space="preserve"><value>Ești sigur că vrei să respingi acest pachet?</value></data>
+  <data name="Admin_RejectPluginTitle" xml:space="preserve"><value>Respinge pluginul</value></data>
+  <data name="Admin_RejectPluginMessage" xml:space="preserve"><value>Ești sigur că vrei să respingi acest plugin?</value></data>
+  <data name="Admin_RejectedByAdmin" xml:space="preserve"><value>Respins de administrator</value></data>
+  <data name="Status_Published" xml:space="preserve"><value>Publicat</value></data>
+  <data name="Status_Pending" xml:space="preserve"><value>În așteptare</value></data>
+  <data name="Status_Rejected" xml:space="preserve"><value>Respins</value></data>
+  <data name="Status_Draft" xml:space="preserve"><value>Ciornă</value></data>
+  <data name="Status_Unknown" xml:space="preserve"><value>Necunoscut</value></data>
+  <data name="Common_Deployment" xml:space="preserve"><value>Implementare</value></data>
+  <data name="Common_RegionPackage" xml:space="preserve"><value>Pachet regional</value></data>
+  <data name="Common_Country" xml:space="preserve"><value>Țară</value></data>
+  <data name="Nav_UploadRegion" xml:space="preserve"><value>Încarcă regiune</value></data>
+  <data name="Index_SearchRegions" xml:space="preserve"><value>Caută pachete regionale...</value></data>
+  <data name="Index_NoRegionsFound" xml:space="preserve"><value>Niciun pachet regional găsit</value></data>
+  <data name="Index_BeFirstRegion" xml:space="preserve"><value>Fii primul care încarcă un pachet regional!</value></data>
+  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>Profiluri de implementare pe țară pentru instalări noi.</value></data>
+  <data name="RegionDetail_NotFound" xml:space="preserve"><value>Pachetul regional nu a fost găsit</value></data>
+  <data name="RegionDetail_NotFoundDesc" xml:space="preserve"><value>Pachetul regional solicitat nu există sau nu este publicat.</value></data>
+  <data name="RegionDetail_IndustryLabel" xml:space="preserve"><value>Industrie</value></data>
+  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>Descărcări de implementare</value></data>
+  <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>JSON de profil</value></data>
+  <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>Profil regional pentru o instalare Klacks existentă — montează-l ca fișier de configurare regională.</value></data>
+  <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>Pachet On-Prem</value></data>
+  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Pachet complet de instalare cu scripturi de instalare, Docker Compose și profilul regional.</value></data>
+  <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Pachet Docker Compose</value></data>
+  <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Configurare Docker Compose minimală, fără instalatoare, pentru profesioniștii Docker.</value></data>
+  <data name="Industry_Homecare" xml:space="preserve"><value>Îngrijire la domiciliu</value></data>
+  <data name="Industry_Healthcare" xml:space="preserve"><value>Sănătate</value></data>
+  <data name="Industry_Security" xml:space="preserve"><value>Securitate</value></data>
+  <data name="Industry_Facility" xml:space="preserve"><value>Servicii de facility management</value></data>
+  <data name="Industry_Logistics" xml:space="preserve"><value>Logistică</value></data>
+  <data name="Industry_All" xml:space="preserve"><value>Toate industriile</value></data>
+  <data name="UploadRegion_Title" xml:space="preserve"><value>Încarcă pachet regional</value></data>
+  <data name="UploadRegion_Subtitle" xml:space="preserve"><value>Distribuie un profil de configurare regională pentru o țară comunității</value></data>
+  <data name="UploadRegion_CountryLabel" xml:space="preserve"><value>Țară</value></data>
+  <data name="UploadRegion_SelectCountry" xml:space="preserve"><value>Selectează o țară...</value></data>
+  <data name="UploadRegion_ChangeLog" xml:space="preserve"><value>Jurnal de modificări</value></data>
+  <data name="UploadRegion_ChangeLogPlaceholder" xml:space="preserve"><value>Ce s-a schimbat în această versiune?</value></data>
+  <data name="UploadRegion_DescriptionPlaceholder" xml:space="preserve"><value>Descrie profilul regional...</value></data>
+  <data name="UploadRegion_ProfileRequired" xml:space="preserve"><value>JSON profil regional (obligatoriu)</value></data>
+  <data name="UploadRegion_ValidationErrors" xml:space="preserve"><value>Erori de validare</value></data>
+  <data name="UploadRegion_ValidationWarnings" xml:space="preserve"><value>Avertismente de validare</value></data>
+  <data name="UploadRegion_Success" xml:space="preserve"><value>Pachet regional trimis spre revizuire!</value></data>
+  <data name="UploadRegion_CountryRequired" xml:space="preserve"><value>Te rugăm să selectezi o țară</value></data>
+  <data name="MyPackages_NoRegions" xml:space="preserve"><value>Niciun pachet regional încă</value></data>
+  <data name="MyPackages_NoRegionsDesc" xml:space="preserve"><value>Nu ai încărcat încă niciun pachet regional.</value></data>
+  <data name="MyPackages_UploadFirstRegion" xml:space="preserve"><value>Încarcă primul tău pachet regional</value></data>
+  <data name="Admin_PendingRegions" xml:space="preserve"><value>Regiuni în așteptare</value></data>
+  <data name="Admin_PendingRegionPackages" xml:space="preserve"><value>Pachete regionale în așteptare</value></data>
+  <data name="Admin_NoPendingRegions" xml:space="preserve"><value>Niciun pachet regional în așteptare</value></data>
+  <data name="Admin_RegionApproved" xml:space="preserve"><value>Pachet regional aprobat</value></data>
+  <data name="Admin_RegionRejected" xml:space="preserve"><value>Pachet regional respins</value></data>
+  <data name="Admin_RejectRegionTitle" xml:space="preserve"><value>Respinge pachetul regional</value></data>
+  <data name="Admin_RejectRegionMessage" xml:space="preserve"><value>Ești sigur că vrei să respingi acest pachet regional?</value></data>
+</root>

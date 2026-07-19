@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msOccurs="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+              <xsd:attribute name="xml:space" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <data name="Common_LanguagePacks" xml:space="preserve"><value>Gói ngôn ngữ</value></data>
+  <data name="Common_FeaturePlugins" xml:space="preserve"><value>Plugin tính năng</value></data>
+  <data name="Common_Download" xml:space="preserve"><value>Tải xuống</value></data>
+  <data name="Common_Downloads" xml:space="preserve"><value>Lượt tải xuống</value></data>
+  <data name="Common_Version" xml:space="preserve"><value>Phiên bản</value></data>
+  <data name="Common_Coverage" xml:space="preserve"><value>Độ phủ</value></data>
+  <data name="Common_CoveragePercent" xml:space="preserve"><value>Độ phủ {0}%</value></data>
+  <data name="Common_MinVersion" xml:space="preserve"><value>Phiên bản tối thiểu</value></data>
+  <data name="Common_VersionHistory" xml:space="preserve"><value>Lịch sử phiên bản</value></data>
+  <data name="Common_Home" xml:space="preserve"><value>Trang chủ</value></data>
+  <data name="Common_ResultsCount" xml:space="preserve"><value>{0} kết quả</value></data>
+  <data name="Common_EmailLabel" xml:space="preserve"><value>Địa chỉ email</value></data>
+  <data name="Common_EmailPlaceholder" xml:space="preserve"><value>ban@email.com</value></data>
+  <data name="Common_PasswordLabel" xml:space="preserve"><value>Mật khẩu</value></data>
+  <data name="Common_DisplayNameLabel" xml:space="preserve"><value>Tên hiển thị</value></data>
+  <data name="Common_DataSecure" xml:space="preserve"><value>Dữ liệu của bạn được mã hóa và bảo mật</value></data>
+  <data name="Common_PleaseLogin" xml:space="preserve"><value>Vui lòng đăng nhập để tiếp tục.</value></data>
+  <data name="Common_LoginLink" xml:space="preserve"><value>Đăng nhập</value></data>
+  <data name="Common_SubmitForReview" xml:space="preserve"><value>Gửi để duyệt</value></data>
+  <data name="Common_SaveAsDraft" xml:space="preserve"><value>Lưu dưới dạng bản nháp</value></data>
+  <data name="Common_Loaded" xml:space="preserve"><value>Đã tải</value></data>
+  <data name="Common_Cancel" xml:space="preserve"><value>Hủy</value></data>
+  <data name="Common_Confirm" xml:space="preserve"><value>Xác nhận</value></data>
+  <data name="Common_NotFound" xml:space="preserve"><value>Không tìm thấy</value></data>
+  <data name="Common_NothingHere" xml:space="preserve"><value>Rất tiếc, không có gì tại địa chỉ này.</value></data>
+  <data name="Common_BackToBrowse" xml:space="preserve"><value>Quay lại Duyệt</value></data>
+  <data name="Common_ByAuthor" xml:space="preserve"><value>của {0}</value></data>
+  <data name="Common_SkillsCount" xml:space="preserve"><value>{0} kỹ năng</value></data>
+  <data name="Common_InstallsCount" xml:space="preserve"><value>{0} lượt cài đặt</value></data>
+  <data name="Common_Package" xml:space="preserve"><value>Gói</value></data>
+  <data name="Common_Plugin" xml:space="preserve"><value>Plugin</value></data>
+  <data name="Common_Category" xml:space="preserve"><value>Danh mục</value></data>
+  <data name="Common_Status" xml:space="preserve"><value>Trạng thái</value></data>
+  <data name="Common_Actions" xml:space="preserve"><value>Hành động</value></data>
+  <data name="Common_Author" xml:space="preserve"><value>Tác giả</value></data>
+  <data name="Common_Code" xml:space="preserve"><value>Mã</value></data>
+  <data name="Common_Submitted" xml:space="preserve"><value>Đã gửi</value></data>
+  <data name="Common_Docs" xml:space="preserve"><value>Tài liệu</value></data>
+  <data name="Common_Translations" xml:space="preserve"><value>bản dịch</value></data>
+  <data name="Nav_Browse" xml:space="preserve"><value>Duyệt</value></data>
+  <data name="Nav_UploadPack" xml:space="preserve"><value>Tải lên gói</value></data>
+  <data name="Nav_UploadPlugin" xml:space="preserve"><value>Tải lên plugin</value></data>
+  <data name="Nav_MyPackages" xml:space="preserve"><value>Gói của tôi</value></data>
+  <data name="Nav_Admin" xml:space="preserve"><value>Quản trị</value></data>
+  <data name="Nav_SignOut" xml:space="preserve"><value>Đăng xuất</value></data>
+  <data name="Nav_SignIn" xml:space="preserve"><value>Đăng nhập</value></data>
+  <data name="Nav_Register" xml:space="preserve"><value>Đăng ký</value></data>
+  <data name="Index_HeroTitle" xml:space="preserve"><value>Mở rộng trải nghiệm Klacks của bạn</value></data>
+  <data name="Index_HeroSubtitle" xml:space="preserve"><value>Khám phá các gói ngôn ngữ và plugin tính năng được xây dựng cho quản lý nhân sự chuyên nghiệp và khả năng mở rộng doanh nghiệp.</value></data>
+  <data name="Index_SearchPacks" xml:space="preserve"><value>Tìm kiếm gói ngôn ngữ...</value></data>
+  <data name="Index_SearchPlugins" xml:space="preserve"><value>Tìm kiếm plugin tính năng...</value></data>
+  <data name="Index_AllCategories" xml:space="preserve"><value>Tất cả danh mục</value></data>
+  <data name="Index_NoPackagesFound" xml:space="preserve"><value>Không tìm thấy gói nào</value></data>
+  <data name="Index_BeFirstPack" xml:space="preserve"><value>Hãy là người đầu tiên tải lên gói ngôn ngữ!</value></data>
+  <data name="Index_NoPluginsFound" xml:space="preserve"><value>Không tìm thấy plugin nào</value></data>
+  <data name="Index_BeFirstPlugin" xml:space="preserve"><value>Hãy là người đầu tiên tải lên plugin tính năng!</value></data>
+  <data name="Index_PacksSubtitle" xml:space="preserve"><value>Tài nguyên bản địa hóa cho các nhóm quốc tế.</value></data>
+  <data name="Index_FooterDescription" xml:space="preserve"><value>Hệ sinh thái chuyên nghiệp để mở rộng khả năng quản lý nhân sự.</value></data>
+  <data name="Index_FooterRights" xml:space="preserve"><value>© 2026 Klacks Store. Đã đăng ký bản quyền.</value></data>
+  <data name="Index_Resources" xml:space="preserve"><value>Tài nguyên</value></data>
+  <data name="Index_Documentation" xml:space="preserve"><value>Tài liệu</value></data>
+  <data name="Index_API" xml:space="preserve"><value>API</value></data>
+  <data name="Index_Legal" xml:space="preserve"><value>Pháp lý</value></data>
+  <data name="Index_PrivacyPolicy" xml:space="preserve"><value>Chính sách bảo mật</value></data>
+  <data name="Index_TermsOfService" xml:space="preserve"><value>Điều khoản dịch vụ</value></data>
+  <data name="Login_PageTitle" xml:space="preserve"><value>Đăng nhập - Klacks Store</value></data>
+  <data name="Login_WelcomeBack" xml:space="preserve"><value>Chào mừng trở lại</value></data>
+  <data name="Login_Subtitle" xml:space="preserve"><value>Đăng nhập để quản lý gói và plugin của bạn</value></data>
+  <data name="Login_PasswordPlaceholder" xml:space="preserve"><value>Nhập mật khẩu của bạn</value></data>
+  <data name="Login_NoAccount" xml:space="preserve"><value>Chưa có tài khoản?</value></data>
+  <data name="Login_CreateOne" xml:space="preserve"><value>Tạo tài khoản</value></data>
+  <data name="Login_InvalidCredentials" xml:space="preserve"><value>Email hoặc mật khẩu không hợp lệ</value></data>
+  <data name="Register_PageTitle" xml:space="preserve"><value>Đăng ký - Klacks Store</value></data>
+  <data name="Register_Title" xml:space="preserve"><value>Tạo tài khoản</value></data>
+  <data name="Register_Subtitle" xml:space="preserve"><value>Tham gia cộng đồng Klacks Store</value></data>
+  <data name="Register_NamePlaceholder" xml:space="preserve"><value>Tên của bạn</value></data>
+  <data name="Register_PasswordLabel" xml:space="preserve"><value>Mật khẩu (tối thiểu {0} ký tự)</value></data>
+  <data name="Register_CreatePassword" xml:space="preserve"><value>Tạo mật khẩu</value></data>
+  <data name="Register_ConfirmPasswordLabel" xml:space="preserve"><value>Xác nhận mật khẩu</value></data>
+  <data name="Register_ConfirmPasswordPlaceholder" xml:space="preserve"><value>Xác nhận mật khẩu của bạn</value></data>
+  <data name="Register_CreateAccount" xml:space="preserve"><value>Tạo tài khoản</value></data>
+  <data name="Register_HasAccount" xml:space="preserve"><value>Đã có tài khoản?</value></data>
+  <data name="Register_NameRequired" xml:space="preserve"><value>Tên hiển thị là bắt buộc</value></data>
+  <data name="Register_EmailRequired" xml:space="preserve"><value>Email là bắt buộc</value></data>
+  <data name="Register_PasswordMismatch" xml:space="preserve"><value>Mật khẩu không khớp</value></data>
+  <data name="Register_Success" xml:space="preserve"><value>Đăng ký thành công! Bây giờ bạn có thể đăng nhập.</value></data>
+  <data name="PackageDetail_NotFound" xml:space="preserve"><value>Không tìm thấy gói</value></data>
+  <data name="PackageDetail_NotFoundDesc" xml:space="preserve"><value>Gói bạn đang tìm không tồn tại.</value></data>
+  <data name="PackageDetail_SpeechLocale" xml:space="preserve"><value>Ngôn ngữ giọng nói</value></data>
+  <data name="PackageDetail_TranslationCoverage" xml:space="preserve"><value>Độ phủ bản dịch</value></data>
+  <data name="PackageDetail_TranslationCount" xml:space="preserve"><value>{0} bản dịch</value></data>
+  <data name="PackageDetail_Manuals" xml:space="preserve"><value>Hướng dẫn</value></data>
+  <data name="PackageDetail_Countries" xml:space="preserve"><value>Quốc gia</value></data>
+  <data name="PackageDetail_States" xml:space="preserve"><value>Tiểu bang</value></data>
+  <data name="PackageDetail_CalendarRules" xml:space="preserve"><value>Quy tắc lịch</value></data>
+  <data name="PluginDetail_NotFound" xml:space="preserve"><value>Không tìm thấy plugin</value></data>
+  <data name="PluginDetail_NotFoundDesc" xml:space="preserve"><value>Plugin bạn đang tìm không tồn tại.</value></data>
+  <data name="PluginDetail_ProvidedSkills" xml:space="preserve"><value>Kỹ năng được cung cấp</value></data>
+  <data name="PluginDetail_RequiredPermissions" xml:space="preserve"><value>Quyền yêu cầu</value></data>
+  <data name="PluginDetail_README" xml:space="preserve"><value>README</value></data>
+  <data name="Upload_Title" xml:space="preserve"><value>Tải lên gói ngôn ngữ</value></data>
+  <data name="Upload_Subtitle" xml:space="preserve"><value>Chia sẻ gói ngôn ngữ của bạn với cộng đồng</value></data>
+  <data name="Upload_CodeLabel" xml:space="preserve"><value>Mã (ví dụ: fr-FR)</value></data>
+  <data name="Upload_CodePlaceholder" xml:space="preserve"><value>xx-XX</value></data>
+  <data name="Upload_DisplayNamePlaceholder" xml:space="preserve"><value>ví dụ: Tiếng Pháp (Pháp)</value></data>
+  <data name="Upload_SpeechLocale" xml:space="preserve"><value>Ngôn ngữ giọng nói</value></data>
+  <data name="Upload_SpeechLocalePlaceholder" xml:space="preserve"><value>ví dụ: fr-FR</value></data>
+  <data name="Upload_VersionPlaceholder" xml:space="preserve"><value>1.0.0</value></data>
+  <data name="Upload_Description" xml:space="preserve"><value>Mô tả</value></data>
+  <data name="Upload_DescriptionPlaceholder" xml:space="preserve"><value>Mô tả gói ngôn ngữ của bạn...</value></data>
+  <data name="Upload_CoverageLabel" xml:space="preserve"><value>Độ phủ (%)</value></data>
+  <data name="Upload_MinKlacksVersion" xml:space="preserve"><value>Phiên bản Klacks tối thiểu</value></data>
+  <data name="Upload_ManifestRequired" xml:space="preserve"><value>manifest.json</value></data>
+  <data name="Upload_TranslationsRequired" xml:space="preserve"><value>translations.json</value></data>
+  <data name="Upload_DocsOptional" xml:space="preserve"><value>docs.json (tùy chọn)</value></data>
+  <data name="Upload_CountriesOptional" xml:space="preserve"><value>countries.json (tùy chọn)</value></data>
+  <data name="Upload_StatesOptional" xml:space="preserve"><value>states.json (tùy chọn)</value></data>
+  <data name="Upload_CalendarOptional" xml:space="preserve"><value>calendar-rules.json (tùy chọn)</value></data>
+  <data name="Upload_CodeRequired" xml:space="preserve"><value>Mã và tên hiển thị là bắt buộc</value></data>
+  <data name="Upload_Success" xml:space="preserve"><value>Gói đã được gửi để duyệt!</value></data>
+  <data name="UploadPlugin_Title" xml:space="preserve"><value>Tải lên plugin tính năng</value></data>
+  <data name="UploadPlugin_Subtitle" xml:space="preserve"><value>Chia sẻ plugin tính năng của bạn với cộng đồng</value></data>
+  <data name="UploadPlugin_NameLabel" xml:space="preserve"><value>Tên plugin (mã định danh duy nhất)</value></data>
+  <data name="UploadPlugin_NamePlaceholder" xml:space="preserve"><value>ví dụ: messaging</value></data>
+  <data name="UploadPlugin_DisplayNamePlaceholder" xml:space="preserve"><value>ví dụ: Messaging</value></data>
+  <data name="UploadPlugin_SelectCategory" xml:space="preserve"><value>Chọn danh mục...</value></data>
+  <data name="UploadPlugin_DescriptionPlaceholder" xml:space="preserve"><value>Mô tả plugin tính năng của bạn...</value></data>
+  <data name="UploadPlugin_ChangelogLabel" xml:space="preserve"><value>Nhật ký thay đổi</value></data>
+  <data name="UploadPlugin_ChangelogPlaceholder" xml:space="preserve"><value>Phiên bản này có gì thay đổi?</value></data>
+  <data name="UploadPlugin_ManifestRequired" xml:space="preserve"><value>manifest.json (bắt buộc)</value></data>
+  <data name="UploadPlugin_EnRequired" xml:space="preserve"><value>en.json (i18n bắt buộc)</value></data>
+  <data name="UploadPlugin_DeOptional" xml:space="preserve"><value>de.json (i18n tùy chọn)</value></data>
+  <data name="UploadPlugin_FrOptional" xml:space="preserve"><value>fr.json (i18n tùy chọn)</value></data>
+  <data name="UploadPlugin_ReadmeOptional" xml:space="preserve"><value>README.md (tùy chọn)</value></data>
+  <data name="UploadPlugin_NameRequired" xml:space="preserve"><value>Tên và tên hiển thị là bắt buộc</value></data>
+  <data name="UploadPlugin_CategoryRequired" xml:space="preserve"><value>Danh mục là bắt buộc</value></data>
+  <data name="UploadPlugin_Success" xml:space="preserve"><value>Plugin đã được gửi để duyệt!</value></data>
+  <data name="MyPackages_Title" xml:space="preserve"><value>Gói của tôi</value></data>
+  <data name="MyPackages_LoginRequired" xml:space="preserve"><value>Vui lòng đăng nhập để xem gói của bạn.</value></data>
+  <data name="MyPackages_NoPacks" xml:space="preserve"><value>Chưa có gói ngôn ngữ nào</value></data>
+  <data name="MyPackages_NoPacksDesc" xml:space="preserve"><value>Bạn chưa tải lên gói ngôn ngữ nào.</value></data>
+  <data name="MyPackages_UploadFirst" xml:space="preserve"><value>Tải lên gói đầu tiên của bạn</value></data>
+  <data name="MyPackages_NoPlugins" xml:space="preserve"><value>Chưa có plugin tính năng nào</value></data>
+  <data name="MyPackages_NoPluginsDesc" xml:space="preserve"><value>Bạn chưa tải lên plugin tính năng nào.</value></data>
+  <data name="MyPackages_UploadFirstPlugin" xml:space="preserve"><value>Tải lên plugin đầu tiên của bạn</value></data>
+  <data name="Admin_Title" xml:space="preserve"><value>Bảng điều khiển quản trị</value></data>
+  <data name="Admin_AccessDenied" xml:space="preserve"><value>Truy cập bị từ chối. Yêu cầu quyền quản trị.</value></data>
+  <data name="Admin_PendingPackages" xml:space="preserve"><value>Gói đang chờ duyệt</value></data>
+  <data name="Admin_PendingPlugins" xml:space="preserve"><value>Plugin đang chờ duyệt</value></data>
+  <data name="Admin_Users" xml:space="preserve"><value>Người dùng</value></data>
+  <data name="Admin_PendingLanguagePackages" xml:space="preserve"><value>Gói ngôn ngữ đang chờ duyệt</value></data>
+  <data name="Admin_NoPendingPackages" xml:space="preserve"><value>Không có gói nào đang chờ duyệt.</value></data>
+  <data name="Admin_PendingFeaturePlugins" xml:space="preserve"><value>Plugin tính năng đang chờ duyệt</value></data>
+  <data name="Admin_NoPendingPlugins" xml:space="preserve"><value>Không có plugin nào đang chờ duyệt.</value></data>
+  <data name="Admin_Name" xml:space="preserve"><value>Tên</value></data>
+  <data name="Admin_Email" xml:space="preserve"><value>Email</value></data>
+  <data name="Admin_Joined" xml:space="preserve"><value>Ngày tham gia</value></data>
+  <data name="Admin_MakeAdmin" xml:space="preserve"><value>Cấp quyền quản trị</value></data>
+  <data name="Admin_RemoveAdmin" xml:space="preserve"><value>Thu hồi quyền quản trị</value></data>
+  <data name="Admin_PackageApproved" xml:space="preserve"><value>Gói đã được phê duyệt thành công</value></data>
+  <data name="Admin_PackageRejected" xml:space="preserve"><value>Gói đã bị từ chối</value></data>
+  <data name="Admin_PluginApproved" xml:space="preserve"><value>Plugin đã được phê duyệt thành công</value></data>
+  <data name="Admin_PluginRejected" xml:space="preserve"><value>Plugin đã bị từ chối</value></data>
+  <data name="Admin_RejectPackageTitle" xml:space="preserve"><value>Từ chối gói</value></data>
+  <data name="Admin_RejectPackageMessage" xml:space="preserve"><value>Bạn có chắc chắn muốn từ chối gói này không?</value></data>
+  <data name="Admin_RejectPluginTitle" xml:space="preserve"><value>Từ chối plugin</value></data>
+  <data name="Admin_RejectPluginMessage" xml:space="preserve"><value>Bạn có chắc chắn muốn từ chối plugin này không?</value></data>
+  <data name="Admin_RejectedByAdmin" xml:space="preserve"><value>Bị quản trị viên từ chối</value></data>
+  <data name="Status_Published" xml:space="preserve"><value>Đã xuất bản</value></data>
+  <data name="Status_Pending" xml:space="preserve"><value>Đang chờ</value></data>
+  <data name="Status_Rejected" xml:space="preserve"><value>Đã từ chối</value></data>
+  <data name="Status_Draft" xml:space="preserve"><value>Bản nháp</value></data>
+  <data name="Status_Unknown" xml:space="preserve"><value>Không xác định</value></data>
+  <data name="Common_Deployment" xml:space="preserve"><value>Triển khai</value></data>
+  <data name="Common_RegionPackage" xml:space="preserve"><value>Gói khu vực</value></data>
+  <data name="Common_Country" xml:space="preserve"><value>Quốc gia</value></data>
+  <data name="Nav_UploadRegion" xml:space="preserve"><value>Tải lên khu vực</value></data>
+  <data name="Index_SearchRegions" xml:space="preserve"><value>Tìm kiếm gói khu vực...</value></data>
+  <data name="Index_NoRegionsFound" xml:space="preserve"><value>Không tìm thấy gói khu vực nào</value></data>
+  <data name="Index_BeFirstRegion" xml:space="preserve"><value>Hãy là người đầu tiên tải lên gói khu vực!</value></data>
+  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>Hồ sơ triển khai quốc gia cho các bản cài đặt mới.</value></data>
+  <data name="RegionDetail_NotFound" xml:space="preserve"><value>Không tìm thấy gói khu vực</value></data>
+  <data name="RegionDetail_NotFoundDesc" xml:space="preserve"><value>Gói khu vực được yêu cầu không tồn tại hoặc chưa được xuất bản.</value></data>
+  <data name="RegionDetail_IndustryLabel" xml:space="preserve"><value>Ngành</value></data>
+  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>Tải xuống triển khai</value></data>
+  <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>JSON hồ sơ</value></data>
+  <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>Hồ sơ khu vực cho một bản cài đặt Klacks hiện có — gắn nó làm tệp thiết lập khu vực.</value></data>
+  <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>Gói cài đặt tại chỗ (On-Prem)</value></data>
+  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Gói cài đặt đầy đủ với các script cài đặt, Docker Compose và hồ sơ khu vực.</value></data>
+  <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Gói Docker Compose</value></data>
+  <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Thiết lập Docker Compose tối giản không có trình cài đặt, dành cho chuyên gia Docker.</value></data>
+  <data name="Industry_Homecare" xml:space="preserve"><value>Chăm sóc tại nhà</value></data>
+  <data name="Industry_Healthcare" xml:space="preserve"><value>Y tế</value></data>
+  <data name="Industry_Security" xml:space="preserve"><value>An ninh</value></data>
+  <data name="Industry_Facility" xml:space="preserve"><value>Dịch vụ cơ sở vật chất</value></data>
+  <data name="Industry_Logistics" xml:space="preserve"><value>Hậu cần</value></data>
+  <data name="Industry_All" xml:space="preserve"><value>Tất cả các ngành</value></data>
+  <data name="UploadRegion_Title" xml:space="preserve"><value>Tải lên gói khu vực</value></data>
+  <data name="UploadRegion_Subtitle" xml:space="preserve"><value>Chia sẻ hồ sơ thiết lập khu vực quốc gia với cộng đồng</value></data>
+  <data name="UploadRegion_CountryLabel" xml:space="preserve"><value>Quốc gia</value></data>
+  <data name="UploadRegion_SelectCountry" xml:space="preserve"><value>Chọn quốc gia...</value></data>
+  <data name="UploadRegion_ChangeLog" xml:space="preserve"><value>Nhật ký thay đổi</value></data>
+  <data name="UploadRegion_ChangeLogPlaceholder" xml:space="preserve"><value>Phiên bản này có gì thay đổi?</value></data>
+  <data name="UploadRegion_DescriptionPlaceholder" xml:space="preserve"><value>Mô tả hồ sơ khu vực...</value></data>
+  <data name="UploadRegion_ProfileRequired" xml:space="preserve"><value>JSON hồ sơ khu vực (bắt buộc)</value></data>
+  <data name="UploadRegion_ValidationErrors" xml:space="preserve"><value>Lỗi xác thực</value></data>
+  <data name="UploadRegion_ValidationWarnings" xml:space="preserve"><value>Cảnh báo xác thực</value></data>
+  <data name="UploadRegion_Success" xml:space="preserve"><value>Gói khu vực đã được gửi để duyệt!</value></data>
+  <data name="UploadRegion_CountryRequired" xml:space="preserve"><value>Vui lòng chọn một quốc gia</value></data>
+  <data name="MyPackages_NoRegions" xml:space="preserve"><value>Chưa có gói khu vực nào</value></data>
+  <data name="MyPackages_NoRegionsDesc" xml:space="preserve"><value>Bạn chưa tải lên gói khu vực nào.</value></data>
+  <data name="MyPackages_UploadFirstRegion" xml:space="preserve"><value>Tải lên gói khu vực đầu tiên của bạn</value></data>
+  <data name="Admin_PendingRegions" xml:space="preserve"><value>Khu vực đang chờ duyệt</value></data>
+  <data name="Admin_PendingRegionPackages" xml:space="preserve"><value>Gói khu vực đang chờ duyệt</value></data>
+  <data name="Admin_NoPendingRegions" xml:space="preserve"><value>Không có gói khu vực nào đang chờ duyệt</value></data>
+  <data name="Admin_RegionApproved" xml:space="preserve"><value>Gói khu vực đã được phê duyệt</value></data>
+  <data name="Admin_RegionRejected" xml:space="preserve"><value>Gói khu vực đã bị từ chối</value></data>
+  <data name="Admin_RejectRegionTitle" xml:space="preserve"><value>Từ chối gói khu vực</value></data>
+  <data name="Admin_RejectRegionMessage" xml:space="preserve"><value>Bạn có chắc chắn muốn từ chối gói khu vực này không?</value></data>
+</root>
