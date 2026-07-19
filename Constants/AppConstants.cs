@@ -15,6 +15,7 @@ public static class AppConstants
     public const int DownloadRateLimitPermitLimit = 30;
     public const int DownloadRateLimitWindowSeconds = 60;
     public const string UnknownClientIp = "unknown";
+    public const string SignatureHeaderName = "X-Klacks-Signature";
     public const string ManifestFileName = "manifest.json";
     public const string TranslationsFileName = "translations.json";
     public const string DocsFileName = "docs.json";

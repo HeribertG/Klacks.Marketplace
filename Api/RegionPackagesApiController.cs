@@ -7,6 +7,7 @@
 /// <param name="validationService">Service for region profile JSON validation</param>
 /// <param name="patchService">Service for patching profile JSON with package identity and industry selection</param>
 /// <param name="artifactService">Service for assembling on-prem and compose ZIP bundles</param>
+/// <param name="signingService">Service for signing download artifacts with the vendor private key</param>
 /// <param name="authService">Service for system user management during API uploads</param>
 /// <param name="configuration">Configuration for API key validation</param>
 using System.Text;
@@ -26,6 +27,7 @@ public class RegionPackagesApiController(
     IRegionProfileValidationService validationService,
     IRegionProfilePatchService patchService,
     IRegionArtifactService artifactService,
+    IRegionArtifactSigningService signingService,
     IAuthService authService,
     IConfiguration configuration) : ControllerBase
 {
@@ -129,21 +131,29 @@ public class RegionPackagesApiController(
             normalizedCountry, selectedIndustry, selectedArtifact, ipAddress);
         var patchedProfileJson = patchService.PatchProfileJson(profileJson, package.CountryCode, version, selectedIndustry);
 
-        return selectedArtifact switch
+        var (fileBytes, contentType, fileName) = selectedArtifact switch
         {
-            RegionArtifactType.OnPremZip => File(
+            RegionArtifactType.OnPremZip => (
                 artifactService.BuildOnPremBundle(package.CountryCode, patchedProfileJson),
                 ZipContentType,
                 string.Format(OnPremZipFileNameFormat, package.CountryCode, selectedIndustry)),
-            RegionArtifactType.ComposeZip => File(
+            RegionArtifactType.ComposeZip => (
                 artifactService.BuildComposeBundle(package.CountryCode, patchedProfileJson),
                 ZipContentType,
                 string.Format(ComposeZipFileNameFormat, package.CountryCode, selectedIndustry)),
-            _ => File(
+            _ => (
                 Encoding.UTF8.GetBytes(patchedProfileJson),
                 ProfileContentType,
                 string.Format(ProfileFileNameFormat, package.CountryCode))
         };
+
+        var signature = signingService.SignPayload(fileBytes);
+        if (signature is not null)
+        {
+            Response.Headers.Append(AppConstants.SignatureHeaderName, signature);
+        }
+
+        return File(fileBytes, contentType, fileName);
     }
 
     [HttpPost]

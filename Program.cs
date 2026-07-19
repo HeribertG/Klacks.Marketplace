@@ -24,6 +24,9 @@ builder.Services.AddDbContext<MarketplaceDbContext>(options =>
     options.UseSqlite($"Data Source={dbPath}");
 });
 
+builder.Services.Configure<ForwardedHeadersOptions>(options =>
+    ForwardedHeadersSetup.Configure(options, builder.Configuration));
+
 builder.Services.AddRateLimiter(options =>
 {
     options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
@@ -58,6 +61,7 @@ builder.Services.AddScoped<IRegionProfileValidationService, RegionProfileValidat
 builder.Services.AddScoped<IRegionPackageSeedService, RegionPackageSeedService>();
 builder.Services.AddScoped<IRegionProfilePatchService, RegionProfilePatchService>();
 builder.Services.AddSingleton<IRegionArtifactService, RegionArtifactService>();
+builder.Services.AddSingleton<IRegionArtifactSigningService, RegionArtifactSigningService>();
 
 var app = builder.Build();
 
@@ -86,6 +90,8 @@ await using (var scope = app.Services.CreateAsyncScope())
     var regionSeedService = scope.ServiceProvider.GetRequiredService<IRegionPackageSeedService>();
     await regionSeedService.SeedAsync();
 }
+
+app.UseForwardedHeaders();
 
 if (!app.Environment.IsDevelopment())
 {

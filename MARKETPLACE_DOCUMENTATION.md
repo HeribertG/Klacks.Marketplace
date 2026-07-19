@@ -258,6 +258,38 @@ Older Klacks binaries reject unknown top-level fields, so the patched profile re
 
 ZIPs are assembled in memory by `RegionArtifactService` from `Resources/OnPremTemplate` (copied from `Klacks.Api/deploy/onprem`, without the `regions/*.json` profiles — the profile always comes from the database). Shell scripts carry Unix mode 0755 in the ZIP entry attributes. Each download increments the package counter and writes a `RegionDownloadLog` row with the artifact type and industry.
 
+### Download Artifact Signing
+
+Every `/api/regions/{cc}/download` response (all three artifact types) is signed with the vendor
+private key when one is configured: `RegionArtifactSigningService` computes an RSA-SHA256
+(PKCS#1 v1.5) signature over the exact response body bytes and returns it Base64-encoded in the
+`X-Klacks-Signature` response header. This is the same scheme and key pair as the release update
+manifest (CI secret `UPDATE_SIGNATURE_PRIVATE_KEY_B64`; installations hold the public half as
+`Update__SignaturePublicKey` / `UPDATE_SIGNATURE_PUBLIC_KEY`).
+
+- Configuration: `RegionSigning:PrivateKeyPem` (PEM; a single-line value may escape newlines as
+  `\n`). On the server set it via the environment variable `RegionSigning__PrivateKeyPem` — the
+  private key is never stored in the repository, `appsettings.json` only carries an empty
+  placeholder.
+- Without a configured key the marketplace serves unsigned downloads (logged as a warning), so
+  older setups keep working.
+- Klacks.Api verifies the header in `RegionPackageSignatureVerifier` before applying a region
+  package auto-update: once `Update:SignaturePublicKey` is configured, a missing or invalid
+  signature is always rejected (status `signatureRejected`) — stripping the header cannot
+  downgrade verification. Without a configured public key, downloads are rejected when the
+  installation sets `Update:RequireSignedRegionPackages` and otherwise accepted with a warning
+  (default `false` for rollout compatibility).
+
+### Reverse Proxy (nginx) & Rate Limiting
+
+The download rate limiter partitions on the client IP. Behind nginx the connection IP would be
+the proxy, so `Program.cs` enables forwarded-header processing (`X-Forwarded-For` /
+`X-Forwarded-Proto`) via `ForwardedHeadersSetup`. Trusted proxy sources are loopback and the
+private RFC1918 ranges by default; additional entries can be configured with
+`ForwardedHeaders:KnownProxies` (IP list) and `ForwardedHeaders:KnownNetworks` (CIDR list).
+Requests arriving directly from public addresses are not trusted, so a spoofed
+`X-Forwarded-For` header cannot fake a rate-limit partition.
+
 ### API Key Authentication
 Upload endpoints require `X-Api-Key` header matching `ApiSettings:UploadApiKey` in configuration.
 
@@ -412,7 +444,7 @@ The main Klacks application can install plugins directly from the marketplace:
 ```json
 {
   "LanguagePlugins": {
-    "MarketplaceUrl": "http://157.180.42.127:7003"
+    "MarketplaceUrl": "https://klacks-software.ch:7553"
   }
 }
 ```
@@ -445,7 +477,7 @@ On push to `main`:
 ```json
 {
   "ApiSettings": {
-    "UploadApiKey": "klacks-marketplace-upload-key"
+    "UploadApiKey": ""
   },
   "AdminSettings": {
     "SeedAdminEmail": "admin@klacks.app",

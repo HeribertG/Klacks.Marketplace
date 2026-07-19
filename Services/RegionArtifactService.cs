@@ -168,6 +168,8 @@ public class RegionArtifactService : IRegionArtifactService
 
             UPDATE_MANIFEST_BASE_URL=https://github.com/HeribertG/Klacks.Api/releases/latest/download
             UPDATE_SIGNATURE_PUBLIC_KEY=
+            UPDATE_REQUIRE_SIGNED_REGION_PACKAGES=false
+            KLACKS_MARKETPLACE_URL=https://klacks-software.ch:7553
             """.ReplaceLineEndings(UnixLineEnding) + UnixLineEnding;
     }
 
