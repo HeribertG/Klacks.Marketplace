@@ -119,6 +119,7 @@ var localizationOptions = new RequestLocalizationOptions()
 
 localizationOptions.RequestCultureProviders = new List<IRequestCultureProvider>
 {
+    new QueryStringRequestCultureProvider(),
     new CookieRequestCultureProvider { CookieName = ".AspNetCore.Culture" },
     new AcceptLanguageHeaderRequestCultureProvider()
 };
