@@ -93,10 +93,10 @@ await using (var scope = app.Services.CreateAsyncScope())
 
 app.UseForwardedHeaders();
 
-var pathBase = app.Configuration["PathBase"];
+var pathBase = app.Configuration["PathBase"]?.Trim().Trim('/');
 if (!string.IsNullOrEmpty(pathBase))
 {
-    app.UsePathBase(pathBase);
+    app.UsePathBase($"/{pathBase}");
 }
 
 if (!app.Environment.IsDevelopment())
@@ -133,6 +133,7 @@ app.UseAuthorization();
 app.MapControllers();
 app.MapRazorPages();
 app.MapBlazorHub();
+app.MapFallback("api/{**rest}", () => Results.NotFound());
 app.MapFallbackToPage("/_Host");
 
 app.Run();
