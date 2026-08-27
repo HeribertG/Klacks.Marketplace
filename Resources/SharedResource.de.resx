@@ -190,18 +190,18 @@
   <data name="Status_Rejected" xml:space="preserve"><value>Abgelehnt</value></data>
   <data name="Status_Draft" xml:space="preserve"><value>Entwurf</value></data>
   <data name="Status_Unknown" xml:space="preserve"><value>Unbekannt</value></data>
-  <data name="Common_Deployment" xml:space="preserve"><value>Deployment</value></data>
+  <data name="Common_Deployment" xml:space="preserve"><value>Klacks-Installation</value></data>
   <data name="Common_RegionPackage" xml:space="preserve"><value>Region-Paket</value></data>
   <data name="Common_Country" xml:space="preserve"><value>Land</value></data>
   <data name="Nav_UploadRegion" xml:space="preserve"><value>Region hochladen</value></data>
   <data name="Index_SearchRegions" xml:space="preserve"><value>Region-Pakete durchsuchen...</value></data>
   <data name="Index_NoRegionsFound" xml:space="preserve"><value>Keine Region-Pakete gefunden</value></data>
   <data name="Index_BeFirstRegion" xml:space="preserve"><value>Lade das erste Region-Paket hoch!</value></data>
-  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>Länder-Deployment-Profile für neue Installationen.</value></data>
+  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>Länder-Setup-Profile für neue Installationen.</value></data>
   <data name="RegionDetail_NotFound" xml:space="preserve"><value>Region-Paket nicht gefunden</value></data>
   <data name="RegionDetail_NotFoundDesc" xml:space="preserve"><value>Das angeforderte Region-Paket existiert nicht oder ist nicht veröffentlicht.</value></data>
   <data name="RegionDetail_IndustryLabel" xml:space="preserve"><value>Branche</value></data>
-  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>Deployment-Downloads</value></data>
+  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>Installations-Downloads</value></data>
   <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>Profil-JSON</value></data>
   <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>Regionsprofil für eine bestehende Klacks-Installation — als Region-Setup-Datei mounten.</value></data>
   <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>On-Prem-Bundle</value></data>

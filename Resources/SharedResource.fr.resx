@@ -190,18 +190,18 @@
   <data name="Status_Rejected" xml:space="preserve"><value>Rejeté</value></data>
   <data name="Status_Draft" xml:space="preserve"><value>Brouillon</value></data>
   <data name="Status_Unknown" xml:space="preserve"><value>Inconnu</value></data>
-  <data name="Common_Deployment" xml:space="preserve"><value>Déploiement</value></data>
+  <data name="Common_Deployment" xml:space="preserve"><value>Installation Klacks</value></data>
   <data name="Common_RegionPackage" xml:space="preserve"><value>Paquet région</value></data>
   <data name="Common_Country" xml:space="preserve"><value>Pays</value></data>
   <data name="Nav_UploadRegion" xml:space="preserve"><value>Téléverser une région</value></data>
   <data name="Index_SearchRegions" xml:space="preserve"><value>Rechercher des paquets région...</value></data>
   <data name="Index_NoRegionsFound" xml:space="preserve"><value>Aucun paquet région trouvé</value></data>
   <data name="Index_BeFirstRegion" xml:space="preserve"><value>Soyez le premier à téléverser un paquet région !</value></data>
-  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>Profils de déploiement par pays pour les nouvelles installations.</value></data>
+  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>Profils de configuration par pays pour les nouvelles installations.</value></data>
   <data name="RegionDetail_NotFound" xml:space="preserve"><value>Paquet région introuvable</value></data>
   <data name="RegionDetail_NotFoundDesc" xml:space="preserve"><value>Le paquet région demandé n'existe pas ou n'est pas publié.</value></data>
   <data name="RegionDetail_IndustryLabel" xml:space="preserve"><value>Secteur</value></data>
-  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>Téléchargements de déploiement</value></data>
+  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>Téléchargements d'installation</value></data>
   <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>JSON de profil</value></data>
   <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>Profil de région pour une installation Klacks existante — à monter comme fichier de configuration de région.</value></data>
   <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>Bundle On-Prem</value></data>

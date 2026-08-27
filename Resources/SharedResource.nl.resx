@@ -190,18 +190,18 @@
   <data name="Status_Rejected" xml:space="preserve"><value>Afgewezen</value></data>
   <data name="Status_Draft" xml:space="preserve"><value>Concept</value></data>
   <data name="Status_Unknown" xml:space="preserve"><value>Onbekend</value></data>
-  <data name="Common_Deployment" xml:space="preserve"><value>Implementatie</value></data>
+  <data name="Common_Deployment" xml:space="preserve"><value>Klacks-installatie</value></data>
   <data name="Common_RegionPackage" xml:space="preserve"><value>Regiopakket</value></data>
   <data name="Common_Country" xml:space="preserve"><value>Land</value></data>
   <data name="Nav_UploadRegion" xml:space="preserve"><value>Regio uploaden</value></data>
   <data name="Index_SearchRegions" xml:space="preserve"><value>Regiopakketten zoeken...</value></data>
   <data name="Index_NoRegionsFound" xml:space="preserve"><value>Geen regiopakketten gevonden</value></data>
   <data name="Index_BeFirstRegion" xml:space="preserve"><value>Wees de eerste die een regiopakket uploadt!</value></data>
-  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>Landimplementatieprofielen voor nieuwe installaties.</value></data>
+  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>Landconfiguratieprofielen voor nieuwe installaties.</value></data>
   <data name="RegionDetail_NotFound" xml:space="preserve"><value>Regiopakket niet gevonden</value></data>
   <data name="RegionDetail_NotFoundDesc" xml:space="preserve"><value>Het opgevraagde regiopakket bestaat niet of is niet gepubliceerd.</value></data>
   <data name="RegionDetail_IndustryLabel" xml:space="preserve"><value>Branche</value></data>
-  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>Implementatiedownloads</value></data>
+  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>Installatiedownloads</value></data>
   <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>Profiel-JSON</value></data>
   <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>Regioprofiel voor een bestaande Klacks-installatie — koppel het als het regio-instellingenbestand.</value></data>
   <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>On-premise bundel</value></data>

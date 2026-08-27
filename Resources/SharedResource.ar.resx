@@ -190,18 +190,18 @@
   <data name="Status_Rejected" xml:space="preserve"><value>مرفوض</value></data>
   <data name="Status_Draft" xml:space="preserve"><value>مسودة</value></data>
   <data name="Status_Unknown" xml:space="preserve"><value>غير معروف</value></data>
-  <data name="Common_Deployment" xml:space="preserve"><value>النشر</value></data>
+  <data name="Common_Deployment" xml:space="preserve"><value>تثبيت Klacks</value></data>
   <data name="Common_RegionPackage" xml:space="preserve"><value>حزمة إقليمية</value></data>
   <data name="Common_Country" xml:space="preserve"><value>الدولة</value></data>
   <data name="Nav_UploadRegion" xml:space="preserve"><value>رفع حزمة إقليمية</value></data>
   <data name="Index_SearchRegions" xml:space="preserve"><value>البحث في الحزم الإقليمية...</value></data>
   <data name="Index_NoRegionsFound" xml:space="preserve"><value>لم يتم العثور على حزم إقليمية</value></data>
   <data name="Index_BeFirstRegion" xml:space="preserve"><value>كن أول من يرفع حزمة إقليمية!</value></data>
-  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>ملفات تعريف نشر الدول للتثبيتات الجديدة.</value></data>
+  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>ملفات تعريف إعداد الدول للتثبيتات الجديدة.</value></data>
   <data name="RegionDetail_NotFound" xml:space="preserve"><value>الحزمة الإقليمية غير موجودة</value></data>
   <data name="RegionDetail_NotFoundDesc" xml:space="preserve"><value>الحزمة الإقليمية المطلوبة غير موجودة أو غير منشورة.</value></data>
   <data name="RegionDetail_IndustryLabel" xml:space="preserve"><value>القطاع</value></data>
-  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>تنزيلات النشر</value></data>
+  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>تنزيلات التثبيت</value></data>
   <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>ملف تعريف JSON</value></data>
   <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>ملف تعريف إقليمي لتثبيت Klacks الحالي — قم بتحميله كملف إعداد المنطقة.</value></data>
   <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>حزمة التثبيت المحلي</value></data>

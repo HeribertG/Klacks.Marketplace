@@ -190,18 +190,18 @@
   <data name="Status_Rejected" xml:space="preserve"><value>Avvisad</value></data>
   <data name="Status_Draft" xml:space="preserve"><value>Utkast</value></data>
   <data name="Status_Unknown" xml:space="preserve"><value>Okänd</value></data>
-  <data name="Common_Deployment" xml:space="preserve"><value>Driftsättning</value></data>
+  <data name="Common_Deployment" xml:space="preserve"><value>Klacks-installation</value></data>
   <data name="Common_RegionPackage" xml:space="preserve"><value>Regionpaket</value></data>
   <data name="Common_Country" xml:space="preserve"><value>Land</value></data>
   <data name="Nav_UploadRegion" xml:space="preserve"><value>Ladda upp region</value></data>
   <data name="Index_SearchRegions" xml:space="preserve"><value>Sök regionpaket...</value></data>
   <data name="Index_NoRegionsFound" xml:space="preserve"><value>Inga regionpaket hittades</value></data>
   <data name="Index_BeFirstRegion" xml:space="preserve"><value>Bli den första att ladda upp ett regionpaket!</value></data>
-  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>Landsspecifika driftsättningsprofiler för nya installationer.</value></data>
+  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>Landsspecifika konfigurationsprofiler för nya installationer.</value></data>
   <data name="RegionDetail_NotFound" xml:space="preserve"><value>Regionpaketet hittades inte</value></data>
   <data name="RegionDetail_NotFoundDesc" xml:space="preserve"><value>Det begärda regionpaketet finns inte eller är inte publicerat.</value></data>
   <data name="RegionDetail_IndustryLabel" xml:space="preserve"><value>Bransch</value></data>
-  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>Hämtningar för driftsättning</value></data>
+  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>Hämtningar för installation</value></data>
   <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>Profil-JSON</value></data>
   <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>Regionprofil för en befintlig Klacks-installation – montera den som regionens konfigurationsfil.</value></data>
   <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>On-Prem-paket</value></data>

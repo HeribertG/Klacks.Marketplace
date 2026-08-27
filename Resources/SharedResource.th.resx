@@ -190,18 +190,18 @@
   <data name="Status_Rejected" xml:space="preserve"><value>ถูกปฏิเสธ</value></data>
   <data name="Status_Draft" xml:space="preserve"><value>ฉบับร่าง</value></data>
   <data name="Status_Unknown" xml:space="preserve"><value>ไม่ทราบ</value></data>
-  <data name="Common_Deployment" xml:space="preserve"><value>การปรับใช้</value></data>
+  <data name="Common_Deployment" xml:space="preserve"><value>การติดตั้ง Klacks</value></data>
   <data name="Common_RegionPackage" xml:space="preserve"><value>แพ็กเกจภูมิภาค</value></data>
   <data name="Common_Country" xml:space="preserve"><value>ประเทศ</value></data>
   <data name="Nav_UploadRegion" xml:space="preserve"><value>อัปโหลดภูมิภาค</value></data>
   <data name="Index_SearchRegions" xml:space="preserve"><value>ค้นหาแพ็กเกจภูมิภาค...</value></data>
   <data name="Index_NoRegionsFound" xml:space="preserve"><value>ไม่พบแพ็กเกจภูมิภาค</value></data>
   <data name="Index_BeFirstRegion" xml:space="preserve"><value>เป็นคนแรกที่อัปโหลดแพ็กเกจภูมิภาค!</value></data>
-  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>โปรไฟล์การปรับใช้ตามประเทศสำหรับการติดตั้งใหม่</value></data>
+  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>โปรไฟล์การตั้งค่าตามประเทศสำหรับการติดตั้งใหม่</value></data>
   <data name="RegionDetail_NotFound" xml:space="preserve"><value>ไม่พบแพ็กเกจภูมิภาค</value></data>
   <data name="RegionDetail_NotFoundDesc" xml:space="preserve"><value>แพ็กเกจภูมิภาคที่ร้องขอไม่มีอยู่หรือยังไม่ได้เผยแพร่</value></data>
   <data name="RegionDetail_IndustryLabel" xml:space="preserve"><value>อุตสาหกรรม</value></data>
-  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>ไฟล์ดาวน์โหลดสำหรับการปรับใช้</value></data>
+  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>ไฟล์ดาวน์โหลดสำหรับการติดตั้ง</value></data>
   <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>โปรไฟล์ JSON</value></data>
   <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>โปรไฟล์ภูมิภาคสำหรับการติดตั้ง Klacks ที่มีอยู่แล้ว — เมาท์เป็นไฟล์ตั้งค่าภูมิภาค</value></data>
   <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>ชุดติดตั้งแบบ On-Prem</value></data>

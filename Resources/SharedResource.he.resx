@@ -190,18 +190,18 @@
   <data name="Status_Rejected" xml:space="preserve"><value>נדחה</value></data>
   <data name="Status_Draft" xml:space="preserve"><value>טיוטה</value></data>
   <data name="Status_Unknown" xml:space="preserve"><value>לא ידוע</value></data>
-  <data name="Common_Deployment" xml:space="preserve"><value>פריסה</value></data>
+  <data name="Common_Deployment" xml:space="preserve"><value>התקנת Klacks</value></data>
   <data name="Common_RegionPackage" xml:space="preserve"><value>חבילת אזור</value></data>
   <data name="Common_Country" xml:space="preserve"><value>מדינה</value></data>
   <data name="Nav_UploadRegion" xml:space="preserve"><value>העלאת אזור</value></data>
   <data name="Index_SearchRegions" xml:space="preserve"><value>חיפוש חבילות אזור...</value></data>
   <data name="Index_NoRegionsFound" xml:space="preserve"><value>לא נמצאו חבילות אזור</value></data>
   <data name="Index_BeFirstRegion" xml:space="preserve"><value>היו הראשונים להעלות חבילת אזור!</value></data>
-  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>פרופילי פריסה למדינות עבור התקנות חדשות.</value></data>
+  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>פרופילי הגדרה למדינות עבור התקנות חדשות.</value></data>
   <data name="RegionDetail_NotFound" xml:space="preserve"><value>חבילת האזור לא נמצאה</value></data>
   <data name="RegionDetail_NotFoundDesc" xml:space="preserve"><value>חבילת האזור המבוקשת אינה קיימת או שאינה מפורסמת.</value></data>
   <data name="RegionDetail_IndustryLabel" xml:space="preserve"><value>ענף</value></data>
-  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>הורדות פריסה</value></data>
+  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>הורדות התקנה</value></data>
   <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>JSON של הפרופיל</value></data>
   <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>פרופיל אזור עבור התקנת Klacks קיימת — יש לחבר אותו כקובץ הגדרת האזור.</value></data>
   <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>חבילת On-Prem</value></data>

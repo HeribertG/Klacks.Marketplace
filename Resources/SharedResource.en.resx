@@ -190,18 +190,18 @@
   <data name="Status_Rejected" xml:space="preserve"><value>Rejected</value></data>
   <data name="Status_Draft" xml:space="preserve"><value>Draft</value></data>
   <data name="Status_Unknown" xml:space="preserve"><value>Unknown</value></data>
-  <data name="Common_Deployment" xml:space="preserve"><value>Deployment</value></data>
+  <data name="Common_Deployment" xml:space="preserve"><value>Klacks Installation</value></data>
   <data name="Common_RegionPackage" xml:space="preserve"><value>Region Package</value></data>
   <data name="Common_Country" xml:space="preserve"><value>Country</value></data>
   <data name="Nav_UploadRegion" xml:space="preserve"><value>Upload Region</value></data>
   <data name="Index_SearchRegions" xml:space="preserve"><value>Search region packages...</value></data>
   <data name="Index_NoRegionsFound" xml:space="preserve"><value>No region packages found</value></data>
   <data name="Index_BeFirstRegion" xml:space="preserve"><value>Be the first to upload a region package!</value></data>
-  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>Country deployment profiles for new installations.</value></data>
+  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>Country setup profiles for new installations.</value></data>
   <data name="RegionDetail_NotFound" xml:space="preserve"><value>Region package not found</value></data>
   <data name="RegionDetail_NotFoundDesc" xml:space="preserve"><value>The requested region package does not exist or is not published.</value></data>
   <data name="RegionDetail_IndustryLabel" xml:space="preserve"><value>Industry</value></data>
-  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>Deployment downloads</value></data>
+  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>Installation downloads</value></data>
   <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>Profile JSON</value></data>
   <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>Region profile for an existing Klacks installation — mount it as the region setup file.</value></data>
   <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>On-Prem bundle</value></data>

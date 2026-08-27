@@ -190,18 +190,18 @@
   <data name="Status_Rejected" xml:space="preserve"><value>Απορρίφθηκε</value></data>
   <data name="Status_Draft" xml:space="preserve"><value>Πρόχειρο</value></data>
   <data name="Status_Unknown" xml:space="preserve"><value>Άγνωστο</value></data>
-  <data name="Common_Deployment" xml:space="preserve"><value>Ανάπτυξη</value></data>
+  <data name="Common_Deployment" xml:space="preserve"><value>Εγκατάσταση Klacks</value></data>
   <data name="Common_RegionPackage" xml:space="preserve"><value>Πακέτο περιοχής</value></data>
   <data name="Common_Country" xml:space="preserve"><value>Χώρα</value></data>
   <data name="Nav_UploadRegion" xml:space="preserve"><value>Μεταφόρτωση περιοχής</value></data>
   <data name="Index_SearchRegions" xml:space="preserve"><value>Αναζήτηση πακέτων περιοχής...</value></data>
   <data name="Index_NoRegionsFound" xml:space="preserve"><value>Δεν βρέθηκαν πακέτα περιοχής</value></data>
   <data name="Index_BeFirstRegion" xml:space="preserve"><value>Γίνετε ο πρώτος που θα μεταφορτώσει ένα πακέτο περιοχής!</value></data>
-  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>Προφίλ ανάπτυξης χωρών για νέες εγκαταστάσεις.</value></data>
+  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>Προφίλ ρύθμισης χωρών για νέες εγκαταστάσεις.</value></data>
   <data name="RegionDetail_NotFound" xml:space="preserve"><value>Το πακέτο περιοχής δεν βρέθηκε</value></data>
   <data name="RegionDetail_NotFoundDesc" xml:space="preserve"><value>Το ζητούμενο πακέτο περιοχής δεν υπάρχει ή δεν έχει δημοσιευτεί.</value></data>
   <data name="RegionDetail_IndustryLabel" xml:space="preserve"><value>Κλάδος</value></data>
-  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>Λήψεις ανάπτυξης</value></data>
+  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>Λήψεις εγκατάστασης</value></data>
   <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>Προφίλ JSON</value></data>
   <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>Προφίλ περιοχής για μια υπάρχουσα εγκατάσταση Klacks — προσαρτήστε το ως αρχείο ρύθμισης περιοχής.</value></data>
   <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>Πακέτο On-Prem</value></data>

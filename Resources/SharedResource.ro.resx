@@ -190,18 +190,18 @@
   <data name="Status_Rejected" xml:space="preserve"><value>Respins</value></data>
   <data name="Status_Draft" xml:space="preserve"><value>Ciornă</value></data>
   <data name="Status_Unknown" xml:space="preserve"><value>Necunoscut</value></data>
-  <data name="Common_Deployment" xml:space="preserve"><value>Implementare</value></data>
+  <data name="Common_Deployment" xml:space="preserve"><value>Instalare Klacks</value></data>
   <data name="Common_RegionPackage" xml:space="preserve"><value>Pachet regional</value></data>
   <data name="Common_Country" xml:space="preserve"><value>Țară</value></data>
   <data name="Nav_UploadRegion" xml:space="preserve"><value>Încarcă regiune</value></data>
   <data name="Index_SearchRegions" xml:space="preserve"><value>Caută pachete regionale...</value></data>
   <data name="Index_NoRegionsFound" xml:space="preserve"><value>Niciun pachet regional găsit</value></data>
   <data name="Index_BeFirstRegion" xml:space="preserve"><value>Fii primul care încarcă un pachet regional!</value></data>
-  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>Profiluri de implementare pe țară pentru instalări noi.</value></data>
+  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>Profiluri de configurare pe țară pentru instalări noi.</value></data>
   <data name="RegionDetail_NotFound" xml:space="preserve"><value>Pachetul regional nu a fost găsit</value></data>
   <data name="RegionDetail_NotFoundDesc" xml:space="preserve"><value>Pachetul regional solicitat nu există sau nu este publicat.</value></data>
   <data name="RegionDetail_IndustryLabel" xml:space="preserve"><value>Industrie</value></data>
-  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>Descărcări de implementare</value></data>
+  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>Descărcări de instalare</value></data>
   <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>JSON de profil</value></data>
   <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>Profil regional pentru o instalare Klacks existentă — montează-l ca fișier de configurare regională.</value></data>
   <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>Pachet On-Prem</value></data>

@@ -190,18 +190,18 @@
   <data name="Status_Rejected" xml:space="preserve"><value>Ditolak</value></data>
   <data name="Status_Draft" xml:space="preserve"><value>Draf</value></data>
   <data name="Status_Unknown" xml:space="preserve"><value>Tidak Diketahui</value></data>
-  <data name="Common_Deployment" xml:space="preserve"><value>Pelaksanaan</value></data>
+  <data name="Common_Deployment" xml:space="preserve"><value>Pemasangan Klacks</value></data>
   <data name="Common_RegionPackage" xml:space="preserve"><value>Pakej Wilayah</value></data>
   <data name="Common_Country" xml:space="preserve"><value>Negara</value></data>
   <data name="Nav_UploadRegion" xml:space="preserve"><value>Muat Naik Wilayah</value></data>
   <data name="Index_SearchRegions" xml:space="preserve"><value>Cari pakej wilayah...</value></data>
   <data name="Index_NoRegionsFound" xml:space="preserve"><value>Tiada pakej wilayah dijumpai</value></data>
   <data name="Index_BeFirstRegion" xml:space="preserve"><value>Jadilah orang pertama memuat naik pakej wilayah!</value></data>
-  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>Profil pelaksanaan negara untuk pemasangan baharu.</value></data>
+  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>Profil persediaan negara untuk pemasangan baharu.</value></data>
   <data name="RegionDetail_NotFound" xml:space="preserve"><value>Pakej wilayah tidak dijumpai</value></data>
   <data name="RegionDetail_NotFoundDesc" xml:space="preserve"><value>Pakej wilayah yang diminta tidak wujud atau belum diterbitkan.</value></data>
   <data name="RegionDetail_IndustryLabel" xml:space="preserve"><value>Industri</value></data>
-  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>Muat turun pelaksanaan</value></data>
+  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>Muat turun pemasangan</value></data>
   <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>JSON Profil</value></data>
   <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>Profil wilayah untuk pemasangan Klacks sedia ada — lekapkan sebagai fail persediaan wilayah.</value></data>
   <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>Bundel On-Prem</value></data>

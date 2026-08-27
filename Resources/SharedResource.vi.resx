@@ -190,18 +190,18 @@
   <data name="Status_Rejected" xml:space="preserve"><value>Đã từ chối</value></data>
   <data name="Status_Draft" xml:space="preserve"><value>Bản nháp</value></data>
   <data name="Status_Unknown" xml:space="preserve"><value>Không xác định</value></data>
-  <data name="Common_Deployment" xml:space="preserve"><value>Triển khai</value></data>
+  <data name="Common_Deployment" xml:space="preserve"><value>Cài đặt Klacks</value></data>
   <data name="Common_RegionPackage" xml:space="preserve"><value>Gói khu vực</value></data>
   <data name="Common_Country" xml:space="preserve"><value>Quốc gia</value></data>
   <data name="Nav_UploadRegion" xml:space="preserve"><value>Tải lên khu vực</value></data>
   <data name="Index_SearchRegions" xml:space="preserve"><value>Tìm kiếm gói khu vực...</value></data>
   <data name="Index_NoRegionsFound" xml:space="preserve"><value>Không tìm thấy gói khu vực nào</value></data>
   <data name="Index_BeFirstRegion" xml:space="preserve"><value>Hãy là người đầu tiên tải lên gói khu vực!</value></data>
-  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>Hồ sơ triển khai quốc gia cho các bản cài đặt mới.</value></data>
+  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>Hồ sơ thiết lập quốc gia cho các bản cài đặt mới.</value></data>
   <data name="RegionDetail_NotFound" xml:space="preserve"><value>Không tìm thấy gói khu vực</value></data>
   <data name="RegionDetail_NotFoundDesc" xml:space="preserve"><value>Gói khu vực được yêu cầu không tồn tại hoặc chưa được xuất bản.</value></data>
   <data name="RegionDetail_IndustryLabel" xml:space="preserve"><value>Ngành</value></data>
-  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>Tải xuống triển khai</value></data>
+  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>Tải xuống cài đặt</value></data>
   <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>JSON hồ sơ</value></data>
   <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>Hồ sơ khu vực cho một bản cài đặt Klacks hiện có — gắn nó làm tệp thiết lập khu vực.</value></data>
   <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>Gói cài đặt tại chỗ (On-Prem)</value></data>

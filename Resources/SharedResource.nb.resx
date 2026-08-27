@@ -190,18 +190,18 @@
   <data name="Status_Rejected" xml:space="preserve"><value>Avvist</value></data>
   <data name="Status_Draft" xml:space="preserve"><value>Utkast</value></data>
   <data name="Status_Unknown" xml:space="preserve"><value>Ukjent</value></data>
-  <data name="Common_Deployment" xml:space="preserve"><value>Utrulling</value></data>
+  <data name="Common_Deployment" xml:space="preserve"><value>Klacks-installasjon</value></data>
   <data name="Common_RegionPackage" xml:space="preserve"><value>Regionpakke</value></data>
   <data name="Common_Country" xml:space="preserve"><value>Land</value></data>
   <data name="Nav_UploadRegion" xml:space="preserve"><value>Last opp region</value></data>
   <data name="Index_SearchRegions" xml:space="preserve"><value>Søk i regionpakker...</value></data>
   <data name="Index_NoRegionsFound" xml:space="preserve"><value>Ingen regionpakker funnet</value></data>
   <data name="Index_BeFirstRegion" xml:space="preserve"><value>Vær den første som laster opp en regionpakke!</value></data>
-  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>Landbaserte utrullingsprofiler for nye installasjoner.</value></data>
+  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>Landbaserte oppsettprofiler for nye installasjoner.</value></data>
   <data name="RegionDetail_NotFound" xml:space="preserve"><value>Regionpakke ikke funnet</value></data>
   <data name="RegionDetail_NotFoundDesc" xml:space="preserve"><value>Den forespurte regionpakken finnes ikke eller er ikke publisert.</value></data>
   <data name="RegionDetail_IndustryLabel" xml:space="preserve"><value>Bransje</value></data>
-  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>Utrullingsnedlastinger</value></data>
+  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>Installasjonsnedlastinger</value></data>
   <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>Profil-JSON</value></data>
   <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>Regionprofil for en eksisterende Klacks-installasjon — monter den som regionoppsettfilen.</value></data>
   <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>On-Prem-pakke</value></data>

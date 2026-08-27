@@ -190,18 +190,18 @@
   <data name="Status_Rejected" xml:space="preserve"><value>Hylätty</value></data>
   <data name="Status_Draft" xml:space="preserve"><value>Luonnos</value></data>
   <data name="Status_Unknown" xml:space="preserve"><value>Tuntematon</value></data>
-  <data name="Common_Deployment" xml:space="preserve"><value>Käyttöönotto</value></data>
+  <data name="Common_Deployment" xml:space="preserve"><value>Klacks-asennus</value></data>
   <data name="Common_RegionPackage" xml:space="preserve"><value>Aluepaketti</value></data>
   <data name="Common_Country" xml:space="preserve"><value>Maa</value></data>
   <data name="Nav_UploadRegion" xml:space="preserve"><value>Lähetä alue</value></data>
   <data name="Index_SearchRegions" xml:space="preserve"><value>Hae aluepaketteja...</value></data>
   <data name="Index_NoRegionsFound" xml:space="preserve"><value>Aluepaketteja ei löytynyt</value></data>
   <data name="Index_BeFirstRegion" xml:space="preserve"><value>Ole ensimmäinen, joka lähettää aluepaketin!</value></data>
-  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>Maakohtaisia käyttöönottoprofiileja uusille asennuksille.</value></data>
+  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>Maakohtaisia määritysprofiileja uusille asennuksille.</value></data>
   <data name="RegionDetail_NotFound" xml:space="preserve"><value>Aluepakettia ei löytynyt</value></data>
   <data name="RegionDetail_NotFoundDesc" xml:space="preserve"><value>Pyydettyä aluepakettia ei ole olemassa tai sitä ei ole julkaistu.</value></data>
   <data name="RegionDetail_IndustryLabel" xml:space="preserve"><value>Toimiala</value></data>
-  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>Käyttöönottolataukset</value></data>
+  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>Asennuslataukset</value></data>
   <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>Profiili-JSON</value></data>
   <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>Alueprofiili olemassa olevalle Klacks-asennukselle — liitä se aluemäärityksen tiedostoksi.</value></data>
   <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>On-Prem-paketti</value></data>

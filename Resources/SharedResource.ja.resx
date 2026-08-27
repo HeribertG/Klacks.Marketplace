@@ -190,18 +190,18 @@
   <data name="Status_Rejected" xml:space="preserve"><value>却下</value></data>
   <data name="Status_Draft" xml:space="preserve"><value>下書き</value></data>
   <data name="Status_Unknown" xml:space="preserve"><value>不明</value></data>
-  <data name="Common_Deployment" xml:space="preserve"><value>デプロイ</value></data>
+  <data name="Common_Deployment" xml:space="preserve"><value>Klacks インストール</value></data>
   <data name="Common_RegionPackage" xml:space="preserve"><value>リージョンパッケージ</value></data>
   <data name="Common_Country" xml:space="preserve"><value>国</value></data>
   <data name="Nav_UploadRegion" xml:space="preserve"><value>リージョンをアップロード</value></data>
   <data name="Index_SearchRegions" xml:space="preserve"><value>リージョンパッケージを検索...</value></data>
   <data name="Index_NoRegionsFound" xml:space="preserve"><value>リージョンパッケージが見つかりません</value></data>
   <data name="Index_BeFirstRegion" xml:space="preserve"><value>最初のリージョンパッケージをアップロードしましょう!</value></data>
-  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>新規インストール向けの国別デプロイプロファイル。</value></data>
+  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>新規インストール向けの国別セットアッププロファイル。</value></data>
   <data name="RegionDetail_NotFound" xml:space="preserve"><value>リージョンパッケージが見つかりません</value></data>
   <data name="RegionDetail_NotFoundDesc" xml:space="preserve"><value>要求されたリージョンパッケージは存在しないか、公開されていません。</value></data>
   <data name="RegionDetail_IndustryLabel" xml:space="preserve"><value>業種</value></data>
-  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>デプロイ用ダウンロード</value></data>
+  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>インストール用ダウンロード</value></data>
   <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>プロファイル JSON</value></data>
   <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>既存の Klacks インストール用のリージョンプロファイルです。リージョンセットアップファイルとしてマウントしてください。</value></data>
   <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>オンプレミスバンドル</value></data>

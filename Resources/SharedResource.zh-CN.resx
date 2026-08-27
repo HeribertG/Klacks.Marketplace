@@ -190,18 +190,18 @@
   <data name="Status_Rejected" xml:space="preserve"><value>已拒绝</value></data>
   <data name="Status_Draft" xml:space="preserve"><value>草稿</value></data>
   <data name="Status_Unknown" xml:space="preserve"><value>未知</value></data>
-  <data name="Common_Deployment" xml:space="preserve"><value>部署</value></data>
+  <data name="Common_Deployment" xml:space="preserve"><value>Klacks 安装</value></data>
   <data name="Common_RegionPackage" xml:space="preserve"><value>区域包</value></data>
   <data name="Common_Country" xml:space="preserve"><value>国家/地区</value></data>
   <data name="Nav_UploadRegion" xml:space="preserve"><value>上传区域包</value></data>
   <data name="Index_SearchRegions" xml:space="preserve"><value>搜索区域包...</value></data>
   <data name="Index_NoRegionsFound" xml:space="preserve"><value>未找到任何区域包</value></data>
   <data name="Index_BeFirstRegion" xml:space="preserve"><value>抢先上传第一个区域包！</value></data>
-  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>用于新安装的国家/地区部署配置文件。</value></data>
+  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>用于新安装的国家/地区配置文件。</value></data>
   <data name="RegionDetail_NotFound" xml:space="preserve"><value>未找到该区域包</value></data>
   <data name="RegionDetail_NotFoundDesc" xml:space="preserve"><value>请求的区域包不存在或尚未发布。</value></data>
   <data name="RegionDetail_IndustryLabel" xml:space="preserve"><value>行业</value></data>
-  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>部署下载</value></data>
+  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>安装下载</value></data>
   <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>配置文件 JSON</value></data>
   <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>适用于现有 Klacks 安装的区域配置文件——将其挂载为区域设置文件。</value></data>
   <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>本地部署包</value></data>

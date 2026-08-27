@@ -190,18 +190,18 @@
   <data name="Status_Rejected" xml:space="preserve"><value>Zamítnuto</value></data>
   <data name="Status_Draft" xml:space="preserve"><value>Koncept</value></data>
   <data name="Status_Unknown" xml:space="preserve"><value>Neznámé</value></data>
-  <data name="Common_Deployment" xml:space="preserve"><value>Nasazení</value></data>
+  <data name="Common_Deployment" xml:space="preserve"><value>Instalace Klacks</value></data>
   <data name="Common_RegionPackage" xml:space="preserve"><value>Regionální balíček</value></data>
   <data name="Common_Country" xml:space="preserve"><value>Země</value></data>
   <data name="Nav_UploadRegion" xml:space="preserve"><value>Nahrát region</value></data>
   <data name="Index_SearchRegions" xml:space="preserve"><value>Hledat regionální balíčky...</value></data>
   <data name="Index_NoRegionsFound" xml:space="preserve"><value>Nebyly nalezeny žádné regionální balíčky</value></data>
   <data name="Index_BeFirstRegion" xml:space="preserve"><value>Buďte první, kdo nahraje regionální balíček!</value></data>
-  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>Profily nasazení pro jednotlivé země pro nové instalace.</value></data>
+  <data name="Index_RegionsSubtitle" xml:space="preserve"><value>Profily nastavení pro jednotlivé země pro nové instalace.</value></data>
   <data name="RegionDetail_NotFound" xml:space="preserve"><value>Regionální balíček nenalezen</value></data>
   <data name="RegionDetail_NotFoundDesc" xml:space="preserve"><value>Požadovaný regionální balíček neexistuje nebo není publikován.</value></data>
   <data name="RegionDetail_IndustryLabel" xml:space="preserve"><value>Odvětví</value></data>
-  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>Soubory ke stažení pro nasazení</value></data>
+  <data name="RegionDetail_ArtifactsTitle" xml:space="preserve"><value>Soubory ke stažení pro instalaci</value></data>
   <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>Profil JSON</value></data>
   <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>Regionální profil pro existující instalaci Klacks — připojte jej jako soubor nastavení regionu.</value></data>
   <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>On-Prem balík</value></data>
