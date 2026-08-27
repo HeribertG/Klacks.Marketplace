@@ -55,6 +55,8 @@
   <data name="Common_Code" xml:space="preserve"><value>Kode</value></data>
   <data name="Common_Submitted" xml:space="preserve"><value>Indsendt</value></data>
   <data name="Common_Docs" xml:space="preserve"><value>Dokumentation</value></data>
+  <data name="Common_Date" xml:space="preserve"><value>Dato</value></data>
+  <data name="Common_Count" xml:space="preserve"><value>Antal</value></data>
   <data name="Common_Translations" xml:space="preserve"><value>oversættelser</value></data>
   <data name="Nav_Browse" xml:space="preserve"><value>Gennemse</value></data>
   <data name="Nav_UploadPack" xml:space="preserve"><value>Upload pakke</value></data>
@@ -185,6 +187,8 @@
   <data name="Admin_RejectPluginTitle" xml:space="preserve"><value>Afvis plugin</value></data>
   <data name="Admin_RejectPluginMessage" xml:space="preserve"><value>Er du sikker på, at du vil afvise dette plugin?</value></data>
   <data name="Admin_RejectedByAdmin" xml:space="preserve"><value>Afvist af admin</value></data>
+  <data name="Admin_DownloadStats" xml:space="preserve"><value>Downloadstatistik</value></data>
+  <data name="Admin_NoDownloads" xml:space="preserve"><value>Ingen downloads i denne periode.</value></data>
   <data name="Status_Published" xml:space="preserve"><value>Udgivet</value></data>
   <data name="Status_Pending" xml:space="preserve"><value>Afventer</value></data>
   <data name="Status_Rejected" xml:space="preserve"><value>Afvist</value></data>

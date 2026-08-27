@@ -213,6 +213,38 @@
             </table>
         </div>
 
+        <h3 class="text-xl font-bold mb-4 mt-8">@L["Admin_DownloadStats"]</h3>
+        @if (_downloadStats.Count == 0)
+        {
+            <div class="bg-secondary-fixed text-on-secondary-fixed-variant rounded-xl px-6 py-4 mb-8">@L["Admin_NoDownloads"]</div>
+        }
+        else
+        {
+            <div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(27,27,29,0.04)] mb-8">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="bg-surface-container-low text-on-surface-variant text-xs uppercase tracking-wider">
+                            <th class="px-6 py-4 text-left font-bold">@L["Common_Date"]</th>
+                            <th class="px-6 py-4 text-left font-bold">@L["Common_Country"]</th>
+                            <th class="px-6 py-4 text-left font-bold">@L["Common_Package"]</th>
+                            <th class="px-6 py-4 text-left font-bold">@L["Common_Count"]</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-outline-variant/20">
+                        @foreach (var stat in _downloadStats)
+                        {
+                            <tr class="hover:bg-surface-container-low/50 transition-colors">
+                                <td class="px-6 py-4">@stat.Date.ToString("yyyy-MM-dd")</td>
+                                <td class="px-6 py-4">@stat.CountryName</td>
+                                <td class="px-6 py-4">@GetArtifactLabel(stat.ArtifactType)</td>
+                                <td class="px-6 py-4 font-bold">@stat.Count</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+
         <ConfirmDialog IsVisible="@_showConfirmReject"
                        Title="@_rejectTitle"
                        Message="@_rejectMessage"
@@ -227,6 +259,8 @@
     private List<FeaturePlugin> _pendingPlugins = [];
     private List<RegionPackage> _pendingRegionPackages = [];
     private List<User> _users = [];
+    private List<RegionDownloadStat> _downloadStats = [];
+    private const int DownloadStatsWindowDays = 90;
     private string _message = string.Empty;
     private string _errorMessage = string.Empty;
     private bool _showConfirmReject;
@@ -252,7 +286,16 @@
         _pendingPlugins = await AdminService.GetPendingPluginsAsync();
         _pendingRegionPackages = await AdminService.GetPendingRegionPackagesAsync();
         _users = await AdminService.GetUsersAsync();
+        _downloadStats = await AdminService.GetRegionDownloadStatsAsync(DownloadStatsWindowDays);
     }
+
+    private string GetArtifactLabel(string artifactType) => artifactType switch
+    {
+        RegionArtifactType.OnPremZip => L["RegionDetail_OnPremBundle"].Value,
+        RegionArtifactType.ComposeZip => L["RegionDetail_ComposeBundle"].Value,
+        RegionArtifactType.ProfileJson => L["RegionDetail_ProfileJson"].Value,
+        _ => artifactType
+    };
 
     private async Task ApprovePackage(int packageId)
     {

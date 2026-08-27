@@ -55,6 +55,8 @@
   <data name="Common_Code" xml:space="preserve"><value>Cod</value></data>
   <data name="Common_Submitted" xml:space="preserve"><value>Trimis</value></data>
   <data name="Common_Docs" xml:space="preserve"><value>Documentație</value></data>
+  <data name="Common_Date" xml:space="preserve"><value>Dată</value></data>
+  <data name="Common_Count" xml:space="preserve"><value>Număr</value></data>
   <data name="Common_Translations" xml:space="preserve"><value>traduceri</value></data>
   <data name="Nav_Browse" xml:space="preserve"><value>Răsfoire</value></data>
   <data name="Nav_UploadPack" xml:space="preserve"><value>Încarcă pachet</value></data>
@@ -185,6 +187,8 @@
   <data name="Admin_RejectPluginTitle" xml:space="preserve"><value>Respinge pluginul</value></data>
   <data name="Admin_RejectPluginMessage" xml:space="preserve"><value>Ești sigur că vrei să respingi acest plugin?</value></data>
   <data name="Admin_RejectedByAdmin" xml:space="preserve"><value>Respins de administrator</value></data>
+  <data name="Admin_DownloadStats" xml:space="preserve"><value>Statistici descărcări</value></data>
+  <data name="Admin_NoDownloads" xml:space="preserve"><value>Nicio descărcare în această perioadă.</value></data>
   <data name="Status_Published" xml:space="preserve"><value>Publicat</value></data>
   <data name="Status_Pending" xml:space="preserve"><value>În așteptare</value></data>
   <data name="Status_Rejected" xml:space="preserve"><value>Respins</value></data>

@@ -199,4 +199,28 @@ public class AdminService : IAdminService
         user.IsAdmin = !user.IsAdmin;
         await _db.SaveChangesAsync();
     }
+
+    public async Task<List<RegionDownloadStat>> GetRegionDownloadStatsAsync(int days)
+    {
+        var since = DateTime.UtcNow.Date.AddDays(-days);
+        var logs = await _db.RegionDownloadLogs
+            .Include(l => l.RegionPackage)
+            .Where(l => l.DownloadedAt >= since)
+            .ToListAsync();
+
+        return logs
+            .GroupBy(l => (l.DownloadedAt.Date, l.RegionPackage.CountryCode, l.RegionPackage.CountryName, l.ArtifactType))
+            .Select(g => new RegionDownloadStat
+            {
+                Date = g.Key.Date,
+                CountryCode = g.Key.CountryCode,
+                CountryName = g.Key.CountryName,
+                ArtifactType = g.Key.ArtifactType,
+                Count = g.Count()
+            })
+            .OrderByDescending(s => s.Date)
+            .ThenBy(s => s.CountryName)
+            .ThenBy(s => s.ArtifactType)
+            .ToList();
+    }
 }

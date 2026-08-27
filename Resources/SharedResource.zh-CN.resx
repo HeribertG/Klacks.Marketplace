@@ -55,6 +55,8 @@
   <data name="Common_Code" xml:space="preserve"><value>代码</value></data>
   <data name="Common_Submitted" xml:space="preserve"><value>已提交</value></data>
   <data name="Common_Docs" xml:space="preserve"><value>文档</value></data>
+  <data name="Common_Date" xml:space="preserve"><value>日期</value></data>
+  <data name="Common_Count" xml:space="preserve"><value>数量</value></data>
   <data name="Common_Translations" xml:space="preserve"><value>翻译</value></data>
   <data name="Nav_Browse" xml:space="preserve"><value>浏览</value></data>
   <data name="Nav_UploadPack" xml:space="preserve"><value>上传语言包</value></data>
@@ -185,6 +187,8 @@
   <data name="Admin_RejectPluginTitle" xml:space="preserve"><value>拒绝该插件</value></data>
   <data name="Admin_RejectPluginMessage" xml:space="preserve"><value>确定要拒绝此插件吗？</value></data>
   <data name="Admin_RejectedByAdmin" xml:space="preserve"><value>已被管理员拒绝</value></data>
+  <data name="Admin_DownloadStats" xml:space="preserve"><value>下载统计</value></data>
+  <data name="Admin_NoDownloads" xml:space="preserve"><value>此期间内没有下载记录。</value></data>
   <data name="Status_Published" xml:space="preserve"><value>已发布</value></data>
   <data name="Status_Pending" xml:space="preserve"><value>待审核</value></data>
   <data name="Status_Rejected" xml:space="preserve"><value>已拒绝</value></data>

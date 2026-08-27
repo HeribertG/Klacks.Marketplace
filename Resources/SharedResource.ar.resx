@@ -55,6 +55,8 @@
   <data name="Common_Code" xml:space="preserve"><value>الرمز</value></data>
   <data name="Common_Submitted" xml:space="preserve"><value>تاريخ التقديم</value></data>
   <data name="Common_Docs" xml:space="preserve"><value>المستندات</value></data>
+  <data name="Common_Date" xml:space="preserve"><value>التاريخ</value></data>
+  <data name="Common_Count" xml:space="preserve"><value>العدد</value></data>
   <data name="Common_Translations" xml:space="preserve"><value>ترجمات</value></data>
   <data name="Nav_Browse" xml:space="preserve"><value>تصفح</value></data>
   <data name="Nav_UploadPack" xml:space="preserve"><value>رفع حزمة</value></data>
@@ -185,6 +187,8 @@
   <data name="Admin_RejectPluginTitle" xml:space="preserve"><value>رفض الإضافة</value></data>
   <data name="Admin_RejectPluginMessage" xml:space="preserve"><value>هل أنت متأكد أنك تريد رفض هذه الإضافة؟</value></data>
   <data name="Admin_RejectedByAdmin" xml:space="preserve"><value>مرفوض من قِبل المسؤول</value></data>
+  <data name="Admin_DownloadStats" xml:space="preserve"><value>إحصاءات التنزيل</value></data>
+  <data name="Admin_NoDownloads" xml:space="preserve"><value>لا توجد تنزيلات في هذه الفترة.</value></data>
   <data name="Status_Published" xml:space="preserve"><value>منشور</value></data>
   <data name="Status_Pending" xml:space="preserve"><value>قيد الانتظار</value></data>
   <data name="Status_Rejected" xml:space="preserve"><value>مرفوض</value></data>

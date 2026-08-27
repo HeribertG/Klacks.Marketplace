@@ -55,6 +55,8 @@
   <data name="Common_Code" xml:space="preserve"><value>קוד</value></data>
   <data name="Common_Submitted" xml:space="preserve"><value>הגשה</value></data>
   <data name="Common_Docs" xml:space="preserve"><value>תיעוד</value></data>
+  <data name="Common_Date" xml:space="preserve"><value>תאריך</value></data>
+  <data name="Common_Count" xml:space="preserve"><value>כמות</value></data>
   <data name="Common_Translations" xml:space="preserve"><value>תרגומים</value></data>
   <data name="Nav_Browse" xml:space="preserve"><value>עיון</value></data>
   <data name="Nav_UploadPack" xml:space="preserve"><value>העלאת חבילה</value></data>
@@ -185,6 +187,8 @@
   <data name="Admin_RejectPluginTitle" xml:space="preserve"><value>דחיית תוסף</value></data>
   <data name="Admin_RejectPluginMessage" xml:space="preserve"><value>האם אתם בטוחים שברצונכם לדחות את התוסף הזה?</value></data>
   <data name="Admin_RejectedByAdmin" xml:space="preserve"><value>נדחה על ידי מנהל</value></data>
+  <data name="Admin_DownloadStats" xml:space="preserve"><value>סטטיסטיקת הורדות</value></data>
+  <data name="Admin_NoDownloads" xml:space="preserve"><value>אין הורדות בתקופה זו.</value></data>
   <data name="Status_Published" xml:space="preserve"><value>פורסם</value></data>
   <data name="Status_Pending" xml:space="preserve"><value>ממתין</value></data>
   <data name="Status_Rejected" xml:space="preserve"><value>נדחה</value></data>

@@ -55,6 +55,8 @@
   <data name="Common_Code" xml:space="preserve"><value>Kod</value></data>
   <data name="Common_Submitted" xml:space="preserve"><value>Inskickad</value></data>
   <data name="Common_Docs" xml:space="preserve"><value>Dokument</value></data>
+  <data name="Common_Date" xml:space="preserve"><value>Datum</value></data>
+  <data name="Common_Count" xml:space="preserve"><value>Antal</value></data>
   <data name="Common_Translations" xml:space="preserve"><value>översättningar</value></data>
   <data name="Nav_Browse" xml:space="preserve"><value>Bläddra</value></data>
   <data name="Nav_UploadPack" xml:space="preserve"><value>Ladda upp paket</value></data>
@@ -185,6 +187,8 @@
   <data name="Admin_RejectPluginTitle" xml:space="preserve"><value>Avvisa tillägg</value></data>
   <data name="Admin_RejectPluginMessage" xml:space="preserve"><value>Är du säker på att du vill avvisa det här tillägget?</value></data>
   <data name="Admin_RejectedByAdmin" xml:space="preserve"><value>Avvisat av admin</value></data>
+  <data name="Admin_DownloadStats" xml:space="preserve"><value>Nedladdningsstatistik</value></data>
+  <data name="Admin_NoDownloads" xml:space="preserve"><value>Inga nedladdningar under denna period.</value></data>
   <data name="Status_Published" xml:space="preserve"><value>Publicerad</value></data>
   <data name="Status_Pending" xml:space="preserve"><value>Väntande</value></data>
   <data name="Status_Rejected" xml:space="preserve"><value>Avvisad</value></data>

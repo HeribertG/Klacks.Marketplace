@@ -55,6 +55,8 @@
   <data name="Common_Code" xml:space="preserve"><value>Koodi</value></data>
   <data name="Common_Submitted" xml:space="preserve"><value>Lähetetty</value></data>
   <data name="Common_Docs" xml:space="preserve"><value>Dokumentaatio</value></data>
+  <data name="Common_Date" xml:space="preserve"><value>Päivämäärä</value></data>
+  <data name="Common_Count" xml:space="preserve"><value>Määrä</value></data>
   <data name="Common_Translations" xml:space="preserve"><value>käännöstä</value></data>
   <data name="Nav_Browse" xml:space="preserve"><value>Selaa</value></data>
   <data name="Nav_UploadPack" xml:space="preserve"><value>Lähetä paketti</value></data>
@@ -185,6 +187,8 @@
   <data name="Admin_RejectPluginTitle" xml:space="preserve"><value>Hylkää laajennus</value></data>
   <data name="Admin_RejectPluginMessage" xml:space="preserve"><value>Haluatko varmasti hylätä tämän laajennuksen?</value></data>
   <data name="Admin_RejectedByAdmin" xml:space="preserve"><value>Ylläpitäjän hylkäämä</value></data>
+  <data name="Admin_DownloadStats" xml:space="preserve"><value>Latausten tilastot</value></data>
+  <data name="Admin_NoDownloads" xml:space="preserve"><value>Ei latauksia tällä ajanjaksolla.</value></data>
   <data name="Status_Published" xml:space="preserve"><value>Julkaistu</value></data>
   <data name="Status_Pending" xml:space="preserve"><value>Odottaa</value></data>
   <data name="Status_Rejected" xml:space="preserve"><value>Hylätty</value></data>

@@ -55,6 +55,8 @@
   <data name="Common_Code" xml:space="preserve"><value>Code</value></data>
   <data name="Common_Submitted" xml:space="preserve"><value>Submitted</value></data>
   <data name="Common_Docs" xml:space="preserve"><value>Docs</value></data>
+  <data name="Common_Date" xml:space="preserve"><value>Date</value></data>
+  <data name="Common_Count" xml:space="preserve"><value>Count</value></data>
   <data name="Common_Translations" xml:space="preserve"><value>translations</value></data>
   <data name="Nav_Browse" xml:space="preserve"><value>Browse</value></data>
   <data name="Nav_UploadPack" xml:space="preserve"><value>Upload Pack</value></data>
@@ -185,6 +187,8 @@
   <data name="Admin_RejectPluginTitle" xml:space="preserve"><value>Reject Plugin</value></data>
   <data name="Admin_RejectPluginMessage" xml:space="preserve"><value>Are you sure you want to reject this plugin?</value></data>
   <data name="Admin_RejectedByAdmin" xml:space="preserve"><value>Rejected by admin</value></data>
+  <data name="Admin_DownloadStats" xml:space="preserve"><value>Download Statistics</value></data>
+  <data name="Admin_NoDownloads" xml:space="preserve"><value>No downloads in this period.</value></data>
   <data name="Status_Published" xml:space="preserve"><value>Published</value></data>
   <data name="Status_Pending" xml:space="preserve"><value>Pending</value></data>
   <data name="Status_Rejected" xml:space="preserve"><value>Rejected</value></data>
