@@ -12,6 +12,7 @@ public class LogoutHandlerModel : PageModel
     public async Task<IActionResult> OnGetAsync()
     {
         await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-        return LocalRedirect("/");
+        var target = Request.PathBase.HasValue ? Request.PathBase.Value + "/" : "/";
+        return LocalRedirect(target);
     }
 }

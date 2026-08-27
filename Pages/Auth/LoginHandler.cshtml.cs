@@ -27,13 +27,13 @@ public class LoginHandlerModel : PageModel
         var userId = _loginTokenService.ConsumeToken(token);
         if (userId is null)
         {
-            return Redirect("/login");
+            return Redirect(BuildPathBaseRelativeUrl("/login"));
         }
 
         var user = await _db.Users.FirstOrDefaultAsync(u => u.Id == userId.Value);
         if (user is null)
         {
-            return Redirect("/login");
+            return Redirect(BuildPathBaseRelativeUrl("/login"));
         }
 
         var claims = new List<Claim>
@@ -53,6 +53,10 @@ public class LoginHandlerModel : PageModel
 
         await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
 
-        return LocalRedirect(returnUrl);
+        var target = Url.IsLocalUrl(returnUrl) ? returnUrl : "/";
+        return LocalRedirect(BuildPathBaseRelativeUrl(target));
     }
+
+    private string BuildPathBaseRelativeUrl(string path)
+        => Request.PathBase.HasValue ? Request.PathBase.Value + path : path;
 }

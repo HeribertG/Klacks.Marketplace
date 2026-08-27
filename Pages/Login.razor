@@ -80,7 +80,7 @@
             }
 
             var token = LoginTokenService.IssueToken(user.Id);
-            var returnUrl = Uri.EscapeDataString(".");
+            var returnUrl = Uri.EscapeDataString("/");
             Navigation.NavigateTo($"auth/login?token={Uri.EscapeDataString(token)}&returnUrl={returnUrl}", forceLoad: true);
         }
         catch (Exception ex)
