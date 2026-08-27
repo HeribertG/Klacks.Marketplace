@@ -1,26 +1,49 @@
 // Copyright (c) Heribert Gasparoli Private. All rights reserved.
 
 using System.Security.Claims;
-using Klacks.Marketplace.Constants;
+using Klacks.Marketplace.Data;
+using Klacks.Marketplace.Services;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
 
 namespace Klacks.Marketplace.Pages.Auth;
 
 public class LoginHandlerModel : PageModel
 {
-    public async Task<IActionResult> OnGetAsync(string userId, string email, string displayName, string isAdmin, string returnUrl = "/")
+    private readonly ILoginTokenService _loginTokenService;
+    private readonly MarketplaceDbContext _db;
+
+    public LoginHandlerModel(ILoginTokenService loginTokenService, MarketplaceDbContext db)
     {
+        _loginTokenService = loginTokenService;
+        _db = db;
+    }
+
+    public async Task<IActionResult> OnGetAsync(string token, string returnUrl = "/")
+    {
+        var userId = _loginTokenService.ConsumeToken(token);
+        if (userId is null)
+        {
+            return Redirect("/login");
+        }
+
+        var user = await _db.Users.FirstOrDefaultAsync(u => u.Id == userId.Value);
+        if (user is null)
+        {
+            return Redirect("/login");
+        }
+
         var claims = new List<Claim>
         {
-            new(ClaimTypes.NameIdentifier, userId),
-            new(ClaimTypes.Email, email),
-            new(ClaimTypes.Name, displayName)
+            new(ClaimTypes.NameIdentifier, user.Id.ToString()),
+            new(ClaimTypes.Email, user.Email),
+            new(ClaimTypes.Name, user.DisplayName)
         };
 
-        if (isAdmin == "true")
+        if (user.IsAdmin)
         {
             claims.Add(new Claim(ClaimTypes.Role, "Admin"));
         }

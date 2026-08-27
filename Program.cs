@@ -17,6 +17,7 @@ builder.Services.AddServerSideBlazor();
 builder.Services.AddControllers();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddLocalization();
+builder.Services.AddMemoryCache();
 
 builder.Services.AddDbContext<MarketplaceDbContext>(options =>
 {
@@ -51,6 +52,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     });
 
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddSingleton<ILoginTokenService, LoginTokenService>();
 builder.Services.AddScoped<IPackageService, PackageService>();
 builder.Services.AddScoped<IAdminService, AdminService>();
 builder.Services.AddScoped<IFileValidationService, FileValidationService>();
