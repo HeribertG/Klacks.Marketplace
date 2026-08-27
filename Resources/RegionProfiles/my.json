@@ -231,6 +231,45 @@
           "isTimeLimited": true
         }
       ]
+    },
+    "hospitality": {
+      "schedulingRulePresets": [
+        {
+          "name": "MY Perkhidmatan Hospitaliti Standard",
+          "maxDailyHours": 12,
+          "maxWeeklyHours": 45,
+          "minRestDays": 1,
+          "performsShiftWork": true
+        }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "Sijil Kemahiran Malaysia (SKM) in Lebensmittelzubereitung und Food & Beverage Service (Hospitality-Tourism-Sektor, Department of Skills Development)",
+            "en": "Sijil Kemahiran Malaysia (SKM) in food preparation and food & beverage service (Hospitality Tourism sub-sector, Department of Skills Development)",
+            "fr": "Sijil Kemahiran Malaysia (SKM) en préparation culinaire et service de restauration (sous-secteur Hospitality Tourism, Department of Skills Development)",
+            "it": "Sijil Kemahiran Malaysia (SKM) in preparazione alimentare e servizio di ristorazione (sotto-settore Hospitality Tourism, Department of Skills Development)"
+          }
+        },
+        {
+          "name": {
+            "de": "Food Handler Certificate (Ministry of Health Malaysia) mit Anti-Typhus-Impfnachweis, Impfung alle 3 Jahre zu erneuern",
+            "en": "Food Handler Certificate (Ministry of Health Malaysia) with anti-typhoid vaccination proof, vaccine renewed every 3 years",
+            "fr": "Food Handler Certificate (ministère de la Santé de Malaisie) avec preuve de vaccination antityphoïdique, vaccin à renouveler tous les 3 ans",
+            "it": "Food Handler Certificate (Ministero della Salute della Malesia) con prova di vaccinazione antitifoidea, vaccino da rinnovare ogni 3 anni"
+          },
+          "isTimeLimited": true
+        },
+        {
+          "name": {
+            "de": "Erste-Hilfe-Zeugnis (Sijil Bantu Mula)",
+            "en": "First aid certificate (Sijil Bantu Mula)",
+            "fr": "Certificat de premiers secours (Sijil Bantu Mula)",
+            "it": "Certificato di primo soccorso (Sijil Bantu Mula)"
+          },
+          "isTimeLimited": true
+        }
+      ]
     }
   },
   "seedDemoData": false

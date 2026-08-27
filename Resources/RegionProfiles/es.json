@@ -242,6 +242,46 @@
           }
         }
       ]
+    },
+    "hospitality": {
+      "schedulingRulePresets": [
+        {
+          "name": "ES Hostelería Estándar",
+          "maxDailyHours": 9,
+          "maxWeeklyHours": 40,
+          "minPauseHours": 12,
+          "minRestDays": 1,
+          "nightStart": "22:00",
+          "nightEnd": "06:00",
+          "performsShiftWork": true
+        }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "Berufszertifikat Küche (Certificado de profesionalidad Cocina, HOTR0408)",
+            "en": "Vocational certificate in cooking (Certificado de profesionalidad Cocina, HOTR0408)",
+            "fr": "Certificat de professionnalisation Cuisine (Certificado de profesionalidad Cocina, HOTR0408)",
+            "it": "Certificato di professionalità Cucina (Certificado de profesionalidad Cocina, HOTR0408)"
+          }
+        },
+        {
+          "name": {
+            "de": "Berufszertifikat Restaurantservice (Certificado de profesionalidad Servicios de Restaurante, HOTR0508)",
+            "en": "Vocational certificate in restaurant service (Certificado de profesionalidad Servicios de Restaurante, HOTR0508)",
+            "fr": "Certificat de professionnalisation Services de restaurant (Certificado de profesionalidad Servicios de Restaurante, HOTR0508)",
+            "it": "Certificato di professionalità Servizi di ristorazione (Certificado de profesionalidad Servicios de Restaurante, HOTR0508)"
+          }
+        },
+        {
+          "name": {
+            "de": "Verpflichtende Schulung zur Lebensmittelhandhabung (Manipulador de Alimentos)",
+            "en": "Mandatory food handling training (Manipulador de Alimentos)",
+            "fr": "Formation obligatoire en manipulation des denrées alimentaires (Manipulador de Alimentos)",
+            "it": "Formazione obbligatoria per manipolatori di alimenti (Manipulador de Alimentos)"
+          }
+        }
+      ]
     }
   },
   "seedDemoData": false

@@ -256,6 +256,45 @@
           "isTimeLimited": true
         }
       ]
+    },
+    "hospitality": {
+      "schedulingRulePresets": [
+        {
+          "name": "JP 宿泊・飲食サービス業 Standard",
+          "maxDailyHours": 8,
+          "maxWeeklyHours": 40,
+          "minRestDays": 1,
+          "nightStart": "22:00",
+          "nightEnd": "05:00",
+          "performsShiftWork": true
+        }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "調理師 (Chōrishi, staatlich anerkannter Koch, nationale Qualifikation nach dem Kochgesetz, Lizenzierung durch die Präfektur)",
+            "en": "Chōrishi (licensed cook, national qualification under the Cooking Technician Act, licensed by the prefectural governor)",
+            "fr": "Chōrishi (cuisinier agréé, qualification nationale selon la loi sur les cuisiniers, délivrée par la préfecture)",
+            "it": "Chōrishi (cuoco abilitato, qualifica nazionale ai sensi della legge sui cuochi, rilasciata dalla prefettura)"
+          }
+        },
+        {
+          "name": {
+            "de": "食品衛生責任者 (Shokuhin Eisei Sekininsha, Lebensmittelhygiene-Verantwortlicher, Pflichtqualifikation für Gastronomiebetriebe)",
+            "en": "Shokuhin Eisei Sekininsha (food hygiene manager, mandatory qualification for food-service establishments)",
+            "fr": "Shokuhin Eisei Sekininsha (responsable de l'hygiène alimentaire, qualification obligatoire pour les établissements de restauration)",
+            "it": "Shokuhin Eisei Sekininsha (responsabile dell'igiene alimentare, qualifica obbligatoria per gli esercizi di ristorazione)"
+          }
+        },
+        {
+          "name": {
+            "de": "レストランサービス技能検定 (Restaurant Service Ginō Kentei, staatliche Fachprüfung für Restaurantservice, 3 Stufen)",
+            "en": "Restaurant Service Ginō Kentei (national trade skill test for restaurant service, 3 grades)",
+            "fr": "Restaurant Service Ginō Kentei (examen national de compétence pour le service en restauration, 3 niveaux)",
+            "it": "Restaurant Service Ginō Kentei (esame nazionale di competenza per il servizio di ristorazione, 3 livelli)"
+          }
+        }
+      ]
     }
   },
   "seedDemoData": false

@@ -243,6 +243,57 @@
           "isTimeLimited": true
         }
       ]
+    },
+    "hospitality": {
+      "schedulingRulePresets": [
+        {
+          "name": "AT Gastgewerbe Standard",
+          "maxDailyHours": 12,
+          "maxWeeklyHours": 48,
+          "minPauseHours": 11,
+          "minRestDays": 1,
+          "maxConsecutiveDays": 6,
+          "nightStart": "22:00",
+          "nightEnd": "06:00",
+          "performsShiftWork": true
+        }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "Koch/Köchin (Lehrberuf)",
+            "en": "Cook (vocational apprenticeship)",
+            "fr": "Cuisinier/ère (formation professionnelle)",
+            "it": "Cuoco/a (qualifica professionale)"
+          }
+        },
+        {
+          "name": {
+            "de": "Restaurantfachmann/-frau (Lehrberuf)",
+            "en": "Restaurant specialist (vocational apprenticeship)",
+            "fr": "Spécialiste de restaurant (formation professionnelle)",
+            "it": "Specialista di ristorazione (qualifica professionale)"
+          }
+        },
+        {
+          "name": {
+            "de": "Lebensmittelhygiene-Schulung (Eigenkontrolle gemäß VO (EG) 852/2004)",
+            "en": "Food hygiene training (self-control under EC Regulation 852/2004)",
+            "fr": "Formation à l'hygiène alimentaire (autocontrôle selon le règlement (CE) 852/2004)",
+            "it": "Formazione sull'igiene alimentare (autocontrollo secondo il regolamento (CE) 852/2004)"
+          },
+          "isTimeLimited": true
+        },
+        {
+          "name": {
+            "de": "Erste-Hilfe-Ausbildung",
+            "en": "First aid certificate",
+            "fr": "Formation aux premiers secours",
+            "it": "Formazione di primo soccorso"
+          },
+          "isTimeLimited": true
+        }
+      ]
     }
   },
   "seedDemoData": false

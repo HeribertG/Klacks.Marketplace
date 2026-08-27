@@ -213,6 +213,7 @@
   <data name="Industry_Security" xml:space="preserve"><value>אבטחה</value></data>
   <data name="Industry_Facility" xml:space="preserve"><value>שירותי מתקנים</value></data>
   <data name="Industry_Logistics" xml:space="preserve"><value>לוגיסטיקה</value></data>
+  <data name="Industry_Hospitality" xml:space="preserve"><value>מלונאות &amp; גסטרו</value></data>
   <data name="Industry_All" xml:space="preserve"><value>כל הענפים</value></data>
   <data name="UploadRegion_Title" xml:space="preserve"><value>העלאת חבילת אזור</value></data>
   <data name="UploadRegion_Subtitle" xml:space="preserve"><value>שתפו פרופיל הגדרת אזור למדינה עם הקהילה</value></data>

@@ -249,6 +249,47 @@
           "isTimeLimited": true
         }
       ]
+    },
+    "hospitality": {
+      "schedulingRulePresets": [
+        {
+          "name": "TH Hospitality Standard",
+          "maxDailyHours": 9,
+          "maxWeeklyHours": 48,
+          "minPauseHours": 1,
+          "minRestDays": 1,
+          "nightStart": "00:00",
+          "nightEnd": "06:00",
+          "performsShiftWork": true
+        }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "Thailand Professional Qualification Institute (TPQI) – Berufsqualifikation Restaurant- und Getränkeservice, Teil des Berufsstandards Tourismus/Hotellerie/Gastronomie",
+            "en": "Thailand Professional Qualification Institute (TPQI) food and beverage service occupational qualification, part of the Tourism, Hotel, Restaurant and Food Service occupational standards",
+            "fr": "Qualification professionnelle en service de restauration et de boissons du Thailand Professional Qualification Institute (TPQI), norme professionnelle tourisme/hôtellerie/restauration",
+            "it": "Qualifica professionale di servizio ristorazione e bevande del Thailand Professional Qualification Institute (TPQI), standard occupazionale turismo/hotel/ristorazione"
+          }
+        },
+        {
+          "name": {
+            "de": "Ärztliches Gesundheitszeugnis für Lebensmittelpersonal (9-Krankheiten-Liste, Ministry of Public Health)",
+            "en": "Medical certificate for food handlers (9-disease list, Ministry of Public Health)",
+            "fr": "Certificat médical pour le personnel manipulant des denrées alimentaires (liste de 9 maladies, ministère de la Santé publique)",
+            "it": "Certificato medico per il personale addetto agli alimenti (elenco di 9 malattie, Ministero della Salute Pubblica)"
+          },
+          "isTimeLimited": true
+        },
+        {
+          "name": {
+            "de": "Schulungszertifikat Lebensmittelhygiene für Gastronomiebetriebe (Ministerial Regulation on Food Establishment Sanitation B.E. 2561)",
+            "en": "Food sanitation training certificate for food-service establishments (Ministerial Regulation on Food Establishment Sanitation B.E. 2561)",
+            "fr": "Certificat de formation à l'hygiène alimentaire pour les établissements de restauration (règlement ministériel sur l'hygiène des établissements alimentaires B.E. 2561)",
+            "it": "Certificato di formazione sull'igiene alimentare per gli esercizi di ristorazione (regolamento ministeriale sull'igiene degli esercizi alimentari B.E. 2561)"
+          }
+        }
+      ]
     }
   },
   "seedDemoData": false

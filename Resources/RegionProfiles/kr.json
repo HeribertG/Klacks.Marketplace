@@ -234,6 +234,45 @@
           }
         }
       ]
+    },
+    "hospitality": {
+      "schedulingRulePresets": [
+        {
+          "name": "KR 숙박음식업 표준",
+          "maxWeeklyHours": 52,
+          "minRestDays": 1,
+          "nightStart": "22:00",
+          "nightEnd": "06:00",
+          "performsShiftWork": true
+        }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "조리기능사 (Jori Gineungsa, staatliche Handwerksqualifikation Koch/Köchin, Fachrichtung z.B. koreanische/westliche/chinesische Küche)",
+            "en": "Jori Gineungsa (national craftsman-level cook qualification, cuisine specialisation e.g. Korean/Western/Chinese)",
+            "fr": "Jori Gineungsa (qualification nationale de cuisinier de niveau artisan, spécialisation par cuisine, p.ex. coréenne/occidentale/chinoise)",
+            "it": "Jori Gineungsa (qualifica nazionale di cuoco di livello artigiano, specializzazione per cucina, es. coreana/occidentale/cinese)"
+          }
+        },
+        {
+          "name": {
+            "de": "조주기능사 (Joju Gineungsa, staatliche Handwerksqualifikation Barkeeper/in, Getränkeservice in Hotellerie und Gastronomie)",
+            "en": "Joju Gineungsa (national craftsman-level bartender qualification, beverage service in hotels and food service)",
+            "fr": "Joju Gineungsa (qualification nationale de barman/barmaid de niveau artisan, service des boissons en hôtellerie-restauration)",
+            "it": "Joju Gineungsa (qualifica nazionale di barista/bartender di livello artigiano, servizio bevande in hotel e ristorazione)"
+          }
+        },
+        {
+          "name": {
+            "de": "위생교육 (Wisaeng Gyoyuk, verpflichtende Lebensmittelhygiene-Schulung für Gastronomiebetriebe)",
+            "en": "Wisaeng Gyoyuk (mandatory food hygiene training for food-service businesses)",
+            "fr": "Wisaeng Gyoyuk (formation obligatoire à l'hygiène alimentaire pour les établissements de restauration)",
+            "it": "Wisaeng Gyoyuk (formazione obbligatoria sull'igiene alimentare per gli esercizi di ristorazione)"
+          },
+          "isTimeLimited": true
+        }
+      ]
     }
   },
   "seedDemoData": false

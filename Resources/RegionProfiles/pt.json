@@ -250,6 +250,46 @@
           }
         }
       ]
+    },
+    "hospitality": {
+      "schedulingRulePresets": [
+        {
+          "name": "PT Hotelaria e Restauração Padrão",
+          "maxDailyHours": 8,
+          "maxWeeklyHours": 40,
+          "minPauseHours": 11,
+          "minRestDays": 1,
+          "nightStart": "22:00",
+          "nightEnd": "07:00",
+          "performsShiftWork": true
+        }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "Nationale Berufsqualifikation Koch/Köchin (IEFP, Catálogo Nacional de Qualificações)",
+            "en": "National vocational qualification for cooks (IEFP, Catálogo Nacional de Qualificações)",
+            "fr": "Qualification professionnelle nationale de cuisinier/ère (IEFP, Catálogo Nacional de Qualificações)",
+            "it": "Qualifica professionale nazionale di cuoco/a (IEFP, Catálogo Nacional de Qualificações)"
+          }
+        },
+        {
+          "name": {
+            "de": "Kurs für Lebensmittelhygiene und -sicherheit (Higiene e Segurança Alimentar, IEFP)",
+            "en": "Food hygiene and safety course (Higiene e Segurança Alimentar, IEFP)",
+            "fr": "Cours d'hygiène et de sécurité alimentaire (Higiene e Segurança Alimentar, IEFP)",
+            "it": "Corso di igiene e sicurezza alimentare (Higiene e Segurança Alimentar, IEFP)"
+          }
+        },
+        {
+          "name": {
+            "de": "Berufsqualifikation Restaurant- und Barservice (IEFP)",
+            "en": "Vocational qualification in restaurant and bar service (IEFP)",
+            "fr": "Qualification professionnelle en service de restaurant et de bar (IEFP)",
+            "it": "Qualifica professionale in servizio di ristorante e bar (IEFP)"
+          }
+        }
+      ]
     }
   },
   "seedDemoData": false

@@ -213,6 +213,7 @@
   <data name="Industry_Security" xml:space="preserve"><value>Sikkerhed</value></data>
   <data name="Industry_Facility" xml:space="preserve"><value>Ejendomsservice</value></data>
   <data name="Industry_Logistics" xml:space="preserve"><value>Logistik</value></data>
+  <data name="Industry_Hospitality" xml:space="preserve"><value>Hotel &amp; Gastro</value></data>
   <data name="Industry_All" xml:space="preserve"><value>Alle brancher</value></data>
   <data name="UploadRegion_Title" xml:space="preserve"><value>Upload regionspakke</value></data>
   <data name="UploadRegion_Subtitle" xml:space="preserve"><value>Del en regionsopsætningsprofil for et land med fællesskabet</value></data>

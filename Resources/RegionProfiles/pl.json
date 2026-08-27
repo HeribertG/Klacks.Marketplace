@@ -256,6 +256,56 @@
           "isTimeLimited": true
         }
       ]
+    },
+    "hospitality": {
+      "schedulingRulePresets": [
+        {
+          "name": "PL Hotelarstwo i gastronomia Standard",
+          "maxDailyHours": 8,
+          "maxWeeklyHours": 48,
+          "minPauseHours": 11,
+          "minRestDays": 1,
+          "nightStart": "21:00",
+          "nightEnd": "07:00",
+          "performsShiftWork": true
+        }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "Kucharz (Berufsqualifikation Koch, Berufscode 512001)",
+            "en": "Kucharz (chef vocational qualification, occupation code 512001)",
+            "fr": "Kucharz (qualification professionnelle de cuisinier, code métier 512001)",
+            "it": "Kucharz (qualifica professionale di cuoco, codice professione 512001)"
+          }
+        },
+        {
+          "name": {
+            "de": "Kelner (Berufsqualifikation Kellner, Berufscode 513101)",
+            "en": "Kelner (waiter vocational qualification, occupation code 513101)",
+            "fr": "Kelner (qualification professionnelle de serveur, code métier 513101)",
+            "it": "Kelner (qualifica professionale di cameriere, codice professione 513101)"
+          }
+        },
+        {
+          "name": {
+            "de": "Szkolenie HACCP (periodische HACCP-Schulung für Beschäftigte in der Gastronomie)",
+            "en": "Szkolenie HACCP (periodic HACCP training for food service staff)",
+            "fr": "Szkolenie HACCP (formation périodique HACCP pour le personnel de restauration)",
+            "it": "Szkolenie HACCP (formazione periodica HACCP per il personale della ristorazione)"
+          },
+          "isTimeLimited": true
+        },
+        {
+          "name": {
+            "de": "Książeczka zdrowia (sanitär-epidemiologisches Gesundheitsbuch mit periodischer ärztlicher Untersuchung für Lebensmittelbeschäftigte)",
+            "en": "Książeczka zdrowia (sanitary-epidemiological health record with periodic medical examination for food handlers)",
+            "fr": "Książeczka zdrowia (carnet de santé sanitaro-épidémiologique avec examen médical périodique pour le personnel manipulant des denrées alimentaires)",
+            "it": "Książeczka zdrowia (libretto sanitario-epidemiologico con visita medica periodica per il personale a contatto con gli alimenti)"
+          },
+          "isTimeLimited": true
+        }
+      ]
     }
   },
   "seedDemoData": false

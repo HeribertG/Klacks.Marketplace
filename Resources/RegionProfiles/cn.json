@@ -254,6 +254,46 @@
           "isTimeLimited": true
         }
       ]
+    },
+    "hospitality": {
+      "schedulingRulePresets": [
+        {
+          "name": "CN 酒店餐饮 Standard",
+          "maxDailyHours": 11,
+          "maxWeeklyHours": 40,
+          "minRestDays": 1,
+          "nightStart": "22:00",
+          "nightEnd": "06:00",
+          "performsShiftWork": true
+        }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "中式烹调师 (Chinesischer Koch/Köchin, nationales Berufsqualifikationszertifikat, mehrere Stufen)",
+            "en": "中式烹调师 (Chinese cuisine chef, national vocational qualification certificate, multiple grades)",
+            "fr": "中式烹调师 (chef de cuisine chinoise, certificat national de qualification professionnelle, plusieurs niveaux)",
+            "it": "中式烹调师 (cuoco di cucina cinese, certificato nazionale di qualifica professionale, più livelli)"
+          }
+        },
+        {
+          "name": {
+            "de": "餐厅服务员 (Restaurantservicekraft, nationales Berufsqualifikationszertifikat, mehrere Stufen)",
+            "en": "餐厅服务员 (restaurant server, national vocational qualification certificate, multiple grades)",
+            "fr": "餐厅服务员 (personnel de service en restauration, certificat national de qualification professionnelle, plusieurs niveaux)",
+            "it": "餐厅服务员 (addetto al servizio di ristorazione, certificato nazionale di qualifica professionale, più livelli)"
+          }
+        },
+        {
+          "name": {
+            "de": "健康证 (Gesundheitszeugnis, jährliche Pflichtuntersuchung für Personal mit direktem Lebensmittelkontakt)",
+            "en": "健康证 (health certificate, mandatory annual medical check for staff in direct contact with food)",
+            "fr": "健康证 (certificat de santé, examen médical annuel obligatoire pour le personnel en contact direct avec les aliments)",
+            "it": "健康证 (certificato sanitario, visita medica annuale obbligatoria per il personale a contatto diretto con gli alimenti)"
+          },
+          "isTimeLimited": true
+        }
+      ]
     }
   },
   "seedDemoData": false

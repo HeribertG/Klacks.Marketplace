@@ -213,6 +213,7 @@
   <data name="Industry_Security" xml:space="preserve"><value>Bezpečnostní služby</value></data>
   <data name="Industry_Facility" xml:space="preserve"><value>Facility management</value></data>
   <data name="Industry_Logistics" xml:space="preserve"><value>Logistika</value></data>
+  <data name="Industry_Hospitality" xml:space="preserve"><value>Hotelnictví &amp; gastro</value></data>
   <data name="Industry_All" xml:space="preserve"><value>Všechna odvětví</value></data>
   <data name="UploadRegion_Title" xml:space="preserve"><value>Nahrát regionální balíček</value></data>
   <data name="UploadRegion_Subtitle" xml:space="preserve"><value>Sdílejte profil nastavení regionu země s komunitou</value></data>

@@ -248,6 +248,47 @@
           "isTimeLimited": true
         }
       ]
+    },
+    "hospitality": {
+      "schedulingRulePresets": [
+        {
+          "name": "NO Hotell og Restaurant Standard",
+          "maxDailyHours": 9,
+          "maxWeeklyHours": 40,
+          "minPauseHours": 11,
+          "minRestDays": 1,
+          "nightStart": "21:00",
+          "nightEnd": "06:00",
+          "performsShiftWork": true
+        }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "Fagbrev kokk (Berufszeugnis Koch)",
+            "en": "Fagbrev kokk (chef's trade certificate)",
+            "fr": "Fagbrev kokk (certificat professionnel de cuisinier)",
+            "it": "Fagbrev kokk (attestato professionale di cuoco)"
+          }
+        },
+        {
+          "name": {
+            "de": "Fagbrev servitør (Berufszeugnis Kellner/in)",
+            "en": "Fagbrev servitør (waiter's trade certificate)",
+            "fr": "Fagbrev servitør (certificat professionnel de serveur)",
+            "it": "Fagbrev servitør (attestato professionale di cameriere)"
+          }
+        },
+        {
+          "name": {
+            "de": "Erste-Hilfe-Ausbildung",
+            "en": "First aid certificate",
+            "fr": "Formation aux premiers secours",
+            "it": "Formazione di primo soccorso"
+          },
+          "isTimeLimited": true
+        }
+      ]
     }
   },
   "seedDemoData": false

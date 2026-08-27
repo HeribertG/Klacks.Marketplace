@@ -264,6 +264,55 @@
           }
         }
       ]
+    },
+    "hospitality": {
+      "schedulingRulePresets": [
+        {
+          "name": "GB Hospitality Standard",
+          "maxDailyHours": 13,
+          "maxWeeklyHours": 48,
+          "minPauseHours": 11,
+          "minRestDays": 1,
+          "nightStart": "23:00",
+          "nightEnd": "06:00",
+          "performsShiftWork": true
+        }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "Level 2 Food Safety and Hygiene for Catering (Lebensmittelhygiene-Zertifikat)",
+            "en": "Level 2 Food Safety and Hygiene for Catering certificate",
+            "fr": "Level 2 Food Safety and Hygiene for Catering (certificat d'hygiène alimentaire)",
+            "it": "Level 2 Food Safety and Hygiene for Catering (certificato di igiene alimentare)"
+          }
+        },
+        {
+          "name": {
+            "de": "Personal Licence (APLH, Lizenz zum Alkoholausschank)",
+            "en": "Personal Licence (APLH) for the sale of alcohol",
+            "fr": "Personal Licence (APLH, licence pour la vente d'alcool)",
+            "it": "Personal Licence (APLH, licenza per la vendita di alcolici)"
+          }
+        },
+        {
+          "name": {
+            "de": "City & Guilds Professional Cookery Diploma (Koch-Berufsdiplom)",
+            "en": "City & Guilds Professional Cookery Diploma",
+            "fr": "City & Guilds Professional Cookery Diploma (diplôme professionnel de cuisine)",
+            "it": "City & Guilds Professional Cookery Diploma (diploma professionale di cucina)"
+          }
+        },
+        {
+          "name": {
+            "de": "Emergency First Aid at Work (Erste-Hilfe-Zeugnis)",
+            "en": "Emergency First Aid at Work certificate",
+            "fr": "Emergency First Aid at Work (certificat de premiers secours)",
+            "it": "Emergency First Aid at Work (certificato di primo soccorso)"
+          },
+          "isTimeLimited": true
+        }
+      ]
     }
   },
   "seedDemoData": false

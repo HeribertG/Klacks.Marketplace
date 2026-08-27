@@ -223,6 +223,44 @@
           "isTimeLimited": true
         }
       ]
+    },
+    "hospitality": {
+      "schedulingRulePresets": [
+        {
+          "name": "IT Alberghiero-Ristorazione Standard",
+          "minPauseHours": 11,
+          "minRestDays": 1,
+          "maxConsecutiveDays": 6,
+          "performsShiftWork": true
+        }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "Diplom des Fachinstituts für Gastronomie und Hotelgewerbe (IPSAR)",
+            "en": "Vocational diploma in food and hospitality service (IPSAR – Tecnico dei servizi enogastronomici e dell'ospitalità alberghiera)",
+            "fr": "Diplôme de l'institut professionnel pour l'œnogastronomie et l'hôtellerie (IPSAR)",
+            "it": "Diploma di Istituto Professionale per l'Enogastronomia e l'Ospitalità Alberghiera (IPSAR)"
+          }
+        },
+        {
+          "name": {
+            "de": "HACCP-Bescheinigung für Lebensmittelhygiene (Attestato Alimentarista)",
+            "en": "HACCP food hygiene certificate ('attestato alimentarista')",
+            "fr": "Attestation HACCP d'hygiène alimentaire (« attestato alimentarista »)",
+            "it": "Attestato HACCP di igiene alimentare (attestato alimentarista)"
+          },
+          "isTimeLimited": true
+        },
+        {
+          "name": {
+            "de": "Regionale Berufsqualifikation Operatore della ristorazione (Küche/Service)",
+            "en": "Regional vocational qualification 'Operatore della ristorazione' (kitchen/service)",
+            "fr": "Qualification professionnelle régionale « Operatore della ristorazione » (cuisine/salle)",
+            "it": "Qualifica professionale regionale di Operatore della ristorazione (settore cucina/sala)"
+          }
+        }
+      ]
     }
   },
   "seedDemoData": false

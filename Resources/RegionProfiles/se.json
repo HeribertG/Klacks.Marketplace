@@ -240,6 +240,47 @@
           "isTimeLimited": true
         }
       ]
+    },
+    "hospitality": {
+      "schedulingRulePresets": [
+        {
+          "name": "SE Hotell och Restaurang Standard",
+          "maxDailyHours": 13,
+          "minPauseHours": 11,
+          "minRestDays": 1,
+          "maxConsecutiveDays": 6,
+          "nightStart": "00:00",
+          "nightEnd": "05:00",
+          "performsShiftWork": true
+        }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "Kockutbildning (Restaurang- och livsmedelsprogrammet, Inriktning Kök & servering)",
+            "en": "Kockutbildning (Restaurant and Food Programme, Kitchen & Service specialisation)",
+            "fr": "Kockutbildning (programme Restaurant et alimentation, spécialisation Cuisine et service)",
+            "it": "Kockutbildning (programma Ristorazione e alimentazione, indirizzo Cucina e servizio)"
+          }
+        },
+        {
+          "name": {
+            "de": "Livsmedelshygien-/HACCP-Schulung für Lebensmittelverarbeiter",
+            "en": "Livsmedelshygien / HACCP food hygiene training for food handlers",
+            "fr": "Formation en hygiène alimentaire/HACCP (Livsmedelshygien) pour manipulateurs de denrées",
+            "it": "Formazione in igiene alimentare/HACCP (Livsmedelshygien) per gli addetti agli alimenti"
+          }
+        },
+        {
+          "name": {
+            "de": "Erste-Hilfe-Ausbildung",
+            "en": "First aid certificate",
+            "fr": "Formation aux premiers secours",
+            "it": "Formazione di primo soccorso"
+          },
+          "isTimeLimited": true
+        }
+      ]
     }
   },
   "seedDemoData": false

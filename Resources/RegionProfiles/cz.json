@@ -253,6 +253,55 @@
           }
         }
       ]
+    },
+    "hospitality": {
+      "schedulingRulePresets": [
+        {
+          "name": "CZ Pohostinství Standard",
+          "maxDailyHours": 12,
+          "maxWeeklyHours": 48,
+          "minPauseHours": 11,
+          "minRestDays": 1,
+          "nightStart": "22:00",
+          "nightEnd": "06:00",
+          "performsShiftWork": true
+        }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "Kuchař-číšník (Koch-Kellner, Ausbildungsberuf, obor 65-51-H/01, výuční list)",
+            "en": "Kuchař-číšník (cook-waiter vocational qualification, field 65-51-H/01, apprenticeship certificate)",
+            "fr": "Kuchař-číšník (cuisinier-serveur, formation professionnelle, filière 65-51-H/01)",
+            "it": "Kuchař-číšník (cuoco-cameriere, qualifica professionale, indirizzo 65-51-H/01)"
+          }
+        },
+        {
+          "name": {
+            "de": "Hotelnictví (Hotelfach, maturitní obor 65-42-M/01, Abschluss mit Matura)",
+            "en": "Hotelnictví (hotel management upper-secondary programme, field 65-42-M/01, matura diploma)",
+            "fr": "Hotelnictví (gestion hôtelière, filière secondaire 65-42-M/01, diplôme de maturité)",
+            "it": "Hotelnictví (gestione alberghiera, indirizzo secondario 65-42-M/01, diploma di maturità)"
+          }
+        },
+        {
+          "name": {
+            "de": "Hygienické minimum (Nachweis der fachlichen Eignung für epidemiologisch bedeutsame Tätigkeiten, Verordnung Nr. 137/2004 Slg.)",
+            "en": "Hygienické minimum (proof of competence for epidemiologically significant activities, Decree No. 137/2004 Coll.)",
+            "fr": "Hygienické minimum (attestation de compétence pour les activités à risque épidémiologique, décret n° 137/2004 Rec.)",
+            "it": "Hygienické minimum (attestato di competenza per attività epidemiologicamente rilevanti, decreto n. 137/2004 Racc.)"
+          }
+        },
+        {
+          "name": {
+            "de": "Kurz první pomoci (Erste-Hilfe-Kurs)",
+            "en": "Kurz první pomoci (first aid course)",
+            "fr": "Kurz první pomoci (cours de premiers secours)",
+            "it": "Kurz první pomoci (corso di primo soccorso)"
+          },
+          "isTimeLimited": true
+        }
+      ]
     }
   },
   "seedDemoData": false

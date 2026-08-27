@@ -225,6 +225,44 @@
           "isTimeLimited": true
         }
       ]
+    },
+    "hospitality": {
+      "schedulingRulePresets": [
+        {
+          "name": "US Hospitality Standard",
+          "overtimeThreshold": 40,
+          "performsShiftWork": true
+        }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "ServSafe Food Handler Certificate (ANSI-akkreditiertes Lebensmittelsicherheitszertifikat, National Restaurant Association, gültig 3 Jahre)",
+            "en": "ServSafe Food Handler Certificate (ANSI-accredited food safety certificate, National Restaurant Association, valid 3 years)",
+            "fr": "ServSafe Food Handler Certificate (certificat de sécurité alimentaire accrédité ANSI, National Restaurant Association, valable 3 ans)",
+            "it": "ServSafe Food Handler Certificate (certificato di sicurezza alimentare accreditato ANSI, National Restaurant Association, valido 3 anni)"
+          },
+          "isTimeLimited": true
+        },
+        {
+          "name": {
+            "de": "ServSafe Manager / Food Protection Manager Certification (Küchenleitung, gültig 5 Jahre)",
+            "en": "ServSafe Manager / Food Protection Manager Certification (kitchen supervisor level, valid 5 years)",
+            "fr": "ServSafe Manager / Food Protection Manager Certification (niveau responsable de cuisine, valable 5 ans)",
+            "it": "ServSafe Manager / Food Protection Manager Certification (livello responsabile di cucina, valido 5 anni)"
+          },
+          "isTimeLimited": true
+        },
+        {
+          "name": {
+            "de": "Responsible Beverage Service / Alcohol-Zertifikat (z. B. ServSafe Alcohol oder bundesstaatliches TIPS-Zertifikat für Barkeeper und Servicepersonal)",
+            "en": "Responsible Beverage Service / alcohol certification (e.g. ServSafe Alcohol or state-recognised TIPS certificate for bartenders and servers)",
+            "fr": "Certification Responsible Beverage Service / alcool (p. ex. ServSafe Alcohol ou certificat TIPS reconnu par l'État pour barmans et serveurs)",
+            "it": "Certificazione Responsible Beverage Service / alcolici (es. ServSafe Alcohol o certificato TIPS riconosciuto dallo Stato per baristi e camerieri)"
+          },
+          "isTimeLimited": true
+        }
+      ]
     }
   },
   "seedDemoData": false

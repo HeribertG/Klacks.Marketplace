@@ -253,6 +253,47 @@
           }
         }
       ]
+    },
+    "hospitality": {
+      "schedulingRulePresets": [
+        {
+          "name": "RO Hoteluri și Restaurante Standard",
+          "maxDailyHours": 12,
+          "maxWeeklyHours": 48,
+          "minPauseHours": 12,
+          "minRestDays": 1,
+          "nightStart": "22:00",
+          "nightEnd": "06:00",
+          "performsShiftWork": true
+        }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "Berufsqualifikationszertifikat Koch/Köchin (COR-Code 512001)",
+            "en": "Vocational qualification certificate for cook (COR code 512001)",
+            "fr": "Certificat de qualification professionnelle de cuisinier (code COR 512001)",
+            "it": "Certificato di qualificazione professionale di cuoco (codice COR 512001)"
+          }
+        },
+        {
+          "name": {
+            "de": "Berufsqualifikationszertifikat Kellner/in (COR-Code 513102)",
+            "en": "Vocational qualification certificate for waiter/waitress (COR code 513102)",
+            "fr": "Certificat de qualification professionnelle de serveur (code COR 513102)",
+            "it": "Certificato di qualificazione professionale di cameriere (codice COR 513102)"
+          }
+        },
+        {
+          "name": {
+            "de": "Gesundheitsheft mit periodischen medizinischen Untersuchungen für Beschäftigte im Gastgewerbe (Carnet de sănătate)",
+            "en": "Health record with periodic medical examinations for food-service workers (Carnet de sănătate)",
+            "fr": "Carnet de santé avec examens médicaux périodiques pour le personnel de la restauration (Carnet de sănătate)",
+            "it": "Libretto sanitario con visite mediche periodiche per il personale della ristorazione (Carnet de sănătate)"
+          },
+          "isTimeLimited": true
+        }
+      ]
     }
   },
   "seedDemoData": false

@@ -2,7 +2,7 @@
 
 /// <summary>
 /// Canonical industry slugs used by region setup profiles plus the "all" selector for downloads.
-/// The five slugs mirror the industryProfiles keys shipped in every Klacks region profile.
+/// The six slugs mirror the industryProfiles keys shipped in every Klacks region profile.
 /// </summary>
 namespace Klacks.Marketplace.Constants;
 
@@ -13,6 +13,7 @@ public static class RegionIndustry
     public const string Security = "security";
     public const string Facility = "facility";
     public const string Logistics = "logistics";
+    public const string Hospitality = "hospitality";
     public const string All = "all";
 
     public static readonly string[] CanonicalSlugs =
@@ -21,7 +22,8 @@ public static class RegionIndustry
         Healthcare,
         Security,
         Facility,
-        Logistics
+        Logistics,
+        Hospitality
     ];
 
     public static readonly string[] AllOptions =
@@ -31,6 +33,7 @@ public static class RegionIndustry
         Security,
         Facility,
         Logistics,
+        Hospitality,
         All
     ];
 }

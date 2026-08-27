@@ -229,6 +229,47 @@
           }
         }
       ]
+    },
+    "hospitality": {
+      "schedulingRulePresets": [
+        {
+          "name": "LI Gastgewerbe Standard",
+          "maxDailyHours": 10,
+          "maxWeeklyHours": 48,
+          "minPauseHours": 11,
+          "minRestDays": 1,
+          "nightStart": "23:00",
+          "nightEnd": "06:00",
+          "performsShiftWork": true
+        }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "Koch/Köchin EFZ",
+            "en": "Chef (EFZ federal diploma)",
+            "fr": "Cuisinier/ère CFC",
+            "it": "Cuoco/a AFC"
+          }
+        },
+        {
+          "name": {
+            "de": "Restaurantfachmann/-frau EFZ",
+            "en": "Restaurant specialist (EFZ federal diploma)",
+            "fr": "Spécialiste en restauration CFC",
+            "it": "Impiegato/a di ristorazione AFC"
+          }
+        },
+        {
+          "name": {
+            "de": "Erste-Hilfe-Ausbildung",
+            "en": "First aid certificate",
+            "fr": "Formation aux premiers secours",
+            "it": "Formazione di primo soccorso"
+          },
+          "isTimeLimited": true
+        }
+      ]
     }
   },
   "seedDemoData": false

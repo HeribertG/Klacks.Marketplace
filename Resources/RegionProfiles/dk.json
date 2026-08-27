@@ -243,6 +243,45 @@
           "isTimeLimited": true
         }
       ]
+    },
+    "hospitality": {
+      "schedulingRulePresets": [
+        {
+          "name": "DK Hotel- og Restauration Standard",
+          "maxWeeklyHours": 37,
+          "minPauseHours": 11,
+          "minRestDays": 1,
+          "maxConsecutiveDays": 6,
+          "performsShiftWork": true
+        }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "Gastronomausbildung (Erhvervsuddannelse, Fachrichtung Kok/Koch oder Tjener/Kellner)",
+            "en": "Gastronome vocational education (erhvervsuddannelse, specialising as Kok/chef or Tjener/waiter)",
+            "fr": "Formation de gastronome (erhvervsuddannelse, spécialisation Kok/cuisinier ou Tjener/serveur)",
+            "it": "Formazione da gastronomo (erhvervsuddannelse, specializzazione Kok/cuoco o Tjener/cameriere)"
+          }
+        },
+        {
+          "name": {
+            "de": "Hygiejnebevis (Bescheinigung über Lebensmittelhygiene)",
+            "en": "Hygiejnebevis (food hygiene certificate)",
+            "fr": "Hygiejnebevis (certificat d'hygiène alimentaire)",
+            "it": "Hygiejnebevis (certificato di igiene alimentare)"
+          }
+        },
+        {
+          "name": {
+            "de": "Erste-Hilfe-Ausbildung",
+            "en": "First aid certificate",
+            "fr": "Formation aux premiers secours",
+            "it": "Formazione di primo soccorso"
+          },
+          "isTimeLimited": true
+        }
+      ]
     }
   },
   "seedDemoData": false

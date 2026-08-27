@@ -254,6 +254,47 @@
           "isTimeLimited": true
         }
       ]
+    },
+    "hospitality": {
+      "schedulingRulePresets": [
+        {
+          "name": "VN Dịch vụ Nhà hàng-Khách sạn Standard",
+          "maxDailyHours": 12,
+          "maxWeeklyHours": 48,
+          "minPauseHours": 12,
+          "minRestDays": 1,
+          "nightStart": "22:00",
+          "nightEnd": "06:00",
+          "performsShiftWork": true
+        }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "Chứng chỉ Nghiệp vụ Phục vụ Nhà hàng (VTOS Food & Beverage Service, Zertifikat nach den Tiêu chuẩn Kỹ năng nghề Du lịch Việt Nam / Vietnam Tourism Occupational Skills Standards, mehrstufig)",
+            "en": "Chứng chỉ Nghiệp vụ Phục vụ Nhà hàng (VTOS Food & Beverage Service certificate under the Vietnam Tourism Occupational Skills Standards, multi-level)",
+            "fr": "Chứng chỉ Nghiệp vụ Phục vụ Nhà hàng (certificat VTOS Food & Beverage Service selon les normes de compétences professionnelles du tourisme vietnamien, plusieurs niveaux)",
+            "it": "Chứng chỉ Nghiệp vụ Phục vụ Nhà hàng (certificato VTOS Food & Beverage Service secondo gli standard di competenze professionali del turismo vietnamita, più livelli)"
+          }
+        },
+        {
+          "name": {
+            "de": "Chứng chỉ Nghiệp vụ Chế biến món ăn (VTOS Cookery, Zertifikat nach den Tiêu chuẩn Kỹ năng nghề Du lịch Việt Nam / Vietnam Tourism Occupational Skills Standards, mehrstufig)",
+            "en": "Chứng chỉ Nghiệp vụ Chế biến món ăn (VTOS Cookery certificate under the Vietnam Tourism Occupational Skills Standards, multi-level)",
+            "fr": "Chứng chỉ Nghiệp vụ Chế biến món ăn (certificat VTOS Cookery selon les normes de compétences professionnelles du tourisme vietnamien, plusieurs niveaux)",
+            "it": "Chứng chỉ Nghiệp vụ Chế biến món ăn (certificato VTOS Cookery secondo gli standard di competenze professionali del turismo vietnamita, più livelli)"
+          }
+        },
+        {
+          "name": {
+            "de": "Giấy xác nhận tập huấn kiến thức về an toàn thực phẩm (Bestätigung über Schulung zu Lebensmittelsicherheit, gültig 3 Jahre)",
+            "en": "Giấy xác nhận tập huấn kiến thức về an toàn thực phẩm (food safety knowledge training certificate, valid 3 years)",
+            "fr": "Giấy xác nhận tập huấn kiến thức về an toàn thực phẩm (certificat de formation aux connaissances en sécurité alimentaire, valable 3 ans)",
+            "it": "Giấy xác nhận tập huấn kiến thức về an toàn thực phẩm (certificato di formazione sulla sicurezza alimentare, valido 3 anni)"
+          },
+          "isTimeLimited": true
+        }
+      ]
     }
   },
   "seedDemoData": false

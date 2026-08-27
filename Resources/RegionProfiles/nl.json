@@ -243,6 +243,48 @@
           }
         }
       ]
+    },
+    "hospitality": {
+      "schedulingRulePresets": [
+        {
+          "name": "NL Horeca Standaard",
+          "maxDailyHours": 12,
+          "maxWeeklyHours": 48,
+          "minPauseHours": 11,
+          "minRestDays": 1,
+          "nightStart": "00:00",
+          "nightEnd": "06:00",
+          "performsShiftWork": true
+        }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "Verklaring Sociale Hygiëne (SVH-Nachweis für Ausschank alkoholischer Getränke)",
+            "en": "Verklaring Sociale Hygiëne (SVH social hygiene certificate for licensed premises)",
+            "fr": "Verklaring Sociale Hygiëne (attestation SVH d'hygiène sociale pour la vente d'alcool)",
+            "it": "Verklaring Sociale Hygiëne (attestato SVH di igiene sociale per la mescita di alcolici)"
+          },
+          "isTimeLimited": true
+        },
+        {
+          "name": {
+            "de": "SVH Vakdiploma Horeca (Branchendiplom Gastgewerbe, Koch/Service)",
+            "en": "SVH Vakdiploma Horeca (sector vocational diploma for chefs/service staff)",
+            "fr": "SVH Vakdiploma Horeca (diplôme professionnel sectoriel cuisine/service)",
+            "it": "SVH Vakdiploma Horeca (diploma professionale di settore per cuochi/personale di sala)"
+          }
+        },
+        {
+          "name": {
+            "de": "EHBO-diploma (Erste-Hilfe-Zeugnis)",
+            "en": "EHBO-diploma (first aid certificate)",
+            "fr": "EHBO-diploma (certificat de premiers secours)",
+            "it": "EHBO-diploma (certificato di primo soccorso)"
+          },
+          "isTimeLimited": true
+        }
+      ]
     }
   },
   "seedDemoData": false

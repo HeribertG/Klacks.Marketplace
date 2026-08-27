@@ -241,6 +241,39 @@
           "isTimeLimited": true
         }
       ]
+    },
+    "hospitality": {
+      "schedulingRulePresets": [
+        {
+          "name": "IL Hospitality Standard",
+          "maxDailyHours": 12,
+          "maxWeeklyHours": 42,
+          "minPauseHours": 8,
+          "minRestDays": 1,
+          "nightStart": "22:00",
+          "nightEnd": "06:00",
+          "performsShiftWork": true
+        }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "Mashgiach Kaschrut (koscherer Aufsichtsbeauftragter, vom Oberrabbinat anerkannt, für Küchen mit Kaschrut-Zertifizierung)",
+            "en": "Mashgiach kashrut (kosher supervisor recognised by the Chief Rabbinate, for kitchens holding kashrut certification)",
+            "fr": "Mashgiach kashrut (superviseur de cacheroute reconnu par le Grand Rabbinat, pour les cuisines certifiées cacher)",
+            "it": "Mashgiach kashrut (supervisore di casherut riconosciuto dal Rabbinato Capo, per cucine con certificazione kosher)"
+          }
+        },
+        {
+          "name": {
+            "de": "Ezra Rishona (Erste-Hilfe-Zeugnis, Magen David Adom)",
+            "en": "Ezra Rishona (first aid certificate, Magen David Adom)",
+            "fr": "Ezra Rishona (certificat de premiers secours, Magen David Adom)",
+            "it": "Ezra Rishona (certificato di primo soccorso, Magen David Adom)"
+          },
+          "isTimeLimited": true
+        }
+      ]
     }
   },
   "seedDemoData": false

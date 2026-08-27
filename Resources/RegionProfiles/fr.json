@@ -260,6 +260,56 @@
           "isTimeLimited": true
         }
       ]
+    },
+    "hospitality": {
+      "schedulingRulePresets": [
+        {
+          "name": "FR Hôtellerie-restauration Standard",
+          "maxDailyHours": 10,
+          "maxWeeklyHours": 48,
+          "minPauseHours": 11,
+          "minRestDays": 1,
+          "maxConsecutiveDays": 6,
+          "nightStart": "21:00",
+          "nightEnd": "06:00",
+          "performsShiftWork": true
+        }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "CAP Küche (CAP Cuisine)",
+            "en": "Vocational diploma in cooking (CAP Cuisine)",
+            "fr": "CAP Cuisine",
+            "it": "CAP Cuisine (diploma professionale di cucina francese)"
+          }
+        },
+        {
+          "name": {
+            "de": "CAP Vermarktung und Service in Hotel-Café-Restaurant",
+            "en": "Vocational diploma in hotel/café/restaurant service (CAP Commercialisation et Services en HCR)",
+            "fr": "CAP Commercialisation et Services en Hôtel-Café-Restaurant",
+            "it": "CAP Commercializzazione e Servizi in Hotel-Café-Restaurant"
+          }
+        },
+        {
+          "name": {
+            "de": "Permis d'exploitation (Konzessionsschein für den Alkoholausschank)",
+            "en": "Permit of exploitation (licence to serve alcohol)",
+            "fr": "Permis d'exploitation (licence de débit de boissons)",
+            "it": "Permis d'exploitation (licenza per la mescita di alcolici)"
+          },
+          "isTimeLimited": true
+        },
+        {
+          "name": {
+            "de": "Verpflichtende Lebensmittelhygiene-Schulung (HACCP)",
+            "en": "Mandatory food hygiene training (HACCP)",
+            "fr": "Formation obligatoire à l'hygiène alimentaire (HACCP)",
+            "it": "Formazione obbligatoria in igiene alimentare (HACCP)"
+          }
+        }
+      ]
     }
   },
   "seedDemoData": false

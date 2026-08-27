@@ -261,6 +261,47 @@
           "isTimeLimited": true
         }
       ]
+    },
+    "hospitality": {
+      "schedulingRulePresets": [
+        {
+          "name": "FI Majoitus- ja ravitsemisala Standard",
+          "maxWeeklyHours": 48,
+          "minPauseHours": 11,
+          "minRestDays": 1,
+          "maxConsecutiveDays": 6,
+          "nightRate": 1.36,
+          "nightStart": "23:00",
+          "nightEnd": "06:00",
+          "performsShiftWork": true
+        }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "Ravintola- ja catering-alan perustutkinto (Grundberufsausbildung Restaurant/Catering, Koch)",
+            "en": "Ravintola- ja catering-alan perustutkinto (basic vocational qualification in restaurant/catering, cook)",
+            "fr": "Ravintola- ja catering-alan perustutkinto (formation professionnelle de base restauration/catering, cuisinier)",
+            "it": "Ravintola- ja catering-alan perustutkinto (qualifica professionale di base ristorazione/catering, cuoco)"
+          }
+        },
+        {
+          "name": {
+            "de": "Hygieniapassi (Hygienepass für Lebensmittelverarbeiter)",
+            "en": "Hygieniapassi (food hygiene passport for food handlers)",
+            "fr": "Hygieniapassi (passeport d'hygiène alimentaire pour manipulateurs de denrées)",
+            "it": "Hygieniapassi (passaporto di igiene alimentare per gli addetti agli alimenti)"
+          }
+        },
+        {
+          "name": {
+            "de": "Anniskelupassi (Ausschankpass für den Alkoholausschank)",
+            "en": "Anniskelupassi (alcohol service passport)",
+            "fr": "Anniskelupassi (passeport de service des boissons alcoolisées)",
+            "it": "Anniskelupassi (passaporto per la mescita di bevande alcoliche)"
+          }
+        }
+      ]
     }
   },
   "seedDemoData": false

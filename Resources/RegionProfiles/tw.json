@@ -266,6 +266,49 @@
           "isTimeLimited": true
         }
       ]
+    },
+    "hospitality": {
+      "schedulingRulePresets": [
+        {
+          "name": "TW 餐旅 Standard",
+          "maxDailyHours": 12,
+          "maxWeeklyHours": 40,
+          "minPauseHours": 11,
+          "minRestDays": 1,
+          "maxConsecutiveDays": 6,
+          "nightStart": "22:00",
+          "nightEnd": "06:00",
+          "performsShiftWork": true
+        }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "中餐烹調丙級技術士 (Chinesische Küche, Techniker-Zertifikat Stufe C, staatliche Fachprüfung)",
+            "en": "中餐烹調丙級技術士 (Chinese cuisine, level C technician certificate, national trade skill test)",
+            "fr": "中餐烹調丙級技術士 (cuisine chinoise, certificat de technicien niveau C, examen national de compétence)",
+            "it": "中餐烹調丙級技術士 (cucina cinese, certificato di tecnico di livello C, esame nazionale di competenza)"
+          },
+          "isTimeLimited": true
+        },
+        {
+          "name": {
+            "de": "西餐烹飪丙級技術士 (Westliche Küche, Techniker-Zertifikat Stufe C, staatliche Fachprüfung)",
+            "en": "西餐烹飪丙級技術士 (Western cuisine, level C technician certificate, national trade skill test)",
+            "fr": "西餐烹飪丙級技術士 (cuisine occidentale, certificat de technicien niveau C, examen national de compétence)",
+            "it": "西餐烹飪丙級技術士 (cucina occidentale, certificato di tecnico di livello C, esame nazionale di competenza)"
+          },
+          "isTimeLimited": true
+        },
+        {
+          "name": {
+            "de": "餐旅服務丙級技術士 (Gastgewerbe-Service, Techniker-Zertifikat Stufe C, staatliche Fachprüfung)",
+            "en": "餐旅服務丙級技術士 (hospitality service, level C technician certificate, national trade skill test)",
+            "fr": "餐旅服務丙級技術士 (service en hôtellerie-restauration, certificat de technicien niveau C, examen national de compétence)",
+            "it": "餐旅服務丙級技術士 (servizio in hotel e ristorazione, certificato di tecnico di livello C, esame nazionale di competenza)"
+          }
+        }
+      ]
     }
   },
   "seedDemoData": false

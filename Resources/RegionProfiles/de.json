@@ -251,6 +251,56 @@
           "isTimeLimited": true
         }
       ]
+    },
+    "hospitality": {
+      "schedulingRulePresets": [
+        {
+          "name": "DE Gastgewerbe Standard",
+          "maxDailyHours": 10,
+          "maxWeeklyHours": 48,
+          "minPauseHours": 11,
+          "minRestDays": 1,
+          "maxConsecutiveDays": 6,
+          "nightStart": "23:00",
+          "nightEnd": "06:00",
+          "performsShiftWork": true
+        }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "Koch/Köchin (Ausbildungsberuf)",
+            "en": "Cook (dual vocational training)",
+            "fr": "Cuisinier/ère (formation professionnelle duale)",
+            "it": "Cuoco/a (formazione professionale duale)"
+          }
+        },
+        {
+          "name": {
+            "de": "Restaurantfachmann/-frau (Ausbildungsberuf)",
+            "en": "Restaurant specialist (dual vocational training)",
+            "fr": "Spécialiste de restaurant (formation professionnelle duale)",
+            "it": "Specialista di ristorazione (formazione professionale duale)"
+          }
+        },
+        {
+          "name": {
+            "de": "Hotelfachmann/-frau (Ausbildungsberuf)",
+            "en": "Hotel specialist (dual vocational training)",
+            "fr": "Spécialiste hôtelier/ère (formation professionnelle duale)",
+            "it": "Specialista alberghiero/a (formazione professionale duale)"
+          }
+        },
+        {
+          "name": {
+            "de": "Belehrung nach § 43 Infektionsschutzgesetz (IfSG)",
+            "en": "Instruction under § 43 Infection Protection Act (IfSG)",
+            "fr": "Instruction selon l'art. 43 de la loi sur la protection contre les infections (IfSG)",
+            "it": "Istruzione ai sensi del § 43 della legge sulla protezione dalle infezioni (IfSG)"
+          },
+          "isTimeLimited": true
+        }
+      ]
     }
   },
   "seedDemoData": false

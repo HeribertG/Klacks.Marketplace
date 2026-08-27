@@ -259,6 +259,48 @@
           }
         }
       ]
+    },
+    "hospitality": {
+      "schedulingRulePresets": [
+        {
+          "name": "GR Ξενοδοχεία-Εστίαση Standard",
+          "maxDailyHours": 9,
+          "maxWeeklyHours": 45,
+          "minPauseHours": 11,
+          "minRestDays": 1,
+          "maxConsecutiveDays": 6,
+          "nightStart": "22:00",
+          "nightEnd": "06:00",
+          "performsShiftWork": true
+        }
+      ],
+      "qualificationCatalog": [
+        {
+          "name": {
+            "de": "Gesundheitszeugnis für Beschäftigte in Gastronomiebetrieben (Pistopoiitiko Ygeias)",
+            "en": "Health certificate for food service employees (Pistopoiitiko Ygeias)",
+            "fr": "Certificat de santé pour les employés de la restauration (Pistopoiitiko Ygeias)",
+            "it": "Certificato sanitario per i dipendenti della ristorazione (Pistopoiitiko Ygeias)"
+          },
+          "isTimeLimited": true
+        },
+        {
+          "name": {
+            "de": "Diplom für Kochkunst eines Berufsbildungsinstituts (IEK, staatlich anerkannt durch EOPPEP)",
+            "en": "Vocational diploma in culinary arts (IEK, state-recognised via EOPPEP)",
+            "fr": "Diplôme d'art culinaire d'un institut de formation professionnelle (IEK, reconnu par l'EOPPEP)",
+            "it": "Diploma di arte culinaria di un istituto di formazione professionale (IEK, riconosciuto dall'EOPPEP)"
+          }
+        },
+        {
+          "name": {
+            "de": "EOPPEP-Zertifizierung beruflicher Qualifikationen für Köche/Kellner",
+            "en": "EOPPEP certification of vocational qualifications for cooks/waiting staff",
+            "fr": "Certification EOPPEP des qualifications professionnelles pour cuisiniers/serveurs",
+            "it": "Certificazione EOPPEP delle qualifiche professionali per cuochi/camerieri"
+          }
+        }
+      ]
     }
   },
   "seedDemoData": false

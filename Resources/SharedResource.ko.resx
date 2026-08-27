@@ -213,6 +213,7 @@
   <data name="Industry_Security" xml:space="preserve"><value>보안</value></data>
   <data name="Industry_Facility" xml:space="preserve"><value>시설 관리 서비스</value></data>
   <data name="Industry_Logistics" xml:space="preserve"><value>물류</value></data>
+  <data name="Industry_Hospitality" xml:space="preserve"><value>호텔·외식업</value></data>
   <data name="Industry_All" xml:space="preserve"><value>전체 업종</value></data>
   <data name="UploadRegion_Title" xml:space="preserve"><value>지역 패키지 업로드</value></data>
   <data name="UploadRegion_Subtitle" xml:space="preserve"><value>국가별 지역 설정 프로필을 커뮤니티와 공유하세요</value></data>
