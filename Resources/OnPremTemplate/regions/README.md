@@ -122,11 +122,12 @@ determines the qualification category.
 
 `industryProfiles` keys are technically free-form strings — the importer
 accepts any slug. In practice, all shipped content (region profiles, future
-country packs) is written against five canonical slugs so that country
-profiles stay comparable and reusable across the product line. They line up
-1:1 with the five industries the marketing site publishes per country
+country packs) is written against six canonical slugs so that country
+profiles stay comparable and reusable across the product line. The first five
+line up 1:1 with the five industries the marketing site publishes per country
 (`Klacks.Marketing/Localization/CountryIndustries.cs`), which uses
-Swiss-German-flavoured slugs for its own routing:
+Swiss-German-flavoured slugs for its own routing; `hospitality` is published
+there since 2026-08-21 under `hotellerie-gastronomie`:
 
 | Setup slug (`industryProfiles.<slug>`) | Marketing slug | Industry |
 | --- | --- | --- |
@@ -135,6 +136,7 @@ Swiss-German-flavoured slugs for its own routing:
 | `security` | `security` | Security services (guarding, surveillance) |
 | `facility` | `hausdienste` | Facility services (cleaning, building services) |
 | `logistics` | `logistik` | Logistics (warehousing, transport) |
+| `hospitality` | `hotellerie-gastronomie` | Hospitality (hotels, restaurants, catering) |
 
 The example profile `de.json` uses `healthcare` for its hospital/clinic
 preset. `spitex`/`spitaeler`/`hausdienste`/`logistik` are the marketing site's
@@ -281,3 +283,24 @@ All profile blocks and fields are optional; only the provided values are
 written. See `de.json` for a realistic German profile — adjust `locale.state`
 and `locale.calendarSelection.state` to the customer's federal state before
 mounting, because public holidays differ per state.
+
+## Value conventions
+
+- `worktime.vacationDaysPerYear` is expressed as working days on a 5-day-week
+  basis. Many statutes state the minimum in "Werktage"/working days of a
+  6-day reference week (e.g. Monday–Saturday) — convert those to the
+  5-day-week equivalent before writing the field (e.g. 24 such days become 20
+  when the installation plans a 5-day week).
+- `worktime.maxWeeklyHours` is the absolute single-week hard cap — the
+  instantaneous ceiling that must never be exceeded in any one week. Statutory
+  *averages* computed over a longer reference period belong in
+  `compliance.periodCaps` (the `windowWeeks` + `maxAverageWeeklyHours` entry
+  shape), not in this field; a jurisdiction can legitimately combine a higher
+  single-week cap here with a lower rolling-average cap there.
+- Surcharge rate fields (`nightRate`, `holidayRate`, `we1Rate`, `we2Rate`,
+  `we3Rate`, and the corresponding fields inside `rateRevisions`) are additive
+  multipliers on top of base pay, not absolute rates — `0.25` means "+25% of
+  base pay", not "25% of pay in total".
+- A rate field left unset does NOT fall back to zero. It falls through to the
+  generic seeded defaults (roughly ~10% for night/weekend/holiday rates) —
+  omitting a field is not the same as disabling that surcharge.
