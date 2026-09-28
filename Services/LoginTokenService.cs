@@ -1,4 +1,4 @@
-// Copyright (c) Heribert Gasparoli Private. All rights reserved.
+// Copyright (c) Heribert Gasparoli. SPDX-License-Identifier: AGPL-3.0-only
 
 /// <summary>
 /// In-memory implementation of ILoginTokenService: tokens are cryptographically random, live for 60 seconds, and are removed on first read so a captured URL cannot be replayed.
