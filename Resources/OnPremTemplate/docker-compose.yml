@@ -85,10 +85,20 @@ services:
       # Switching it on also means sticky sessions in the proxy - the nginx template carries a
       # commented ip_hash upstream for exactly that.
       - SignalR__Backplane__ConnectionString=${SIGNALR_BACKPLANE_CONNECTIONSTRING:-}
+      # Minutes an idle ONNX inference session may live before it is disposed. 0 disables idle
+      # unloading (KnowledgeIndexConstants.IdleUnloadDisabled), which is the right default at the
+      # 3584M limit below: both sessions fit permanently, and releasing them makes the next
+      # question pay the reload (embedding ~2.2-2.9 s, reranking ~1.1 s, plus ~1.3 GB of
+      # allocation churn). Set this to 30 only together with a reduced memory limit - see
+      # KLACKS_API_IDLE_UNLOAD_MINUTES in .env.example. Values between 1 and 5 are raised to 5.
+      - KnowledgeIndex__IdleUnloadMinutes=${KLACKS_API_IDLE_UNLOAD_MINUTES:-0}
     volumes:
       - api-uploads:/app/Images
       - api-documents:/app/Documents
       - api-dataprotection:/app/DataProtection-Keys
+      # Without it every recreate (auto-update) re-downloads embedder + reranker (~800 MB) from
+      # Hugging Face.
+      - api-models:/app/Cache/Models
       - api-erp-import:/app/ErpImport
       - ./regions:/app/regions:ro
     depends_on:
@@ -105,8 +115,21 @@ services:
     deploy:
       resources:
         limits:
-          memory: 2G
-          cpus: '1.5'
+          # Sized for the local ONNX retrieval pair (embedder + reranker), which stays resident for
+          # the lifetime of the process. Measured on the vendor's production host 2026-09-12: a cold
+          # load of both sessions settles on a 2304 MB plateau (1017 MB base + 1171 MB embedder +
+          # 116 MB reranker) and the kernel OOM-killed the container at 2471 MB anon-rss under a
+          # 2560M cap. 2G, the value shipped before this, could not run local retrieval at all.
+          # 3584M keeps real headroom above that plateau, which is why the host needs 8 GB of RAM.
+          # Smaller hosts: see KLACKS_API_MEMORY_LIMIT in .env.example - never lower this alone.
+          memory: ${KLACKS_API_MEMORY_LIMIT:-3584M}
+          # 3.0 assumes a 4 vCPU host. Same measurement: under cpus 1.5 the reranker pinned the
+          # quota (docker stats 151%, 144 throttled periods / 7.15 s throttled in two minutes,
+          # 4339-4860 ms per 25 pairs); at 3.0 throttling dropped to zero and the pass fell to
+          # 2994-3163 ms, with time-to-first-token down by up to a third. A quota is a ceiling,
+          # not a reservation. Note that Environment.ProcessorCount follows the quota at start-up
+          # (3.0 -> 3 ONNX intra-op threads), so this also sizes the thread pools.
+          cpus: '${KLACKS_API_CPU_LIMIT:-3.0}'
 
   klacks-ui:
     image: ghcr.io/heribertg/klacks-ui:${KLACKS_UI_TAG:-latest}
@@ -132,8 +155,15 @@ services:
 
   # Out-of-process auto-update executor. Runs by default (no profile gate) — at a customer site there
   # is no operator to start it manually, and auto-update is the product. Idles safely when no update
-  # is pending. Drives the host's containers via the mounted Docker socket; ComposeProjectDir=/apps is
-  # this directory bind-mounted, so it sees the same compose + .env (and COMPOSE_PROJECT_NAME) as the host.
+  # is pending. Drives the host's containers via the mounted Docker socket. install.sh sets
+  # KLACKS_INSTALL_DIR and KLACKS_UPDATER_PROJECT_DIR both to this directory's absolute HOST path, so
+  # the updater sees the compose project at the same path as the host. That is required: the daemon
+  # resolves the relative bind mounts above (./regions, ./init-scripts) against the project dir as
+  # seen by the HOST, so a container-only path (the old /apps) pointed them at empty host directories
+  # and crash-looped the API (production incident 2026-09-10). On Windows a Windows path cannot double
+  # as the container path, so install.ps1 sets KLACKS_UPDATER_PROJECT_DIR to the path under which the
+  # Docker Desktop VM reaches the folder (/run/desktop/mnt/host/<drive>/...), probed at install time;
+  # KLACKS_INSTALL_DIR stays the Windows path, which the host compose CLI translates itself.
   klacks-updater:
     image: ghcr.io/heribertg/klacks-updater:${KLACKS_UPDATER_TAG:-latest}
     container_name: klacks-updater
@@ -142,7 +172,7 @@ services:
       - DOTNET_ENVIRONMENT=Production
       - Updater__ConnectionString=Host=postgres;Database=Klacks;Username=admin;Password=${POSTGRES_PASSWORD:?POSTGRES_PASSWORD must be set}
       - Updater__HealthUrl=http://klacks-api:5000/internal/health/deep
-      - Updater__ComposeProjectDir=/apps
+      - Updater__ComposeProjectDir=${KLACKS_UPDATER_PROJECT_DIR:-/apps}
       - Updater__ApiImageRepository=ghcr.io/heribertg/klacks-api
       - Updater__ApiServiceName=klacks-api
       - Updater__ApiTagEnvVar=KLACKS_API_TAG
@@ -153,7 +183,7 @@ services:
       - Updater__SignaturePublicKey=${UPDATE_SIGNATURE_PUBLIC_KEY:?UPDATE_SIGNATURE_PUBLIC_KEY must be set (vendor trust root)}
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - .:/apps
+      - ${KLACKS_INSTALL_DIR:-.}:${KLACKS_UPDATER_PROJECT_DIR:-/apps}
       - api-update-backups:/backups
     depends_on:
       postgres:
@@ -208,6 +238,8 @@ volumes:
   api-documents:
     driver: local
   api-dataprotection:
+    driver: local
+  api-models:
     driver: local
   api-erp-import:
     driver: local
