@@ -127,6 +127,7 @@ localizationOptions.RequestCultureProviders = new List<IRequestCultureProvider>
 };
 
 app.UseRequestLocalization(localizationOptions);
+app.UseQueryCulturePersistence(supportedCultures);
 app.UseRouting();
 app.UseRateLimiter();
 app.UseAuthentication();

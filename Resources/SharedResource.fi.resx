@@ -77,13 +77,14 @@
   <data name="Index_BeFirstPlugin" xml:space="preserve"><value>Ole ensimmäinen, joka lähettää ominaisuuslaajennuksen!</value></data>
   <data name="Index_PacksSubtitle" xml:space="preserve"><value>Lokalisointiresursseja kansainvälisille tiimeille.</value></data>
   <data name="Index_FooterDescription" xml:space="preserve"><value>Ammattimainen ekosysteemi työvoimanhallinnan ominaisuuksien laajentamiseen.</value></data>
-  <data name="Index_FooterRights" xml:space="preserve"><value>© 2026 Klacks Store. Kaikki oikeudet pidätetään.</value></data>
+  <data name="Index_FooterRights" xml:space="preserve"><value>© 2026 Klacks-Software</value></data>
   <data name="Index_Resources" xml:space="preserve"><value>Resurssit</value></data>
   <data name="Index_Documentation" xml:space="preserve"><value>Dokumentaatio</value></data>
-  <data name="Index_API" xml:space="preserve"><value>API</value></data>
   <data name="Index_Legal" xml:space="preserve"><value>Oikeudelliset tiedot</value></data>
-  <data name="Index_PrivacyPolicy" xml:space="preserve"><value>Tietosuojakäytäntö</value></data>
-  <data name="Index_TermsOfService" xml:space="preserve"><value>Käyttöehdot</value></data>
+  <data name="Index_PrivacyPolicy" xml:space="preserve"><value>Tietosuoja</value></data>
+  <data name="Index_Imprint" xml:space="preserve"><value>Julkaisutiedot</value></data>
+  <data name="Index_License" xml:space="preserve"><value>Lisenssi</value></data>
+  <data name="Index_SourceCode" xml:space="preserve"><value>Lähdekoodi (AGPL-3.0)</value></data>
   <data name="Login_PageTitle" xml:space="preserve"><value>Kirjaudu sisään - Klacks Store</value></data>
   <data name="Login_WelcomeBack" xml:space="preserve"><value>Tervetuloa takaisin</value></data>
   <data name="Login_Subtitle" xml:space="preserve"><value>Kirjaudu sisään hallinnoidaksesi paketteja ja laajennuksia</value></data>

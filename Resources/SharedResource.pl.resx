@@ -77,13 +77,14 @@
   <data name="Index_BeFirstPlugin" xml:space="preserve"><value>Bądź pierwszą osobą, która prześle wtyczkę funkcjonalną!</value></data>
   <data name="Index_PacksSubtitle" xml:space="preserve"><value>Zasoby lokalizacyjne dla zespołów międzynarodowych.</value></data>
   <data name="Index_FooterDescription" xml:space="preserve"><value>Profesjonalny ekosystem do rozszerzania funkcji zarządzania zasobami ludzkimi.</value></data>
-  <data name="Index_FooterRights" xml:space="preserve"><value>© 2026 Klacks Store. Wszelkie prawa zastrzeżone.</value></data>
+  <data name="Index_FooterRights" xml:space="preserve"><value>© 2026 Klacks-Software</value></data>
   <data name="Index_Resources" xml:space="preserve"><value>Zasoby</value></data>
   <data name="Index_Documentation" xml:space="preserve"><value>Dokumentacja</value></data>
-  <data name="Index_API" xml:space="preserve"><value>API</value></data>
   <data name="Index_Legal" xml:space="preserve"><value>Informacje prawne</value></data>
-  <data name="Index_PrivacyPolicy" xml:space="preserve"><value>Polityka prywatności</value></data>
-  <data name="Index_TermsOfService" xml:space="preserve"><value>Warunki korzystania z usługi</value></data>
+  <data name="Index_PrivacyPolicy" xml:space="preserve"><value>Prywatność</value></data>
+  <data name="Index_Imprint" xml:space="preserve"><value>Nota prawna</value></data>
+  <data name="Index_License" xml:space="preserve"><value>Licencja</value></data>
+  <data name="Index_SourceCode" xml:space="preserve"><value>Kod źródłowy (AGPL-3.0)</value></data>
   <data name="Login_PageTitle" xml:space="preserve"><value>Logowanie - Klacks Store</value></data>
   <data name="Login_WelcomeBack" xml:space="preserve"><value>Witamy ponownie</value></data>
   <data name="Login_Subtitle" xml:space="preserve"><value>Zaloguj się, aby zarządzać swoimi pakietami i wtyczkami</value></data>

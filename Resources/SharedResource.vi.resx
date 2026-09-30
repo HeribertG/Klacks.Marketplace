@@ -77,13 +77,14 @@
   <data name="Index_BeFirstPlugin" xml:space="preserve"><value>Hãy là người đầu tiên tải lên plugin tính năng!</value></data>
   <data name="Index_PacksSubtitle" xml:space="preserve"><value>Tài nguyên bản địa hóa cho các nhóm quốc tế.</value></data>
   <data name="Index_FooterDescription" xml:space="preserve"><value>Hệ sinh thái chuyên nghiệp để mở rộng khả năng quản lý nhân sự.</value></data>
-  <data name="Index_FooterRights" xml:space="preserve"><value>© 2026 Klacks Store. Đã đăng ký bản quyền.</value></data>
+  <data name="Index_FooterRights" xml:space="preserve"><value>© 2026 Klacks-Software</value></data>
   <data name="Index_Resources" xml:space="preserve"><value>Tài nguyên</value></data>
   <data name="Index_Documentation" xml:space="preserve"><value>Tài liệu</value></data>
-  <data name="Index_API" xml:space="preserve"><value>API</value></data>
   <data name="Index_Legal" xml:space="preserve"><value>Pháp lý</value></data>
-  <data name="Index_PrivacyPolicy" xml:space="preserve"><value>Chính sách bảo mật</value></data>
-  <data name="Index_TermsOfService" xml:space="preserve"><value>Điều khoản dịch vụ</value></data>
+  <data name="Index_PrivacyPolicy" xml:space="preserve"><value>Bảo mật dữ liệu</value></data>
+  <data name="Index_Imprint" xml:space="preserve"><value>Thông tin pháp lý</value></data>
+  <data name="Index_License" xml:space="preserve"><value>Giấy phép</value></data>
+  <data name="Index_SourceCode" xml:space="preserve"><value>Mã nguồn (AGPL-3.0)</value></data>
   <data name="Login_PageTitle" xml:space="preserve"><value>Đăng nhập - Klacks Store</value></data>
   <data name="Login_WelcomeBack" xml:space="preserve"><value>Chào mừng trở lại</value></data>
   <data name="Login_Subtitle" xml:space="preserve"><value>Đăng nhập để quản lý gói và plugin của bạn</value></data>

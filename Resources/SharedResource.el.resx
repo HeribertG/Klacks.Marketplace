@@ -77,13 +77,14 @@
   <data name="Index_BeFirstPlugin" xml:space="preserve"><value>Γίνετε ο πρώτος που θα μεταφορτώσει ένα πρόσθετο λειτουργίας!</value></data>
   <data name="Index_PacksSubtitle" xml:space="preserve"><value>Στοιχεία τοπικής προσαρμογής για διεθνείς ομάδες.</value></data>
   <data name="Index_FooterDescription" xml:space="preserve"><value>Επαγγελματικό οικοσύστημα για την επέκταση δυνατοτήτων διαχείρισης εργατικού δυναμικού.</value></data>
-  <data name="Index_FooterRights" xml:space="preserve"><value>© 2026 Klacks Store. Με την επιφύλαξη παντός δικαιώματος.</value></data>
+  <data name="Index_FooterRights" xml:space="preserve"><value>© 2026 Klacks-Software</value></data>
   <data name="Index_Resources" xml:space="preserve"><value>Πόροι</value></data>
   <data name="Index_Documentation" xml:space="preserve"><value>Τεκμηρίωση</value></data>
-  <data name="Index_API" xml:space="preserve"><value>API</value></data>
   <data name="Index_Legal" xml:space="preserve"><value>Νομικά</value></data>
-  <data name="Index_PrivacyPolicy" xml:space="preserve"><value>Πολιτική απορρήτου</value></data>
-  <data name="Index_TermsOfService" xml:space="preserve"><value>Όροι χρήσης</value></data>
+  <data name="Index_PrivacyPolicy" xml:space="preserve"><value>Απόρρητο</value></data>
+  <data name="Index_Imprint" xml:space="preserve"><value>Νομική σημείωση</value></data>
+  <data name="Index_License" xml:space="preserve"><value>Άδεια χρήσης</value></data>
+  <data name="Index_SourceCode" xml:space="preserve"><value>Πηγαίος κώδικας (AGPL-3.0)</value></data>
   <data name="Login_PageTitle" xml:space="preserve"><value>Σύνδεση - Klacks Store</value></data>
   <data name="Login_WelcomeBack" xml:space="preserve"><value>Καλώς ήρθατε ξανά</value></data>
   <data name="Login_Subtitle" xml:space="preserve"><value>Συνδεθείτε για να διαχειριστείτε τα πακέτα και τα πρόσθετά σας</value></data>

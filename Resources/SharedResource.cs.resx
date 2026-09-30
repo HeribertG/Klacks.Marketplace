@@ -77,13 +77,14 @@
   <data name="Index_BeFirstPlugin" xml:space="preserve"><value>Buďte první, kdo nahraje funkční doplněk!</value></data>
   <data name="Index_PacksSubtitle" xml:space="preserve"><value>Lokalizační podklady pro mezinárodní týmy.</value></data>
   <data name="Index_FooterDescription" xml:space="preserve"><value>Profesionální ekosystém pro rozšiřování možností řízení pracovních sil.</value></data>
-  <data name="Index_FooterRights" xml:space="preserve"><value>© 2026 Klacks Store. Všechna práva vyhrazena.</value></data>
+  <data name="Index_FooterRights" xml:space="preserve"><value>© 2026 Klacks-Software</value></data>
   <data name="Index_Resources" xml:space="preserve"><value>Zdroje</value></data>
   <data name="Index_Documentation" xml:space="preserve"><value>Dokumentace</value></data>
-  <data name="Index_API" xml:space="preserve"><value>API</value></data>
   <data name="Index_Legal" xml:space="preserve"><value>Právní informace</value></data>
-  <data name="Index_PrivacyPolicy" xml:space="preserve"><value>Zásady ochrany osobních údajů</value></data>
-  <data name="Index_TermsOfService" xml:space="preserve"><value>Podmínky používání</value></data>
+  <data name="Index_PrivacyPolicy" xml:space="preserve"><value>Ochrana osobních údajů</value></data>
+  <data name="Index_Imprint" xml:space="preserve"><value>Impresum</value></data>
+  <data name="Index_License" xml:space="preserve"><value>Licence</value></data>
+  <data name="Index_SourceCode" xml:space="preserve"><value>Zdrojový kód (AGPL-3.0)</value></data>
   <data name="Login_PageTitle" xml:space="preserve"><value>Přihlášení - Klacks Store</value></data>
   <data name="Login_WelcomeBack" xml:space="preserve"><value>Vítejte zpět</value></data>
   <data name="Login_Subtitle" xml:space="preserve"><value>Přihlaste se ke správě svých balíčků a doplňků</value></data>

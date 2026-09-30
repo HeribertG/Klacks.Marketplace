@@ -77,13 +77,14 @@
   <data name="Index_BeFirstPlugin" xml:space="preserve"><value>Fii primul care încarcă un plugin de funcționalitate!</value></data>
   <data name="Index_PacksSubtitle" xml:space="preserve"><value>Resurse de localizare pentru echipe internaționale.</value></data>
   <data name="Index_FooterDescription" xml:space="preserve"><value>Ecosistem profesional pentru extinderea capacităților de management al forței de muncă.</value></data>
-  <data name="Index_FooterRights" xml:space="preserve"><value>© 2026 Klacks Store. Toate drepturile rezervate.</value></data>
+  <data name="Index_FooterRights" xml:space="preserve"><value>© 2026 Klacks-Software</value></data>
   <data name="Index_Resources" xml:space="preserve"><value>Resurse</value></data>
   <data name="Index_Documentation" xml:space="preserve"><value>Documentație</value></data>
-  <data name="Index_API" xml:space="preserve"><value>API</value></data>
   <data name="Index_Legal" xml:space="preserve"><value>Legal</value></data>
-  <data name="Index_PrivacyPolicy" xml:space="preserve"><value>Politica de confidențialitate</value></data>
-  <data name="Index_TermsOfService" xml:space="preserve"><value>Termeni și condiții</value></data>
+  <data name="Index_PrivacyPolicy" xml:space="preserve"><value>Confidențialitate</value></data>
+  <data name="Index_Imprint" xml:space="preserve"><value>Mențiuni legale</value></data>
+  <data name="Index_License" xml:space="preserve"><value>Licență</value></data>
+  <data name="Index_SourceCode" xml:space="preserve"><value>Cod sursă (AGPL-3.0)</value></data>
   <data name="Login_PageTitle" xml:space="preserve"><value>Autentificare - Klacks Store</value></data>
   <data name="Login_WelcomeBack" xml:space="preserve"><value>Bine ai revenit</value></data>
   <data name="Login_Subtitle" xml:space="preserve"><value>Autentifică-te pentru a-ți gestiona pachetele și pluginurile</value></data>

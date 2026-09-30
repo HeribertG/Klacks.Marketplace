@@ -11,6 +11,10 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+  h1:focus {
+    outline: none;
+  }
+
   ::selection {
     background-color: theme('colors.highlight');
     color: theme('colors.on-highlight');

@@ -51,8 +51,10 @@
     private void OnCultureChanged(ChangeEventArgs e)
     {
         var culture = e.Value?.ToString() ?? "en";
+        var returnUri = Navigation.GetUriWithQueryParameter(CultureCookie.QueryParameterName, (string?)null);
+        var returnPath = Navigation.ToBaseRelativePath(returnUri);
         Navigation.NavigateTo(
-            $"Culture/Set?culture={culture}&redirectUri={Uri.EscapeDataString(Navigation.Uri)}",
+            $"Culture/Set?culture={Uri.EscapeDataString(culture)}&redirectUri={Uri.EscapeDataString(returnPath)}",
             forceLoad: true);
     }
 

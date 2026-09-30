@@ -77,13 +77,14 @@
   <data name="Index_BeFirstPlugin" xml:space="preserve"><value>成為第一位上傳功能外掛程式的人！</value></data>
   <data name="Index_PacksSubtitle" xml:space="preserve"><value>為國際團隊打造的在地化資源。</value></data>
   <data name="Index_FooterDescription" xml:space="preserve"><value>用於擴充人力資源管理功能的專業生態系統。</value></data>
-  <data name="Index_FooterRights" xml:space="preserve"><value>© 2026 Klacks Store。保留所有權利。</value></data>
+  <data name="Index_FooterRights" xml:space="preserve"><value>© 2026 Klacks-Software</value></data>
   <data name="Index_Resources" xml:space="preserve"><value>資源</value></data>
   <data name="Index_Documentation" xml:space="preserve"><value>文件</value></data>
-  <data name="Index_API" xml:space="preserve"><value>API</value></data>
   <data name="Index_Legal" xml:space="preserve"><value>法律資訊</value></data>
   <data name="Index_PrivacyPolicy" xml:space="preserve"><value>隱私權政策</value></data>
-  <data name="Index_TermsOfService" xml:space="preserve"><value>服務條款</value></data>
+  <data name="Index_Imprint" xml:space="preserve"><value>法律聲明</value></data>
+  <data name="Index_License" xml:space="preserve"><value>授權</value></data>
+  <data name="Index_SourceCode" xml:space="preserve"><value>原始碼 (AGPL-3.0)</value></data>
   <data name="Login_PageTitle" xml:space="preserve"><value>登入 - Klacks Store</value></data>
   <data name="Login_WelcomeBack" xml:space="preserve"><value>歡迎回來</value></data>
   <data name="Login_Subtitle" xml:space="preserve"><value>登入以管理您的套件與外掛程式</value></data>

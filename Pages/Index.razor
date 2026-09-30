@@ -13,7 +13,7 @@
             @L["Index_HeroSubtitle"]
         </p>
         <div class="relative max-w-2xl mx-auto mb-10">
-            <div class="input-icon input-icon-lg absolute inset-y-0 left-5 flex items-center pointer-events-none">
+            <div class="input-icon input-icon-lg absolute inset-y-0 left-5 z-10 flex items-center pointer-events-none">
                 <span class="material-symbols-outlined text-on-primary-container">search</span>
             </div>
             <input class="w-full input-icon-field-lg pl-14 pr-6 py-5 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl focus:ring-2 focus:ring-highlight focus:bg-white focus:text-primary transition-all text-lg outline-none placeholder:text-on-primary-container/60"
@@ -173,15 +173,18 @@ else
         <div>
             <h4 class="text-inverse-on-surface text-xs font-black uppercase tracking-widest mb-6">@L["Index_Resources"]</h4>
             <ul class="space-y-4 list-none p-0">
-                <li><a class="text-xs uppercase tracking-widest text-inverse-on-surface/70 hover:text-inverse-primary transition-colors no-underline" href="#">@L["Index_Documentation"]</a></li>
-                <li><a class="text-xs uppercase tracking-widest text-inverse-on-surface/70 hover:text-inverse-primary transition-colors no-underline" href="#">@L["Index_API"]</a></li>
+                <li><a class="@FooterLinkClass" href="@ExternalLinks.WebsiteUrl" target="_blank" rel="noopener noreferrer">@ExternalLinks.WebsiteLabel</a></li>
+                <li><a class="@FooterLinkClass" href="@KlacksSiteLinks.Docs(_uiCulture)" target="_blank" rel="noopener noreferrer">@L["Index_Documentation"]</a></li>
+                <li><a class="@FooterLinkClass" href="@ExternalLinks.SourceCodeUrl" target="_blank" rel="noopener noreferrer">@L["Index_SourceCode"]</a></li>
+                <li><a class="@FooterLinkClass" href="@ExternalLinks.DiscordUrl" target="_blank" rel="noopener noreferrer">@ExternalLinks.DiscordLabel</a></li>
             </ul>
         </div>
         <div>
             <h4 class="text-inverse-on-surface text-xs font-black uppercase tracking-widest mb-6">@L["Index_Legal"]</h4>
             <ul class="space-y-4 list-none p-0">
-                <li><a class="text-xs uppercase tracking-widest text-inverse-on-surface/70 hover:text-inverse-primary transition-colors no-underline" href="#">@L["Index_PrivacyPolicy"]</a></li>
-                <li><a class="text-xs uppercase tracking-widest text-inverse-on-surface/70 hover:text-inverse-primary transition-colors no-underline" href="#">@L["Index_TermsOfService"]</a></li>
+                <li><a class="@FooterLinkClass" href="@KlacksSiteLinks.CompanyPage(_uiCulture, ExternalLinks.ImprintPageSlug)" target="_blank" rel="noopener noreferrer">@L["Index_Imprint"]</a></li>
+                <li><a class="@FooterLinkClass" href="@KlacksSiteLinks.CompanyPage(_uiCulture, ExternalLinks.PrivacyPageSlug)" target="_blank" rel="noopener noreferrer">@L["Index_PrivacyPolicy"]</a></li>
+                <li><a class="@FooterLinkClass" href="@KlacksSiteLinks.CompanyPage(_uiCulture, ExternalLinks.LicensePageSlug)" target="_blank" rel="noopener noreferrer">@L["Index_License"]</a></li>
                 <li class="text-inverse-on-surface font-bold text-[10px] tracking-[0.2em] mt-8">POWERED BY KLACKS</li>
             </ul>
         </div>
@@ -191,6 +194,9 @@ else
 @code {
     private enum Tab { LanguagePacks, FeaturePlugins, RegionPackages }
 
+    private const string FooterLinkClass = "text-xs uppercase tracking-widest text-inverse-on-surface/70 hover:text-inverse-primary transition-colors no-underline";
+
+    private readonly string _uiCulture = System.Globalization.CultureInfo.CurrentUICulture.Name;
     private Tab _activeTab = Tab.LanguagePacks;
     private List<LanguagePackage> _packages = [];
     private List<FeaturePlugin> _plugins = [];

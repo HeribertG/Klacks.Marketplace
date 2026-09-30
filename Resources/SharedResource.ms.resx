@@ -77,13 +77,14 @@
   <data name="Index_BeFirstPlugin" xml:space="preserve"><value>Jadilah orang pertama memuat naik plugin ciri!</value></data>
   <data name="Index_PacksSubtitle" xml:space="preserve"><value>Aset penyetempatan untuk pasukan antarabangsa.</value></data>
   <data name="Index_FooterDescription" xml:space="preserve"><value>Ekosistem profesional untuk memperluaskan keupayaan pengurusan tenaga kerja.</value></data>
-  <data name="Index_FooterRights" xml:space="preserve"><value>© 2026 Klacks Store. Hak cipta terpelihara.</value></data>
+  <data name="Index_FooterRights" xml:space="preserve"><value>© 2026 Klacks-Software</value></data>
   <data name="Index_Resources" xml:space="preserve"><value>Sumber</value></data>
   <data name="Index_Documentation" xml:space="preserve"><value>Dokumentasi</value></data>
-  <data name="Index_API" xml:space="preserve"><value>API</value></data>
   <data name="Index_Legal" xml:space="preserve"><value>Perundangan</value></data>
-  <data name="Index_PrivacyPolicy" xml:space="preserve"><value>Dasar Privasi</value></data>
-  <data name="Index_TermsOfService" xml:space="preserve"><value>Terma Perkhidmatan</value></data>
+  <data name="Index_PrivacyPolicy" xml:space="preserve"><value>Privasi</value></data>
+  <data name="Index_Imprint" xml:space="preserve"><value>Notis Undang-Undang</value></data>
+  <data name="Index_License" xml:space="preserve"><value>Lesen</value></data>
+  <data name="Index_SourceCode" xml:space="preserve"><value>Kod sumber (AGPL-3.0)</value></data>
   <data name="Login_PageTitle" xml:space="preserve"><value>Log Masuk - Klacks Store</value></data>
   <data name="Login_WelcomeBack" xml:space="preserve"><value>Selamat kembali</value></data>
   <data name="Login_Subtitle" xml:space="preserve"><value>Log masuk untuk mengurus pakej dan plugin anda</value></data>

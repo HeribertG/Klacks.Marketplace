@@ -77,13 +77,14 @@
   <data name="Index_BeFirstPlugin" xml:space="preserve"><value>كن أول من يرفع إضافة ميزة!</value></data>
   <data name="Index_PacksSubtitle" xml:space="preserve"><value>أصول توطين للفرق الدولية.</value></data>
   <data name="Index_FooterDescription" xml:space="preserve"><value>نظام بيئي احترافي لتوسيع إمكانات إدارة القوى العاملة.</value></data>
-  <data name="Index_FooterRights" xml:space="preserve"><value>© 2026 متجر Klacks. جميع الحقوق محفوظة.</value></data>
+  <data name="Index_FooterRights" xml:space="preserve"><value>© 2026 Klacks-Software</value></data>
   <data name="Index_Resources" xml:space="preserve"><value>الموارد</value></data>
   <data name="Index_Documentation" xml:space="preserve"><value>التوثيق</value></data>
-  <data name="Index_API" xml:space="preserve"><value>API</value></data>
   <data name="Index_Legal" xml:space="preserve"><value>القانونية</value></data>
   <data name="Index_PrivacyPolicy" xml:space="preserve"><value>سياسة الخصوصية</value></data>
-  <data name="Index_TermsOfService" xml:space="preserve"><value>شروط الخدمة</value></data>
+  <data name="Index_Imprint" xml:space="preserve"><value>بيانات الناشر</value></data>
+  <data name="Index_License" xml:space="preserve"><value>الترخيص</value></data>
+  <data name="Index_SourceCode" xml:space="preserve"><value>الشيفرة المصدرية (AGPL-3.0)</value></data>
   <data name="Login_PageTitle" xml:space="preserve"><value>تسجيل الدخول - متجر Klacks</value></data>
   <data name="Login_WelcomeBack" xml:space="preserve"><value>مرحبًا بعودتك</value></data>
   <data name="Login_Subtitle" xml:space="preserve"><value>سجّل الدخول لإدارة حزمك وإضافاتك</value></data>

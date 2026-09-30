@@ -77,13 +77,14 @@
   <data name="Index_BeFirstPlugin" xml:space="preserve"><value>Laden Sie das erste Feature Plugin hoch!</value></data>
   <data name="Index_PacksSubtitle" xml:space="preserve"><value>Lokalisierungsressourcen für internationale Teams.</value></data>
   <data name="Index_FooterDescription" xml:space="preserve"><value>Professionelles Ökosystem zur Erweiterung von Workforce-Management-Funktionen.</value></data>
-  <data name="Index_FooterRights" xml:space="preserve"><value>© 2026 Klacks Store. Alle Rechte vorbehalten.</value></data>
+  <data name="Index_FooterRights" xml:space="preserve"><value>© 2026 Klacks-Software</value></data>
   <data name="Index_Resources" xml:space="preserve"><value>Ressourcen</value></data>
   <data name="Index_Documentation" xml:space="preserve"><value>Dokumentation</value></data>
-  <data name="Index_API" xml:space="preserve"><value>API</value></data>
   <data name="Index_Legal" xml:space="preserve"><value>Rechtliches</value></data>
   <data name="Index_PrivacyPolicy" xml:space="preserve"><value>Datenschutz</value></data>
-  <data name="Index_TermsOfService" xml:space="preserve"><value>Nutzungsbedingungen</value></data>
+  <data name="Index_Imprint" xml:space="preserve"><value>Impressum</value></data>
+  <data name="Index_License" xml:space="preserve"><value>Lizenz</value></data>
+  <data name="Index_SourceCode" xml:space="preserve"><value>Quellcode (AGPL-3.0)</value></data>
   <data name="Login_PageTitle" xml:space="preserve"><value>Anmelden - Klacks Store</value></data>
   <data name="Login_WelcomeBack" xml:space="preserve"><value>Willkommen zurück</value></data>
   <data name="Login_Subtitle" xml:space="preserve"><value>Melden Sie sich an, um Ihre Pakete und Plugins zu verwalten</value></data>

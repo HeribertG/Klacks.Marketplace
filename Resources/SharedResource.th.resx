@@ -77,13 +77,14 @@
   <data name="Index_BeFirstPlugin" xml:space="preserve"><value>เป็นคนแรกที่อัปโหลดปลั๊กอินฟีเจอร์!</value></data>
   <data name="Index_PacksSubtitle" xml:space="preserve"><value>ทรัพยากรการแปลสำหรับทีมงานนานาชาติ</value></data>
   <data name="Index_FooterDescription" xml:space="preserve"><value>ระบบนิเวศระดับมืออาชีพสำหรับขยายขีดความสามารถด้านการบริหารจัดการกำลังคน</value></data>
-  <data name="Index_FooterRights" xml:space="preserve"><value>© 2026 Klacks Store สงวนลิขสิทธิ์</value></data>
+  <data name="Index_FooterRights" xml:space="preserve"><value>© 2026 Klacks-Software</value></data>
   <data name="Index_Resources" xml:space="preserve"><value>แหล่งข้อมูล</value></data>
   <data name="Index_Documentation" xml:space="preserve"><value>เอกสารประกอบ</value></data>
-  <data name="Index_API" xml:space="preserve"><value>API</value></data>
   <data name="Index_Legal" xml:space="preserve"><value>กฎหมาย</value></data>
   <data name="Index_PrivacyPolicy" xml:space="preserve"><value>นโยบายความเป็นส่วนตัว</value></data>
-  <data name="Index_TermsOfService" xml:space="preserve"><value>ข้อกำหนดในการให้บริการ</value></data>
+  <data name="Index_Imprint" xml:space="preserve"><value>ข้อมูลทางกฎหมาย</value></data>
+  <data name="Index_License" xml:space="preserve"><value>สัญญาอนุญาต</value></data>
+  <data name="Index_SourceCode" xml:space="preserve"><value>ซอร์สโค้ด (AGPL-3.0)</value></data>
   <data name="Login_PageTitle" xml:space="preserve"><value>เข้าสู่ระบบ - Klacks Store</value></data>
   <data name="Login_WelcomeBack" xml:space="preserve"><value>ยินดีต้อนรับกลับ</value></data>
   <data name="Login_Subtitle" xml:space="preserve"><value>เข้าสู่ระบบเพื่อจัดการแพ็กเกจและปลั๊กอินของคุณ</value></data>

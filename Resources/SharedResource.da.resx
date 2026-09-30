@@ -77,13 +77,14 @@
   <data name="Index_BeFirstPlugin" xml:space="preserve"><value>Vær den første til at uploade et feature-plugin!</value></data>
   <data name="Index_PacksSubtitle" xml:space="preserve"><value>Lokaliseringsressourcer til internationale teams.</value></data>
   <data name="Index_FooterDescription" xml:space="preserve"><value>Professionelt økosystem til udvidelse af funktioner til arbejdsstyrkestyring.</value></data>
-  <data name="Index_FooterRights" xml:space="preserve"><value>© 2026 Klacks Store. Alle rettigheder forbeholdes.</value></data>
+  <data name="Index_FooterRights" xml:space="preserve"><value>© 2026 Klacks-Software</value></data>
   <data name="Index_Resources" xml:space="preserve"><value>Ressourcer</value></data>
   <data name="Index_Documentation" xml:space="preserve"><value>Dokumentation</value></data>
-  <data name="Index_API" xml:space="preserve"><value>API</value></data>
   <data name="Index_Legal" xml:space="preserve"><value>Juridisk</value></data>
-  <data name="Index_PrivacyPolicy" xml:space="preserve"><value>Privatlivspolitik</value></data>
-  <data name="Index_TermsOfService" xml:space="preserve"><value>Servicevilkår</value></data>
+  <data name="Index_PrivacyPolicy" xml:space="preserve"><value>Databeskyttelse</value></data>
+  <data name="Index_Imprint" xml:space="preserve"><value>Kolofon</value></data>
+  <data name="Index_License" xml:space="preserve"><value>Licens</value></data>
+  <data name="Index_SourceCode" xml:space="preserve"><value>Kildekode (AGPL-3.0)</value></data>
   <data name="Login_PageTitle" xml:space="preserve"><value>Log ind - Klacks Store</value></data>
   <data name="Login_WelcomeBack" xml:space="preserve"><value>Velkommen tilbage</value></data>
   <data name="Login_Subtitle" xml:space="preserve"><value>Log ind for at administrere dine pakker og plugins</value></data>
