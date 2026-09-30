@@ -14,7 +14,7 @@
     private string GetCoverageClasses()
     {
         if (Coverage >= 80) return "bg-gradient-to-r from-tertiary-fixed-dim to-on-tertiary-container";
-        if (Coverage >= 50) return "bg-gradient-to-r from-amber-400 to-amber-500";
-        return "bg-gradient-to-r from-red-400 to-red-500";
+        if (Coverage >= 50) return "bg-gradient-to-r from-highlight/70 to-highlight";
+        return "bg-gradient-to-r from-error/70 to-error";
     }
 }

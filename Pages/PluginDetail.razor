@@ -18,7 +18,7 @@ else if (_plugin is null)
         <span class="material-symbols-outlined text-6xl text-on-surface-variant mb-4 block">warning</span>
         <h3 class="text-2xl font-bold mb-2">@L["PluginDetail_NotFound"]</h3>
         <p class="text-on-surface-variant mb-6">@L["PluginDetail_NotFoundDesc"]</p>
-        <a href="." class="px-6 py-3 bg-secondary text-on-secondary rounded-lg font-semibold no-underline hover:opacity-90 transition-all">@L["Common_BackToBrowse"]</a>
+        <a href="." class="px-6 py-3 bg-secondary text-on-secondary rounded-lg font-semibold no-underline hover:bg-secondary-container transition-all">@L["Common_BackToBrowse"]</a>
     </section>
 }
 else
@@ -60,7 +60,7 @@ else
                 <div class="w-full md:w-72 flex flex-col gap-4">
                     @if (_plugin.Status == PackageStatus.Published)
                     {
-                        <button class="w-full px-6 py-4 bg-secondary text-on-secondary rounded-xl font-bold text-lg hover:opacity-90 active:scale-[0.98] transition-all flex items-center justify-center gap-2 disabled:opacity-50"
+                        <button class="w-full px-6 py-4 bg-secondary text-on-secondary rounded-xl font-bold text-lg hover:bg-secondary-container active:scale-[0.98] transition-all flex items-center justify-center gap-2 disabled:opacity-50"
                                 @onclick="DownloadPlugin" disabled="@_isDownloading">
                             @if (_isDownloading)
                             {
@@ -93,7 +93,7 @@ else
 
         @if (_skills.Length > 0)
         {
-            <div class="bg-surface-container-lowest rounded-2xl p-8 mb-8 shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
+            <div class="bg-surface-container-lowest rounded-2xl p-8 mb-8 shadow-[0_4px_12px_rgba(22,24,29,0.04)]">
                 <h3 class="text-lg font-bold mb-4">@L["PluginDetail_ProvidedSkills"]</h3>
                 <div class="flex flex-wrap gap-2">
                     @foreach (var skill in _skills)
@@ -106,7 +106,7 @@ else
 
         @if (_permissions.Length > 0)
         {
-            <div class="bg-surface-container-lowest rounded-2xl p-8 mb-8 shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
+            <div class="bg-surface-container-lowest rounded-2xl p-8 mb-8 shadow-[0_4px_12px_rgba(22,24,29,0.04)]">
                 <h3 class="text-lg font-bold mb-4">@L["PluginDetail_RequiredPermissions"]</h3>
                 <div class="flex flex-wrap gap-2">
                     @foreach (var perm in _permissions)
@@ -119,7 +119,7 @@ else
 
         @if (!string.IsNullOrWhiteSpace(_plugin.ReadmeMarkdown))
         {
-            <div class="bg-surface-container-lowest rounded-2xl p-8 mb-8 shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
+            <div class="bg-surface-container-lowest rounded-2xl p-8 mb-8 shadow-[0_4px_12px_rgba(22,24,29,0.04)]">
                 <h3 class="text-lg font-bold mb-4">@L["PluginDetail_README"]</h3>
                 <pre class="whitespace-pre-wrap text-sm text-on-surface-variant leading-relaxed m-0">@_plugin.ReadmeMarkdown</pre>
             </div>
@@ -132,7 +132,7 @@ else
                 <div class="space-y-3">
                     @foreach (var version in _plugin.Versions)
                     {
-                        <div class="bg-surface-container-lowest rounded-xl p-5 flex items-start justify-between shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
+                        <div class="bg-surface-container-lowest rounded-xl p-5 flex items-start justify-between shadow-[0_4px_12px_rgba(22,24,29,0.04)]">
                             <div>
                                 <span class="font-bold">v@(version.Version)</span>
                                 <span class="text-on-surface-variant text-sm ml-3">@version.CreatedAt.ToString("D")</span>
@@ -225,21 +225,21 @@ else
 
     private string GetIconBgClass() => _plugin?.Category?.ToLowerInvariant() switch
     {
-        "communication" => "bg-blue-100",
-        "erp" => "bg-emerald-100",
-        "accounting" => "bg-amber-100",
-        "reporting" => "bg-purple-100",
-        "integration" => "bg-cyan-100",
-        _ => "bg-slate-100"
+        "communication" => "bg-category-communication",
+        "erp" => "bg-category-erp",
+        "accounting" => "bg-category-accounting",
+        "reporting" => "bg-category-reporting",
+        "integration" => "bg-category-integration",
+        _ => "bg-category-default"
     };
 
     private string GetIconTextClass() => _plugin?.Category?.ToLowerInvariant() switch
     {
-        "communication" => "text-secondary",
-        "erp" => "text-on-tertiary-container",
-        "accounting" => "text-amber-600",
-        "reporting" => "text-purple-600",
-        "integration" => "text-cyan-600",
-        _ => "text-slate-600"
+        "communication" => "text-on-category-communication",
+        "erp" => "text-on-category-erp",
+        "accounting" => "text-on-category-accounting",
+        "reporting" => "text-on-category-reporting",
+        "integration" => "text-on-category-integration",
+        _ => "text-on-category-default"
     };
 }

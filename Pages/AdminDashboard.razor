@@ -28,19 +28,19 @@
         }
 
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-            <div class="bg-surface-container-lowest rounded-xl p-6 text-center shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
+            <div class="bg-surface-container-lowest rounded-xl p-6 text-center shadow-[0_4px_12px_rgba(22,24,29,0.04)]">
                 <div class="text-3xl font-black text-secondary">@_pendingPackages.Count</div>
                 <div class="text-xs text-on-surface-variant uppercase tracking-wider mt-1">@L["Admin_PendingPackages"]</div>
             </div>
-            <div class="bg-surface-container-lowest rounded-xl p-6 text-center shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
+            <div class="bg-surface-container-lowest rounded-xl p-6 text-center shadow-[0_4px_12px_rgba(22,24,29,0.04)]">
                 <div class="text-3xl font-black text-secondary">@_pendingPlugins.Count</div>
                 <div class="text-xs text-on-surface-variant uppercase tracking-wider mt-1">@L["Admin_PendingPlugins"]</div>
             </div>
-            <div class="bg-surface-container-lowest rounded-xl p-6 text-center shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
+            <div class="bg-surface-container-lowest rounded-xl p-6 text-center shadow-[0_4px_12px_rgba(22,24,29,0.04)]">
                 <div class="text-3xl font-black text-secondary">@_pendingRegionPackages.Count</div>
                 <div class="text-xs text-on-surface-variant uppercase tracking-wider mt-1">@L["Admin_PendingRegions"]</div>
             </div>
-            <div class="bg-surface-container-lowest rounded-xl p-6 text-center shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
+            <div class="bg-surface-container-lowest rounded-xl p-6 text-center shadow-[0_4px_12px_rgba(22,24,29,0.04)]">
                 <div class="text-3xl font-black text-secondary">@_users.Count</div>
                 <div class="text-xs text-on-surface-variant uppercase tracking-wider mt-1">@L["Admin_Users"]</div>
             </div>
@@ -53,7 +53,7 @@
         }
         else
         {
-            <div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(27,27,29,0.04)] mb-8">
+            <div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(22,24,29,0.04)] mb-8">
                 <table class="w-full text-sm">
                     <thead>
                         <tr class="bg-surface-container-low text-on-surface-variant text-xs uppercase tracking-wider">
@@ -98,7 +98,7 @@
         }
         else
         {
-            <div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(27,27,29,0.04)] mb-8">
+            <div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(22,24,29,0.04)] mb-8">
                 <table class="w-full text-sm">
                     <thead>
                         <tr class="bg-surface-container-low text-on-surface-variant text-xs uppercase tracking-wider">
@@ -141,7 +141,7 @@
         }
         else
         {
-            <div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(27,27,29,0.04)] mb-8">
+            <div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(22,24,29,0.04)] mb-8">
                 <table class="w-full text-sm">
                     <thead>
                         <tr class="bg-surface-container-low text-on-surface-variant text-xs uppercase tracking-wider">
@@ -178,7 +178,7 @@
         }
 
         <h3 class="text-xl font-bold mb-4">@L["Admin_Users"]</h3>
-        <div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(27,27,29,0.04)]">
+        <div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(22,24,29,0.04)]">
             <table class="w-full text-sm">
                 <thead>
                     <tr class="bg-surface-container-low text-on-surface-variant text-xs uppercase tracking-wider">
@@ -203,7 +203,7 @@
                                 }
                             </td>
                             <td class="px-6 py-4">
-                                <button class="px-3 py-1.5 bg-secondary text-on-secondary rounded-lg text-xs font-bold hover:opacity-80 transition-all" @onclick="() => ToggleAdmin(user.Id)">
+                                <button class="px-3 py-1.5 bg-secondary text-on-secondary rounded-lg text-xs font-bold hover:bg-secondary-container transition-all" @onclick="() => ToggleAdmin(user.Id)">
                                     @(user.IsAdmin ? L["Admin_RemoveAdmin"] : L["Admin_MakeAdmin"])
                                 </button>
                             </td>
@@ -220,7 +220,7 @@
         }
         else
         {
-            <div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(27,27,29,0.04)] mb-8">
+            <div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(22,24,29,0.04)] mb-8">
                 <table class="w-full text-sm">
                     <thead>
                         <tr class="bg-surface-container-low text-on-surface-variant text-xs uppercase tracking-wider">

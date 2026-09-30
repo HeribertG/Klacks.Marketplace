@@ -6,11 +6,11 @@
 
     private string GetCategoryClasses() => Category?.ToLowerInvariant() switch
     {
-        "communication" => "bg-blue-100 text-blue-700",
-        "erp" => "bg-emerald-100 text-emerald-700",
-        "accounting" => "bg-amber-100 text-amber-700",
-        "reporting" => "bg-purple-100 text-purple-700",
-        "integration" => "bg-cyan-100 text-cyan-700",
+        "communication" => "bg-category-communication text-on-category-communication",
+        "erp" => "bg-category-erp text-on-category-erp",
+        "accounting" => "bg-category-accounting text-on-category-accounting",
+        "reporting" => "bg-category-reporting text-on-category-reporting",
+        "integration" => "bg-category-integration text-on-category-integration",
         _ => "bg-surface-container-highest text-on-surface-variant"
     };
 }
