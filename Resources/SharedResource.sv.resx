@@ -59,6 +59,7 @@
   <data name="Common_Count" xml:space="preserve"><value>Antal</value></data>
   <data name="Common_Translations" xml:space="preserve"><value>översättningar</value></data>
   <data name="Nav_Browse" xml:space="preserve"><value>Bläddra</value></data>
+  <data name="Nav_Menu" xml:space="preserve"><value>Meny</value></data>
   <data name="Nav_UploadPack" xml:space="preserve"><value>Ladda upp paket</value></data>
   <data name="Nav_UploadPlugin" xml:space="preserve"><value>Ladda upp tillägg</value></data>
   <data name="Nav_MyPackages" xml:space="preserve"><value>Mina paket</value></data>

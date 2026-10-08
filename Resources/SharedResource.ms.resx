@@ -59,6 +59,7 @@
   <data name="Common_Count" xml:space="preserve"><value>Bilangan</value></data>
   <data name="Common_Translations" xml:space="preserve"><value>terjemahan</value></data>
   <data name="Nav_Browse" xml:space="preserve"><value>Layari</value></data>
+  <data name="Nav_Menu" xml:space="preserve"><value>Menu</value></data>
   <data name="Nav_UploadPack" xml:space="preserve"><value>Muat Naik Pakej</value></data>
   <data name="Nav_UploadPlugin" xml:space="preserve"><value>Muat Naik Plugin</value></data>
   <data name="Nav_MyPackages" xml:space="preserve"><value>Pakej Saya</value></data>

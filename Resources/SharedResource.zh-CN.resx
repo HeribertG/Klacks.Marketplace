@@ -59,6 +59,7 @@
   <data name="Common_Count" xml:space="preserve"><value>数量</value></data>
   <data name="Common_Translations" xml:space="preserve"><value>翻译</value></data>
   <data name="Nav_Browse" xml:space="preserve"><value>浏览</value></data>
+  <data name="Nav_Menu" xml:space="preserve"><value>菜单</value></data>
   <data name="Nav_UploadPack" xml:space="preserve"><value>上传语言包</value></data>
   <data name="Nav_UploadPlugin" xml:space="preserve"><value>上传插件</value></data>
   <data name="Nav_MyPackages" xml:space="preserve"><value>我的包</value></data>

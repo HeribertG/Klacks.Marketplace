@@ -59,6 +59,7 @@
   <data name="Common_Count" xml:space="preserve"><value>Počet</value></data>
   <data name="Common_Translations" xml:space="preserve"><value>překlady</value></data>
   <data name="Nav_Browse" xml:space="preserve"><value>Procházet</value></data>
+  <data name="Nav_Menu" xml:space="preserve"><value>Nabídka</value></data>
   <data name="Nav_UploadPack" xml:space="preserve"><value>Nahrát balíček</value></data>
   <data name="Nav_UploadPlugin" xml:space="preserve"><value>Nahrát doplněk</value></data>
   <data name="Nav_MyPackages" xml:space="preserve"><value>Moje balíčky</value></data>

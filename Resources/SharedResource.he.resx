@@ -59,6 +59,7 @@
   <data name="Common_Count" xml:space="preserve"><value>כמות</value></data>
   <data name="Common_Translations" xml:space="preserve"><value>תרגומים</value></data>
   <data name="Nav_Browse" xml:space="preserve"><value>עיון</value></data>
+  <data name="Nav_Menu" xml:space="preserve"><value>תפריט</value></data>
   <data name="Nav_UploadPack" xml:space="preserve"><value>העלאת חבילה</value></data>
   <data name="Nav_UploadPlugin" xml:space="preserve"><value>העלאת תוסף</value></data>
   <data name="Nav_MyPackages" xml:space="preserve"><value>החבילות שלי</value></data>

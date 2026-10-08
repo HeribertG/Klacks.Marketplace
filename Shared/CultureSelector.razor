@@ -1,7 +1,7 @@
 @inject NavigationManager Navigation
 @inject IHttpContextAccessor HttpContextAccessor
 
-<select class="px-3 py-1.5 bg-surface-container-low border border-outline-variant/30 rounded-lg text-sm text-on-surface focus:ring-2 focus:ring-secondary outline-none transition-all cursor-pointer"
+<select class="max-w-[6.5rem] sm:max-w-none px-2 sm:px-3 py-1.5 bg-surface-container-low border border-outline-variant/30 rounded-lg text-sm text-on-surface focus:ring-2 focus:ring-secondary outline-none transition-all cursor-pointer"
         @onchange="OnCultureChanged">
     @foreach (var culture in _cultures)
     {

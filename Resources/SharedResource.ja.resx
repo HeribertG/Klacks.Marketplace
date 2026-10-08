@@ -59,6 +59,7 @@
   <data name="Common_Count" xml:space="preserve"><value>件数</value></data>
   <data name="Common_Translations" xml:space="preserve"><value>翻訳</value></data>
   <data name="Nav_Browse" xml:space="preserve"><value>参照</value></data>
+  <data name="Nav_Menu" xml:space="preserve"><value>メニュー</value></data>
   <data name="Nav_UploadPack" xml:space="preserve"><value>パックをアップロード</value></data>
   <data name="Nav_UploadPlugin" xml:space="preserve"><value>プラグインをアップロード</value></data>
   <data name="Nav_MyPackages" xml:space="preserve"><value>マイパッケージ</value></data>

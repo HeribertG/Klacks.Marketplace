@@ -59,6 +59,7 @@
   <data name="Common_Count" xml:space="preserve"><value>건수</value></data>
   <data name="Common_Translations" xml:space="preserve"><value>번역</value></data>
   <data name="Nav_Browse" xml:space="preserve"><value>둘러보기</value></data>
+  <data name="Nav_Menu" xml:space="preserve"><value>메뉴</value></data>
   <data name="Nav_UploadPack" xml:space="preserve"><value>팩 업로드</value></data>
   <data name="Nav_UploadPlugin" xml:space="preserve"><value>플러그인 업로드</value></data>
   <data name="Nav_MyPackages" xml:space="preserve"><value>내 패키지</value></data>

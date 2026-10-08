@@ -59,6 +59,7 @@
   <data name="Common_Count" xml:space="preserve"><value>Quantidade</value></data>
   <data name="Common_Translations" xml:space="preserve"><value>traduções</value></data>
   <data name="Nav_Browse" xml:space="preserve"><value>Explorar</value></data>
+  <data name="Nav_Menu" xml:space="preserve"><value>Menu</value></data>
   <data name="Nav_UploadPack" xml:space="preserve"><value>Carregar Pacote</value></data>
   <data name="Nav_UploadPlugin" xml:space="preserve"><value>Carregar Plugin</value></data>
   <data name="Nav_MyPackages" xml:space="preserve"><value>Os Meus Pacotes</value></data>

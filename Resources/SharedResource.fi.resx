@@ -59,6 +59,7 @@
   <data name="Common_Count" xml:space="preserve"><value>Määrä</value></data>
   <data name="Common_Translations" xml:space="preserve"><value>käännöstä</value></data>
   <data name="Nav_Browse" xml:space="preserve"><value>Selaa</value></data>
+  <data name="Nav_Menu" xml:space="preserve"><value>Valikko</value></data>
   <data name="Nav_UploadPack" xml:space="preserve"><value>Lähetä paketti</value></data>
   <data name="Nav_UploadPlugin" xml:space="preserve"><value>Lähetä laajennus</value></data>
   <data name="Nav_MyPackages" xml:space="preserve"><value>Omat paketit</value></data>

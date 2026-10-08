@@ -59,6 +59,7 @@
   <data name="Common_Count" xml:space="preserve"><value>Πλήθος</value></data>
   <data name="Common_Translations" xml:space="preserve"><value>μεταφράσεις</value></data>
   <data name="Nav_Browse" xml:space="preserve"><value>Περιήγηση</value></data>
+  <data name="Nav_Menu" xml:space="preserve"><value>Μενού</value></data>
   <data name="Nav_UploadPack" xml:space="preserve"><value>Μεταφόρτωση πακέτου</value></data>
   <data name="Nav_UploadPlugin" xml:space="preserve"><value>Μεταφόρτωση πρόσθετου</value></data>
   <data name="Nav_MyPackages" xml:space="preserve"><value>Τα πακέτα μου</value></data>
