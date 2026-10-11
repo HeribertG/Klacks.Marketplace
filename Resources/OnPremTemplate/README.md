@@ -51,5 +51,58 @@ creates it. The file is picked up at the next scheduled run (hourly by default; 
 Klacksy to trigger one immediately with `trigger_erp_import_run`) and ends up in the
 `processed/` or `error/` sub-folder next to it.
 
+## Geo services and privacy
+Out of the box, maps, address geocoding and routing use public services: Nominatim
+(geocoding), OSRM and OpenRouteService (routing, travel times) and the OpenStreetMap tile
+servers (maps, route PDF). Client addresses, coordinates and map tile requests therefore
+leave the installation - the API sends addresses and coordinates, the browser loads the
+tiles. This is the default `GEO_NO_OUTBOUND_TRAFFIC=false`.
+
+**Keep client addresses inside the installation** - set in `.env`:
+```
+GEO_NO_OUTBOUND_TRAFFIC=true
+MAP_TILE_CSP_SOURCES=
+```
+Keep the `MAP_TILE_CSP_SOURCES` line with an empty value: the browser then may load map
+tiles from no host at all. Deleting the line instead brings back the OpenStreetMap hosts.
+Then apply it with `docker compose up -d` (or re-run the installer, which keeps both values).
+The API logs one line per geo service at start-up, so `docker compose logs klacks-api`
+shows which services are off.
+
+Consequences with `GEO_NO_OUTBOUND_TRAFFIC=true` and no own instances:
+- No maps (dashboard map, map in the route PDF), no address search or suggestions, no
+  routing or travel times from a routing service (straight-line estimates instead), and no
+  OpenStreetMap / Street View links.
+- Coordinate gap: addresses created or imported while the switch is on get no coordinates,
+  so they have no map marker and route planning only uses coordinates that already exist.
+  Addresses stay saveable. After switching back, the authenticated API call
+  `POST api/backend/RouteOptimization/geocode-all` fills in the missing coordinates.
+- Weather for the company location (Klacksy, greeting) is derived from the company address
+  by geocoding and is therefore unavailable; weather for explicit coordinates still works.
+- Only these geo services are covered. Other outbound services are separate and keep
+  running: weather (Open-Meteo, receives coordinates), public holidays (Nager.Date),
+  translations (DeepL, receives the texts to translate), web search for Klacksy (Serper or
+  Tavily, receives search terms; the greeting searches for traffic and events in the company's city),
+  image pulls and auto-updates (`ghcr.io`, `github.com`), the marketplace
+  (`KLACKS_MARKETPLACE_URL`) and any external LLM provider configured for Klacksy.
+
+**Own instances instead of switching off:** point `GEO_GEOCODING_BASE_URL` (Nominatim
+compatible), `GEO_ROUTING_BASE_URL` (OSRM), `GEO_OPENROUTESERVICE_BASE_URL` and
+`GEO_MAP_TILE_URL_TEMPLATE` (e.g. `https://tiles.example.local/{z}/{x}/{y}.png`, with
+`GEO_MAP_TILE_ATTRIBUTION`) at your own servers. With `GEO_NO_OUTBOUND_TRAFFIC=true`, the
+well-known public OpenStreetMap services (openstreetmap.org, project-osrm.org,
+openrouteservice.org and a few public tile hosts) are refused even when entered here. This is
+a deny list of known hosts, not an allow list: any other host you enter is used, so only enter
+servers you operate. URLs with credentials (`user:password@host`) are rejected. The tile URL
+is sent to every browser, so `GEO_MAP_TILE_URL_TEMPLATE` must not contain credentials or API
+keys. An own tile server must also be listed in
+`MAP_TILE_CSP_SOURCES` (e.g. `MAP_TILE_CSP_SOURCES=https://tiles.example.local`), otherwise
+the browser blocks its tiles, and it must send CORS headers (`Access-Control-Allow-Origin`),
+otherwise the route PDF export fails.
+
+Installations made before these settings existed: the auto-updater only swaps the image
+versions. Take `docker-compose.yml` and `nginx/nginx.onprem.conf.template` from a current
+bundle (and re-run the installer) before the switch has any effect.
+
 Full guide (update, backup/restore, rollback, BYO certificate): see
 [`docs/onprem-docker-install.md`](../../../docs/onprem-docker-install.md).
