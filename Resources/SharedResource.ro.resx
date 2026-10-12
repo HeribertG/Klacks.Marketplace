@@ -214,6 +214,11 @@
   <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Pachet complet de instalare cu scripturi de instalare, Docker Compose și profilul regional.</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Pachet Docker Compose</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Configurare Docker Compose minimală, fără instalatoare, pentru profesioniștii Docker.</value></data>
+  <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>PC de birou (fără Docker)</value></data>
+  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Program de instalare pentru Windows 10/11 (64 de biți) și Mac-uri cu cip Apple (M1 sau mai nou): Klacks rulează ca serviciu în fundal pe PC, fără Docker și fără un server propriu.</value></data>
+  <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux? Te rugăm să folosești Pachetul On-Prem cu Docker.</value></data>
+  <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
+  <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (cip Apple)</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Îngrijire la domiciliu</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Sănătate</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>Securitate</value></data>

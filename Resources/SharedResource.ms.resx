@@ -214,6 +214,11 @@
   <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Bundel pemasangan lengkap dengan skrip pemasang, Docker Compose dan profil wilayah.</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Bundel Docker Compose</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Persediaan Docker Compose minimum tanpa pemasang, untuk profesional Docker.</value></data>
+  <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>PC pejabat (tanpa Docker)</value></data>
+  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Pemasang untuk Windows 10/11 (64-bit) dan Mac dengan cip Apple (M1 atau lebih baharu): Klacks berjalan sebagai perkhidmatan latar belakang pada PC, tanpa Docker dan tanpa pelayan anda sendiri.</value></data>
+  <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux? Sila gunakan Bundel On-Prem dengan Docker.</value></data>
+  <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
+  <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (cip Apple)</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Penjagaan Rumah</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Penjagaan Kesihatan</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>Keselamatan</value></data>

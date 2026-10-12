@@ -214,6 +214,11 @@
   <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Täydellinen asennuspaketti, joka sisältää asennusskriptit, Docker Composen ja alueprofiilin.</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Docker Compose -paketti</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Minimaalinen Docker Compose -määritys ilman asentimia, Docker-ammattilaisille.</value></data>
+  <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>Toimiston PC (ilman Dockeria)</value></data>
+  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Asennusohjelma Windows 10/11:lle (64-bittinen) ja Apple-sirulla varustetuille Maceille (M1 tai uudempi): Klacks toimii PC:llä taustapalveluna, ilman Dockeria ja ilman omaa palvelinta.</value></data>
+  <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux? Käyttäkää On-Prem-pakettia Dockerin kanssa.</value></data>
+  <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
+  <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (Apple-siru)</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Kotihoito</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Terveydenhuolto</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>Turvallisuus</value></data>

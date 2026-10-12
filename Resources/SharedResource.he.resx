@@ -214,6 +214,11 @@
   <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>חבילת התקנה מלאה הכוללת סקריפטים להתקנה, Docker Compose ופרופיל האזור.</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>חבילת Docker Compose</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>הגדרת Docker Compose מינימלית ללא סקריפטים להתקנה, למשתמשי Docker מנוסים.</value></data>
+  <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>מחשב משרדי (ללא Docker)</value></data>
+  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>תוכנת התקנה ל-Windows 10/11 (64 סיביות) ולמחשבי Mac עם שבב Apple (M1 ומעלה): Klacks פועל כשירות רקע על המחשב, ללא Docker וללא שרת משלכם.</value></data>
+  <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux? אנא השתמשו בחבילת On-Prem עם Docker.</value></data>
+  <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
+  <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (שבב Apple)</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>טיפול ביתי</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>בריאות</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>אבטחה</value></data>

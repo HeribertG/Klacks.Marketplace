@@ -214,6 +214,11 @@
   <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Bundle di installazione completo con script di installazione, Docker Compose e il profilo regionale.</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Bundle Docker Compose</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Setup Docker Compose minimale senza installer, per professionisti Docker.</value></data>
+  <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>PC d'ufficio (senza Docker)</value></data>
+  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Programma di installazione per Windows 10/11 (64 bit) e Mac con chip Apple (M1 o successivo): Klacks funziona come servizio in background sul PC, senza Docker e senza un server proprio.</value></data>
+  <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux? Usate il Bundle On-Prem con Docker.</value></data>
+  <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
+  <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (chip Apple)</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Assistenza domiciliare</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Sanità</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>Sicurezza</value></data>

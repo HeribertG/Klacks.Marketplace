@@ -214,6 +214,11 @@
   <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Komplet installationsbundle med installationsscripts, Docker Compose og regionsprofilen.</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Docker Compose-bundle</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Minimal Docker Compose-opsætning uden installationsprogrammer, til Docker-professionelle.</value></data>
+  <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>Kontor-pc (uden Docker)</value></data>
+  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Installationsprogram til Windows 10/11 (64-bit) og Mac-computere med Apple-chip (M1 eller nyere): Klacks kører som baggrundstjeneste på pc'en, uden Docker og uden egen server.</value></data>
+  <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux? Brug venligst on-prem-bundlet med Docker.</value></data>
+  <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
+  <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (Apple-chip)</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Hjemmepleje</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Sundhedsvæsen</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>Sikkerhed</value></data>

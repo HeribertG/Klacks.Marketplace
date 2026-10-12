@@ -214,6 +214,11 @@
   <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>حزمة تثبيت كاملة تتضمن نصوص التثبيت وDocker Compose وملف التعريف الإقليمي.</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>حزمة Docker Compose</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>إعداد Docker Compose مبسّط بدون برامج تثبيت، مخصص لمحترفي Docker.</value></data>
+  <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>حاسوب المكتب (دون Docker)</value></data>
+  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>برنامج تثبيت لـ Windows 10/11 (64 بت) وأجهزة Mac بشريحة Apple (M1 أو أحدث): يعمل Klacks كخدمة في الخلفية على الحاسوب، دون Docker ودون خادم خاص بكم.</value></data>
+  <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux؟ يُرجى استخدام حزمة التثبيت المحلي مع Docker.</value></data>
+  <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
+  <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (شريحة Apple)</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>الرعاية المنزلية</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>الرعاية الصحية</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>الأمن</value></data>

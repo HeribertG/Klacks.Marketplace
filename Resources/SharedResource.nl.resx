@@ -214,6 +214,11 @@
   <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Volledige installatiebundel met installatiescripts, Docker Compose en het regioprofiel.</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Docker Compose-bundel</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Minimale Docker Compose-configuratie zonder installatieprogramma's, voor Docker-professionals.</value></data>
+  <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>Kantoor-pc (zonder Docker)</value></data>
+  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Installatieprogramma voor Windows 10/11 (64-bit) en Macs met Apple-chip (M1 of nieuwer): Klacks draait als achtergronddienst op de pc, zonder Docker en zonder eigen server.</value></data>
+  <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux? Gebruik de on-premise bundel met Docker.</value></data>
+  <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
+  <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (Apple-chip)</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Thuiszorg</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Gezondheidszorg</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>Beveiliging</value></data>

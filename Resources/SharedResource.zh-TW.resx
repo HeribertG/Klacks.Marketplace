@@ -214,6 +214,11 @@
   <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>包含安裝指令碼、Docker Compose 與區域設定檔的完整安裝套件包。</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Docker Compose 套件包</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>適合 Docker 專業使用者的精簡 Docker Compose 設定，不含安裝程式。</value></data>
+  <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>辦公室電腦（無需 Docker）</value></data>
+  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>適用於 Windows 10/11（64 位元）與搭載 Apple 晶片之 Mac（M1 或更新機型）的安裝程式：Klacks 以背景服務在電腦上執行，無需 Docker，也無需自有伺服器。</value></data>
+  <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>使用 Linux？請使用搭配 Docker 的地端套件包。</value></data>
+  <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
+  <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac（Apple 晶片）</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>居家照護</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>醫療保健</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>保全服務</value></data>

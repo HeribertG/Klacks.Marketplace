@@ -214,6 +214,11 @@
   <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>설치 스크립트, Docker Compose, 지역 프로필이 포함된 전체 설치 번들입니다.</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Docker Compose 번들</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>설치 스크립트 없이 Docker 전문가를 위한 최소한의 Docker Compose 구성입니다.</value></data>
+  <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>사무실 PC(Docker 불필요)</value></data>
+  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Windows 10/11(64비트) 및 Apple 실리콘 탑재 Mac(M1 이상)용 설치 프로그램: Klacks가 PC에서 백그라운드 서비스로 실행되며, Docker도 자체 서버도 필요 없습니다.</value></data>
+  <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux를 사용하시나요? Docker 기반의 온프레미스 번들을 이용해 주세요.</value></data>
+  <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
+  <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac(Apple 실리콘)</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>재가 요양</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>의료</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>보안</value></data>

@@ -214,6 +214,11 @@
   <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Πλήρες πακέτο εγκατάστασης με σενάρια εγκαταστάτη, Docker Compose και το προφίλ περιοχής.</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Πακέτο Docker Compose</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Ελάχιστη ρύθμιση Docker Compose χωρίς εγκαταστάτες, για επαγγελματίες του Docker.</value></data>
+  <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>Υπολογιστής γραφείου (χωρίς Docker)</value></data>
+  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Πρόγραμμα εγκατάστασης για Windows 10/11 (64-bit) και Mac με τσιπ Apple (M1 ή νεότερο): το Klacks εκτελείται ως υπηρεσία παρασκηνίου στον υπολογιστή, χωρίς Docker και χωρίς δικό σας διακομιστή.</value></data>
+  <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux; Χρησιμοποιήστε το Πακέτο On-Prem με Docker.</value></data>
+  <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
+  <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (τσιπ Apple)</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Κατ' οίκον φροντίδα</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Υγειονομική περίθαλψη</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>Ασφάλεια</value></data>

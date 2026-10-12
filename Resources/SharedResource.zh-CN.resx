@@ -214,6 +214,11 @@
   <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>包含安装脚本、Docker Compose 和区域配置文件的完整安装包。</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Docker Compose 包</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>面向 Docker 专业人员的精简 Docker Compose 配置，不含安装脚本。</value></data>
+  <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>办公电脑（无需 Docker）</value></data>
+  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>适用于 Windows 10/11（64 位）和搭载 Apple 芯片的 Mac（M1 或更新机型）的安装程序：Klacks 作为后台服务在电脑上运行，无需 Docker，也无需自有服务器。</value></data>
+  <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>使用 Linux？请使用带 Docker 的本地部署包。</value></data>
+  <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
+  <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac（Apple 芯片）</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>居家护理</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>医疗保健</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>安保</value></data>

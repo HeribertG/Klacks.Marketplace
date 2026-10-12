@@ -214,6 +214,11 @@
   <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>インストーラースクリプト、Docker Compose、リージョンプロファイルを含む完全なインストールバンドルです。</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Docker Compose バンドル</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>インストーラーを含まない、Docker 専門家向けの最小構成の Docker Compose セットアップです。</value></data>
+  <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>オフィス PC（Docker 不要）</value></data>
+  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Windows 10/11（64 ビット）および Apple シリコン搭載 Mac（M1 以降）向けのインストーラーです。Klacks は PC 上でバックグラウンドサービスとして動作し、Docker も自社サーバーも不要です。</value></data>
+  <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux の場合は、Docker を使用するオンプレミスバンドルをご利用ください。</value></data>
+  <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
+  <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac（Apple シリコン）</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>訪問介護</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>医療</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>警備</value></data>

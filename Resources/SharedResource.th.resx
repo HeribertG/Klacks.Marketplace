@@ -214,6 +214,11 @@
   <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>ชุดติดตั้งที่สมบูรณ์พร้อมสคริปต์ตัวติดตั้ง Docker Compose และโปรไฟล์ภูมิภาค</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>ชุดติดตั้ง Docker Compose</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>การตั้งค่า Docker Compose แบบขั้นต่ำโดยไม่มีตัวติดตั้ง สำหรับผู้เชี่ยวชาญ Docker</value></data>
+  <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>พีซีในสำนักงาน (ไม่ใช้ Docker)</value></data>
+  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>ตัวติดตั้งสำหรับ Windows 10/11 (64 บิต) และ Mac ที่ใช้ชิป Apple (M1 หรือใหม่กว่า): Klacks ทำงานเป็นบริการเบื้องหลังบนพีซี โดยไม่ต้องใช้ Docker และไม่ต้องมีเซิร์ฟเวอร์ของตัวเอง</value></data>
+  <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>ใช้ Linux? โปรดใช้ชุดติดตั้งแบบ On-Prem พร้อม Docker</value></data>
+  <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
+  <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (ชิป Apple)</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>การดูแลที่บ้าน</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>การดูแลสุขภาพ</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>การรักษาความปลอดภัย</value></data>
