@@ -219,6 +219,7 @@
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>使用 Linux？请使用带 Docker 的本地部署包。</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac（Apple 芯片）</value></data>
+  <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>预览 – 仅管理员可见</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>居家护理</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>医疗保健</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>安保</value></data>

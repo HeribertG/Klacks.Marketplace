@@ -219,6 +219,7 @@
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux? Te rugăm să folosești Pachetul On-Prem cu Docker.</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (cip Apple)</value></data>
+  <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>Previzualizare – vizibilă doar pentru administratori</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Îngrijire la domiciliu</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Sănătate</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>Securitate</value></data>

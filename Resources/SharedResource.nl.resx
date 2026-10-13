@@ -219,6 +219,7 @@
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux? Gebruik de on-premise bundel met Docker.</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (Apple-chip)</value></data>
+  <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>Voorbeeld – alleen zichtbaar voor beheerders</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Thuiszorg</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Gezondheidszorg</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>Beveiliging</value></data>

@@ -219,6 +219,7 @@
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux の場合は、Docker を使用するオンプレミスバンドルをご利用ください。</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac（Apple シリコン）</value></data>
+  <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>プレビュー – 管理者のみに表示</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>訪問介護</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>医療</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>警備</value></data>

@@ -219,6 +219,7 @@
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux? Please use the on-prem bundle with Docker.</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (Apple silicon)</value></data>
+  <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>Preview – visible to admins only</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Home care</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Healthcare</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>Security</value></data>

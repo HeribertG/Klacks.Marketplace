@@ -219,6 +219,7 @@
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux; Χρησιμοποιήστε το Πακέτο On-Prem με Docker.</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (τσιπ Apple)</value></data>
+  <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>Προεπισκόπηση – ορατή μόνο στους διαχειριστές</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Κατ' οίκον φροντίδα</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Υγειονομική περίθαλψη</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>Ασφάλεια</value></data>

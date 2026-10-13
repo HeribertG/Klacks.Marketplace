@@ -219,6 +219,7 @@
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>使用 Linux？請使用搭配 Docker 的地端套件包。</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac（Apple 晶片）</value></data>
+  <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>預覽 – 僅管理員可見</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>居家照護</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>醫療保健</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>保全服務</value></data>

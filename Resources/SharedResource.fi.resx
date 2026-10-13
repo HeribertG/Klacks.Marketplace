@@ -219,6 +219,7 @@
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux? Käyttäkää On-Prem-pakettia Dockerin kanssa.</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (Apple-siru)</value></data>
+  <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>Esikatselu – näkyy vain ylläpitäjille</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Kotihoito</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Terveydenhuolto</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>Turvallisuus</value></data>

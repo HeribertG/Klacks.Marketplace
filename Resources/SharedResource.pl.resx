@@ -219,6 +219,7 @@
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux? Użyj pakietu On-Prem z Dockerem.</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (czip Apple)</value></data>
+  <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>Podgląd – widoczny tylko dla administratorów</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Opieka domowa</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Ochrona zdrowia</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>Ochrona</value></data>

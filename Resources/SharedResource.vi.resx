@@ -219,6 +219,7 @@
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Dùng Linux? Vui lòng dùng Gói cài đặt tại chỗ (On-Prem) với Docker.</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (chip Apple)</value></data>
+  <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>Xem trước – chỉ quản trị viên nhìn thấy</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Chăm sóc tại nhà</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Y tế</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>An ninh</value></data>

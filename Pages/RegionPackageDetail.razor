@@ -3,6 +3,7 @@
 @inject NavigationManager Navigation
 @inject IStringLocalizer<SharedResource> L
 @inject IConfiguration Configuration
+@inject IHttpContextAccessor HttpContextAccessor
 
 <PageTitle>@(_package?.CountryName ?? L["Common_RegionPackage"]) - Klacks Store</PageTitle>
 
@@ -134,11 +135,15 @@ else
                             @L["Common_Download"]
                         </button>
                     </div>
-                    @if (_nativeInstall.Enabled)
+                    @if (_showNativeInstall)
                     {
                         <div class="bg-surface-container-lowest rounded-xl p-5 flex flex-col sm:flex-row sm:items-center gap-4">
                             <div class="flex-1">
                                 <div class="font-bold">@L["RegionDetail_NativeInstaller"]</div>
+                                @if (_nativeAdminPreview)
+                                {
+                                    <p class="text-secondary text-xs font-semibold mb-1">@L["RegionDetail_NativeAdminPreview"]</p>
+                                }
                                 <p class="text-on-surface-variant text-sm mb-1">@L["RegionDetail_NativeDesc"]</p>
                                 <p class="text-on-surface-variant text-xs mb-0">@L["RegionDetail_NativeLinuxNote"]</p>
                             </div>
@@ -148,11 +153,14 @@ else
                                     <span class="material-symbols-outlined text-[20px]">download</span>
                                     @L["RegionDetail_NativeWindows"]
                                 </a>
-                                <a href="@_nativeInstall.MacUrl" rel="nofollow"
-                                   class="px-5 py-2.5 bg-secondary text-on-secondary rounded-lg font-semibold hover:bg-secondary-container active:scale-[0.98] transition-all flex items-center gap-2 no-underline">
-                                    <span class="material-symbols-outlined text-[20px]">download</span>
-                                    @L["RegionDetail_NativeMac"]
-                                </a>
+                                @if (_nativeInstall.MacUrl is not null)
+                                {
+                                    <a href="@_nativeInstall.MacUrl" rel="nofollow"
+                                       class="px-5 py-2.5 bg-secondary text-on-secondary rounded-lg font-semibold hover:bg-secondary-container active:scale-[0.98] transition-all flex items-center gap-2 no-underline">
+                                        <span class="material-symbols-outlined text-[20px]">download</span>
+                                        @L["RegionDetail_NativeMac"]
+                                    </a>
+                                }
                             </div>
                         </div>
                     }
@@ -193,10 +201,15 @@ else
     private bool _isLoading = true;
     private string _selectedIndustry = RegionIndustry.All;
     private NativeInstallSettings _nativeInstall = null!;
+    private bool _showNativeInstall;
+    private bool _nativeAdminPreview;
 
     protected override async Task OnInitializedAsync()
     {
         _nativeInstall = NativeInstallSettings.From(Configuration);
+        var user = HttpContextAccessor.HttpContext?.User;
+        _showNativeInstall = _nativeInstall.IsVisibleFor(user);
+        _nativeAdminPreview = _nativeInstall.IsAdminPreview(user);
         _package = await RegionPackageService.GetRegionPackageByCountryAsync(CountryCode);
         _isLoading = false;
     }
