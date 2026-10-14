@@ -215,11 +215,13 @@
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Pacote Docker Compose</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Configuração mínima do Docker Compose sem instaladores, para profissionais de Docker.</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>PC de escritório (sem Docker)</value></data>
-  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Instalador para Windows 10/11 (64 bits) e Macs com chip Apple (M1 ou mais recente): o Klacks funciona como serviço em segundo plano no PC, sem Docker e sem servidor próprio.</value></data>
+  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Instale o Klacks diretamente num PC com Windows 11 (64 bits), sem Docker e sem servidor próprio: um único pacote configura a base de dados, o Klacks e o serviço de atualização como serviços em segundo plano. Extraia-o e execute o Installieren.cmd.</value></data>
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux? Utilize o Pacote On-Premise com Docker.</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (chip Apple)</value></data>
   <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>Pré-visualização – visível apenas para administradores</value></data>
+  <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>Para Windows de 64 bits (x64). Em dispositivos Windows 11 com processador ARM (por exemplo, Snapdragon X), o Klacks funciona por emulação; o Windows 10 em ARM não é suportado.</value></data>
+  <data name="RegionDetail_NativeMacNote" xml:space="preserve"><value>Também disponível para Macs com chip Apple (M1 ou mais recente).</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Apoio Domiciliário</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Cuidados de Saúde</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>Segurança</value></data>

@@ -145,17 +145,22 @@ else
                                     <p class="text-secondary text-xs font-semibold mb-1">@L["RegionDetail_NativeAdminPreview"]</p>
                                 }
                                 <p class="text-on-surface-variant text-sm mb-1">@L["RegionDetail_NativeDesc"]</p>
+                                <p class="text-on-surface-variant text-xs mb-1">@L["RegionDetail_NativeSystemRequirements"]</p>
+                                @if (_nativeInstall.MacUrl is not null)
+                                {
+                                    <p class="text-on-surface-variant text-xs mb-1">@L["RegionDetail_NativeMacNote"]</p>
+                                }
                                 <p class="text-on-surface-variant text-xs mb-0">@L["RegionDetail_NativeLinuxNote"]</p>
                             </div>
                             <div class="flex flex-wrap gap-2 shrink-0">
-                                <a href="@_nativeInstall.WindowsUrl" rel="nofollow"
+                                <a href="@GetNativeInstallHref(NativeInstallPlatform.Windows)" rel="nofollow"
                                    class="px-5 py-2.5 bg-secondary text-on-secondary rounded-lg font-semibold hover:bg-secondary-container active:scale-[0.98] transition-all flex items-center gap-2 no-underline">
                                     <span class="material-symbols-outlined text-[20px]">download</span>
                                     @L["RegionDetail_NativeWindows"]
                                 </a>
                                 @if (_nativeInstall.MacUrl is not null)
                                 {
-                                    <a href="@_nativeInstall.MacUrl" rel="nofollow"
+                                    <a href="@GetNativeInstallHref(NativeInstallPlatform.Mac)" rel="nofollow"
                                        class="px-5 py-2.5 bg-secondary text-on-secondary rounded-lg font-semibold hover:bg-secondary-container active:scale-[0.98] transition-all flex items-center gap-2 no-underline">
                                         <span class="material-symbols-outlined text-[20px]">download</span>
                                         @L["RegionDetail_NativeMac"]
@@ -218,6 +223,8 @@ else
     {
         Navigation.NavigateTo($"api/regions/{_package!.CountryCode}/download?industry={_selectedIndustry}&artifact={artifactType}", forceLoad: true);
     }
+
+    private string GetNativeInstallHref(string platform) => $"api/regions/{_package!.CountryCode}/native/{platform}";
 
     private string GetIndustryLabel(string slug) => slug switch
     {

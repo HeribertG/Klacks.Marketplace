@@ -1,7 +1,7 @@
 // Copyright (c) Heribert Gasparoli. SPDX-License-Identifier: AGPL-3.0-only
 
 /// <summary>
-/// Service interface for region package search, detail, upload, download and user-specific listing.
+/// Service interface for region package search, detail, upload, download, office-PC download counting and user-specific listing.
 /// </summary>
 using Klacks.Marketplace.Constants;
 using Klacks.Marketplace.Models;
@@ -16,5 +16,6 @@ public interface IRegionPackageService
     Task<RegionPackage> CreateRegionPackageAsync(RegionPackage package, string profileJson, string? changeLog);
     Task<RegionPackage> UpdateRegionPackageAsync(string countryCode, RegionPackage updated, string profileJson, string? changeLog, PackageStatus versionStatus);
     Task<(string ProfileJson, string Version)> DownloadRegionProfileAsync(string countryCode, string industry, string artifactType, string ipAddress);
+    Task LogNativeInstallDownloadAsync(int regionPackageId, string artifactType, string ipAddress);
     Task<List<RegionPackage>> GetUserRegionPackagesAsync(int userId);
 }

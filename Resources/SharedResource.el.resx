@@ -215,11 +215,13 @@
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Πακέτο Docker Compose</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Ελάχιστη ρύθμιση Docker Compose χωρίς εγκαταστάτες, για επαγγελματίες του Docker.</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>Υπολογιστής γραφείου (χωρίς Docker)</value></data>
-  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Πρόγραμμα εγκατάστασης για Windows 10/11 (64-bit) και Mac με τσιπ Apple (M1 ή νεότερο): το Klacks εκτελείται ως υπηρεσία παρασκηνίου στον υπολογιστή, χωρίς Docker και χωρίς δικό σας διακομιστή.</value></data>
+  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Εγκαταστήστε το Klacks απευθείας σε υπολογιστή με Windows 11 (64-bit), χωρίς Docker και χωρίς δικό σας διακομιστή: ένα πακέτο εγκαθιστά τη βάση δεδομένων, το Klacks και την υπηρεσία ενημερώσεων ως υπηρεσίες παρασκηνίου. Αποσυμπιέστε το και εκτελέστε το Installieren.cmd.</value></data>
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux; Χρησιμοποιήστε το Πακέτο On-Prem με Docker.</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (τσιπ Apple)</value></data>
   <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>Προεπισκόπηση – ορατή μόνο στους διαχειριστές</value></data>
+  <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>Για Windows 64-bit (x64). Σε συσκευές Windows 11 με επεξεργαστή ARM (π.χ. Snapdragon X) το Klacks εκτελείται μέσω εξομοίωσης· τα Windows 10 σε ARM δεν υποστηρίζονται.</value></data>
+  <data name="RegionDetail_NativeMacNote" xml:space="preserve"><value>Διατίθεται επίσης για Mac με τσιπ Apple (M1 ή νεότερο).</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Κατ' οίκον φροντίδα</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Υγειονομική περίθαλψη</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>Ασφάλεια</value></data>

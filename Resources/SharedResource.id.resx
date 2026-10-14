@@ -215,11 +215,13 @@
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Bundel Docker Compose</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Konfigurasi Docker Compose minimal tanpa installer, untuk profesional Docker.</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>PC kantor (tanpa Docker)</value></data>
-  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Program instalasi untuk Windows 10/11 (64-bit) dan Mac dengan chip Apple (M1 atau yang lebih baru): Klacks berjalan sebagai layanan latar belakang di PC, tanpa Docker dan tanpa server sendiri.</value></data>
+  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Instal Klacks langsung di PC Windows 11 (64-bit), tanpa Docker dan tanpa server sendiri: satu paket menyiapkan basis data, Klacks, dan layanan pembaruan sebagai layanan latar belakang. Ekstrak paketnya, lalu jalankan Installieren.cmd.</value></data>
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux? Silakan gunakan Bundel On-Prem dengan Docker.</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (chip Apple)</value></data>
   <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>Pratinjau – hanya terlihat oleh admin</value></data>
+  <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>Untuk Windows 64-bit (x64). Pada perangkat Windows 11 dengan prosesor ARM (mis. Snapdragon X), Klacks berjalan melalui emulasi; Windows 10 di ARM tidak didukung.</value></data>
+  <data name="RegionDetail_NativeMacNote" xml:space="preserve"><value>Juga tersedia untuk Mac dengan chip Apple (M1 atau yang lebih baru).</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Perawatan di Rumah</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Kesehatan</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>Keamanan</value></data>

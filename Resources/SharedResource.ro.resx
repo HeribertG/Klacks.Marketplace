@@ -215,11 +215,13 @@
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Pachet Docker Compose</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Configurare Docker Compose minimală, fără instalatoare, pentru profesioniștii Docker.</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>PC de birou (fără Docker)</value></data>
-  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Program de instalare pentru Windows 10/11 (64 de biți) și Mac-uri cu cip Apple (M1 sau mai nou): Klacks rulează ca serviciu în fundal pe PC, fără Docker și fără un server propriu.</value></data>
+  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Instalează Klacks direct pe un PC cu Windows 11 (64 de biți), fără Docker și fără un server propriu: un singur pachet configurează baza de date, Klacks și serviciul de actualizare ca servicii în fundal. Dezarhivează-l și pornește Installieren.cmd.</value></data>
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux? Te rugăm să folosești Pachetul On-Prem cu Docker.</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (cip Apple)</value></data>
   <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>Previzualizare – vizibilă doar pentru administratori</value></data>
+  <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>Pentru Windows pe 64 de biți (x64). Pe dispozitivele cu Windows 11 și procesor ARM (de ex. Snapdragon X), Klacks rulează prin emulare; Windows 10 pe ARM nu este acceptat.</value></data>
+  <data name="RegionDetail_NativeMacNote" xml:space="preserve"><value>Disponibil și pentru Mac-uri cu cip Apple (M1 sau mai nou).</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Îngrijire la domiciliu</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Sănătate</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>Securitate</value></data>

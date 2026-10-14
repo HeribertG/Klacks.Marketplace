@@ -215,11 +215,13 @@
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Bundel Docker Compose</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Persediaan Docker Compose minimum tanpa pemasang, untuk profesional Docker.</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>PC pejabat (tanpa Docker)</value></data>
-  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Pemasang untuk Windows 10/11 (64-bit) dan Mac dengan cip Apple (M1 atau lebih baharu): Klacks berjalan sebagai perkhidmatan latar belakang pada PC, tanpa Docker dan tanpa pelayan anda sendiri.</value></data>
+  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Pasang Klacks terus pada PC Windows 11 (64-bit), tanpa Docker dan tanpa pelayan anda sendiri: satu pakej menyediakan pangkalan data, Klacks dan perkhidmatan kemas kini sebagai perkhidmatan latar belakang. Ekstrak pakej itu dan jalankan Installieren.cmd.</value></data>
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux? Sila gunakan Bundel On-Prem dengan Docker.</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (cip Apple)</value></data>
   <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>Pratonton – hanya kelihatan kepada pentadbir</value></data>
+  <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>Untuk Windows 64-bit (x64). Pada peranti Windows 11 dengan pemproses ARM (cth. Snapdragon X), Klacks berjalan melalui emulasi; Windows 10 pada ARM tidak disokong.</value></data>
+  <data name="RegionDetail_NativeMacNote" xml:space="preserve"><value>Turut tersedia untuk Mac dengan cip Apple (M1 atau lebih baharu).</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Penjagaan Rumah</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Penjagaan Kesihatan</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>Keselamatan</value></data>

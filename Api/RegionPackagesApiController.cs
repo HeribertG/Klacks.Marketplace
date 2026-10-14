@@ -1,7 +1,9 @@
 // Copyright (c) Heribert Gasparoli. SPDX-License-Identifier: AGPL-3.0-only
 
 /// <summary>
-/// REST API controller for region package operations: search, detail, artifact download (profile JSON, on-prem ZIP, compose ZIP), upload.
+/// REST API controller for region package operations: search, detail, artifact download (profile JSON, on-prem ZIP, compose ZIP),
+/// counted office-PC download redirect, upload. The office-PC redirect is visible under the same rule as the region page card
+/// and takes its target URL exclusively from NativeInstallSettings, so no request value can choose where it points.
 /// </summary>
 /// <param name="regionPackageService">Service for region package access and download tracking</param>
 /// <param name="validationService">Service for region profile JSON validation</param>
@@ -9,7 +11,8 @@
 /// <param name="artifactService">Service for assembling on-prem and compose ZIP bundles</param>
 /// <param name="signingService">Service for signing download artifacts with the vendor private key</param>
 /// <param name="authService">Service for system user management during API uploads</param>
-/// <param name="configuration">Configuration for API key validation</param>
+/// <param name="configuration">Configuration for API key validation and the office-PC install settings</param>
+/// <param name="logger">Logger for failures that must not block a download, such as a failed office-PC download log entry</param>
 using System.Text;
 using Klacks.Marketplace.Api.DTOs;
 using Klacks.Marketplace.Constants;
@@ -29,7 +32,8 @@ public class RegionPackagesApiController(
     IRegionArtifactService artifactService,
     IRegionArtifactSigningService signingService,
     IAuthService authService,
-    IConfiguration configuration) : ControllerBase
+    IConfiguration configuration,
+    ILogger<RegionPackagesApiController> logger) : ControllerBase
 {
     private const string ApiKeyHeaderName = "X-Api-Key";
     private const string ApiKeyConfigPath = "ApiSettings:UploadApiKey";
@@ -40,6 +44,7 @@ public class RegionPackagesApiController(
     private const string ComposeZipFileNameFormat = "klacks-compose-{0}-{1}.zip";
     private const string InvalidCountryCodeMessage = "Invalid country code. Expected a two-letter ISO code.";
     private const string PendingReviewStatusValue = "pendingReview";
+    private const string AllowedValuesSeparator = ", ";
 
     [HttpGet]
     public async Task<ActionResult<RegionPackageSearchResultDto>> Search(
@@ -68,15 +73,14 @@ public class RegionPackagesApiController(
     [HttpGet("{countryCode}")]
     public async Task<ActionResult<RegionPackageListItemDto>> GetByCountry(string countryCode)
     {
-        var normalizedCountry = countryCode.ToLowerInvariant();
-        if (!RegionCountry.IsValidCountryCode(normalizedCountry))
+        var normalizedCountry = NormalizeCountryCode(countryCode);
+        if (normalizedCountry is null)
         {
             return BadRequest(InvalidCountryCodeMessage);
         }
 
-        var package = await regionPackageService.GetRegionPackageByCountryAsync(normalizedCountry);
-
-        if (package is null || package.Status != PackageStatus.Published)
+        var package = await FindPublishedPackageAsync(normalizedCountry);
+        if (package is null)
         {
             return NotFound();
         }
@@ -96,8 +100,8 @@ public class RegionPackagesApiController(
     [EnableRateLimiting(AppConstants.DownloadRateLimitPolicyName)]
     public async Task<IActionResult> Download(string countryCode, [FromQuery] string? industry, [FromQuery] string? artifact)
     {
-        var normalizedCountry = countryCode.ToLowerInvariant();
-        if (!RegionCountry.IsValidCountryCode(normalizedCountry))
+        var normalizedCountry = NormalizeCountryCode(countryCode);
+        if (normalizedCountry is null)
         {
             return BadRequest(InvalidCountryCodeMessage);
         }
@@ -108,7 +112,7 @@ public class RegionPackagesApiController(
 
         if (!RegionIndustry.AllOptions.Contains(selectedIndustry))
         {
-            return BadRequest($"Invalid industry: '{industry}'. Allowed: {string.Join(", ", RegionIndustry.AllOptions)}");
+            return BadRequest($"Invalid industry: '{industry}'. Allowed: {string.Join(AllowedValuesSeparator, RegionIndustry.AllOptions)}");
         }
 
         var selectedArtifact = string.IsNullOrWhiteSpace(artifact)
@@ -117,18 +121,17 @@ public class RegionPackagesApiController(
 
         if (selectedArtifact is null)
         {
-            return BadRequest($"Invalid artifact: '{artifact}'. Allowed: {string.Join(", ", RegionArtifactType.AllArtifactTypes)}");
+            return BadRequest($"Invalid artifact: '{artifact}'. Allowed: {string.Join(AllowedValuesSeparator, RegionArtifactType.AllArtifactTypes)}");
         }
 
-        var package = await regionPackageService.GetRegionPackageByCountryAsync(normalizedCountry);
-        if (package is null || package.Status != PackageStatus.Published)
+        var package = await FindPublishedPackageAsync(normalizedCountry);
+        if (package is null)
         {
             return NotFound();
         }
 
-        var ipAddress = HttpContext.Connection.RemoteIpAddress?.ToString() ?? "unknown";
         var (profileJson, version) = await regionPackageService.DownloadRegionProfileAsync(
-            normalizedCountry, selectedIndustry, selectedArtifact, ipAddress);
+            normalizedCountry, selectedIndustry, selectedArtifact, GetClientIpAddress());
         var patchedProfileJson = patchService.PatchProfileJson(profileJson, package.CountryCode, version, selectedIndustry);
 
         var (fileBytes, contentType, fileName) = selectedArtifact switch
@@ -154,6 +157,53 @@ public class RegionPackagesApiController(
         }
 
         return File(fileBytes, contentType, fileName);
+    }
+
+    [HttpGet("{countryCode}/native/{platform}")]
+    [EnableRateLimiting(AppConstants.DownloadRateLimitPolicyName)]
+    public async Task<IActionResult> NativeInstallDownload(string countryCode, string platform)
+    {
+        var nativeInstall = NativeInstallSettings.From(configuration);
+        if (!nativeInstall.IsVisibleFor(User))
+        {
+            return NotFound();
+        }
+
+        var normalizedCountry = NormalizeCountryCode(countryCode);
+        if (normalizedCountry is null)
+        {
+            return BadRequest(InvalidCountryCodeMessage);
+        }
+
+        var normalizedPlatform = platform.ToLowerInvariant();
+        if (!NativeInstallPlatform.ArtifactTypeByPlatform.TryGetValue(normalizedPlatform, out var artifactType))
+        {
+            return BadRequest($"Invalid platform: '{platform}'. Allowed: {string.Join(AllowedValuesSeparator, NativeInstallPlatform.ArtifactTypeByPlatform.Keys)}");
+        }
+
+        var targetUrl = nativeInstall.DownloadUrlFor(normalizedPlatform);
+        if (targetUrl is null)
+        {
+            return NotFound();
+        }
+
+        var package = await FindPublishedPackageAsync(normalizedCountry);
+        if (package is null)
+        {
+            return NotFound();
+        }
+
+        try
+        {
+            await regionPackageService.LogNativeInstallDownloadAsync(package.Id, artifactType, GetClientIpAddress());
+        }
+        catch (Exception ex)
+        {
+            logger.LogWarning(ex, "Failed to log the office-PC download {ArtifactType} for region {CountryCode} — redirecting anyway.",
+                artifactType, normalizedCountry);
+        }
+
+        return Redirect(targetUrl);
     }
 
     [HttpPost]
@@ -218,6 +268,21 @@ public class RegionPackagesApiController(
 
         return Created($"/api/regions/{countryCode}", new { message = "Region package created, awaiting admin review", status = PendingReviewStatusValue, countryCode, warnings = validation.Warnings });
     }
+
+    private static string? NormalizeCountryCode(string countryCode)
+    {
+        var normalizedCountry = countryCode.ToLowerInvariant();
+        return RegionCountry.IsValidCountryCode(normalizedCountry) ? normalizedCountry : null;
+    }
+
+    private async Task<RegionPackage?> FindPublishedPackageAsync(string normalizedCountry)
+    {
+        var package = await regionPackageService.GetRegionPackageByCountryAsync(normalizedCountry);
+        return package?.Status == PackageStatus.Published ? package : null;
+    }
+
+    private string GetClientIpAddress()
+        => HttpContext.Connection.RemoteIpAddress?.ToString() ?? AppConstants.UnknownClientIp;
 
     private static RegionPackageListItemDto MapToDto(RegionPackage p)
     {

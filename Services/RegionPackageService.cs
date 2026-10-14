@@ -2,6 +2,8 @@
 
 /// <summary>
 /// Service for region package search, creation, versioning, profile download and user-specific listing.
+/// Office-PC download clicks from a region page are logged without version and industry and leave the package download
+/// counter untouched, because that counter only counts region package downloads.
 /// </summary>
 /// <param name="db">Database context for accessing region package tables</param>
 using System.Security.Cryptography;
@@ -191,6 +193,20 @@ public class RegionPackageService : IRegionPackageService
         await _db.SaveChangesAsync();
 
         return (latestPublished.ProfileJson, latestPublished.Version);
+    }
+
+    public async Task LogNativeInstallDownloadAsync(int regionPackageId, string artifactType, string ipAddress)
+    {
+        _db.RegionDownloadLogs.Add(new RegionDownloadLog
+        {
+            RegionPackageId = regionPackageId,
+            Version = string.Empty,
+            ArtifactType = artifactType,
+            Industry = string.Empty,
+            DownloadedAt = DateTime.UtcNow,
+            IpAddress = ipAddress
+        });
+        await _db.SaveChangesAsync();
     }
 
     public async Task<List<RegionPackage>> GetUserRegionPackagesAsync(int userId)

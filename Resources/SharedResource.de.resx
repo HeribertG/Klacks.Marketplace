@@ -215,11 +215,13 @@
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Docker-Compose-Bundle</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Minimales Docker-Compose-Setup ohne Installer, für Docker-Profis.</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>Büro-PC (ohne Docker)</value></data>
-  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Installationsprogramm für Windows 10/11 (64-Bit) und Macs mit Apple-Chip (M1 oder neuer): Klacks läuft als Hintergrunddienst auf dem PC, ohne Docker und ohne eigenen Server.</value></data>
+  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Klacks direkt auf einem Windows-11-PC (64 Bit) installieren, ohne Docker und ohne eigenen Server: Ein Paket richtet Datenbank, Klacks und den Update-Dienst als Hintergrunddienste ein. Entpacken und Installieren.cmd starten.</value></data>
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux? Bitte das On-Prem-Bundle mit Docker verwenden.</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (Apple-Chip)</value></data>
   <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>Vorschau – nur für Admins sichtbar</value></data>
+  <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>Für Windows 64 Bit (x64). Auf Windows-11-Geräten mit ARM-Prozessor (z. B. Snapdragon X) läuft Klacks per Emulation; Windows 10 auf ARM wird nicht unterstützt.</value></data>
+  <data name="RegionDetail_NativeMacNote" xml:space="preserve"><value>Auch für Macs mit Apple-Chip (M1 oder neuer) verfügbar.</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Ambulante Pflege</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Gesundheitswesen</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>Sicherheitsdienste</value></data>

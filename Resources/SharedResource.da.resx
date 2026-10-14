@@ -215,11 +215,13 @@
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Docker Compose-bundle</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Minimal Docker Compose-opsætning uden installationsprogrammer, til Docker-professionelle.</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>Kontor-pc (uden Docker)</value></data>
-  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Installationsprogram til Windows 10/11 (64-bit) og Mac-computere med Apple-chip (M1 eller nyere): Klacks kører som baggrundstjeneste på pc'en, uden Docker og uden egen server.</value></data>
+  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Installér Klacks direkte på en Windows 11-pc (64-bit), uden Docker og uden egen server: Én pakke opsætter databasen, Klacks og opdateringstjenesten som baggrundstjenester. Pak den ud, og start Installieren.cmd.</value></data>
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux? Brug venligst on-prem-bundlet med Docker.</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (Apple-chip)</value></data>
   <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>Forhåndsvisning – kun synlig for administratorer</value></data>
+  <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>Til 64-bit Windows (x64). På Windows 11-enheder med ARM-processor (f.eks. Snapdragon X) kører Klacks via emulering; Windows 10 på ARM understøttes ikke.</value></data>
+  <data name="RegionDetail_NativeMacNote" xml:space="preserve"><value>Fås også til Mac-computere med Apple-chip (M1 eller nyere).</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Hjemmepleje</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Sundhedsvæsen</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>Sikkerhed</value></data>

@@ -4,7 +4,7 @@
 /// One aggregated row of the admin download dashboard: how many downloads a country/artifact combination had on a given day.
 /// </summary>
 /// <param name="Date">Calendar day the downloads happened on (UTC)</param>
-/// <param name="ArtifactType">Downloaded artifact kind from RegionArtifactType constants</param>
+/// <param name="ArtifactType">Downloaded artifact kind from RegionArtifactType constants, or an office-PC download click from NativeInstallPlatform</param>
 /// <param name="Count">Number of downloads for this day/country/artifact combination</param>
 namespace Klacks.Marketplace.Models;
 

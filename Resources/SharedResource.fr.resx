@@ -215,11 +215,13 @@
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Bundle Docker Compose</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Configuration Docker Compose minimale sans installateurs, pour les professionnels de Docker.</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>PC de bureau (sans Docker)</value></data>
-  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Programme d'installation pour Windows 10/11 (64 bits) et les Mac avec puce Apple (M1 ou plus récent) : Klacks fonctionne comme service en arrière-plan sur le PC, sans Docker et sans serveur à vous.</value></data>
+  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Installez Klacks directement sur un PC Windows 11 (64 bits), sans Docker et sans serveur à vous : un seul paquet configure la base de données, Klacks et le service de mise à jour comme services en arrière-plan. Décompressez-le, puis lancez Installieren.cmd.</value></data>
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux ? Veuillez utiliser le Bundle On-Prem avec Docker.</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (puce Apple)</value></data>
   <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>Aperçu – visible uniquement par les administrateurs</value></data>
+  <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>Pour Windows 64 bits (x64). Sur les appareils Windows 11 équipés d'un processeur ARM (p. ex. Snapdragon X), Klacks fonctionne par émulation ; Windows 10 sur ARM n'est pas pris en charge.</value></data>
+  <data name="RegionDetail_NativeMacNote" xml:space="preserve"><value>Également disponible pour les Mac avec puce Apple (M1 ou plus récent).</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Soins à domicile</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Santé</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>Sécurité</value></data>

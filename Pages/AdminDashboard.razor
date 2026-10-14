@@ -261,6 +261,7 @@
     private List<User> _users = [];
     private List<RegionDownloadStat> _downloadStats = [];
     private const int DownloadStatsWindowDays = 90;
+    private const string NativeInstallLabelFormat = "{0} – {1}";
     private string _message = string.Empty;
     private string _errorMessage = string.Empty;
     private bool _showConfirmReject;
@@ -294,8 +295,13 @@
         RegionArtifactType.OnPremZip => L["RegionDetail_OnPremBundle"].Value,
         RegionArtifactType.ComposeZip => L["RegionDetail_ComposeBundle"].Value,
         RegionArtifactType.ProfileJson => L["RegionDetail_ProfileJson"].Value,
+        NativeInstallPlatform.WindowsArtifactType => GetNativeInstallLabel(L["RegionDetail_NativeWindows"].Value),
+        NativeInstallPlatform.MacArtifactType => GetNativeInstallLabel(L["RegionDetail_NativeMac"].Value),
         _ => artifactType
     };
+
+    private string GetNativeInstallLabel(string platformLabel)
+        => string.Format(NativeInstallLabelFormat, L["RegionDetail_NativeInstaller"].Value, platformLabel);
 
     private async Task ApprovePackage(int packageId)
     {

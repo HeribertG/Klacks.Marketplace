@@ -215,11 +215,13 @@
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Pakiet Docker Compose</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Minimalna konfiguracja Docker Compose bez instalatorów, dla specjalistów Dockera.</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>Komputer biurowy (bez Dockera)</value></data>
-  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Instalator dla Windows 10/11 (64-bit) i komputerów Mac z czipem Apple (M1 lub nowszym): Klacks działa jako usługa w tle na komputerze, bez Dockera i bez własnego serwera.</value></data>
+  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Zainstaluj Klacks bezpośrednio na komputerze z Windows 11 (64-bit), bez Dockera i bez własnego serwera: jeden pakiet konfiguruje bazę danych, Klacks i usługę aktualizacji jako usługi w tle. Rozpakuj go i uruchom Installieren.cmd.</value></data>
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux? Użyj pakietu On-Prem z Dockerem.</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (czip Apple)</value></data>
   <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>Podgląd – widoczny tylko dla administratorów</value></data>
+  <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>Dla 64-bitowego systemu Windows (x64). Na urządzeniach z Windows 11 i procesorem ARM (np. Snapdragon X) Klacks działa dzięki emulacji; Windows 10 na ARM nie jest obsługiwany.</value></data>
+  <data name="RegionDetail_NativeMacNote" xml:space="preserve"><value>Dostępne również dla komputerów Mac z czipem Apple (M1 lub nowszym).</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Opieka domowa</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Ochrona zdrowia</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>Ochrona</value></data>

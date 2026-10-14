@@ -3,8 +3,9 @@
 /// <summary>
 /// Tracks individual download events for region packages including artifact type, chosen industry, IP and timestamp.
 /// </summary>
-/// <param name="ArtifactType">Downloaded artifact kind from RegionArtifactType constants</param>
-/// <param name="Industry">Industry slug chosen for the download or "all"</param>
+/// <param name="Version">Region package version that was downloaded; empty for office-PC download clicks</param>
+/// <param name="ArtifactType">Downloaded artifact kind from RegionArtifactType constants, or an office-PC download click from NativeInstallPlatform</param>
+/// <param name="Industry">Industry slug chosen for the download or "all"; empty for office-PC download clicks</param>
 namespace Klacks.Marketplace.Models;
 
 public class RegionDownloadLog
