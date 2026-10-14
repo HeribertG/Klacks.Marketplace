@@ -220,7 +220,7 @@
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (cip Apple)</value></data>
   <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>Previzualizare – vizibilă doar pentru administratori</value></data>
-  <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>Pentru Windows pe 64 de biți (x64). Pe dispozitivele cu Windows 11 și procesor ARM (de ex. Snapdragon X), Klacks rulează prin emulare; Windows 10 pe ARM nu este acceptat.</value></data>
+  <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>Pentru Windows pe 64 de biți (x64). Pe dispozitivele cu Windows 11 și procesor ARM (de ex. Snapdragon X), Klacks rulează prin emulare; Windows 10 pe ARM nu este acceptat. Funcționează și pe Windows 10 22H2 (64 de biți). Microsoft nu mai oferă suport obișnuit pentru Windows 10; actualizările de securitate sunt disponibile doar prin programul ESU contra cost.</value></data>
   <data name="RegionDetail_NativeMacNote" xml:space="preserve"><value>Disponibil și pentru Mac-uri cu cip Apple (M1 sau mai nou).</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Îngrijire la domiciliu</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Sănătate</value></data>

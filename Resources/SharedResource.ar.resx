@@ -220,7 +220,7 @@
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (شريحة Apple)</value></data>
   <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>معاينة – مرئية للمسؤولين فقط</value></data>
-  <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>مخصص لإصدار 64 بت من Windows (x64). على أجهزة Windows 11 المزوّدة بمعالج ARM (مثل Snapdragon X) يعمل Klacks عبر المحاكاة؛ أما Windows 10 على ARM فغير مدعوم.</value></data>
+  <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>مخصص لإصدار 64 بت من Windows (x64). على أجهزة Windows 11 المزوّدة بمعالج ARM (مثل Snapdragon X) يعمل Klacks عبر المحاكاة؛ أما Windows 10 على ARM فغير مدعوم. يعمل أيضًا على Windows 10 22H2 (64 بت). لم تعد Microsoft تدعم Windows 10 دعمًا اعتياديًا؛ ولا تتوفر تحديثات الأمان إلا عبر برنامج ESU المدفوع.</value></data>
   <data name="RegionDetail_NativeMacNote" xml:space="preserve"><value>متوفر أيضًا لأجهزة Mac بشريحة Apple (M1 أو أحدث).</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>الرعاية المنزلية</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>الرعاية الصحية</value></data>

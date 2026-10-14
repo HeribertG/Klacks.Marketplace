@@ -220,7 +220,7 @@
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (ชิป Apple)</value></data>
   <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>ตัวอย่าง – แสดงเฉพาะผู้ดูแลระบบ</value></data>
-  <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>สำหรับ Windows 64 บิต (x64) บนอุปกรณ์ Windows 11 ที่ใช้โปรเซสเซอร์ ARM (เช่น Snapdragon X) Klacks ทำงานผ่านการจำลอง ส่วน Windows 10 บน ARM ไม่รองรับ</value></data>
+  <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>สำหรับ Windows 64 บิต (x64) บนอุปกรณ์ Windows 11 ที่ใช้โปรเซสเซอร์ ARM (เช่น Snapdragon X) Klacks ทำงานผ่านการจำลอง ส่วน Windows 10 บน ARM ไม่รองรับ ใช้งานบน Windows 10 22H2 (64 บิต) ได้เช่นกัน Microsoft ไม่ให้การสนับสนุนตามปกติสำหรับ Windows 10 แล้ว การอัปเดตความปลอดภัยมีให้เฉพาะผ่านโปรแกรม ESU แบบเสียค่าใช้จ่ายเท่านั้น</value></data>
   <data name="RegionDetail_NativeMacNote" xml:space="preserve"><value>มีให้สำหรับ Mac ที่ใช้ชิป Apple (M1 หรือใหม่กว่า) ด้วย</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>การดูแลที่บ้าน</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>การดูแลสุขภาพ</value></data>

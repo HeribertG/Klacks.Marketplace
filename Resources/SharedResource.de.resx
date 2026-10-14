@@ -220,7 +220,7 @@
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (Apple-Chip)</value></data>
   <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>Vorschau – nur für Admins sichtbar</value></data>
-  <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>Für Windows 64 Bit (x64). Auf Windows-11-Geräten mit ARM-Prozessor (z. B. Snapdragon X) läuft Klacks per Emulation; Windows 10 auf ARM wird nicht unterstützt.</value></data>
+  <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>Für Windows 64 Bit (x64). Auf Windows-11-Geräten mit ARM-Prozessor (z. B. Snapdragon X) läuft Klacks per Emulation; Windows 10 auf ARM wird nicht unterstützt. Läuft auch unter Windows 10 22H2 (64 Bit). Microsoft unterstützt Windows 10 nicht mehr regulär; Sicherheitsupdates gibt es nur noch über das kostenpflichtige ESU-Programm.</value></data>
   <data name="RegionDetail_NativeMacNote" xml:space="preserve"><value>Auch für Macs mit Apple-Chip (M1 oder neuer) verfügbar.</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Ambulante Pflege</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Gesundheitswesen</value></data>

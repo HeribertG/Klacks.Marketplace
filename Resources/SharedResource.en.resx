@@ -220,7 +220,7 @@
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (Apple silicon)</value></data>
   <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>Preview – visible to admins only</value></data>
-  <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>For 64-bit Windows (x64). On Windows 11 devices with an ARM processor (e.g. Snapdragon X) Klacks runs through emulation; Windows 10 on ARM is not supported.</value></data>
+  <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>For 64-bit Windows (x64). On Windows 11 devices with an ARM processor (e.g. Snapdragon X) Klacks runs through emulation; Windows 10 on ARM is not supported. Also runs on Windows 10 22H2 (64-bit). Microsoft no longer provides regular support for Windows 10; security updates are only available through the paid ESU program.</value></data>
   <data name="RegionDetail_NativeMacNote" xml:space="preserve"><value>Also available for Macs with Apple silicon (M1 or newer).</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Home care</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Healthcare</value></data>

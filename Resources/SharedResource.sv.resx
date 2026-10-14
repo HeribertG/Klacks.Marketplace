@@ -220,7 +220,7 @@
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (Apple-chip)</value></data>
   <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>Förhandsvisning – endast synlig för administratörer</value></data>
-  <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>För 64-bitars Windows (x64). På Windows 11-enheter med ARM-processor (t.ex. Snapdragon X) körs Klacks via emulering; Windows 10 på ARM stöds inte.</value></data>
+  <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>För 64-bitars Windows (x64). På Windows 11-enheter med ARM-processor (t.ex. Snapdragon X) körs Klacks via emulering; Windows 10 på ARM stöds inte. Fungerar även på Windows 10 22H2 (64-bitars). Microsoft har avslutat den ordinarie supporten för Windows 10; säkerhetsuppdateringar finns bara via det betalda ESU-programmet.</value></data>
   <data name="RegionDetail_NativeMacNote" xml:space="preserve"><value>Finns även för Mac med Apple-chip (M1 eller senare).</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Hemtjänst</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Hälso- och sjukvård</value></data>

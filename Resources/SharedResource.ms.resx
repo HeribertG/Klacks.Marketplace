@@ -220,7 +220,7 @@
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (cip Apple)</value></data>
   <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>Pratonton – hanya kelihatan kepada pentadbir</value></data>
-  <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>Untuk Windows 64-bit (x64). Pada peranti Windows 11 dengan pemproses ARM (cth. Snapdragon X), Klacks berjalan melalui emulasi; Windows 10 pada ARM tidak disokong.</value></data>
+  <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>Untuk Windows 64-bit (x64). Pada peranti Windows 11 dengan pemproses ARM (cth. Snapdragon X), Klacks berjalan melalui emulasi; Windows 10 pada ARM tidak disokong. Turut berjalan pada Windows 10 22H2 (64-bit). Microsoft tidak lagi menyediakan sokongan biasa untuk Windows 10; kemas kini keselamatan hanya tersedia melalui program ESU berbayar.</value></data>
   <data name="RegionDetail_NativeMacNote" xml:space="preserve"><value>Turut tersedia untuk Mac dengan cip Apple (M1 atau lebih baharu).</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Penjagaan Rumah</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Penjagaan Kesihatan</value></data>
