@@ -75,6 +75,9 @@
             <a class="@LinkClass @extraClass" href="my-packages" @onclick="CloseMenu">
                 <span class="material-symbols-outlined text-[18px]">inventory_2</span> @L["Nav_MyPackages"]
             </a>
+            <a class="@LinkClass @extraClass" href="@TicketConstants.TicketsRoute" @onclick="CloseMenu">
+                <span class="material-symbols-outlined text-[18px]">support_agent</span> @L["Nav_Tickets"]
+            </a>
             @if (_isAdmin)
             {
                 <a class="@LinkClass @extraClass" href="admin" @onclick="CloseMenu">

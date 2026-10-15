@@ -251,4 +251,40 @@
   <data name="Admin_RegionRejected" xml:space="preserve"><value>リージョンパッケージを却下しました</value></data>
   <data name="Admin_RejectRegionTitle" xml:space="preserve"><value>リージョンパッケージを却下</value></data>
   <data name="Admin_RejectRegionMessage" xml:space="preserve"><value>このリージョンパッケージを却下してもよろしいですか?</value></data>
+  <data name="Nav_Tickets" xml:space="preserve"><value>サポート</value></data>
+  <data name="Tickets_Title" xml:space="preserve"><value>サポートチケット</value></data>
+  <data name="Tickets_LoginRequired" xml:space="preserve"><value>サポートチケットは登録ユーザーのみご利用いただけます。</value></data>
+  <data name="Tickets_Intro" xml:space="preserve"><value>質問や問題がありましたらお知らせください。Klacksチームがこちらで回答します。メール通知はありませんので、回答はこのページでご確認ください。</value></data>
+  <data name="Tickets_NewTicket" xml:space="preserve"><value>新規チケット</value></data>
+  <data name="Tickets_NoTickets" xml:space="preserve"><value>チケットはまだありません</value></data>
+  <data name="Tickets_NoTicketsDesc" xml:space="preserve"><value>サポートが必要な場合はチケットを作成してください。</value></data>
+  <data name="Tickets_Subject" xml:space="preserve"><value>件名</value></data>
+  <data name="Tickets_Requester" xml:space="preserve"><value>依頼者</value></data>
+  <data name="Tickets_Updated" xml:space="preserve"><value>最終更新</value></data>
+  <data name="Tickets_FilterAll" xml:space="preserve"><value>すべて</value></data>
+  <data name="Ticket_Status_Open" xml:space="preserve"><value>未対応</value></data>
+  <data name="Ticket_Status_Answered" xml:space="preserve"><value>回答済み</value></data>
+  <data name="Ticket_Status_Closed" xml:space="preserve"><value>クローズ済み</value></data>
+  <data name="TicketNew_Title" xml:space="preserve"><value>新規チケット</value></data>
+  <data name="TicketNew_SubjectLabel" xml:space="preserve"><value>件名</value></data>
+  <data name="TicketNew_MessageLabel" xml:space="preserve"><value>質問または問題の内容を記入してください</value></data>
+  <data name="TicketNew_Submit" xml:space="preserve"><value>チケットを送信</value></data>
+  <data name="TicketNew_Cancel" xml:space="preserve"><value>キャンセル</value></data>
+  <data name="TicketNew_Error_Required" xml:space="preserve"><value>件名とメッセージを入力してください。</value></data>
+  <data name="TicketNew_Error_TooMany" xml:space="preserve"><value>未完了のチケットが多すぎます。回答をお待ちいただくか、先にチケットを1件クローズしてください。</value></data>
+  <data name="TicketNew_Error_Failed" xml:space="preserve"><value>チケットを作成できませんでした。</value></data>
+  <data name="TicketDetail_Back" xml:space="preserve"><value>チケット一覧に戻る</value></data>
+  <data name="TicketDetail_NotFound" xml:space="preserve"><value>チケットが見つかりません。</value></data>
+  <data name="TicketDetail_Staff" xml:space="preserve"><value>Klacksチーム</value></data>
+  <data name="TicketDetail_Opened" xml:space="preserve"><value>作成日時 {0}</value></data>
+  <data name="TicketDetail_ReplyLabel" xml:space="preserve"><value>返信</value></data>
+  <data name="TicketDetail_Send" xml:space="preserve"><value>返信を送信</value></data>
+  <data name="TicketDetail_Close" xml:space="preserve"><value>チケットをクローズ</value></data>
+  <data name="TicketDetail_Closed" xml:space="preserve"><value>このチケットはクローズされています。返信すると再開されます。</value></data>
+  <data name="TicketDetail_Error_Failed" xml:space="preserve"><value>返信を送信できませんでした。</value></data>
+  <data name="TicketDetail_Error_Limit" xml:space="preserve"><value>このチケットはメッセージ数の上限に達しました。</value></data>
+  <data name="Index_TicketsNoticeTitle" xml:space="preserve"><value>登録ユーザー向けサポートチケット</value></data>
+  <data name="Index_TicketsNoticeText" xml:space="preserve"><value>登録ユーザーはここでサポートチケットを作成し、回答を確認できます。</value></data>
+  <data name="Index_TicketsNoticeOpen" xml:space="preserve"><value>マイチケットへ</value></data>
+  <data name="Admin_OpenTickets" xml:space="preserve"><value>未対応のチケット</value></data>
 </root>

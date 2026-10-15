@@ -251,4 +251,40 @@
   <data name="Admin_RegionRejected" xml:space="preserve"><value>Regionální balíček byl zamítnut</value></data>
   <data name="Admin_RejectRegionTitle" xml:space="preserve"><value>Zamítnout regionální balíček</value></data>
   <data name="Admin_RejectRegionMessage" xml:space="preserve"><value>Opravdu chcete tento regionální balíček zamítnout?</value></data>
+  <data name="Nav_Tickets" xml:space="preserve"><value>Podpora</value></data>
+  <data name="Tickets_Title" xml:space="preserve"><value>Tikety podpory</value></data>
+  <data name="Tickets_LoginRequired" xml:space="preserve"><value>Tikety podpory jsou dostupné pouze registrovaným uživatelům.</value></data>
+  <data name="Tickets_Intro" xml:space="preserve"><value>Položte otázku nebo nahlaste problém. Tým Klacks odpovídá zde. E-mailová upozornění se neodesílají, odpověď proto hledejte na této stránce.</value></data>
+  <data name="Tickets_NewTicket" xml:space="preserve"><value>Nový tiket</value></data>
+  <data name="Tickets_NoTickets" xml:space="preserve"><value>Zatím žádné tikety</value></data>
+  <data name="Tickets_NoTicketsDesc" xml:space="preserve"><value>Pokud potřebujete pomoc, založte tiket.</value></data>
+  <data name="Tickets_Subject" xml:space="preserve"><value>Předmět</value></data>
+  <data name="Tickets_Requester" xml:space="preserve"><value>Žadatel</value></data>
+  <data name="Tickets_Updated" xml:space="preserve"><value>Poslední aktualizace</value></data>
+  <data name="Tickets_FilterAll" xml:space="preserve"><value>Vše</value></data>
+  <data name="Ticket_Status_Open" xml:space="preserve"><value>Otevřený</value></data>
+  <data name="Ticket_Status_Answered" xml:space="preserve"><value>Zodpovězený</value></data>
+  <data name="Ticket_Status_Closed" xml:space="preserve"><value>Uzavřený</value></data>
+  <data name="TicketNew_Title" xml:space="preserve"><value>Nový tiket</value></data>
+  <data name="TicketNew_SubjectLabel" xml:space="preserve"><value>Předmět</value></data>
+  <data name="TicketNew_MessageLabel" xml:space="preserve"><value>Popište svou otázku nebo problém</value></data>
+  <data name="TicketNew_Submit" xml:space="preserve"><value>Odeslat tiket</value></data>
+  <data name="TicketNew_Cancel" xml:space="preserve"><value>Zrušit</value></data>
+  <data name="TicketNew_Error_Required" xml:space="preserve"><value>Zadejte prosím předmět a zprávu.</value></data>
+  <data name="TicketNew_Error_TooMany" xml:space="preserve"><value>Máte příliš mnoho otevřených tiketů. Počkejte prosím na odpověď nebo nejprve jeden tiket uzavřete.</value></data>
+  <data name="TicketNew_Error_Failed" xml:space="preserve"><value>Tiket se nepodařilo vytvořit.</value></data>
+  <data name="TicketDetail_Back" xml:space="preserve"><value>Zpět na tikety</value></data>
+  <data name="TicketDetail_NotFound" xml:space="preserve"><value>Tiket nebyl nalezen.</value></data>
+  <data name="TicketDetail_Staff" xml:space="preserve"><value>Tým Klacks</value></data>
+  <data name="TicketDetail_Opened" xml:space="preserve"><value>Otevřeno {0}</value></data>
+  <data name="TicketDetail_ReplyLabel" xml:space="preserve"><value>Vaše odpověď</value></data>
+  <data name="TicketDetail_Send" xml:space="preserve"><value>Odeslat odpověď</value></data>
+  <data name="TicketDetail_Close" xml:space="preserve"><value>Uzavřít tiket</value></data>
+  <data name="TicketDetail_Closed" xml:space="preserve"><value>Tento tiket je uzavřen. Odesláním odpovědi se znovu otevře.</value></data>
+  <data name="TicketDetail_Error_Failed" xml:space="preserve"><value>Odpověď se nepodařilo odeslat.</value></data>
+  <data name="TicketDetail_Error_Limit" xml:space="preserve"><value>Tento tiket dosáhl limitu počtu zpráv.</value></data>
+  <data name="Index_TicketsNoticeTitle" xml:space="preserve"><value>Tikety podpory pro registrované uživatele</value></data>
+  <data name="Index_TicketsNoticeText" xml:space="preserve"><value>Registrovaní uživatelé zde mohou založit tiket podpory a sledovat odpověď.</value></data>
+  <data name="Index_TicketsNoticeOpen" xml:space="preserve"><value>Přejít na moje tikety</value></data>
+  <data name="Admin_OpenTickets" xml:space="preserve"><value>Otevřené tikety</value></data>
 </root>

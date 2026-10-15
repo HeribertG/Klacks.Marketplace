@@ -1,0 +1,91 @@
+@page "/tickets/new"
+@inject ITicketService TicketService
+@inject IHttpContextAccessor HttpContextAccessor
+@inject NavigationManager Navigation
+@inject IStringLocalizer<SharedResource> L
+
+<PageTitle>@L["TicketNew_Title"] - Klacks Store</PageTitle>
+
+<div class="max-w-3xl mx-auto px-4 sm:px-6 py-8">
+    <h1 class="text-3xl font-black tracking-tight mb-8">
+        <span class="material-symbols-outlined text-3xl mr-2 align-middle">support_agent</span> @L["TicketNew_Title"]
+    </h1>
+
+    @if (!_isAuthenticated)
+    {
+        <div class="bg-secondary-fixed text-on-secondary-fixed-variant rounded-xl px-6 py-4">
+            @L["Tickets_LoginRequired"] <a href="login" class="text-secondary hover:underline no-underline font-medium">@L["Common_LoginLink"]</a>
+        </div>
+    }
+    else
+    {
+        @if (!string.IsNullOrWhiteSpace(_errorMessage))
+        {
+            <div class="bg-error-container text-on-error-container rounded-lg p-4 mb-6 text-sm">@_errorMessage</div>
+        }
+
+        <div class="bg-surface-container-lowest rounded-2xl p-6 sm:p-8 shadow-[0_20px_50px_rgba(22,24,29,0.06)]">
+            <div class="mb-5">
+                <label class="block text-sm font-bold mb-2" for="ticket-subject">@L["TicketNew_SubjectLabel"]</label>
+                <input id="ticket-subject" type="text" maxlength="@TicketConstants.MaxSubjectLength" @bind="_subject" @bind:event="oninput"
+                       class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all" />
+            </div>
+            <div class="mb-6">
+                <label class="block text-sm font-bold mb-2" for="ticket-body">@L["TicketNew_MessageLabel"]</label>
+                <textarea id="ticket-body" rows="8" maxlength="@TicketConstants.MaxBodyLength" @bind="_body" @bind:event="oninput"
+                          class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all"></textarea>
+            </div>
+            <div class="flex flex-wrap gap-3">
+                <button class="px-6 py-3 bg-secondary text-on-secondary rounded-lg font-semibold hover:bg-secondary-container transition-all disabled:opacity-60"
+                        disabled="@_isSubmitting" @onclick="Submit">@L["TicketNew_Submit"]</button>
+                <a href="@TicketConstants.TicketsRoute" class="px-6 py-3 bg-surface-container text-on-surface-variant rounded-lg font-semibold no-underline hover:bg-surface-container-high transition-all">@L["TicketNew_Cancel"]</a>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    private bool _isAuthenticated;
+    private bool _isSubmitting;
+    private int _userId;
+    private string _subject = string.Empty;
+    private string _body = string.Empty;
+    private string _errorMessage = string.Empty;
+
+    protected override void OnInitialized()
+    {
+        var user = HttpContextAccessor.HttpContext?.User;
+        _isAuthenticated = (user?.Identity?.IsAuthenticated ?? false)
+            && int.TryParse(user.FindFirst(ClaimTypes.NameIdentifier)?.Value, out _userId);
+    }
+
+    private async Task Submit()
+    {
+        _errorMessage = string.Empty;
+
+        if (string.IsNullOrWhiteSpace(_subject) || string.IsNullOrWhiteSpace(_body))
+        {
+            _errorMessage = L["TicketNew_Error_Required"];
+            return;
+        }
+
+        _isSubmitting = true;
+        try
+        {
+            var ticket = await TicketService.CreateAsync(_userId, _subject, _body);
+            Navigation.NavigateTo($"{TicketConstants.TicketsRoute}/{ticket.Id}");
+        }
+        catch (InvalidOperationException ex) when (ex.Message == TicketConstants.TooManyOpenTicketsMessage)
+        {
+            _errorMessage = L["TicketNew_Error_TooMany"];
+        }
+        catch (InvalidOperationException)
+        {
+            _errorMessage = L["TicketNew_Error_Failed"];
+        }
+        finally
+        {
+            _isSubmitting = false;
+        }
+    }
+}

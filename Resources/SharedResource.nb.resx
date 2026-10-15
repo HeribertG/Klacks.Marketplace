@@ -251,4 +251,40 @@
   <data name="Admin_RegionRejected" xml:space="preserve"><value>Regionpakke avvist</value></data>
   <data name="Admin_RejectRegionTitle" xml:space="preserve"><value>Avvis regionpakke</value></data>
   <data name="Admin_RejectRegionMessage" xml:space="preserve"><value>Er du sikker på at du vil avvise denne regionpakken?</value></data>
+  <data name="Nav_Tickets" xml:space="preserve"><value>Support</value></data>
+  <data name="Tickets_Title" xml:space="preserve"><value>Supportsaker</value></data>
+  <data name="Tickets_LoginRequired" xml:space="preserve"><value>Supportsaker er bare tilgjengelige for registrerte brukere.</value></data>
+  <data name="Tickets_Intro" xml:space="preserve"><value>Still et spørsmål eller meld fra om et problem. Klacks-teamet svarer her. Det sendes ingen e-postvarsler, så sjekk denne siden for svaret.</value></data>
+  <data name="Tickets_NewTicket" xml:space="preserve"><value>Ny sak</value></data>
+  <data name="Tickets_NoTickets" xml:space="preserve"><value>Ingen saker ennå</value></data>
+  <data name="Tickets_NoTicketsDesc" xml:space="preserve"><value>Opprett en sak hvis du trenger hjelp.</value></data>
+  <data name="Tickets_Subject" xml:space="preserve"><value>Emne</value></data>
+  <data name="Tickets_Requester" xml:space="preserve"><value>Innsender</value></data>
+  <data name="Tickets_Updated" xml:space="preserve"><value>Sist oppdatert</value></data>
+  <data name="Tickets_FilterAll" xml:space="preserve"><value>Alle</value></data>
+  <data name="Ticket_Status_Open" xml:space="preserve"><value>Åpen</value></data>
+  <data name="Ticket_Status_Answered" xml:space="preserve"><value>Besvart</value></data>
+  <data name="Ticket_Status_Closed" xml:space="preserve"><value>Lukket</value></data>
+  <data name="TicketNew_Title" xml:space="preserve"><value>Ny sak</value></data>
+  <data name="TicketNew_SubjectLabel" xml:space="preserve"><value>Emne</value></data>
+  <data name="TicketNew_MessageLabel" xml:space="preserve"><value>Beskriv spørsmålet eller problemet ditt</value></data>
+  <data name="TicketNew_Submit" xml:space="preserve"><value>Send inn sak</value></data>
+  <data name="TicketNew_Cancel" xml:space="preserve"><value>Avbryt</value></data>
+  <data name="TicketNew_Error_Required" xml:space="preserve"><value>Skriv inn et emne og en melding.</value></data>
+  <data name="TicketNew_Error_TooMany" xml:space="preserve"><value>Du har for mange åpne saker. Vent på svar, eller lukk en først.</value></data>
+  <data name="TicketNew_Error_Failed" xml:space="preserve"><value>Saken kunne ikke opprettes.</value></data>
+  <data name="TicketDetail_Back" xml:space="preserve"><value>Tilbake til sakene</value></data>
+  <data name="TicketDetail_NotFound" xml:space="preserve"><value>Saken ble ikke funnet.</value></data>
+  <data name="TicketDetail_Staff" xml:space="preserve"><value>Klacks-teamet</value></data>
+  <data name="TicketDetail_Opened" xml:space="preserve"><value>Opprettet {0}</value></data>
+  <data name="TicketDetail_ReplyLabel" xml:space="preserve"><value>Svaret ditt</value></data>
+  <data name="TicketDetail_Send" xml:space="preserve"><value>Send svar</value></data>
+  <data name="TicketDetail_Close" xml:space="preserve"><value>Lukk saken</value></data>
+  <data name="TicketDetail_Closed" xml:space="preserve"><value>Denne saken er lukket. Hvis du sender et svar, åpnes den på nytt.</value></data>
+  <data name="TicketDetail_Error_Failed" xml:space="preserve"><value>Svaret kunne ikke sendes.</value></data>
+  <data name="TicketDetail_Error_Limit" xml:space="preserve"><value>Denne saken har nådd grensen for antall meldinger.</value></data>
+  <data name="Index_TicketsNoticeTitle" xml:space="preserve"><value>Supportsaker for registrerte brukere</value></data>
+  <data name="Index_TicketsNoticeText" xml:space="preserve"><value>Registrerte brukere kan opprette en supportsak her og følge svaret.</value></data>
+  <data name="Index_TicketsNoticeOpen" xml:space="preserve"><value>Gå til sakene mine</value></data>
+  <data name="Admin_OpenTickets" xml:space="preserve"><value>Åpne saker</value></data>
 </root>

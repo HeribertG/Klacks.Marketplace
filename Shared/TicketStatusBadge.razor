@@ -1,0 +1,22 @@
+@inject IStringLocalizer<SharedResource> L
+
+<span class="px-3 py-1 text-xs font-bold rounded-full @GetClasses()">@GetText()</span>
+
+@code {
+    [Parameter]
+    public TicketStatus Status { get; set; }
+
+    private string GetClasses() => Status switch
+    {
+        TicketStatus.Open => "bg-secondary-fixed text-on-secondary-fixed-variant",
+        TicketStatus.Answered => "bg-tertiary-fixed text-on-tertiary-fixed-variant",
+        _ => "bg-surface-container-highest text-on-surface-variant"
+    };
+
+    private string GetText() => Status switch
+    {
+        TicketStatus.Open => L["Ticket_Status_Open"].Value,
+        TicketStatus.Answered => L["Ticket_Status_Answered"].Value,
+        _ => L["Ticket_Status_Closed"].Value
+    };
+}

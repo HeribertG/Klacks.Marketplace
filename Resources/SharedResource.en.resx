@@ -251,4 +251,40 @@
   <data name="Admin_RegionRejected" xml:space="preserve"><value>Region package rejected</value></data>
   <data name="Admin_RejectRegionTitle" xml:space="preserve"><value>Reject Region Package</value></data>
   <data name="Admin_RejectRegionMessage" xml:space="preserve"><value>Are you sure you want to reject this region package?</value></data>
+  <data name="Nav_Tickets" xml:space="preserve"><value>Support</value></data>
+  <data name="Tickets_Title" xml:space="preserve"><value>Support Tickets</value></data>
+  <data name="Tickets_LoginRequired" xml:space="preserve"><value>Support tickets are available to registered users only.</value></data>
+  <data name="Tickets_Intro" xml:space="preserve"><value>Ask a question or report a problem. The Klacks team answers here. There are no email notifications, so please check this page for the answer.</value></data>
+  <data name="Tickets_NewTicket" xml:space="preserve"><value>New ticket</value></data>
+  <data name="Tickets_NoTickets" xml:space="preserve"><value>No tickets yet</value></data>
+  <data name="Tickets_NoTicketsDesc" xml:space="preserve"><value>Open a ticket if you need help.</value></data>
+  <data name="Tickets_Subject" xml:space="preserve"><value>Subject</value></data>
+  <data name="Tickets_Requester" xml:space="preserve"><value>Requester</value></data>
+  <data name="Tickets_Updated" xml:space="preserve"><value>Last update</value></data>
+  <data name="Tickets_FilterAll" xml:space="preserve"><value>All</value></data>
+  <data name="Ticket_Status_Open" xml:space="preserve"><value>Open</value></data>
+  <data name="Ticket_Status_Answered" xml:space="preserve"><value>Answered</value></data>
+  <data name="Ticket_Status_Closed" xml:space="preserve"><value>Closed</value></data>
+  <data name="TicketNew_Title" xml:space="preserve"><value>New ticket</value></data>
+  <data name="TicketNew_SubjectLabel" xml:space="preserve"><value>Subject</value></data>
+  <data name="TicketNew_MessageLabel" xml:space="preserve"><value>Describe your question or problem</value></data>
+  <data name="TicketNew_Submit" xml:space="preserve"><value>Submit ticket</value></data>
+  <data name="TicketNew_Cancel" xml:space="preserve"><value>Cancel</value></data>
+  <data name="TicketNew_Error_Required" xml:space="preserve"><value>Please enter a subject and a message.</value></data>
+  <data name="TicketNew_Error_TooMany" xml:space="preserve"><value>You have too many open tickets. Please wait for an answer or close one first.</value></data>
+  <data name="TicketNew_Error_Failed" xml:space="preserve"><value>The ticket could not be created.</value></data>
+  <data name="TicketDetail_Back" xml:space="preserve"><value>Back to tickets</value></data>
+  <data name="TicketDetail_NotFound" xml:space="preserve"><value>Ticket not found.</value></data>
+  <data name="TicketDetail_Staff" xml:space="preserve"><value>Klacks team</value></data>
+  <data name="TicketDetail_Opened" xml:space="preserve"><value>Opened {0}</value></data>
+  <data name="TicketDetail_ReplyLabel" xml:space="preserve"><value>Your reply</value></data>
+  <data name="TicketDetail_Send" xml:space="preserve"><value>Send reply</value></data>
+  <data name="TicketDetail_Close" xml:space="preserve"><value>Close ticket</value></data>
+  <data name="TicketDetail_Closed" xml:space="preserve"><value>This ticket is closed. Sending a reply reopens it.</value></data>
+  <data name="TicketDetail_Error_Failed" xml:space="preserve"><value>The reply could not be sent.</value></data>
+  <data name="TicketDetail_Error_Limit" xml:space="preserve"><value>This ticket has reached its message limit.</value></data>
+  <data name="Index_TicketsNoticeTitle" xml:space="preserve"><value>Support tickets for registered users</value></data>
+  <data name="Index_TicketsNoticeText" xml:space="preserve"><value>Registered users can open a support ticket here and follow the answer.</value></data>
+  <data name="Index_TicketsNoticeOpen" xml:space="preserve"><value>Go to my tickets</value></data>
+  <data name="Admin_OpenTickets" xml:space="preserve"><value>Open tickets</value></data>
 </root>

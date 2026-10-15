@@ -1,6 +1,7 @@
 @page "/admin"
 @inject IAdminService AdminService
 @inject IPackageService PackageService
+@inject ITicketService TicketService
 @inject IHttpContextAccessor HttpContextAccessor
 @inject IStringLocalizer<SharedResource> L
 
@@ -27,7 +28,7 @@
             <div class="bg-error-container text-on-error-container rounded-xl px-6 py-4 mb-6">@_errorMessage</div>
         }
 
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-6 mb-8">
             <div class="bg-surface-container-lowest rounded-xl p-6 text-center shadow-[0_4px_12px_rgba(22,24,29,0.04)]">
                 <div class="text-3xl font-black text-secondary">@_pendingPackages.Count</div>
                 <div class="text-xs text-on-surface-variant uppercase tracking-wider mt-1">@L["Admin_PendingPackages"]</div>
@@ -44,6 +45,10 @@
                 <div class="text-3xl font-black text-secondary">@_users.Count</div>
                 <div class="text-xs text-on-surface-variant uppercase tracking-wider mt-1">@L["Admin_Users"]</div>
             </div>
+            <a href="@TicketConstants.TicketsRoute" class="bg-surface-container-lowest rounded-xl p-6 text-center shadow-[0_4px_12px_rgba(22,24,29,0.04)] no-underline hover:bg-surface-container-low transition-all">
+                <div class="text-3xl font-black text-secondary">@_openTickets</div>
+                <div class="text-xs text-on-surface-variant uppercase tracking-wider mt-1">@L["Admin_OpenTickets"]</div>
+            </a>
         </div>
 
         <h3 class="text-xl font-bold mb-4">@L["Admin_PendingLanguagePackages"]</h3>
@@ -259,6 +264,7 @@
     private List<FeaturePlugin> _pendingPlugins = [];
     private List<RegionPackage> _pendingRegionPackages = [];
     private List<User> _users = [];
+    private int _openTickets;
     private List<RegionDownloadStat> _downloadStats = [];
     private const int DownloadStatsWindowDays = 90;
     private const string NativeInstallLabelFormat = "{0} – {1}";
@@ -287,6 +293,7 @@
         _pendingPlugins = await AdminService.GetPendingPluginsAsync();
         _pendingRegionPackages = await AdminService.GetPendingRegionPackagesAsync();
         _users = await AdminService.GetUsersAsync();
+        _openTickets = await TicketService.CountOpenAsync();
         _downloadStats = await AdminService.GetRegionDownloadStatsAsync(DownloadStatsWindowDays);
     }
 

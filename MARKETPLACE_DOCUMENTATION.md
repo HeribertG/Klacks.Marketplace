@@ -195,6 +195,26 @@ Klacks.Marketplace/
 | Status | PackageStatus | Version-level status |
 | CreatedAt | DateTime | UTC |
 
+### Ticket
+Support ticket opened by a registered user.
+| Column | Type | Description |
+|--------|------|-------------|
+| Id | int (PK) | Auto-increment |
+| UserId | int (FK User, Restrict) | Member who opened the ticket |
+| Subject | string (max 150) | Subject line |
+| Status | int | `TicketStatus`: Open (0), Answered (1), Closed (2) |
+| CreatedAt / UpdatedAt | DateTime | UTC |
+
+### TicketMessage
+| Column | Type | Description |
+|--------|------|-------------|
+| Id | int (PK) | Auto-increment |
+| TicketId | int (FK Ticket, Cascade) | Parent ticket |
+| AuthorId | int (FK User, Restrict) | Writer of the message |
+| Body | string (max 4000) | Plain text, rendered encoded with `whitespace-pre-wrap` |
+| IsStaffReply | bool | True when an admin wrote it |
+| CreatedAt | DateTime | UTC |
+
 ### DownloadLog / PluginDownloadLog
 Track downloads per package/plugin with IP address and timestamp.
 
@@ -383,6 +403,17 @@ API upload (with key), region packages → PendingReview (admin approval require
 - Search bar with real-time filtering
 - Category dropdown filter (plugins only)
 - Paginated grid with PackageCard/PluginCard/RegionPackageCard components
+
+- Notice bar below the hero: support tickets for registered users (link to `/tickets`, or sign-in/register links when anonymous)
+
+### Support Tickets (`/tickets`, `/tickets/new`, `/tickets/{id}`)
+- Registered users only (anonymous visitors see a login hint, no ticket data is loaded)
+- Members see and answer their own tickets; admins see all tickets (filter All/Open/Answered/Closed) and answer them
+- `TicketService` enforces access: `GetTicketAsync`/`ReplyAsync`/`CloseAsync` match `UserId == caller` unless the caller is admin, so another member's ticket id returns "not found"
+- Status flow: a member message sets Open, an admin reply sets Answered, owner or admin can close; a reply to a closed ticket reopens it
+- Limits (`TicketConstants`): subject 150, message 4000 characters, 5 non-closed tickets per user, 200 messages per ticket
+- No email notification exists; members check the page, admins see the open count on `/admin`
+- UI strings: `Nav_Tickets`, `Tickets_*`, `Ticket_Status_*`, `TicketNew_*`, `TicketDetail_*`, `Index_TicketsNotice*`, `Admin_OpenTickets` in all 25 `SharedResource.*.resx`
 
 ### Plugin Detail (`/plugin/{name}`)
 - Display name, category badge, version, author, downloads

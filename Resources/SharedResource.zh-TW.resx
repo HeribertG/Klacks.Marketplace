@@ -251,4 +251,40 @@
   <data name="Admin_RegionRejected" xml:space="preserve"><value>區域套件已拒絕</value></data>
   <data name="Admin_RejectRegionTitle" xml:space="preserve"><value>拒絕區域套件</value></data>
   <data name="Admin_RejectRegionMessage" xml:space="preserve"><value>確定要拒絕此區域套件嗎？</value></data>
+  <data name="Nav_Tickets" xml:space="preserve"><value>支援</value></data>
+  <data name="Tickets_Title" xml:space="preserve"><value>支援單</value></data>
+  <data name="Tickets_LoginRequired" xml:space="preserve"><value>支援單僅供已註冊的使用者使用。</value></data>
+  <data name="Tickets_Intro" xml:space="preserve"><value>您可以在此提問或回報問題，Klacks 團隊會在這裡回覆。我們不會發送電子郵件通知，請在此頁面查看回覆。</value></data>
+  <data name="Tickets_NewTicket" xml:space="preserve"><value>新增支援單</value></data>
+  <data name="Tickets_NoTickets" xml:space="preserve"><value>尚無支援單</value></data>
+  <data name="Tickets_NoTicketsDesc" xml:space="preserve"><value>如需協助，請建立支援單。</value></data>
+  <data name="Tickets_Subject" xml:space="preserve"><value>主旨</value></data>
+  <data name="Tickets_Requester" xml:space="preserve"><value>提出者</value></data>
+  <data name="Tickets_Updated" xml:space="preserve"><value>最後更新</value></data>
+  <data name="Tickets_FilterAll" xml:space="preserve"><value>全部</value></data>
+  <data name="Ticket_Status_Open" xml:space="preserve"><value>待處理</value></data>
+  <data name="Ticket_Status_Answered" xml:space="preserve"><value>已回覆</value></data>
+  <data name="Ticket_Status_Closed" xml:space="preserve"><value>已關閉</value></data>
+  <data name="TicketNew_Title" xml:space="preserve"><value>新增支援單</value></data>
+  <data name="TicketNew_SubjectLabel" xml:space="preserve"><value>主旨</value></data>
+  <data name="TicketNew_MessageLabel" xml:space="preserve"><value>請描述您的問題</value></data>
+  <data name="TicketNew_Submit" xml:space="preserve"><value>提交支援單</value></data>
+  <data name="TicketNew_Cancel" xml:space="preserve"><value>取消</value></data>
+  <data name="TicketNew_Error_Required" xml:space="preserve"><value>請輸入主旨和內容。</value></data>
+  <data name="TicketNew_Error_TooMany" xml:space="preserve"><value>您尚未關閉的支援單過多。請等待回覆或先關閉一張支援單。</value></data>
+  <data name="TicketNew_Error_Failed" xml:space="preserve"><value>無法建立支援單。</value></data>
+  <data name="TicketDetail_Back" xml:space="preserve"><value>返回支援單列表</value></data>
+  <data name="TicketDetail_NotFound" xml:space="preserve"><value>找不到該支援單。</value></data>
+  <data name="TicketDetail_Staff" xml:space="preserve"><value>Klacks 團隊</value></data>
+  <data name="TicketDetail_Opened" xml:space="preserve"><value>建立於 {0}</value></data>
+  <data name="TicketDetail_ReplyLabel" xml:space="preserve"><value>您的回覆</value></data>
+  <data name="TicketDetail_Send" xml:space="preserve"><value>傳送回覆</value></data>
+  <data name="TicketDetail_Close" xml:space="preserve"><value>關閉支援單</value></data>
+  <data name="TicketDetail_Closed" xml:space="preserve"><value>此支援單已關閉。傳送回覆將重新開啟該支援單。</value></data>
+  <data name="TicketDetail_Error_Failed" xml:space="preserve"><value>無法傳送回覆。</value></data>
+  <data name="TicketDetail_Error_Limit" xml:space="preserve"><value>此支援單已達訊息數量上限。</value></data>
+  <data name="Index_TicketsNoticeTitle" xml:space="preserve"><value>已註冊使用者的支援單</value></data>
+  <data name="Index_TicketsNoticeText" xml:space="preserve"><value>已註冊的使用者可以在此提交支援單並查看回覆。</value></data>
+  <data name="Index_TicketsNoticeOpen" xml:space="preserve"><value>前往我的支援單</value></data>
+  <data name="Admin_OpenTickets" xml:space="preserve"><value>待處理支援單</value></data>
 </root>

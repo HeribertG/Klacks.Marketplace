@@ -251,4 +251,40 @@
   <data name="Admin_RegionRejected" xml:space="preserve"><value>تم رفض الحزمة الإقليمية</value></data>
   <data name="Admin_RejectRegionTitle" xml:space="preserve"><value>رفض الحزمة الإقليمية</value></data>
   <data name="Admin_RejectRegionMessage" xml:space="preserve"><value>هل أنت متأكد أنك تريد رفض هذه الحزمة الإقليمية؟</value></data>
+  <data name="Nav_Tickets" xml:space="preserve"><value>الدعم</value></data>
+  <data name="Tickets_Title" xml:space="preserve"><value>تذاكر الدعم</value></data>
+  <data name="Tickets_LoginRequired" xml:space="preserve"><value>تذاكر الدعم متاحة للمستخدمين المسجّلين فقط.</value></data>
+  <data name="Tickets_Intro" xml:space="preserve"><value>اطرح سؤالًا أو أبلغ عن مشكلة. يجيب فريق Klacks هنا. لا توجد إشعارات عبر البريد الإلكتروني، لذا يُرجى مراجعة هذه الصفحة للاطلاع على الرد.</value></data>
+  <data name="Tickets_NewTicket" xml:space="preserve"><value>تذكرة جديدة</value></data>
+  <data name="Tickets_NoTickets" xml:space="preserve"><value>لا توجد تذاكر بعد</value></data>
+  <data name="Tickets_NoTicketsDesc" xml:space="preserve"><value>افتح تذكرة إذا كنت بحاجة إلى مساعدة.</value></data>
+  <data name="Tickets_Subject" xml:space="preserve"><value>الموضوع</value></data>
+  <data name="Tickets_Requester" xml:space="preserve"><value>مقدّم الطلب</value></data>
+  <data name="Tickets_Updated" xml:space="preserve"><value>آخر تحديث</value></data>
+  <data name="Tickets_FilterAll" xml:space="preserve"><value>الكل</value></data>
+  <data name="Ticket_Status_Open" xml:space="preserve"><value>مفتوحة</value></data>
+  <data name="Ticket_Status_Answered" xml:space="preserve"><value>تمت الإجابة</value></data>
+  <data name="Ticket_Status_Closed" xml:space="preserve"><value>مغلقة</value></data>
+  <data name="TicketNew_Title" xml:space="preserve"><value>تذكرة جديدة</value></data>
+  <data name="TicketNew_SubjectLabel" xml:space="preserve"><value>الموضوع</value></data>
+  <data name="TicketNew_MessageLabel" xml:space="preserve"><value>صف سؤالك أو مشكلتك</value></data>
+  <data name="TicketNew_Submit" xml:space="preserve"><value>إرسال التذكرة</value></data>
+  <data name="TicketNew_Cancel" xml:space="preserve"><value>إلغاء</value></data>
+  <data name="TicketNew_Error_Required" xml:space="preserve"><value>يرجى إدخال الموضوع والرسالة.</value></data>
+  <data name="TicketNew_Error_TooMany" xml:space="preserve"><value>لديك عدد كبير جدًا من التذاكر المفتوحة. يرجى انتظار الرد أو إغلاق إحداها أولًا.</value></data>
+  <data name="TicketNew_Error_Failed" xml:space="preserve"><value>تعذّر إنشاء التذكرة.</value></data>
+  <data name="TicketDetail_Back" xml:space="preserve"><value>العودة إلى التذاكر</value></data>
+  <data name="TicketDetail_NotFound" xml:space="preserve"><value>التذكرة غير موجودة.</value></data>
+  <data name="TicketDetail_Staff" xml:space="preserve"><value>فريق Klacks</value></data>
+  <data name="TicketDetail_Opened" xml:space="preserve"><value>فُتحت في {0}</value></data>
+  <data name="TicketDetail_ReplyLabel" xml:space="preserve"><value>ردّك</value></data>
+  <data name="TicketDetail_Send" xml:space="preserve"><value>إرسال الرد</value></data>
+  <data name="TicketDetail_Close" xml:space="preserve"><value>إغلاق التذكرة</value></data>
+  <data name="TicketDetail_Closed" xml:space="preserve"><value>هذه التذكرة مغلقة. إرسال رد سيعيد فتحها.</value></data>
+  <data name="TicketDetail_Error_Failed" xml:space="preserve"><value>تعذّر إرسال الرد.</value></data>
+  <data name="TicketDetail_Error_Limit" xml:space="preserve"><value>بلغت هذه التذكرة الحد الأقصى للرسائل.</value></data>
+  <data name="Index_TicketsNoticeTitle" xml:space="preserve"><value>تذاكر الدعم للمستخدمين المسجّلين</value></data>
+  <data name="Index_TicketsNoticeText" xml:space="preserve"><value>يمكن للمستخدمين المسجّلين فتح تذكرة دعم هنا ومتابعة الرد.</value></data>
+  <data name="Index_TicketsNoticeOpen" xml:space="preserve"><value>الانتقال إلى تذاكري</value></data>
+  <data name="Admin_OpenTickets" xml:space="preserve"><value>التذاكر المفتوحة</value></data>
 </root>

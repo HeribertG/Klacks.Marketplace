@@ -251,4 +251,40 @@
   <data name="Admin_RegionRejected" xml:space="preserve"><value>Region-Paket abgelehnt</value></data>
   <data name="Admin_RejectRegionTitle" xml:space="preserve"><value>Region-Paket ablehnen</value></data>
   <data name="Admin_RejectRegionMessage" xml:space="preserve"><value>Soll dieses Region-Paket wirklich abgelehnt werden?</value></data>
+  <data name="Nav_Tickets" xml:space="preserve"><value>Support</value></data>
+  <data name="Tickets_Title" xml:space="preserve"><value>Support-Tickets</value></data>
+  <data name="Tickets_LoginRequired" xml:space="preserve"><value>Support-Tickets stehen nur registrierten Benutzern zur Verfügung.</value></data>
+  <data name="Tickets_Intro" xml:space="preserve"><value>Stellen Sie eine Frage oder melden Sie ein Problem. Das Klacks-Team antwortet hier. Es gibt keine E-Mail-Benachrichtigung, schauen Sie deshalb auf dieser Seite nach der Antwort.</value></data>
+  <data name="Tickets_NewTicket" xml:space="preserve"><value>Neues Ticket</value></data>
+  <data name="Tickets_NoTickets" xml:space="preserve"><value>Noch keine Tickets</value></data>
+  <data name="Tickets_NoTicketsDesc" xml:space="preserve"><value>Eröffnen Sie ein Ticket, wenn Sie Hilfe brauchen.</value></data>
+  <data name="Tickets_Subject" xml:space="preserve"><value>Betreff</value></data>
+  <data name="Tickets_Requester" xml:space="preserve"><value>Absender</value></data>
+  <data name="Tickets_Updated" xml:space="preserve"><value>Letzte Änderung</value></data>
+  <data name="Tickets_FilterAll" xml:space="preserve"><value>Alle</value></data>
+  <data name="Ticket_Status_Open" xml:space="preserve"><value>Offen</value></data>
+  <data name="Ticket_Status_Answered" xml:space="preserve"><value>Beantwortet</value></data>
+  <data name="Ticket_Status_Closed" xml:space="preserve"><value>Geschlossen</value></data>
+  <data name="TicketNew_Title" xml:space="preserve"><value>Neues Ticket</value></data>
+  <data name="TicketNew_SubjectLabel" xml:space="preserve"><value>Betreff</value></data>
+  <data name="TicketNew_MessageLabel" xml:space="preserve"><value>Beschreiben Sie Ihre Frage oder Ihr Problem</value></data>
+  <data name="TicketNew_Submit" xml:space="preserve"><value>Ticket senden</value></data>
+  <data name="TicketNew_Cancel" xml:space="preserve"><value>Abbrechen</value></data>
+  <data name="TicketNew_Error_Required" xml:space="preserve"><value>Bitte geben Sie einen Betreff und eine Nachricht ein.</value></data>
+  <data name="TicketNew_Error_TooMany" xml:space="preserve"><value>Sie haben zu viele offene Tickets. Bitte warten Sie auf eine Antwort oder schliessen Sie zuerst eines.</value></data>
+  <data name="TicketNew_Error_Failed" xml:space="preserve"><value>Das Ticket konnte nicht erstellt werden.</value></data>
+  <data name="TicketDetail_Back" xml:space="preserve"><value>Zurück zu den Tickets</value></data>
+  <data name="TicketDetail_NotFound" xml:space="preserve"><value>Ticket nicht gefunden.</value></data>
+  <data name="TicketDetail_Staff" xml:space="preserve"><value>Klacks-Team</value></data>
+  <data name="TicketDetail_Opened" xml:space="preserve"><value>Eröffnet am {0}</value></data>
+  <data name="TicketDetail_ReplyLabel" xml:space="preserve"><value>Ihre Antwort</value></data>
+  <data name="TicketDetail_Send" xml:space="preserve"><value>Antwort senden</value></data>
+  <data name="TicketDetail_Close" xml:space="preserve"><value>Ticket schliessen</value></data>
+  <data name="TicketDetail_Closed" xml:space="preserve"><value>Dieses Ticket ist geschlossen. Mit einer Antwort wird es wieder geöffnet.</value></data>
+  <data name="TicketDetail_Error_Failed" xml:space="preserve"><value>Die Antwort konnte nicht gesendet werden.</value></data>
+  <data name="TicketDetail_Error_Limit" xml:space="preserve"><value>Dieses Ticket hat die maximale Anzahl Nachrichten erreicht.</value></data>
+  <data name="Index_TicketsNoticeTitle" xml:space="preserve"><value>Support-Tickets für registrierte Benutzer</value></data>
+  <data name="Index_TicketsNoticeText" xml:space="preserve"><value>Registrierte Benutzer können hier ein Support-Ticket eröffnen und die Antwort verfolgen.</value></data>
+  <data name="Index_TicketsNoticeOpen" xml:space="preserve"><value>Zu meinen Tickets</value></data>
+  <data name="Admin_OpenTickets" xml:space="preserve"><value>Offene Tickets</value></data>
 </root>

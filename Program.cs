@@ -55,6 +55,7 @@ builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddSingleton<ILoginTokenService, LoginTokenService>();
 builder.Services.AddScoped<IPackageService, PackageService>();
 builder.Services.AddScoped<IAdminService, AdminService>();
+builder.Services.AddScoped<ITicketService, TicketService>();
 builder.Services.AddScoped<IFileValidationService, FileValidationService>();
 builder.Services.AddScoped<IFeaturePluginMarketplaceService, FeaturePluginMarketplaceService>();
 builder.Services.AddScoped<IPluginValidationService, PluginValidationService>();

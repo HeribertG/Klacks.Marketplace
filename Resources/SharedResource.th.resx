@@ -251,4 +251,40 @@
   <data name="Admin_RegionRejected" xml:space="preserve"><value>ปฏิเสธแพ็กเกจภูมิภาคแล้ว</value></data>
   <data name="Admin_RejectRegionTitle" xml:space="preserve"><value>ปฏิเสธแพ็กเกจภูมิภาค</value></data>
   <data name="Admin_RejectRegionMessage" xml:space="preserve"><value>คุณแน่ใจหรือไม่ว่าต้องการปฏิเสธแพ็กเกจภูมิภาคนี้?</value></data>
+  <data name="Nav_Tickets" xml:space="preserve"><value>ฝ่ายสนับสนุน</value></data>
+  <data name="Tickets_Title" xml:space="preserve"><value>คำขอสนับสนุน</value></data>
+  <data name="Tickets_LoginRequired" xml:space="preserve"><value>คำขอสนับสนุนใช้ได้เฉพาะผู้ใช้ที่ลงทะเบียนแล้วเท่านั้น</value></data>
+  <data name="Tickets_Intro" xml:space="preserve"><value>สอบถามหรือแจ้งปัญหาได้ที่นี่ ทีม Klacks จะตอบกลับในหน้านี้ ไม่มีการแจ้งเตือนทางอีเมล โปรดกลับมาตรวจสอบคำตอบในหน้านี้</value></data>
+  <data name="Tickets_NewTicket" xml:space="preserve"><value>คำขอใหม่</value></data>
+  <data name="Tickets_NoTickets" xml:space="preserve"><value>ยังไม่มีคำขอ</value></data>
+  <data name="Tickets_NoTicketsDesc" xml:space="preserve"><value>สร้างคำขอหากต้องการความช่วยเหลือ</value></data>
+  <data name="Tickets_Subject" xml:space="preserve"><value>หัวข้อ</value></data>
+  <data name="Tickets_Requester" xml:space="preserve"><value>ผู้ส่งคำขอ</value></data>
+  <data name="Tickets_Updated" xml:space="preserve"><value>อัปเดตล่าสุด</value></data>
+  <data name="Tickets_FilterAll" xml:space="preserve"><value>ทั้งหมด</value></data>
+  <data name="Ticket_Status_Open" xml:space="preserve"><value>เปิดอยู่</value></data>
+  <data name="Ticket_Status_Answered" xml:space="preserve"><value>ตอบแล้ว</value></data>
+  <data name="Ticket_Status_Closed" xml:space="preserve"><value>ปิดแล้ว</value></data>
+  <data name="TicketNew_Title" xml:space="preserve"><value>คำขอใหม่</value></data>
+  <data name="TicketNew_SubjectLabel" xml:space="preserve"><value>หัวข้อ</value></data>
+  <data name="TicketNew_MessageLabel" xml:space="preserve"><value>อธิบายคำถามหรือปัญหาของคุณ</value></data>
+  <data name="TicketNew_Submit" xml:space="preserve"><value>ส่งคำขอ</value></data>
+  <data name="TicketNew_Cancel" xml:space="preserve"><value>ยกเลิก</value></data>
+  <data name="TicketNew_Error_Required" xml:space="preserve"><value>โปรดกรอกหัวข้อและข้อความ</value></data>
+  <data name="TicketNew_Error_TooMany" xml:space="preserve"><value>คุณมีคำขอที่เปิดอยู่มากเกินไป โปรดรอคำตอบหรือปิดคำขอหนึ่งรายการก่อน</value></data>
+  <data name="TicketNew_Error_Failed" xml:space="preserve"><value>ไม่สามารถสร้างคำขอได้</value></data>
+  <data name="TicketDetail_Back" xml:space="preserve"><value>กลับไปยังคำขอ</value></data>
+  <data name="TicketDetail_NotFound" xml:space="preserve"><value>ไม่พบคำขอ</value></data>
+  <data name="TicketDetail_Staff" xml:space="preserve"><value>ทีม Klacks</value></data>
+  <data name="TicketDetail_Opened" xml:space="preserve"><value>เปิดเมื่อ {0}</value></data>
+  <data name="TicketDetail_ReplyLabel" xml:space="preserve"><value>การตอบกลับของคุณ</value></data>
+  <data name="TicketDetail_Send" xml:space="preserve"><value>ส่งการตอบกลับ</value></data>
+  <data name="TicketDetail_Close" xml:space="preserve"><value>ปิดคำขอ</value></data>
+  <data name="TicketDetail_Closed" xml:space="preserve"><value>คำขอนี้ปิดแล้ว การส่งคำตอบจะเปิดคำขอนี้อีกครั้ง</value></data>
+  <data name="TicketDetail_Error_Failed" xml:space="preserve"><value>ไม่สามารถส่งคำตอบได้</value></data>
+  <data name="TicketDetail_Error_Limit" xml:space="preserve"><value>คำขอนี้ถึงจำนวนข้อความสูงสุดแล้ว</value></data>
+  <data name="Index_TicketsNoticeTitle" xml:space="preserve"><value>คำขอสนับสนุนสำหรับผู้ใช้ที่ลงทะเบียน</value></data>
+  <data name="Index_TicketsNoticeText" xml:space="preserve"><value>ผู้ใช้ที่ลงทะเบียนแล้วสามารถสร้างคำขอสนับสนุนที่นี่และติดตามคำตอบได้</value></data>
+  <data name="Index_TicketsNoticeOpen" xml:space="preserve"><value>ไปที่คำขอของฉัน</value></data>
+  <data name="Admin_OpenTickets" xml:space="preserve"><value>คำขอที่เปิดอยู่</value></data>
 </root>

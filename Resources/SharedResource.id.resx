@@ -251,4 +251,40 @@
   <data name="Admin_RegionRejected" xml:space="preserve"><value>Paket wilayah ditolak</value></data>
   <data name="Admin_RejectRegionTitle" xml:space="preserve"><value>Tolak Paket Wilayah</value></data>
   <data name="Admin_RejectRegionMessage" xml:space="preserve"><value>Apakah Anda yakin ingin menolak paket wilayah ini?</value></data>
+  <data name="Nav_Tickets" xml:space="preserve"><value>Dukungan</value></data>
+  <data name="Tickets_Title" xml:space="preserve"><value>Tiket Dukungan</value></data>
+  <data name="Tickets_LoginRequired" xml:space="preserve"><value>Tiket dukungan hanya tersedia untuk pengguna terdaftar.</value></data>
+  <data name="Tickets_Intro" xml:space="preserve"><value>Ajukan pertanyaan atau laporkan masalah. Tim Klacks akan menjawab di sini. Tidak ada notifikasi email, jadi silakan periksa halaman ini untuk melihat jawabannya.</value></data>
+  <data name="Tickets_NewTicket" xml:space="preserve"><value>Tiket baru</value></data>
+  <data name="Tickets_NoTickets" xml:space="preserve"><value>Belum ada tiket</value></data>
+  <data name="Tickets_NoTicketsDesc" xml:space="preserve"><value>Buka tiket jika Anda membutuhkan bantuan.</value></data>
+  <data name="Tickets_Subject" xml:space="preserve"><value>Subjek</value></data>
+  <data name="Tickets_Requester" xml:space="preserve"><value>Pemohon</value></data>
+  <data name="Tickets_Updated" xml:space="preserve"><value>Pembaruan terakhir</value></data>
+  <data name="Tickets_FilterAll" xml:space="preserve"><value>Semua</value></data>
+  <data name="Ticket_Status_Open" xml:space="preserve"><value>Terbuka</value></data>
+  <data name="Ticket_Status_Answered" xml:space="preserve"><value>Dijawab</value></data>
+  <data name="Ticket_Status_Closed" xml:space="preserve"><value>Ditutup</value></data>
+  <data name="TicketNew_Title" xml:space="preserve"><value>Tiket baru</value></data>
+  <data name="TicketNew_SubjectLabel" xml:space="preserve"><value>Subjek</value></data>
+  <data name="TicketNew_MessageLabel" xml:space="preserve"><value>Jelaskan pertanyaan atau masalah Anda</value></data>
+  <data name="TicketNew_Submit" xml:space="preserve"><value>Kirim tiket</value></data>
+  <data name="TicketNew_Cancel" xml:space="preserve"><value>Batal</value></data>
+  <data name="TicketNew_Error_Required" xml:space="preserve"><value>Harap isi subjek dan pesan.</value></data>
+  <data name="TicketNew_Error_TooMany" xml:space="preserve"><value>Anda memiliki terlalu banyak tiket terbuka. Harap tunggu jawaban atau tutup salah satu tiket terlebih dahulu.</value></data>
+  <data name="TicketNew_Error_Failed" xml:space="preserve"><value>Tiket tidak dapat dibuat.</value></data>
+  <data name="TicketDetail_Back" xml:space="preserve"><value>Kembali ke tiket</value></data>
+  <data name="TicketDetail_NotFound" xml:space="preserve"><value>Tiket tidak ditemukan.</value></data>
+  <data name="TicketDetail_Staff" xml:space="preserve"><value>Tim Klacks</value></data>
+  <data name="TicketDetail_Opened" xml:space="preserve"><value>Dibuka pada {0}</value></data>
+  <data name="TicketDetail_ReplyLabel" xml:space="preserve"><value>Balasan Anda</value></data>
+  <data name="TicketDetail_Send" xml:space="preserve"><value>Kirim balasan</value></data>
+  <data name="TicketDetail_Close" xml:space="preserve"><value>Tutup tiket</value></data>
+  <data name="TicketDetail_Closed" xml:space="preserve"><value>Tiket ini telah ditutup. Mengirim balasan akan membukanya kembali.</value></data>
+  <data name="TicketDetail_Error_Failed" xml:space="preserve"><value>Balasan tidak dapat dikirim.</value></data>
+  <data name="TicketDetail_Error_Limit" xml:space="preserve"><value>Tiket ini telah mencapai batas jumlah pesan.</value></data>
+  <data name="Index_TicketsNoticeTitle" xml:space="preserve"><value>Tiket dukungan untuk pengguna terdaftar</value></data>
+  <data name="Index_TicketsNoticeText" xml:space="preserve"><value>Pengguna terdaftar dapat membuka tiket dukungan di sini dan memantau jawabannya.</value></data>
+  <data name="Index_TicketsNoticeOpen" xml:space="preserve"><value>Lihat tiket saya</value></data>
+  <data name="Admin_OpenTickets" xml:space="preserve"><value>Tiket terbuka</value></data>
 </root>

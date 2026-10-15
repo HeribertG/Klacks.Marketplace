@@ -251,4 +251,40 @@
   <data name="Admin_RegionRejected" xml:space="preserve"><value>Regiopakket afgewezen</value></data>
   <data name="Admin_RejectRegionTitle" xml:space="preserve"><value>Regiopakket afwijzen</value></data>
   <data name="Admin_RejectRegionMessage" xml:space="preserve"><value>Weet u zeker dat u dit regiopakket wilt afwijzen?</value></data>
+  <data name="Nav_Tickets" xml:space="preserve"><value>Support</value></data>
+  <data name="Tickets_Title" xml:space="preserve"><value>Supporttickets</value></data>
+  <data name="Tickets_LoginRequired" xml:space="preserve"><value>Supporttickets zijn alleen beschikbaar voor geregistreerde gebruikers.</value></data>
+  <data name="Tickets_Intro" xml:space="preserve"><value>Stel een vraag of meld een probleem. Het Klacks-team antwoordt hier. Er worden geen e-mailmeldingen verstuurd, controleer dus deze pagina voor het antwoord.</value></data>
+  <data name="Tickets_NewTicket" xml:space="preserve"><value>Nieuw ticket</value></data>
+  <data name="Tickets_NoTickets" xml:space="preserve"><value>Nog geen tickets</value></data>
+  <data name="Tickets_NoTicketsDesc" xml:space="preserve"><value>Open een ticket als u hulp nodig hebt.</value></data>
+  <data name="Tickets_Subject" xml:space="preserve"><value>Onderwerp</value></data>
+  <data name="Tickets_Requester" xml:space="preserve"><value>Aanvrager</value></data>
+  <data name="Tickets_Updated" xml:space="preserve"><value>Laatst bijgewerkt</value></data>
+  <data name="Tickets_FilterAll" xml:space="preserve"><value>Alle</value></data>
+  <data name="Ticket_Status_Open" xml:space="preserve"><value>Open</value></data>
+  <data name="Ticket_Status_Answered" xml:space="preserve"><value>Beantwoord</value></data>
+  <data name="Ticket_Status_Closed" xml:space="preserve"><value>Gesloten</value></data>
+  <data name="TicketNew_Title" xml:space="preserve"><value>Nieuw ticket</value></data>
+  <data name="TicketNew_SubjectLabel" xml:space="preserve"><value>Onderwerp</value></data>
+  <data name="TicketNew_MessageLabel" xml:space="preserve"><value>Beschrijf uw vraag of probleem</value></data>
+  <data name="TicketNew_Submit" xml:space="preserve"><value>Ticket indienen</value></data>
+  <data name="TicketNew_Cancel" xml:space="preserve"><value>Annuleren</value></data>
+  <data name="TicketNew_Error_Required" xml:space="preserve"><value>Voer een onderwerp en een bericht in.</value></data>
+  <data name="TicketNew_Error_TooMany" xml:space="preserve"><value>U hebt te veel open tickets. Wacht op een antwoord of sluit eerst een ticket.</value></data>
+  <data name="TicketNew_Error_Failed" xml:space="preserve"><value>Het ticket kon niet worden aangemaakt.</value></data>
+  <data name="TicketDetail_Back" xml:space="preserve"><value>Terug naar tickets</value></data>
+  <data name="TicketDetail_NotFound" xml:space="preserve"><value>Ticket niet gevonden.</value></data>
+  <data name="TicketDetail_Staff" xml:space="preserve"><value>Klacks-team</value></data>
+  <data name="TicketDetail_Opened" xml:space="preserve"><value>Geopend op {0}</value></data>
+  <data name="TicketDetail_ReplyLabel" xml:space="preserve"><value>Uw antwoord</value></data>
+  <data name="TicketDetail_Send" xml:space="preserve"><value>Antwoord verzenden</value></data>
+  <data name="TicketDetail_Close" xml:space="preserve"><value>Ticket sluiten</value></data>
+  <data name="TicketDetail_Closed" xml:space="preserve"><value>Dit ticket is gesloten. Als u een antwoord verzendt, wordt het heropend.</value></data>
+  <data name="TicketDetail_Error_Failed" xml:space="preserve"><value>Het antwoord kon niet worden verzonden.</value></data>
+  <data name="TicketDetail_Error_Limit" xml:space="preserve"><value>Dit ticket heeft de limiet voor het aantal berichten bereikt.</value></data>
+  <data name="Index_TicketsNoticeTitle" xml:space="preserve"><value>Supporttickets voor geregistreerde gebruikers</value></data>
+  <data name="Index_TicketsNoticeText" xml:space="preserve"><value>Geregistreerde gebruikers kunnen hier een supportticket openen en het antwoord volgen.</value></data>
+  <data name="Index_TicketsNoticeOpen" xml:space="preserve"><value>Naar mijn tickets</value></data>
+  <data name="Admin_OpenTickets" xml:space="preserve"><value>Open tickets</value></data>
 </root>

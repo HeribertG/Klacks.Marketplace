@@ -1,0 +1,171 @@
+@page "/tickets/{TicketId:int}"
+@using System.Globalization
+@inject ITicketService TicketService
+@inject IHttpContextAccessor HttpContextAccessor
+@inject IStringLocalizer<SharedResource> L
+
+<PageTitle>@L["Tickets_Title"] - Klacks Store</PageTitle>
+
+<div class="max-w-3xl mx-auto px-4 sm:px-6 py-8">
+    <a href="@TicketConstants.TicketsRoute" class="text-secondary hover:underline no-underline font-medium inline-flex items-center gap-1 mb-6">
+        <span class="material-symbols-outlined text-[18px]">arrow_back</span> @L["TicketDetail_Back"]
+    </a>
+
+    @if (!_isAuthenticated)
+    {
+        <div class="bg-secondary-fixed text-on-secondary-fixed-variant rounded-xl px-6 py-4">
+            @L["Tickets_LoginRequired"] <a href="login" class="text-secondary hover:underline no-underline font-medium">@L["Common_LoginLink"]</a>
+        </div>
+    }
+    else if (_isLoading)
+    {
+        <div class="py-16 text-center">
+            <div class="animate-spin inline-block w-8 h-8 border-4 border-secondary border-t-transparent rounded-full"></div>
+        </div>
+    }
+    else if (_ticket is null)
+    {
+        <div class="bg-error-container text-on-error-container rounded-xl px-6 py-4">@L["TicketDetail_NotFound"]</div>
+    }
+    else
+    {
+        <div class="flex flex-wrap items-start justify-between gap-3 mb-2">
+            <h1 dir="auto" class="text-2xl sm:text-3xl font-black tracking-tight break-words min-w-0">@_ticket.Subject</h1>
+            <TicketStatusBadge Status="@_ticket.Status" />
+        </div>
+        <p class="text-sm text-on-surface-variant mb-8">
+            @string.Format(L["TicketDetail_Opened"].Value, FormatDate(_ticket.CreatedAt))
+            @if (_isAdmin)
+            {
+                <span> &middot; @_ticket.User.DisplayName (@_ticket.User.Email)</span>
+            }
+        </p>
+
+        <div class="flex flex-col gap-4 mb-8">
+            @foreach (var message in _ticket.Messages)
+            {
+                <div class="rounded-xl p-5 @(message.IsStaffReply ? "bg-tertiary-fixed text-on-tertiary-fixed-variant" : "bg-surface-container-lowest shadow-[0_4px_12px_rgba(22,24,29,0.04)]")">
+                    <div class="flex flex-wrap items-center justify-between gap-2 text-xs font-bold mb-2">
+                        <span>@(message.IsStaffReply ? L["TicketDetail_Staff"].Value : message.Author.DisplayName)</span>
+                        <span class="font-medium">@FormatDate(message.CreatedAt)</span>
+                    </div>
+                    <div dir="auto" class="whitespace-pre-wrap break-words">@message.Body</div>
+                </div>
+            }
+        </div>
+
+        @if (!string.IsNullOrWhiteSpace(_errorMessage))
+        {
+            <div class="bg-error-container text-on-error-container rounded-lg p-4 mb-6 text-sm">@_errorMessage</div>
+        }
+
+        @if (_ticket.Status == TicketStatus.Closed)
+        {
+            <p class="text-on-surface-variant mb-4">@L["TicketDetail_Closed"]</p>
+        }
+
+        <div class="bg-surface-container-lowest rounded-2xl p-6 shadow-[0_20px_50px_rgba(22,24,29,0.06)]">
+            <label class="block text-sm font-bold mb-2" for="ticket-reply">@L["TicketDetail_ReplyLabel"]</label>
+            <textarea id="ticket-reply" rows="5" maxlength="@TicketConstants.MaxBodyLength" @bind="_reply" @bind:event="oninput"
+                      class="w-full px-4 py-3 mb-4 bg-surface-container-low border border-outline-variant/30 rounded-lg text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest outline-none transition-all"></textarea>
+            <div class="flex flex-wrap gap-3">
+                <button class="px-6 py-3 bg-secondary text-on-secondary rounded-lg font-semibold hover:bg-secondary-container transition-all disabled:opacity-60"
+                        disabled="@_isBusy" @onclick="SendReply">@L["TicketDetail_Send"]</button>
+                @if (_ticket.Status != TicketStatus.Closed)
+                {
+                    <button class="px-6 py-3 bg-surface-container text-on-surface-variant rounded-lg font-semibold hover:bg-surface-container-high transition-all disabled:opacity-60"
+                            disabled="@_isBusy" @onclick="Close">@L["TicketDetail_Close"]</button>
+                }
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    private const string DateFormat = "g";
+    private const string UtcSuffix = " UTC";
+
+    [Parameter]
+    public int TicketId { get; set; }
+
+    private Ticket? _ticket;
+    private bool _isAuthenticated;
+    private bool _isAdmin;
+    private bool _isLoading = true;
+    private bool _isBusy;
+    private int _userId;
+    private string _reply = string.Empty;
+    private string _errorMessage = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var user = HttpContextAccessor.HttpContext?.User;
+        _isAuthenticated = (user?.Identity?.IsAuthenticated ?? false)
+            && int.TryParse(user.FindFirst(ClaimTypes.NameIdentifier)?.Value, out _userId);
+        _isAdmin = user?.IsInRole("Admin") ?? false;
+
+        if (_isAuthenticated)
+        {
+            await Load();
+        }
+
+        _isLoading = false;
+    }
+
+    private async Task Load()
+    {
+        _ticket = await TicketService.GetTicketAsync(TicketId, _userId, _isAdmin);
+    }
+
+    private async Task SendReply()
+    {
+        _errorMessage = string.Empty;
+        if (string.IsNullOrWhiteSpace(_reply))
+        {
+            _errorMessage = L["TicketDetail_Error_Failed"];
+            return;
+        }
+
+        _isBusy = true;
+        try
+        {
+            if (await TicketService.ReplyAsync(TicketId, _userId, _isAdmin, _reply))
+            {
+                _reply = string.Empty;
+                await Load();
+            }
+            else
+            {
+                _errorMessage = L["TicketDetail_NotFound"];
+            }
+        }
+        catch (InvalidOperationException ex) when (ex.Message == TicketConstants.MessageLimitReachedMessage)
+        {
+            _errorMessage = L["TicketDetail_Error_Limit"];
+        }
+        catch (InvalidOperationException)
+        {
+            _errorMessage = L["TicketDetail_Error_Failed"];
+        }
+        finally
+        {
+            _isBusy = false;
+        }
+    }
+
+    private async Task Close()
+    {
+        _isBusy = true;
+        try
+        {
+            await TicketService.CloseAsync(TicketId, _userId, _isAdmin);
+            await Load();
+        }
+        finally
+        {
+            _isBusy = false;
+        }
+    }
+
+    private static string FormatDate(DateTime utc) => utc.ToString(DateFormat, CultureInfo.CurrentCulture) + UtcSuffix;
+}

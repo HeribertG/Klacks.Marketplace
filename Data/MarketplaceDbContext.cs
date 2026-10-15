@@ -1,5 +1,6 @@
 // Copyright (c) Heribert Gasparoli. SPDX-License-Identifier: AGPL-3.0-only
 
+using Klacks.Marketplace.Constants;
 using Klacks.Marketplace.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -19,6 +20,8 @@ public class MarketplaceDbContext : DbContext
     public DbSet<RegionPackage> RegionPackages => Set<RegionPackage>();
     public DbSet<RegionPackageVersion> RegionPackageVersions => Set<RegionPackageVersion>();
     public DbSet<RegionDownloadLog> RegionDownloadLogs => Set<RegionDownloadLog>();
+    public DbSet<Ticket> Tickets => Set<Ticket>();
+    public DbSet<TicketMessage> TicketMessages => Set<TicketMessage>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -120,6 +123,31 @@ public class MarketplaceDbContext : DbContext
                   .WithMany(p => p.DownloadLogs)
                   .HasForeignKey(e => e.RegionPackageId)
                   .OnDelete(DeleteBehavior.Cascade);
+        });
+
+        modelBuilder.Entity<Ticket>(entity =>
+        {
+            entity.HasIndex(e => e.UserId);
+            entity.HasIndex(e => e.Status);
+            entity.Property(e => e.Subject).IsRequired().HasMaxLength(TicketConstants.MaxSubjectLength);
+            entity.HasOne(e => e.User)
+                  .WithMany()
+                  .HasForeignKey(e => e.UserId)
+                  .OnDelete(DeleteBehavior.Restrict);
+        });
+
+        modelBuilder.Entity<TicketMessage>(entity =>
+        {
+            entity.HasIndex(e => e.TicketId);
+            entity.Property(e => e.Body).IsRequired().HasMaxLength(TicketConstants.MaxBodyLength);
+            entity.HasOne(e => e.Ticket)
+                  .WithMany(t => t.Messages)
+                  .HasForeignKey(e => e.TicketId)
+                  .OnDelete(DeleteBehavior.Cascade);
+            entity.HasOne(e => e.Author)
+                  .WithMany()
+                  .HasForeignKey(e => e.AuthorId)
+                  .OnDelete(DeleteBehavior.Restrict);
         });
     }
 }

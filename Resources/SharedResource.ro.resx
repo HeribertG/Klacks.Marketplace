@@ -251,4 +251,40 @@
   <data name="Admin_RegionRejected" xml:space="preserve"><value>Pachet regional respins</value></data>
   <data name="Admin_RejectRegionTitle" xml:space="preserve"><value>Respinge pachetul regional</value></data>
   <data name="Admin_RejectRegionMessage" xml:space="preserve"><value>Ești sigur că vrei să respingi acest pachet regional?</value></data>
+  <data name="Nav_Tickets" xml:space="preserve"><value>Asistență</value></data>
+  <data name="Tickets_Title" xml:space="preserve"><value>Tichete de asistență</value></data>
+  <data name="Tickets_LoginRequired" xml:space="preserve"><value>Tichetele de asistență sunt disponibile doar utilizatorilor înregistrați.</value></data>
+  <data name="Tickets_Intro" xml:space="preserve"><value>Pune o întrebare sau raportează o problemă. Echipa Klacks răspunde aici. Nu se trimit notificări prin e-mail, așa că verifică această pagină pentru răspuns.</value></data>
+  <data name="Tickets_NewTicket" xml:space="preserve"><value>Tichet nou</value></data>
+  <data name="Tickets_NoTickets" xml:space="preserve"><value>Niciun tichet încă</value></data>
+  <data name="Tickets_NoTicketsDesc" xml:space="preserve"><value>Deschide un tichet dacă ai nevoie de ajutor.</value></data>
+  <data name="Tickets_Subject" xml:space="preserve"><value>Subiect</value></data>
+  <data name="Tickets_Requester" xml:space="preserve"><value>Solicitant</value></data>
+  <data name="Tickets_Updated" xml:space="preserve"><value>Ultima actualizare</value></data>
+  <data name="Tickets_FilterAll" xml:space="preserve"><value>Toate</value></data>
+  <data name="Ticket_Status_Open" xml:space="preserve"><value>Deschis</value></data>
+  <data name="Ticket_Status_Answered" xml:space="preserve"><value>Cu răspuns</value></data>
+  <data name="Ticket_Status_Closed" xml:space="preserve"><value>Închis</value></data>
+  <data name="TicketNew_Title" xml:space="preserve"><value>Tichet nou</value></data>
+  <data name="TicketNew_SubjectLabel" xml:space="preserve"><value>Subiect</value></data>
+  <data name="TicketNew_MessageLabel" xml:space="preserve"><value>Descrie întrebarea sau problema ta</value></data>
+  <data name="TicketNew_Submit" xml:space="preserve"><value>Trimite tichetul</value></data>
+  <data name="TicketNew_Cancel" xml:space="preserve"><value>Anulează</value></data>
+  <data name="TicketNew_Error_Required" xml:space="preserve"><value>Introdu un subiect și un mesaj.</value></data>
+  <data name="TicketNew_Error_TooMany" xml:space="preserve"><value>Ai prea multe tichete deschise. Așteaptă un răspuns sau închide mai întâi unul.</value></data>
+  <data name="TicketNew_Error_Failed" xml:space="preserve"><value>Tichetul nu a putut fi creat.</value></data>
+  <data name="TicketDetail_Back" xml:space="preserve"><value>Înapoi la tichete</value></data>
+  <data name="TicketDetail_NotFound" xml:space="preserve"><value>Tichetul nu a fost găsit.</value></data>
+  <data name="TicketDetail_Staff" xml:space="preserve"><value>Echipa Klacks</value></data>
+  <data name="TicketDetail_Opened" xml:space="preserve"><value>Deschis la {0}</value></data>
+  <data name="TicketDetail_ReplyLabel" xml:space="preserve"><value>Răspunsul tău</value></data>
+  <data name="TicketDetail_Send" xml:space="preserve"><value>Trimite răspunsul</value></data>
+  <data name="TicketDetail_Close" xml:space="preserve"><value>Închide tichetul</value></data>
+  <data name="TicketDetail_Closed" xml:space="preserve"><value>Acest tichet este închis. Trimiterea unui răspuns îl redeschide.</value></data>
+  <data name="TicketDetail_Error_Failed" xml:space="preserve"><value>Răspunsul nu a putut fi trimis.</value></data>
+  <data name="TicketDetail_Error_Limit" xml:space="preserve"><value>Acest tichet a atins limita de mesaje.</value></data>
+  <data name="Index_TicketsNoticeTitle" xml:space="preserve"><value>Tichete de asistență pentru utilizatorii înregistrați</value></data>
+  <data name="Index_TicketsNoticeText" xml:space="preserve"><value>Utilizatorii înregistrați pot deschide aici un tichet de asistență și pot urmări răspunsul.</value></data>
+  <data name="Index_TicketsNoticeOpen" xml:space="preserve"><value>Mergi la tichetele mele</value></data>
+  <data name="Admin_OpenTickets" xml:space="preserve"><value>Tichete deschise</value></data>
 </root>

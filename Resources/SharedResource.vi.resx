@@ -251,4 +251,40 @@
   <data name="Admin_RegionRejected" xml:space="preserve"><value>Gói khu vực đã bị từ chối</value></data>
   <data name="Admin_RejectRegionTitle" xml:space="preserve"><value>Từ chối gói khu vực</value></data>
   <data name="Admin_RejectRegionMessage" xml:space="preserve"><value>Bạn có chắc chắn muốn từ chối gói khu vực này không?</value></data>
+  <data name="Nav_Tickets" xml:space="preserve"><value>Hỗ trợ</value></data>
+  <data name="Tickets_Title" xml:space="preserve"><value>Phiếu hỗ trợ</value></data>
+  <data name="Tickets_LoginRequired" xml:space="preserve"><value>Phiếu hỗ trợ chỉ dành cho người dùng đã đăng ký.</value></data>
+  <data name="Tickets_Intro" xml:space="preserve"><value>Hãy đặt câu hỏi hoặc báo cáo sự cố. Nhóm Klacks sẽ trả lời tại đây. Chúng tôi không gửi thông báo qua email, vì vậy hãy kiểm tra trang này để xem câu trả lời.</value></data>
+  <data name="Tickets_NewTicket" xml:space="preserve"><value>Phiếu mới</value></data>
+  <data name="Tickets_NoTickets" xml:space="preserve"><value>Chưa có phiếu nào</value></data>
+  <data name="Tickets_NoTicketsDesc" xml:space="preserve"><value>Hãy tạo phiếu nếu bạn cần trợ giúp.</value></data>
+  <data name="Tickets_Subject" xml:space="preserve"><value>Chủ đề</value></data>
+  <data name="Tickets_Requester" xml:space="preserve"><value>Người yêu cầu</value></data>
+  <data name="Tickets_Updated" xml:space="preserve"><value>Cập nhật lần cuối</value></data>
+  <data name="Tickets_FilterAll" xml:space="preserve"><value>Tất cả</value></data>
+  <data name="Ticket_Status_Open" xml:space="preserve"><value>Đang mở</value></data>
+  <data name="Ticket_Status_Answered" xml:space="preserve"><value>Đã trả lời</value></data>
+  <data name="Ticket_Status_Closed" xml:space="preserve"><value>Đã đóng</value></data>
+  <data name="TicketNew_Title" xml:space="preserve"><value>Phiếu mới</value></data>
+  <data name="TicketNew_SubjectLabel" xml:space="preserve"><value>Chủ đề</value></data>
+  <data name="TicketNew_MessageLabel" xml:space="preserve"><value>Mô tả câu hỏi hoặc sự cố của bạn</value></data>
+  <data name="TicketNew_Submit" xml:space="preserve"><value>Gửi phiếu</value></data>
+  <data name="TicketNew_Cancel" xml:space="preserve"><value>Hủy</value></data>
+  <data name="TicketNew_Error_Required" xml:space="preserve"><value>Vui lòng nhập chủ đề và nội dung.</value></data>
+  <data name="TicketNew_Error_TooMany" xml:space="preserve"><value>Bạn có quá nhiều phiếu đang mở. Vui lòng chờ phản hồi hoặc đóng bớt một phiếu trước.</value></data>
+  <data name="TicketNew_Error_Failed" xml:space="preserve"><value>Không thể tạo phiếu.</value></data>
+  <data name="TicketDetail_Back" xml:space="preserve"><value>Quay lại danh sách phiếu</value></data>
+  <data name="TicketDetail_NotFound" xml:space="preserve"><value>Không tìm thấy phiếu.</value></data>
+  <data name="TicketDetail_Staff" xml:space="preserve"><value>Nhóm Klacks</value></data>
+  <data name="TicketDetail_Opened" xml:space="preserve"><value>Mở lúc {0}</value></data>
+  <data name="TicketDetail_ReplyLabel" xml:space="preserve"><value>Phản hồi của bạn</value></data>
+  <data name="TicketDetail_Send" xml:space="preserve"><value>Gửi phản hồi</value></data>
+  <data name="TicketDetail_Close" xml:space="preserve"><value>Đóng phiếu</value></data>
+  <data name="TicketDetail_Closed" xml:space="preserve"><value>Phiếu này đã đóng. Gửi phản hồi sẽ mở lại phiếu.</value></data>
+  <data name="TicketDetail_Error_Failed" xml:space="preserve"><value>Không thể gửi phản hồi.</value></data>
+  <data name="TicketDetail_Error_Limit" xml:space="preserve"><value>Phiếu này đã đạt giới hạn số tin nhắn.</value></data>
+  <data name="Index_TicketsNoticeTitle" xml:space="preserve"><value>Phiếu hỗ trợ dành cho người dùng đã đăng ký</value></data>
+  <data name="Index_TicketsNoticeText" xml:space="preserve"><value>Người dùng đã đăng ký có thể tạo phiếu hỗ trợ tại đây và theo dõi câu trả lời.</value></data>
+  <data name="Index_TicketsNoticeOpen" xml:space="preserve"><value>Xem phiếu của tôi</value></data>
+  <data name="Admin_OpenTickets" xml:space="preserve"><value>Phiếu đang mở</value></data>
 </root>
