@@ -211,7 +211,7 @@
   <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>JSON של הפרופיל</value></data>
   <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>פרופיל אזור עבור התקנת Klacks קיימת — יש לחבר אותו כקובץ הגדרת האזור.</value></data>
   <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>חבילת On-Prem</value></data>
-  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>חבילת התקנה מלאה הכוללת סקריפטים להתקנה, Docker Compose ופרופיל האזור.</value></data>
+  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>חבילת התקנה מלאה להפעלה עם Docker: סקריפטים להתקנה, Docker Compose ופרופיל האזור.</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>חבילת Docker Compose</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>הגדרת Docker Compose מינימלית ללא סקריפטים להתקנה, למשתמשי Docker מנוסים.</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>מחשב משרדי (ללא Docker)</value></data>
@@ -222,6 +222,7 @@
   <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>תצוגה מקדימה – גלויה למנהלים בלבד</value></data>
   <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>מיועד ל-Windows בגרסת 64 סיביות (x64). במכשירי Windows 11 עם מעבד ARM (למשל Snapdragon X), Klacks פועל באמצעות אמולציה; Windows 10 על ARM אינו נתמך. פועל גם ב-Windows 10 22H2 (64 סיביות). Microsoft כבר לא מספקת תמיכה רגילה ב-Windows 10; עדכוני אבטחה זמינים רק דרך תוכנית ESU בתשלום.</value></data>
   <data name="RegionDetail_NativeMacNote" xml:space="preserve"><value>זמין גם למחשבי Mac עם שבב Apple (M1 ומעלה).</value></data>
+  <data name="RegionDetail_NativeMacComingSoon" xml:space="preserve"><value>ל-Mac: בקרוב.</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>טיפול ביתי</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>בריאות</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>אבטחה</value></data>

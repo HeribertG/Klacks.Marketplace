@@ -211,7 +211,7 @@
   <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>Profiili-JSON</value></data>
   <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>Alueprofiili olemassa olevalle Klacks-asennukselle — liitä se aluemäärityksen tiedostoksi.</value></data>
   <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>On-Prem-paketti</value></data>
-  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Täydellinen asennuspaketti, joka sisältää asennusskriptit, Docker Composen ja alueprofiilin.</value></data>
+  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Täydellinen asennuspaketti Docker-käyttöön: asennusskriptit, Docker Compose ja alueprofiili.</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Docker Compose -paketti</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Minimaalinen Docker Compose -määritys ilman asentimia, Docker-ammattilaisille.</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>Toimiston PC (ilman Dockeria)</value></data>
@@ -222,6 +222,7 @@
   <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>Esikatselu – näkyy vain ylläpitäjille</value></data>
   <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>64-bittiselle Windowsille (x64). ARM-suorittimella varustetuissa Windows 11 -laitteissa (esim. Snapdragon X) Klacks toimii emuloinnin avulla; ARM-suorittimella toimivaa Windows 10:tä ei tueta. Toimii myös Windows 10 22H2:ssa (64-bittinen). Microsoft ei enää tarjoa Windows 10:lle tavanomaista tukea; tietoturvapäivityksiä saa enää vain maksullisen ESU-ohjelman kautta.</value></data>
   <data name="RegionDetail_NativeMacNote" xml:space="preserve"><value>Saatavilla myös Apple-sirulla varustetuille Maceille (M1 tai uudempi).</value></data>
+  <data name="RegionDetail_NativeMacComingSoon" xml:space="preserve"><value>Macille: tulossa pian.</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Kotihoito</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Terveydenhuolto</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>Turvallisuus</value></data>

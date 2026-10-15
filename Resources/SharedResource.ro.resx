@@ -211,7 +211,7 @@
   <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>JSON de profil</value></data>
   <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>Profil regional pentru o instalare Klacks existentă — montează-l ca fișier de configurare regională.</value></data>
   <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>Pachet On-Prem</value></data>
-  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Pachet complet de instalare cu scripturi de instalare, Docker Compose și profilul regional.</value></data>
+  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Pachet complet de instalare pentru rulare cu Docker: scripturi de instalare, Docker Compose și profilul regional.</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Pachet Docker Compose</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Configurare Docker Compose minimală, fără instalatoare, pentru profesioniștii Docker.</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>PC de birou (fără Docker)</value></data>
@@ -222,6 +222,7 @@
   <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>Previzualizare – vizibilă doar pentru administratori</value></data>
   <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>Pentru Windows pe 64 de biți (x64). Pe dispozitivele cu Windows 11 și procesor ARM (de ex. Snapdragon X), Klacks rulează prin emulare; Windows 10 pe ARM nu este acceptat. Funcționează și pe Windows 10 22H2 (64 de biți). Microsoft nu mai oferă suport obișnuit pentru Windows 10; actualizările de securitate sunt disponibile doar prin programul ESU contra cost.</value></data>
   <data name="RegionDetail_NativeMacNote" xml:space="preserve"><value>Disponibil și pentru Mac-uri cu cip Apple (M1 sau mai nou).</value></data>
+  <data name="RegionDetail_NativeMacComingSoon" xml:space="preserve"><value>Pentru Mac: în curând.</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Îngrijire la domiciliu</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Sănătate</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>Securitate</value></data>

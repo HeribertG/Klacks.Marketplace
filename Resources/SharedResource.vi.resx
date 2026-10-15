@@ -211,7 +211,7 @@
   <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>JSON hồ sơ</value></data>
   <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>Hồ sơ khu vực cho một bản cài đặt Klacks hiện có — gắn nó làm tệp thiết lập khu vực.</value></data>
   <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>Gói cài đặt tại chỗ (On-Prem)</value></data>
-  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Gói cài đặt đầy đủ với các script cài đặt, Docker Compose và hồ sơ khu vực.</value></data>
+  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Gói cài đặt đầy đủ để chạy với Docker: các script cài đặt, Docker Compose và hồ sơ khu vực.</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Gói Docker Compose</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Thiết lập Docker Compose tối giản không có trình cài đặt, dành cho chuyên gia Docker.</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>Máy tính văn phòng (không cần Docker)</value></data>
@@ -222,6 +222,7 @@
   <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>Xem trước – chỉ quản trị viên nhìn thấy</value></data>
   <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>Dành cho Windows 64-bit (x64). Trên các thiết bị Windows 11 dùng bộ xử lý ARM (ví dụ Snapdragon X), Klacks chạy thông qua giả lập; Windows 10 trên ARM không được hỗ trợ. Cũng chạy được trên Windows 10 22H2 (64-bit). Microsoft không còn cung cấp hỗ trợ thông thường cho Windows 10; các bản cập nhật bảo mật chỉ còn có thông qua chương trình ESU trả phí.</value></data>
   <data name="RegionDetail_NativeMacNote" xml:space="preserve"><value>Cũng có cho máy Mac dùng chip Apple (M1 trở lên).</value></data>
+  <data name="RegionDetail_NativeMacComingSoon" xml:space="preserve"><value>Cho máy Mac: sắp ra mắt.</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Chăm sóc tại nhà</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Y tế</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>An ninh</value></data>

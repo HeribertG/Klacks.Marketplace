@@ -211,7 +211,7 @@
   <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>JSON del profilo</value></data>
   <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>Profilo regionale per un'installazione Klacks esistente — da montare come file di configurazione della regione.</value></data>
   <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>Bundle On-Prem</value></data>
-  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Bundle di installazione completo con script di installazione, Docker Compose e il profilo regionale.</value></data>
+  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Bundle di installazione completo per l'esecuzione con Docker: script di installazione, Docker Compose e il profilo regionale.</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Bundle Docker Compose</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Setup Docker Compose minimale senza installer, per professionisti Docker.</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>PC d'ufficio (senza Docker)</value></data>
@@ -222,6 +222,7 @@
   <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>Anteprima – visibile solo agli amministratori</value></data>
   <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>Per Windows a 64 bit (x64). Sui dispositivi Windows 11 con processore ARM (ad es. Snapdragon X) Klacks funziona tramite emulazione; Windows 10 su ARM non è supportato. Funziona anche con Windows 10 22H2 (64 bit). Microsoft non offre più il supporto regolare per Windows 10; gli aggiornamenti di sicurezza sono disponibili solo tramite il programma a pagamento ESU.</value></data>
   <data name="RegionDetail_NativeMacNote" xml:space="preserve"><value>Disponibile anche per Mac con chip Apple (M1 o successivo).</value></data>
+  <data name="RegionDetail_NativeMacComingSoon" xml:space="preserve"><value>Per Mac: in arrivo.</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Assistenza domiciliare</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Sanità</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>Sicurezza</value></data>

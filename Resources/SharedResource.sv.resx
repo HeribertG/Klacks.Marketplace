@@ -211,7 +211,7 @@
   <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>Profil-JSON</value></data>
   <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>Regionprofil för en befintlig Klacks-installation – montera den som regionens konfigurationsfil.</value></data>
   <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>On-Prem-paket</value></data>
-  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Komplett installationspaket med installationsskript, Docker Compose och regionprofilen.</value></data>
+  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Komplett installationspaket för drift med Docker: installationsskript, Docker Compose och regionprofilen.</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Docker Compose-paket</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Minimal Docker Compose-uppsättning utan installationsprogram, för Docker-proffs.</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>Kontorsdator (utan Docker)</value></data>
@@ -222,6 +222,7 @@
   <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>Förhandsvisning – endast synlig för administratörer</value></data>
   <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>För 64-bitars Windows (x64). På Windows 11-enheter med ARM-processor (t.ex. Snapdragon X) körs Klacks via emulering; Windows 10 på ARM stöds inte. Fungerar även på Windows 10 22H2 (64-bitars). Microsoft har avslutat den ordinarie supporten för Windows 10; säkerhetsuppdateringar finns bara via det betalda ESU-programmet.</value></data>
   <data name="RegionDetail_NativeMacNote" xml:space="preserve"><value>Finns även för Mac med Apple-chip (M1 eller senare).</value></data>
+  <data name="RegionDetail_NativeMacComingSoon" xml:space="preserve"><value>För Mac: kommer snart.</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Hemtjänst</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Hälso- och sjukvård</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>Säkerhet</value></data>

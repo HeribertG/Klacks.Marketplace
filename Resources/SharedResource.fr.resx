@@ -211,7 +211,7 @@
   <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>JSON de profil</value></data>
   <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>Profil de région pour une installation Klacks existante — à monter comme fichier de configuration de région.</value></data>
   <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>Bundle On-Prem</value></data>
-  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Bundle d'installation complet avec scripts d'installation, Docker Compose et le profil de région.</value></data>
+  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Bundle d'installation complet pour un fonctionnement avec Docker : scripts d'installation, Docker Compose et le profil de région.</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Bundle Docker Compose</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Configuration Docker Compose minimale sans installateurs, pour les professionnels de Docker.</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>PC de bureau (sans Docker)</value></data>
@@ -222,6 +222,7 @@
   <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>Aperçu – visible uniquement par les administrateurs</value></data>
   <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>Pour Windows 64 bits (x64). Sur les appareils Windows 11 équipés d'un processeur ARM (p. ex. Snapdragon X), Klacks fonctionne par émulation ; Windows 10 sur ARM n'est pas pris en charge. Fonctionne aussi sous Windows 10 22H2 (64 bits). Microsoft n'assure plus le support standard de Windows 10 ; les mises à jour de sécurité ne sont plus disponibles que via le programme payant ESU.</value></data>
   <data name="RegionDetail_NativeMacNote" xml:space="preserve"><value>Également disponible pour les Mac avec puce Apple (M1 ou plus récent).</value></data>
+  <data name="RegionDetail_NativeMacComingSoon" xml:space="preserve"><value>Pour Mac : bientôt disponible.</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Soins à domicile</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Santé</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>Sécurité</value></data>

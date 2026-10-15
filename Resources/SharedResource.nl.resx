@@ -211,7 +211,7 @@
   <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>Profiel-JSON</value></data>
   <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>Regioprofiel voor een bestaande Klacks-installatie — koppel het als het regio-instellingenbestand.</value></data>
   <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>On-premise bundel</value></data>
-  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Volledige installatiebundel met installatiescripts, Docker Compose en het regioprofiel.</value></data>
+  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Volledige installatiebundel voor gebruik met Docker: installatiescripts, Docker Compose en het regioprofiel.</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Docker Compose-bundel</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Minimale Docker Compose-configuratie zonder installatieprogramma's, voor Docker-professionals.</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>Kantoor-pc (zonder Docker)</value></data>
@@ -222,6 +222,7 @@
   <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>Voorbeeld – alleen zichtbaar voor beheerders</value></data>
   <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>Voor 64-bit Windows (x64). Op Windows 11-apparaten met een ARM-processor (bijv. Snapdragon X) draait Klacks via emulatie; Windows 10 op ARM wordt niet ondersteund. Werkt ook op Windows 10 22H2 (64-bit). Microsoft biedt geen reguliere ondersteuning meer voor Windows 10; beveiligingsupdates zijn alleen nog beschikbaar via het betaalde ESU-programma.</value></data>
   <data name="RegionDetail_NativeMacNote" xml:space="preserve"><value>Ook beschikbaar voor Macs met Apple-chip (M1 of nieuwer).</value></data>
+  <data name="RegionDetail_NativeMacComingSoon" xml:space="preserve"><value>Voor Mac: binnenkort beschikbaar.</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Thuiszorg</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Gezondheidszorg</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>Beveiliging</value></data>

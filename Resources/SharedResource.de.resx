@@ -211,7 +211,7 @@
   <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>Profil-JSON</value></data>
   <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>Regionsprofil für eine bestehende Klacks-Installation — als Region-Setup-Datei mounten.</value></data>
   <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>On-Prem-Bundle</value></data>
-  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Komplettes Installations-Bundle mit Installer-Skripten, Docker Compose und dem Regionsprofil.</value></data>
+  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Komplettes Installations-Bundle für den Betrieb mit Docker: Installer-Skripte, Docker Compose und das Regionsprofil.</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Docker-Compose-Bundle</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Minimales Docker-Compose-Setup ohne Installer, für Docker-Profis.</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>Büro-PC (ohne Docker)</value></data>
@@ -222,6 +222,7 @@
   <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>Vorschau – nur für Admins sichtbar</value></data>
   <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>Für Windows 64 Bit (x64). Auf Windows-11-Geräten mit ARM-Prozessor (z. B. Snapdragon X) läuft Klacks per Emulation; Windows 10 auf ARM wird nicht unterstützt. Läuft auch unter Windows 10 22H2 (64 Bit). Microsoft unterstützt Windows 10 nicht mehr regulär; Sicherheitsupdates gibt es nur noch über das kostenpflichtige ESU-Programm.</value></data>
   <data name="RegionDetail_NativeMacNote" xml:space="preserve"><value>Auch für Macs mit Apple-Chip (M1 oder neuer) verfügbar.</value></data>
+  <data name="RegionDetail_NativeMacComingSoon" xml:space="preserve"><value>Für Mac: kommt in Kürze.</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Ambulante Pflege</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Gesundheitswesen</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>Sicherheitsdienste</value></data>

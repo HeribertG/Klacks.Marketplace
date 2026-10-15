@@ -211,7 +211,7 @@
   <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>Profil JSON</value></data>
   <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>Regionální profil pro existující instalaci Klacks — připojte jej jako soubor nastavení regionu.</value></data>
   <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>On-Prem balík</value></data>
-  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Kompletní instalační balík s instalačními skripty, Docker Compose a regionálním profilem.</value></data>
+  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Kompletní instalační balík pro provoz s Dockerem: instalační skripty, Docker Compose a regionální profil.</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Balík Docker Compose</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Minimální konfigurace Docker Compose bez instalačních skriptů, pro odborníky na Docker.</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>Kancelářské PC (bez Dockeru)</value></data>
@@ -222,6 +222,7 @@
   <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>Náhled – viditelné pouze pro administrátory</value></data>
   <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>Pro 64bitovou verzi Windows (x64). Na zařízeních s Windows 11 a procesorem ARM (např. Snapdragon X) běží Klacks pomocí emulace; systém Windows 10 na ARM není podporován. Funguje i ve Windows 10 22H2 (64bitové). Microsoft už pro Windows 10 neposkytuje standardní podporu; bezpečnostní aktualizace jsou k dispozici jen v rámci placeného programu ESU.</value></data>
   <data name="RegionDetail_NativeMacNote" xml:space="preserve"><value>K dispozici také pro Macy s čipem Apple (M1 nebo novější).</value></data>
+  <data name="RegionDetail_NativeMacComingSoon" xml:space="preserve"><value>Pro Mac: již brzy.</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Domácí péče</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Zdravotnictví</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>Bezpečnostní služby</value></data>

@@ -211,7 +211,7 @@
   <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>配置文件 JSON</value></data>
   <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>适用于现有 Klacks 安装的区域配置文件——将其挂载为区域设置文件。</value></data>
   <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>本地部署包</value></data>
-  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>包含安装脚本、Docker Compose 和区域配置文件的完整安装包。</value></data>
+  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>用于通过 Docker 运行的完整安装包，包含安装脚本、Docker Compose 和区域配置文件。</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Docker Compose 包</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>面向 Docker 专业人员的精简 Docker Compose 配置，不含安装脚本。</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>办公电脑（无需 Docker）</value></data>
@@ -222,6 +222,7 @@
   <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>预览 – 仅管理员可见</value></data>
   <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>适用于 64 位 Windows（x64）。在搭载 ARM 处理器的 Windows 11 设备（如 Snapdragon X）上，Klacks 通过仿真运行；不支持 ARM 版 Windows 10。也可在 Windows 10 22H2（64 位）上运行。Microsoft 已不再为 Windows 10 提供常规支持；安全更新仅通过付费的 ESU 计划提供。</value></data>
   <data name="RegionDetail_NativeMacNote" xml:space="preserve"><value>也适用于搭载 Apple 芯片的 Mac（M1 或更新机型）。</value></data>
+  <data name="RegionDetail_NativeMacComingSoon" xml:space="preserve"><value>Mac 版：即将推出。</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>居家护理</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>医疗保健</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>安保</value></data>

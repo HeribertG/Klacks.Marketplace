@@ -211,7 +211,7 @@
   <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>ملف تعريف JSON</value></data>
   <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>ملف تعريف إقليمي لتثبيت Klacks الحالي — قم بتحميله كملف إعداد المنطقة.</value></data>
   <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>حزمة التثبيت المحلي</value></data>
-  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>حزمة تثبيت كاملة تتضمن نصوص التثبيت وDocker Compose وملف التعريف الإقليمي.</value></data>
+  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>حزمة تثبيت كاملة للتشغيل مع Docker، تتضمن نصوص التثبيت وDocker Compose وملف التعريف الإقليمي.</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>حزمة Docker Compose</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>إعداد Docker Compose مبسّط بدون برامج تثبيت، مخصص لمحترفي Docker.</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>حاسوب المكتب (دون Docker)</value></data>
@@ -222,6 +222,7 @@
   <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>معاينة – مرئية للمسؤولين فقط</value></data>
   <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>مخصص لإصدار 64 بت من Windows (x64). على أجهزة Windows 11 المزوّدة بمعالج ARM (مثل Snapdragon X) يعمل Klacks عبر المحاكاة؛ أما Windows 10 على ARM فغير مدعوم. يعمل أيضًا على Windows 10 22H2 (64 بت). لم تعد Microsoft تدعم Windows 10 دعمًا اعتياديًا؛ ولا تتوفر تحديثات الأمان إلا عبر برنامج ESU المدفوع.</value></data>
   <data name="RegionDetail_NativeMacNote" xml:space="preserve"><value>متوفر أيضًا لأجهزة Mac بشريحة Apple (M1 أو أحدث).</value></data>
+  <data name="RegionDetail_NativeMacComingSoon" xml:space="preserve"><value>لأجهزة Mac: قريبًا.</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>الرعاية المنزلية</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>الرعاية الصحية</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>الأمن</value></data>

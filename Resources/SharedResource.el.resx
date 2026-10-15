@@ -211,7 +211,7 @@
   <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>Προφίλ JSON</value></data>
   <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>Προφίλ περιοχής για μια υπάρχουσα εγκατάσταση Klacks — προσαρτήστε το ως αρχείο ρύθμισης περιοχής.</value></data>
   <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>Πακέτο On-Prem</value></data>
-  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Πλήρες πακέτο εγκατάστασης με σενάρια εγκαταστάτη, Docker Compose και το προφίλ περιοχής.</value></data>
+  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Πλήρες πακέτο εγκατάστασης για λειτουργία με Docker: σενάρια εγκαταστάτη, Docker Compose και το προφίλ περιοχής.</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Πακέτο Docker Compose</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Ελάχιστη ρύθμιση Docker Compose χωρίς εγκαταστάτες, για επαγγελματίες του Docker.</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>Υπολογιστής γραφείου (χωρίς Docker)</value></data>
@@ -222,6 +222,7 @@
   <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>Προεπισκόπηση – ορατή μόνο στους διαχειριστές</value></data>
   <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>Για Windows 64-bit (x64). Σε συσκευές Windows 11 με επεξεργαστή ARM (π.χ. Snapdragon X) το Klacks εκτελείται μέσω εξομοίωσης· τα Windows 10 σε ARM δεν υποστηρίζονται. Λειτουργεί επίσης σε Windows 10 22H2 (64-bit). Η Microsoft δεν παρέχει πλέον κανονική υποστήριξη για τα Windows 10· οι ενημερώσεις ασφαλείας διατίθενται μόνο μέσω του προγράμματος ESU επί πληρωμή.</value></data>
   <data name="RegionDetail_NativeMacNote" xml:space="preserve"><value>Διατίθεται επίσης για Mac με τσιπ Apple (M1 ή νεότερο).</value></data>
+  <data name="RegionDetail_NativeMacComingSoon" xml:space="preserve"><value>Για Mac: έρχεται σύντομα.</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Κατ' οίκον φροντίδα</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Υγειονομική περίθαλψη</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>Ασφάλεια</value></data>

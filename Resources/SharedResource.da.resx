@@ -211,7 +211,7 @@
   <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>Profil-JSON</value></data>
   <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>Regionsprofil til en eksisterende Klacks-installation — monter den som regionsopsætningsfil.</value></data>
   <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>On-prem-bundle</value></data>
-  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Komplet installationsbundle med installationsscripts, Docker Compose og regionsprofilen.</value></data>
+  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Komplet installationsbundle til drift med Docker: installationsscripts, Docker Compose og regionsprofilen.</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Docker Compose-bundle</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Minimal Docker Compose-opsætning uden installationsprogrammer, til Docker-professionelle.</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>Kontor-pc (uden Docker)</value></data>
@@ -222,6 +222,7 @@
   <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>Forhåndsvisning – kun synlig for administratorer</value></data>
   <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>Til 64-bit Windows (x64). På Windows 11-enheder med ARM-processor (f.eks. Snapdragon X) kører Klacks via emulering; Windows 10 på ARM understøttes ikke. Kører også på Windows 10 22H2 (64-bit). Microsoft yder ikke længere almindelig support til Windows 10; sikkerhedsopdateringer fås kun via det betalte ESU-program.</value></data>
   <data name="RegionDetail_NativeMacNote" xml:space="preserve"><value>Fås også til Mac-computere med Apple-chip (M1 eller nyere).</value></data>
+  <data name="RegionDetail_NativeMacComingSoon" xml:space="preserve"><value>Til Mac: kommer snart.</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Hjemmepleje</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Sundhedsvæsen</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>Sikkerhed</value></data>

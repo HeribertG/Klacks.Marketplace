@@ -211,7 +211,7 @@
   <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>Profil-JSON</value></data>
   <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>Regionprofil for en eksisterende Klacks-installasjon — monter den som regionoppsettfilen.</value></data>
   <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>On-Prem-pakke</value></data>
-  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Komplett installasjonspakke med installasjonsskript, Docker Compose og regionprofilen.</value></data>
+  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Komplett installasjonspakke for drift med Docker: installasjonsskript, Docker Compose og regionprofilen.</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Docker Compose-pakke</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Minimalt Docker Compose-oppsett uten installasjonsprogrammer, for Docker-eksperter.</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>Kontor-PC (uten Docker)</value></data>
@@ -222,6 +222,7 @@
   <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>Forhåndsvisning – kun synlig for administratorer</value></data>
   <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>For 64-bit Windows (x64). På Windows 11-enheter med ARM-prosessor (f.eks. Snapdragon X) kjører Klacks via emulering; Windows 10 på ARM støttes ikke. Kjører også på Windows 10 22H2 (64-bit). Microsoft har avsluttet den ordinære støtten for Windows 10; sikkerhetsoppdateringer finnes bare via det betalte ESU-programmet.</value></data>
   <data name="RegionDetail_NativeMacNote" xml:space="preserve"><value>Også tilgjengelig for Mac med Apple-brikke (M1 eller nyere).</value></data>
+  <data name="RegionDetail_NativeMacComingSoon" xml:space="preserve"><value>For Mac: kommer snart.</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Hjemmetjeneste</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Helsevesen</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>Sikkerhet</value></data>

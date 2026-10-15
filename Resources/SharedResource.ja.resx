@@ -211,7 +211,7 @@
   <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>プロファイル JSON</value></data>
   <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>既存の Klacks インストール用のリージョンプロファイルです。リージョンセットアップファイルとしてマウントしてください。</value></data>
   <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>オンプレミスバンドル</value></data>
-  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>インストーラースクリプト、Docker Compose、リージョンプロファイルを含む完全なインストールバンドルです。</value></data>
+  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Docker で運用するための完全なインストールバンドルです（インストーラースクリプト、Docker Compose、リージョンプロファイルを含む）。</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Docker Compose バンドル</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>インストーラーを含まない、Docker 専門家向けの最小構成の Docker Compose セットアップです。</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>オフィス PC（Docker 不要）</value></data>
@@ -222,6 +222,7 @@
   <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>プレビュー – 管理者のみに表示</value></data>
   <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>64 ビット版 Windows（x64）向けです。ARM プロセッサー搭載の Windows 11 デバイス（Snapdragon X など）では、Klacks はエミュレーションで動作します。ARM 版 Windows 10 には対応していません。Windows 10 22H2（64 ビット）でも動作します。Microsoft は Windows 10 の通常サポートを終了しており、セキュリティ更新プログラムは有償の ESU プログラムでのみ提供されます。</value></data>
   <data name="RegionDetail_NativeMacNote" xml:space="preserve"><value>Apple シリコン搭載 Mac（M1 以降）にも対応しています。</value></data>
+  <data name="RegionDetail_NativeMacComingSoon" xml:space="preserve"><value>Mac 版：近日公開予定です。</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>訪問介護</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>医療</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>警備</value></data>

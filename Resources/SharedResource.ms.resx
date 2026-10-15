@@ -211,7 +211,7 @@
   <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>JSON Profil</value></data>
   <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>Profil wilayah untuk pemasangan Klacks sedia ada — lekapkan sebagai fail persediaan wilayah.</value></data>
   <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>Bundel On-Prem</value></data>
-  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Bundel pemasangan lengkap dengan skrip pemasang, Docker Compose dan profil wilayah.</value></data>
+  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Bundel pemasangan lengkap untuk dijalankan dengan Docker: skrip pemasang, Docker Compose dan profil wilayah.</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Bundel Docker Compose</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Persediaan Docker Compose minimum tanpa pemasang, untuk profesional Docker.</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>PC pejabat (tanpa Docker)</value></data>
@@ -222,6 +222,7 @@
   <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>Pratonton – hanya kelihatan kepada pentadbir</value></data>
   <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>Untuk Windows 64-bit (x64). Pada peranti Windows 11 dengan pemproses ARM (cth. Snapdragon X), Klacks berjalan melalui emulasi; Windows 10 pada ARM tidak disokong. Turut berjalan pada Windows 10 22H2 (64-bit). Microsoft tidak lagi menyediakan sokongan biasa untuk Windows 10; kemas kini keselamatan hanya tersedia melalui program ESU berbayar.</value></data>
   <data name="RegionDetail_NativeMacNote" xml:space="preserve"><value>Turut tersedia untuk Mac dengan cip Apple (M1 atau lebih baharu).</value></data>
+  <data name="RegionDetail_NativeMacComingSoon" xml:space="preserve"><value>Untuk Mac: akan datang tidak lama lagi.</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Penjagaan Rumah</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Penjagaan Kesihatan</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>Keselamatan</value></data>

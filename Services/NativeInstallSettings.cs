@@ -5,7 +5,7 @@
 /// The option is public once NativeInstall:Enabled is true; before that only signed-in marketplace admins see it as a
 /// preview. Windows defaults to the office-PC package in the rolling Klacks.Api GitHub release tagged "office-pc", which CI
 /// replaces after every green native build (never "latest", which is empty while a release is still building). The Mac
-/// button only appears when NativeInstall:MacUrl is configured (no macOS package exists yet). The region page links to the
+/// button only appears when NativeInstall:MacUrl is configured (no macOS package exists yet; until then the card says "coming soon"). The region page links to the
 /// counted redirect in RegionPackagesApiController, which takes its target exclusively from these settings.
 /// Klacks.Marketing/Localization/NativeInstallSettings.cs still points at the planned installer names.
 /// </summary>
