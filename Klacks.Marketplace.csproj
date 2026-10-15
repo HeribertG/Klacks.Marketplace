@@ -20,6 +20,8 @@
     <Content Update="Resources\RegionProfiles\*.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
     <None Remove="Resources\OnPremTemplate\**" />
     <Content Include="Resources\OnPremTemplate\**" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <None Remove="Resources\UpdateSigning\**" />
+    <Content Include="Resources\UpdateSigning\**" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
   </ItemGroup>
 
 </Project>

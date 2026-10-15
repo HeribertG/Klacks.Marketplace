@@ -34,14 +34,18 @@ public class RegionArtifactService : IRegionArtifactService
     private const int UnixRegularFileMode = 0x81A4;
     private const int UnixDirectoryMode = 0x41ED;
     private const int ExternalAttributesShift = 16;
+    private const string UpdatePublicKeyEntryName = "update-public-key.pem";
+    private const string EscapedNewLine = "\\n";
 
     private readonly IWebHostEnvironment _environment;
     private readonly Lazy<IReadOnlyList<RegionTemplateFile>> _templateFiles;
+    private readonly Lazy<string> _updatePublicKeyPem;
 
     public RegionArtifactService(IWebHostEnvironment environment)
     {
         _environment = environment;
         _templateFiles = new Lazy<IReadOnlyList<RegionTemplateFile>>(LoadTemplateFiles, LazyThreadSafetyMode.ExecutionAndPublication);
+        _updatePublicKeyPem = new Lazy<string>(LoadUpdatePublicKeyPem, LazyThreadSafetyMode.ExecutionAndPublication);
     }
 
     public byte[] BuildOnPremBundle(string countryCode, string patchedProfileJson)
@@ -50,6 +54,7 @@ public class RegionArtifactService : IRegionArtifactService
         using (var archive = new ZipArchive(stream, ZipArchiveMode.Create, leaveOpen: true))
         {
             AddCachedEntries(archive, _templateFiles.Value);
+            AddTextEntry(archive, UpdatePublicKeyEntryName, _updatePublicKeyPem.Value, isExecutable: false);
             AddTextEntry(archive, BuildRegionProfileEntryName(countryCode), patchedProfileJson, isExecutable: false);
             AddTextEntry(archive, string.Format(ShellWrapperNameFormat, countryCode), BuildShellWrapper(countryCode), isExecutable: true);
             AddTextEntry(archive, string.Format(PowerShellWrapperNameFormat, countryCode), BuildPowerShellWrapper(countryCode), isExecutable: false);
@@ -72,7 +77,7 @@ public class RegionArtifactService : IRegionArtifactService
             AddCachedEntries(archive, templateFiles.Where(f => f.RelativePath.StartsWith(initScriptsPrefix, StringComparison.Ordinal)));
             AddDirectoryEntry(archive, nginxPrefix + CertsDirectoryName + EntrySeparator);
             AddTextEntry(archive, BuildRegionProfileEntryName(countryCode), patchedProfileJson, isExecutable: false);
-            AddTextEntry(archive, EnvExampleFileName, BuildEnvExample(countryCode), isExecutable: false);
+            AddTextEntry(archive, EnvExampleFileName, BuildEnvExample(countryCode, _updatePublicKeyPem.Value), isExecutable: false);
             AddTextEntry(archive, ComposeReadmeFileName, BuildComposeReadme(countryCode), isExecutable: false);
         }
 
@@ -93,6 +98,17 @@ public class RegionArtifactService : IRegionArtifactService
                 File.ReadAllBytes(filePath)))
             .OrderBy(f => f.RelativePath, StringComparer.Ordinal)
             .ToList();
+    }
+
+    private string LoadUpdatePublicKeyPem()
+    {
+        var keyPath = Path.Combine(_environment.ContentRootPath, AppConstants.UpdateSigningPublicKeyFile);
+        if (!File.Exists(keyPath))
+        {
+            throw new InvalidOperationException($"Update signing public key not found: {keyPath}");
+        }
+
+        return File.ReadAllText(keyPath).ReplaceLineEndings(UnixLineEnding).TrimEnd() + UnixLineEnding;
     }
 
     private static string BuildRegionProfileEntryName(string countryCode)
@@ -137,7 +153,8 @@ public class RegionArtifactService : IRegionArtifactService
     private static string BuildShellWrapper(string countryCode)
     {
         return "#!/bin/sh" + UnixLineEnding +
-               $"REGION={countryCode} exec ./install.sh \"$@\"" + UnixLineEnding;
+               "cd \"$(dirname \"$0\")\" || exit 1" + UnixLineEnding +
+               $"REGION={countryCode} exec bash ./install.sh \"$@\"" + UnixLineEnding;
     }
 
     private static string BuildPowerShellWrapper(string countryCode)
@@ -145,8 +162,9 @@ public class RegionArtifactService : IRegionArtifactService
         return $"& \"$PSScriptRoot\\install.ps1\" -Region {countryCode} @args" + WindowsLineEnding;
     }
 
-    private static string BuildEnvExample(string countryCode)
+    private static string BuildEnvExample(string countryCode, string updatePublicKeyPem)
     {
+        var escapedPublicKey = updatePublicKeyPem.TrimEnd().Replace(UnixLineEnding, EscapedNewLine);
         return $"""
             # Klacks Docker Compose configuration.
             # Copy this file to .env, fill in the secrets, then run: docker compose up -d
@@ -167,7 +185,7 @@ public class RegionArtifactService : IRegionArtifactService
             KLACKS_UPDATER_TAG=latest
 
             UPDATE_MANIFEST_BASE_URL=https://github.com/HeribertG/Klacks.Api/releases/latest/download
-            UPDATE_SIGNATURE_PUBLIC_KEY=
+            UPDATE_SIGNATURE_PUBLIC_KEY="{escapedPublicKey}"
             UPDATE_REQUIRE_SIGNED_REGION_PACKAGES=false
             KLACKS_MARKETPLACE_URL=https://klacks-software.ch/store
             """.ReplaceLineEndings(UnixLineEnding) + UnixLineEnding;
@@ -184,8 +202,8 @@ public class RegionArtifactService : IRegionArtifactService
             ## Setup
 
             1. Copy `.env.example` to `.env`.
-            2. Set the secrets in `.env`: `POSTGRES_PASSWORD`, `JWT_SECRET` and the vendor
-               `UPDATE_SIGNATURE_PUBLIC_KEY` (single line, newlines escaped as `\n`).
+            2. Set the secrets in `.env`: `POSTGRES_PASSWORD` and `JWT_SECRET`. The vendor
+               `UPDATE_SIGNATURE_PUBLIC_KEY` is already filled in.
             3. Adjust `SERVER_NAME`, `HTTP_PORT` and `HTTPS_PORT` if needed.
             4. Place a TLS certificate (`server.crt` and `server.key`) into `nginx/certs/`.
             5. Start the stack: `docker compose up -d`.

@@ -38,6 +38,7 @@ public static class AppConstants
     public const int RegionProfileSchemaVersion = 1;
     public const string RegionProfilesDirectory = "Resources/RegionProfiles";
     public const string OnPremTemplateDirectory = "Resources/OnPremTemplate";
+    public const string UpdateSigningPublicKeyFile = "Resources/UpdateSigning/update-public-key.pem";
     public const string RegionSeedVersion = "1.0.0";
     public const string RegionSeedMinKlacksVersion = "1.0.0";
 
