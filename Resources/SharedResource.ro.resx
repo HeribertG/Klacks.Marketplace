@@ -214,7 +214,7 @@
   <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Pachet complet de instalare pentru rulare cu Docker: scripturi de instalare, Docker Compose și profilul regional.</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Pachet Docker Compose</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Configurare Docker Compose minimală, fără instalatoare, pentru profesioniștii Docker.</value></data>
-  <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>PC de birou (fără Docker)</value></data>
+  <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>PC de birou</value></data>
   <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Instalează Klacks direct pe un PC cu Windows 11 (64 de biți), fără Docker și fără un server propriu: un singur pachet configurează baza de date, Klacks și serviciul de actualizare ca servicii în fundal. Dezarhivează-l și pornește Installieren.cmd.</value></data>
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux? Te rugăm să folosești Pachetul On-Prem cu Docker.</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>

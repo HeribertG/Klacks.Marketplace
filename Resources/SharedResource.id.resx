@@ -214,7 +214,7 @@
   <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Bundel instalasi lengkap untuk dijalankan dengan Docker: skrip installer, Docker Compose, dan profil wilayah.</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Bundel Docker Compose</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Konfigurasi Docker Compose minimal tanpa installer, untuk profesional Docker.</value></data>
-  <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>PC kantor (tanpa Docker)</value></data>
+  <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>PC kantor</value></data>
   <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Instal Klacks langsung di PC Windows 11 (64-bit), tanpa Docker dan tanpa server sendiri: satu paket menyiapkan basis data, Klacks, dan layanan pembaruan sebagai layanan latar belakang. Ekstrak paketnya, lalu jalankan Installieren.cmd.</value></data>
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux? Silakan gunakan Bundel On-Prem dengan Docker.</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>

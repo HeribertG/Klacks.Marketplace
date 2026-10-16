@@ -214,7 +214,7 @@
   <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Kompletní instalační balík pro provoz s Dockerem: instalační skripty, Docker Compose a regionální profil.</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Balík Docker Compose</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Minimální konfigurace Docker Compose bez instalačních skriptů, pro odborníky na Docker.</value></data>
-  <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>Kancelářské PC (bez Dockeru)</value></data>
+  <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>Kancelářské PC</value></data>
   <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Nainstalujte Klacks přímo na 64bitové PC s Windows 11, bez Dockeru a bez vlastního serveru: jeden balíček nastaví databázi, Klacks a aktualizační službu jako služby na pozadí. Rozbalte ho a spusťte Installieren.cmd.</value></data>
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux? Použijte prosím On-Prem balík s Dockerem.</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>

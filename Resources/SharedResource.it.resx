@@ -214,7 +214,7 @@
   <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Bundle di installazione completo per l'esecuzione con Docker: script di installazione, Docker Compose e il profilo regionale.</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Bundle Docker Compose</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Setup Docker Compose minimale senza installer, per professionisti Docker.</value></data>
-  <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>PC d'ufficio (senza Docker)</value></data>
+  <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>PC d'ufficio</value></data>
   <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Installate Klacks direttamente su un PC Windows 11 (64 bit), senza Docker e senza un server proprio: un unico pacchetto configura il database, Klacks e il servizio di aggiornamento come servizi in background. Estraete il pacchetto e avviate Installieren.cmd.</value></data>
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux? Usate il Bundle On-Prem con Docker.</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>

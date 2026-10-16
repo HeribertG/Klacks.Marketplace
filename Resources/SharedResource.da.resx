@@ -214,7 +214,7 @@
   <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Komplet installationsbundle til drift med Docker: installationsscripts, Docker Compose og regionsprofilen.</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Docker Compose-bundle</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Minimal Docker Compose-opsætning uden installationsprogrammer, til Docker-professionelle.</value></data>
-  <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>Kontor-pc (uden Docker)</value></data>
+  <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>Kontor-pc</value></data>
   <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Installér Klacks direkte på en Windows 11-pc (64-bit), uden Docker og uden egen server: Én pakke opsætter databasen, Klacks og opdateringstjenesten som baggrundstjenester. Pak den ud, og start Installieren.cmd.</value></data>
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux? Brug venligst on-prem-bundlet med Docker.</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>

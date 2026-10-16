@@ -179,8 +179,11 @@ else
 
         @if (_package.Versions.Count > 0)
         {
-            <div class="mb-8">
-                <h3 class="text-lg font-bold mb-4">@L["Common_VersionHistory"]</h3>
+            <details class="group mb-8">
+                <summary class="flex items-center justify-between cursor-pointer list-none mb-4 [&::-webkit-details-marker]:hidden">
+                    <h3 class="text-lg font-bold m-0">@L["Common_VersionHistory"]</h3>
+                    <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                </summary>
                 <div class="space-y-3">
                     @foreach (var version in _package.Versions)
                     {
@@ -197,7 +200,7 @@ else
                         </div>
                     }
                 </div>
-            </div>
+            </details>
         }
     </div>
 }
