@@ -1,4 +1,8 @@
 @using System.Globalization
+@inject Microsoft.AspNetCore.Mvc.ViewFeatures.IFileVersionProvider FileVersions
+@functions {
+    private string Versioned(string path) => FileVersions.AddFileVersionToPath(Context.Request.PathBase, Context.Request.PathBase + path);
+}
 <!DOCTYPE html>
 <html class="light" lang="@CultureInfo.CurrentCulture.Name" dir="@(CultureInfo.CurrentCulture.TextInfo.IsRightToLeft ? "rtl" : "ltr")">
 <head>
@@ -15,9 +19,10 @@
             src: url('fonts/material-symbols-outlined.ttf') format('truetype');
         }
     </style>
-    <link href="~/css/roboto.css" rel="stylesheet" />
-    <link href="~/css/site.css" rel="stylesheet" />
-    <link href="~/css/rtl.css" rel="stylesheet" />
+    <script src="@Versioned("/js/theme-mode.js")"></script>
+    <link href="@Versioned("/css/roboto.css")" rel="stylesheet" />
+    <link href="@Versioned("/css/site.css")" rel="stylesheet" />
+    <link href="@Versioned("/css/rtl.css")" rel="stylesheet" />
     <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
 </head>
 <body class="bg-surface font-body text-on-surface antialiased">

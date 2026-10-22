@@ -5,8 +5,8 @@
 @layer base {
   body {
     font-family: theme('fontFamily.sans');
-    background-color: theme('colors.surface');
-    color: theme('colors.on-surface');
+    background-color: rgb(var(--c-surface));
+    color: rgb(var(--c-on-surface));
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -16,8 +16,8 @@
   }
 
   ::selection {
-    background-color: theme('colors.highlight');
-    color: theme('colors.on-highlight');
+    background-color: rgb(var(--c-highlight));
+    color: rgb(var(--c-on-highlight));
   }
 
   .material-symbols-outlined {
@@ -72,8 +72,8 @@
   width: 100%;
   z-index: 1000;
   padding: 0.7rem 1.25rem;
-  background-color: theme('colors.error-container');
-  color: theme('colors.on-error-container');
+  background-color: rgb(var(--c-error-container));
+  color: rgb(var(--c-on-error-container));
   text-align: center;
 }
 

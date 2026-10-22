@@ -1,6 +1,7 @@
 @inject IHttpContextAccessor HttpContextAccessor
 @inject NavigationManager Navigation
 @inject IStringLocalizer<SharedResource> L
+@inject IJSRuntime JS
 
 <nav class="sticky top-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-md shadow-sm font-sans antialiased tracking-tight text-sm font-medium">
     <div class="flex items-center justify-between gap-3 px-4 sm:px-6 py-3 sm:py-4 max-w-7xl mx-auto">
@@ -16,6 +17,10 @@
         </div>
         <div class="flex items-center gap-2 sm:gap-4">
             <CultureSelector />
+            <button type="button" data-theme-toggle class="shrink-0 p-2 text-on-surface-variant hover:bg-surface-container-low rounded-full transition-all" aria-label="@L["Nav_DarkMode"]" title="@L["Nav_DarkMode"]">
+                <span class="material-symbols-outlined dark:hidden" aria-hidden="true">dark_mode</span>
+                <span class="material-symbols-outlined hidden dark:inline-block" aria-hidden="true">light_mode</span>
+            </button>
             <div class="hidden xl:flex items-center gap-4">
                 @AccountLinks("")
             </div>
@@ -46,7 +51,9 @@
     private bool _menuOpen;
     private string _displayName = string.Empty;
 
-    private const string LinkClass = "text-on-surface-variant hover:text-secondary-container transition-colors font-medium no-underline flex items-center gap-1";
+    private const string ThemeSyncFunction = "klacksTheme.sync";
+
+    private const string LinkClass = "text-on-surface-variant hover:text-link-hover transition-colors font-medium no-underline flex items-center gap-1";
 
     protected override void OnInitialized()
     {
@@ -54,6 +61,20 @@
         _isAuthenticated = user?.Identity?.IsAuthenticated ?? false;
         _isAdmin = user?.IsInRole("Admin") ?? false;
         _displayName = user?.Identity?.Name ?? string.Empty;
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        try
+        {
+            await JS.InvokeVoidAsync(ThemeSyncFunction);
+        }
+        catch (JSDisconnectedException)
+        {
+        }
+        catch (JSException)
+        {
+        }
     }
 
     private void ToggleMenu() => _menuOpen = !_menuOpen;
