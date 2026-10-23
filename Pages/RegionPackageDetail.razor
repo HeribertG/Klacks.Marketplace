@@ -1,5 +1,6 @@
 @page "/region/{CountryCode}"
 @inject IRegionPackageService RegionPackageService
+@inject IKlacksReleaseService KlacksReleaseService
 @inject NavigationManager Navigation
 @inject IStringLocalizer<SharedResource> L
 @inject IConfiguration Configuration
@@ -47,7 +48,10 @@ else
                         <span class="text-on-surface-variant flex items-center gap-1">
                             <span class="material-symbols-outlined text-[18px]">person</span> @_package.Author.DisplayName
                         </span>
-                        <span class="px-2 py-1 bg-surface-container text-xs font-bold rounded uppercase tracking-wider text-on-surface-variant">v@(_package.Version)</span>
+                        @if (_klacksVersion is not null)
+                        {
+                            <span class="px-2 py-1 bg-surface-container text-xs font-bold rounded tracking-wider text-on-surface-variant">Klacks v@(_klacksVersion)</span>
+                        }
                         <StatusBadge Status="@_package.Status" />
                     </div>
                     @if (!string.IsNullOrWhiteSpace(_package.Description))
@@ -211,6 +215,7 @@ else
     private NativeInstallSettings _nativeInstall = null!;
     private bool _showNativeInstall;
     private bool _nativeAdminPreview;
+    private string? _klacksVersion;
 
     protected override async Task OnInitializedAsync()
     {
@@ -219,6 +224,7 @@ else
         _showNativeInstall = _nativeInstall.IsVisibleFor(user);
         _nativeAdminPreview = _nativeInstall.IsAdminPreview(user);
         _package = await RegionPackageService.GetRegionPackageByCountryAsync(CountryCode);
+        _klacksVersion = await KlacksReleaseService.GetLatestStableVersionAsync();
         _isLoading = false;
     }
 

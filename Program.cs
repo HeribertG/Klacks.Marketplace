@@ -65,6 +65,8 @@ builder.Services.AddScoped<IRegionPackageSeedService, RegionPackageSeedService>(
 builder.Services.AddScoped<IRegionProfilePatchService, RegionProfilePatchService>();
 builder.Services.AddSingleton<IRegionArtifactService, RegionArtifactService>();
 builder.Services.AddSingleton<IRegionArtifactSigningService, RegionArtifactSigningService>();
+builder.Services.AddHttpClient(KlacksReleaseService.HttpClientName, client => client.Timeout = KlacksReleaseService.RequestTimeout);
+builder.Services.AddSingleton<IKlacksReleaseService, KlacksReleaseService>();
 
 var app = builder.Build();
 
