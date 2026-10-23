@@ -11,6 +11,8 @@ namespace Klacks.Marketplace.Services;
 
 public class PackageService : IPackageService
 {
+    private const string ExtraFilesBundleKey = "files";
+
     private readonly MarketplaceDbContext _db;
 
     public PackageService(MarketplaceDbContext db)
@@ -153,7 +155,7 @@ public class PackageService : IPackageService
 
         if (!string.IsNullOrWhiteSpace(latestVersion.ExtraFilesJson))
         {
-            bundleDict["files"] = JsonSerializer.Deserialize<JsonElement>(latestVersion.ExtraFilesJson);
+            bundleDict[ExtraFilesBundleKey] = JsonSerializer.Deserialize<JsonElement>(latestVersion.ExtraFilesJson);
         }
 
         return Encoding.UTF8.GetBytes(JsonSerializer.Serialize(bundleDict, new JsonSerializerOptions { WriteIndented = true }));
