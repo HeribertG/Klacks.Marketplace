@@ -1,4 +1,6 @@
 @using System.Globalization
+@using Microsoft.AspNetCore.Components.Web
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @inject Microsoft.AspNetCore.Mvc.ViewFeatures.IFileVersionProvider FileVersions
 @functions {
     private string Versioned(string path) => FileVersions.AddFileVersionToPath(Context.Request.PathBase, Context.Request.PathBase + path);
@@ -8,7 +10,6 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Klacks Store | Plugins & Language Packs</title>
     <base href="@(Context.Request.PathBase.HasValue ? Context.Request.PathBase + "/" : "/")" />
     <style>
         @@font-face {
