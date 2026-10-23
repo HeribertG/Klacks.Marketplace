@@ -110,6 +110,7 @@
   <data name="PackageDetail_NotFound" xml:space="preserve"><value>Το πακέτο δεν βρέθηκε</value></data>
   <data name="PackageDetail_NotFoundDesc" xml:space="preserve"><value>Το πακέτο που αναζητάτε δεν υπάρχει.</value></data>
   <data name="PackageDetail_SpeechLocale" xml:space="preserve"><value>Τοπικές ρυθμίσεις ομιλίας</value></data>
+  <data name="PackageDetail_Description" xml:space="preserve"><value>Πακέτο γλώσσας «{0}» για το Klacks: μεταφράσεις της διεπαφής, κανόνες ημερολογίου και δεδομένα χωρών και περιοχών.</value></data>
   <data name="PackageDetail_TranslationCoverage" xml:space="preserve"><value>Κάλυψη μετάφρασης</value></data>
   <data name="PackageDetail_TranslationCount" xml:space="preserve"><value>{0} μεταφράσεις</value></data>
   <data name="PackageDetail_Manuals" xml:space="preserve"><value>Εγχειρίδια</value></data>

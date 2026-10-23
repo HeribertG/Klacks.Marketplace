@@ -110,6 +110,7 @@
   <data name="PackageDetail_NotFound" xml:space="preserve"><value>Paket tidak ditemukan</value></data>
   <data name="PackageDetail_NotFoundDesc" xml:space="preserve"><value>Paket yang Anda cari tidak ada.</value></data>
   <data name="PackageDetail_SpeechLocale" xml:space="preserve"><value>Lokal Ucapan</value></data>
+  <data name="PackageDetail_Description" xml:space="preserve"><value>Paket bahasa {0} untuk Klacks: terjemahan antarmuka pengguna, aturan kalender, serta data negara dan wilayah.</value></data>
   <data name="PackageDetail_TranslationCoverage" xml:space="preserve"><value>Cakupan Terjemahan</value></data>
   <data name="PackageDetail_TranslationCount" xml:space="preserve"><value>{0} terjemahan</value></data>
   <data name="PackageDetail_Manuals" xml:space="preserve"><value>Manual</value></data>

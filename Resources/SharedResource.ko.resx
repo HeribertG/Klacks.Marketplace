@@ -110,6 +110,7 @@
   <data name="PackageDetail_NotFound" xml:space="preserve"><value>패키지를 찾을 수 없습니다</value></data>
   <data name="PackageDetail_NotFoundDesc" xml:space="preserve"><value>찾으시는 패키지가 존재하지 않습니다.</value></data>
   <data name="PackageDetail_SpeechLocale" xml:space="preserve"><value>음성 로캘</value></data>
+  <data name="PackageDetail_Description" xml:space="preserve"><value>Klacks용 언어 팩 ‘{0}’: 사용자 인터페이스 번역, 달력 규칙, 국가 및 지역 데이터.</value></data>
   <data name="PackageDetail_TranslationCoverage" xml:space="preserve"><value>번역 범위</value></data>
   <data name="PackageDetail_TranslationCount" xml:space="preserve"><value>번역 {0}개</value></data>
   <data name="PackageDetail_Manuals" xml:space="preserve"><value>매뉴얼</value></data>

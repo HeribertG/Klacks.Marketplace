@@ -110,6 +110,7 @@
   <data name="PackageDetail_NotFound" xml:space="preserve"><value>パッケージが見つかりません</value></data>
   <data name="PackageDetail_NotFoundDesc" xml:space="preserve"><value>お探しのパッケージは存在しません。</value></data>
   <data name="PackageDetail_SpeechLocale" xml:space="preserve"><value>音声ロケール</value></data>
+  <data name="PackageDetail_Description" xml:space="preserve"><value>Klacks 用言語パック「{0}」：ユーザーインターフェースの翻訳、カレンダールール、国と地域のデータ。</value></data>
   <data name="PackageDetail_TranslationCoverage" xml:space="preserve"><value>翻訳カバレッジ</value></data>
   <data name="PackageDetail_TranslationCount" xml:space="preserve"><value>{0} 件の翻訳</value></data>
   <data name="PackageDetail_Manuals" xml:space="preserve"><value>マニュアル</value></data>

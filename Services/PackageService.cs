@@ -176,19 +176,24 @@ public class PackageService : IPackageService
         using var translationsDoc = JsonDocument.Parse(translationsJson);
         existing.TranslationCount = translationsDoc.RootElement.EnumerateObject().Count();
 
-        var version = new PackageVersion
+        var current = existing.Versions.OrderByDescending(v => v.CreatedAt).ThenByDescending(v => v.Id).FirstOrDefault();
+        if (current is null)
         {
-            Version = updated.Version,
-            ManifestJson = manifestJson,
-            TranslationsJson = translationsJson,
-            DocsJson = docsJson ?? string.Empty,
-            CountriesJson = countriesJson ?? string.Empty,
-            StatesJson = statesJson ?? string.Empty,
-            CalendarRulesJson = calendarRulesJson ?? string.Empty,
-            Status = existing.Status,
-            CreatedAt = DateTime.UtcNow
-        };
-        existing.Versions.Add(version);
+            current = new PackageVersion();
+            existing.Versions.Add(current);
+        }
+
+        _db.PackageVersions.RemoveRange(existing.Versions.Where(v => v != current));
+
+        current.Version = updated.Version;
+        current.ManifestJson = manifestJson;
+        current.TranslationsJson = translationsJson;
+        current.DocsJson = docsJson ?? string.Empty;
+        current.CountriesJson = countriesJson ?? string.Empty;
+        current.StatesJson = statesJson ?? string.Empty;
+        current.CalendarRulesJson = calendarRulesJson ?? string.Empty;
+        current.Status = existing.Status;
+        current.CreatedAt = DateTime.UtcNow;
 
         await _db.SaveChangesAsync();
         return existing;

@@ -110,6 +110,7 @@
   <data name="PackageDetail_NotFound" xml:space="preserve"><value>未找到该包</value></data>
   <data name="PackageDetail_NotFoundDesc" xml:space="preserve"><value>您查找的包不存在。</value></data>
   <data name="PackageDetail_SpeechLocale" xml:space="preserve"><value>语音区域设置</value></data>
+  <data name="PackageDetail_Description" xml:space="preserve"><value>Klacks 语言包“{0}”：用户界面翻译、日历规则以及国家和地区数据。</value></data>
   <data name="PackageDetail_TranslationCoverage" xml:space="preserve"><value>翻译覆盖率</value></data>
   <data name="PackageDetail_TranslationCount" xml:space="preserve"><value>{0} 条翻译</value></data>
   <data name="PackageDetail_Manuals" xml:space="preserve"><value>手册</value></data>

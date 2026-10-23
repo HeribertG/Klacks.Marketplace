@@ -110,6 +110,7 @@
   <data name="PackageDetail_NotFound" xml:space="preserve"><value>Pakke ikke fundet</value></data>
   <data name="PackageDetail_NotFoundDesc" xml:space="preserve"><value>Den pakke, du leder efter, findes ikke.</value></data>
   <data name="PackageDetail_SpeechLocale" xml:space="preserve"><value>Talelokalitet</value></data>
+  <data name="PackageDetail_Description" xml:space="preserve"><value>Sprogpakken »{0}« til Klacks: oversættelser af brugerfladen, kalenderregler samt data om lande og regioner.</value></data>
   <data name="PackageDetail_TranslationCoverage" xml:space="preserve"><value>Oversættelsesdækning</value></data>
   <data name="PackageDetail_TranslationCount" xml:space="preserve"><value>{0} oversættelser</value></data>
   <data name="PackageDetail_Manuals" xml:space="preserve"><value>Manualer</value></data>

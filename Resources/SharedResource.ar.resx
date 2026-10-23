@@ -110,6 +110,7 @@
   <data name="PackageDetail_NotFound" xml:space="preserve"><value>الحزمة غير موجودة</value></data>
   <data name="PackageDetail_NotFoundDesc" xml:space="preserve"><value>الحزمة التي تبحث عنها غير موجودة.</value></data>
   <data name="PackageDetail_SpeechLocale" xml:space="preserve"><value>لغة النطق</value></data>
+  <data name="PackageDetail_Description" xml:space="preserve"><value>حزمة اللغة {0} لبرنامج Klacks: ترجمات واجهة المستخدم وقواعد التقويم وبيانات الدول والمناطق.</value></data>
   <data name="PackageDetail_TranslationCoverage" xml:space="preserve"><value>تغطية الترجمة</value></data>
   <data name="PackageDetail_TranslationCount" xml:space="preserve"><value>{0} ترجمة</value></data>
   <data name="PackageDetail_Manuals" xml:space="preserve"><value>الأدلة</value></data>

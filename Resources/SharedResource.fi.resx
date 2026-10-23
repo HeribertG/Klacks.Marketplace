@@ -110,6 +110,7 @@
   <data name="PackageDetail_NotFound" xml:space="preserve"><value>Pakettia ei löytynyt</value></data>
   <data name="PackageDetail_NotFoundDesc" xml:space="preserve"><value>Etsimääsi pakettia ei ole olemassa.</value></data>
   <data name="PackageDetail_SpeechLocale" xml:space="preserve"><value>Puheen kielialue</value></data>
+  <data name="PackageDetail_Description" xml:space="preserve"><value>Klacksin kielipaketti ”{0}”: käyttöliittymän käännökset, kalenterisäännöt sekä maa- ja aluetiedot.</value></data>
   <data name="PackageDetail_TranslationCoverage" xml:space="preserve"><value>Käännöskattavuus</value></data>
   <data name="PackageDetail_TranslationCount" xml:space="preserve"><value>{0} käännöstä</value></data>
   <data name="PackageDetail_Manuals" xml:space="preserve"><value>Käyttöoppaat</value></data>

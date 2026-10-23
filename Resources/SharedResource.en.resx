@@ -110,6 +110,7 @@
   <data name="PackageDetail_NotFound" xml:space="preserve"><value>Package not found</value></data>
   <data name="PackageDetail_NotFoundDesc" xml:space="preserve"><value>The package you are looking for does not exist.</value></data>
   <data name="PackageDetail_SpeechLocale" xml:space="preserve"><value>Speech Locale</value></data>
+  <data name="PackageDetail_Description" xml:space="preserve"><value>{0} language pack for Klacks: user interface translations, calendar rules and country and region data.</value></data>
   <data name="PackageDetail_TranslationCoverage" xml:space="preserve"><value>Translation Coverage</value></data>
   <data name="PackageDetail_TranslationCount" xml:space="preserve"><value>{0} translations</value></data>
   <data name="PackageDetail_Manuals" xml:space="preserve"><value>Manuals</value></data>

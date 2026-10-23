@@ -110,6 +110,7 @@
   <data name="PackageDetail_NotFound" xml:space="preserve"><value>ไม่พบแพ็กเกจ</value></data>
   <data name="PackageDetail_NotFoundDesc" xml:space="preserve"><value>แพ็กเกจที่คุณกำลังค้นหาไม่มีอยู่</value></data>
   <data name="PackageDetail_SpeechLocale" xml:space="preserve"><value>โลแคลเสียง</value></data>
+  <data name="PackageDetail_Description" xml:space="preserve"><value>แพ็กภาษา {0} สำหรับ Klacks: คำแปลส่วนติดต่อผู้ใช้ กฎปฏิทิน และข้อมูลประเทศและภูมิภาค</value></data>
   <data name="PackageDetail_TranslationCoverage" xml:space="preserve"><value>ความครอบคลุมของการแปล</value></data>
   <data name="PackageDetail_TranslationCount" xml:space="preserve"><value>{0} การแปล</value></data>
   <data name="PackageDetail_Manuals" xml:space="preserve"><value>คู่มือ</value></data>

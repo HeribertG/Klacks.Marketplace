@@ -45,10 +45,7 @@ else
                     <div class="flex items-center gap-3 mb-4 flex-wrap">
                         <StatusBadge Status="@_package.Status" />
                     </div>
-                    @if (!string.IsNullOrWhiteSpace(_package.Description))
-                    {
-                        <p class="text-on-surface leading-relaxed">@_package.Description</p>
-                    }
+                    <p class="text-on-surface leading-relaxed">@L["PackageDetail_Description", _package.DisplayName]</p>
                 </div>
 
                 <div class="w-full md:w-72 flex flex-col gap-4">
@@ -71,10 +68,6 @@ else
                         <div class="flex items-center justify-between">
                             <span>@L["Common_Downloads"]</span>
                             <span class="font-bold text-on-surface">@_package.Downloads</span>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <span>@L["Common_MinVersion"]</span>
-                            <span class="font-bold text-on-surface">v@(_package.MinKlacksVersion)</span>
                         </div>
                         <div class="flex items-center justify-between">
                             <span>@L["PackageDetail_SpeechLocale"]</span>
@@ -131,29 +124,6 @@ else
                         <div class="text-xs text-on-surface-variant uppercase tracking-wider">@L["PackageDetail_CalendarRules"]</div>
                     </div>
                 }
-            </div>
-        }
-
-        @if (_package.Versions.Count > 0)
-        {
-            <div class="mb-8">
-                <h3 class="text-lg font-bold mb-4">@L["Common_VersionHistory"]</h3>
-                <div class="space-y-3">
-                    @foreach (var version in _package.Versions)
-                    {
-                        <div class="bg-surface-container-lowest rounded-xl p-5 flex items-start justify-between shadow-[0_4px_12px_rgba(22,24,29,0.04)]">
-                            <div>
-                                <span class="font-bold">v@(version.Version)</span>
-                                <span class="text-on-surface-variant text-sm ml-3">@version.CreatedAt.ToString("D")</span>
-                                @if (!string.IsNullOrWhiteSpace(version.ChangeLog))
-                                {
-                                    <p class="text-on-surface-variant text-sm mt-1 mb-0">@version.ChangeLog</p>
-                                }
-                            </div>
-                            <StatusBadge Status="@version.Status" />
-                        </div>
-                    }
-                </div>
             </div>
         }
     </div>

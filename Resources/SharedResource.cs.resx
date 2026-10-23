@@ -110,6 +110,7 @@
   <data name="PackageDetail_NotFound" xml:space="preserve"><value>Balíček nenalezen</value></data>
   <data name="PackageDetail_NotFoundDesc" xml:space="preserve"><value>Balíček, který hledáte, neexistuje.</value></data>
   <data name="PackageDetail_SpeechLocale" xml:space="preserve"><value>Jazyk řeči</value></data>
+  <data name="PackageDetail_Description" xml:space="preserve"><value>Jazykový balíček „{0}“ pro Klacks: překlady uživatelského rozhraní, pravidla kalendáře a údaje o zemích a regionech.</value></data>
   <data name="PackageDetail_TranslationCoverage" xml:space="preserve"><value>Pokrytí překladu</value></data>
   <data name="PackageDetail_TranslationCount" xml:space="preserve"><value>{0} překladů</value></data>
   <data name="PackageDetail_Manuals" xml:space="preserve"><value>Příručky</value></data>

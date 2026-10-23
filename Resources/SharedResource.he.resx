@@ -110,6 +110,7 @@
   <data name="PackageDetail_NotFound" xml:space="preserve"><value>החבילה לא נמצאה</value></data>
   <data name="PackageDetail_NotFoundDesc" xml:space="preserve"><value>החבילה שאתם מחפשים אינה קיימת.</value></data>
   <data name="PackageDetail_SpeechLocale" xml:space="preserve"><value>לוקאל דיבור</value></data>
+  <data name="PackageDetail_Description" xml:space="preserve"><value>חבילת השפה {0} עבור Klacks: תרגומי ממשק המשתמש, כללי לוח שנה ונתוני מדינות ואזורים.</value></data>
   <data name="PackageDetail_TranslationCoverage" xml:space="preserve"><value>כיסוי תרגום</value></data>
   <data name="PackageDetail_TranslationCount" xml:space="preserve"><value>{0} תרגומים</value></data>
   <data name="PackageDetail_Manuals" xml:space="preserve"><value>מדריכים</value></data>

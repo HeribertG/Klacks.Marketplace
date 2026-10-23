@@ -110,6 +110,7 @@
   <data name="PackageDetail_NotFound" xml:space="preserve"><value>Pakket niet gevonden</value></data>
   <data name="PackageDetail_NotFoundDesc" xml:space="preserve"><value>Het pakket dat u zoekt, bestaat niet.</value></data>
   <data name="PackageDetail_SpeechLocale" xml:space="preserve"><value>Spraaklocale</value></data>
+  <data name="PackageDetail_Description" xml:space="preserve"><value>Taalpakket ‘{0}’ voor Klacks: vertalingen van de gebruikersinterface, kalenderregels en gegevens over landen en regio’s.</value></data>
   <data name="PackageDetail_TranslationCoverage" xml:space="preserve"><value>Vertaaldekking</value></data>
   <data name="PackageDetail_TranslationCount" xml:space="preserve"><value>{0} vertalingen</value></data>
   <data name="PackageDetail_Manuals" xml:space="preserve"><value>Handleidingen</value></data>

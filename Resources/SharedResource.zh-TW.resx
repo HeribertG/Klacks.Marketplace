@@ -110,6 +110,7 @@
   <data name="PackageDetail_NotFound" xml:space="preserve"><value>找不到套件</value></data>
   <data name="PackageDetail_NotFoundDesc" xml:space="preserve"><value>您要尋找的套件不存在。</value></data>
   <data name="PackageDetail_SpeechLocale" xml:space="preserve"><value>語音地區設定</value></data>
+  <data name="PackageDetail_Description" xml:space="preserve"><value>Klacks 語言套件「{0}」：使用者介面翻譯、行事曆規則以及國家和地區資料。</value></data>
   <data name="PackageDetail_TranslationCoverage" xml:space="preserve"><value>翻譯覆蓋率</value></data>
   <data name="PackageDetail_TranslationCount" xml:space="preserve"><value>{0} 項翻譯</value></data>
   <data name="PackageDetail_Manuals" xml:space="preserve"><value>手冊</value></data>

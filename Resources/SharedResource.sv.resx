@@ -110,6 +110,7 @@
   <data name="PackageDetail_NotFound" xml:space="preserve"><value>Paketet hittades inte</value></data>
   <data name="PackageDetail_NotFoundDesc" xml:space="preserve"><value>Paketet du letar efter finns inte.</value></data>
   <data name="PackageDetail_SpeechLocale" xml:space="preserve"><value>Röstspråk</value></data>
+  <data name="PackageDetail_Description" xml:space="preserve"><value>Språkpaketet ”{0}” för Klacks: översättningar av användargränssnittet, kalenderregler samt data om länder och regioner.</value></data>
   <data name="PackageDetail_TranslationCoverage" xml:space="preserve"><value>Översättningstäckning</value></data>
   <data name="PackageDetail_TranslationCount" xml:space="preserve"><value>{0} översättningar</value></data>
   <data name="PackageDetail_Manuals" xml:space="preserve"><value>Manualer</value></data>
