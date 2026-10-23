@@ -174,31 +174,6 @@ else
             </div>
         }
 
-        @if (_package.Versions.Count > 0)
-        {
-            <details class="group mb-8">
-                <summary class="flex items-center justify-between cursor-pointer list-none mb-4 [&::-webkit-details-marker]:hidden">
-                    <h3 class="text-lg font-bold m-0">@L["Common_VersionHistory"]</h3>
-                    <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
-                </summary>
-                <div class="space-y-3">
-                    @foreach (var version in _package.Versions)
-                    {
-                        <div class="bg-surface-container-lowest rounded-xl p-5 flex items-start justify-between shadow-[0_4px_12px_rgba(22,24,29,0.04)]">
-                            <div>
-                                <span class="font-bold">v@(version.Version)</span>
-                                <span class="text-on-surface-variant text-sm ml-3">@version.CreatedAt.ToString("D")</span>
-                                @if (!string.IsNullOrWhiteSpace(version.ChangeLog))
-                                {
-                                    <p class="text-on-surface-variant text-sm mt-1 mb-0">@version.ChangeLog</p>
-                                }
-                            </div>
-                            <StatusBadge Status="@version.Status" />
-                        </div>
-                    }
-                </div>
-            </details>
-        }
     </div>
 }
 
