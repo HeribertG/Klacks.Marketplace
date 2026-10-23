@@ -17,9 +17,9 @@
   "worktime": {
     "defaultWorkingHours": 8,
     "overtimeThreshold": 40,
-    "vacationDaysPerYear": 24,
+    "vacationDaysPerYear": 20,
     "maxDailyHours": 10,
-    "maxWeeklyHours": 48,
+    "maxWeeklyHours": 60,
     "maxConsecutiveDays": 6,
     "minRestDays": 1,
     "minPauseHours": 11
@@ -27,7 +27,7 @@
   "surcharges": {
     "nightRate": 0.25,
     "holidayRate": 1.0,
-    "we1Rate": 0.5,
+    "we1Rate": 0.2,
     "we2Rate": 0.5,
     "we3Rate": 0
   },
@@ -269,36 +269,60 @@
       "qualificationCatalog": [
         {
           "name": {
-            "de": "Koch/Köchin (Ausbildungsberuf)",
-            "en": "Cook (dual vocational training)",
-            "fr": "Cuisinier/ère (formation professionnelle duale)",
-            "it": "Cuoco/a (formazione professionale duale)"
-          }
-        },
-        {
-          "name": {
-            "de": "Restaurantfachmann/-frau (Ausbildungsberuf)",
-            "en": "Restaurant specialist (dual vocational training)",
-            "fr": "Spécialiste de restaurant (formation professionnelle duale)",
-            "it": "Specialista di ristorazione (formazione professionale duale)"
-          }
-        },
-        {
-          "name": {
-            "de": "Hotelfachmann/-frau (Ausbildungsberuf)",
-            "en": "Hotel specialist (dual vocational training)",
-            "fr": "Spécialiste hôtelier/ère (formation professionnelle duale)",
-            "it": "Specialista alberghiero/a (formazione professionale duale)"
-          }
-        },
-        {
-          "name": {
-            "de": "Belehrung nach § 43 Infektionsschutzgesetz (IfSG)",
-            "en": "Instruction under § 43 Infection Protection Act (IfSG)",
-            "fr": "Instruction selon l'art. 43 de la loi sur la protection contre les infections (IfSG)",
-            "it": "Istruzione ai sensi del § 43 della legge sulla protezione dalle infezioni (IfSG)"
+            "de": "Erste-Hilfe-Ausbildung",
+            "en": "First aid certificate",
+            "fr": "Formation aux premiers secours",
+            "it": "Formazione di primo soccorso"
           },
           "isTimeLimited": true
+        },
+        {
+          "name": {
+            "de": "Koch/Köchin",
+            "en": "Chef (state-recognized vocational qualification)",
+            "fr": "Cuisinier/Cuisinière (diplôme professionnel reconnu)",
+            "it": "Cuoco/Cuoca (qualifica professionale riconosciuta)"
+          }
+        },
+        {
+          "name": {
+            "de": "Hotelfachmann/-frau",
+            "en": "Hotel specialist (state-recognized vocational qualification)",
+            "fr": "Spécialiste en hôtellerie (diplôme professionnel reconnu)",
+            "it": "Specialista alberghiero/a (qualifica professionale riconosciuta)"
+          }
+        },
+        {
+          "name": {
+            "de": "Restaurantfachmann/-frau",
+            "en": "Restaurant specialist (state-recognized vocational qualification)",
+            "fr": "Spécialiste de la restauration (diplôme professionnel reconnu)",
+            "it": "Specialista di ristorazione (qualifica professionale riconosciuta)"
+          }
+        },
+        {
+          "name": {
+            "de": "Fachkraft Küche",
+            "en": "Certified kitchen worker (two-year vocational qualification)",
+            "fr": "Agent/e de cuisine qualifié/e (formation professionnelle de deux ans)",
+            "it": "Operatore/Operatrice di cucina qualificato/a (formazione professionale biennale)"
+          }
+        },
+        {
+          "name": {
+            "de": "Fachkraft für Gastronomie",
+            "en": "Certified hospitality worker (two-year vocational qualification)",
+            "fr": "Agent/e de restauration qualifié/e (formation professionnelle de deux ans)",
+            "it": "Operatore/Operatrice di gastronomia qualificato/a (formazione professionale biennale)"
+          }
+        },
+        {
+          "name": {
+            "de": "Kaufmann/-frau für Hotelmanagement",
+            "en": "Hotel management clerk (state-recognized vocational qualification)",
+            "fr": "Employé/e de commerce en gestion hôtelière (diplôme professionnel reconnu)",
+            "it": "Impiegato/a commerciale in gestione alberghiera (qualifica professionale riconosciuta)"
+          }
         }
       ]
     }

@@ -264,49 +264,73 @@
     "hospitality": {
       "schedulingRulePresets": [
         {
-          "name": "FR Hôtellerie-restauration Standard",
-          "maxDailyHours": 10,
+          "name": "FR Hôtellerie-Restauration Standard",
+          "maxDailyHours": 11,
           "maxWeeklyHours": 48,
           "minPauseHours": 11,
-          "minRestDays": 1,
+          "minRestDays": 2,
           "maxConsecutiveDays": 6,
-          "nightStart": "21:00",
-          "nightEnd": "06:00",
+          "nightStart": "22:00",
+          "nightEnd": "07:00",
           "performsShiftWork": true
         }
       ],
       "qualificationCatalog": [
         {
           "name": {
-            "de": "CAP Küche (CAP Cuisine)",
-            "en": "Vocational diploma in cooking (CAP Cuisine)",
-            "fr": "CAP Cuisine",
-            "it": "CAP Cuisine (diploma professionale di cucina francese)"
-          }
-        },
-        {
-          "name": {
-            "de": "CAP Vermarktung und Service in Hotel-Café-Restaurant",
-            "en": "Vocational diploma in hotel/café/restaurant service (CAP Commercialisation et Services en HCR)",
-            "fr": "CAP Commercialisation et Services en Hôtel-Café-Restaurant",
-            "it": "CAP Commercializzazione e Servizi in Hotel-Café-Restaurant"
-          }
-        },
-        {
-          "name": {
-            "de": "Permis d'exploitation (Konzessionsschein für den Alkoholausschank)",
-            "en": "Permit of exploitation (licence to serve alcohol)",
-            "fr": "Permis d'exploitation (licence de débit de boissons)",
-            "it": "Permis d'exploitation (licenza per la mescita di alcolici)"
+            "de": "Erste-Hilfe-Ausbildung",
+            "en": "First aid certificate",
+            "fr": "Formation aux premiers secours",
+            "it": "Formazione di primo soccorso"
           },
           "isTimeLimited": true
         },
         {
           "name": {
-            "de": "Verpflichtende Lebensmittelhygiene-Schulung (HACCP)",
-            "en": "Mandatory food hygiene training (HACCP)",
-            "fr": "Formation obligatoire à l'hygiène alimentaire (HACCP)",
-            "it": "Formazione obbligatoria in igiene alimentare (HACCP)"
+            "de": "CAP Cuisine (Berufsabschluss Küche)",
+            "en": "CAP Cuisine (vocational certificate in cooking)",
+            "fr": "CAP Cuisine",
+            "it": "CAP Cuisine (certificato professionale di cucina)"
+          }
+        },
+        {
+          "name": {
+            "de": "CAP Commercialisation et Services en HCR (Berufsabschluss Service Hotel-Café-Restaurant)",
+            "en": "CAP Commercialisation et Services en Hôtel-Café-Restaurant (vocational certificate in hospitality service)",
+            "fr": "CAP Commercialisation et Services en Hôtel-Café-Restaurant",
+            "it": "CAP Commercialisation et Services en HCR (certificato professionale di servizio hotel-caffè-ristorante)"
+          }
+        },
+        {
+          "name": {
+            "de": "Bac Pro Cuisine (Berufsabitur Küche)",
+            "en": "Bac Pro Cuisine (vocational baccalaureate in cooking)",
+            "fr": "Baccalauréat Professionnel Cuisine",
+            "it": "Bac Pro Cuisine (diploma professionale di cucina)"
+          }
+        },
+        {
+          "name": {
+            "de": "Bac Pro Commercialisation et Services en Restauration (Berufsabitur Restaurant-Service)",
+            "en": "Bac Pro Commercialisation et Services en Restauration (vocational baccalaureate in restaurant service)",
+            "fr": "Baccalauréat Professionnel Commercialisation et Services en Restauration",
+            "it": "Bac Pro Commercialisation et Services en Restauration (diploma professionale di servizio di ristorazione)"
+          }
+        },
+        {
+          "name": {
+            "de": "BTS Management en Hôtellerie-Restauration (höherer Fachabschluss Hotellerie-Gastronomie)",
+            "en": "BTS Management en Hôtellerie-Restauration (advanced technician diploma in hospitality management)",
+            "fr": "BTS Management en Hôtellerie-Restauration",
+            "it": "BTS Management en Hôtellerie-Restauration (diploma superiore di gestione alberghiera e ristorazione)"
+          }
+        },
+        {
+          "name": {
+            "de": "Mention Complémentaire Sommellerie (Zusatzqualifikation Sommelier/Sommelière)",
+            "en": "Mention Complémentaire Sommellerie (complementary qualification in sommellerie)",
+            "fr": "Mention Complémentaire Sommellerie",
+            "it": "Mention Complémentaire Sommellerie (qualifica complementare di sommellerie)"
           }
         }
       ]

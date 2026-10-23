@@ -231,36 +231,72 @@
         {
           "name": "US Hospitality Standard",
           "overtimeThreshold": 40,
+          "minRestDays": 1,
           "performsShiftWork": true
         }
       ],
       "qualificationCatalog": [
         {
           "name": {
-            "de": "ServSafe Food Handler Certificate (ANSI-akkreditiertes Lebensmittelsicherheitszertifikat, National Restaurant Association, gültig 3 Jahre)",
-            "en": "ServSafe Food Handler Certificate (ANSI-accredited food safety certificate, National Restaurant Association, valid 3 years)",
-            "fr": "ServSafe Food Handler Certificate (certificat de sécurité alimentaire accrédité ANSI, National Restaurant Association, valable 3 ans)",
-            "it": "ServSafe Food Handler Certificate (certificato di sicurezza alimentare accreditato ANSI, National Restaurant Association, valido 3 anni)"
+            "de": "HLW- und Erste-Hilfe-Zertifikat",
+            "en": "CPR and first aid certification",
+            "fr": "Certificat de RCR et de premiers secours",
+            "it": "Certificato di RCP e primo soccorso"
           },
           "isTimeLimited": true
         },
         {
           "name": {
-            "de": "ServSafe Manager / Food Protection Manager Certification (Küchenleitung, gültig 5 Jahre)",
-            "en": "ServSafe Manager / Food Protection Manager Certification (kitchen supervisor level, valid 5 years)",
-            "fr": "ServSafe Manager / Food Protection Manager Certification (niveau responsable de cuisine, valable 5 ans)",
-            "it": "ServSafe Manager / Food Protection Manager Certification (livello responsabile di cucina, valido 5 anni)"
+            "de": "ServSafe Food Handler (Lebensmittelhygiene-Grundzertifikat, National Restaurant Association)",
+            "en": "ServSafe Food Handler certification (National Restaurant Association)",
+            "fr": "Certification ServSafe Food Handler (National Restaurant Association)",
+            "it": "Certificazione ServSafe Food Handler (National Restaurant Association)"
           },
           "isTimeLimited": true
         },
         {
           "name": {
-            "de": "Responsible Beverage Service / Alcohol-Zertifikat (z. B. ServSafe Alcohol oder bundesstaatliches TIPS-Zertifikat für Barkeeper und Servicepersonal)",
-            "en": "Responsible Beverage Service / alcohol certification (e.g. ServSafe Alcohol or state-recognised TIPS certificate for bartenders and servers)",
-            "fr": "Certification Responsible Beverage Service / alcool (p. ex. ServSafe Alcohol ou certificat TIPS reconnu par l'État pour barmans et serveurs)",
-            "it": "Certificazione Responsible Beverage Service / alcolici (es. ServSafe Alcohol o certificato TIPS riconosciuto dallo Stato per baristi e camerieri)"
+            "de": "ServSafe Manager (Zertifikat Lebensmittelsicherheit für Führungskräfte, National Restaurant Association)",
+            "en": "ServSafe Manager certification (National Restaurant Association)",
+            "fr": "Certification ServSafe Manager (National Restaurant Association)",
+            "it": "Certificazione ServSafe Manager (National Restaurant Association)"
           },
           "isTimeLimited": true
+        },
+        {
+          "name": {
+            "de": "Certified Culinarian (CC, American Culinary Federation, Rezertifizierung alle 5 Jahre)",
+            "en": "Certified Culinarian (CC, American Culinary Federation)",
+            "fr": "Certified Culinarian (CC, American Culinary Federation)",
+            "it": "Certified Culinarian (CC, American Culinary Federation)"
+          },
+          "isTimeLimited": true
+        },
+        {
+          "name": {
+            "de": "TIPS-Zertifizierung für Alkoholausschank (Training for Intervention ProcedureS)",
+            "en": "TIPS alcohol server certification (Training for Intervention ProcedureS)",
+            "fr": "Certification TIPS pour le service d'alcool (Training for Intervention ProcedureS)",
+            "it": "Certificazione TIPS per la somministrazione di alcolici (Training for Intervention ProcedureS)"
+          },
+          "isTimeLimited": true
+        },
+        {
+          "name": {
+            "de": "Certified Hotel Administrator (CHA, American Hotel & Lodging Educational Institute)",
+            "en": "Certified Hotel Administrator (CHA, American Hotel & Lodging Educational Institute)",
+            "fr": "Certified Hotel Administrator (CHA, American Hotel & Lodging Educational Institute)",
+            "it": "Certified Hotel Administrator (CHA, American Hotel & Lodging Educational Institute)"
+          },
+          "isTimeLimited": true
+        },
+        {
+          "name": {
+            "de": "ManageFirst-Zertifikat (Gastronomiemanagement, National Restaurant Association)",
+            "en": "ManageFirst certificate (restaurant management, National Restaurant Association)",
+            "fr": "Certificat ManageFirst (gestion de restauration, National Restaurant Association)",
+            "it": "Certificato ManageFirst (gestione della ristorazione, National Restaurant Association)"
+          }
         }
       ]
     }

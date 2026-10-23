@@ -19,6 +19,7 @@
     "vacationDaysPerYear": 20,
     "maxDailyHours": 10,
     "maxWeeklyHours": 48,
+    "maxConsecutiveDays": 6,
     "minRestDays": 1,
     "minPauseHours": 11
   },
@@ -32,7 +33,7 @@
       "allowSupervisorOverride": true
     },
     "periodCaps": [
-      { "windowWeeks": 16, "maxAverageWeeklyHours": 48 }
+      { "windowWeeks": 17, "maxAverageWeeklyHours": 48 }
     ]
   },
   "export": {
@@ -246,28 +247,52 @@
       "qualificationCatalog": [
         {
           "name": {
-            "de": "Koch/Köchin EFZ",
-            "en": "Chef (EFZ federal diploma)",
-            "fr": "Cuisinier/ère CFC",
-            "it": "Cuoco/a AFC"
-          }
-        },
-        {
-          "name": {
-            "de": "Restaurantfachmann/-frau EFZ",
-            "en": "Restaurant specialist (EFZ federal diploma)",
-            "fr": "Spécialiste en restauration CFC",
-            "it": "Impiegato/a di ristorazione AFC"
-          }
-        },
-        {
-          "name": {
             "de": "Erste-Hilfe-Ausbildung",
             "en": "First aid certificate",
             "fr": "Formation aux premiers secours",
             "it": "Formazione di primo soccorso"
           },
           "isTimeLimited": true
+        },
+        {
+          "name": {
+            "de": "Koch/Köchin EFZ",
+            "en": "Cook (federal VET diploma, Swiss system)",
+            "fr": "Cuisinier/Cuisinière CFC",
+            "it": "Cuoco/Cuoca AFC"
+          }
+        },
+        {
+          "name": {
+            "de": "Restaurationsfachmann/-frau EFZ",
+            "en": "Restaurant specialist (federal VET diploma, Swiss system)",
+            "fr": "Spécialiste en restauration CFC",
+            "it": "Impiegato/a di ristorazione AFC"
+          }
+        },
+        {
+          "name": {
+            "de": "Hotelfachmann/-frau EFZ",
+            "en": "Hotel specialist (federal VET diploma, Swiss system)",
+            "fr": "Spécialiste en hôtellerie CFC",
+            "it": "Impiegato/a d'albergo AFC"
+          }
+        },
+        {
+          "name": {
+            "de": "Küchenangestellte/r EBA",
+            "en": "Kitchen employee (federal VET certificate, Swiss system)",
+            "fr": "Employé/e en cuisine AFP",
+            "it": "Addetto/a di cucina CFP"
+          }
+        },
+        {
+          "name": {
+            "de": "Hotellerieangestellte/r EBA",
+            "en": "Hospitality employee (federal VET certificate, Swiss system)",
+            "fr": "Employé/e en hôtellerie AFP",
+            "it": "Addetto/a d'albergo CFP"
+          }
         }
       ]
     }

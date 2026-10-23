@@ -188,6 +188,13 @@ public class RegionArtifactService : IRegionArtifactService
             UPDATE_SIGNATURE_PUBLIC_KEY="{escapedPublicKey}"
             UPDATE_REQUIRE_SIGNED_REGION_PACKAGES=false
             KLACKS_MARKETPLACE_URL=https://klacks-software.ch/store
+
+            # Initial auto-update policy, applied once on the first start while no update setting is
+            # saved; afterwards the admin UI (Settings > Software Updates) decides.
+            # UPDATE_AUTO_ENABLED=false stops automatic checks and installs, UPDATE_NOTIFY_ONLY=true
+            # keeps checking but never installs automatically; "Update now" in the admin UI always works.
+            UPDATE_AUTO_ENABLED=true
+            UPDATE_NOTIFY_ONLY=false
             """.ReplaceLineEndings(UnixLineEnding) + UnixLineEnding;
     }
 

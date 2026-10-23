@@ -23,6 +23,8 @@
     "minRestDays": 1
   },
   "surcharges": {
+    "holidayRate": 2.0,
+    "we2Rate": 1.0,
     "overtime": {
       "basis": "day",
       "tiers": [
@@ -235,7 +237,7 @@
     "hospitality": {
       "schedulingRulePresets": [
         {
-          "name": "MY Perkhidmatan Hospitaliti Standard",
+          "name": "MY Hotel & Restoran Standard",
           "maxDailyHours": 12,
           "maxWeeklyHours": 45,
           "minRestDays": 1,
@@ -245,29 +247,52 @@
       "qualificationCatalog": [
         {
           "name": {
-            "de": "Sijil Kemahiran Malaysia (SKM) in Lebensmittelzubereitung und Food & Beverage Service (Hospitality-Tourism-Sektor, Department of Skills Development)",
-            "en": "Sijil Kemahiran Malaysia (SKM) in food preparation and food & beverage service (Hospitality Tourism sub-sector, Department of Skills Development)",
-            "fr": "Sijil Kemahiran Malaysia (SKM) en préparation culinaire et service de restauration (sous-secteur Hospitality Tourism, Department of Skills Development)",
-            "it": "Sijil Kemahiran Malaysia (SKM) in preparazione alimentare e servizio di ristorazione (sotto-settore Hospitality Tourism, Department of Skills Development)"
-          }
-        },
-        {
-          "name": {
-            "de": "Food Handler Certificate (Ministry of Health Malaysia) mit Anti-Typhus-Impfnachweis, Impfung alle 3 Jahre zu erneuern",
-            "en": "Food Handler Certificate (Ministry of Health Malaysia) with anti-typhoid vaccination proof, vaccine renewed every 3 years",
-            "fr": "Food Handler Certificate (ministère de la Santé de Malaisie) avec preuve de vaccination antityphoïdique, vaccin à renouveler tous les 3 ans",
-            "it": "Food Handler Certificate (Ministero della Salute della Malesia) con prova di vaccinazione antitifoidea, vaccino da rinnovare ogni 3 anni"
-          },
-          "isTimeLimited": true
-        },
-        {
-          "name": {
             "de": "Erste-Hilfe-Zeugnis (Sijil Bantu Mula)",
             "en": "First aid certificate (Sijil Bantu Mula)",
             "fr": "Certificat de premiers secours (Sijil Bantu Mula)",
             "it": "Certificato di primo soccorso (Sijil Bantu Mula)"
           },
           "isTimeLimited": true
+        },
+        {
+          "name": {
+            "de": "Sijil Kemahiran Malaysia (SKM) Seni Kulinari (malaysisches Kompetenzzertifikat Kochkunst)",
+            "en": "Sijil Kemahiran Malaysia (SKM) Seni Kulinari (Malaysian skills certificate in culinary arts)",
+            "fr": "Sijil Kemahiran Malaysia (SKM) Seni Kulinari (certificat de compétences malaisien en arts culinaires)",
+            "it": "Sijil Kemahiran Malaysia (SKM) Seni Kulinari (certificato di competenze malese in arte culinaria)"
+          }
+        },
+        {
+          "name": {
+            "de": "Sijil Kemahiran Malaysia (SKM) Servis Makanan dan Minuman (Kompetenzzertifikat Restaurantservice)",
+            "en": "Sijil Kemahiran Malaysia (SKM) Servis Makanan dan Minuman (Malaysian skills certificate in food and beverage service)",
+            "fr": "Sijil Kemahiran Malaysia (SKM) Servis Makanan dan Minuman (certificat de compétences malaisien en service en restauration)",
+            "it": "Sijil Kemahiran Malaysia (SKM) Servis Makanan dan Minuman (certificato di competenze malese nel servizio di sala)"
+          }
+        },
+        {
+          "name": {
+            "de": "Sijil Kemahiran Malaysia (SKM) Operasi Hotel (Kompetenzzertifikat Hotelfach/Rezeption)",
+            "en": "Sijil Kemahiran Malaysia (SKM) Operasi Hotel (Malaysian skills certificate in hotel operations/front office)",
+            "fr": "Sijil Kemahiran Malaysia (SKM) Operasi Hotel (certificat de compétences malaisien en opérations hôtelières/réception)",
+            "it": "Sijil Kemahiran Malaysia (SKM) Operasi Hotel (certificato di competenze malese in operazioni alberghiere/ricevimento)"
+          }
+        },
+        {
+          "name": {
+            "de": "Sijil Kemahiran Malaysia (SKM) Pengemasan Hotel (Kompetenzzertifikat Housekeeping)",
+            "en": "Sijil Kemahiran Malaysia (SKM) Pengemasan Hotel (Malaysian skills certificate in hotel housekeeping)",
+            "fr": "Sijil Kemahiran Malaysia (SKM) Pengemasan Hotel (certificat de compétences malaisien en entretien des étages)",
+            "it": "Sijil Kemahiran Malaysia (SKM) Pengemasan Hotel (certificato di competenze malese in housekeeping alberghiero)"
+          }
+        },
+        {
+          "name": {
+            "de": "Sijil Latihan Pengendali Makanan (Lebensmittelhygiene-Pflichtschulung, Gesundheitsministerium KKM)",
+            "en": "Sijil Latihan Pengendali Makanan (mandatory food handler training certificate, Ministry of Health)",
+            "fr": "Sijil Latihan Pengendali Makanan (certificat de formation obligatoire des manipulateurs d'aliments, ministère de la Santé)",
+            "it": "Sijil Latihan Pengendali Makanan (certificato di formazione obbligatoria per addetti alimentari, Ministero della Salute)"
+          }
         }
       ]
     }

@@ -17,9 +17,9 @@
   "worktime": {
     "defaultWorkingHours": 8,
     "overtimeThreshold": 40,
-    "vacationDaysPerYear": 30,
+    "vacationDaysPerYear": 25,
     "maxDailyHours": 12,
-    "maxWeeklyHours": 48,
+    "maxWeeklyHours": 60,
     "maxConsecutiveDays": 6,
     "minRestDays": 1,
     "minPauseHours": 11
@@ -30,6 +30,9 @@
       "rules": { "rollingAverage": "warn" },
       "allowSupervisorOverride": true
     },
+    "periodCaps": [
+      { "windowWeeks": 17, "maxAverageWeeklyHours": 48 }
+    ],
     "rosterPublication": { "minLeadDays": 14, "countWorkdaysOnly": false }
   },
   "export": {
@@ -251,7 +254,7 @@
           "maxDailyHours": 12,
           "maxWeeklyHours": 48,
           "minPauseHours": 11,
-          "minRestDays": 1,
+          "minRestDays": 2,
           "maxConsecutiveDays": 6,
           "nightStart": "22:00",
           "nightEnd": "06:00",
@@ -261,37 +264,60 @@
       "qualificationCatalog": [
         {
           "name": {
-            "de": "Koch/Köchin (Lehrberuf)",
-            "en": "Cook (vocational apprenticeship)",
-            "fr": "Cuisinier/ère (formation professionnelle)",
-            "it": "Cuoco/a (qualifica professionale)"
-          }
-        },
-        {
-          "name": {
-            "de": "Restaurantfachmann/-frau (Lehrberuf)",
-            "en": "Restaurant specialist (vocational apprenticeship)",
-            "fr": "Spécialiste de restaurant (formation professionnelle)",
-            "it": "Specialista di ristorazione (qualifica professionale)"
-          }
-        },
-        {
-          "name": {
-            "de": "Lebensmittelhygiene-Schulung (Eigenkontrolle gemäß VO (EG) 852/2004)",
-            "en": "Food hygiene training (self-control under EC Regulation 852/2004)",
-            "fr": "Formation à l'hygiène alimentaire (autocontrôle selon le règlement (CE) 852/2004)",
-            "it": "Formazione sull'igiene alimentare (autocontrollo secondo il regolamento (CE) 852/2004)"
-          },
-          "isTimeLimited": true
-        },
-        {
-          "name": {
             "de": "Erste-Hilfe-Ausbildung",
             "en": "First aid certificate",
             "fr": "Formation aux premiers secours",
             "it": "Formazione di primo soccorso"
           },
           "isTimeLimited": true
+        },
+        {
+          "name": {
+            "de": "Koch/Köchin",
+            "en": "Cook (certified apprenticeship qualification)",
+            "fr": "Cuisinier/Cuisinière (apprentissage certifié)",
+            "it": "Cuoco/Cuoca (apprendistato certificato)"
+          }
+        },
+        {
+          "name": {
+            "de": "Restaurantfachmann/-frau",
+            "en": "Restaurant specialist (certified apprenticeship qualification)",
+            "fr": "Spécialiste de la restauration (apprentissage certifié)",
+            "it": "Specialista di ristorazione (apprendistato certificato)"
+          }
+        },
+        {
+          "name": {
+            "de": "Gastronomiefachmann/-frau",
+            "en": "Gastronomy specialist (dual apprenticeship cook and restaurant service)",
+            "fr": "Spécialiste en gastronomie (double apprentissage cuisine et service)",
+            "it": "Specialista in gastronomia (doppio apprendistato cucina e servizio)"
+          }
+        },
+        {
+          "name": {
+            "de": "Hotel- und Gastgewerbeassistent/in",
+            "en": "Hotel and hospitality assistant (certified apprenticeship qualification)",
+            "fr": "Assistant/e en hôtellerie et restauration (apprentissage certifié)",
+            "it": "Assistente d'albergo e di ristorazione (apprendistato certificato)"
+          }
+        },
+        {
+          "name": {
+            "de": "Systemgastronomiefachmann/-frau",
+            "en": "System catering specialist (certified apprenticeship qualification)",
+            "fr": "Spécialiste en restauration de système (apprentissage certifié)",
+            "it": "Specialista in ristorazione di sistema (apprendistato certificato)"
+          }
+        },
+        {
+          "name": {
+            "de": "Hotelkaufmann/-frau",
+            "en": "Hotel management clerk (certified apprenticeship qualification)",
+            "fr": "Employé/e de commerce hôtelier (apprentissage certifié)",
+            "it": "Impiegato/a commerciale d'albergo (apprendistato certificato)"
+          }
         }
       ]
     }

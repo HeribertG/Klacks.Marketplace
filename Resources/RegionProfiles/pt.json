@@ -25,6 +25,7 @@
   },
   "surcharges": {
     "nightRate": 0.25,
+    "holidayRate": 0.5,
     "nightWindow": { "start": "22:00", "end": "07:00" }
   },
   "compliance": {
@@ -267,26 +268,59 @@
       "qualificationCatalog": [
         {
           "name": {
-            "de": "Nationale Berufsqualifikation Koch/Köchin (IEFP, Catálogo Nacional de Qualificações)",
-            "en": "National vocational qualification for cooks (IEFP, Catálogo Nacional de Qualificações)",
-            "fr": "Qualification professionnelle nationale de cuisinier/ère (IEFP, Catálogo Nacional de Qualificações)",
-            "it": "Qualifica professionale nazionale di cuoco/a (IEFP, Catálogo Nacional de Qualificações)"
+            "de": "Suporte Básico de Vida (Erste-Hilfe-/Basisreanimations-Zertifikat)",
+            "en": "Suporte Básico de Vida (basic life support / first aid certificate)",
+            "fr": "Suporte Básico de Vida (certificat de premiers secours / réanimation de base)",
+            "it": "Suporte Básico de Vida (certificato di primo soccorso / supporto vitale di base)"
+          },
+          "isTimeLimited": true
+        },
+        {
+          "name": {
+            "de": "Técnico de Cozinha/Pastelaria (Berufsabschluss Küche/Konditorei, Qualifikationsniveau 4)",
+            "en": "Técnico de Cozinha/Pastelaria (professional cook and pastry qualification, level 4)",
+            "fr": "Técnico de Cozinha/Pastelaria (diplôme professionnel de cuisine/pâtisserie, niveau 4)",
+            "it": "Técnico de Cozinha/Pastelaria (qualifica professionale di cucina/pasticceria, livello 4)"
           }
         },
         {
           "name": {
-            "de": "Kurs für Lebensmittelhygiene und -sicherheit (Higiene e Segurança Alimentar, IEFP)",
-            "en": "Food hygiene and safety course (Higiene e Segurança Alimentar, IEFP)",
-            "fr": "Cours d'hygiène et de sécurité alimentaire (Higiene e Segurança Alimentar, IEFP)",
-            "it": "Corso di igiene e sicurezza alimentare (Higiene e Segurança Alimentar, IEFP)"
+            "de": "Técnico de Restaurante/Bar (Berufsabschluss Restaurant- und Barservice, Qualifikationsniveau 4)",
+            "en": "Técnico de Restaurante/Bar (professional restaurant and bar service qualification, level 4)",
+            "fr": "Técnico de Restaurante/Bar (diplôme professionnel de service restaurant/bar, niveau 4)",
+            "it": "Técnico de Restaurante/Bar (qualifica professionale di servizio ristorante/bar, livello 4)"
           }
         },
         {
           "name": {
-            "de": "Berufsqualifikation Restaurant- und Barservice (IEFP)",
-            "en": "Vocational qualification in restaurant and bar service (IEFP)",
-            "fr": "Qualification professionnelle en service de restaurant et de bar (IEFP)",
-            "it": "Qualifica professionale in servizio di ristorante e bar (IEFP)"
+            "de": "Técnico de Receção (Berufsabschluss Hotelrezeption, Qualifikationsniveau 4)",
+            "en": "Técnico de Receção (professional hotel reception qualification, level 4)",
+            "fr": "Técnico de Receção (diplôme professionnel de réception hôtelière, niveau 4)",
+            "it": "Técnico de Receção (qualifica professionale di ricevimento alberghiero, livello 4)"
+          }
+        },
+        {
+          "name": {
+            "de": "Empregado/a de Andares (Housekeeping-Fachkraft, Qualifikationsniveau 2)",
+            "en": "Empregado/a de Andares (housekeeping attendant qualification, level 2)",
+            "fr": "Empregado/a de Andares (employé/e d'étages, niveau 2)",
+            "it": "Empregado/a de Andares (addetto/a ai piani, livello 2)"
+          }
+        },
+        {
+          "name": {
+            "de": "Curso de Gestão Hoteleira (Abschluss Hotelmanagement)",
+            "en": "Curso de Gestão Hoteleira (hotel management programme diploma)",
+            "fr": "Curso de Gestão Hoteleira (diplôme de gestion hôtelière)",
+            "it": "Curso de Gestão Hoteleira (diploma di gestione alberghiera)"
+          }
+        },
+        {
+          "name": {
+            "de": "Formação em Higiene e Segurança Alimentar / HACCP (Lebensmittelhygiene-Schulung)",
+            "en": "Formação em Higiene e Segurança Alimentar (food hygiene and safety / HACCP training)",
+            "fr": "Formação em Higiene e Segurança Alimentar (formation hygiène et sécurité alimentaire / HACCP)",
+            "it": "Formação em Higiene e Segurança Alimentar (formazione igiene e sicurezza alimentare / HACCP)"
           }
         }
       ]

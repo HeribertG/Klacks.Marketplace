@@ -281,36 +281,61 @@
       "qualificationCatalog": [
         {
           "name": {
-            "de": "Level 2 Food Safety and Hygiene for Catering (Lebensmittelhygiene-Zertifikat)",
-            "en": "Level 2 Food Safety and Hygiene for Catering certificate",
-            "fr": "Level 2 Food Safety and Hygiene for Catering (certificat d'hygiène alimentaire)",
-            "it": "Level 2 Food Safety and Hygiene for Catering (certificato di igiene alimentare)"
-          }
-        },
-        {
-          "name": {
-            "de": "Personal Licence (APLH, Lizenz zum Alkoholausschank)",
-            "en": "Personal Licence (APLH) for the sale of alcohol",
-            "fr": "Personal Licence (APLH, licence pour la vente d'alcool)",
-            "it": "Personal Licence (APLH, licenza per la vendita di alcolici)"
-          }
-        },
-        {
-          "name": {
-            "de": "City & Guilds Professional Cookery Diploma (Koch-Berufsdiplom)",
-            "en": "City & Guilds Professional Cookery Diploma",
-            "fr": "City & Guilds Professional Cookery Diploma (diplôme professionnel de cuisine)",
-            "it": "City & Guilds Professional Cookery Diploma (diploma professionale di cucina)"
-          }
-        },
-        {
-          "name": {
             "de": "Emergency First Aid at Work (Erste-Hilfe-Zeugnis)",
             "en": "Emergency First Aid at Work certificate",
             "fr": "Emergency First Aid at Work (certificat de premiers secours)",
             "it": "Emergency First Aid at Work (certificato di primo soccorso)"
           },
           "isTimeLimited": true
+        },
+        {
+          "name": {
+            "de": "Level 2 NVQ Diploma in Professional Cookery (Berufsabschluss Koch/Köchin, City & Guilds)",
+            "en": "Level 2 NVQ Diploma in Professional Cookery (City & Guilds)",
+            "fr": "Level 2 NVQ Diploma in Professional Cookery (diplôme de cuisinier, City & Guilds)",
+            "it": "Level 2 NVQ Diploma in Professional Cookery (diploma di cuoco, City & Guilds)"
+          }
+        },
+        {
+          "name": {
+            "de": "Commis Chef Apprenticeship Level 2 (Lehre Jungkoch/Jungköchin)",
+            "en": "Commis Chef apprenticeship (Level 2)",
+            "fr": "Commis Chef Apprenticeship Level 2 (apprentissage de commis de cuisine)",
+            "it": "Commis Chef Apprenticeship Level 2 (apprendistato di commis di cucina)"
+          }
+        },
+        {
+          "name": {
+            "de": "Hospitality Team Member Apprenticeship Level 2 (Lehre Hotel- und Gastgewerbe)",
+            "en": "Hospitality Team Member apprenticeship (Level 2)",
+            "fr": "Hospitality Team Member Apprenticeship Level 2 (apprentissage en hôtellerie-restauration)",
+            "it": "Hospitality Team Member Apprenticeship Level 2 (apprendistato nel settore alberghiero)"
+          }
+        },
+        {
+          "name": {
+            "de": "Hospitality Supervisor Apprenticeship Level 3 (Lehre Schichtleitung Gastgewerbe)",
+            "en": "Hospitality Supervisor apprenticeship (Level 3)",
+            "fr": "Hospitality Supervisor Apprenticeship Level 3 (apprentissage de superviseur en hôtellerie)",
+            "it": "Hospitality Supervisor Apprenticeship Level 3 (apprendistato di supervisore alberghiero)"
+          }
+        },
+        {
+          "name": {
+            "de": "Level 2 Award in Food Safety in Catering (Lebensmittelhygiene-Zertifikat)",
+            "en": "Level 2 Award in Food Safety in Catering (food hygiene certificate)",
+            "fr": "Level 2 Award in Food Safety in Catering (certificat d'hygiène alimentaire)",
+            "it": "Level 2 Award in Food Safety in Catering (certificato di igiene alimentare)"
+          },
+          "isTimeLimited": true
+        },
+        {
+          "name": {
+            "de": "Personal Licence / APLH (Lizenz für Alkoholausschank, Licensing Act 2003)",
+            "en": "Personal licence holder / APLH (Licensing Act 2003)",
+            "fr": "Personal Licence / APLH (licence personnelle de vente d'alcool, Licensing Act 2003)",
+            "it": "Personal Licence / APLH (licenza personale per la vendita di alcolici, Licensing Act 2003)"
+          }
         }
       ]
     }

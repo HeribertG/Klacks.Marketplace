@@ -252,7 +252,7 @@
     "hospitality": {
       "schedulingRulePresets": [
         {
-          "name": "NO Hotell og Restaurant Standard",
+          "name": "NO Hotell og restaurant Standard",
           "maxDailyHours": 9,
           "maxWeeklyHours": 40,
           "minPauseHours": 11,
@@ -265,28 +265,52 @@
       "qualificationCatalog": [
         {
           "name": {
-            "de": "Fagbrev kokk (Berufszeugnis Koch)",
-            "en": "Fagbrev kokk (chef's trade certificate)",
-            "fr": "Fagbrev kokk (certificat professionnel de cuisinier)",
-            "it": "Fagbrev kokk (attestato professionale di cuoco)"
-          }
-        },
-        {
-          "name": {
-            "de": "Fagbrev servitør (Berufszeugnis Kellner/in)",
-            "en": "Fagbrev servitør (waiter's trade certificate)",
-            "fr": "Fagbrev servitør (certificat professionnel de serveur)",
-            "it": "Fagbrev servitør (attestato professionale di cameriere)"
-          }
-        },
-        {
-          "name": {
             "de": "Erste-Hilfe-Ausbildung",
             "en": "First aid certificate",
             "fr": "Formation aux premiers secours",
             "it": "Formazione di primo soccorso"
           },
           "isTimeLimited": true
+        },
+        {
+          "name": {
+            "de": "Koch/Köchin (Fagbrev Kokk)",
+            "en": "Chef (kokk, Norwegian trade certificate)",
+            "fr": "Cuisinier/ère (fagbrev kokk, certificat professionnel norvégien)",
+            "it": "Cuoco/a (fagbrev kokk, certificato professionale norvegese)"
+          }
+        },
+        {
+          "name": {
+            "de": "Restaurantfachkraft (Fagbrev Servitør)",
+            "en": "Waiter (servitør, Norwegian trade certificate)",
+            "fr": "Serveur/Serveuse (fagbrev servitør, certificat professionnel norvégien)",
+            "it": "Cameriere/a (fagbrev servitør, certificato professionale norvegese)"
+          }
+        },
+        {
+          "name": {
+            "de": "Hotelrezeptionist/in (Fagbrev Resepsjonsfag)",
+            "en": "Hotel receptionist (resepsjonsfaget, Norwegian trade certificate)",
+            "fr": "Réceptionniste d'hôtel (fagbrev resepsjonsfaget, certificat professionnel norvégien)",
+            "it": "Receptionist d'albergo (fagbrev resepsjonsfaget, certificato professionale norvegese)"
+          }
+        },
+        {
+          "name": {
+            "de": "Institutionskoch/-köchin (Fagbrev Ernæringskokk)",
+            "en": "Institutional cook (ernæringskokk, Norwegian trade certificate)",
+            "fr": "Cuisinier/ère de collectivité (fagbrev ernæringskokk, certificat professionnel norvégien)",
+            "it": "Cuoco/a di collettività (fagbrev ernæringskokk, certificato professionale norvegese)"
+          }
+        },
+        {
+          "name": {
+            "de": "Reinigungsfachkraft Housekeeping (Fagbrev Renholdsoperatør)",
+            "en": "Cleaning operator (renholdsoperatør, Norwegian trade certificate)",
+            "fr": "Agent/e de propreté (fagbrev renholdsoperatør, certificat professionnel norvégien)",
+            "it": "Operatore/trice delle pulizie (fagbrev renholdsoperatør, certificato professionale norvegese)"
+          }
         }
       ]
     }

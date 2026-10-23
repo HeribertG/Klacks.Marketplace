@@ -28,6 +28,8 @@
   "surcharges": {
     "nightWindow": { "start": "22:00", "end": "06:00" },
     "holidayRate": 1.0,
+    "we1Rate": 0.6667,
+    "we2Rate": 1.0,
     "overtime": {
       "basis": "day",
       "rateMode": "multiplier",
@@ -284,28 +286,51 @@
       "qualificationCatalog": [
         {
           "name": {
-            "de": "中餐烹調丙級技術士 (Chinesische Küche, Techniker-Zertifikat Stufe C, staatliche Fachprüfung)",
-            "en": "中餐烹調丙級技術士 (Chinese cuisine, level C technician certificate, national trade skill test)",
-            "fr": "中餐烹調丙級技術士 (cuisine chinoise, certificat de technicien niveau C, examen national de compétence)",
-            "it": "中餐烹調丙級技術士 (cucina cinese, certificato di tecnico di livello C, esame nazionale di competenza)"
+            "de": "Erste-Hilfe-Ausbildung",
+            "en": "First aid certificate",
+            "fr": "Formation aux premiers secours",
+            "it": "Formazione di primo soccorso"
           },
           "isTimeLimited": true
         },
         {
           "name": {
-            "de": "西餐烹飪丙級技術士 (Westliche Küche, Techniker-Zertifikat Stufe C, staatliche Fachprüfung)",
-            "en": "西餐烹飪丙級技術士 (Western cuisine, level C technician certificate, national trade skill test)",
-            "fr": "西餐烹飪丙級技術士 (cuisine occidentale, certificat de technicien niveau C, examen national de compétence)",
-            "it": "西餐烹飪丙級技術士 (cucina occidentale, certificato di tecnico di livello C, esame nazionale di competenza)"
-          },
-          "isTimeLimited": true
+            "de": "中餐烹調技術士 (Technikerzertifikat Chinesische Küche)",
+            "en": "Chinese cuisine cook technician certificate",
+            "fr": "Certificat de technicien en cuisine chinoise",
+            "it": "Certificato di tecnico di cucina cinese"
+          }
         },
         {
           "name": {
-            "de": "餐旅服務丙級技術士 (Gastgewerbe-Service, Techniker-Zertifikat Stufe C, staatliche Fachprüfung)",
-            "en": "餐旅服務丙級技術士 (hospitality service, level C technician certificate, national trade skill test)",
-            "fr": "餐旅服務丙級技術士 (service en hôtellerie-restauration, certificat de technicien niveau C, examen national de compétence)",
-            "it": "餐旅服務丙級技術士 (servizio in hotel e ristorazione, certificato di tecnico di livello C, esame nazionale di competenza)"
+            "de": "西餐烹調技術士 (Technikerzertifikat Westliche Küche)",
+            "en": "Western cuisine cook technician certificate",
+            "fr": "Certificat de technicien en cuisine occidentale",
+            "it": "Certificato di tecnico di cucina occidentale"
+          }
+        },
+        {
+          "name": {
+            "de": "烘焙食品技術士 (Technikerzertifikat Bäckerei/Konditorei)",
+            "en": "Baking food technician certificate",
+            "fr": "Certificat de technicien en boulangerie-pâtisserie",
+            "it": "Certificato di tecnico di panificazione e pasticceria"
+          }
+        },
+        {
+          "name": {
+            "de": "餐旅服務技術士 (Technikerzertifikat Gastgewerbe-Service)",
+            "en": "Hospitality service technician certificate",
+            "fr": "Certificat de technicien en service hôtelier et de restauration",
+            "it": "Certificato di tecnico di servizio alberghiero e ristorazione"
+          }
+        },
+        {
+          "name": {
+            "de": "飲料調製技術士 (Technikerzertifikat Getränkezubereitung/Bar)",
+            "en": "Beverage preparation technician certificate",
+            "fr": "Certificat de technicien en préparation de boissons",
+            "it": "Certificato di tecnico di preparazione bevande"
           }
         }
       ]

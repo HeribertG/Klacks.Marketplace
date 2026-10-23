@@ -21,8 +21,8 @@
     "vacationDaysPerYear": 6,
     "maxDailyHours": 9,
     "maxWeeklyHours": 48,
-    "minRestDays": 1,
-    "minPauseHours": 1
+    "maxConsecutiveDays": 6,
+    "minRestDays": 1
   },
   "surcharges": {
     "nightWindow": { "start": "00:00", "end": "06:00" },
@@ -54,7 +54,6 @@
           "name": "TH Homecare Standard",
           "maxDailyHours": 9,
           "maxWeeklyHours": 48,
-          "minPauseHours": 1,
           "minRestDays": 1,
           "nightStart": "00:00",
           "nightEnd": "06:00",
@@ -96,7 +95,6 @@
           "name": "TH Hospital Standard",
           "maxDailyHours": 9,
           "maxWeeklyHours": 48,
-          "minPauseHours": 1,
           "minRestDays": 1,
           "nightStart": "00:00",
           "nightEnd": "06:00",
@@ -138,7 +136,6 @@
           "name": "TH Security Standard",
           "maxDailyHours": 9,
           "maxWeeklyHours": 48,
-          "minPauseHours": 1,
           "minRestDays": 1,
           "nightStart": "00:00",
           "nightEnd": "06:00",
@@ -172,7 +169,6 @@
           "name": "TH Facility Standard",
           "maxDailyHours": 9,
           "maxWeeklyHours": 48,
-          "minPauseHours": 1,
           "minRestDays": 1,
           "nightStart": "00:00",
           "nightEnd": "06:00",
@@ -205,7 +201,6 @@
           "name": "TH Logistics Standard",
           "maxDailyHours": 9,
           "maxWeeklyHours": 48,
-          "minPauseHours": 1,
           "minRestDays": 1,
           "nightStart": "00:00",
           "nightEnd": "06:00",
@@ -256,7 +251,6 @@
           "name": "TH Hospitality Standard",
           "maxDailyHours": 9,
           "maxWeeklyHours": 48,
-          "minPauseHours": 1,
           "minRestDays": 1,
           "nightStart": "00:00",
           "nightEnd": "06:00",
@@ -266,28 +260,61 @@
       "qualificationCatalog": [
         {
           "name": {
-            "de": "Thailand Professional Qualification Institute (TPQI) – Berufsqualifikation Restaurant- und Getränkeservice, Teil des Berufsstandards Tourismus/Hotellerie/Gastronomie",
-            "en": "Thailand Professional Qualification Institute (TPQI) food and beverage service occupational qualification, part of the Tourism, Hotel, Restaurant and Food Service occupational standards",
-            "fr": "Qualification professionnelle en service de restauration et de boissons du Thailand Professional Qualification Institute (TPQI), norme professionnelle tourisme/hôtellerie/restauration",
-            "it": "Qualifica professionale di servizio ristorazione e bevande del Thailand Professional Qualification Institute (TPQI), standard occupazionale turismo/hotel/ristorazione"
-          }
-        },
-        {
-          "name": {
-            "de": "Ärztliches Gesundheitszeugnis für Lebensmittelpersonal (9-Krankheiten-Liste, Ministry of Public Health)",
-            "en": "Medical certificate for food handlers (9-disease list, Ministry of Public Health)",
-            "fr": "Certificat médical pour le personnel manipulant des denrées alimentaires (liste de 9 maladies, ministère de la Santé publique)",
-            "it": "Certificato medico per il personale addetto agli alimenti (elenco di 9 malattie, Ministero della Salute Pubblica)"
+            "de": "Erste-Hilfe-Ausbildung",
+            "en": "First aid certificate",
+            "fr": "Formation aux premiers secours",
+            "it": "Formazione di primo soccorso"
           },
           "isTimeLimited": true
         },
         {
           "name": {
-            "de": "Schulungszertifikat Lebensmittelhygiene für Gastronomiebetriebe (Ministerial Regulation on Food Establishment Sanitation B.E. 2561)",
-            "en": "Food sanitation training certificate for food-service establishments (Ministerial Regulation on Food Establishment Sanitation B.E. 2561)",
-            "fr": "Certificat de formation à l'hygiène alimentaire pour les établissements de restauration (règlement ministériel sur l'hygiène des établissements alimentaires B.E. 2561)",
-            "it": "Certificato di formazione sull'igiene alimentare per gli esercizi di ristorazione (regolamento ministeriale sull'igiene degli esercizi alimentari B.E. 2561)"
+            "de": "Berufsdiplom Kochkunst und Ernährung (ปวช. อาหารและโภชนาการ, Office of the Vocational Education Commission)",
+            "en": "Vocational certificate in food and nutrition (ปวช. อาหารและโภชนาการ, Office of the Vocational Education Commission)",
+            "fr": "Diplôme professionnel en cuisine et nutrition (ปวช. อาหารและโภชนาการ, Office of the Vocational Education Commission)",
+            "it": "Diploma professionale in cucina e nutrizione (ปวช. อาหารและโภชนาการ, Office of the Vocational Education Commission)"
           }
+        },
+        {
+          "name": {
+            "de": "Berufsdiplom Hotelfach (ปวช./ปวส. การโรงแรม, Office of the Vocational Education Commission)",
+            "en": "Vocational certificate/diploma in hotel studies (ปวช./ปวส. การโรงแรม, Office of the Vocational Education Commission)",
+            "fr": "Diplôme professionnel en hôtellerie (ปวช./ปวส. การโรงแรม, Office of the Vocational Education Commission)",
+            "it": "Diploma professionale alberghiero (ปวช./ปวส. การโรงแรม, Office of the Vocational Education Commission)"
+          }
+        },
+        {
+          "name": {
+            "de": "Nationaler Fachkompetenznachweis Thai-Koch (ผู้ประกอบอาหารไทย, Department of Skill Development)",
+            "en": "National skill standard certificate for Thai cooks (ผู้ประกอบอาหารไทย, Department of Skill Development)",
+            "fr": "Certificat de compétence professionnelle nationale de cuisinier thaïlandais (Department of Skill Development)",
+            "it": "Certificato dello standard nazionale di competenza di cuoco tailandese (Department of Skill Development)"
+          }
+        },
+        {
+          "name": {
+            "de": "Nationaler Fachkompetenznachweis Restaurantservice (พนักงานบริการอาหารและเครื่องดื่ม, Department of Skill Development)",
+            "en": "National skill standard certificate for food and beverage service (พนักงานบริการอาหารและเครื่องดื่ม, Department of Skill Development)",
+            "fr": "Certificat de compétence professionnelle nationale en service en restauration (Department of Skill Development)",
+            "it": "Certificato dello standard nazionale di competenza nel servizio di sala (Department of Skill Development)"
+          }
+        },
+        {
+          "name": {
+            "de": "Nationaler Fachkompetenznachweis Barkeeper (พนักงานผสมเครื่องดื่ม, Department of Skill Development)",
+            "en": "National skill standard certificate for bartenders (พนักงานผสมเครื่องดื่ม, Department of Skill Development)",
+            "fr": "Certificat de compétence professionnelle nationale de barman (Department of Skill Development)",
+            "it": "Certificato dello standard nazionale di competenza di barman (Department of Skill Development)"
+          }
+        },
+        {
+          "name": {
+            "de": "Lebensmittelhygiene-Schulung für Küchen- und Servicepersonal (ผู้สัมผัสอาหาร, Ministry of Public Health)",
+            "en": "Food handler hygiene training (ผู้สัมผัสอาหาร, Ministry of Public Health)",
+            "fr": "Formation à l'hygiène des manipulateurs d'aliments (ผู้สัมผัสอาหาร, Ministry of Public Health)",
+            "it": "Formazione igienica per addetti alimentari (ผู้สัมผัสอาหาร, Ministry of Public Health)"
+          },
+          "isTimeLimited": true
         }
       ]
     }

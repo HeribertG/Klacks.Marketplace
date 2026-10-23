@@ -261,7 +261,7 @@
       "schedulingRulePresets": [
         {
           "name": "PL Hotelarstwo i gastronomia Standard",
-          "maxDailyHours": 8,
+          "maxDailyHours": 12,
           "maxWeeklyHours": 48,
           "minPauseHours": 11,
           "minRestDays": 1,
@@ -273,35 +273,51 @@
       "qualificationCatalog": [
         {
           "name": {
-            "de": "Kucharz (Berufsqualifikation Koch, Berufscode 512001)",
-            "en": "Kucharz (chef vocational qualification, occupation code 512001)",
-            "fr": "Kucharz (qualification professionnelle de cuisinier, code métier 512001)",
-            "it": "Kucharz (qualifica professionale di cuoco, codice professione 512001)"
-          }
-        },
-        {
-          "name": {
-            "de": "Kelner (Berufsqualifikation Kellner, Berufscode 513101)",
-            "en": "Kelner (waiter vocational qualification, occupation code 513101)",
-            "fr": "Kelner (qualification professionnelle de serveur, code métier 513101)",
-            "it": "Kelner (qualifica professionale di cameriere, codice professione 513101)"
-          }
-        },
-        {
-          "name": {
-            "de": "Szkolenie HACCP (periodische HACCP-Schulung für Beschäftigte in der Gastronomie)",
-            "en": "Szkolenie HACCP (periodic HACCP training for food service staff)",
-            "fr": "Szkolenie HACCP (formation périodique HACCP pour le personnel de restauration)",
-            "it": "Szkolenie HACCP (formazione periodica HACCP per il personale della ristorazione)"
+            "de": "Kurs pierwszej pomocy (Erste-Hilfe-Kurs)",
+            "en": "Kurs pierwszej pomocy (first aid course)",
+            "fr": "Kurs pierwszej pomocy (cours de premiers secours)",
+            "it": "Kurs pierwszej pomocy (corso di primo soccorso)"
           },
           "isTimeLimited": true
         },
         {
           "name": {
-            "de": "Książeczka zdrowia (sanitär-epidemiologisches Gesundheitsbuch mit periodischer ärztlicher Untersuchung für Lebensmittelbeschäftigte)",
-            "en": "Książeczka zdrowia (sanitary-epidemiological health record with periodic medical examination for food handlers)",
-            "fr": "Książeczka zdrowia (carnet de santé sanitaro-épidémiologique avec examen médical périodique pour le personnel manipulant des denrées alimentaires)",
-            "it": "Książeczka zdrowia (libretto sanitario-epidemiologico con visita medica periodica per il personale a contatto con gli alimenti)"
+            "de": "Technik żywienia i usług gastronomicznych (Techniker für Ernährung und Gastronomiedienstleistungen)",
+            "en": "Technik żywienia i usług gastronomicznych (technician of catering and gastronomy services)",
+            "fr": "Technik żywienia i usług gastronomicznych (technicien en alimentation et services de restauration)",
+            "it": "Technik żywienia i usług gastronomicznych (tecnico dell'alimentazione e dei servizi gastronomici)"
+          }
+        },
+        {
+          "name": {
+            "de": "Kucharz, kwalifikacja zawodowa HGT.02 (Berufsabschluss Koch/Köchin)",
+            "en": "Kucharz, vocational qualification HGT.02 (cook)",
+            "fr": "Kucharz, qualification professionnelle HGT.02 (cuisinier)",
+            "it": "Kucharz, qualifica professionale HGT.02 (cuoco)"
+          }
+        },
+        {
+          "name": {
+            "de": "Kelner, kwalifikacja zawodowa HGT.01 (Berufsabschluss Kellner/in)",
+            "en": "Kelner, vocational qualification HGT.01 (waiter)",
+            "fr": "Kelner, qualification professionnelle HGT.01 (serveur)",
+            "it": "Kelner, qualifica professionale HGT.01 (cameriere)"
+          }
+        },
+        {
+          "name": {
+            "de": "Technik hotelarstwa (Hotelfach-Techniker)",
+            "en": "Technik hotelarstwa (hotel industry technician)",
+            "fr": "Technik hotelarstwa (technicien en hôtellerie)",
+            "it": "Technik hotelarstwa (tecnico del settore alberghiero)"
+          }
+        },
+        {
+          "name": {
+            "de": "Orzeczenie do celów sanitarno-epidemiologicznych (Gesundheitszeugnis für Lebensmittelarbeit)",
+            "en": "Orzeczenie do celów sanitarno-epidemiologicznych (sanitary-epidemiological medical certificate for food handling)",
+            "fr": "Orzeczenie do celów sanitarno-epidemiologicznych (certificat médical sanitaire pour la manipulation de denrées alimentaires)",
+            "it": "Orzeczenie do celów sanitarno-epidemiologicznych (certificato medico sanitario per la manipolazione di alimenti)"
           },
           "isTimeLimited": true
         }

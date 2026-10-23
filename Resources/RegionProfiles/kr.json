@@ -26,6 +26,7 @@
     "nightWindow": { "start": "22:00", "end": "06:00" },
     "nightRate": 0.5,
     "holidayRate": 0.5,
+    "stackingMode": "additive",
     "overtime": {
       "basis": "week",
       "tiers": [
@@ -238,7 +239,7 @@
     "hospitality": {
       "schedulingRulePresets": [
         {
-          "name": "KR 숙박음식업 표준",
+          "name": "KR 숙박·음식점업 표준",
           "maxWeeklyHours": 52,
           "minRestDays": 1,
           "nightStart": "22:00",
@@ -249,28 +250,52 @@
       "qualificationCatalog": [
         {
           "name": {
-            "de": "조리기능사 (Jori Gineungsa, staatliche Handwerksqualifikation Koch/Köchin, Fachrichtung z.B. koreanische/westliche/chinesische Küche)",
-            "en": "Jori Gineungsa (national craftsman-level cook qualification, cuisine specialisation e.g. Korean/Western/Chinese)",
-            "fr": "Jori Gineungsa (qualification nationale de cuisinier de niveau artisan, spécialisation par cuisine, p.ex. coréenne/occidentale/chinoise)",
-            "it": "Jori Gineungsa (qualifica nazionale di cuoco di livello artigiano, specializzazione per cucina, es. coreana/occidentale/cinese)"
-          }
-        },
-        {
-          "name": {
-            "de": "조주기능사 (Joju Gineungsa, staatliche Handwerksqualifikation Barkeeper/in, Getränkeservice in Hotellerie und Gastronomie)",
-            "en": "Joju Gineungsa (national craftsman-level bartender qualification, beverage service in hotels and food service)",
-            "fr": "Joju Gineungsa (qualification nationale de barman/barmaid de niveau artisan, service des boissons en hôtellerie-restauration)",
-            "it": "Joju Gineungsa (qualifica nazionale di barista/bartender di livello artigiano, servizio bevande in hotel e ristorazione)"
-          }
-        },
-        {
-          "name": {
-            "de": "위생교육 (Wisaeng Gyoyuk, verpflichtende Lebensmittelhygiene-Schulung für Gastronomiebetriebe)",
-            "en": "Wisaeng Gyoyuk (mandatory food hygiene training for food-service businesses)",
-            "fr": "Wisaeng Gyoyuk (formation obligatoire à l'hygiène alimentaire pour les établissements de restauration)",
-            "it": "Wisaeng Gyoyuk (formazione obbligatoria sull'igiene alimentare per gli esercizi di ristorazione)"
+            "de": "Erste-Hilfe-Ausbildung",
+            "en": "First aid certificate",
+            "fr": "Formation aux premiers secours",
+            "it": "Formazione di primo soccorso"
           },
           "isTimeLimited": true
+        },
+        {
+          "name": {
+            "de": "조리기능사 (Jori Gineungsa, staatliches Berufszertifikat Koch/Köchin)",
+            "en": "Craftsman Cook (Jori Gineungsa, national technical qualification)",
+            "fr": "Craftsman Cook (Jori Gineungsa, qualification technique nationale de cuisinier)",
+            "it": "Craftsman Cook (Jori Gineungsa, qualifica tecnica nazionale di cuoco)"
+          }
+        },
+        {
+          "name": {
+            "de": "조주기능사 (Joju Gineungsa, staatliches Berufszertifikat Barkeeper)",
+            "en": "Craftsman Bartender (Joju Gineungsa, national technical qualification)",
+            "fr": "Craftsman Bartender (Joju Gineungsa, qualification technique nationale de barman)",
+            "it": "Craftsman Bartender (Joju Gineungsa, qualifica tecnica nazionale di barman)"
+          }
+        },
+        {
+          "name": {
+            "de": "제과기능사 (Jegwa Gineungsa, staatliches Berufszertifikat Konditorei)",
+            "en": "Craftsman Confectionary Making (Jegwa Gineungsa, national technical qualification)",
+            "fr": "Craftsman Confectionary Making (Jegwa Gineungsa, qualification technique nationale de pâtisserie)",
+            "it": "Craftsman Confectionary Making (Jegwa Gineungsa, qualifica tecnica nazionale di pasticceria)"
+          }
+        },
+        {
+          "name": {
+            "de": "호텔경영사 (Hotel Gyeongyeongsa, staatliches Zertifikat Hotelmanagement)",
+            "en": "Hotel Gyeongyeongsa (national hotel management qualification)",
+            "fr": "Hotel Gyeongyeongsa (qualification nationale en gestion hôtelière)",
+            "it": "Hotel Gyeongyeongsa (qualifica nazionale in gestione alberghiera)"
+          }
+        },
+        {
+          "name": {
+            "de": "호텔서비스사 (Hotel Seobiseusa, staatliches Zertifikat Hotelservice)",
+            "en": "Hotel Seobiseusa (national hotel service qualification)",
+            "fr": "Hotel Seobiseusa (qualification nationale de service hôtelier)",
+            "it": "Hotel Seobiseusa (qualifica nazionale di servizio alberghiero)"
+          }
         }
       ]
     }

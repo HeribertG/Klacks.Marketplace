@@ -29,7 +29,14 @@
     "nightRate": 0.25,
     "holidayRate": 0.75,
     "we2Rate": 0.75,
-    "nightWindow": { "start": "22:00", "end": "06:00" }
+    "nightWindow": { "start": "22:00", "end": "06:00" },
+    "overtime": {
+      "basis": "week",
+      "tiers": [
+        { "afterHours": 40, "rate": 0.2 },
+        { "afterHours": 45, "rate": 0.4 }
+      ]
+    }
   },
   "compliance": {
     "enforcement": {
@@ -38,7 +45,8 @@
       "allowSupervisorOverride": true
     },
     "periodCaps": [
-      { "windowWeeks": 17, "maxAverageWeeklyHours": 48 }
+      { "windowWeeks": 17, "maxAverageWeeklyHours": 48 },
+      { "period": "year", "scope": "overtimeHours", "capHours": 150 }
     ]
   },
   "export": {
@@ -263,7 +271,7 @@
     "hospitality": {
       "schedulingRulePresets": [
         {
-          "name": "GR Ξενοδοχεία-Εστίαση Standard",
+          "name": "GR Ξενοδοχεία και Εστίαση Standard",
           "maxDailyHours": 9,
           "maxWeeklyHours": 45,
           "minPauseHours": 11,
@@ -277,27 +285,51 @@
       "qualificationCatalog": [
         {
           "name": {
-            "de": "Gesundheitszeugnis für Beschäftigte in Gastronomiebetrieben (Pistopoiitiko Ygeias)",
-            "en": "Health certificate for food service employees (Pistopoiitiko Ygeias)",
-            "fr": "Certificat de santé pour les employés de la restauration (Pistopoiitiko Ygeias)",
-            "it": "Certificato sanitario per i dipendenti della ristorazione (Pistopoiitiko Ygeias)"
+            "de": "Πρώτες Βοήθειες (Erste-Hilfe-Zeugnis)",
+            "en": "Protes Voithies (first aid certificate)",
+            "fr": "Protes Voithies (certificat de premiers secours)",
+            "it": "Protes Voithies (certificato di primo soccorso)"
           },
           "isTimeLimited": true
         },
         {
           "name": {
-            "de": "Diplom für Kochkunst eines Berufsbildungsinstituts (IEK, staatlich anerkannt durch EOPPEP)",
-            "en": "Vocational diploma in culinary arts (IEK, state-recognised via EOPPEP)",
-            "fr": "Diplôme d'art culinaire d'un institut de formation professionnelle (IEK, reconnu par l'EOPPEP)",
-            "it": "Diploma di arte culinaria di un istituto di formazione professionale (IEK, riconosciuto dall'EOPPEP)"
+            "de": "Δίπλωμα ΙΕΚ Τεχνικός Μαγειρικής Τέχνης – Αρχιμάγειρας (IEK-Diplom Kochkunst/Chefkoch)",
+            "en": "IEK diploma Technikos Mageirikis Technis – Archimageiras (culinary arts chef)",
+            "fr": "Diplôme IEK Technikos Mageirikis Technis – Archimageiras (arts culinaires/chef)",
+            "it": "Diploma IEK Technikos Mageirikis Technis – Archimageiras (arte culinaria/chef)"
           }
         },
         {
           "name": {
-            "de": "EOPPEP-Zertifizierung beruflicher Qualifikationen für Köche/Kellner",
-            "en": "EOPPEP certification of vocational qualifications for cooks/waiting staff",
-            "fr": "Certification EOPPEP des qualifications professionnelles pour cuisiniers/serveurs",
-            "it": "Certificazione EOPPEP delle qualifiche professionali per cuochi/camerieri"
+            "de": "Δίπλωμα ΙΕΚ Τεχνικός Τουριστικών Μονάδων και Επιχειρήσεων Φιλοξενίας (IEK-Diplom Hotellerie, Rezeption und Etage)",
+            "en": "IEK diploma Technikos Touristikon Monadon kai Epicheiriseon Filoxenias (hotel operations, reception and floor service)",
+            "fr": "Diplôme IEK Technikos Touristikon Monadon kai Epicheiriseon Filoxenias (hôtellerie, réception et étages)",
+            "it": "Diploma IEK Technikos Touristikon Monadon kai Epicheiriseon Filoxenias (settore alberghiero, ricevimento e piani)"
+          }
+        },
+        {
+          "name": {
+            "de": "Απολυτήριο ΕΠΑ.Λ. Υπάλληλος Τουριστικών Επιχειρήσεων (Berufsschulabschluss Tourismusbetriebe)",
+            "en": "EPAL vocational lyceum diploma Ypallilos Touristikon Epicheiriseon (tourism businesses employee)",
+            "fr": "Diplôme EPAL Ypallilos Touristikon Epicheiriseon (employé d'entreprises touristiques)",
+            "it": "Diploma EPAL Ypallilos Touristikon Epicheiriseon (addetto alle imprese turistiche)"
+          }
+        },
+        {
+          "name": {
+            "de": "Πτυχίο ΕΠΑ.Σ. Μαθητείας ΔΥΠΑ Μαγειρικής Τέχνης (Lehrabschluss Kochkunst)",
+            "en": "EPAS DYPA apprenticeship diploma Mageiriki Techni (culinary arts)",
+            "fr": "Diplôme EPAS Mathiteias DYPA Mageiriki Techni (apprentissage en cuisine)",
+            "it": "Diploma EPAS Mathiteias DYPA Mageiriki Techni (apprendistato di cucina)"
+          }
+        },
+        {
+          "name": {
+            "de": "Βεβαίωση εκπαίδευσης ΕΦΕΤ στην υγιεινή τροφίμων (EFET-Lebensmittelhygiene-Schulung)",
+            "en": "EFET food hygiene training certificate",
+            "fr": "Attestation de formation EFET en hygiène alimentaire",
+            "it": "Attestato di formazione EFET in igiene alimentare"
           }
         }
       ]

@@ -258,7 +258,7 @@
     "hospitality": {
       "schedulingRulePresets": [
         {
-          "name": "VN Dịch vụ Nhà hàng-Khách sạn Standard",
+          "name": "VN Khách sạn và nhà hàng Standard",
           "maxDailyHours": 12,
           "maxWeeklyHours": 48,
           "minPauseHours": 12,
@@ -271,28 +271,52 @@
       "qualificationCatalog": [
         {
           "name": {
-            "de": "Chứng chỉ Nghiệp vụ Phục vụ Nhà hàng (VTOS Food & Beverage Service, Zertifikat nach den Tiêu chuẩn Kỹ năng nghề Du lịch Việt Nam / Vietnam Tourism Occupational Skills Standards, mehrstufig)",
-            "en": "Chứng chỉ Nghiệp vụ Phục vụ Nhà hàng (VTOS Food & Beverage Service certificate under the Vietnam Tourism Occupational Skills Standards, multi-level)",
-            "fr": "Chứng chỉ Nghiệp vụ Phục vụ Nhà hàng (certificat VTOS Food & Beverage Service selon les normes de compétences professionnelles du tourisme vietnamien, plusieurs niveaux)",
-            "it": "Chứng chỉ Nghiệp vụ Phục vụ Nhà hàng (certificato VTOS Food & Beverage Service secondo gli standard di competenze professionali del turismo vietnamita, più livelli)"
-          }
-        },
-        {
-          "name": {
-            "de": "Chứng chỉ Nghiệp vụ Chế biến món ăn (VTOS Cookery, Zertifikat nach den Tiêu chuẩn Kỹ năng nghề Du lịch Việt Nam / Vietnam Tourism Occupational Skills Standards, mehrstufig)",
-            "en": "Chứng chỉ Nghiệp vụ Chế biến món ăn (VTOS Cookery certificate under the Vietnam Tourism Occupational Skills Standards, multi-level)",
-            "fr": "Chứng chỉ Nghiệp vụ Chế biến món ăn (certificat VTOS Cookery selon les normes de compétences professionnelles du tourisme vietnamien, plusieurs niveaux)",
-            "it": "Chứng chỉ Nghiệp vụ Chế biến món ăn (certificato VTOS Cookery secondo gli standard di competenze professionali del turismo vietnamita, più livelli)"
-          }
-        },
-        {
-          "name": {
-            "de": "Giấy xác nhận tập huấn kiến thức về an toàn thực phẩm (Bestätigung über Schulung zu Lebensmittelsicherheit, gültig 3 Jahre)",
-            "en": "Giấy xác nhận tập huấn kiến thức về an toàn thực phẩm (food safety knowledge training certificate, valid 3 years)",
-            "fr": "Giấy xác nhận tập huấn kiến thức về an toàn thực phẩm (certificat de formation aux connaissances en sécurité alimentaire, valable 3 ans)",
-            "it": "Giấy xác nhận tập huấn kiến thức về an toàn thực phẩm (certificato di formazione sulla sicurezza alimentare, valido 3 anni)"
+            "de": "Sơ cứu (Erste-Hilfe-Zeugnis)",
+            "en": "Sơ cứu (first aid certificate)",
+            "fr": "Sơ cứu (certificat de premiers secours)",
+            "it": "Sơ cứu (certificato di primo soccorso)"
           },
           "isTimeLimited": true
+        },
+        {
+          "name": {
+            "de": "Chứng chỉ sơ cấp Kỹ thuật chế biến món ăn (berufliche Grundqualifikation Kochtechnik)",
+            "en": "Chứng chỉ sơ cấp Kỹ thuật chế biến món ăn (elementary vocational certificate in culinary techniques)",
+            "fr": "Chứng chỉ sơ cấp Kỹ thuật chế biến món ăn (certificat professionnel élémentaire en techniques culinaires)",
+            "it": "Chứng chỉ sơ cấp Kỹ thuật chế biến món ăn (certificato professionale elementare in tecniche di cucina)"
+          }
+        },
+        {
+          "name": {
+            "de": "Chứng chỉ Nghiệp vụ nhà hàng (Zertifikat Restaurantservice)",
+            "en": "Chứng chỉ Nghiệp vụ nhà hàng (restaurant operations certificate)",
+            "fr": "Chứng chỉ Nghiệp vụ nhà hàng (certificat de service en restauration)",
+            "it": "Chứng chỉ Nghiệp vụ nhà hàng (certificato di servizio di ristorazione)"
+          }
+        },
+        {
+          "name": {
+            "de": "Chứng chỉ Nghiệp vụ lễ tân (Zertifikat Rezeption)",
+            "en": "Chứng chỉ Nghiệp vụ lễ tân (front office operations certificate)",
+            "fr": "Chứng chỉ Nghiệp vụ lễ tân (certificat de réception)",
+            "it": "Chứng chỉ Nghiệp vụ lễ tân (certificato di ricevimento)"
+          }
+        },
+        {
+          "name": {
+            "de": "Chứng chỉ Nghiệp vụ buồng (Zertifikat Housekeeping)",
+            "en": "Chứng chỉ Nghiệp vụ buồng (housekeeping operations certificate)",
+            "fr": "Chứng chỉ Nghiệp vụ buồng (certificat d'entretien des étages)",
+            "it": "Chứng chỉ Nghiệp vụ buồng (certificato di housekeeping)"
+          }
+        },
+        {
+          "name": {
+            "de": "Chứng chỉ VTOS (Zertifikat nach dem vietnamesischen Tourismus-Berufsstandard, Vietnam Tourism Occupational Skills Standards)",
+            "en": "Chứng chỉ VTOS (Vietnam Tourism Occupational Skills Standards certificate)",
+            "fr": "Chứng chỉ VTOS (certificat selon les normes vietnamiennes de compétences des métiers du tourisme)",
+            "it": "Chứng chỉ VTOS (certificato secondo gli standard vietnamiti delle competenze turistiche)"
+          }
         }
       ]
     }
