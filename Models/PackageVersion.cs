@@ -17,6 +17,7 @@ public class PackageVersion
     public string CountriesJson { get; set; } = string.Empty;
     public string StatesJson { get; set; } = string.Empty;
     public string CalendarRulesJson { get; set; } = string.Empty;
+    public string ExtraFilesJson { get; set; } = string.Empty;
     public PackageStatus Status { get; set; } = PackageStatus.PendingReview;
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 }

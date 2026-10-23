@@ -62,7 +62,7 @@ public class PackageService : IPackageService
             .FirstOrDefaultAsync(p => p.Code == code);
     }
 
-    public async Task<LanguagePackage> CreatePackageAsync(LanguagePackage package, string manifestJson, string translationsJson, string? docsJson = null, string? countriesJson = null, string? statesJson = null, string? calendarRulesJson = null)
+    public async Task<LanguagePackage> CreatePackageAsync(LanguagePackage package, string manifestJson, string translationsJson, string? docsJson = null, string? countriesJson = null, string? statesJson = null, string? calendarRulesJson = null, string? extraFilesJson = null)
     {
         var existing = await _db.Packages.FirstOrDefaultAsync(p => p.Code == package.Code && p.AuthorId == package.AuthorId);
         if (existing is not null)
@@ -88,6 +88,7 @@ public class PackageService : IPackageService
             CountriesJson = countriesJson ?? string.Empty,
             StatesJson = statesJson ?? string.Empty,
             CalendarRulesJson = calendarRulesJson ?? string.Empty,
+            ExtraFilesJson = extraFilesJson ?? string.Empty,
             Status = PackageStatus.PendingReview,
             CreatedAt = DateTime.UtcNow
         };
@@ -150,10 +151,15 @@ public class PackageService : IPackageService
             bundleDict["calendarRules"] = JsonSerializer.Deserialize<JsonElement>(latestVersion.CalendarRulesJson);
         }
 
+        if (!string.IsNullOrWhiteSpace(latestVersion.ExtraFilesJson))
+        {
+            bundleDict["files"] = JsonSerializer.Deserialize<JsonElement>(latestVersion.ExtraFilesJson);
+        }
+
         return Encoding.UTF8.GetBytes(JsonSerializer.Serialize(bundleDict, new JsonSerializerOptions { WriteIndented = true }));
     }
 
-    public async Task<LanguagePackage> UpdatePackageAsync(string code, LanguagePackage updated, string manifestJson, string translationsJson, string? docsJson, string? countriesJson, string? statesJson, string? calendarRulesJson)
+    public async Task<LanguagePackage> UpdatePackageAsync(string code, LanguagePackage updated, string manifestJson, string translationsJson, string? docsJson, string? countriesJson, string? statesJson, string? calendarRulesJson, string? extraFilesJson = null)
     {
         var existing = await _db.Packages
             .Include(p => p.Versions)
@@ -192,6 +198,7 @@ public class PackageService : IPackageService
         current.CountriesJson = countriesJson ?? string.Empty;
         current.StatesJson = statesJson ?? string.Empty;
         current.CalendarRulesJson = calendarRulesJson ?? string.Empty;
+        current.ExtraFilesJson = extraFilesJson ?? string.Empty;
         current.Status = existing.Status;
         current.CreatedAt = DateTime.UtcNow;
 

@@ -17,6 +17,7 @@
 /// <param name="CountriesJson">Optionaler JSON-String der Länderdaten</param>
 /// <param name="StatesJson">Optionaler JSON-String der Kantonsdaten</param>
 /// <param name="CalendarRulesJson">Optionaler JSON-String der Kalenderregeln</param>
+/// <param name="ExtraFilesJson">Optional JSON object of further pack files, file name ("assistant-texts.json") to content</param>
 namespace Klacks.Marketplace.Api.DTOs;
 
 public class PackageUploadDto
@@ -35,4 +36,5 @@ public class PackageUploadDto
     public string? CountriesJson { get; set; }
     public string? StatesJson { get; set; }
     public string? CalendarRulesJson { get; set; }
+    public string? ExtraFilesJson { get; set; }
 }

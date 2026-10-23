@@ -122,6 +122,11 @@ public class PackagesApiController(
             return BadRequest("Code, ManifestJson and TranslationsJson are required");
         }
 
+        if (!LanguagePackExtraFiles.IsValid(dto.ExtraFilesJson))
+        {
+            return BadRequest(LanguagePackExtraFiles.InvalidMessage);
+        }
+
         var existing = await packageService.GetPackageByCodeAsync(dto.Code);
 
         if (existing is not null)
@@ -139,7 +144,7 @@ public class PackagesApiController(
 
             await packageService.UpdatePackageAsync(
                 dto.Code, updated, dto.ManifestJson, dto.TranslationsJson,
-                dto.DocsJson, dto.CountriesJson, dto.StatesJson, dto.CalendarRulesJson);
+                dto.DocsJson, dto.CountriesJson, dto.StatesJson, dto.CalendarRulesJson, dto.ExtraFilesJson);
 
             return Ok(new { message = "Package updated", code = dto.Code });
         }
@@ -162,7 +167,7 @@ public class PackagesApiController(
 
         await packageService.CreatePackageAsync(
             package, dto.ManifestJson, dto.TranslationsJson,
-            dto.DocsJson, dto.CountriesJson, dto.StatesJson, dto.CalendarRulesJson);
+            dto.DocsJson, dto.CountriesJson, dto.StatesJson, dto.CalendarRulesJson, dto.ExtraFilesJson);
 
         return Created($"/api/packages/{dto.Code}", new { message = "Package created", code = dto.Code });
     }

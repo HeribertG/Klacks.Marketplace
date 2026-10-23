@@ -247,6 +247,10 @@ namespace Klacks.Marketplace.Data.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("ExtraFilesJson")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("ManifestJson")
                         .IsRequired()
                         .HasColumnType("TEXT");
