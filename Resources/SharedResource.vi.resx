@@ -216,7 +216,7 @@
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Gói Docker Compose</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Thiết lập Docker Compose tối giản không có trình cài đặt, dành cho chuyên gia Docker.</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>Máy tính văn phòng (Windows)</value></data>
-  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Cài đặt Klacks trực tiếp trên máy tính Windows 11 (64-bit), không cần Docker và không cần máy chủ riêng: một gói duy nhất sẽ thiết lập cơ sở dữ liệu, Klacks và dịch vụ cập nhật dưới dạng dịch vụ nền. Giải nén gói rồi chạy Installieren.cmd.</value></data>
+  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Cài đặt Klacks trực tiếp trên máy tính Windows (64-bit), không cần Docker và không cần máy chủ riêng: tải tệp về và nhấp đúp vào tệp – trình hướng dẫn cài đặt sẽ thiết lập cơ sở dữ liệu, Klacks và dịch vụ cập nhật dưới dạng dịch vụ nền. Nếu Windows SmartScreen hiển thị cảnh báo, hãy mở phần thông tin thêm và chọn vẫn chạy – tệp cài đặt này chưa có chữ ký số. Sau này, bạn có thể gỡ cài đặt Klacks như mọi chương trình khác trong phần Cài đặt của Windows.</value></data>
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Dùng Linux? Vui lòng dùng Gói cài đặt tại chỗ (On-Prem) với Docker.</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (chip Apple)</value></data>

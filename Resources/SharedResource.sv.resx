@@ -216,7 +216,7 @@
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Docker Compose-paket</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Minimal Docker Compose-uppsättning utan installationsprogram, för Docker-proffs.</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>Kontorsdator (Windows)</value></data>
-  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Installera Klacks direkt på en Windows 11-dator (64-bitars), utan Docker och utan egen server: Ett paket konfigurerar databasen, Klacks och uppdateringstjänsten som bakgrundstjänster. Packa upp det och starta Installieren.cmd.</value></data>
+  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Installera Klacks direkt på en Windows-dator (64-bitars), utan Docker och utan egen server: Ladda ned filen och dubbelklicka på den – installationsguiden konfigurerar databasen, Klacks och uppdateringstjänsten som bakgrundstjänster. Visar Windows SmartScreen en varning öppnar du den extra informationen och väljer att köra programmet ändå – installationsfilen är ännu inte digitalt signerad. Klacks kan senare avinstalleras som vilket annat program som helst via Inställningar i Windows.</value></data>
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux? Använd On-Prem-paketet med Docker.</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (Apple-chip)</value></data>

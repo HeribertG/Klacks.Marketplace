@@ -216,7 +216,7 @@
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Pachet Docker Compose</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Configurare Docker Compose minimală, fără instalatoare, pentru profesioniștii Docker.</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>PC de birou (Windows)</value></data>
-  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Instalează Klacks direct pe un PC cu Windows 11 (64 de biți), fără Docker și fără un server propriu: un singur pachet configurează baza de date, Klacks și serviciul de actualizare ca servicii în fundal. Dezarhivează-l și pornește Installieren.cmd.</value></data>
+  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Instalează Klacks direct pe un PC cu Windows (64 de biți), fără Docker și fără un server propriu: descarcă fișierul și dă dublu clic pe el – asistentul configurează baza de date, Klacks și serviciul de actualizare ca servicii în fundal. Dacă Windows SmartScreen afișează un avertisment, deschide informațiile suplimentare și alege să rulezi oricum – programul de instalare nu are încă semnătură digitală. Ulterior poți dezinstala Klacks ca pe orice alt program din Setările Windows.</value></data>
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux? Te rugăm să folosești Pachetul On-Prem cu Docker.</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (cip Apple)</value></data>

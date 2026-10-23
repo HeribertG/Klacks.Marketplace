@@ -216,7 +216,7 @@
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Docker-Compose-Bundle</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Minimales Docker-Compose-Setup ohne Installer, für Docker-Profis.</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>Büro-PC (Windows)</value></data>
-  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Klacks direkt auf einem Windows-11-PC (64 Bit) installieren, ohne Docker und ohne eigenen Server: Ein Paket richtet Datenbank, Klacks und den Update-Dienst als Hintergrunddienste ein. Entpacken und Installieren.cmd starten.</value></data>
+  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Klacks direkt auf einem Windows-PC (64 Bit) installieren, ohne Docker und ohne eigenen Server: Datei herunterladen und doppelklicken – der Assistent richtet Datenbank, Klacks und den Update-Dienst als Hintergrunddienste ein. Zeigt Windows „Der Computer wurde durch Windows geschützt“, auf „Weitere Informationen“ und dann „Trotzdem ausführen“ klicken – die Installationsdatei ist noch nicht digital signiert. Deinstallieren lässt sich Klacks später wie jedes andere Programm über die Windows-Einstellungen.</value></data>
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux? Bitte das On-Prem-Bundle mit Docker verwenden.</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (Apple-Chip)</value></data>

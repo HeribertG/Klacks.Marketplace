@@ -216,7 +216,7 @@
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Pakiet Docker Compose</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Minimalna konfiguracja Docker Compose bez instalatorów, dla specjalistów Dockera.</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>Komputer biurowy (Windows)</value></data>
-  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Zainstaluj Klacks bezpośrednio na komputerze z Windows 11 (64-bit), bez Dockera i bez własnego serwera: jeden pakiet konfiguruje bazę danych, Klacks i usługę aktualizacji jako usługi w tle. Rozpakuj go i uruchom Installieren.cmd.</value></data>
+  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Zainstaluj Klacks bezpośrednio na komputerze z Windows (64-bit), bez Dockera i bez własnego serwera: pobierz plik i kliknij go dwukrotnie – kreator skonfiguruje bazę danych, Klacks i usługę aktualizacji jako usługi w tle. Jeśli Windows SmartScreen wyświetli ostrzeżenie, otwórz dodatkowe informacje i wybierz uruchomienie mimo to – plik instalacyjny nie ma jeszcze podpisu cyfrowego. Później możesz odinstalować Klacks jak każdy inny program w Ustawieniach systemu Windows.</value></data>
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux? Użyj pakietu On-Prem z Dockerem.</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (czip Apple)</value></data>

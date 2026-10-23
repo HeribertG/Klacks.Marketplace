@@ -216,7 +216,7 @@
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>ชุดติดตั้ง Docker Compose</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>การตั้งค่า Docker Compose แบบขั้นต่ำโดยไม่มีตัวติดตั้ง สำหรับผู้เชี่ยวชาญ Docker</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>พีซีในสำนักงาน (Windows)</value></data>
-  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>ติดตั้ง Klacks บนพีซี Windows 11 (64 บิต) ได้โดยตรง โดยไม่ต้องใช้ Docker และไม่ต้องมีเซิร์ฟเวอร์ของตัวเอง แพ็กเกจเดียวจะตั้งค่าฐานข้อมูล Klacks และบริการอัปเดตให้ทำงานเป็นบริการเบื้องหลัง เพียงแตกไฟล์แล้วเรียกใช้ Installieren.cmd</value></data>
+  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>ติดตั้ง Klacks บนพีซี Windows (64 บิต) ได้โดยตรง โดยไม่ต้องใช้ Docker และไม่ต้องมีเซิร์ฟเวอร์ของตัวเอง เพียงดาวน์โหลดไฟล์แล้วดับเบิลคลิก ตัวช่วยติดตั้งจะตั้งค่าฐานข้อมูล Klacks และบริการอัปเดตให้ทำงานเป็นบริการเบื้องหลัง หาก Windows SmartScreen แสดงคำเตือน ให้เปิดข้อมูลเพิ่มเติมแล้วเลือกเรียกใช้ต่อไป — ไฟล์ติดตั้งนี้ยังไม่มีลายเซ็นดิจิทัล ภายหลังสามารถถอนการติดตั้ง Klacks ได้เหมือนโปรแกรมอื่น ๆ ผ่านการตั้งค่าของ Windows</value></data>
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>ใช้ Linux? โปรดใช้ชุดติดตั้งแบบ On-Prem พร้อม Docker</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (ชิป Apple)</value></data>

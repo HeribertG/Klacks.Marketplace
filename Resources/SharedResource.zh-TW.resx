@@ -216,7 +216,7 @@
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Docker Compose 套件包</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>適合 Docker 專業使用者的精簡 Docker Compose 設定，不含安裝程式。</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>辦公室電腦（Windows）</value></data>
-  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>無需 Docker，也無需自有伺服器，即可將 Klacks 直接安裝在 Windows 11（64 位元）電腦上：一個套件會將資料庫、Klacks 與更新服務設定為背景服務。解壓縮後執行 Installieren.cmd 即可。</value></data>
+  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>無需 Docker，也無需自有伺服器，即可將 Klacks 直接安裝在 Windows（64 位元）電腦上：下載檔案後按兩下執行，安裝精靈會將資料庫、Klacks 與更新服務設定為背景服務。若 Windows SmartScreen 顯示警告，請開啟其他資訊並選擇仍要執行 — 此安裝程式目前尚無數位簽章。之後也可以像其他程式一樣，在 Windows 設定中解除安裝 Klacks。</value></data>
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>使用 Linux？請使用搭配 Docker 的地端套件包。</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac（Apple 晶片）</value></data>

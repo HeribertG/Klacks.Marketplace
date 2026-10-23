@@ -216,7 +216,7 @@
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Bundle Docker Compose</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Configuration Docker Compose minimale sans installateurs, pour les professionnels de Docker.</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>PC de bureau (Windows)</value></data>
-  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Installez Klacks directement sur un PC Windows 11 (64 bits), sans Docker et sans serveur à vous : un seul paquet configure la base de données, Klacks et le service de mise à jour comme services en arrière-plan. Décompressez-le, puis lancez Installieren.cmd.</value></data>
+  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Installez Klacks directement sur un PC Windows (64 bits), sans Docker et sans serveur à vous : téléchargez le fichier et double-cliquez dessus – l'assistant configure la base de données, Klacks et le service de mise à jour comme services en arrière-plan. Si Windows SmartScreen affiche un avertissement, ouvrez les informations complémentaires et choisissez d'exécuter quand même – le programme d'installation n'est pas encore signé numériquement. Vous pourrez ensuite désinstaller Klacks comme n'importe quel autre programme depuis les Paramètres de Windows.</value></data>
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux ? Veuillez utiliser le Bundle On-Prem avec Docker.</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (puce Apple)</value></data>

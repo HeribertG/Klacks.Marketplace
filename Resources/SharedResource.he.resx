@@ -216,7 +216,7 @@
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>חבילת Docker Compose</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>הגדרת Docker Compose מינימלית ללא סקריפטים להתקנה, למשתמשי Docker מנוסים.</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>מחשב משרדי (Windows)</value></data>
-  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>התקינו את Klacks ישירות על מחשב Windows 11 (64 סיביות), ללא Docker וללא שרת משלכם: חבילה אחת מגדירה את מסד הנתונים, את Klacks ואת שירות העדכונים כשירותי רקע. חלצו את החבילה והפעילו את Installieren.cmd.</value></data>
+  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>התקינו את Klacks ישירות על מחשב Windows (64 סיביות), ללא Docker וללא שרת משלכם: הורידו את הקובץ ולחצו עליו לחיצה כפולה – אשף ההתקנה מגדיר את מסד הנתונים, את Klacks ואת שירות העדכונים כשירותי רקע. אם Windows SmartScreen מציג אזהרה, פתחו את המידע הנוסף ובחרו להפעיל בכל זאת – קובץ ההתקנה עדיין אינו חתום דיגיטלית. בהמשך תוכלו להסיר את Klacks כמו כל תוכנה אחרת דרך ההגדרות של Windows.</value></data>
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux? אנא השתמשו בחבילת On-Prem עם Docker.</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (שבב Apple)</value></data>
