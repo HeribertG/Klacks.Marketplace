@@ -5,10 +5,8 @@
      @onclick="NavigateToPackage">
     <div class="flex justify-between items-start mb-6">
         <span class="text-4xl">@GetFlagEmoji(Package.Code)</span>
-        <span class="px-2 py-1 bg-surface-container text-xs font-bold rounded uppercase tracking-wider text-on-surface-variant">v@(Package.Version)</span>
     </div>
-    <h3 class="text-xl font-bold mb-1">@Package.DisplayName</h3>
-    <p class="text-sm text-on-surface-variant mb-6">@L["Common_ByAuthor", Package.Author.DisplayName]</p>
+    <h3 class="text-xl font-bold mb-6">@Package.DisplayName</h3>
     <div class="space-y-2 mb-6">
         <div class="flex justify-between text-xs font-bold">
             <span>@L["Common_Coverage"]</span>

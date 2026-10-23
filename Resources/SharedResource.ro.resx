@@ -43,7 +43,6 @@
   <data name="Common_NotFound" xml:space="preserve"><value>Nu a fost găsit</value></data>
   <data name="Common_NothingHere" xml:space="preserve"><value>Ne pare rău, nu există nimic la această adresă.</value></data>
   <data name="Common_BackToBrowse" xml:space="preserve"><value>Înapoi la răsfoire</value></data>
-  <data name="Common_ByAuthor" xml:space="preserve"><value>de {0}</value></data>
   <data name="Common_SkillsCount" xml:space="preserve"><value>{0} abilități</value></data>
   <data name="Common_InstallsCount" xml:space="preserve"><value>{0} instalări</value></data>
   <data name="Common_Package" xml:space="preserve"><value>Pachet</value></data>

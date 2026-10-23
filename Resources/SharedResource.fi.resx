@@ -43,7 +43,6 @@
   <data name="Common_NotFound" xml:space="preserve"><value>Ei löytynyt</value></data>
   <data name="Common_NothingHere" xml:space="preserve"><value>Valitettavasti tässä osoitteessa ei ole mitään.</value></data>
   <data name="Common_BackToBrowse" xml:space="preserve"><value>Takaisin selaamiseen</value></data>
-  <data name="Common_ByAuthor" xml:space="preserve"><value>tekijä: {0}</value></data>
   <data name="Common_SkillsCount" xml:space="preserve"><value>{0} taitoa</value></data>
   <data name="Common_InstallsCount" xml:space="preserve"><value>{0} asennusta</value></data>
   <data name="Common_Package" xml:space="preserve"><value>Paketti</value></data>

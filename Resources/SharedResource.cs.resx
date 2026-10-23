@@ -43,7 +43,6 @@
   <data name="Common_NotFound" xml:space="preserve"><value>Nenalezeno</value></data>
   <data name="Common_NothingHere" xml:space="preserve"><value>Omlouváme se, na této adrese nic není.</value></data>
   <data name="Common_BackToBrowse" xml:space="preserve"><value>Zpět na procházení</value></data>
-  <data name="Common_ByAuthor" xml:space="preserve"><value>od {0}</value></data>
   <data name="Common_SkillsCount" xml:space="preserve"><value>{0} dovedností</value></data>
   <data name="Common_InstallsCount" xml:space="preserve"><value>{0} instalací</value></data>
   <data name="Common_Package" xml:space="preserve"><value>Balíček</value></data>

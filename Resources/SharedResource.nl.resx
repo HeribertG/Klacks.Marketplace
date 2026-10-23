@@ -43,7 +43,6 @@
   <data name="Common_NotFound" xml:space="preserve"><value>Niet gevonden</value></data>
   <data name="Common_NothingHere" xml:space="preserve"><value>Sorry, er is niets op dit adres.</value></data>
   <data name="Common_BackToBrowse" xml:space="preserve"><value>Terug naar overzicht</value></data>
-  <data name="Common_ByAuthor" xml:space="preserve"><value>door {0}</value></data>
   <data name="Common_SkillsCount" xml:space="preserve"><value>{0} vaardigheden</value></data>
   <data name="Common_InstallsCount" xml:space="preserve"><value>{0} installaties</value></data>
   <data name="Common_Package" xml:space="preserve"><value>Pakket</value></data>

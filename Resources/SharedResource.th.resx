@@ -43,7 +43,6 @@
   <data name="Common_NotFound" xml:space="preserve"><value>ไม่พบ</value></data>
   <data name="Common_NothingHere" xml:space="preserve"><value>ขออภัย ไม่มีข้อมูลที่ที่อยู่นี้</value></data>
   <data name="Common_BackToBrowse" xml:space="preserve"><value>กลับไปที่หน้าเรียกดู</value></data>
-  <data name="Common_ByAuthor" xml:space="preserve"><value>โดย {0}</value></data>
   <data name="Common_SkillsCount" xml:space="preserve"><value>{0} ทักษะ</value></data>
   <data name="Common_InstallsCount" xml:space="preserve"><value>{0} การติดตั้ง</value></data>
   <data name="Common_Package" xml:space="preserve"><value>แพ็กเกจ</value></data>

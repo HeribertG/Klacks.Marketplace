@@ -43,7 +43,6 @@
   <data name="Common_NotFound" xml:space="preserve"><value>Không tìm thấy</value></data>
   <data name="Common_NothingHere" xml:space="preserve"><value>Rất tiếc, không có gì tại địa chỉ này.</value></data>
   <data name="Common_BackToBrowse" xml:space="preserve"><value>Quay lại Duyệt</value></data>
-  <data name="Common_ByAuthor" xml:space="preserve"><value>của {0}</value></data>
   <data name="Common_SkillsCount" xml:space="preserve"><value>{0} kỹ năng</value></data>
   <data name="Common_InstallsCount" xml:space="preserve"><value>{0} lượt cài đặt</value></data>
   <data name="Common_Package" xml:space="preserve"><value>Gói</value></data>

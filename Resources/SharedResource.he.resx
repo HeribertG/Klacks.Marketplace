@@ -43,7 +43,6 @@
   <data name="Common_NotFound" xml:space="preserve"><value>לא נמצא</value></data>
   <data name="Common_NothingHere" xml:space="preserve"><value>מצטערים, אין דבר בכתובת הזו.</value></data>
   <data name="Common_BackToBrowse" xml:space="preserve"><value>חזרה לעיון</value></data>
-  <data name="Common_ByAuthor" xml:space="preserve"><value>מאת {0}</value></data>
   <data name="Common_SkillsCount" xml:space="preserve"><value>{0} מיומנויות</value></data>
   <data name="Common_InstallsCount" xml:space="preserve"><value>{0} התקנות</value></data>
   <data name="Common_Package" xml:space="preserve"><value>חבילה</value></data>

@@ -43,7 +43,6 @@
   <data name="Common_NotFound" xml:space="preserve"><value>Δεν βρέθηκε</value></data>
   <data name="Common_NothingHere" xml:space="preserve"><value>Λυπούμαστε, δεν υπάρχει τίποτα σε αυτή τη διεύθυνση.</value></data>
   <data name="Common_BackToBrowse" xml:space="preserve"><value>Επιστροφή στην περιήγηση</value></data>
-  <data name="Common_ByAuthor" xml:space="preserve"><value>από {0}</value></data>
   <data name="Common_SkillsCount" xml:space="preserve"><value>{0} δεξιότητες</value></data>
   <data name="Common_InstallsCount" xml:space="preserve"><value>{0} εγκαταστάσεις</value></data>
   <data name="Common_Package" xml:space="preserve"><value>Πακέτο</value></data>

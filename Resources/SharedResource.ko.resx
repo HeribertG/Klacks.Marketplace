@@ -43,7 +43,6 @@
   <data name="Common_NotFound" xml:space="preserve"><value>찾을 수 없음</value></data>
   <data name="Common_NothingHere" xml:space="preserve"><value>죄송합니다. 이 주소에는 아무것도 없습니다.</value></data>
   <data name="Common_BackToBrowse" xml:space="preserve"><value>둘러보기로 돌아가기</value></data>
-  <data name="Common_ByAuthor" xml:space="preserve"><value>{0} 작성</value></data>
   <data name="Common_SkillsCount" xml:space="preserve"><value>스킬 {0}개</value></data>
   <data name="Common_InstallsCount" xml:space="preserve"><value>설치 {0}회</value></data>
   <data name="Common_Package" xml:space="preserve"><value>패키지</value></data>

@@ -43,7 +43,6 @@
   <data name="Common_NotFound" xml:space="preserve"><value>見つかりません</value></data>
   <data name="Common_NothingHere" xml:space="preserve"><value>申し訳ございません。このアドレスには何もありません。</value></data>
   <data name="Common_BackToBrowse" xml:space="preserve"><value>一覧に戻る</value></data>
-  <data name="Common_ByAuthor" xml:space="preserve"><value>作成者: {0}</value></data>
   <data name="Common_SkillsCount" xml:space="preserve"><value>{0} 件のスキル</value></data>
   <data name="Common_InstallsCount" xml:space="preserve"><value>{0} 件のインストール</value></data>
   <data name="Common_Package" xml:space="preserve"><value>パッケージ</value></data>

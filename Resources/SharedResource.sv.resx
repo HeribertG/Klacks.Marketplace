@@ -43,7 +43,6 @@
   <data name="Common_NotFound" xml:space="preserve"><value>Hittades inte</value></data>
   <data name="Common_NothingHere" xml:space="preserve"><value>Det finns tyvärr inget på den här adressen.</value></data>
   <data name="Common_BackToBrowse" xml:space="preserve"><value>Tillbaka till bläddring</value></data>
-  <data name="Common_ByAuthor" xml:space="preserve"><value>av {0}</value></data>
   <data name="Common_SkillsCount" xml:space="preserve"><value>{0} färdigheter</value></data>
   <data name="Common_InstallsCount" xml:space="preserve"><value>{0} installationer</value></data>
   <data name="Common_Package" xml:space="preserve"><value>Paket</value></data>

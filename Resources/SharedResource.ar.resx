@@ -43,7 +43,6 @@
   <data name="Common_NotFound" xml:space="preserve"><value>غير موجود</value></data>
   <data name="Common_NothingHere" xml:space="preserve"><value>عذرًا، لا يوجد شيء في هذا العنوان.</value></data>
   <data name="Common_BackToBrowse" xml:space="preserve"><value>العودة إلى التصفح</value></data>
-  <data name="Common_ByAuthor" xml:space="preserve"><value>بواسطة {0}</value></data>
   <data name="Common_SkillsCount" xml:space="preserve"><value>{0} مهارة</value></data>
   <data name="Common_InstallsCount" xml:space="preserve"><value>{0} عملية تثبيت</value></data>
   <data name="Common_Package" xml:space="preserve"><value>حزمة</value></data>

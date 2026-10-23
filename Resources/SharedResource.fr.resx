@@ -43,7 +43,6 @@
   <data name="Common_NotFound" xml:space="preserve"><value>Non trouvé</value></data>
   <data name="Common_NothingHere" xml:space="preserve"><value>Désolé, il n'y a rien à cette adresse.</value></data>
   <data name="Common_BackToBrowse" xml:space="preserve"><value>Retour à la navigation</value></data>
-  <data name="Common_ByAuthor" xml:space="preserve"><value>par {0}</value></data>
   <data name="Common_SkillsCount" xml:space="preserve"><value>{0} compétences</value></data>
   <data name="Common_InstallsCount" xml:space="preserve"><value>{0} installations</value></data>
   <data name="Common_Package" xml:space="preserve"><value>Paquet</value></data>

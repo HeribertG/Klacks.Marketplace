@@ -43,7 +43,6 @@
   <data name="Common_NotFound" xml:space="preserve"><value>找不到</value></data>
   <data name="Common_NothingHere" xml:space="preserve"><value>抱歉，此位址沒有任何內容。</value></data>
   <data name="Common_BackToBrowse" xml:space="preserve"><value>返回瀏覽</value></data>
-  <data name="Common_ByAuthor" xml:space="preserve"><value>作者：{0}</value></data>
   <data name="Common_SkillsCount" xml:space="preserve"><value>{0} 項技能</value></data>
   <data name="Common_InstallsCount" xml:space="preserve"><value>{0} 次安裝</value></data>
   <data name="Common_Package" xml:space="preserve"><value>套件</value></data>
