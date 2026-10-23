@@ -215,7 +215,7 @@
   <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Täydellinen asennuspaketti Docker-käyttöön: asennusskriptit, Docker Compose ja alueprofiili.</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Docker Compose -paketti</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Minimaalinen Docker Compose -määritys ilman asentimia, Docker-ammattilaisille.</value></data>
-  <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>Toimiston PC (Windows 11)</value></data>
+  <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>Toimiston PC (Windows)</value></data>
   <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Asentakaa Klacks suoraan Windows 11 -PC:lle (64-bittinen) ilman Dockeria ja ilman omaa palvelinta: yksi paketti asentaa tietokannan, Klacksin ja päivityspalvelun taustapalveluiksi. Purkakaa paketti ja käynnistäkää Installieren.cmd.</value></data>
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux? Käyttäkää On-Prem-pakettia Dockerin kanssa.</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>

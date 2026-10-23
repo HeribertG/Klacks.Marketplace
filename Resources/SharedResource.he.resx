@@ -215,7 +215,7 @@
   <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>חבילת התקנה מלאה להפעלה עם Docker: סקריפטים להתקנה, Docker Compose ופרופיל האזור.</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>חבילת Docker Compose</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>הגדרת Docker Compose מינימלית ללא סקריפטים להתקנה, למשתמשי Docker מנוסים.</value></data>
-  <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>מחשב משרדי (Windows 11)</value></data>
+  <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>מחשב משרדי (Windows)</value></data>
   <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>התקינו את Klacks ישירות על מחשב Windows 11 (64 סיביות), ללא Docker וללא שרת משלכם: חבילה אחת מגדירה את מסד הנתונים, את Klacks ואת שירות העדכונים כשירותי רקע. חלצו את החבילה והפעילו את Installieren.cmd.</value></data>
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux? אנא השתמשו בחבילת On-Prem עם Docker.</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>

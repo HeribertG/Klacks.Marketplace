@@ -215,7 +215,7 @@
   <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Docker で運用するための完全なインストールバンドルです（インストーラースクリプト、Docker Compose、リージョンプロファイルを含む）。</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Docker Compose バンドル</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>インストーラーを含まない、Docker 専門家向けの最小構成の Docker Compose セットアップです。</value></data>
-  <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>オフィス PC（Windows 11）</value></data>
+  <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>オフィス PC（Windows）</value></data>
   <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Docker も自社サーバーも使わずに、Klacks を Windows 11（64 ビット）の PC に直接インストールできます。1 つのパッケージで、データベース、Klacks、更新サービスがバックグラウンドサービスとしてセットアップされます。展開して Installieren.cmd を実行してください。</value></data>
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux の場合は、Docker を使用するオンプレミスバンドルをご利用ください。</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
