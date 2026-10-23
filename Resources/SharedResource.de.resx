@@ -215,7 +215,7 @@
   <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Komplettes Installations-Bundle für den Betrieb mit Docker: Installer-Skripte, Docker Compose und das Regionsprofil.</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Docker-Compose-Bundle</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Minimales Docker-Compose-Setup ohne Installer, für Docker-Profis.</value></data>
-  <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>Büro-PC</value></data>
+  <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>Büro-PC (Windows 11)</value></data>
   <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Klacks direkt auf einem Windows-11-PC (64 Bit) installieren, ohne Docker und ohne eigenen Server: Ein Paket richtet Datenbank, Klacks und den Update-Dienst als Hintergrunddienste ein. Entpacken und Installieren.cmd starten.</value></data>
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux? Bitte das On-Prem-Bundle mit Docker verwenden.</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>

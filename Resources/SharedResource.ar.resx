@@ -215,7 +215,7 @@
   <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>حزمة تثبيت كاملة للتشغيل مع Docker، تتضمن نصوص التثبيت وDocker Compose وملف التعريف الإقليمي.</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>حزمة Docker Compose</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>إعداد Docker Compose مبسّط بدون برامج تثبيت، مخصص لمحترفي Docker.</value></data>
-  <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>حاسوب المكتب</value></data>
+  <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>حاسوب المكتب (Windows 11)</value></data>
   <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>ثبّتوا Klacks مباشرةً على حاسوب يعمل بنظام Windows 11 (64 بت)، دون Docker ودون خادم خاص بكم: حزمة واحدة تُعِدّ قاعدة البيانات وبرنامج Klacks وخدمة التحديث كخدمات تعمل في الخلفية. فُكّوا ضغط الحزمة ثم شغّلوا Installieren.cmd.</value></data>
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux؟ يُرجى استخدام حزمة التثبيت المحلي مع Docker.</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>

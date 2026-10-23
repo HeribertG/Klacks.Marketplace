@@ -215,7 +215,7 @@
   <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Gói cài đặt đầy đủ để chạy với Docker: các script cài đặt, Docker Compose và hồ sơ khu vực.</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Gói Docker Compose</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>Thiết lập Docker Compose tối giản không có trình cài đặt, dành cho chuyên gia Docker.</value></data>
-  <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>Máy tính văn phòng</value></data>
+  <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>Máy tính văn phòng (Windows 11)</value></data>
   <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Cài đặt Klacks trực tiếp trên máy tính Windows 11 (64-bit), không cần Docker và không cần máy chủ riêng: một gói duy nhất sẽ thiết lập cơ sở dữ liệu, Klacks và dịch vụ cập nhật dưới dạng dịch vụ nền. Giải nén gói rồi chạy Installieren.cmd.</value></data>
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Dùng Linux? Vui lòng dùng Gói cài đặt tại chỗ (On-Prem) với Docker.</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
