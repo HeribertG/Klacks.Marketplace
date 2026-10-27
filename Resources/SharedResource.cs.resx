@@ -181,6 +181,8 @@
   <data name="Admin_Joined" xml:space="preserve"><value>Registrován</value></data>
   <data name="Admin_MakeAdmin" xml:space="preserve"><value>Nastavit jako administrátora</value></data>
   <data name="Admin_RemoveAdmin" xml:space="preserve"><value>Odebrat administrátora</value></data>
+  <data name="Admin_DeleteUser" xml:space="preserve"><value>Smazat účet</value></data>
+  <data name="Admin_DeleteUserConfirm" xml:space="preserve"><value>Smazat účet uživatele {0} ({1})? Tikety a zprávy se smažou a účet se anonymizuje. Akci nelze vrátit zpět.</value></data>
   <data name="Admin_PackageApproved" xml:space="preserve"><value>Balíček byl úspěšně schválen</value></data>
   <data name="Admin_PackageRejected" xml:space="preserve"><value>Balíček byl zamítnut</value></data>
   <data name="Admin_PluginApproved" xml:space="preserve"><value>Doplněk byl úspěšně schválen</value></data>

@@ -200,6 +200,43 @@ public class AdminService : IAdminService
         await _db.SaveChangesAsync();
     }
 
+    /// <summary>
+    /// Erases a customer account on request: the user's tickets and ticket messages are deleted and the account is
+    /// anonymized (no e-mail, no name, no usable password). The row itself stays because published packages reference
+    /// their author. Admins must lose the admin role first.
+    /// </summary>
+    public async Task DeleteUserAsync(int userId)
+    {
+        var user = await _db.Users.FindAsync(userId);
+        if (user is null)
+        {
+            throw new InvalidOperationException("User not found");
+        }
+
+        if (user.IsAdmin)
+        {
+            throw new InvalidOperationException("Remove the admin role before deleting the account");
+        }
+
+        await using var transaction = await _db.Database.BeginTransactionAsync();
+
+        var tickets = await _db.Tickets.Where(t => t.UserId == userId).ToListAsync();
+        var ticketIds = tickets.Select(t => t.Id).ToList();
+        var messages = await _db.TicketMessages
+            .Where(m => m.AuthorId == userId || ticketIds.Contains(m.TicketId))
+            .ToListAsync();
+
+        _db.TicketMessages.RemoveRange(messages);
+        _db.Tickets.RemoveRange(tickets);
+
+        user.Email = string.Format(AppConstants.DeletedUserEmailTemplate, user.Id);
+        user.DisplayName = AppConstants.DeletedUserDisplayName;
+        user.PasswordHash = string.Empty;
+
+        await _db.SaveChangesAsync();
+        await transaction.CommitAsync();
+    }
+
     public async Task<List<RegionDownloadStat>> GetRegionDownloadStatsAsync(int days)
     {
         var since = DateTime.UtcNow.Date.AddDays(-days);

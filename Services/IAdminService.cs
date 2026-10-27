@@ -18,5 +18,6 @@ public interface IAdminService
     Task RejectRegionPackageAsync(int regionPackageId, string reason);
     Task<List<User>> GetUsersAsync();
     Task ToggleAdminAsync(int userId);
+    Task DeleteUserAsync(int userId);
     Task<List<RegionDownloadStat>> GetRegionDownloadStatsAsync(int days);
 }

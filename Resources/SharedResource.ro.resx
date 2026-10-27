@@ -181,6 +181,8 @@
   <data name="Admin_Joined" xml:space="preserve"><value>Înregistrat</value></data>
   <data name="Admin_MakeAdmin" xml:space="preserve"><value>Fă admin</value></data>
   <data name="Admin_RemoveAdmin" xml:space="preserve"><value>Elimină admin</value></data>
+  <data name="Admin_DeleteUser" xml:space="preserve"><value>Șterge contul</value></data>
+  <data name="Admin_DeleteUserConfirm" xml:space="preserve"><value>Ștergeți contul lui {0} ({1})? Tichetele și mesajele sunt șterse, iar contul este anonimizat. Acțiunea nu poate fi anulată.</value></data>
   <data name="Admin_PackageApproved" xml:space="preserve"><value>Pachet aprobat cu succes</value></data>
   <data name="Admin_PackageRejected" xml:space="preserve"><value>Pachet respins</value></data>
   <data name="Admin_PluginApproved" xml:space="preserve"><value>Plugin aprobat cu succes</value></data>

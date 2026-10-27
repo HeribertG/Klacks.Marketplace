@@ -181,6 +181,8 @@
   <data name="Admin_Joined" xml:space="preserve"><value>加入时间</value></data>
   <data name="Admin_MakeAdmin" xml:space="preserve"><value>设为管理员</value></data>
   <data name="Admin_RemoveAdmin" xml:space="preserve"><value>取消管理员</value></data>
+  <data name="Admin_DeleteUser" xml:space="preserve"><value>删除账户</value></data>
+  <data name="Admin_DeleteUserConfirm" xml:space="preserve"><value>删除 {0}（{1}）的账户？其工单和消息将被删除，账户将被匿名化。此操作无法撤销。</value></data>
   <data name="Admin_PackageApproved" xml:space="preserve"><value>包已成功批准</value></data>
   <data name="Admin_PackageRejected" xml:space="preserve"><value>包已拒绝</value></data>
   <data name="Admin_PluginApproved" xml:space="preserve"><value>插件已成功批准</value></data>

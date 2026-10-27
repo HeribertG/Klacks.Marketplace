@@ -188,7 +188,7 @@ public class RegionPackageService : IRegionPackageService
             ArtifactType = artifactType,
             Industry = industry,
             DownloadedAt = DateTime.UtcNow,
-            IpAddress = ipAddress
+            IpAddress = ClientIpAnonymizer.Anonymize(ipAddress)
         });
         await _db.SaveChangesAsync();
 
@@ -204,7 +204,7 @@ public class RegionPackageService : IRegionPackageService
             ArtifactType = artifactType,
             Industry = string.Empty,
             DownloadedAt = DateTime.UtcNow,
-            IpAddress = ipAddress
+            IpAddress = ClientIpAnonymizer.Anonymize(ipAddress)
         });
         await _db.SaveChangesAsync();
     }

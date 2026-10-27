@@ -15,6 +15,9 @@ public static class AppConstants
     public const int DownloadRateLimitPermitLimit = 30;
     public const int DownloadRateLimitWindowSeconds = 60;
     public const string UnknownClientIp = "unknown";
+    public const int DownloadLogRetentionDays = 400;
+    public const string DeletedUserDisplayName = "Deleted user";
+    public const string DeletedUserEmailTemplate = "deleted-{0}@deleted.invalid";
     public const string SignatureHeaderName = "X-Klacks-Signature";
     public const string ManifestFileName = "manifest.json";
     public const string TranslationsFileName = "translations.json";

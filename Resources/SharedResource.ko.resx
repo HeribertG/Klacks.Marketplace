@@ -181,6 +181,8 @@
   <data name="Admin_Joined" xml:space="preserve"><value>가입일</value></data>
   <data name="Admin_MakeAdmin" xml:space="preserve"><value>관리자로 지정</value></data>
   <data name="Admin_RemoveAdmin" xml:space="preserve"><value>관리자 해제</value></data>
+  <data name="Admin_DeleteUser" xml:space="preserve"><value>계정 삭제</value></data>
+  <data name="Admin_DeleteUserConfirm" xml:space="preserve"><value>{0}({1})의 계정을 삭제하시겠습니까? 티켓과 메시지가 삭제되고 계정은 익명 처리됩니다. 이 작업은 되돌릴 수 없습니다.</value></data>
   <data name="Admin_PackageApproved" xml:space="preserve"><value>패키지가 승인되었습니다</value></data>
   <data name="Admin_PackageRejected" xml:space="preserve"><value>패키지가 거부되었습니다</value></data>
   <data name="Admin_PluginApproved" xml:space="preserve"><value>플러그인이 승인되었습니다</value></data>

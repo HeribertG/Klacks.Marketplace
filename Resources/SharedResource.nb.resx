@@ -181,6 +181,8 @@
   <data name="Admin_Joined" xml:space="preserve"><value>Registrert</value></data>
   <data name="Admin_MakeAdmin" xml:space="preserve"><value>Gjør til administrator</value></data>
   <data name="Admin_RemoveAdmin" xml:space="preserve"><value>Fjern administratorrettigheter</value></data>
+  <data name="Admin_DeleteUser" xml:space="preserve"><value>Slett konto</value></data>
+  <data name="Admin_DeleteUserConfirm" xml:space="preserve"><value>Slette kontoen til {0} ({1})? Saker og meldinger slettes, og kontoen anonymiseres. Dette kan ikke angres.</value></data>
   <data name="Admin_PackageApproved" xml:space="preserve"><value>Pakken ble godkjent</value></data>
   <data name="Admin_PackageRejected" xml:space="preserve"><value>Pakke avvist</value></data>
   <data name="Admin_PluginApproved" xml:space="preserve"><value>Tillegget ble godkjent</value></data>

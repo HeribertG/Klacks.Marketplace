@@ -181,6 +181,8 @@
   <data name="Admin_Joined" xml:space="preserve"><value>Εγγράφηκε</value></data>
   <data name="Admin_MakeAdmin" xml:space="preserve"><value>Ορισμός ως διαχειριστή</value></data>
   <data name="Admin_RemoveAdmin" xml:space="preserve"><value>Αφαίρεση διαχειριστή</value></data>
+  <data name="Admin_DeleteUser" xml:space="preserve"><value>Διαγραφή λογαριασμού</value></data>
+  <data name="Admin_DeleteUserConfirm" xml:space="preserve"><value>Να διαγραφεί ο λογαριασμός του {0} ({1}); Τα αιτήματα και τα μηνύματά του διαγράφονται και ο λογαριασμός ανωνυμοποιείται. Η ενέργεια δεν αναιρείται.</value></data>
   <data name="Admin_PackageApproved" xml:space="preserve"><value>Το πακέτο εγκρίθηκε με επιτυχία</value></data>
   <data name="Admin_PackageRejected" xml:space="preserve"><value>Το πακέτο απορρίφθηκε</value></data>
   <data name="Admin_PluginApproved" xml:space="preserve"><value>Το πρόσθετο εγκρίθηκε με επιτυχία</value></data>

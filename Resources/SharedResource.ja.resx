@@ -181,6 +181,8 @@
   <data name="Admin_Joined" xml:space="preserve"><value>登録日</value></data>
   <data name="Admin_MakeAdmin" xml:space="preserve"><value>管理者にする</value></data>
   <data name="Admin_RemoveAdmin" xml:space="preserve"><value>管理者権限を削除</value></data>
+  <data name="Admin_DeleteUser" xml:space="preserve"><value>アカウントを削除</value></data>
+  <data name="Admin_DeleteUserConfirm" xml:space="preserve"><value>{0}（{1}）のアカウントを削除しますか？チケットとメッセージは削除され、アカウントは匿名化されます。この操作は元に戻せません。</value></data>
   <data name="Admin_PackageApproved" xml:space="preserve"><value>パッケージを承認しました</value></data>
   <data name="Admin_PackageRejected" xml:space="preserve"><value>パッケージを却下しました</value></data>
   <data name="Admin_PluginApproved" xml:space="preserve"><value>プラグインを承認しました</value></data>

@@ -181,6 +181,8 @@
   <data name="Admin_Joined" xml:space="preserve"><value>Menyertai</value></data>
   <data name="Admin_MakeAdmin" xml:space="preserve"><value>Jadikan Admin</value></data>
   <data name="Admin_RemoveAdmin" xml:space="preserve"><value>Buang Admin</value></data>
+  <data name="Admin_DeleteUser" xml:space="preserve"><value>Padam akaun</value></data>
+  <data name="Admin_DeleteUserConfirm" xml:space="preserve"><value>Padam akaun {0} ({1})? Tiket dan mesejnya dipadam dan akaun dianonimkan. Tindakan ini tidak boleh dibuat asal.</value></data>
   <data name="Admin_PackageApproved" xml:space="preserve"><value>Pakej berjaya diluluskan</value></data>
   <data name="Admin_PackageRejected" xml:space="preserve"><value>Pakej ditolak</value></data>
   <data name="Admin_PluginApproved" xml:space="preserve"><value>Plugin berjaya diluluskan</value></data>

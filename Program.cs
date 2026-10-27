@@ -92,6 +92,9 @@ await using (var scope = app.Services.CreateAsyncScope())
         }
     }
 
+    await StoredIpAnonymizer.AnonymizeAsync(db);
+    await DownloadLogRetention.PurgeAsync(db);
+
     var regionSeedService = scope.ServiceProvider.GetRequiredService<IRegionPackageSeedService>();
     await regionSeedService.SeedAsync();
 }

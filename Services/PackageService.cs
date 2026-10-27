@@ -123,7 +123,7 @@ public class PackageService : IPackageService
         {
             PackageId = package.Id,
             DownloadedAt = DateTime.UtcNow,
-            IpAddress = ipAddress
+            IpAddress = ClientIpAnonymizer.Anonymize(ipAddress)
         });
         await _db.SaveChangesAsync();
 

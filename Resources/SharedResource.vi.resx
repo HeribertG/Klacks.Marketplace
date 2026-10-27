@@ -181,6 +181,8 @@
   <data name="Admin_Joined" xml:space="preserve"><value>Ngày tham gia</value></data>
   <data name="Admin_MakeAdmin" xml:space="preserve"><value>Cấp quyền quản trị</value></data>
   <data name="Admin_RemoveAdmin" xml:space="preserve"><value>Thu hồi quyền quản trị</value></data>
+  <data name="Admin_DeleteUser" xml:space="preserve"><value>Xóa tài khoản</value></data>
+  <data name="Admin_DeleteUserConfirm" xml:space="preserve"><value>Xóa tài khoản của {0} ({1})? Các phiếu hỗ trợ và tin nhắn của họ sẽ bị xóa và tài khoản được ẩn danh. Không thể hoàn tác.</value></data>
   <data name="Admin_PackageApproved" xml:space="preserve"><value>Gói đã được phê duyệt thành công</value></data>
   <data name="Admin_PackageRejected" xml:space="preserve"><value>Gói đã bị từ chối</value></data>
   <data name="Admin_PluginApproved" xml:space="preserve"><value>Plugin đã được phê duyệt thành công</value></data>

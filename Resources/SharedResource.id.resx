@@ -181,6 +181,8 @@
   <data name="Admin_Joined" xml:space="preserve"><value>Bergabung</value></data>
   <data name="Admin_MakeAdmin" xml:space="preserve"><value>Jadikan Admin</value></data>
   <data name="Admin_RemoveAdmin" xml:space="preserve"><value>Hapus Admin</value></data>
+  <data name="Admin_DeleteUser" xml:space="preserve"><value>Hapus akun</value></data>
+  <data name="Admin_DeleteUserConfirm" xml:space="preserve"><value>Hapus akun {0} ({1})? Tiket dan pesannya dihapus dan akun dianonimkan. Tindakan ini tidak dapat dibatalkan.</value></data>
   <data name="Admin_PackageApproved" xml:space="preserve"><value>Paket berhasil disetujui</value></data>
   <data name="Admin_PackageRejected" xml:space="preserve"><value>Paket ditolak</value></data>
   <data name="Admin_PluginApproved" xml:space="preserve"><value>Plugin berhasil disetujui</value></data>

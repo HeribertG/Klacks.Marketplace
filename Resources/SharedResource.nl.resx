@@ -181,6 +181,8 @@
   <data name="Admin_Joined" xml:space="preserve"><value>Geregistreerd</value></data>
   <data name="Admin_MakeAdmin" xml:space="preserve"><value>Beheerder maken</value></data>
   <data name="Admin_RemoveAdmin" xml:space="preserve"><value>Beheerder verwijderen</value></data>
+  <data name="Admin_DeleteUser" xml:space="preserve"><value>Account verwijderen</value></data>
+  <data name="Admin_DeleteUserConfirm" xml:space="preserve"><value>Het account van {0} ({1}) verwijderen? Tickets en berichten worden verwijderd en het account wordt geanonimiseerd. Dit kan niet ongedaan worden gemaakt.</value></data>
   <data name="Admin_PackageApproved" xml:space="preserve"><value>Pakket succesvol goedgekeurd</value></data>
   <data name="Admin_PackageRejected" xml:space="preserve"><value>Pakket afgewezen</value></data>
   <data name="Admin_PluginApproved" xml:space="preserve"><value>Plugin succesvol goedgekeurd</value></data>

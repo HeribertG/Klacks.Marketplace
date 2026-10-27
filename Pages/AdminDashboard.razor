@@ -211,6 +211,12 @@
                                 <button class="px-3 py-1.5 bg-secondary text-on-secondary rounded-lg text-xs font-bold hover:bg-secondary-container transition-all" @onclick="() => ToggleAdmin(user.Id)">
                                     @(user.IsAdmin ? L["Admin_RemoveAdmin"] : L["Admin_MakeAdmin"])
                                 </button>
+                                @if (!user.IsAdmin)
+                                {
+                                    <button class="ml-2 px-3 py-1.5 bg-error-container text-on-error-container rounded-lg text-xs font-bold hover:opacity-90 transition-all" @onclick="() => AskDeleteUser(user)">
+                                        @L["Admin_DeleteUser"]
+                                    </button>
+                                }
                             </td>
                         </tr>
                     }
@@ -255,6 +261,12 @@
                        Message="@_rejectMessage"
                        OnConfirm="ConfirmReject"
                        OnCancel="CancelReject" />
+
+        <ConfirmDialog IsVisible="@(_userToDelete is not null)"
+                       Title="@L["Admin_DeleteUser"]"
+                       Message="@(_userToDelete is null ? string.Empty : string.Format(L["Admin_DeleteUserConfirm"].Value, _userToDelete.DisplayName, _userToDelete.Email))"
+                       OnConfirm="ConfirmDeleteUser"
+                       OnCancel="CancelDeleteUser" />
     }
 </div>
 
@@ -264,6 +276,7 @@
     private List<FeaturePlugin> _pendingPlugins = [];
     private List<RegionPackage> _pendingRegionPackages = [];
     private List<User> _users = [];
+    private User? _userToDelete;
     private int _openTickets;
     private List<RegionDownloadStat> _downloadStats = [];
     private const int DownloadStatsWindowDays = 90;
@@ -429,6 +442,37 @@
         catch
         {
             return "0";
+        }
+    }
+
+    private void AskDeleteUser(User user)
+    {
+        _userToDelete = user;
+    }
+
+    private void CancelDeleteUser()
+    {
+        _userToDelete = null;
+    }
+
+    private async Task ConfirmDeleteUser()
+    {
+        if (_userToDelete is null)
+        {
+            return;
+        }
+
+        var userId = _userToDelete.Id;
+        _userToDelete = null;
+        try
+        {
+            await AdminService.DeleteUserAsync(userId);
+            _message = "User deleted";
+            await LoadData();
+        }
+        catch (Exception ex)
+        {
+            _errorMessage = ex.Message;
         }
     }
 

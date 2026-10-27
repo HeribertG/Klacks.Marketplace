@@ -181,6 +181,8 @@
   <data name="Admin_Joined" xml:space="preserve"><value>Iscritto</value></data>
   <data name="Admin_MakeAdmin" xml:space="preserve"><value>Rendi admin</value></data>
   <data name="Admin_RemoveAdmin" xml:space="preserve"><value>Rimuovi admin</value></data>
+  <data name="Admin_DeleteUser" xml:space="preserve"><value>Elimina account</value></data>
+  <data name="Admin_DeleteUserConfirm" xml:space="preserve"><value>Eliminare l'account di {0} ({1})? I suoi ticket e messaggi vengono eliminati e l'account viene anonimizzato. L'operazione non può essere annullata.</value></data>
   <data name="Admin_PackageApproved" xml:space="preserve"><value>Pacchetto approvato con successo</value></data>
   <data name="Admin_PackageRejected" xml:space="preserve"><value>Pacchetto rifiutato</value></data>
   <data name="Admin_PluginApproved" xml:space="preserve"><value>Plugin approvato con successo</value></data>

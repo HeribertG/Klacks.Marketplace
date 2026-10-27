@@ -159,7 +159,7 @@ public class FeaturePluginMarketplaceService : IFeaturePluginMarketplaceService
         {
             PluginId = plugin.Id,
             DownloadedAt = DateTime.UtcNow,
-            IpAddress = ipAddress
+            IpAddress = ClientIpAnonymizer.Anonymize(ipAddress)
         });
         await _db.SaveChangesAsync();
 

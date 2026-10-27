@@ -181,6 +181,8 @@
   <data name="Admin_Joined" xml:space="preserve"><value>Joined</value></data>
   <data name="Admin_MakeAdmin" xml:space="preserve"><value>Make Admin</value></data>
   <data name="Admin_RemoveAdmin" xml:space="preserve"><value>Remove Admin</value></data>
+  <data name="Admin_DeleteUser" xml:space="preserve"><value>Delete account</value></data>
+  <data name="Admin_DeleteUserConfirm" xml:space="preserve"><value>Delete the account of {0} ({1})? Their tickets and messages are deleted and the account is anonymized. This cannot be undone.</value></data>
   <data name="Admin_PackageApproved" xml:space="preserve"><value>Package approved successfully</value></data>
   <data name="Admin_PackageRejected" xml:space="preserve"><value>Package rejected</value></data>
   <data name="Admin_PluginApproved" xml:space="preserve"><value>Plugin approved successfully</value></data>

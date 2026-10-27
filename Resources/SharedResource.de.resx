@@ -181,6 +181,8 @@
   <data name="Admin_Joined" xml:space="preserve"><value>Beigetreten</value></data>
   <data name="Admin_MakeAdmin" xml:space="preserve"><value>Zum Admin machen</value></data>
   <data name="Admin_RemoveAdmin" xml:space="preserve"><value>Admin entfernen</value></data>
+  <data name="Admin_DeleteUser" xml:space="preserve"><value>Konto löschen</value></data>
+  <data name="Admin_DeleteUserConfirm" xml:space="preserve"><value>Konto von {0} ({1}) löschen? Tickets und Nachrichten werden gelöscht und das Konto wird anonymisiert. Das lässt sich nicht rückgängig machen.</value></data>
   <data name="Admin_PackageApproved" xml:space="preserve"><value>Paket erfolgreich genehmigt</value></data>
   <data name="Admin_PackageRejected" xml:space="preserve"><value>Paket abgelehnt</value></data>
   <data name="Admin_PluginApproved" xml:space="preserve"><value>Plugin erfolgreich genehmigt</value></data>

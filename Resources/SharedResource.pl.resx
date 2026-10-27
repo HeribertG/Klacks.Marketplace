@@ -181,6 +181,8 @@
   <data name="Admin_Joined" xml:space="preserve"><value>Dołączył(a)</value></data>
   <data name="Admin_MakeAdmin" xml:space="preserve"><value>Nadaj uprawnienia administratora</value></data>
   <data name="Admin_RemoveAdmin" xml:space="preserve"><value>Odbierz uprawnienia administratora</value></data>
+  <data name="Admin_DeleteUser" xml:space="preserve"><value>Usuń konto</value></data>
+  <data name="Admin_DeleteUserConfirm" xml:space="preserve"><value>Usunąć konto użytkownika {0} ({1})? Zgłoszenia i wiadomości zostaną usunięte, a konto zanonimizowane. Tej operacji nie można cofnąć.</value></data>
   <data name="Admin_PackageApproved" xml:space="preserve"><value>Pakiet zatwierdzony pomyślnie</value></data>
   <data name="Admin_PackageRejected" xml:space="preserve"><value>Pakiet odrzucony</value></data>
   <data name="Admin_PluginApproved" xml:space="preserve"><value>Wtyczka zatwierdzona pomyślnie</value></data>

@@ -181,6 +181,8 @@
   <data name="Admin_Joined" xml:space="preserve"><value>تاريخ الانضمام</value></data>
   <data name="Admin_MakeAdmin" xml:space="preserve"><value>تعيين كمسؤول</value></data>
   <data name="Admin_RemoveAdmin" xml:space="preserve"><value>إزالة صلاحية المسؤول</value></data>
+  <data name="Admin_DeleteUser" xml:space="preserve"><value>حذف الحساب</value></data>
+  <data name="Admin_DeleteUserConfirm" xml:space="preserve"><value>هل تريد حذف حساب {0} ({1})؟ سيتم حذف تذاكره ورسائله وإخفاء هوية الحساب. لا يمكن التراجع عن ذلك.</value></data>
   <data name="Admin_PackageApproved" xml:space="preserve"><value>تمت الموافقة على الحزمة بنجاح</value></data>
   <data name="Admin_PackageRejected" xml:space="preserve"><value>تم رفض الحزمة</value></data>
   <data name="Admin_PluginApproved" xml:space="preserve"><value>تمت الموافقة على الإضافة بنجاح</value></data>
