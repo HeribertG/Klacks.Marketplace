@@ -16,13 +16,27 @@ public static class CultureCookie
     public const string QueryParameterName = "culture";
     private const int LifetimeYears = 1;
 
+    private const string RootPath = "/";
+
     public static void Append(HttpResponse response, string culture)
     {
+        var storePath = response.HttpContext.Request.PathBase.HasValue
+            ? response.HttpContext.Request.PathBase.Value!
+            : RootPath;
+
+        if (storePath != RootPath)
+        {
+            response.Cookies.Delete(
+                CookieRequestCultureProvider.DefaultCookieName,
+                new CookieOptions { Path = RootPath, SameSite = SameSiteMode.Lax });
+        }
+
         response.Cookies.Append(
             CookieRequestCultureProvider.DefaultCookieName,
             CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture, culture)),
             new CookieOptions
             {
+                Path = storePath,
                 Expires = DateTimeOffset.UtcNow.AddYears(LifetimeYears),
                 IsEssential = true,
                 SameSite = SameSiteMode.Lax
