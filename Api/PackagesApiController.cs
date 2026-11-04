@@ -1,11 +1,12 @@
 // Copyright (c) Heribert Gasparoli. SPDX-License-Identifier: AGPL-3.0-only
 
 /// <summary>
-/// REST-API-Controller für öffentliche Sprachpaket-Operationen (Suche, Detail, Download, Upload).
+/// REST API controller for public language pack operations (search, detail, download, upload).
 /// </summary>
-/// <param name="packageService">Service für Sprachpaket-Zugriff und Download-Tracking</param>
-/// <param name="authService">Service für Benutzer-Authentifizierung und System-User-Verwaltung</param>
-/// <param name="configuration">Konfiguration für API-Key-Validierung</param>
+/// <param name="packageService">Service for language pack access and download tracking</param>
+/// <param name="authService">Service for user authentication and system user management</param>
+/// <param name="configuration">Configuration for API key validation</param>
+/// <param name="signingService">Signs the served language pack, bound to its code, with the vendor private key (header X-Klacks-Signature)</param>
 using Klacks.Marketplace.Api.DTOs;
 using Klacks.Marketplace.Constants;
 using Klacks.Marketplace.Models;
@@ -19,7 +20,8 @@ namespace Klacks.Marketplace.Api;
 public class PackagesApiController(
     IPackageService packageService,
     IAuthService authService,
-    IConfiguration configuration) : ControllerBase
+    IConfiguration configuration,
+    IArtifactSigningService signingService) : ControllerBase
 {
     private const string ApiKeyHeaderName = "X-Api-Key";
     private const string ApiKeyConfigPath = "ApiSettings:UploadApiKey";
@@ -99,8 +101,9 @@ public class PackagesApiController(
             return NotFound();
         }
 
-        var ipAddress = HttpContext.Connection.RemoteIpAddress?.ToString() ?? "unknown";
+        var ipAddress = HttpContext.Connection.RemoteIpAddress?.ToString() ?? AppConstants.UnknownClientIp;
         var bytes = await packageService.DownloadPackageAsync(code, ipAddress);
+        Response.AppendBoundArtifactSignature(signingService, ArtifactSignatureStatement.LanguagePackArtifactType, package.Code, bytes);
 
         return File(bytes, "application/json", $"{code}.json");
     }

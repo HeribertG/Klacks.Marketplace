@@ -30,7 +30,7 @@ public class RegionPackagesApiController(
     IRegionProfileValidationService validationService,
     IRegionProfilePatchService patchService,
     IRegionArtifactService artifactService,
-    IRegionArtifactSigningService signingService,
+    IArtifactSigningService signingService,
     IAuthService authService,
     IConfiguration configuration,
     ILogger<RegionPackagesApiController> logger) : ControllerBase
@@ -150,11 +150,7 @@ public class RegionPackagesApiController(
                 string.Format(ProfileFileNameFormat, package.CountryCode))
         };
 
-        var signature = signingService.SignPayload(fileBytes);
-        if (signature is not null)
-        {
-            Response.Headers.Append(AppConstants.SignatureHeaderName, signature);
-        }
+        Response.AppendArtifactSignature(signingService, fileBytes);
 
         return File(fileBytes, contentType, fileName);
     }

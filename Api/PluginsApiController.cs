@@ -7,6 +7,7 @@
 /// <param name="validationService">Service for manifest and bundle validation</param>
 /// <param name="authService">Service for system user management during API uploads</param>
 /// <param name="configuration">Configuration for API key validation</param>
+/// <param name="signingService">Signs the served plugin bundle, bound to its name, with the vendor private key (header X-Klacks-Signature)</param>
 using System.Text.Json;
 using Klacks.Marketplace.Api.DTOs;
 using Klacks.Marketplace.Constants;
@@ -22,7 +23,8 @@ public class PluginsApiController(
     IFeaturePluginMarketplaceService pluginService,
     IPluginValidationService validationService,
     IAuthService authService,
-    IConfiguration configuration) : ControllerBase
+    IConfiguration configuration,
+    IArtifactSigningService signingService) : ControllerBase
 {
     private const string ApiKeyHeaderName = "X-Api-Key";
     private const string ApiKeyConfigPath = "ApiSettings:UploadApiKey";
@@ -73,13 +75,15 @@ public class PluginsApiController(
             return NotFound();
         }
 
-        var ipAddress = HttpContext.Connection.RemoteIpAddress?.ToString() ?? "unknown";
+        var ipAddress = HttpContext.Connection.RemoteIpAddress?.ToString() ?? AppConstants.UnknownClientIp;
         var bytes = await pluginService.DownloadPluginAsync(name, ipAddress);
 
         if (bytes.Length == 0)
         {
             return NotFound("No bundle available");
         }
+
+        Response.AppendBoundArtifactSignature(signingService, ArtifactSignatureStatement.PluginArtifactType, plugin.Name, bytes);
 
         return File(bytes, "application/zip", $"{name}.zip");
     }

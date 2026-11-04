@@ -280,12 +280,18 @@ ZIPs are assembled in memory by `RegionArtifactService` from `Resources/OnPremTe
 
 ### Download Artifact Signing
 
-Every `/api/regions/{cc}/download` response (all three artifact types) is signed with the vendor
-private key when one is configured: `RegionArtifactSigningService` computes an RSA-SHA256
-(PKCS#1 v1.5) signature over the exact response body bytes and returns it Base64-encoded in the
+Every `/api/regions/{cc}/download` response (all three artifact types), every language pack download
+(`/api/packages/{code}/download`) and every feature plugin download (`/api/plugins/{name}/download`)
+is signed with the vendor private key when one is configured: `ArtifactSigningService` (applied through
+`ArtifactSignatureResponseExtensions`) computes an RSA-SHA256
+(PKCS#1 v1.5) signature and returns it Base64-encoded in the
 `X-Klacks-Signature` response header. This is the same scheme and key pair as the release update
 manifest (CI secret `UPDATE_SIGNATURE_PRIVATE_KEY_B64`; installations hold the public half as
-`Update__SignaturePublicKey` / `UPDATE_SIGNATURE_PUBLIC_KEY`).
+`Update__SignaturePublicKey` / `UPDATE_SIGNATURE_PUBLIC_KEY`). Region downloads are signed over the
+exact response body bytes (unchanged, installed clients verify that). Language packs and plugins are
+signed over the identity-bound statement `"{artifactType}\n{name}\n{sha256hex}"` (`ArtifactSignatureStatement`:
+type `language-pack` or `plugin`, name lower-case, SHA-256 of the exact response bytes as lower-case hex),
+so a signed plugin cannot be served as another plugin and one language pack not as another language.
 
 - Configuration: `RegionSigning:PrivateKeyPem` (PEM; a single-line value may escape newlines as
   `\n`). On the server set it via the environment variable `RegionSigning__PrivateKeyPem` — the
@@ -293,11 +299,11 @@ manifest (CI secret `UPDATE_SIGNATURE_PRIVATE_KEY_B64`; installations hold the p
   placeholder.
 - Without a configured key the marketplace serves unsigned downloads (logged as a warning), so
   older setups keep working.
-- Klacks.Api verifies the header in `RegionPackageSignatureVerifier` before applying a region
-  package auto-update: once `Update:SignaturePublicKey` is configured, a missing or invalid
+- Klacks.Api verifies the header in `PackageSignatureVerifier` before applying a region
+  package auto-update, before parsing a language pack and before extracting a plugin ZIP: once `Update:SignaturePublicKey` is configured, a missing or invalid
   signature is always rejected (status `signatureRejected`) — stripping the header cannot
   downgrade verification. Without a configured public key, downloads are rejected when the
-  installation sets `Update:RequireSignedRegionPackages` and otherwise accepted with a warning
+  installation sets `Update:RequireSignedPackages` (or the earlier `Update:RequireSignedRegionPackages`) and otherwise accepted with a warning
   (default `false` for rollout compatibility).
 
 ### Reverse Proxy (nginx) & Rate Limiting
