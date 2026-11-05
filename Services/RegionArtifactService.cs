@@ -189,6 +189,13 @@ public class RegionArtifactService : IRegionArtifactService
             UPDATE_REQUIRE_SIGNED_REGION_PACKAGES=false
             KLACKS_MARKETPLACE_URL=https://klacks-software.ch/store
 
+            # Absolute path of this folder. klacks-updater recreates containers from its own container and
+            # resolves the relative bind mounts (./regions, ./init-scripts, ./erp-import) against it; unset,
+            # they point at /apps on the host after the first automatic update. Settings > Import also shows
+            # the ERP drop point folder as <this folder>/erp-import/erp/orders.
+            # KLACKS_INSTALL_DIR=/opt/klacks
+            # KLACKS_UPDATER_PROJECT_DIR=/opt/klacks
+
             # Initial auto-update policy, applied once on the first start while no update setting is
             # saved; afterwards the admin UI (Settings > Software Updates) decides.
             # UPDATE_AUTO_ENABLED=false stops automatic checks and installs, UPDATE_NOTIFY_ONLY=true
