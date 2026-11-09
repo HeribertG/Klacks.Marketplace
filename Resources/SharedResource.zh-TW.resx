@@ -218,7 +218,7 @@
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Docker Compose 套件包</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>適合 Docker 專業使用者的精簡 Docker Compose 設定，不含安裝程式。</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>辦公室電腦（Windows）</value></data>
-  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>無需 Docker，也無需自有伺服器，即可將 Klacks 直接安裝在 Windows（64 位元）電腦上：下載檔案後按兩下執行，安裝精靈會將資料庫、Klacks 與更新服務設定為背景服務。在某些情況下，Microsoft Edge 會在下載清單中顯示：「Klacks-Setup-win-x64.exe 不常下載。開啟前，請確定您信任 Klacks-Setup-win-x64.exe。」原因在於：該檔案是新檔案，微軟目前對其了解尚淺，但這並不表示該檔案不安全。在下載清單中，將滑鼠懸停於該項目上，並依序選擇「…」（其他動作）、「保留」、「顯示更多」和「仍要保留」。在此之前，下載資料夾中僅有「未確認 &lt;編號&gt;.crdownload」這個檔案。請待下載完成後再雙擊開啟。若 Windows SmartScreen 顯示警告，請開啟其他資訊並選擇仍要執行。之後也可以像其他程式一樣，在 Windows 設定中解除安裝 Klacks。</value></data>
+  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>無需 Docker，也無需自有伺服器，即可將 Klacks 直接安裝在 Windows（64 位元）電腦上：下載檔案後按兩下執行，安裝精靈會將資料庫、Klacks 與更新服務設定為背景服務。在某些情況下，Microsoft Edge 會在下載清單中顯示：「Klacks-Setup-win-x64.exe 不常下載。開啟前，請確定您信任 Klacks-Setup-win-x64.exe。」原因在於：該檔案是新檔案，微軟目前對其了解尚淺，但這並不表示該檔案不安全。在下載清單中，將滑鼠懸停於該項目上，並依序選擇「…」（其他動作）、「保留」、「顯示更多」和「仍要保留」。在此之前，下載資料夾中僅有「未確認 &lt;編號&gt;.crdownload」這個檔案。如果 Edge 仍不允許下載該檔案，請改用其他瀏覽器（例如 Google Chrome）進行下載。請待下載完成後再雙擊開啟。若 Windows SmartScreen 顯示警告，請開啟其他資訊並選擇仍要執行。之後也可以像其他程式一樣，在 Windows 設定中解除安裝 Klacks。</value></data>
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>使用 Linux？請使用搭配 Docker 的地端套件包。</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac（Apple 晶片）</value></data>
