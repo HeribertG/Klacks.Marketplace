@@ -218,7 +218,7 @@
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Docker Compose 번들</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>설치 스크립트 없이 Docker 전문가를 위한 최소한의 Docker Compose 구성입니다.</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>사무실 PC (Windows)</value></data>
-  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Docker나 자체 서버 없이 Windows(64비트) PC에 Klacks를 직접 설치할 수 있습니다. 파일을 다운로드한 뒤 두 번 클릭하면 설치 마법사가 데이터베이스, Klacks, 업데이트 서비스를 백그라운드 서비스로 설정합니다. Windows SmartScreen 경고가 표시되면 추가 정보를 열고 그래도 실행하도록 선택합니다 — 이 설치 파일에는 아직 디지털 서명이 없습니다. Klacks는 나중에 다른 프로그램과 마찬가지로 Windows 설정에서 제거할 수 있습니다.</value></data>
+  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Docker나 자체 서버 없이 Windows(64비트) PC에 Klacks를 직접 설치할 수 있습니다. 파일을 다운로드한 뒤 두 번 클릭하면 설치 마법사가 데이터베이스, Klacks, 업데이트 서비스를 백그라운드 서비스로 설정합니다. Microsoft Edge는 경우에 따라 다운로드 목록에 다음과 같은 메시지를 표시할 수 있습니다: “Klacks-Setup-win-x64.exe은(는) 일반적으로 다운로드되지 않습니다. 열기 전에 Klacks-Setup-win-x64.exe을(를) 신뢰하는지 확인합니다.” 그 이유는 해당 파일이 새로 출시되어 Microsoft 측에서 아직 충분히 파악하지 못했기 때문이며, 그렇다고 해서 파일이 안전하지 않은 것은 아닙니다. 다운로드 목록에서 해당 항목 위로 마우스를 가져간 다음, 차례로 “…” (추가 작업), “유지”, “더 보기”, “그래도 계속”을 선택하십시오. 이때까지 다운로드 폴더에는 “확인되지 않음 &lt;번호&gt;.crdownload” 파일만 있습니다. 다운로드가 완전히 끝난 후에야 더블클릭하십시오. Windows SmartScreen 경고가 표시되면 추가 정보를 열고 그래도 실행하도록 선택합니다. Klacks는 나중에 다른 프로그램과 마찬가지로 Windows 설정에서 제거할 수 있습니다.</value></data>
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux를 사용하시나요? Docker 기반의 온프레미스 번들을 이용해 주세요.</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac(Apple 실리콘)</value></data>

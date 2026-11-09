@@ -218,7 +218,7 @@
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Docker Compose 包</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>面向 Docker 专业人员的精简 Docker Compose 配置，不含安装脚本。</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>办公电脑（Windows）</value></data>
-  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>无需 Docker，也无需自有服务器，即可将 Klacks 直接安装在 Windows（64 位）电脑上：下载文件后双击运行，安装向导会将数据库、Klacks 和更新服务设置为后台服务。如果 Windows SmartScreen 显示警告，请打开更多信息并选择仍然运行 — 该安装程序暂时还没有数字签名。之后也可以像其他程序一样，在 Windows 设置中卸载 Klacks。</value></data>
+  <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>无需 Docker，也无需自有服务器，即可将 Klacks 直接安装在 Windows（64 位）电脑上：下载文件后双击运行，安装向导会将数据库、Klacks 和更新服务设置为后台服务。在某些情况下，Microsoft Edge 会在下载列表中显示：「通常不会下载 Klacks-Setup-win-x64.exe。请在打开前确保信任 Klacks-Setup-win-x64.exe。」原因在于：该文件是新文件，微软目前对其了解尚少，但这并不意味着它不安全。在下载列表中，将鼠标悬停在该条目上，依次选择「…」（更多操作）、「保留」、「显示详细信息」和「仍然保留」。在此之前，下载文件夹中仅包含「未确认 &lt;编号&gt;.crdownload」文件。请待下载完成后再双击该文件。如果 Windows SmartScreen 显示警告，请打开更多信息并选择仍然运行。之后也可以像其他程序一样，在 Windows 设置中卸载 Klacks。</value></data>
   <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>使用 Linux？请使用带 Docker 的本地部署包。</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac（Apple 芯片）</value></data>

@@ -8,7 +8,7 @@
 /// gate is green, so it can be older than the office-PC ZIP in the same release. The Mac
 /// button only appears when NativeInstall:MacUrl is configured (no macOS package exists yet; until then the card says "coming soon"). The region page links to the
 /// counted redirect in RegionPackagesApiController, which takes its target exclusively from these settings.
-/// Klacks.Marketing (Localization/ExternalLinks.cs) still links the office-PC ZIP directly and must be switched together with this file.
+/// Klacks.Marketing links no download directly: its installation pages send visitors to this region page.
 /// </summary>
 /// <param name="Enabled">Whether the option is shown to everybody</param>
 /// <param name="WindowsUrl">Download URL of the Windows x64 setup installer; NativeInstall:WindowsUrl overrides the rolling release URL</param>

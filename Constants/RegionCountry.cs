@@ -1,7 +1,7 @@
 // Copyright (c) Heribert Gasparoli. SPDX-License-Identifier: AGPL-3.0-only
 
 /// <summary>
-/// Maps the 30 supported region package country codes (ISO 3166-1 alpha-2, lowercase) to their English country names.
+/// Maps the 32 supported region package country codes (ISO 3166-1 alpha-2, lowercase) to their English country names.
 /// </summary>
 namespace Klacks.Marketplace.Constants;
 
@@ -18,6 +18,7 @@ public static class RegionCountry
     {
         ["ae"] = "United Arab Emirates",
         ["at"] = "Austria",
+        ["be"] = "Belgium",
         ["ch"] = "Switzerland",
         ["cn"] = "China",
         ["cz"] = "Czech Republic",
@@ -29,6 +30,7 @@ public static class RegionCountry
         ["gb"] = "United Kingdom",
         ["gr"] = "Greece",
         ["id"] = "Indonesia",
+        ["ie"] = "Ireland",
         ["il"] = "Israel",
         ["it"] = "Italy",
         ["jp"] = "Japan",
