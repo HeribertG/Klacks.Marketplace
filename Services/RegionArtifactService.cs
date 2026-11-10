@@ -180,6 +180,11 @@ public class RegionArtifactService : IRegionArtifactService
             POSTGRES_PASSWORD=
             JWT_SECRET=
 
+            # One-time setup code for the first visit: the first page creates your own admin account and asks for
+            # this code once (any random text, e.g. 12 letters and digits). Leave it empty to sign in once with the
+            # built-in test account admin@test.com instead; Klacks then asks for your own admin account.
+            KLACKS_SETUP_CODE=
+
             KLACKS_API_TAG=latest
             KLACKS_UI_TAG=latest
             KLACKS_UPDATER_TAG=latest
@@ -217,7 +222,10 @@ public class RegionArtifactService : IRegionArtifactService
 
             1. Copy `.env.example` to `.env`.
             2. Set the secrets in `.env`: `POSTGRES_PASSWORD` and `JWT_SECRET`. The vendor
-               `UPDATE_SIGNATURE_PUBLIC_KEY` is already filled in.
+               `UPDATE_SIGNATURE_PUBLIC_KEY` is already filled in. Optionally set a one-time
+               `KLACKS_SETUP_CODE`: the first visit then creates your own admin account with it.
+               Without it, sign in once with `admin@test.com` / `P@ssw0rt1` and Klacks asks for
+               your own admin account.
             3. Adjust `SERVER_NAME`, `HTTP_PORT` and `HTTPS_PORT` if needed.
             4. Place a TLS certificate (`server.crt` and `server.key`) into `nginx/certs/`.
             5. Start the stack: `docker compose up -d`.
