@@ -278,6 +278,19 @@ Older Klacks binaries reject unknown top-level fields, so the patched profile re
 
 ZIPs are assembled in memory by `RegionArtifactService` from `Resources/OnPremTemplate` (copied from `Klacks.Api/deploy/onprem`, without the `regions/*.json` profiles — the profile always comes from the database). Shell scripts carry Unix mode 0755 in the ZIP entry attributes. Each download increments the package counter and writes a `RegionDownloadLog` row with the artifact type and industry.
 
+### Versioned Installer Downloads (`/api/downloads`)
+
+| Method | Route | Description |
+|--------|-------|-------------|
+| GET/HEAD | `/api/downloads/windows/{version}/Klacks-Setup-win-x64.exe` | Serves the signed Windows setup of exactly that version from disk, with range support and **without redirect** |
+
+Package URL of the Microsoft Store listing (public: `https://klacks-software.ch/store/api/downloads/windows/X.Y.Z/Klacks-Setup-win-x64.exe`).
+Partner Center rejects redirecting URLs, and the binary behind a submitted URL must never change. Klacks.Api `native-windows.yml`
+(release mode) therefore writes each version once to `/root/apps/downloads/windows/X.Y.Z/` on the server and never replaces it;
+`docker-compose.yml` (Klacks.Api) mounts `/root/apps/downloads` read-only at `/app/downloads` (`Downloads:RootPath`).
+`InstallerDownloadService` builds the path only from constants and a version matching `^[0-9]{1,4}\.[0-9]{1,4}\.[0-9]{1,4}\z` (ASCII digits only; .NET `\d` would also accept other scripts); anything
+else is 404. Rate limit: `region-download`. Not counted in `RegionDownloadLog` (no region; Partner Center has its own install figures).
+
 ### Download Artifact Signing
 
 Every `/api/regions/{cc}/download` response (all three artifact types), every language pack download

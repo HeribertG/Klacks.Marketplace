@@ -60,6 +60,7 @@ builder.Services.AddScoped<IFileValidationService, FileValidationService>();
 builder.Services.AddScoped<IFeaturePluginMarketplaceService, FeaturePluginMarketplaceService>();
 builder.Services.AddScoped<IPluginValidationService, PluginValidationService>();
 builder.Services.AddScoped<IRegionPackageService, RegionPackageService>();
+builder.Services.AddSingleton<IInstallerDownloadService, InstallerDownloadService>();
 builder.Services.AddScoped<IRegionProfileValidationService, RegionProfileValidationService>();
 builder.Services.AddScoped<IRegionPackageSeedService, RegionPackageSeedService>();
 builder.Services.AddScoped<IRegionProfilePatchService, RegionProfilePatchService>();
