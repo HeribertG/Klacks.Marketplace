@@ -225,7 +225,6 @@
   <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>Voorbeeld – alleen zichtbaar voor beheerders</value></data>
   <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>Voor 64-bit Windows (x64). Op Windows 11-apparaten met een ARM-processor (bijv. Snapdragon X) draait Klacks via emulatie; Windows 10 op ARM wordt niet ondersteund. Werkt ook op Windows 10 22H2 (64-bit). Microsoft biedt geen reguliere ondersteuning meer voor Windows 10; beveiligingsupdates zijn alleen nog beschikbaar via het betaalde ESU-programma.</value></data>
   <data name="RegionDetail_NativeMacNote" xml:space="preserve"><value>Ook beschikbaar voor Macs met Apple-chip (M1 of nieuwer).</value></data>
-  <data name="RegionDetail_NativeMacComingSoon" xml:space="preserve"><value>Voor Mac: binnenkort beschikbaar.</value></data>
   <data name="RegionDetail_NativeMicrosoftStore" xml:space="preserve"><value>Ook in de Microsoft Store</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>Thuiszorg</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>Gezondheidszorg</value></data>

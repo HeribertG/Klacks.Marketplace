@@ -6,7 +6,7 @@
 /// preview. Windows defaults to the setup installer (Klacks-Setup-win-x64.exe) in the rolling Klacks.Api GitHub release tagged
 /// "office-pc" (never "latest", which is empty while a release is still building); CI swaps it only after the installer
 /// gate is green, so it can be older than the office-PC ZIP in the same release. The Mac
-/// button only appears when NativeInstall:MacUrl is configured (no macOS package exists yet; until then the card says "coming soon"). The region page links to the
+/// button and note only appear when NativeInstall:MacUrl is configured (no macOS package exists yet; nothing about Mac is shown until then). The region page links to the
 /// counted redirect in RegionPackagesApiController, which takes its target exclusively from these settings.
 /// Klacks.Marketing links no download directly: its installation pages send visitors to this region page.
 /// </summary>
