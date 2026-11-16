@@ -126,6 +126,11 @@ else
                                     <span class="material-symbols-outlined text-[20px]">download</span>
                                     @L["RegionDetail_NativeWindows"]
                                 </a>
+                                <a href="@ExternalLinks.MicrosoftStoreUrl" rel="noopener" target="_blank"
+                                   class="px-5 py-2.5 bg-secondary text-on-secondary rounded-lg font-semibold hover:bg-secondary-container active:scale-[0.98] transition-all flex items-center gap-2 no-underline">
+                                    <span class="material-symbols-outlined text-[20px]">storefront</span>
+                                    @L["RegionDetail_NativeMicrosoftStore"]
+                                </a>
                                 @if (_nativeInstall.MacUrl is not null)
                                 {
                                     <a href="@GetNativeInstallHref(NativeInstallPlatform.Mac)" rel="nofollow"
