@@ -25,7 +25,6 @@ public class RegionArtifactService : IRegionArtifactService
     private const string ShellScriptExtension = ".sh";
     private const string ProfileFileExtension = ".json";
     private const string AllFilesSearchPattern = "*";
-    private const string ShellWrapperNameFormat = "install-{0}.sh";
     private const string PowerShellWrapperNameFormat = "install-{0}.ps1";
     private const string EntrySeparator = "/";
     private const string UnixLineEnding = "\n";
@@ -56,7 +55,7 @@ public class RegionArtifactService : IRegionArtifactService
             AddCachedEntries(archive, _templateFiles.Value);
             AddTextEntry(archive, UpdatePublicKeyEntryName, _updatePublicKeyPem.Value, isExecutable: false);
             AddTextEntry(archive, BuildRegionProfileEntryName(countryCode), patchedProfileJson, isExecutable: false);
-            AddTextEntry(archive, string.Format(ShellWrapperNameFormat, countryCode), BuildShellWrapper(countryCode), isExecutable: true);
+            AddTextEntry(archive, string.Format(OnPremInstall.ShellWrapperNameFormat, countryCode), BuildShellWrapper(countryCode), isExecutable: true);
             AddTextEntry(archive, string.Format(PowerShellWrapperNameFormat, countryCode), BuildPowerShellWrapper(countryCode), isExecutable: false);
         }
 

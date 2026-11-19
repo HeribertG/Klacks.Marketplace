@@ -8,7 +8,8 @@ using Shouldly;
 
 /// <summary>
 /// Every store language carries the same resource keys as German, and the region page's Microsoft Store link has its
-/// label in all 25 languages, so no visitor sees a missing text or a raw resource key.
+/// label in all 25 languages, so no visitor sees a missing text or a raw resource key. The Linux install card texts are
+/// translated everywhere (no English fallback) and keep the placeholder for the folder, answer or address they show.
 /// </summary>
 [TestFixture]
 public class SharedResourceKeyParityTests
@@ -23,6 +24,10 @@ public class SharedResourceKeyParityTests
     private const string MicrosoftStoreKey = "RegionDetail_NativeMicrosoftStore";
     private const string MicrosoftStoreName = "Microsoft Store";
     private const int ExpectedLanguageCount = 25;
+    private const string EnglishResourceFile = "SharedResource.en.resx";
+    private const string LinuxKeyPrefix = "RegionDetail_Linux";
+    private const string FirstPlaceholder = "{0}";
+    private const int ExpectedLinuxKeyCount = 9;
 
     [Test]
     public void Every_language_has_exactly_the_german_keys()
@@ -53,6 +58,38 @@ public class SharedResourceKeyParityTests
             texts[MicrosoftStoreKey].ShouldContain(MicrosoftStoreName, Case.Sensitive, Path.GetFileName(file));
         }
     }
+
+    [Test]
+    public void Linux_install_texts_are_translated_in_all_languages_and_keep_their_placeholders()
+    {
+        var files = ResourceFiles();
+        var german = LoadTexts(Path.Combine(ResourcesDirectory(), GermanResourceFile));
+        var english = LoadTexts(Path.Combine(ResourcesDirectory(), EnglishResourceFile));
+        var linuxKeys = german.Keys.Where(key => key.StartsWith(LinuxKeyPrefix, StringComparison.Ordinal)).ToList();
+
+        files.Length.ShouldBe(ExpectedLanguageCount);
+        linuxKeys.Count.ShouldBe(ExpectedLinuxKeyCount);
+
+        foreach (var file in files)
+        {
+            var fileName = Path.GetFileName(file);
+            var texts = LoadTexts(file);
+
+            foreach (var key in linuxKeys)
+            {
+                texts[key].ShouldNotBeNullOrWhiteSpace($"{fileName} {key}");
+                PlaceholderCount(texts[key]).ShouldBe(PlaceholderCount(german[key]), $"{fileName} {key}");
+
+                if (fileName != EnglishResourceFile)
+                {
+                    texts[key].ShouldNotBe(english[key], $"{fileName} {key} falls back to English");
+                }
+            }
+        }
+    }
+
+    private static int PlaceholderCount(string text)
+        => text.Split(FirstPlaceholder).Length - 1;
 
     private static string[] ResourceFiles()
         => Directory.GetFiles(ResourcesDirectory(), ResourceFilePattern);

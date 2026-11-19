@@ -214,18 +214,26 @@
   <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>JSON של הפרופיל</value></data>
   <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>פרופיל אזור עבור התקנת Klacks קיימת — יש לחבר אותו כקובץ הגדרת האזור.</value></data>
   <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>חבילת On-Prem</value></data>
-  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>חבילת התקנה מלאה להפעלה עם Docker: סקריפטים להתקנה, Docker Compose ופרופיל האזור.</value></data>
+  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>חבילת התקנה מלאה להפעלה עם Docker: סקריפטים להתקנה, Docker Compose ופרופיל האזור. עבור Linux, המדריך המפורט נמצא למעלה, בכרטיס Linux.</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>חבילת Docker Compose</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>הגדרת Docker Compose מינימלית ללא סקריפטים להתקנה, למשתמשי Docker מנוסים.</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>מחשב משרדי (Windows)</value></data>
   <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>התקינו את Klacks ישירות על מחשב Windows (64 סיביות), ללא Docker וללא שרת משלכם: הורידו את הקובץ ולחצו עליו לחיצה כפולה – אשף ההתקנה מגדיר את מסד הנתונים, את Klacks ואת שירות העדכונים כשירותי רקע. במקרים מסוימים, Microsoft Edge עשוי להציג את ההודעה הבאה ברשימת ההורדות: "Klacks-Setup-win-x64.exe אינו קובץ שמורידים בדרך כלל. ודא שאתה בוטח ב- Klacks-Setup-win-x64.exe לפני פתיחתו." הסיבה: הקובץ הוא חדש וטרם מוכר היטב ל-Microsoft, אך אין זה אומר שהוא אינו בטוח. ברשימת ההורדות, העבירו את העכבר מעל הערך ובחרו בזה אחר זה "…" (פעולות נוספות), "שמור", "הצג יותר" ו-"שמור בכל זאת". עד לשלב זה, בתיקיית ההורדות נמצא רק הקובץ "לא מאושר &lt;מספר&gt;.crdownload". אם Edge עדיין לא מאפשר את הורדת הקובץ, הורידו אותו באמצעות דפדפן אחר, למשל Google Chrome. רק לאחר סיום ההורדה, לחצו פעמיים על הקובץ. אם Windows SmartScreen מציג אזהרה, פתחו את המידע הנוסף ובחרו להפעיל בכל זאת. בהמשך תוכלו להסיר את Klacks כמו כל תוכנה אחרת דרך ההגדרות של Windows.</value></data>
-  <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux? אנא השתמשו בחבילת On-Prem עם Docker.</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (שבב Apple)</value></data>
   <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>תצוגה מקדימה – גלויה למנהלים בלבד</value></data>
   <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>מיועד ל-Windows בגרסת 64 סיביות (x64). במכשירי Windows 11 עם מעבד ARM (למשל Snapdragon X), Klacks פועל באמצעות אמולציה; Windows 10 על ARM אינו נתמך. פועל גם ב-Windows 10 22H2 (64 סיביות). Microsoft כבר לא מספקת תמיכה רגילה ב-Windows 10; עדכוני אבטחה זמינים רק דרך תוכנית ESU בתשלום.</value></data>
   <data name="RegionDetail_NativeMacNote" xml:space="preserve"><value>זמין גם למחשבי Mac עם שבב Apple (M1 ומעלה).</value></data>
   <data name="RegionDetail_NativeMicrosoftStore" xml:space="preserve"><value>זמין גם ב-Microsoft Store</value></data>
+  <data name="RegionDetail_LinuxTitle" xml:space="preserve"><value>Linux (עם Docker)</value></data>
+  <data name="RegionDetail_LinuxDesc" xml:space="preserve"><value>התקינו את Klacks על מחשב Linux עם Docker. תוכנית ההתקנה מגדירה הכול, ולאחר מכן Klacks מתעדכן אוטומטית.</value></data>
+  <data name="RegionDetail_LinuxRequirements" xml:space="preserve"><value>דרישות: לפחות 8 GB זיכרון RAM, יציאות 80 ו-443 פנויות וחיבור לאינטרנט.</value></data>
+  <data name="RegionDetail_LinuxStepUnzip" xml:space="preserve"><value>חלצו את קובץ ה-ZIP לתיקייה קבועה, לדוגמה {0}, ולא לתיקיית ההורדות. אל תעבירו ואל תמחקו את התיקייה לאחר מכן: העדכונים האוטומטיים עובדים איתה.</value></data>
+  <data name="RegionDetail_LinuxStepTerminal" xml:space="preserve"><value>פתחו מסוף (Terminal) בתיקייה שחולצה (במקום שבו נמצאים סקריפטי ההתקנה) והקלידו את הפקודה הזו:</value></data>
+  <data name="RegionDetail_LinuxStepDocker" xml:space="preserve"><value>אם Docker עדיין לא מותקן, תוכנית ההתקנה מציעה להתקין אותו (Ubuntu, Debian, Fedora, CentOS ו-RHEL): אשרו עם {0}. בהפצות אחרות התקינו תחילה את Docker בעצמכם. נדרש Docker עם תוסף Compose. אם Docker כבר מותקן אך ללא תוסף Compose (למשל חבילת Ubuntu בשם docker.io), תוכנית ההתקנה נעצרת עם ההודעה "The Docker Compose plugin ('docker compose') is missing": התקינו את התוסף והפעילו שוב את תוכנית ההתקנה.</value></data>
+  <data name="RegionDetail_LinuxStepSetupCode" xml:space="preserve"><value>ההתקנה אורכת כמה דקות, ותוכנית ההתקנה מציגה את קוד ההגדרה רק בסוף ממש. רשמו אותו; הוא נשמר גם בקובץ ‎.env (קובץ מוסתר) שבתיקייה.</value></data>
+  <data name="RegionDetail_LinuxStepBrowser" xml:space="preserve"><value>בדפדפן באותו מחשב פתחו את {0} ואשרו את אזהרת האישור. האזהרה מופיעה משום שהאישור חתום עצמית.</value></data>
+  <data name="RegionDetail_LinuxStepAdmin" xml:space="preserve"><value>בפתיחה הראשונה צרו חשבון מנהל משלכם באמצעות קוד ההגדרה. לאחר מכן העדכונים מתבצעים אוטומטית.</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>טיפול ביתי</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>בריאות</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>אבטחה</value></data>

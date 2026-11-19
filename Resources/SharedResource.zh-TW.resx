@@ -214,18 +214,26 @@
   <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>設定檔 JSON</value></data>
   <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>適用於現有 Klacks 安裝的區域設定檔 — 請將其掛載為區域設定檔。</value></data>
   <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>地端套件包</value></data>
-  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>用於以 Docker 執行的完整安裝套件包，包含安裝指令碼、Docker Compose 與區域設定檔。</value></data>
+  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>用於以 Docker 執行的完整安裝套件包，包含安裝指令碼、Docker Compose 與區域設定檔。 Linux 的逐步說明位於上方的 Linux 卡片中。</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Docker Compose 套件包</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>適合 Docker 專業使用者的精簡 Docker Compose 設定，不含安裝程式。</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>辦公室電腦（Windows）</value></data>
   <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>無需 Docker，也無需自有伺服器，即可將 Klacks 直接安裝在 Windows（64 位元）電腦上：下載檔案後按兩下執行，安裝精靈會將資料庫、Klacks 與更新服務設定為背景服務。在某些情況下，Microsoft Edge 會在下載清單中顯示：「Klacks-Setup-win-x64.exe 不常下載。開啟前，請確定您信任 Klacks-Setup-win-x64.exe。」原因在於：該檔案是新檔案，微軟目前對其了解尚淺，但這並不表示該檔案不安全。在下載清單中，將滑鼠懸停於該項目上，並依序選擇「…」（其他動作）、「保留」、「顯示更多」和「仍要保留」。在此之前，下載資料夾中僅有「未確認 &lt;編號&gt;.crdownload」這個檔案。如果 Edge 仍不允許下載該檔案，請改用其他瀏覽器（例如 Google Chrome）進行下載。請待下載完成後再雙擊開啟。若 Windows SmartScreen 顯示警告，請開啟其他資訊並選擇仍要執行。之後也可以像其他程式一樣，在 Windows 設定中解除安裝 Klacks。</value></data>
-  <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>使用 Linux？請使用搭配 Docker 的地端套件包。</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac（Apple 晶片）</value></data>
   <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>預覽 – 僅管理員可見</value></data>
   <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>適用於 64 位元 Windows（x64）。在搭載 ARM 處理器的 Windows 11 裝置（如 Snapdragon X）上，Klacks 透過模擬執行；不支援 ARM 版 Windows 10。也可在 Windows 10 22H2（64 位元）上執行。Microsoft 已不再為 Windows 10 提供一般支援；安全性更新僅透過付費的 ESU 方案提供。</value></data>
   <data name="RegionDetail_NativeMacNote" xml:space="preserve"><value>也適用於搭載 Apple 晶片之 Mac（M1 或更新機型）。</value></data>
   <data name="RegionDetail_NativeMicrosoftStore" xml:space="preserve"><value>也可在 Microsoft Store 取得</value></data>
+  <data name="RegionDetail_LinuxTitle" xml:space="preserve"><value>Linux（使用 Docker）</value></data>
+  <data name="RegionDetail_LinuxDesc" xml:space="preserve"><value>在裝有 Docker 的 Linux 電腦上安裝 Klacks。安裝程式會完成所有設定，之後 Klacks 會自動保持最新。</value></data>
+  <data name="RegionDetail_LinuxRequirements" xml:space="preserve"><value>需求：至少 8 GB 記憶體、未被占用的連接埠 80 與 443，以及網際網路連線。</value></data>
+  <data name="RegionDetail_LinuxStepUnzip" xml:space="preserve"><value>將 ZIP 檔案解壓縮到固定的資料夾，例如 {0}，不要解壓縮到「下載」資料夾。之後請勿移動或刪除該資料夾：自動更新會使用它。</value></data>
+  <data name="RegionDetail_LinuxStepTerminal" xml:space="preserve"><value>在解壓縮後的資料夾（安裝指令碼所在位置）中開啟終端機，並輸入以下指令：</value></data>
+  <data name="RegionDetail_LinuxStepDocker" xml:space="preserve"><value>如果尚未安裝 Docker，安裝程式會提議為您安裝（Ubuntu、Debian、Fedora、CentOS 與 RHEL）：輸入 {0} 確認。在其他發行版上，請先自行安裝 Docker。需要附有 Compose 外掛程式的 Docker。如果已安裝 Docker 但沒有 Compose 外掛程式（例如 Ubuntu 的套件 docker.io），安裝程式會停止並顯示「The Docker Compose plugin ('docker compose') is missing」：請補裝該外掛程式，然後重新執行安裝程式。</value></data>
+  <data name="RegionDetail_LinuxStepSetupCode" xml:space="preserve"><value>安裝需要幾分鐘，安裝程式直到最後才會顯示設定碼。請記下來；它也儲存在資料夾中的 .env 檔案（隱藏檔案）裡。</value></data>
+  <data name="RegionDetail_LinuxStepBrowser" xml:space="preserve"><value>在同一台電腦的瀏覽器中開啟 {0}，並確認憑證警告。出現警告是因為憑證為自我簽署憑證。</value></data>
+  <data name="RegionDetail_LinuxStepAdmin" xml:space="preserve"><value>第一次開啟時，使用設定碼建立您自己的管理員帳戶。之後更新會自動進行。</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>居家照護</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>醫療保健</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>保全服務</value></data>

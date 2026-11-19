@@ -214,18 +214,26 @@
   <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>配置文件 JSON</value></data>
   <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>适用于现有 Klacks 安装的区域配置文件——将其挂载为区域设置文件。</value></data>
   <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>本地部署包</value></data>
-  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>用于通过 Docker 运行的完整安装包，包含安装脚本、Docker Compose 和区域配置文件。</value></data>
+  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>用于通过 Docker 运行的完整安装包，包含安装脚本、Docker Compose 和区域配置文件。 Linux 的分步说明位于上方的 Linux 卡片中。</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Docker Compose 包</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>面向 Docker 专业人员的精简 Docker Compose 配置，不含安装脚本。</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>办公电脑（Windows）</value></data>
   <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>无需 Docker，也无需自有服务器，即可将 Klacks 直接安装在 Windows（64 位）电脑上：下载文件后双击运行，安装向导会将数据库、Klacks 和更新服务设置为后台服务。在某些情况下，Microsoft Edge 会在下载列表中显示：「通常不会下载 Klacks-Setup-win-x64.exe。请在打开前确保信任 Klacks-Setup-win-x64.exe。」原因在于：该文件是新文件，微软目前对其了解尚少，但这并不意味着它不安全。在下载列表中，将鼠标悬停在该条目上，依次选择「…」（更多操作）、「保留」、「显示详细信息」和「仍然保留」。在此之前，下载文件夹中仅包含「未确认 &lt;编号&gt;.crdownload」文件。如果 Edge 仍然不允许下载该文件，请使用其他浏览器（例如 Google Chrome）进行下载。请待下载完成后再双击该文件。如果 Windows SmartScreen 显示警告，请打开更多信息并选择仍然运行。之后也可以像其他程序一样，在 Windows 设置中卸载 Klacks。</value></data>
-  <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>使用 Linux？请使用带 Docker 的本地部署包。</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac（Apple 芯片）</value></data>
   <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>预览 – 仅管理员可见</value></data>
   <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>适用于 64 位 Windows（x64）。在搭载 ARM 处理器的 Windows 11 设备（如 Snapdragon X）上，Klacks 通过仿真运行；不支持 ARM 版 Windows 10。也可在 Windows 10 22H2（64 位）上运行。Microsoft 已不再为 Windows 10 提供常规支持；安全更新仅通过付费的 ESU 计划提供。</value></data>
   <data name="RegionDetail_NativeMacNote" xml:space="preserve"><value>也适用于搭载 Apple 芯片的 Mac（M1 或更新机型）。</value></data>
   <data name="RegionDetail_NativeMicrosoftStore" xml:space="preserve"><value>也可在 Microsoft Store 获取</value></data>
+  <data name="RegionDetail_LinuxTitle" xml:space="preserve"><value>Linux（使用 Docker）</value></data>
+  <data name="RegionDetail_LinuxDesc" xml:space="preserve"><value>在装有 Docker 的 Linux 电脑上安装 Klacks。安装程序会完成全部设置，之后 Klacks 会自动保持最新。</value></data>
+  <data name="RegionDetail_LinuxRequirements" xml:space="preserve"><value>要求：至少 8 GB 内存，端口 80 和 443 未被占用，并有互联网连接。</value></data>
+  <data name="RegionDetail_LinuxStepUnzip" xml:space="preserve"><value>将 ZIP 文件解压到一个固定文件夹，例如 {0}，不要解压到“下载”文件夹。之后请勿移动或删除该文件夹：自动更新会使用它。</value></data>
+  <data name="RegionDetail_LinuxStepTerminal" xml:space="preserve"><value>在解压后的文件夹（安装脚本所在位置）中打开终端，并输入以下命令：</value></data>
+  <data name="RegionDetail_LinuxStepDocker" xml:space="preserve"><value>如果尚未安装 Docker，安装程序会提议为您安装（Ubuntu、Debian、Fedora、CentOS 和 RHEL）：输入 {0} 确认。在其他发行版上，请先自行安装 Docker。需要带有 Compose 插件的 Docker。如果已安装 Docker 但没有 Compose 插件（例如 Ubuntu 的软件包 docker.io），安装程序会停止并提示“The Docker Compose plugin ('docker compose') is missing”：请补装该插件，然后重新运行安装程序。</value></data>
+  <data name="RegionDetail_LinuxStepSetupCode" xml:space="preserve"><value>安装需要几分钟，安装程序直到最后才会显示设置码。请记下它；它也保存在文件夹中的 .env 文件（隐藏文件）里。</value></data>
+  <data name="RegionDetail_LinuxStepBrowser" xml:space="preserve"><value>在同一台电脑的浏览器中打开 {0}，并确认证书警告。出现警告是因为证书为自签名证书。</value></data>
+  <data name="RegionDetail_LinuxStepAdmin" xml:space="preserve"><value>首次打开时，使用设置码创建您自己的管理员账户。之后更新会自动进行。</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>居家护理</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>医疗保健</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>安保</value></data>

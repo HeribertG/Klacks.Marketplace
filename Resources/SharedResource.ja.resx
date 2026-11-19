@@ -214,18 +214,26 @@
   <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>プロファイル JSON</value></data>
   <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>既存の Klacks インストール用のリージョンプロファイルです。リージョンセットアップファイルとしてマウントしてください。</value></data>
   <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>オンプレミスバンドル</value></data>
-  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Docker で運用するための完全なインストールバンドルです（インストーラースクリプト、Docker Compose、リージョンプロファイルを含む）。</value></data>
+  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>Docker で運用するための完全なインストールバンドルです（インストーラースクリプト、Docker Compose、リージョンプロファイルを含む）。 Linux の手順は、上の Linux カードに記載されています。</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>Docker Compose バンドル</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>インストーラーを含まない、Docker 専門家向けの最小構成の Docker Compose セットアップです。</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>オフィス PC（Windows）</value></data>
   <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>Docker も自社サーバーも使わずに、Klacks を Windows（64 ビット）の PC に直接インストールできます。ファイルをダウンロードしてダブルクリックするだけで、セットアップ ウィザードがデータベース、Klacks、更新サービスをバックグラウンドサービスとしてセットアップします。Microsoft Edgeでは、状況によってはダウンロード一覧に「Klacks-Setup-win-x64.exeは一般的にダウンロードされていません。Klacks-Setup-win-x64.exeを開く前に、信頼できることを確認してください。」と表示されることがあります。その理由は、そのファイルが新しく、Microsoftでもまだあまり知られていないためですが、安全ではないというわけではありません。ダウンロード一覧で、該当する項目にマウスを合わせ、「…」（その他のアクション）、「保存」、「詳細表示」、「保持する」の順に選択してください。それまでは、ダウンロードフォルダには「未確認 &lt;番号&gt;.crdownload」のファイルのみが存在します。それでもEdgeでファイルがダウンロードできない場合は、Google Chromeなどの別のブラウザを使用してダウンロードしてください。ダウンロードが完了してから、ダブルクリックしてください。Windows SmartScreenの警告が表示された場合は、詳細情報を開いてそのまま実行することを選びます。Klacks は後から、ほかのプログラムと同じように Windows の設定からアンインストールできます。</value></data>
-  <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux の場合は、Docker を使用するオンプレミスバンドルをご利用ください。</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac（Apple シリコン）</value></data>
   <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>プレビュー – 管理者のみに表示</value></data>
   <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>64 ビット版 Windows（x64）向けです。ARM プロセッサー搭載の Windows 11 デバイス（Snapdragon X など）では、Klacks はエミュレーションで動作します。ARM 版 Windows 10 には対応していません。Windows 10 22H2（64 ビット）でも動作します。Microsoft は Windows 10 の通常サポートを終了しており、セキュリティ更新プログラムは有償の ESU プログラムでのみ提供されます。</value></data>
   <data name="RegionDetail_NativeMacNote" xml:space="preserve"><value>Apple シリコン搭載 Mac（M1 以降）にも対応しています。</value></data>
   <data name="RegionDetail_NativeMicrosoftStore" xml:space="preserve"><value>Microsoft Store でも入手できます</value></data>
+  <data name="RegionDetail_LinuxTitle" xml:space="preserve"><value>Linux（Docker 使用）</value></data>
+  <data name="RegionDetail_LinuxDesc" xml:space="preserve"><value>Docker を使って Klacks を Linux コンピューターにインストールします。インストーラーがすべてをセットアップし、その後 Klacks は自動的に最新の状態に保たれます。</value></data>
+  <data name="RegionDetail_LinuxRequirements" xml:space="preserve"><value>必要条件：8 GB 以上のメモリ、空いているポート 80 と 443、インターネット接続。</value></data>
+  <data name="RegionDetail_LinuxStepUnzip" xml:space="preserve"><value>ZIP ファイルを、ダウンロード フォルダーではなく固定のフォルダー（例：{0}）に展開してください。展開後はフォルダーを移動したり削除したりしないでください。自動更新がこのフォルダーを使用します。</value></data>
+  <data name="RegionDetail_LinuxStepTerminal" xml:space="preserve"><value>展開したフォルダー（インストーラー スクリプトがある場所）でターミナルを開き、次のコマンドを入力します：</value></data>
+  <data name="RegionDetail_LinuxStepDocker" xml:space="preserve"><value>Docker がまだインストールされていない場合は、インストーラーがセットアップを提案します（Ubuntu、Debian、Fedora、CentOS、RHEL）。{0} と入力して確定してください。その他のディストリビューションでは、先にご自身で Docker をインストールしてください。Compose プラグイン付きの Docker が必要です。Docker はすでにあるものの Compose プラグインがない場合（たとえば Ubuntu のパッケージ docker.io）、インストーラーは「The Docker Compose plugin ('docker compose') is missing」と表示して停止します。プラグインを追加でインストールしてから、インストーラーをもう一度実行してください。</value></data>
+  <data name="RegionDetail_LinuxStepSetupCode" xml:space="preserve"><value>インストールには数分かかります。セットアップ コードが表示されるのは、一番最後です。控えておいてください。このコードはフォルダー内の .env ファイル（隠しファイル）にも保存されています。</value></data>
+  <data name="RegionDetail_LinuxStepBrowser" xml:space="preserve"><value>同じコンピューターのブラウザーで {0} を開き、証明書の警告を承認してください。証明書が自己署名のため、この警告が表示されます。</value></data>
+  <data name="RegionDetail_LinuxStepAdmin" xml:space="preserve"><value>初めて開くときに、セットアップ コードを使って独自の管理者アカウントを作成します。その後、更新は自動的に行われます。</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>訪問介護</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>医療</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>警備</value></data>

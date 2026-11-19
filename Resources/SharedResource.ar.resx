@@ -214,18 +214,26 @@
   <data name="RegionDetail_ProfileJson" xml:space="preserve"><value>ملف تعريف JSON</value></data>
   <data name="RegionDetail_ProfileJsonDesc" xml:space="preserve"><value>ملف تعريف إقليمي لتثبيت Klacks الحالي — قم بتحميله كملف إعداد المنطقة.</value></data>
   <data name="RegionDetail_OnPremBundle" xml:space="preserve"><value>حزمة التثبيت المحلي</value></data>
-  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>حزمة تثبيت كاملة للتشغيل مع Docker، تتضمن نصوص التثبيت وDocker Compose وملف التعريف الإقليمي.</value></data>
+  <data name="RegionDetail_OnPremDesc" xml:space="preserve"><value>حزمة تثبيت كاملة للتشغيل مع Docker، تتضمن نصوص التثبيت وDocker Compose وملف التعريف الإقليمي. لنظام Linux، يوجد دليل الخطوات في بطاقة Linux أعلاه.</value></data>
   <data name="RegionDetail_ComposeBundle" xml:space="preserve"><value>حزمة Docker Compose</value></data>
   <data name="RegionDetail_ComposeDesc" xml:space="preserve"><value>إعداد Docker Compose مبسّط بدون برامج تثبيت، مخصص لمحترفي Docker.</value></data>
   <data name="RegionDetail_NativeInstaller" xml:space="preserve"><value>حاسوب المكتب (Windows)</value></data>
   <data name="RegionDetail_NativeDesc" xml:space="preserve"><value>ثبّتوا Klacks مباشرةً على حاسوب يعمل بنظام Windows (64 بت)، دون Docker ودون خادم خاص بكم: نزّلوا الملف وانقروا عليه نقرًا مزدوجًا، وسيُعِدّ معالج التثبيت قاعدة البيانات وبرنامج Klacks وخدمة التحديث كخدمات تعمل في الخلفية. قد يعرض متصفح Microsoft Edge في قائمة التنزيلات الرسالة التالية: «Klacks-Setup-win-x64.exe لا يتم تنزيل ة بشكل شائع. تأكد من أنك تثق في Klacks-Setup-win-x64.exe قبل فتحه.» السبب: الملف جديد ولا يزال غير معروف جيدًا لدى Microsoft، ولكنه ليس غير آمن. مرّروا الماوس فوق العنصر في قائمة التنزيلات واختاروا بالتتابع «…» (المزيد من الإجراءات)، «احتفاظ»، «إظهار المزيد» و«الاحتفاظ على أي حال». حتى ذلك الحين، لن يوجد في مجلد التنزيلات سوى الملف «غير مؤكد &lt;الرقم&gt;.crdownload». إذا لم يسمح متصفح Edge بتنزيل الملف رغم ذلك، فقوموا بتنزيله باستخدام متصفح آخر، مثل Google Chrome. لا تنقروا نقرًا مزدوجًا إلا بعد اكتمال التنزيل. إذا عرض Windows SmartScreen تحذيراً، فافتحوا المعلومات الإضافية واختاروا التشغيل على أي حال. ويمكنكم لاحقًا إلغاء تثبيت Klacks مثل أي برنامج آخر من إعدادات Windows.</value></data>
-  <data name="RegionDetail_NativeLinuxNote" xml:space="preserve"><value>Linux؟ يُرجى استخدام حزمة التثبيت المحلي مع Docker.</value></data>
   <data name="RegionDetail_NativeWindows" xml:space="preserve"><value>Windows</value></data>
   <data name="RegionDetail_NativeMac" xml:space="preserve"><value>Mac (شريحة Apple)</value></data>
   <data name="RegionDetail_NativeAdminPreview" xml:space="preserve"><value>معاينة – مرئية للمسؤولين فقط</value></data>
   <data name="RegionDetail_NativeSystemRequirements" xml:space="preserve"><value>مخصص لإصدار 64 بت من Windows (x64). على أجهزة Windows 11 المزوّدة بمعالج ARM (مثل Snapdragon X) يعمل Klacks عبر المحاكاة؛ أما Windows 10 على ARM فغير مدعوم. يعمل أيضًا على Windows 10 22H2 (64 بت). لم تعد Microsoft تدعم Windows 10 دعمًا اعتياديًا؛ ولا تتوفر تحديثات الأمان إلا عبر برنامج ESU المدفوع.</value></data>
   <data name="RegionDetail_NativeMacNote" xml:space="preserve"><value>متوفر أيضًا لأجهزة Mac بشريحة Apple (M1 أو أحدث).</value></data>
   <data name="RegionDetail_NativeMicrosoftStore" xml:space="preserve"><value>متوفر أيضًا في Microsoft Store</value></data>
+  <data name="RegionDetail_LinuxTitle" xml:space="preserve"><value>Linux (مع Docker)</value></data>
+  <data name="RegionDetail_LinuxDesc" xml:space="preserve"><value>ثبّتوا Klacks على حاسوب يعمل بنظام Linux مع Docker. يتولى برنامج التثبيت إعداد كل شيء، وبعد ذلك يُحدِّث Klacks نفسه تلقائيًا.</value></data>
+  <data name="RegionDetail_LinuxRequirements" xml:space="preserve"><value>المتطلبات: ذاكرة RAM لا تقل عن 8 GB، والمنفذان 80 و443 متاحان، واتصال بالإنترنت.</value></data>
+  <data name="RegionDetail_LinuxStepUnzip" xml:space="preserve"><value>فكّوا ضغط ملف ZIP في مجلد ثابت، مثل {0}، وليس في مجلد التنزيلات. لا تنقلوا المجلد ولا تحذفوه لاحقًا، لأن التحديثات التلقائية تعمل به.</value></data>
+  <data name="RegionDetail_LinuxStepTerminal" xml:space="preserve"><value>افتحوا نافذة الطرفية (Terminal) في المجلد الذي فككتم ضغطه (حيث توجد نصوص التثبيت) وأدخلوا هذا الأمر:</value></data>
+  <data name="RegionDetail_LinuxStepDocker" xml:space="preserve"><value>إذا لم يكن Docker مثبّتًا بعد، يعرض برنامج التثبيت إعداده (Ubuntu وDebian وFedora وCentOS وRHEL): أكّدوا بإدخال {0}. أما على التوزيعات الأخرى فثبّتوا Docker بأنفسكم أولًا. يلزم وجود Docker مع المكوّن الإضافي Compose. إذا كان Docker مثبّتًا بالفعل لكن دون المكوّن الإضافي Compose (مثل حزمة Ubuntu المسماة docker.io)، يتوقف برنامج التثبيت مع الرسالة "The Docker Compose plugin ('docker compose') is missing": ثبّتوا المكوّن الإضافي ثم شغّلوا برنامج التثبيت مرة أخرى.</value></data>
+  <data name="RegionDetail_LinuxStepSetupCode" xml:space="preserve"><value>تستغرق عملية التثبيت بضع دقائق، ولا يعرض برنامج التثبيت رمز الإعداد إلا في النهاية تمامًا. دوّنوه؛ فهو محفوظ أيضًا في الملف ‎.env (ملف مخفي) داخل المجلد.</value></data>
+  <data name="RegionDetail_LinuxStepBrowser" xml:space="preserve"><value>افتحوا {0} في متصفح على الحاسوب نفسه، ثم أكّدوا تحذير الشهادة. يظهر التحذير لأن الشهادة موقّعة ذاتيًا.</value></data>
+  <data name="RegionDetail_LinuxStepAdmin" xml:space="preserve"><value>عند الفتح لأول مرة، أنشئوا حساب مسؤول خاصًا بكم باستخدام رمز الإعداد. بعد ذلك تجري التحديثات تلقائيًا.</value></data>
   <data name="Industry_Homecare" xml:space="preserve"><value>الرعاية المنزلية</value></data>
   <data name="Industry_Healthcare" xml:space="preserve"><value>الرعاية الصحية</value></data>
   <data name="Industry_Security" xml:space="preserve"><value>الأمن</value></data>
