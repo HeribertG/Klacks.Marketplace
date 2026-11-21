@@ -9,7 +9,8 @@ using NUnit.Framework;
 using Shouldly;
 
 /// <summary>
-/// The installer download only ever resolves RootPath/windows/X.Y.Z/Klacks-Setup-win-x64.exe; anything else is not found.
+/// The installer download only ever resolves RootPath/windows/X.Y.Z/ plus one of the allowlisted setup names
+/// (Klacks-Setup-win-x64.exe, Klacks-Setup-win-arm64.exe); anything else is not found.
 /// </summary>
 [TestFixture]
 public class InstallerDownloadServiceTests
@@ -23,7 +24,9 @@ public class InstallerDownloadServiceTests
         _root = Path.Combine(Path.GetTempPath(), "klacks-downloads-" + Guid.NewGuid().ToString("N"));
         var versionFolder = Path.Combine(_root, InstallerDownload.WindowsFolder, "1.0.66");
         Directory.CreateDirectory(versionFolder);
-        File.WriteAllText(Path.Combine(versionFolder, InstallerDownload.WindowsSetupFileName), "setup");
+        File.WriteAllText(Path.Combine(versionFolder, InstallerDownload.WindowsSetupX64FileName), "setup x64");
+        File.WriteAllText(Path.Combine(versionFolder, InstallerDownload.WindowsSetupArm64FileName), "setup arm64");
+        File.WriteAllText(Path.Combine(versionFolder, "Klacks-Setup-win-x86.exe"), "not served");
         File.WriteAllText(Path.Combine(_root, "secret.txt"), "secret");
 
         var configuration = new ConfigurationBuilder()
@@ -38,17 +41,38 @@ public class InstallerDownloadServiceTests
         Directory.Delete(_root, recursive: true);
     }
 
-    [Test]
-    public void Finds_the_setup_of_an_existing_version()
+    [TestCase(InstallerDownload.WindowsSetupX64FileName)]
+    [TestCase(InstallerDownload.WindowsSetupArm64FileName)]
+    public void Finds_each_allowlisted_setup_of_an_existing_version(string fileName)
     {
-        _service.FindWindowsSetup("1.0.66")
-            .ShouldBe(Path.Combine(_root, InstallerDownload.WindowsFolder, "1.0.66", InstallerDownload.WindowsSetupFileName));
+        _service.FindWindowsSetup("1.0.66", fileName)
+            .ShouldBe(Path.Combine(_root, InstallerDownload.WindowsFolder, "1.0.66", fileName));
+    }
+
+    [Test]
+    public void Allowlist_holds_exactly_the_x64_and_arm64_setup()
+    {
+        InstallerDownload.WindowsSetupFileNames.ShouldBe(["Klacks-Setup-win-x64.exe", "Klacks-Setup-win-arm64.exe"]);
     }
 
     [Test]
     public void Unknown_version_is_not_found()
     {
-        _service.FindWindowsSetup("1.0.67").ShouldBeNull();
+        _service.FindWindowsSetup("1.0.67", InstallerDownload.WindowsSetupX64FileName).ShouldBeNull();
+    }
+
+    [TestCase("Klacks-Setup-win-x86.exe")]
+    [TestCase("klacks-setup-win-x64.exe")]
+    [TestCase("KLACKS-SETUP-WIN-ARM64.EXE")]
+    [TestCase("Klacks-Setup-win-x64.exe ")]
+    [TestCase("Klacks-Setup-win-x64.exe.")]
+    [TestCase("../../secret.txt")]
+    [TestCase("..")]
+    [TestCase("secret.txt")]
+    [TestCase("")]
+    public void File_name_outside_the_allowlist_is_not_found(string fileName)
+    {
+        _service.FindWindowsSetup("1.0.66", fileName).ShouldBeNull();
     }
 
     [TestCase("")]
@@ -64,6 +88,6 @@ public class InstallerDownloadServiceTests
     [TestCase("١.٠.٦٦")]
     public void Malformed_version_is_not_found(string version)
     {
-        _service.FindWindowsSetup(version).ShouldBeNull();
+        _service.FindWindowsSetup(version, InstallerDownload.WindowsSetupX64FileName).ShouldBeNull();
     }
 }

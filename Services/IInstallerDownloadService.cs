@@ -4,5 +4,5 @@ namespace Klacks.Marketplace.Services;
 
 public interface IInstallerDownloadService
 {
-    string? FindWindowsSetup(string version);
+    string? FindWindowsSetup(string version, string fileName);
 }

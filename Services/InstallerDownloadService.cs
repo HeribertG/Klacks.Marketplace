@@ -1,8 +1,9 @@
 // Copyright (c) Heribert Gasparoli. SPDX-License-Identifier: AGPL-3.0-only
 
 /// <summary>
-/// Locates a versioned installer file below the configured download folder. The path is built only from constants and a
-/// version that matched InstallerDownload.VersionPattern, so no request value can reach a file outside that folder.
+/// Locates a versioned installer file below the configured download folder. The path is built only from constants: the
+/// file name is the allowlisted constant that equals the requested name (ordinal), and the version must match
+/// InstallerDownload.VersionPattern, so no request value can reach a file outside that folder.
 /// </summary>
 /// <param name="configuration">Supplies Downloads:RootPath; defaults to /app/downloads</param>
 using System.Text.RegularExpressions;
@@ -12,9 +13,16 @@ namespace Klacks.Marketplace.Services;
 
 public sealed partial class InstallerDownloadService(IConfiguration configuration) : IInstallerDownloadService
 {
-    public string? FindWindowsSetup(string version)
+    public string? FindWindowsSetup(string version, string fileName)
     {
         if (string.IsNullOrEmpty(version) || !VersionRegex().IsMatch(version))
+        {
+            return null;
+        }
+
+        var allowedFileName = InstallerDownload.WindowsSetupFileNames
+            .FirstOrDefault(name => string.Equals(name, fileName, StringComparison.Ordinal));
+        if (allowedFileName is null)
         {
             return null;
         }
@@ -25,7 +33,7 @@ public sealed partial class InstallerDownloadService(IConfiguration configuratio
             rootPath = InstallerDownload.DefaultRootPath;
         }
 
-        var path = Path.Combine(rootPath, InstallerDownload.WindowsFolder, version, InstallerDownload.WindowsSetupFileName);
+        var path = Path.Combine(rootPath, InstallerDownload.WindowsFolder, version, allowedFileName);
         return File.Exists(path) ? path : null;
     }
 
