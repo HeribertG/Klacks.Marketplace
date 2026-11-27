@@ -221,6 +221,10 @@ else
         _showNativeInstall = _nativeInstall.IsVisibleFor(user);
         _nativeAdminPreview = _nativeInstall.IsAdminPreview(user);
         _package = await RegionPackageService.GetRegionPackageByCountryAsync(CountryCode);
+        if (_package is null)
+        {
+            StoreSearchIndexing.MarkNotFound(HttpContextAccessor.HttpContext);
+        }
         _klacksVersion = await KlacksReleaseService.GetLatestStableVersionAsync();
         _isLoading = false;
     }

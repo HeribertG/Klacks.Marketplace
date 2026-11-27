@@ -11,7 +11,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    @if (StoreSearchIndexing.IsIndexable(Context.Request.Path.Value))
+    @if (StoreSearchIndexing.IsIndexable(Context.Request.Path.Value, Context.Response.StatusCode))
     {
         <link rel="canonical" href="@StoreSearchIndexing.CanonicalUrl(Context.Request.Path.ToUriComponent())" />
     }

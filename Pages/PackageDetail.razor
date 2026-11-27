@@ -152,6 +152,10 @@ else
     protected override async Task OnInitializedAsync()
     {
         _package = await PackageService.GetPackageByCodeAsync(Code);
+        if (_package is null)
+        {
+            StoreSearchIndexing.MarkNotFound(HttpContextAccessor.HttpContext);
+        }
         ComputeGeoDataCounts();
         _isLoading = false;
     }

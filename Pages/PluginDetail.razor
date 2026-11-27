@@ -171,6 +171,10 @@ else
     protected override async Task OnInitializedAsync()
     {
         _plugin = await PluginService.GetPluginByNameAsync(Name);
+        if (_plugin is null)
+        {
+            StoreSearchIndexing.MarkNotFound(HttpContextAccessor.HttpContext);
+        }
         ParseJsonArrays();
         _isLoading = false;
     }
