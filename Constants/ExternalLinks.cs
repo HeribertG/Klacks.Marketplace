@@ -13,6 +13,7 @@ public static class ExternalLinks
 {
     public const string WebsiteUrl = "https://klacks-software.ch";
     public const string WebsiteLabel = "klacks-software.ch";
+    public const string PublicStoreUrl = WebsiteUrl + "/store";
     public const string DocsPath = "/docs/";
     public const string SourceCodeUrl = "https://github.com/HeribertG/Klacks.Marketplace";
     public const string DiscordUrl = "https://discord.gg/YRP8p2abVC";

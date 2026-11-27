@@ -2,8 +2,9 @@
 
 /// <summary>
 /// Builds culture-aware links to the Klacks website. The website serves German without a language
-/// prefix, every other culture under its lower-case code ("/en", "/zh-cn"), and redirects the
-/// country-less company pages ("/en/impressum") to the culture's default country. The docs site uses
+/// prefix, every other culture under its lower-case code ("/en", "/zh-cn"), and serves the company pages below the
+/// culture's default country ("/en/land-gb/impressum"); the country-less form only redirects there, so the store links
+/// the target directly. The default countries mirror LanguageCountries.DefaultCountryFor in Klacks.Marketing. The docs site uses
 /// Docusaurus locale codes, which differ from the culture code only for Chinese.
 /// </summary>
 /// <param name="cultureCode">UI culture of the current request, e.g. "de", "en" or "zh-CN"</param>
@@ -20,8 +21,43 @@ public static class KlacksSiteLinks
         ["zh-TW"] = "zh-Hant",
     };
 
+    private static readonly Dictionary<string, string> DefaultCountryPages = new(StringComparer.OrdinalIgnoreCase)
+    {
+        ["de"] = "land-ch",
+        ["en"] = "land-gb",
+        ["fr"] = "land-fr",
+        ["it"] = "land-it",
+        ["ar"] = "land-sa",
+        ["cs"] = "land-cz",
+        ["da"] = "land-dk",
+        ["el"] = "land-gr",
+        ["es"] = "land-es",
+        ["fi"] = "land-fi",
+        ["he"] = "land-il",
+        ["id"] = "land-id",
+        ["ja"] = "land-jp",
+        ["ko"] = "land-kr",
+        ["ms"] = "land-my",
+        ["nb"] = "land-no",
+        ["nl"] = "land-nl",
+        ["pl"] = "land-pl",
+        ["pt"] = "land-pt",
+        ["ro"] = "land-ro",
+        ["sv"] = "land-se",
+        ["th"] = "land-th",
+        ["vi"] = "land-vn",
+        ["zh-CN"] = "land-cn",
+        ["zh-TW"] = "land-tw",
+    };
+
     public static string CompanyPage(string cultureCode, string pageSlug)
-        => $"{ExternalLinks.WebsiteUrl}{CulturePrefix(cultureCode)}/{pageSlug}";
+    {
+        var countryPage = DefaultCountryPages.TryGetValue(cultureCode ?? string.Empty, out var country)
+            ? $"/{country}"
+            : string.Empty;
+
+        return $"{ExternalLinks.WebsiteUrl}{CulturePrefix(cultureCode)}{countryPage}/{pageSlug}";
+    }
 
     public static string Docs(string cultureCode)
     {
